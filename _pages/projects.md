@@ -37,14 +37,26 @@ Project 2: Design of a waterslide
 
 ## Transportation
 
+Project: Rerouting an existing road in East Lansing
+
 [Transportation Project](/images/civil/CE341.pdf)
 
-## sustainability Engineering
+## Sustainability Engineering
 
 Project 1: Life Cycle of a TV Remote
 
 [LCA](/images/civil/LCA_Project.pdf)
 
+
+
+## Senior Capstone Project
+
+Hydraulic Analysis of a river and design of pipe networks
+
+
+[Final Report](/images/civil/CE495.pdf)
+
+[Final Excel Report](/images/civil/CE495.xlsx)
 
 
 
