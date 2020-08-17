@@ -98,6 +98,9 @@ author:
   bio              : "Engineering Portfolio."
   location         : "Chicago"
   email            :
+  GitHub           : "devinpowers"
+  linkedin         : "devinpowers"
+
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -132,7 +135,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: 
+      # url: "https://github.com/devinpowers"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -291,6 +294,6 @@ defaults:
     values:
       layout: single
       author_profle: true
-      
+
 
     
