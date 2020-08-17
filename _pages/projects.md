@@ -15,9 +15,9 @@ Here are a list of Civil Engineering projects:
 
 ## Hydrology
 
-[Project One](/images/civil/'Project 1 Report.pdf')
+[Project One](/images/civil/'Project 1 Report'.pdf)
 
-[Project Two](/images/civil/'Project 2 Report.pdf')
+[Project Two](/images/civil/'Project 2 Report'.pdf)
 
 
 
