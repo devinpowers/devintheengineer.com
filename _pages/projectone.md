@@ -1,8 +1,8 @@
 ---
 layout: archive
 permalink: /projects
-title: "Project One"
-author_profile: true
+title: "Projects"
+#author_profile: true
 
 header:
   image: "/images/chicagotwo.jpeg"
