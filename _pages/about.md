@@ -5,10 +5,17 @@ header:
    image: "/images/chicagotwo.jpeg"
 ---
 
-I'm a junior level engineering who is looking for an entry level business/engineeirng role in Chicago
+Hi, My name is Devin Powers and I am a engineering whose intrested in computer science and is looking for an entry level role in business/engineering postition in Chicago
 
 
 etc, etc, etc
 
 
 
+
+some more writing 
+
+
+etc
+
+etc
