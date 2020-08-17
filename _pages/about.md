@@ -10,14 +10,3 @@ Hi, My name is Devin Powers and I am a engineering whose intrested in computer s
 
 
 etc, etc, etc
-
-
-
-
-some more writing 
-[I'm an inline-style link](/images/test.pdf)
-
-
-etc
-
-etc
