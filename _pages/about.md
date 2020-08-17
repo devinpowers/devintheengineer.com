@@ -15,6 +15,7 @@ etc, etc, etc
 
 
 some more writing 
+[I'm an inline-style link](/images/test.pdf)
 
 
 etc
