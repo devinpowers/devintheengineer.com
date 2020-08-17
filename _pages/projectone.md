@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /projectone/
+permalink: /projects
 title: "Project One"
 author_profile: true
 
@@ -12,5 +12,8 @@ Projects:
 
 
 here are a list of Civil Engineering projects:
+
+
+
 
 
