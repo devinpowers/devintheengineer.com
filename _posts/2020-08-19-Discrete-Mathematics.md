@@ -1,12 +1,8 @@
-
 ---
-
 title: " Discrete Mathematics Notes"
 date: 2020-08-019
 
-
 excerpt: "Discrete"
-
 ---
 
 
