@@ -1,10 +1,3 @@
----
-title: " Discrete Mathematics Notes"
-date: 2020-08-019
-
-excerpt: "Discrete"
----
-
 
 # Discrete Mathematics Notes are found here:
 
