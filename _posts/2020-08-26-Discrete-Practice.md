@@ -2,8 +2,6 @@
 title: 'Discrete Mathematics Practice Problems'
 
 date: 2020-08-26
-
-excerpt: 'Logic', 'math'
 ---
 
 # Discrete Mathematics Practice Problems: 
