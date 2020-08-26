@@ -1,6 +1,8 @@
 ---
 title: 'Discrete Mathematics Practice Problems'
 
+tags: [sets, logic, data]
+
 date: 2020-08-26
 ---
 
