@@ -4,6 +4,12 @@ main:
     url: /about/
   - title: "Projects"
     url: /projects/
+  - title: "Discrete Mathematics"
+    url: /discretemathematics
+  - title: "Data Structures and Algorithms"
+    url: /algorithms
+    
+
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
