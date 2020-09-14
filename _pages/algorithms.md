@@ -68,3 +68,5 @@ Quick Sort Algorithm:
     QuickSort(array,0,n-1)
 
     print(array)
+    
+[Link to my QuickSort Notes](https://github.com/devinpowers/algorithms/blob/master/Sorting%20Algorithms/Quick%20Sort%20Notes.pdf)
