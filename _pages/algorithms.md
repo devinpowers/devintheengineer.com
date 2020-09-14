@@ -19,52 +19,52 @@ Link to my GitHub Repository:
 
 [Algorithms](https://github.com/devinpowers/algorithms)
 
-Sorting Algorithms:
+Quick Sort Algorithm:
 
 
-def Partition(A ,start, end):
+    def Partition(A ,start, end):
     
-    pivot = A[end]
+        pivot = A[end]
  
-    p_index = start
+        p_index = start
     
     
-    for i in range(start,end):
+        for i in range(start,end):
         
-        if A[i] <= pivot:
+            if A[i] <= pivot:
             
-            #swap number at index with the P_index!
-            A[p_index], A[i] = A[i], A[p_index]
+                #swap number at index with the P_index!
+                A[p_index], A[i] = A[i], A[p_index]
             
-            p_index = p_index +1
+                p_index = p_index +1
             
-    # this is swaping the pivot point between the sorted values
+        # this is swaping the pivot point between the sorted values
     
-    A[p_index], A[end] = A[end], A[p_index]
+        A[p_index], A[end] = A[end], A[p_index]
 
     
-    return p_index
+        return p_index
     
          
-def QuickSort(A, start, end):
+    def QuickSort(A, start, end):
     
-    if start > end:
-        return
+        if start > end:
+            return
     
-    p_index = Partition(A, start, end)
+        p_index = Partition(A, start, end)
     
-    # recursive Calls here:
+        # recursive Calls here:
         
-    QuickSort(A, start, p_index-1)
+        QuickSort(A, start, p_index-1)
     
-    QuickSort(A,p_index +1, end)
+        QuickSort(A,p_index +1, end)
     
     
 
-array = [7,2,1,6,8,5,3,102,1,31,45,232,4,25,12,8,2,4,2,0,9,12,6,2,4,1,3,4,6,7,8,4,42,32,100,12,23,4,32,5,6,546,43,2,69,70,69]
+    array = [7,2,1,6,8,5,3,102,1,31,45,232,4,25,12,8,2,4,2,0,9,12,6,2,4,1,3,4,6,7,8,4,42,32,100,12,23,4,32,5,6,546,43,2,69,70,69]
 
-n = len(array)
+    n = len(array)
 
-QuickSort(array,0,n-1)
+    QuickSort(array,0,n-1)
 
-print(array)
+    print(array)
