@@ -5,7 +5,7 @@ title: "Discrete Mathematics"
 author_profile: true
 
 header:
-  image: "/images/chicago.jpeg"
+  image: "/images/chicagotwo.jpeg"
 ---
 
 
