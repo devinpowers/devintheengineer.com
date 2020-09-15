@@ -70,3 +70,6 @@ Quick Sort Algorithm:
     print(array)
     
 [Link to my QuickSort Notes](https://github.com/devinpowers/algorithms/blob/master/Sorting%20Algorithms/Quick%20Sort%20Notes.pdf)
+
+
+# Chapter 6: Stacks
