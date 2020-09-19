@@ -17,6 +17,8 @@ The resources that I have been using to learn Discrete Mathematics:
 2. [thetrevtutor](https://trevtutor.com/discretemath/discretemath1/)
 3. [Professor Kimberly Brehm Videos](https://www.youtube.com/watch?v=A3Ffwsnad0k&list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz)
 
+- I highly recommend watching Professor Kimberly Brehm videos, they go along with the book, Discrete Mathematics and its Applications
+
 # Notes:
 
 ## Chapter 1: The Foundations: Logic and Proofs
@@ -76,6 +78,24 @@ The resources that I have been using to learn Discrete Mathematics:
 4.2: Integer Representations and Algorithms
 
 4.3: Prime and Greatest Common Divisors
+
+4.4: Solving Congruences
+
+Homework #6:
+
+Homework #7: Section 4.1-4.3
+
+Homework #8 Section 
+
+# Chapter 5: Induction and Recursion
+
+5.1: Mathematical Induction
+
+5.2: Strong Induction and Well-Ordering
+
+5.3: Recursive Definitions and Structual Inductions
+
+5.4: Recursive Algorithms
 
 
 
