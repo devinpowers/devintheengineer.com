@@ -19,6 +19,9 @@ Link to my GitHub Repository:
 
 [Algorithms](https://github.com/devinpowers/algorithms)
 
+
+[Sorting Algorithms](https://devintheengineer.com/algorithms/sorting)
+
 Quick Sort Algorithm:
 
 
