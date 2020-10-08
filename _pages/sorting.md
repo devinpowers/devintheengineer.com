@@ -9,7 +9,9 @@ header:
   
 ---
 
-heres where sorting algorithms will go:
+Heres where sorting algorithms code will go:
+All code is done in Python
+
 
 ## Insertion Sort 
 

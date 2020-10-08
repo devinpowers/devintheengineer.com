@@ -29,3 +29,27 @@ Data Structures and Algorithms Resources:
 ## Data Structures:
 
 [Data Structures](https://devintheengineer.com/algorithms/data_structures)
+
+# Stacks, Queues, and Deques
+- here will be notes and examples of these data strcutures
+
+# Linked Lists
+- here will be notes and examples of these data strcutures
+- linked queue
+- circular linked list
+- doubly linked list
+- linked stack
+
+# Trees
+- binary tree 
+
+- level-order traversal
+- Reversal Level-order Traversal
+- Level- Order Traversal
+- calculaing the height of a binary tree
+- etc
+
+
+
+
+
