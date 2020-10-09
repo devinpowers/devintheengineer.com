@@ -111,13 +111,33 @@ Homework #8 Section
 
 # Chapter 6: Counting Rules
 
+6.1: The Basics of Counting
+
+6.2: The Pigeonhole Principle
+
+6.3: Permutations and Combinations
+
+6.4: Binomial Coefficients and Identities
+
+6.5: Generalized Permutations and Combinations
 [Chapter 6 Notes](https://github.com/devinpowers/discrete-mathematics/blob/master/Chapter%206.1-6.5%20Counting%20Rules%20.pdf)
 
 # Chapter 7: Introduction to Probability
+
+7.1: An Introduction to Discrete Probability
+
+7.2: Probability Theory
 
 [Chapter 7 Notes](https://github.com/devinpowers/discrete-mathematics/blob/master/Chapter%207.1-7.2%20Intro%20to%20Probability%20.pdf)
 
 # Chapter 9: Introduction to Relations
 
+9.1: Relations and Their Properties
+
+9.2: n-ary Relations and Their Properties
+
+9.3: Representing Relations
+
+9.4 Closures of Relations
 [Chapter 9 Notes](https://github.com/devinpowers/discrete-mathematics/blob/master/Chapter%209.1-9.4%20Introduction%20to%20Relations.pdf)
 
