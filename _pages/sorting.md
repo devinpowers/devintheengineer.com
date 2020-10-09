@@ -10,10 +10,11 @@ header:
 ---
 
 Heres where sorting algorithms code will go:
-All code is done in Python
 
+All Notes for step-by-step sorting algorithms are found on my Github
 
 ## Insertion Sort 
+[Insertion Sort Noes](/notes/Insertion_Sort.pdf)
 
     from time import time
     ''' insertion sort Algorithm'''
