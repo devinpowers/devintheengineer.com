@@ -8,3 +8,8 @@ header:
   image: "/images/chicagotwo.jpeg"
   
 ---
+
+lets see if this works:
+
+![inserting an Image](/images/practice.jpg)
+
