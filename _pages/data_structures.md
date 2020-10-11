@@ -13,6 +13,7 @@ lets see if this works:
 ![inserting an Image](/images/deletion1.jpg)
 ![inserting an Image](/images/practice.jpg)
 ![inserting an Image](/images/deletion2.jpg)
+![inserting an Image](/images/Page1.jpg)
 
 # Code for Deletion of a Node in a Linked List:
 
