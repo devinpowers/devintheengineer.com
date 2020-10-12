@@ -34,6 +34,9 @@ Data Structures and Algorithms Resources:
 - here will be notes and examples of these data strcutures
 
 # Linked Lists
+
+[Node Swap](https://devintheengineer.com/algorithms/node_swap)
+
 - here will be notes and examples of these data strcutures
 - linked queue
 - circular linked list
