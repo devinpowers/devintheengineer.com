@@ -57,19 +57,14 @@ The resources that I have been using to learn Discrete Mathematics:
 
 # Chapter 4: Number Theory and Cryptography
 
-4.1: Divisibilty and Modular Arithmetic
 
-4.2: Integer Representations and Algorithms
-
-4.3: Prime and Greatest Common Divisors
-
-4.4: Solving Congruences
 
 [Chapter 4 Notes](https://github.com/devinpowers/discrete-mathematics/blob/master/Chapter%204.1-4.4%20Number%20Theory.pdf)
 
-Homework #7: Section 4.1-4.3
 
-Homework #8 Section 
+[Chapter Four](https://devintheengineer.com/discretemathematics/chapter_four)
+
+
 
 # Chapter 5: Induction and Recursion
 
