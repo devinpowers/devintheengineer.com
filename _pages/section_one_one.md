@@ -8,7 +8,7 @@ header:
   image: "/images/chicagotwo.jpeg"
 ---
 
-1.1: Propositional Logic Notes
+# 1.1: Propositional Logic Notes
 
 
 ![inserting an Image](/images/Discrete_Math/Chapter_One/Section1.1/Page1.jpg)
@@ -24,3 +24,6 @@ header:
 ![inserting an Image](/images/Discrete_Math/Chapter_One/Section1.1/Page11.jpg)
 ![inserting an Image](/images/Discrete_Math/Chapter_One/Section1.1/Page12.jpg)
 ![inserting an Image](/images/Discrete_Math/Chapter_One/Section1.1/Page13.jpg)
+![inserting an Image](/images/Discrete_Math/Chapter_One/Section1.1/Page14.jpg)
+![inserting an Image](/images/Discrete_Math/Chapter_One/Section1.1/Page15.jpg)
+![inserting an Image](/images/Discrete_Math/Chapter_One/Section1.1/Page16.jpg)
