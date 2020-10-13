@@ -29,8 +29,18 @@ header:
 
 1.5: Nested Quantifiers
 
+[Chapter 1.5](https://devintheengineer.com/discretemathematics/chapter_one/section_one_five)
+
 1.6: Rules of Interence
+
+[Chapter 1.6](https://devintheengineer.com/discretemathematics/chapter_one/section_one_six)
+
 
 1.7: Introduction to Proofs
 
+[Chapter 1.7](https://devintheengineer.com/discretemathematics/chapter_one/section_one_seven)
+
+
 1.8: Proof Methods and Strategy
+
+[Chapter 1.8](https://devintheengineer.com/discretemathematics/chapter_one/section_one_eight)
