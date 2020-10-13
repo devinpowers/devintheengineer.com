@@ -16,7 +16,7 @@ header:
 1.2: Application of Propositional Logic
 
 1.3: Propositional Equivalences
-
+git 
 1.4: Predicates and Quantifiers
 
 1.5: Nested Quantifiers
