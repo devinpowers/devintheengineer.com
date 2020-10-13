@@ -25,8 +25,7 @@ The resources that I have been using to learn Discrete Mathematics:
 
 [Chapter One](https://devintheengineer.com/discretemathematics/chapter_one)
 
-
-## Homework Probelems for Chapter 1
+Homework Probelems for Chapter 1
 
 [Homework 1 Link](https://github.com/devinpowers/discrete-mathematics/blob/master/Homework%20Problems/HW%231.pdf)
 
@@ -39,9 +38,7 @@ The resources that I have been using to learn Discrete Mathematics:
 
 [Chapter Two](https://devintheengineer.com/discretemathematics/chapter_two)
 
-
-
-## Homework Probelems for Chapter 2 and Chapter 3
+Homework Probelems for Chapter 2 and Chapter 3
 
 [Homework 4 Link](https://github.com/devinpowers/discrete-mathematics/blob/master/Homework%20Problems/HW%234.pdf)
 
@@ -57,28 +54,14 @@ The resources that I have been using to learn Discrete Mathematics:
 
 # Chapter 4: Number Theory and Cryptography
 
-
-
-[Chapter 4 Notes](https://github.com/devinpowers/discrete-mathematics/blob/master/Chapter%204.1-4.4%20Number%20Theory.pdf)
-
-
 [Chapter Four](https://devintheengineer.com/discretemathematics/chapter_four)
-
 
 
 # Chapter 5: Induction and Recursion
 
-5.1: Mathematical Induction
-
-5.2: Strong Induction and Well-Ordering
-
-5.3: Recursive Definitions and Structual Inductions
-
-5.4: Recursive Algorithms
 
 
-[Chapter 5 Notes](https://github.com/devinpowers/discrete-mathematics/blob/master/Chapter%205.1-5.4%20Mathematical%20Induction.pdf)
-
+[Chapter Five](https://devintheengineer.com/discretemathematics/chapter_five)
 
 # Chapter 6: Counting Rules
 

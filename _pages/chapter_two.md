@@ -16,7 +16,6 @@ header:
 
 [Chapter 2.2](https://devintheengineer.com/discretemathematics/chapter_two/section_two_two)
 
-
 2.3: Functions
 
 [Chapter 2.3](https://devintheengineer.com/discretemathematics/chapter_two/section_two_three)
