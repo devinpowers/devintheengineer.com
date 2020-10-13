@@ -34,6 +34,7 @@ The resources that I have been using to learn Discrete Mathematics:
 
 [Homework 3 Link](https://github.com/devinpowers/discrete-mathematics/blob/master/Homework%20Problems/HW%233.pdf)
 
+
 # Chapter 2: Sets, Functions, Sequences, Sums, and Matrices
 
 [Chapter Two](https://devintheengineer.com/discretemathematics/chapter_two)
