@@ -59,8 +59,6 @@ Homework Probelems for Chapter 2 and Chapter 3
 
 # Chapter 5: Induction and Recursion
 
-
-
 [Chapter Five](https://devintheengineer.com/discretemathematics/chapter_five)
 
 # Chapter 6: Counting Rules
