@@ -1,14 +1,12 @@
 ---
 layout: archive
 permalink: /discretemathematics/chapter_one/section_one_six
-title: "1.1 Notes"
+title: "1.6: Rules of Interence Notes"
 author_profile: true
 
 header:
   image: "/images/chicagotwo.jpeg"
 ---
-
-# 1.6: Rules of Interence
 
 ![inserting an Image](/images/Discrete_Math/Chapter_One/Section1.6/Page1.jpg)
 ![inserting an Image](/images/Discrete_Math/Chapter_One/Section1.6/Page2.jpg)

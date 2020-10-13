@@ -44,7 +44,6 @@ In Chapter One We will cover the following Topics:
 
 1.8: Proof Methods and Strategy
 
-[Chapter One Notes](https://github.com/devinpowers/discrete-mathematics/blob/master/Chapter%201.1-1.7%20Logic%20and%20Proofs.pdf)
 
 ## Homework Probelems for Chapter 1
 
@@ -68,7 +67,6 @@ In Chapter One We will cover the following Topics:
 
 2.6: Matrices
 
-[Chapter Two Notes](https://github.com/devinpowers/discrete-mathematics/blob/master/Chapter%202.1-2.6%20Basic%20Structures%20.pdf)
 
 ## Homework Probelems for Chapter 2 and Chapter 3
 

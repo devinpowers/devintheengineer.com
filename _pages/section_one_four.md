@@ -1,14 +1,13 @@
 ---
 layout: archive
 permalink: /discretemathematics/chapter_one/section_one_four
-title: "1.1 Notes"
+title: "1.4  Predicate Logic Notes"
 author_profile: true
 
 header:
   image: "/images/chicagotwo.jpeg"
 ---
 
-# 1.4  Predicate Logic
 
 
 ![inserting an Image](/images/Discrete_Math/Chapter_One/Section1.4/Page1.jpg)
