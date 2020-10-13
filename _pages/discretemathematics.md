@@ -23,6 +23,8 @@ The resources that I have been using to learn Discrete Mathematics:
 
 ## Chapter 1: The Foundations: Logic and Proofs
 
+[Chapter One](https://devintheengineer.com/algorithms/chapter_one)
+
 1.1: Propositional Logic
 
 1.2: Application of Propositional Logic
