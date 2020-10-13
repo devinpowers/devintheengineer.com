@@ -25,25 +25,6 @@ The resources that I have been using to learn Discrete Mathematics:
 
 [Chapter One](https://devintheengineer.com/discretemathematics/chapter_one)
 
-In Chapter One We will cover the following Topics:
-
-
-1.1: Propositional Logic
-
-1.2: Application of Propositional Logic
-
-1.3: Propositional Equivalences
-
-1.4: Predicates and Quantifiers
-
-1.5: Nested Quantifiers
-
-1.6: Rules of Interence
-
-1.7: Introduction to Proofs
-
-1.8: Proof Methods and Strategy
-
 
 ## Homework Probelems for Chapter 1
 
@@ -55,17 +36,8 @@ In Chapter One We will cover the following Topics:
 
 # Chapter 2: Sets, Functions, Sequences, Sums, and Matrices
 
-2.1: Sets
+[Chapter Two](https://devintheengineer.com/discretemathematics/chapter_two)
 
-2.2: Set Operations
-
-2.3: Functions
-
-2.4: Sequences and Summations
-
-2.5: Cardinality of Sets
-
-2.6: Matrices
 
 
 ## Homework Probelems for Chapter 2 and Chapter 3
