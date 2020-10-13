@@ -25,6 +25,9 @@ The resources that I have been using to learn Discrete Mathematics:
 
 [Chapter One](https://devintheengineer.com/discretemathematics/chapter_one)
 
+In Chapter One We will cover the following Topics:
+
+
 1.1: Propositional Logic
 
 1.2: Application of Propositional Logic
