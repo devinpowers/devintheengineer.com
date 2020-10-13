@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /discretemathematics/chapter_one
-title: "Discrete Mathematics"
+title: "Chapter One: Logic and Introduction to Proofs"
 author_profile: true
 
 header:
@@ -10,8 +10,7 @@ header:
 
 1.1: Propositional Logic
 
-[Propositonal Logic](https://devintheengineer.com/discretemathematics/chapter_one/section1.1)
-
+[Chapter One](https://devintheengineer.com/discretemathematics/chapter_one/section_one_one)
 
 
 1.2: Application of Propositional Logic

@@ -1,7 +1,7 @@
 ---
 layout: archive
-permalink: /discretemathematics/chapter_one/section1.1
-title: "Discrete Mathematics"
+permalink: /discretemathematics/chapter_one/section_one_one
+title: "1.1 Notes"
 author_profile: true
 
 header:
