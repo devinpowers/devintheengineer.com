@@ -10,6 +10,8 @@ header:
 
 1.1: Propositional Logic
 
+[Proposiitonal Logic](https://devintheengineer.com/discretemathematics/chapter_one/section1.1)
+
 
 1.2: Application of Propositional Logic
 
