@@ -113,6 +113,7 @@ All my notes can be viewed here or download via PDF Format on my Github account
 
 ## Homework 10:
 - Sections 7.2, 9.1, 9.2, 9.3, 9.4, 9.5
+
 [Homework 10](https://devintheengineer.com/discretemathematics/HW10)
 
 
