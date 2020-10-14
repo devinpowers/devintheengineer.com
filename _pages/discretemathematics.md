@@ -46,9 +46,8 @@ Homework Probelems for Chapter 2 and Chapter 3
 
 # Chapter 3: Algorithms
 
-3.2: The Growth of Functions
+[Chapter Three](https://devintheengineer.com/discretemathematics/chapter_three)
 
-[Chapter Three Notes](https://github.com/devinpowers/discrete-mathematics/blob/master/%20Chapter%203.2%20Growth%20Rate%20of%20Functions.pdf)
 
 [Homework 6 Link](https://github.com/devinpowers/discrete-mathematics/blob/master/Homework%20Problems/HW%236.pdf)
 
