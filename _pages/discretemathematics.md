@@ -66,15 +66,11 @@ Homework Probelems for Chapter 2 and Chapter 3
 [Chapter Six](https://devintheengineer.com/discretemathematics/chapter_six)
 
 
-[Chapter 6 Notes](https://github.com/devinpowers/discrete-mathematics/blob/master/Chapter%206.1-6.5%20Counting%20Rules%20.pdf)
 
 # Chapter 7: Introduction to Probability
 
-7.1: An Introduction to Discrete Probability
+[Chapter Seven](https://devintheengineer.com/discretemathematics/chapter_seven)
 
-7.2: Probability Theory
-
-[Chapter 7 Notes](https://github.com/devinpowers/discrete-mathematics/blob/master/Chapter%207.1-7.2%20Intro%20to%20Probability%20.pdf)
 
 # Chapter 9: Introduction to Relations
 
@@ -85,5 +81,4 @@ Homework Probelems for Chapter 2 and Chapter 3
 9.3: Representing Relations
 
 9.4 Closures of Relations
-[Chapter 9 Notes](https://github.com/devinpowers/discrete-mathematics/blob/master/Chapter%209.1-9.4%20Introduction%20to%20Relations.pdf)
 
