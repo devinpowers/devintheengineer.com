@@ -1,4 +1,3 @@
-
 ---
 layout: archive
 permalink: /discretemathematics/chapter_three
