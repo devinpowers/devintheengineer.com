@@ -74,11 +74,6 @@ Homework Probelems for Chapter 2 and Chapter 3
 
 # Chapter 9: Introduction to Relations
 
-9.1: Relations and Their Properties
+[Chapter Nine](https://devintheengineer.com/discretemathematics/chapter_nine)
 
-9.2: n-ary Relations and Their Properties
-
-9.3: Representing Relations
-
-9.4 Closures of Relations
 
