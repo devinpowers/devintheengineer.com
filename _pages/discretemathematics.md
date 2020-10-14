@@ -24,7 +24,7 @@ All my notes can be viewed here or download via PDF Format on my Github account
 
 # Notes:
 
-## Chapter 1: The Foundations: Logic and Proofs
+# Chapter 1: The Foundations: Logic and Proofs
 
 [Chapter One](https://devintheengineer.com/discretemathematics/chapter_one)
 
@@ -39,7 +39,7 @@ All my notes can be viewed here or download via PDF Format on my Github account
 [Chapter Three](https://devintheengineer.com/discretemathematics/chapter_three)
 
 
-# Chapter 4: Number Theory and Cryptography
+# Chapter 4: Number Theory
 
 [Chapter Four](https://devintheengineer.com/discretemathematics/chapter_four)
 
@@ -66,16 +66,29 @@ All my notes can be viewed here or download via PDF Format on my Github account
 # Homework Problems
 
 
-# Homework 1:
+## Homework 1:
 - Sections 1.1
 
 [Homework 1](https://devintheengineer.com/discretemathematics/HW1)
 
-# Homework 2:
-- Section 1.1, 1.2, 1.3, 1.4
+## Homework 2:
+- Sections 1.1, 1.2, 1.3, 1.4
 
 [Homework 2](https://devintheengineer.com/discretemathematics/HW2)
 
+## Homework 3:
+- Sections 1.5, 1.6, 1.7
 
+[Homework 3](https://devintheengineer.com/discretemathematics/HW3)
+
+## Homework 4:
+- Sections 2.1, 2.2, 2.3
+
+[Homework 4](https://devintheengineer.com/discretemathematics/HW4)
+
+## Homework 5:
+- Sections 2.3, 2.4
+
+[Homework 5](https://devintheengineer.com/discretemathematics/HW5)
 
 
