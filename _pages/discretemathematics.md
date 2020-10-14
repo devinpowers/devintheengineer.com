@@ -68,10 +68,14 @@ All my notes can be viewed here or download via PDF Format on my Github account
 
 # Homework 1:
 - Sections 1.1
+
 [Homework 1](https://devintheengineer.com/discretemathematics/HW1)
 
 # Homework 2:
-- Section 1.2 - 
+- Section 1.1, 1.2, 1.3, 1.4
+
+[Homework 2](https://devintheengineer.com/discretemathematics/HW2)
+
 
 
 
