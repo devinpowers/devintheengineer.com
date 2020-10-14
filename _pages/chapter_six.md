@@ -11,8 +11,7 @@ header:
 6.1: The Basics of Counting
 [Chapter 6.1](https://devintheengineer.com/discretemathematics/chapter_six/section_six_one)
 
-6.2:The Pigeonhole Principle
-
+6.2: The Pigeonhole Principle
 [Chapter 6.2](https://devintheengineer.com/discretemathematics/chapter_six/section_six_two)
 
 6.3: Permuation and Combinations
