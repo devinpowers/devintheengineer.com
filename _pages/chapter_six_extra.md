@@ -1,9 +1,11 @@
 ---
 layout: archive
 permalink: /discretemathematics/chapter_six/chapter_six_extra
-title: "7.1 An Introduction to Discrete Probability"
+title: "Extra Chapter 6 Notes"
 author_profile: true
 
 header:
   image: "/images/chicagotwo.jpeg"
 ---
+
+testing
