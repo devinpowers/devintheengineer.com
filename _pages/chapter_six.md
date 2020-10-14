@@ -8,11 +8,19 @@ header:
   image: "/images/chicagotwo.jpeg"
 ---
 
+6.1: The Basics of Counting
+[Chapter 6.1](https://devintheengineer.com/discretemathematics/chapter_six/section_six_one)
 
-Chapter 6 Notes
+6.2:The Pigeonhole Principle
 
-6.1
+[Chapter 6.2](https://devintheengineer.com/discretemathematics/chapter_six/section_six_two)
 
-6.2
+6.3: Permuation and Combinations
+[Chapter 6.3](https://devintheengineer.com/discretemathematics/chapter_six/section_six_three)
 
-6.3
+6.4: Binomial Coefficients and Identities
+[Chapter 6.4](https://devintheengineer.com/discretemathematics/chapter_six/section_six_four)
+
+6.5: Generalized Permutations and Combinations
+[Chapter 6.5](https://devintheengineer.com/discretemathematics/chapter_six/section_six_five)
+
