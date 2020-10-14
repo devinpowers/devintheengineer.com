@@ -19,37 +19,25 @@ The resources that I have been using to learn Discrete Mathematics:
 
 - I highly recommend watching Professor Kimberly Brehm videos, they go along with the book, Discrete Mathematics and its Applications
 
+All my notes can be viewed here or download via PDF Format on my Github account
+[Link to Notes via Github](https://github.com/devinpowers/discrete-mathematics)
+
 # Notes:
 
 ## Chapter 1: The Foundations: Logic and Proofs
 
 [Chapter One](https://devintheengineer.com/discretemathematics/chapter_one)
 
-Homework Probelems for Chapter 1
-
-[Homework 1 Link](https://github.com/devinpowers/discrete-mathematics/blob/master/Homework%20Problems/HW%231.pdf)
-
-[Homework 2 Link](https://github.com/devinpowers/discrete-mathematics/blob/master/Homework%20Problems/HW%232.pdf)
-
-[Homework 3 Link](https://github.com/devinpowers/discrete-mathematics/blob/master/Homework%20Problems/HW%233.pdf)
-
 
 # Chapter 2: Sets, Functions, Sequences, Sums, and Matrices
 
 [Chapter Two](https://devintheengineer.com/discretemathematics/chapter_two)
 
-Homework Probelems for Chapter 2 and Chapter 3
-
-[Homework 4 Link](https://github.com/devinpowers/discrete-mathematics/blob/master/Homework%20Problems/HW%234.pdf)
-
-[Homework 5 Link](https://github.com/devinpowers/discrete-mathematics/blob/master/Homework%20Problems/HW%235.pdf)
 
 # Chapter 3: Algorithms
 
 [Chapter Three](https://devintheengineer.com/discretemathematics/chapter_three)
 
-
-[Homework 6 Link](https://github.com/devinpowers/discrete-mathematics/blob/master/Homework%20Problems/HW%236.pdf)
 
 # Chapter 4: Number Theory and Cryptography
 
@@ -60,10 +48,10 @@ Homework Probelems for Chapter 2 and Chapter 3
 
 [Chapter Five](https://devintheengineer.com/discretemathematics/chapter_five)
 
+
 # Chapter 6: Counting Rules
 
 [Chapter Six](https://devintheengineer.com/discretemathematics/chapter_six)
-
 
 
 # Chapter 7: Introduction to Probability
@@ -74,5 +62,16 @@ Homework Probelems for Chapter 2 and Chapter 3
 # Chapter 9: Introduction to Relations
 
 [Chapter Nine](https://devintheengineer.com/discretemathematics/chapter_nine)
+
+# Homework Problems
+
+
+# Homework 1:
+- Sections 1.1 - 
+
+
+# Homework 2:
+- Section 1.2 - 
+
 
 
