@@ -91,4 +91,30 @@ All my notes can be viewed here or download via PDF Format on my Github account
 
 [Homework 5](https://devintheengineer.com/discretemathematics/HW5)
 
+## Homework 6:
+- Sections 2.6, 3.2
+
+[Homework 6](https://devintheengineer.com/discretemathematics/HW6)
+
+## Homework 7:
+- Sections 4.1, 4.2, 4.3
+
+[Homework 7](https://devintheengineer.com/discretemathematics/HW7)
+
+## Homework 8:
+- Sections 4.4, 5.1, 5.2
+
+[Homework 8](https://devintheengineer.com/discretemathematics/HW8)
+
+## Homework 9:
+- Sections 6.1, 6.2, 6.3, 6.4, 6.5, 7.1
+
+[Homework 9](https://devintheengineer.com/discretemathematics/HW9)
+
+## Homework 10:
+- Sections 7.2, 9.1, 9.2, 9.3, 9.4, 9.5
+[Homework 10](https://devintheengineer.com/discretemathematics/HW10)
+
+
+
 
