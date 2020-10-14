@@ -63,15 +63,9 @@ Homework Probelems for Chapter 2 and Chapter 3
 
 # Chapter 6: Counting Rules
 
-6.1: The Basics of Counting
+[Chapter Six](https://devintheengineer.com/discretemathematics/chapter_six)
 
-6.2: The Pigeonhole Principle
 
-6.3: Permutations and Combinations
-
-6.4: Binomial Coefficients and Identities
-
-6.5: Generalized Permutations and Combinations
 [Chapter 6 Notes](https://github.com/devinpowers/discrete-mathematics/blob/master/Chapter%206.1-6.5%20Counting%20Rules%20.pdf)
 
 # Chapter 7: Introduction to Probability
