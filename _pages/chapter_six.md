@@ -23,3 +23,6 @@ header:
 6.5: Generalized Permutations and Combinations
 [Chapter 6.5](https://devintheengineer.com/discretemathematics/chapter_six/section_six_five)
 
+Extra Notes on Counting Rules
+[Extra Chapter Notes](https://devintheengineer.com/discretemathematics/chapter_six/chapter_six_extra)
+
