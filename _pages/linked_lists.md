@@ -17,6 +17,8 @@ header:
 
 
 Deletion
+[Linked Lists Deletion](https://devintheengineer.com/algorithms/linked_lists/linked_list_deletion)
+
 
 Length of Singly Linked List
 
