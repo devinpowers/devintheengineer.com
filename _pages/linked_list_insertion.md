@@ -9,21 +9,90 @@ header:
   
 ---
 
-# Singular Linked Lists
+![inserting an Image](/images/Linked_Lists/insertion/Page1.jpg)
+![inserting an Image](/images/Linked_Lists/insertion/Page2.jpg)
+![inserting an Image](/images/Linked_Lists/insertion/Page3.jpg)
+![inserting an Image](/images/Linked_Lists/insertion/Page4.jpg)
+
+Code for different ways to Insert into a singular Linked List:
+
+        class Node:
+
+            def __init__ (self,data):
+                self.data = data
+                self.next = None
+
+        class linkedList():
+
+            def __init__(self):
+                self.head = None
+
+            def print_list(self):
+
+                current_node = self.head
+
+                while current_node:
+
+                    print(current_node.data)
+                    current_node = current_node.next
 
 
-Insertion 
+            def append(self, data):
 
-Deletion
+                new_node = Node(data)
 
-Length of Singly Linked List
+                if self.head is None:
 
-Reverse Linked List
+                    self.head = new_node
 
-Node Swap Singly Linked Lists
+                    return
 
-Remove Duplicates of Singular Linked Lists
+                last_node = self.head
 
-Merge Two Sorted Lists
+                while last_node.next:
+                    # loop thru linked list until last_node.next is pointing to null
+                    last_node = last_node.next
+
+                # after it exits the loop, we append new node:
+
+                last_node.next = new_node
+
+            def prepend(self,data):
+
+                new_node = Node(data)
+
+                new_node.next = self.head 
+
+                self.head = new_node
+
+            def insertion_after_node(self, previous_node, data):
+
+                if not previous_node:
+                    print("Previous node is not in the list")
+                    return
+
+                new_node = Node(data)
+
+                new_node.next = previous_node.next
+                previous_node.next = new_node
+
+        llist = linkedList()
+
+        llist.append('A')
+        llist.append('B')
+        llist.append('C')
+        llist.append('D')
+        llist.append('E')
+
+        llist.print_list()
+        print("")
+        llist.prepend('Z')
+        llist.print_list()
+
+        print("")
+
+        llist.insertion_after_node(llist.head.next, "T")
+
+        llist.print_list()
 
 
