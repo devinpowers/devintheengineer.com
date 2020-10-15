@@ -1,14 +1,15 @@
 ---
 layout: archive
-permalink: /algorithms/linked_lists/occerences
-title: "Linked Lists- Occerences of a Node"
+permalink: /algorithms/linked_lists/occurences
+title: "Linked Lists- Occurences of a Node"
 author_profile: true
 
 header:
   image: "/images/chicagotwo.jpeg"
   
 ---
-![inserting an Image](/images/Linked_Lists/occerences/Page1.jpg)
+
+![inserting an Image](/images/Linked_Lists/occurences/Page1.jpg)
 
 Code:
 

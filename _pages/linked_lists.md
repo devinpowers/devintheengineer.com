@@ -21,7 +21,7 @@ header:
 [Find the Nth-to-Last Node](https://devintheengineer.com/algorithms/linked_lists/linked_list_nth)
 
 
-[Find the Occerences of a Node](https://devintheengineer.com/algorithms/linked_lists/occerences)
+[Find the Occerences of a Node](https://devintheengineer.com/algorithms/linked_lists/occurences)
 
 Length of Singly Linked List
 
