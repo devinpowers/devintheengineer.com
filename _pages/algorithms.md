@@ -16,38 +16,37 @@ Data Structures and Algorithms Resources:
 3. [mycodeschool youtube channel](https://www.youtube.com/user/mycodeschool)
 
 
-## Link to my GitHub Repository:
+Link to my GitHub Repository:
 
 [Data Structures and Algorithms Repository](https://github.com/devinpowers/algorithms)
 
-## Algorithms:
+# Algorithms:
+
+Here I will post links to different Algorithms
 
 [Sorting Algorithms](https://devintheengineer.com/algorithms/sorting)
  
 
+# Data Structures:
 
-## Data Structures:
+Here I will post links to different Data Structures and how to implement them in Python
 
-[Data Structures](https://devintheengineer.com/algorithms/data_structures)
+## Stacks, Queues, and Deques
 
-# Stacks, Queues, and Deques
-- here will be notes and examples of these data strcutures
+Stacks
+
+Queues
+
+Deques
 
 # Linked Lists
 
 [Linked Lists](https://devintheengineer.com/algorithms/linked_lists)
 
-[Node Swap](https://devintheengineer.com/algorithms/node_swap)
-
-- here will be notes and examples of these data strcutures
-- linked queue
-- circular linked list
-- doubly linked list
-- linked stack
 
 # Trees
-- binary tree 
 
+- binary tree 
 - level-order traversal
 - Reversal Level-order Traversal
 - Level- Order Traversal

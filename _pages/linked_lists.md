@@ -9,14 +9,12 @@ header:
   
 ---
 
-# Singular Linked Lists
+# Singular Linked Lists:
 
 
 [Linked Lists Insertion](https://devintheengineer.com/algorithms/linked_lists/linked_list_insertion)
 
 
-
-Deletion
 [Linked Lists Deletion](https://devintheengineer.com/algorithms/linked_lists/linked_list_deletion)
 
 
@@ -29,4 +27,9 @@ Node Swap Singly Linked Lists
 Remove Duplicates of Singular Linked Lists
 
 Merge Two Sorted Lists
+
+# Doubly Linked Lists:
+
+
+# Circular Linked Lists:
 
