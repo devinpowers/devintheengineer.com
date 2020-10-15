@@ -29,7 +29,7 @@ Reverse Linked List
 
 Node Swap Singly Linked Lists
 
-Remove Duplicates of Singular Linked Lists
+[Remove Duplicates of Singular Linked Lists](https://devintheengineer.com/algorithms/linked_lists/duplicates)
 
 Merge Two Sorted Lists
 
