@@ -35,7 +35,7 @@ Data Structures and Algorithms Resources:
 
 # Linked Lists
 
-[Linked Lists](https://devintheengineer.com/algorithms/linked_list)
+[Linked Lists](https://devintheengineer.com/algorithms/linked_lists)
 
 [Node Swap](https://devintheengineer.com/algorithms/node_swap)
 
