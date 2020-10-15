@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /algorithms/linked_lists
+permalink: /algorithms/linked_lists/linked_list_insertion
 title: "Linked Lists"
 author_profile: true
 
@@ -12,8 +12,7 @@ header:
 # Singular Linked Lists
 
 
-[Linked Lists Insertion](https://devintheengineer.com/algorithms/linked_lists/linked_list_insertion)
-
+Insertion 
 
 Deletion
 
