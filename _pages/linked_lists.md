@@ -18,6 +18,9 @@ header:
 [Linked Lists Deletion](https://devintheengineer.com/algorithms/linked_lists/linked_list_deletion)
 
 
+[Find the Nth-to-Last Node](https://devintheengineer.com/algorithms/linked_lists/linked_list_nth)
+
+
 Length of Singly Linked List
 
 Reverse Linked List
