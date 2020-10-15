@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /algorithms/linked_lists/linked_list_insertion
-title: "Linked Lists"
+title: "Linked Lists Insertion"
 author_profile: true
 
 header:
@@ -25,4 +25,5 @@ Node Swap Singly Linked Lists
 Remove Duplicates of Singular Linked Lists
 
 Merge Two Sorted Lists
+
 
