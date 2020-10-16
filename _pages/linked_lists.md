@@ -37,6 +37,12 @@ Node Swap Singly Linked Lists
 
 Merge Two Sorted Lists
 
+Move tail to head
+
+Check if Linked list is a Palindrome
+
+Sum two Lists
+
 # Doubly Linked Lists:
 
 
