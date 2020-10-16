@@ -23,7 +23,7 @@ header:
 
 [Find the Occerences of a Node](https://devintheengineer.com/algorithms/linked_lists/occurences)
 
-Length of Singly Linked List
+[Length of Singly Linked List](https://devintheengineer.com/algorithms/linked_lists/length)
 
 Reverse Linked List
 
