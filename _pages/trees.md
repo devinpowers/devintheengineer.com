@@ -17,4 +17,4 @@ header:
 - calculaing the height of a binary tree
 - etc
 
-[Calculating Height of a Binary Tree](https://devintheengineer.com/algorithms/height_of_tree)
+[Calculating Height of a Binary Tree](https://devintheengineer.com/algorithms/trees/height_of_tree)
