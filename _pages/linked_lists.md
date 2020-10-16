@@ -25,7 +25,11 @@ header:
 
 [Length of Singly Linked List](https://devintheengineer.com/algorithms/linked_lists/length)
 
-Reverse Linked List
+[Rotate Around Pivot](https://devintheengineer.com/algorithms/linked_lists/rotate)
+
+
+[Reverse Linked List](https://devintheengineer.com/algorithms/linked_lists/reverse)
+
 
 Node Swap Singly Linked Lists
 
