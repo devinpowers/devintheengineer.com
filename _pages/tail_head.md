@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /algorithms/linked_lists/tail_head
-title: "Linked Lists- length of List"
+title: "Linked Lists- Move the Tail to the Head"
 author_profile: true
 
 header:
