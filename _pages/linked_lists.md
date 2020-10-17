@@ -31,7 +31,7 @@ header:
 [Reverse Linked List](https://devintheengineer.com/algorithms/linked_lists/reverse)
 
 
-[Node Swap Singly Linked Lists](https://devintheengineer.com/algorithms/linked_lists/Node_swap)
+[Node Swap Singly Linked Lists](https://devintheengineer.com/algorithms/linked_lists/Node_Swap)
 
 
 [Remove Duplicates of Singular Linked Lists](https://devintheengineer.com/algorithms/linked_lists/duplicates)
