@@ -50,3 +50,6 @@ Sum two Lists
 
 [Circular Linked Lists Insertion](https://devintheengineer.com/algorithms/linked_lists/circular_linked_list_insertion)
 
+[Circular Linked Lists Remove Node](https://devintheengineer.com/algorithms/linked_lists/circular_remove)
+
+
