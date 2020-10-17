@@ -54,4 +54,6 @@ Sum two Lists
 
 [Circular Linked List Split](https://devintheengineer.com/algorithms/linked_lists/linked_split)
 
+[Circular Linked List Josephus Problem](https://devintheengineer.com/algorithms/linked_lists/circular_jos)
+
 
