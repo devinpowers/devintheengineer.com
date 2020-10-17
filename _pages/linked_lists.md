@@ -36,9 +36,10 @@ header:
 
 [Remove Duplicates of Singular Linked Lists](https://devintheengineer.com/algorithms/linked_lists/duplicates)
 
+[Move Tail to head](https://devintheengineer.com/algorithms/linked_lists/tail_head)
+
 Merge Two Sorted Lists
 
-Move tail to head
 
 Check if Linked list is a Palindrome
 
