@@ -47,6 +47,14 @@ Sum two Lists
 
 # Doubly Linked Lists:
 
+[Doubly Linked Lists Add Node Before and After](https://devintheengineer.com/algorithms/linked_lists/double_add)
+
+[Doubly Linked Lists Append and Prepend](https://devintheengineer.com/algorithms/linked_lists/double_append)
+
+[Doubly Linked Lists Delete Node](https://devintheengineer.com/algorithms/linked_lists/double_delete)
+
+
+
 
 # Circular Linked Lists:
 
