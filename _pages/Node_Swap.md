@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /algorithms/node_swap
+permalink: /algorithms/linked_list/Node_Swap
 title: "Node Swap"
 author_profile: true
 
