@@ -9,11 +9,21 @@ header:
   
 ---
 
-# Trees
+# General Trees
 
 ![inserting an Image](/images/tree/general_tree.jpg)
 
 Trees are a non-linear Data Structure, compared to arrays, linked lists, stacks and queues which are linear data strcutures
+
+Tree Node Class:
+
+    class Node:
+    
+        def __int__(self, data):
+
+            self.left = None
+            self.right = None
+            self.data = data
 
 
 
