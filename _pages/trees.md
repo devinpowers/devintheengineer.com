@@ -27,8 +27,10 @@ Tree Node Class:
 
 
 
--Link to General Properties of Trees
- - terminology
+[General Properties of Trees](https://devintheengineer.com/algorithms/trees/general_tree)
+
+
+
 
 - Link to Implement Tree
 
