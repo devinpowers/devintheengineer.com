@@ -16,6 +16,16 @@ header:
 
 # Singular Linked Lists:
 
+
+Time Complexity for Singly-Linked List:
+
+| Operation | Running Time (Average) | Running Time (Worst) |
+|-----------|------------------------|----------------------|
+| Access    | O (n)                  | O (n)                |
+| Search    | O (n)                  | O (n)                |
+| Insertion | O (1)                  | O (1)                |
+| Deletion  | O (1)                  | O (1)                |
+
 [Linked Lists Insertion](https://devintheengineer.com/algorithms/linked_lists/linked_list_insertion)
 
 
@@ -45,12 +55,20 @@ header:
 [Merge Two Sorted Lists](https://devintheengineer.com/algorithms/linked_lists/single_merge)
 
 Coming Soon:
+- Check if Linked list is a Palindrome
+- Sum two Lists
 
-Check if Linked list is a Palindrome
-
-Sum two Lists
 
 # Doubly Linked Lists:
+
+Time Complexity for Doubly-Linked List:
+
+| Operation | Running Time (Average) | Running Time (Worst) |
+|-----------|------------------------|----------------------|
+| Access    | O (n)                  | O (n)                |
+| Search    | O (n)                  | O (n)                |
+| Insertion | O (1)                  | O (1)                |
+| Deletion  | O (1)                  | O (1)                |
 
 
 [Doubly Linked Lists Add Node Before and After](https://devintheengineer.com/algorithms/linked_lists/double_add)
@@ -59,7 +77,11 @@ Sum two Lists
 
 [Doubly Linked Lists Delete Node](https://devintheengineer.com/algorithms/linked_lists/double_delete)
 
-
+Coming Soon:
+ - Pairs with Sum
+ - Remove Duplicates
+ - Reverse list
+ 
 
 # Circular Linked Lists:
 
