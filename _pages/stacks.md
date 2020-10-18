@@ -32,24 +32,48 @@ Cons: Not dynamic
 Code:
 
     class Stack():
-        def __init__(self):
-            self.items = []
+    
+    def __init__(self):
+        self.items = []
 
-        def push(self, item):
-            self.items.append(item)				
+    def push(self, item):
+        self.items.append(item)				
 
-        def pop(self):
-            return self.items.pop()
+    def pop(self):
+        return self.items.pop()
 
-        def is_empty(self):
-            return self.items == []
+    def is_empty(self):
+        return self.items == []
 
-        def peek(self):
-            if not self.is_empty():
-                return self.items[-1]
+    def peek(self):
+        if not self.is_empty():
+            return self.items[-1]
 
-        def get_stack(self):
-            return self.items
+    def get_stack(self):
+        return self.items
+    
+    def print_stack(self):
+        
+        for element in self.items:
+            print(element)
+
+    
+
+    stack_practice = Stack()
+
+    stack_practice.push('A')
+    stack_practice.push('B')
+    stack_practice.push('D')
+    stack_practice.push('C')
+    stack_practice.push('J')
+    print("Stack Before Popping: ")
+    stack_practice.print_stack()
+    print("\n")
+    stack_practice.pop()
+    print("Stack After Popping: ")
+    stack_practice.print_stack()
+
+
 
 
 
@@ -100,3 +124,5 @@ Code:
             if self.isEmpty(): 
                 return float("-inf") 
             return self.head.data 
+            
+            
