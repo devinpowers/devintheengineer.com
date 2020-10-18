@@ -11,16 +11,35 @@ header:
 
 # Trees
 
-[Introduction to Trees](https://devintheengineer.com/algorithms/trees/intro_trees)
-- binary tree 
+![inserting an Image](/images/tree/general_tree.jpg)
 
+Trees are a non-linear Data Structure, compared to arrays, linked lists, stacks and queues which are linear data strcutures
+
+
+
+-Link to General Properties of Trees
+ - terminology
+
+- Link to Implement Tree
+
+ - Depth and Height Properties
+ 
 
 # Binary Trees
 
-## 
-Level-Order Traversal
-- Reversal Level-order Traversal
-- Level- Order Traversal
+- [insert Binary Tree Picture]
+-- IMplementing Binary Tree
 
+ - Dynamically Created Nodes
+ - Arrays
+- Binary Tree Level-Order Traversal
+
+- Binary Tree Insertion
+
+- Binary Tree Reversal Level-order Traversal
+
+- Binary Tree Level- Order Traversal
 
 [Calculating Height of a Binary Tree](https://devintheengineer.com/algorithms/trees/height_of_tree)
+
+- Calcualting Size of Binary Tree
