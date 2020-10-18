@@ -9,9 +9,33 @@ header:
   
 ---
 
-Here I will post notes on Stack data structures and different operations that are commonly performed on them.
+
+Analyzing the Array- Based Stack Implementation
+
+| Operation  | Running Time |
+|------------|--------------|
+| push(e)    | O (1)        |
+| pop()      | O (1)        |
+| peak()     | O (1)        |
+| is_empty() | O (1)        |
+| len()      | O (1)        |
 
 
-What is a Stack?
 
 
+## Implementing  a Stack using an Array:
+
+Pros: Easy
+Cons: Not dynamic 
+
+
+
+
+
+
+
+
+## Implementing  a Stack using an Linked List:
+
+Pros:
+Cons:
