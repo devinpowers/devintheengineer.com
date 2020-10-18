@@ -18,6 +18,23 @@ header:
 
 ![inserting an Image](/images/Linked_Lists/home/single_node.jpg)
 
+A new Class "Node" is required to create the data structure:
+
+    class Node:
+
+        def __init__ (self,data):
+            self.data = data
+            self.next = None
+
+Once we have created a Node Class we can Create a Linked List Class:
+
+    class linkedList():
+
+        def __init__(self):
+            self.head = None
+
+From here we can add functionality like insertion and deletion of Nodes, the following links on this page show the step-by-step processes of different functionality of a Singly Linked List.
+
 
 Time Complexity for Singly-Linked List:
 
@@ -63,6 +80,20 @@ Coming Soon:
 
 # Doubly Linked Lists:
 
+![inserting an Image](/images/Linked_Lists/home/double.jpg)
+
+For a Doubly Linked List we need to adjust the Node Class to include Previous
+
+    class Node:
+
+        def __init__(self, data):
+            self.data = data 
+            self.next = None
+            self.prev = None
+
+From here we can add functionality like we did in Single Linked List
+
+
 Time Complexity for Doubly-Linked List:
 
 | Operation | Running Time (Average) | Running Time (Worst) |
@@ -86,6 +117,11 @@ Coming Soon:
  
 
 # Circular Linked Lists:
+
+![inserting an Image](/images/Linked_Lists/home/circle.jpg)
+
+For a Circular Linked List we can use the same Node Class that we used in Single Linked List
+
 
 [Circular Linked Lists Insertion](https://devintheengineer.com/algorithms/linked_lists/circular_linked_list_insertion)
 
