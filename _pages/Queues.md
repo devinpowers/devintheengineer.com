@@ -9,8 +9,20 @@ header:
   
 ---
 
-Here I will post notes on Queue data structures and different operations that are commonly performed on them.
-
-
 What is a Queue? 
 
+FIFO Concept, first in is the first out
+
+Time Complexity of a Queue
+
+| Operation | Running Time (Average) | Running Time (Worst) |
+|-----------|------------------------|----------------------|
+| Access    | O (n)                  | O (n)                |
+| Search    | O (n)                  | O (n)                |
+| Insertion | O (1)                  | O (1)                |
+| Deletion  | O (1)                  | O (1)                |
+
+
+Regular Array Implmentation
+
+Circular Array Implmentation
