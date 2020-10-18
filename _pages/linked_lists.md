@@ -38,7 +38,7 @@ header:
 
 [Move Tail to head](https://devintheengineer.com/algorithms/linked_lists/tail_head)
 
-Merge Two Sorted Lists
+[Merge Two Sorted Lists](https://devintheengineer.com/algorithms/linked_lists/single_merge)
 
 
 Check if Linked list is a Palindrome
