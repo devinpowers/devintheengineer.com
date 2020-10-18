@@ -9,8 +9,12 @@ header:
   
 ---
 
-# Singular Linked Lists:
 
+- Here are different operations that are commonly performed on Singular, Doubly, and Circular Linked Lists
+- Code and Step-by-Step diagrams/Notes are provided
+
+
+# Singular Linked Lists:
 
 [Linked Lists Insertion](https://devintheengineer.com/algorithms/linked_lists/linked_list_insertion)
 
@@ -40,6 +44,7 @@ header:
 
 [Merge Two Sorted Lists](https://devintheengineer.com/algorithms/linked_lists/single_merge)
 
+Coming Soon:
 
 Check if Linked list is a Palindrome
 
@@ -47,12 +52,12 @@ Sum two Lists
 
 # Doubly Linked Lists:
 
+
 [Doubly Linked Lists Add Node Before and After](https://devintheengineer.com/algorithms/linked_lists/double_add)
 
 [Doubly Linked Lists Append and Prepend](https://devintheengineer.com/algorithms/linked_lists/double_append)
 
 [Doubly Linked Lists Delete Node](https://devintheengineer.com/algorithms/linked_lists/double_delete)
-
 
 
 
