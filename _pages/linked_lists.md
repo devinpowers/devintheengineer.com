@@ -16,6 +16,8 @@ header:
 
 # Singular Linked Lists:
 
+![inserting an Image](/images/Linked_Lists/home/single_node.jpg)
+
 
 Time Complexity for Singly-Linked List:
 
