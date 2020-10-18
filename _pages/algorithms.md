@@ -16,6 +16,8 @@ Data Structures and Algorithms Resources:
 3. [mycodeschool youtube channel](https://www.youtube.com/user/mycodeschool)
 
 
+Learning Data Structures and Algorithms is an important in becoming a Software Engineer, they allow you to solve challenging problems
+
 Link to my GitHub Repository:
 
 [Data Structures and Algorithms Repository](https://github.com/devinpowers/algorithms)
@@ -25,6 +27,8 @@ Link to my GitHub Repository:
 Here I will post links to different Algorithms
 
 [Sorting Algorithms](https://devintheengineer.com/algorithms/sorting)
+
+- includes Merge Sort, Insertion Sort, and Quick Sort
  
 
 # Data Structures:
@@ -39,14 +43,17 @@ Queues
 
 Deques
 
-# Linked Lists
+## Linked Lists
 
 [Linked Lists](https://devintheengineer.com/algorithms/linked_lists)
 
+- Includes Singluar, Doubly, and Circular linked Lists
 
-# Trees
+
+## Trees
 
 [Trees](https://devintheengineer.com/algorithms/trees)
+
 
 
 
