@@ -75,36 +75,43 @@ Trees are a non-linear Data Structure, compared to arrays, linked lists, stacks 
 ![inserting an Image](/images/tree/binary_tree.jpg)
 
 
-A Binary Tree is a Tree data structure in which each node has at most two childer, which are referred to as the left child and the right child.
-When we implement a binary tree each node has three attributes: data, left child, and right child.
+A Binary Tree is a Tree data structure in which each node has at most two childern.
 
-    class Node:
-    
-        def __int__(self, data):
+When we implement a binary tree each node has three attributes:
 
-            self.left = None
-            self.right = None
-            self.data = data
-            
-    
-    node2 = Node(2)
-    node3 = Node(3)
-    node4 = Node(4)
-    node5 = Node(5)
-    node6 = Node(6)
+- data
+- left child
+- right child.
 
-    node2.left = node3
-    node2.right = node4
-    node3.left = node5
-    node3.right = node6
 
-    
-    #  Our example tree looks like this:
-    #         2
-    #       /   \
-    #      3     4
-    #     / \
-    #    5   6
+
+        class Node:
+
+            def __int__(self, data):
+
+                self.left = None
+                self.right = None
+                self.data = data
+
+
+        node2 = Node(2)
+        node3 = Node(3)
+        node4 = Node(4)
+        node5 = Node(5)
+        node6 = Node(6)
+
+        node2.left = node3
+        node2.right = node4
+        node3.left = node5
+        node3.right = node6
+
+
+        #  Our example tree looks like this:
+        #         2
+        #       /   \
+        #      3     4
+        #     / \
+        #    5   6
 
 
 - [insert Binary Tree Picture]
