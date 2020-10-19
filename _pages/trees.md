@@ -11,7 +11,7 @@ header:
 
 # General Trees
 
-![inserting an Image](/images/tree/general_tree.jpg)
+![inserting an Image](/images/tree/tree.jpg)
 
 Trees are a non-linear Data Structure, compared to arrays, linked lists, stacks and queues which are linear data strcutures
 
