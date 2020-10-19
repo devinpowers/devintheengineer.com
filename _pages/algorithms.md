@@ -51,7 +51,7 @@ Deques
 
 [Linked Lists](https://devintheengineer.com/algorithms/linked_lists)
 
-- Includes Singluar, Doubly, and Circular linked Lists
+- Includes Singly, Doubly, and Circular linked Lists
 
 
 ## Trees
