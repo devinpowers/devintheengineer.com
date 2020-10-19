@@ -10,11 +10,11 @@ header:
 ---
 
 
-- Here are different operations that are commonly performed on Singular, Doubly, and Circular Linked Lists
+- Here are different operations that are commonly performed on Singly, Doubly, and Circular Linked Lists
 - Code and Step-by-Step diagrams/Notes are provided
 
 
-# Singular Linked Lists:
+# Singly Linked Lists:
 
 ![inserting an Image](/images/Linked_Lists/home/single_node.jpg)
 
@@ -67,7 +67,7 @@ Time Complexity for Singly-Linked List:
 [Node Swap Singly Linked Lists](https://devintheengineer.com/algorithms/linked_lists/Node_Swap)
 
 
-[Remove Duplicates of Singular Linked Lists](https://devintheengineer.com/algorithms/linked_lists/duplicates)
+[Remove Duplicates of Singly Linked Lists](https://devintheengineer.com/algorithms/linked_lists/duplicates)
 
 [Move Tail to head](https://devintheengineer.com/algorithms/linked_lists/tail_head)
 

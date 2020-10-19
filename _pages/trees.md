@@ -114,8 +114,8 @@ When we implement a binary tree each node has three attributes:
         #    5   6
 
 
-- [insert Binary Tree Picture]
--- IMplementing Binary Tree
+
+
 
  - Dynamically Created Nodes
  - Arrays
