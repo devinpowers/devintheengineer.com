@@ -50,12 +50,9 @@ Tree Node Class:
 
 [General Properties of Trees](https://devintheengineer.com/algorithms/trees/general_tree)
 
+ - Including the height and depth
 
 
-
-- Link to Implement Tree
-
- - Depth and Height Properties
  
 
 # Binary Trees
