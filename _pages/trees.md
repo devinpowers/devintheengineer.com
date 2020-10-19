@@ -72,7 +72,11 @@ Trees are a non-linear Data Structure, compared to arrays, linked lists, stacks 
 
 # Binary Trees
 
-Binary Tree
+![inserting an Image](/images/tree/binary_tree.jpg)
+
+
+A Binary Tree is a Tree data structure in which each node has at most two childer, which are referred to as the left child and the right child.
+When we implement a binary tree each node has three attributes: data, left child, and right child.
 
     class Node:
     
