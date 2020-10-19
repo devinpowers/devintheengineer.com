@@ -15,7 +15,64 @@ header:
 
 Trees are a non-linear Data Structure, compared to arrays, linked lists, stacks and queues which are linear data strcutures
 
-Tree Node Class:
+
+    class Node(object):
+
+        def __init__(self, data):
+            self.data = data
+            self.children = []
+
+        def add_child(self, obj):
+            self.children.append(obj)
+
+    Root = Node(1)
+
+    Red = Node(2)
+
+    Yellow = Node(3)
+
+    Pink_1 = Node(4)
+    Pink_2 = Node(5)
+    Pink_3 = Node(6)
+
+    Brown_2 = Node(7)
+
+    Brown_1 = Node(8)
+
+    Green_1 = Node(9)
+    Green_2 = Node(10)
+
+    Blue = Node(11)
+
+    Root.add_child(Red)
+    Root.add_child(Yellow)
+
+    Red.add_child(Pink_1)
+    Red.add_child(Pink_2)
+    Red.add_child(Pink_3)
+
+    Yellow.add_child(Brown_1)
+    Yellow.add_child(Brown_2)
+
+    Pink_1.add_child(Green_1)
+    Pink_1.add_child(Green_2)
+
+    Brown_2.add_child(Blue)
+
+    
+
+
+
+[General Properties of Trees](https://devintheengineer.com/algorithms/trees/general_tree)
+
+ - Including the height and depth
+
+
+ 
+
+# Binary Trees
+
+Binary Tree
 
     class Node:
     
@@ -24,6 +81,7 @@ Tree Node Class:
             self.left = None
             self.right = None
             self.data = data
+            
     
     node2 = Node(2)
     node3 = Node(3)
@@ -44,18 +102,6 @@ Tree Node Class:
     #     / \
     #    5   6
 
-    
-
-
-
-[General Properties of Trees](https://devintheengineer.com/algorithms/trees/general_tree)
-
- - Including the height and depth
-
-
- 
-
-# Binary Trees
 
 - [insert Binary Tree Picture]
 -- IMplementing Binary Tree
