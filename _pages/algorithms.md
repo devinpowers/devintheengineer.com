@@ -50,7 +50,7 @@ Here I will post links to different Algorithms
 
 Here I will post links to different Data Structures and how to implement them in Python
 
-# Arrays:
+## Arrays:
 
 - The Simplest Data Structure
 
