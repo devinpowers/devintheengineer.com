@@ -129,10 +129,13 @@ Depth-First or Breadth-First Order
 2. [Pre-Order Traversal](https://devintheengineer.com/algorithms/trees/pre_order)
 3. [Post-Order Traversal](https://devintheengineer.com/algorithms/trees/post_order)
 
+### Breadth-First Order (or Level Order Traversal)
+
+- Level Order Traversal
+- Reverse Level Order Traversal
 
 
-
-### Other things We can DO with Binary Trees:
+### Other things We can dO with Binary Trees:
 
 - Binary Tree Insertion
 
@@ -143,3 +146,12 @@ Depth-First or Breadth-First Order
 [Calculating Height of a Binary Tree](https://devintheengineer.com/algorithms/trees/height_of_tree)
 
 - Calcualting Size of Binary Tree
+
+- Calculating Height of a Binary Tree
+
+- Calculating the Size of a Binary Tree
+
+
+
+
+
