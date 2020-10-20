@@ -30,10 +30,14 @@ Link to my GitHub Repository:
 
 Here I will post links to different Algorithms
 
+## Sorting Algorithms
+
+- Merge Sort
+- Insertion Sort
+- Quick Sort
+
 [Sorting Algorithms](https://devintheengineer.com/algorithms/sorting)
 
-- includes Merge Sort, Insertion Sort, and Quick Sort
- 
 
 # Data Structures:
 
