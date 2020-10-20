@@ -36,10 +36,20 @@ Here I will post links to different Algorithms
 [Merge Sort](https://devintheengineer.com/algorithms/merge)
 [Quick Sort](https://devintheengineer.com/algorithms/quick)
 
+| Algorithm      | Running Time (Average) | Running Time (Worst) | Space Complexity (Worst) |
+|----------------|------------------------|----------------------|--------------------------|
+| QuickSort      | (n log(n))             | O (n^2)              | O(n log(n))              |
+| Insertion Sort | (n)                    | O (n^2)              | O(1)                     |
+| Merge Sort     | (n log(n))             | O(n log(n))          | O(n)                     |
+
 
 # Data Structures:
 
 Here I will post links to different Data Structures and how to implement them in Python
+
+# Arrays:
+
+- The Simplest Data Structure
 
 ## Stacks, Queues, and Deques
 
