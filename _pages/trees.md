@@ -126,7 +126,8 @@ Depth-First or Breadth-First Order
 ### Depth-First Order:
 
 1. In-Order
-2. Pre-Order
+2. [Pre-Order Traversal](https://devintheengineer.com/algorithms/trees/pre_order)
+
 3. Post-Order
 
 
