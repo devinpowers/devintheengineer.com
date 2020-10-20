@@ -151,7 +151,18 @@ Depth-First or Breadth-First Order
 
 - Calculating the Size of a Binary Tree
 
+# Coming Soon:
 
+## Binary Search Tree
 
+## AVL Tree
+
+## Red-black tree
+
+## Splay Tree
+
+## Treap
+
+## B-Tree
 
 

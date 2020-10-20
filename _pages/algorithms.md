@@ -73,6 +73,16 @@ Deques
 
 [Trees](https://devintheengineer.com/algorithms/trees)
 
+includes:
+
+1. General Tree
+2. Binary Tree
+3. Binary Search Tree
+4. AVL Tree
+5. Red-Black Tree
+6. Splay Tree
+7. Treap
+8. B-Tree
 
 
 
