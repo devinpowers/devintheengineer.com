@@ -125,12 +125,14 @@ Depth-First or Breadth-First Order
 
 ### Depth-First Order:
 
-1. In-Order
+1. [In-Order Traversal](https://devintheengineer.com/algorithms/trees/in_order)
 2. [Pre-Order Traversal](https://devintheengineer.com/algorithms/trees/pre_order)
+3. [Post-Order Traversal](https://devintheengineer.com/algorithms/trees/post_order)
 
-3. Post-Order
 
 
+
+### Other things We can DO with Binary Trees:
 
 - Binary Tree Insertion
 
