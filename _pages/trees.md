@@ -85,35 +85,36 @@ When we implement a binary tree each node has three attributes:
 
 
 
-        class Node:
-
-            def __int__(self, data):
-
+        class Node(object):
+        
+            def __init__(self, value):
+                self.value = value
                 self.left = None
                 self.right = None
-                self.data = data
 
 
-        node2 = Node(2)
-        node3 = Node(3)
-        node4 = Node(4)
-        node5 = Node(5)
-        node6 = Node(6)
-
-        node2.left = node3
-        node2.right = node4
-        node3.left = node5
-        node3.right = node6
+        class BinaryTree(object):
+        
+            def __init__(self, root):
+                self.root = Node(root)
 
 
-        #  Our example tree looks like this:
-        #         2
-        #       /   \
-        #      3     4
-        #     / \
-        #    5   6
 
+        tree = BinaryTree(1)
+        tree.root.left = Node(2)
+        tree.root.right = Node(3)
+        tree.root.left.left = Node(4)
+        tree.root.left.right = Node(5)
+        tree.root.right.left = Node(6)
+        tree.root.right.right = Node(7)
 
+        #          DISPLAYED TREE:
+
+        #               1
+        #           /       \  
+        #          2          3  
+        #         /  \      /   \
+        #        4    5     6   7 
 
 
 
