@@ -32,11 +32,9 @@ Here I will post links to different Algorithms
 
 ## Sorting Algorithms
 
-- Merge Sort
-- Insertion Sort
-- Quick Sort
-
-[Sorting Algorithms](https://devintheengineer.com/algorithms/sorting)
+[Insertion Sort](https://devintheengineer.com/algorithms/insertion)
+[Merge Sort](https://devintheengineer.com/algorithms/merge)
+[Quick Sort](https://devintheengineer.com/algorithms/quick)
 
 
 # Data Structures:
