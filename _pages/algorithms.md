@@ -71,9 +71,12 @@ Deques
 
 ## Trees
 
-[Trees](https://devintheengineer.com/algorithms/trees)
+![inserting an Image](/images/christmas.jpg)
 
-includes:
+
+[Tree Data Structure](https://devintheengineer.com/algorithms/trees)
+
+Includes:
 
 1. General Tree
 2. Binary Tree
