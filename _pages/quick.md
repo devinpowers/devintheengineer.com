@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /algorithms/quick
-title: "Post-Order Tree Traversal"
+title: "Quick Sort"
 author_profile: true
 
 header:
