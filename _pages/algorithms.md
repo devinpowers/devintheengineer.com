@@ -33,8 +33,11 @@ Here I will post links to different Algorithms
 ## Sorting Algorithms
 
 [Insertion Sort](https://devintheengineer.com/algorithms/insertion)
+
 [Merge Sort](https://devintheengineer.com/algorithms/merge)
+
 [Quick Sort](https://devintheengineer.com/algorithms/quick)
+
 
 | Algorithm      | Running Time (Average) | Running Time (Worst) | Space Complexity (Worst) |
 |----------------|------------------------|----------------------|--------------------------|
