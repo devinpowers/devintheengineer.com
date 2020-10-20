@@ -9,7 +9,6 @@ header:
   
 ---
 
-What is a Queue? 
 
 FIFO Concept, first in is the first out
 
@@ -23,6 +22,22 @@ Time Complexity of a Queue
 | Deletion  | O (1)                  | O (1)                |
 
 
-Regular Array Implmentation
+Regular Array Implmentation:
 
-Circular Array Implmentation
+Circular Array Implmentation:
+
+![inserting an Image](/images/queues/Page1.jpg)
+![inserting an Image](/images/queues/Page2.jpg)
+![inserting an Image](/images/queues/Page3.jpg)
+![inserting an Image](/images/queues/Page4.jpg)
+![inserting an Image](/images/queues/Page5.jpg)
+![inserting an Image](/images/queues/Page6.jpg)
+![inserting an Image](/images/queues/Page7.jpg)
+![inserting an Image](/images/queues/Page8.jpg)
+![inserting an Image](/images/queues/Page9.jpg)
+![inserting an Image](/images/queues/Page10.jpg)
+![inserting an Image](/images/queues/Page11.jpg)
+![inserting an Image](/images/queues/Page12.jpg)
+
+
+
