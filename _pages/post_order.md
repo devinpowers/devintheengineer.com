@@ -9,8 +9,9 @@ header:
   
 ---
 
-![inserting an Image](/images/tree/in_order/Page1.jpg)
-![inserting an Image](/images/tree/in_order/Page2.jpg)
+![inserting an Image](/images/tree/postorder/Page1.jpg)
+![inserting an Image](/images/tree/postorder/Page2.jpg)
+
 
 Code:
 
@@ -31,22 +32,33 @@ Code:
             if traversal_type == "inorder":
                 return self.inorder_print(tree.root, "")
 
+            elif traversal_type == "postorder":
+                return self.postorder_print(tree.root, "")
+
             else:
                 print("Traversal type " + str(traversal_type) + " is not supported.")
                 return False
 
 
         def inorder_print(self, start, traversal):
-
             """Left->Root->Right"""
+            if start:
+                traversal = self.inorder_print(start.left, traversal)
+                traversal += (str(start.value) + "-")
+                traversal = self.inorder_print(start.right, traversal)
+            return traversal
 
+
+        def postorder_print(self, start, traversal):
+
+            """Left->Right->Root"""
             if start:
 
                 traversal = self.inorder_print(start.left, traversal)
 
-                traversal += (str(start.value) + "-")
-
                 traversal = self.inorder_print(start.right, traversal)
+
+                traversal += (str(start.value) + "-")
 
             return traversal
 
@@ -60,6 +72,8 @@ Code:
     tree.root.right.left = Node(6)
     tree.root.right.right = Node(7)
 
-    print(tree.print_tree('inorder'))
+    print(tree.print_tree('postorder'))
+
+
 
  
