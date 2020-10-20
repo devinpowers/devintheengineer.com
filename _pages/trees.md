@@ -117,10 +117,19 @@ When we implement a binary tree each node has three attributes:
         #        4    5     6   7 
 
 
+## Binary Tree Traversals
 
- - Dynamically Created Nodes
- - Arrays
-- Binary Tree Level-Order Traversal
+Tree Traversal is the Process of visiting (checking and/or updating) each node in a tree data structure, exactly once. Unliked other data structures, trees can be traversed in multiple ways.
+
+Depth-First or Breadth-First Order
+
+### Depth-First Order:
+
+1. In-Order
+2. Pre-Order
+3. Post-Order
+
+
 
 - Binary Tree Insertion
 
