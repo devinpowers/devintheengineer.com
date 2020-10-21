@@ -56,7 +56,11 @@ Here I will post links to different Data Structures and how to implement them in
 
 ## Stacks, Queues, and Deques
 
+![inserting an Image](/images/stack.jpg)
+
 [Stacks](https://devintheengineer.com/algorithms/stacks)
+
+![inserting an Image](/images/Q.jpg)
 
 [Queues](https://devintheengineer.com/algorithms/Queues)
 
