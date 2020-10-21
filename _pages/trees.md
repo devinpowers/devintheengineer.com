@@ -151,9 +151,14 @@ Depth-First or Breadth-First Order
 
 - Calculating the Size of a Binary Tree
 
-# Coming Soon:
 
 ## Binary Search Tree
+
+[Binary Search Tree](https://devintheengineer.com/algorithms/trees/bst)
+
+
+
+# Coming Soon:
 
 ## AVL Tree
 
