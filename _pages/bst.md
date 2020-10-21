@@ -20,7 +20,16 @@ Time Complexity of Binary Search Tree
 
 
 
-testing
+![inserting an Image](/images/tree/bst/Page1.jpg)
+![inserting an Image](/images/tree/bst/Page2.jpg)
+![inserting an Image](/images/tree/bst/Page3.jpg)
+![inserting an Image](/images/tree/bst/Page4.jpg)
+![inserting an Image](/images/tree/bst/Page5.jpg)
+![inserting an Image](/images/tree/bst/Page6.jpg)
+![inserting an Image](/images/tree/bst/Page7.jpg)
+![inserting an Image](/images/tree/bst/Page8.jpg)
+
+
 Code:
 
 # Binary Search Tree
