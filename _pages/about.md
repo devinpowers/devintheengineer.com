@@ -21,9 +21,15 @@ Hi, my name is Devin Powers. I am a Civil Engineering graduate from Michigan Sta
 
 2020 Learning Goals:
 
-- Learn a Programming Language X
-- Learn Discrete Mathematics   X
-- Learn Data Structures and Algorithms (In Progress)
+- Programming Language (Python) X
+- Discrete Mathematics   X
+- Data Structures and Algorithms (In Progress)
+
+
+Can use Python to work with:
+- SQl and Databases
+- Machine Learning Basics
+- Big Data/Data Analysis
 
 
 

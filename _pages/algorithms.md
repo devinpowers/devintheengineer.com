@@ -9,18 +9,19 @@ header:
   
 ---
 
-Data Structures and Algorithms Resources:
+Learning Data Structures and Algorithms is an important in becoming a Software Engineer, they allow you to solve challenging problems.
+
+Data Structures and Algorithms Resources that I have used:
 
 1. Data Structures & Algorithms in Python - Goodrich
 2. [CS Dojo youtube videos](https://www.youtube.com/playlist?list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H)
 3. [mycodeschool youtube channel](https://www.youtube.com/user/mycodeschool)
 
-
-Learning Data Structures and Algorithms is an important in becoming a Software Engineer, they allow you to solve challenging problems
-
 Link to my GitHub Repository:
 
 [Data Structures and Algorithms Repository](https://github.com/devinpowers/algorithms)
+
+
 
 # Algorithm Analysis
 
@@ -51,6 +52,8 @@ Here I will post links to different Algorithms
 Here I will post links to different Data Structures and how to implement them in Python
 
 ## Arrays:
+
+![inserting an Image](/images/array.jpg)
 
 - The Simplest Data Structure
 
