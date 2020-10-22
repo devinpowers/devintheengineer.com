@@ -19,6 +19,24 @@ Hi, my name is Devin Powers. I am a Civil Engineering graduate from Michigan Sta
 * Software Development
 * Michigan State Basketball & Football
 
+2020 Learning Goals:
+
+- Learn a Programming Language X
+- Learn Discrete Mathematics   X
+- Learn Data Structures and Algorithms (In Progress)
+
+
+
+
+2021 Learning Goals:
+
+- low-level programming language (C, C++)
+- Computer Architecture
+- Computer Systems
+
+
+
+
 
 
 <iframe src="https://open.spotify.com/embed/playlist/1VEjjmVIpu2vWIgrs6u7hb" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
