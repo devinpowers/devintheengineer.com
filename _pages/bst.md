@@ -28,6 +28,8 @@ Time Complexity of Binary Search Tree
 ![inserting an Image](/images/tree/bst/Page6.jpg)
 ![inserting an Image](/images/tree/bst/Page7.jpg)
 ![inserting an Image](/images/tree/bst/Page8.jpg)
+![inserting an Image](/images/tree/bst/Page9.jpg)
+
 
 
 Code:
