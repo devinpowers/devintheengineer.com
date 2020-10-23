@@ -47,6 +47,10 @@ Here I will post links to different Algorithms
 | Merge Sort     | (n log(n))             | O(n log(n))          | O(n)                     |
 
 
+
+
+
+
 # Data Structures:
 
 Here I will post links to different Data Structures and how to implement them in Python
