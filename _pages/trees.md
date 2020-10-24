@@ -142,7 +142,9 @@ Depth-First or Breadth-First Order
 
 - Calcualting Size of Binary Tree
 
-- Insertion and Deletion of a Node in a Binary Tree
+[Insertion into Binary Tree](https://devintheengineer.com/algorithms/trees/insert_regular_binary_tree)
+
+Deletion of a Node in a Binary Tree
 
 
 
