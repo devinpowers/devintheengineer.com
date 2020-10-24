@@ -137,10 +137,6 @@ Depth-First or Breadth-First Order
 
 ## Other things We can do with Binary Trees:
 
-- Binary Tree Insertion
-
-- Binary Tree Deletion of a Node
-
 [Calculating Height of a Binary Tree](https://devintheengineer.com/algorithms/trees/height_of_tree)
 
 - Calcualting Size of Binary Tree
@@ -149,6 +145,13 @@ Depth-First or Breadth-First Order
 ## Binary Search Tree
 
 [Binary Search Tree](https://devintheengineer.com/algorithms/trees/bst)
+
+- Insertion into a Binary Search Tree
+
+- Deletion of a Node in a Binary Search Tree
+
+- Searching for a Value in  a Binary Search Tree
+
 
 
 
