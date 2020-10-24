@@ -135,7 +135,7 @@ Depth-First or Breadth-First Order
 - Reverse Level Order Traversal
 
 
-### Other things We can dO with Binary Trees:
+## Other things We can do with Binary Trees:
 
 - Binary Tree Insertion
 
@@ -144,10 +144,6 @@ Depth-First or Breadth-First Order
 [Calculating Height of a Binary Tree](https://devintheengineer.com/algorithms/trees/height_of_tree)
 
 - Calcualting Size of Binary Tree
-
-- Calculating Height of a Binary Tree
-
-- Calculating the Size of a Binary Tree
 
 
 ## Binary Search Tree
