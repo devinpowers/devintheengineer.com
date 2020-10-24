@@ -142,7 +142,11 @@ Depth-First or Breadth-First Order
 - Calcualting Size of Binary Tree
 
 
+
+
 ## Binary Search Tree
+
+A BST is a special form of a Binary Tree data structure where each node has a comparable value, and smaller valued childern attached to left and larger valued childern attached to the right
 
 [Binary Search Tree](https://devintheengineer.com/algorithms/trees/bst)
 
