@@ -123,13 +123,13 @@ Tree Traversal is the Process of visiting (checking and/or updating) each node i
 
 Depth-First or Breadth-First Order
 
-### Depth-First Order:
+#### Depth-First Order:
 
 1. [In-Order Traversal](https://devintheengineer.com/algorithms/trees/in_order)
 2. [Pre-Order Traversal](https://devintheengineer.com/algorithms/trees/pre_order)
 3. [Post-Order Traversal](https://devintheengineer.com/algorithms/trees/post_order)
 
-### Breadth-First Order (or Level Order Traversal)
+#### Breadth-First Order (or Level Order Traversal)
 
 - Level Order Traversal
 - Reverse Level Order Traversal
@@ -139,9 +139,7 @@ Depth-First or Breadth-First Order
 
 - Binary Tree Insertion
 
-- Binary Tree Reversal Level-order Traversal
-
-- Binary Tree Level- Order Traversal
+- Binary Tree Deletion of a Node
 
 [Calculating Height of a Binary Tree](https://devintheengineer.com/algorithms/trees/height_of_tree)
 
