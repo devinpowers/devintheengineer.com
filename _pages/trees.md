@@ -140,12 +140,11 @@ Depth-First or Breadth-First Order
 
 [Calculating Height of a Binary Tree](https://devintheengineer.com/algorithms/trees/height_of_tree)
 
-- Calcualting Size of Binary Tree
+[Calculating the Size of a Binary Tree](https://devintheengineer.com/algorithms/trees/calculate_size_binary_tree)
 
 [Insertion into Binary Tree](https://devintheengineer.com/algorithms/trees/insert_regular_binary_tree)
 
-Deletion of a Node in a Binary Tree
-
+[Deletion of a Node in a Binary Tree](https://devintheengineer.com/algorithms/trees/deletion_regular_binary_tree)
 
 
 ## Binary Search Tree
