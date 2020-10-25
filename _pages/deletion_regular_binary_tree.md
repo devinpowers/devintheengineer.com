@@ -9,7 +9,12 @@ header:
   
 ---
 
-testing Deletion of a Node in a Regular Binary 
+![inserting an Image](/images/tree/delete_binary/Page1.jpg)
+![inserting an Image](/images/tree/delete_binary/Page2.jpg)
+![inserting an Image](/images/tree/delete_binary/Page3.jpg)
+![inserting an Image](/images/tree/delete_binary/Page4.jpg)
+![inserting an Image](/images/tree/delete_binary/Page5.jpg)
+
 
 
 
