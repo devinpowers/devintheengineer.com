@@ -158,7 +158,7 @@ Code:
 
                 x = temp.value     
 
-                delete_deepest(root,temp)      # call delete Deepest function, pass in our root and the temp value
+                self.delete_deepest(root,temp)      # call delete Deepest function, pass in our root and the temp value
 
                 key_node.value = x 
 
