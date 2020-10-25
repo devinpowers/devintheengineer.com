@@ -84,7 +84,6 @@ When we implement a binary tree each node has three attributes:
 - Right Child.
 
 
-
         class Node(object):
         
             def __init__(self, value):
@@ -132,6 +131,14 @@ Depth-First or Breadth-First Order
 
 [Binary Tree from an Linked list](https://devintheengineer.com/algorithms/trees/binary_from_linked_list)
 
+Time Complexity
+
+| Operation | Running Time (Worst) |
+|-----------|----------------------|
+| Search    | O(n)                 |
+| Delete    | O(n)                 |
+| Insertion | O(n)                 |
+
 
 ## Other things We can do with Binary Trees:
 
@@ -144,7 +151,7 @@ Depth-First or Breadth-First Order
 [Deletion of a Node in a Regular Binary Tree](https://devintheengineer.com/algorithms/trees/deletion_regular_binary_tree)
 
 
-## Binary Search Tree
+# Binary Search Tree
 
 - Insert Binary Search Tree Picture here
 
