@@ -79,9 +79,9 @@ A Binary Tree is a Tree data structure in which each node has at most two childe
 
 When we implement a binary tree each node has three attributes:
 
-- data
-- left child
-- right child.
+- Data
+- Left Child
+- Right Child.
 
 
 
@@ -98,8 +98,6 @@ When we implement a binary tree each node has three attributes:
             def __init__(self, root):
                 self.root = Node(root)
 
-
-
         tree = BinaryTree(1)
         tree.root.left = Node(2)
         tree.root.right = Node(3)
@@ -108,13 +106,6 @@ When we implement a binary tree each node has three attributes:
         tree.root.right.left = Node(6)
         tree.root.right.right = Node(7)
 
-        #          DISPLAYED TREE:
-
-        #               1
-        #           /       \  
-        #          2          3  
-        #         /  \      /   \
-        #        4    5     6   7 
 
 
 ## Binary Tree Traversals
@@ -135,6 +126,12 @@ Depth-First or Breadth-First Order
 
 - Reverse Level Order Traversal
 
+### Implementing a Binary Tree
+
+[Binary Tree from an Array](https://devintheengineer.com/algorithms/trees/binary_from_array)
+
+[Binary Tree from an Linked list](https://devintheengineer.com/algorithms/trees/binary_from_linked_list)
+
 
 ## Other things We can do with Binary Trees:
 
@@ -148,6 +145,8 @@ Depth-First or Breadth-First Order
 
 
 ## Binary Search Tree
+
+- Insert Binary Search Tree Picture here
 
 A BST is a special form of a Binary Tree data structure where each node has a comparable value, and smaller valued childern attached to left and larger valued childern attached to the right
 
