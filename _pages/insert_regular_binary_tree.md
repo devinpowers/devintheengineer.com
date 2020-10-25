@@ -13,6 +13,8 @@ header:
 ![inserting an Image](/images/tree/insertion_binary/Page2.jpg)
 ![inserting an Image](/images/tree/insertion_binary/Page3.jpg)
 ![inserting an Image](/images/tree/insertion_binary/Page4.jpg)
+![inserting an Image](/images/tree/insertion_binary/Page5.jpg)
+
 
 
 
