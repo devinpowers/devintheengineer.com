@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /algorithms/trees/insert_regular_binary_tree
-title: "How to Insert an Element into a Regular Binary Tree"
+title: "How to Insert a Node into a Regular Binary Tree"
 author_profile: true
 
 header:
