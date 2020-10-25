@@ -15,85 +15,181 @@ testing Deletion of a Node in a Regular Binary
 
 Code:
 
-    # Python3 program to illustrate deletion in a Binary Tree 
+    class Queue(object):
 
-    # class to create a node with data, left child and right child. 
-    class Node: 
-        def __init__(self,data): 
-            self.data = data 
+        def __init__(self):
+            self.items = []
+
+        def enqueue(self, item):
+            self.items.insert(0, item)
+
+        def dequeue(self):
+            if not self.is_empty():
+                return self.items.pop()
+
+        def is_empty(self):
+            return len(self.items) == 0
+
+        def peek(self):
+            if not self.is_empty():
+                return self.items[-1].value
+
+        def __len__(self):
+            return self.size()
+
+        def size(self):
+            return len(self.items)
+
+
+    class Node(object):
+
+        def __init__(self, value):
+
+            self.value = value
             self.left = None
-            self.right = None
+            self.right = None 
 
-    # Inorder traversal of a binary tree 
-    def inorder(temp): 
-        if(not temp): 
-            return
-        inorder(temp.left) 
-        print(temp.data, end = " ") 
-        inorder(temp.right) 
 
-    # function to delete the given deepest node (d_node) in binary tree  
-    def deleteDeepest(root,d_node): 
-        q = [] 
-        q.append(root) 
-        while(len(q)): 
-            temp = q.pop(0) 
-            if temp is d_node: 
-                temp = None
+    class BinaryTree(object):
+
+        def __init__(self, root):
+
+            self.root = Node(root)
+
+        def inorder(self,current_node):
+
+            '''Prints our Binary Tree In-Order Traversal'''
+
+            if not current_node:    
+
                 return
-            if temp.right: 
-                if temp.right is d_node: 
-                    temp.right = None
-                    return
-                else: 
-                    q.append(temp.right) 
-            if temp.left: 
-                if temp.left is d_node: 
-                    temp.left = None
-                    return
-                else: 
-                    q.append(temp.left) 
 
-    # function to delete element in binary tree  
-    def deletion(root, key): 
-        if root == None : 
-            return None
-        if root.left == None and root.right == None: 
-            if root.key == key :  
+            self.inorder(current_node.left) 
+
+            print(current_node.value,end = " ")
+
+            self.inorder(current_node.right) 
+
+        def delete_deepest(self, root, d_node):
+
+            queue = Queue()
+
+            queue.enqueue(root)
+
+            while len(queue):
+
+                temp = queue.dequeue()
+
+                if temp is d_node:
+
+                    temp = None
+                    return
+
+                if temp.right:
+
+                    if temp.right is d_node:   # comparison here
+
+                        temp.right = None
+
+                        return
+
+                    else:
+
+                        queue.enqueue(temp.right)
+
+                if temp.left:
+
+                    if temp.left is d_node:
+
+                        temp.left = None
+
+                        return
+
+                    else:
+                        queue.enqueue(temp.left)
+
+
+
+        def deletion(self, root, key):   # pass in the root and Key, which is the Node to be deleted
+            '''Delete Node in the Tree'''
+
+
+            if root == None :  # no elements exist in the tree
+
                 return None
-            else : 
-                return root 
-        key_node = None
-        q = [] 
-        q.append(root) 
-        while(len(q)): 
-            temp = q.pop(0) 
-            if temp.data == key: 
-                key_node = temp 
-            if temp.left: 
-                q.append(temp.left) 
-            if temp.right: 
-                q.append(temp.right) 
-        if key_node :  
-            x = temp.data 
-            deleteDeepest(root,temp) 
-            key_node.data = x 
-        return root 
+
+            if root.left == None and root.right == None:    # if there exist only the Root!
+
+                if root.key == key:  
+
+                    return None
+
+                else: 
+
+                    return root 
 
 
-    root = Node(10) 
-    root.left = Node(11) 
-    root.left.left = Node(7) 
-    root.left.right = Node(12) 
-    root.right = Node(9) 
-    root.right.left = Node(15) 
-    root.right.right = Node(8) 
+            key_node = None   
+
+            queue = Queue() 
+
+            queue.enqueue(root) # add root to the Queue
+
+            while(len(queue)): 
+
+                temp = queue.dequeue()  # pop Node from the Q
 
 
-    print("The tree before the deletion:") 
-    inorder(root) 
+                if temp.value == key:  # if our Temp value is equal to the value to  be deleted, we set the key_node to the temp
+
+                    key_node = temp  
+
+                if temp.left:  # if child of the Left node exists, add it to the Queue
+
+                    queue.enqueue(temp.left) 
+
+                if temp.right: # if Child of Right node  exists, add it to the Queue
+
+                    queue.enqueue(temp.right) 
+
+
+            if key_node:  
+
+
+                x = temp.value     
+
+                delete_deepest(root,temp)      # call delete Deepest function, pass in our root and the temp value
+
+                key_node.value = x 
+
+
+            return root 
+
+
+
+
+
+
+    tree = BinaryTree(13)
+
+    tree.root.left = Node(12)
+    tree.root.left.left = Node(4)
+    tree.root.left.right = Node(19)
+
+
+    tree.root.right = Node(10)
+    tree.root.right.left = Node(16)
+    tree.root.right.right = Node(9)
+
+    print("Inorder traversal before insertion:", end = " ")
+
+    tree.inorder(tree.root) 
+
+
     key = 12
-    root = deletion(root, key) 
+    tree.deletion(tree.root, key) 
+
     print() 
-    print("The tree after the deletion;") 
-    inorder(root) 
+    print("Inorder traversal after insertion:", end = " ")
+    tree.inorder(tree.root) 
+
