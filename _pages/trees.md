@@ -123,7 +123,7 @@ Depth-First or Breadth-First Order
 
 [Level Order Traversal](https://devintheengineer.com/algorithms/trees/level_order)
 
-- Reverse Level Order Traversal
+[Level Order Reverse Traversal](https://devintheengineer.com/algorithms/trees/level_order_reverse)
 
 ### Implementing a Binary Tree
 
