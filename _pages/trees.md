@@ -161,6 +161,18 @@ A BST is a special form of a Binary Tree data structure where each node has a co
 
 [Binary Search Tree](https://devintheengineer.com/algorithms/trees/bst)
 
+Time Complexity of Different Operations of a Binary Search Tree
+
+| Operation | Average  | Worst Case |
+|-----------|----------|------------|
+| Space     | O(n)     | O(n)       |
+| Search    | O(log n) | O(n)       |
+| Delete    | O(log n) | O(n)       |
+| Insertion | O(log n) | O(n)       |
+
+
+### Operations:
+
 - Insertion into a Binary Search Tree
 
 - Deletion of a Node in a Binary Search Tree
