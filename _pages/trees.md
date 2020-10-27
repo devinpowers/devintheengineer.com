@@ -155,7 +155,7 @@ Binary Tree from an Linked list
 
 # Binary Search Tree
 
-- Insert Binary Search Tree Picture here
+![inserting an Image](/images/tree/bst.jpg)
 
 A BST is a special form of a Binary Tree data structure where each node has a comparable value, and smaller valued childern attached to left and larger valued childern attached to the right
 
