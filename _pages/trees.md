@@ -125,13 +125,9 @@ Depth-First or Breadth-First Order
 
 [Level Order Reverse Traversal](https://devintheengineer.com/algorithms/trees/level_order_reverse)
 
-### Implementing a Binary Tree
+### Different Operations on Binary Trees:
 
-[Binary Tree from an Array](https://devintheengineer.com/algorithms/trees/binary_from_array)
-
-[Binary Tree from an Linked list](https://devintheengineer.com/algorithms/trees/binary_from_linked_list)
-
-Time Complexity
+Time Complexity of Different Operations in a Binary Tree
 
 | Operation | Running Time (Worst) |
 |-----------|----------------------|
@@ -140,8 +136,6 @@ Time Complexity
 | Insertion | O(n)                 |
 
 
-## Other things We can do with Binary Trees:
-
 [Calculating Height of a Binary Tree](https://devintheengineer.com/algorithms/trees/height_of_tree)
 
 [Calculating the Size of a Binary Tree](https://devintheengineer.com/algorithms/trees/calculate_size_binary_tree)
@@ -149,6 +143,14 @@ Time Complexity
 [Insertion into a Regular Binary Tree](https://devintheengineer.com/algorithms/trees/insert_regular_binary_tree)
 
 [Deletion of a Node in a Regular Binary Tree](https://devintheengineer.com/algorithms/trees/deletion_regular_binary_tree)
+
+### Implementing a Binary Tree
+
+Coming Soon:
+
+Binary Tree from an Array
+
+Binary Tree from an Linked list
 
 
 # Binary Search Tree
