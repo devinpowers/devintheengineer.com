@@ -87,50 +87,61 @@ Code:
             while current.left is not None: 
 
                 current = current.left  
+
             return current  
 
 
-        def delete_node(self, root, data):
+        def delete_node(self, current_node, data):
 
-   
-            if root is None:
-                return root
+            # Base Case
 
+            if current_node is None:
 
-            if data < root.data:
+                return current_node
 
-                root.left = self.delete_node(root.left, data)
+            # if data to be deleted is smaller the root is lies in the left subtree
 
-           
-            elif data > root.data:
+            if data < current_node.data:
 
-                root.right = self.delete_node(root.right, data)
+                current_node.left = self.delete_node(current_node.left, data)
 
-    
+            # elif most lie in the right subtree
+            elif data > current_node.data:
+
+                current_node.right = self.delete_node(current_node.right, data)
+
+            # if the value is the same as root data 
 
             else:
+                print('Root Value is:', current_node.data)
 
 
-                if root.left is None:
+                # Node with only one child or no child
 
-                    temp = root.right
-                    root = None
+                if current_node.left is None:
+
+                    temp = current_node.right
+
+                    current_node = None
+
                     return temp
 
-                elif root.right is None:
-                    temp = root.left
-                    root =None
+                elif current_node.right is None:
+                    temp = current_node.left
+                    current_node =None
                     return temp
 
-                temp = self.minValueNode(root.right) 
 
-                
-                root.data = temp.data 
 
-            
-                root.right = self.delete_node(root.right , temp.data) 
+                temp = self.minValueNode(current_node.right) 
 
-            return root 
+                # Copy the inorder successor's content to this node 
+                current_node.data = temp.data 
+
+                # Delete the inorder successor 
+                current_node.right = self.delete_node(current_node.right , temp.data) 
+
+            return current_node 
 
 
     tree = BST()
@@ -157,4 +168,7 @@ Code:
     tree.delete_node(tree.root, 50)
 
     print(tree.print_tree("inorder"))
+
+
+
 
