@@ -173,13 +173,13 @@ Time Complexity of Different Operations of a Binary Search Tree
 
 ### Operations:
 
-- Insertion into a Binary Search Tree
-
-- Deletion of a Node in a Binary Search Tree
-
-- Searching for a Value in  a Binary Search Tree
+[Insertion into a Binary Search Tree](https://devintheengineer.com/algorithms/trees/bst_insertion)
 
 
+[Deletion of a Node in a Binary Search Tree](https://devintheengineer.com/algorithms/trees/bst_deletion)
+
+
+[Searching for a Value in  a Binary Search Tree](https://devintheengineer.com/algorithms/trees/bst_search)
 
 
 # Coming Soon:
