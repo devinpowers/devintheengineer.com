@@ -181,6 +181,9 @@ Time Complexity of Different Operations of a Binary Search Tree
 
 [Searching for a Value in  a Binary Search Tree](https://devintheengineer.com/algorithms/trees/bst_search)
 
+[Height of Binary Search Tree](https://devintheengineer.com/algorithms/trees/bst_height)
+
+
 
 # Coming Soon:
 
