@@ -186,6 +186,9 @@ Time Complexity of Different Operations of a Binary Search Tree
 
 ## AVL Tree
 
+[AVL Tree Introduction](https://devintheengineer.com/algorithms/trees/avl_intro)
+
+
 ## Red-black tree
 
 ## Splay Tree
