@@ -9,6 +9,12 @@ header:
   
 ---
 
+![inserting an Image](/images/tree/bst_delete/Page1.jpg)
+![inserting an Image](/images/tree/bst_delete/Page2.jpg)
+![inserting an Image](/images/tree/bst_delete/Page3.jpg)
+![inserting an Image](/images/tree/bst_delete/Page4.jpg)
+![inserting an Image](/images/tree/bst_delete/Page5.jpg)
+
 
 
 
