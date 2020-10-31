@@ -185,7 +185,11 @@ Time Complexity of Different Operations of a Binary Search Tree
 
 
 
-# Coming Soon:
+### Coming Soon:
+
+#Rebalancing a Binary Search Tree by Rotation
+
+![inserting an Image](/images/tree/bst_balance.jpg)
 
 ## AVL Tree
 
