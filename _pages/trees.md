@@ -191,6 +191,9 @@ Time Complexity of Different Operations of a Binary Search Tree
 
 ![inserting an Image](/images/tree/bst_balance.jpg)
 
+[Rebalance Operations](https://devintheengineer.com/algorithms/trees/reblance_operations)
+
+
 ## AVL Tree
 
 [AVL Tree Introduction](https://devintheengineer.com/algorithms/trees/avl_intro)
