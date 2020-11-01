@@ -198,6 +198,22 @@ Time Complexity of Different Operations of a Binary Search Tree
 
 [AVL Tree Introduction](https://devintheengineer.com/algorithms/trees/avl_intro)
 
+#### Operations on AVL Tree
+
+- AVL Tree Insertion
+
+- AVL Tree Deletion
+
+Time Complexity of Different Operations of a AVL Tree
+
+| Operation | Average  | Worst Case |
+|-----------|----------|------------|
+| Space     |          |            |
+| Search    |          |            |
+| Delete    |          |            |
+| Insertion |          |            |
+
+
 
 ## Red-black tree
 
