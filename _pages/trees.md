@@ -171,7 +171,7 @@ Time Complexity of Different Operations of a Binary Search Tree
 | Insertion | O(log n) | O(n)       |
 
 
-### Operations:
+### Operations on Binary Search Tree:
 
 [Insertion into a Binary Search Tree](https://devintheengineer.com/algorithms/trees/bst_insertion)
 
