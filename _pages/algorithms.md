@@ -92,10 +92,15 @@ Includes:
 1. General Tree
 2. Binary Tree
 3. Binary Search Tree
+
     -AVL Tree
+    
     -Red-Black Tree
+    
     -Splay Tree
+    
     -Treap
+    
     -B-Tree
 
 
