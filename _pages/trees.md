@@ -215,7 +215,27 @@ Time Complexity of Different Operations of a AVL Tree
 
 
 
-## Red-black tree
+## Red-Black Tree
+
+- INSERT Red-Black Tree picture here
+
+- Red-Black Tree Introduction
+
+#### Operations on AVL Tree
+
+- Red-Black Tree Insertion
+
+- Red-Black Tree Deletion
+
+Time Complexity of Different Operations of a Red-Black Tree
+
+| Operation | Average  | Worst Case |
+|-----------|----------|------------|
+| Space     |          |            |
+| Search    |          |            |
+| Delete    |          |            |
+| Insertion |          |            |
+
 
 ## Splay Tree
 
