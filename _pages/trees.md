@@ -208,10 +208,10 @@ Time Complexity of Different Operations of a AVL Tree
 
 | Operation | Average  | Worst Case |
 |-----------|----------|------------|
-| Space     |          |            |
-| Search    |          |            |
-| Delete    |          |            |
-| Insertion |          |            |
+| Space     | O(n)     | O(n)       |
+| Search    | O(log n) | O(log n)   |
+| Delete    | O(log n) | O(log n)   |
+| Insertion | O(log n) | O(log n)   |
 
 
 
@@ -231,16 +231,57 @@ Time Complexity of Different Operations of a Red-Black Tree
 
 | Operation | Average  | Worst Case |
 |-----------|----------|------------|
-| Space     |          |            |
-| Search    |          |            |
-| Delete    |          |            |
-| Insertion |          |            |
+| Space     | O(n)     | O(n)       |
+| Search    | O(log n) | O(log n)   |
+| Delete    | O(log n) | O(log n)   |
+| Insertion | O(log n) | O(log n)   |
 
 
 ## Splay Tree
 
+- INSERT Splay TRee Picture here
+
+- Splay Tree Introduction
+
+### Operations on a Splay Tree
+
+- Splay Tree Insertion
+
+- Splay Tree Deletion
+
+
+Time Complexity of Different Operations of a Splay Tree
+
+| Operation | Average  | Worst Case |
+|-----------|----------|------------|
+| Space     | O(n)     | O(n)       |
+| Search    | O(log n) | O(log n)   |
+| Delete    | O(log n) | O(log n)   |
+| Insertion | O(log n) | O(log n)   |
+
+
 ## Treap
 
+Time Complexity of Different Operations of a Treap
+
+| Operation | Average  | Worst Case |
+|-----------|----------|------------|
+| Space     | O(n)     | O(n)       |
+| Search    | O(log n) | O(n)       |
+| Delete    | O(log n) | O(n)       |
+| Insertion | O(log n) | O(n)       |
+
 ## B-Tree
+
+Time Complexity of Different Operations of a B-Tree
+
+| Operation | Average  | Worst Case |
+|-----------|----------|------------|
+| Space     | O(n)     | O(n)       |
+| Search    | O(log n) | O(log n)   |
+| Delete    | O(log n) | O(log n)   |
+| Insertion | O(log n) | O(log n)   |
+
+
 
 
