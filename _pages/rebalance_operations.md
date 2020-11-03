@@ -17,3 +17,12 @@ header:
 ![inserting an Image](/images/tree/rebalance/Page7.jpg)
 ![inserting an Image](/images/tree/rebalance/Page8.jpg)
 
+
+More on Rebalance:
+
+![inserting an Image](/images/tree/AVL_examples/Page1.jpg)
+![inserting an Image](/images/tree/AVL_examples/Page2.jpg)
+
+
+
+
