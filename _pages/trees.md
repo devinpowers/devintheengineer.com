@@ -206,6 +206,13 @@ Time Complexity of Different Operations of a Binary Search Tree
 
 [Rebalance Operations](https://devintheengineer.com/algorithms/trees/rebalance_operations)
 
+Left Rebalance 
+
+Right Rebalance
+
+Right Left Rebalance
+
+Left Right Rebalance
 
 
 ## AVL Tree
