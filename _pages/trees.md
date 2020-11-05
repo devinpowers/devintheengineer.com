@@ -208,11 +208,11 @@ Time Complexity of Different Operations of a Binary Search Tree
 
 [Left Rotation](https://devintheengineer.com/algorithms/trees/left_rotation)
 
-Right Rebalance
+Right Rotation
 
-Right Left Rebalance
+Right Left Rotation
 
-Left Right Rebalance
+Left Right Rotation
 
 
 ## AVL Tree
