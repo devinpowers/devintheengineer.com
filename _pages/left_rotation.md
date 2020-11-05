@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /algorithms/trees/left_rotation
-title: "AVL Search Trees and Rebalance Operations"
+title: "Left Rotation"
 author_profile: true
 
 header:
