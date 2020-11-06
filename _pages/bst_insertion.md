@@ -63,3 +63,40 @@ Code:
 
             else:
                 print("Value is Already present in Tree.")
+
+        def print_tree(self):
+            '''Inorder Traversal'''
+
+            if self.root != None:
+
+                self._print_tree(self.root)
+
+
+        def _print_tree(self, current_node):
+
+            if current_node != None:
+
+                self._print_tree(current_node.left)
+                print(str(current_node.data))
+                self._print_tree(current_node.right)
+
+
+
+
+    tree = BST()
+
+    tree.insert(50)
+    tree.insert(30)   
+    tree.insert(60)    
+    tree.insert(35)    
+    tree.insert(15)    
+    tree.insert(55)    
+    tree.insert(70)
+
+
+    "         50           "
+    "       /     \         "
+    "      30       60       "
+    "     /  \      /  \     "
+    "    15   35   55   70    "
+
