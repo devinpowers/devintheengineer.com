@@ -221,7 +221,7 @@ Time Complexity of Different Operations of a Binary Search Tree
 
 #### Operations on AVL Tree
 
-- AVL Tree Insertion
+[AVL Tree Insertion](https://devintheengineer.com/algorithms/trees/avl_insertion)
 
 - AVL Tree Deletion
 
