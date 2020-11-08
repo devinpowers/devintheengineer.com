@@ -206,8 +206,11 @@ Time Complexity of Different Operations of a Binary Search Tree
 
 [Rebalance Operations](https://devintheengineer.com/algorithms/trees/rebalance_operations)
     - Left Rotation
+    
     - Right Rotation
+    
     - Left Left Rotation
+    
     - Right Right Rotation
 
 
