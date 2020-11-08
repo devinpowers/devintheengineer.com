@@ -205,6 +205,7 @@ Time Complexity of Different Operations of a Binary Search Tree
 ![inserting an Image](/images/tree/bst_balance.jpg)
 
 [Rebalance Operations](https://devintheengineer.com/algorithms/trees/rebalance_operations)
+
     - Left Rotation
     
     - Right Rotation
@@ -222,7 +223,7 @@ Time Complexity of Different Operations of a Binary Search Tree
 
 [AVL Tree Insertion](https://devintheengineer.com/algorithms/trees/avl_insertion)
 
-- AVL Tree Deletion
+[AVL Tree Deletion](https://devintheengineer.com/algorithms/trees/avl_deletion)
 
 Time Complexity of Different Operations of a AVL Tree
 
