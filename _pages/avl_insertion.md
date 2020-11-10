@@ -9,6 +9,9 @@ header:
   
 ---
 
+![inserting an Image](/images/tree/avl_insertion/Page1.jpg)
+![inserting an Image](/images/tree/avl_insertion/Page2.jpg)
+![inserting an Image](/images/tree/avl_insertion/Page3.jpg)
 
 
 
