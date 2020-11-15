@@ -10,6 +10,13 @@ header:
 ---
 
 
-Priority Queues:
+Priority Queues
 
-- what is a Priority Queue?
+[Priority Queues](https://devintheengineer.com/algorithms/heaps/priority_queues)
+
+
+Min Heap
+
+
+Heap Sort
+
