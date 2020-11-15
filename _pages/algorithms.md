@@ -73,8 +73,6 @@ Here I will post links to different Data Structures and how to implement them in
 
 Deques
 
-Priority Queues
-
 ## Linked Lists
 
 [Linked Lists](https://devintheengineer.com/algorithms/linked_lists)
@@ -106,6 +104,12 @@ Includes:
     -B-Tree
 
 ## Heaps
+
+
+[Heap Data Structure](https://devintheengineer.com/algorithms/heaps)
+
+
+- Priority Queues
 
 - Max Heap
 
