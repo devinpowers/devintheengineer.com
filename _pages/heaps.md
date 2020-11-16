@@ -21,7 +21,13 @@ An airplane may be full, and in-order to decided who on the waiting list is next
 [Priority Queues](https://devintheengineer.com/algorithms/heaps/priority_queues)
 
 
+
+Max Heap
+
+
 Min Heap
+
+
 
 
 Heap Sort
