@@ -22,6 +22,16 @@ An airplane may be full, and in-order to decided who on the waiting list is next
 
 
 
+![inserting an Image](/images/heaps/Page1.jpg)
+![inserting an Image](/images/heaps/Page2.jpg)
+![inserting an Image](/images/heaps/Page3.jpg)
+![inserting an Image](/images/heaps/Page4.jpg)
+![inserting an Image](/images/heaps/Page5.jpg)
+![inserting an Image](/images/heaps/Page6.jpg)
+![inserting an Image](/images/heaps/Page7.jpg)
+
+
+
 Max Heap
 
 
