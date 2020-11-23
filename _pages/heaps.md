@@ -32,13 +32,10 @@ An airplane may be full, and in-order to decided who on the waiting list is next
 
 
 
-Max Heap
+[Min Heap ](https://devintheengineer.com/algorithms/heaps/min_heap)
 
 
-Min Heap
-
-
-
+[Max Heap ](https://devintheengineer.com/algorithms/heaps/max_heap)
 
 Heap Sort
 
