@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /algorithms/max_heap
+permalink: /algorithms/heaps/max_heap
 title: "Max Heap"
 author_profile: true
 
