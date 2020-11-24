@@ -76,6 +76,12 @@ Code:
 
 Deletion of Minimum Value in Min Heap:
 
+![inserting an Image](/images/heaps/min_heap_deletion/Page1.jpg)
+![inserting an Image](/images/heaps/min_heap_deletion/Page2.jpg)
+![inserting an Image](/images/heaps/min_heap_deletion/Page3.jpg)
+
+
+
 Code:
 
 
@@ -155,3 +161,6 @@ Code:
 
     print("\n Heap after Deletion of Min Value")
     print(my_heap.print_())
+
+
+
