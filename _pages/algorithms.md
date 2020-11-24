@@ -122,5 +122,8 @@ More Trees:
 
 ## Maps and Hash Tables
 
+![inserting an Image](/images/hash.jpg)
+
+
 ## Graphs
 
