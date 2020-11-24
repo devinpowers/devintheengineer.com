@@ -12,6 +12,12 @@ header:
 
 Insertion Into Min Heap
 
+![inserting an Image](/images/heaps/min_heap/Page1.jpg)
+![inserting an Image](/images/heaps/min_heap/Page2.jpg)
+![inserting an Image](/images/heaps/min_heap/Page3.jpg)
+![inserting an Image](/images/heaps/min_heap/Page4.jpg)
+![inserting an Image](/images/heaps/min_heap/Page5.jpg)
+
 
 Code:
 
