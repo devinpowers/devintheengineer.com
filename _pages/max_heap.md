@@ -17,6 +17,10 @@ Max Heap Insertion
 ![inserting an Image](/images/heaps/max_heap_insertion/Page2.jpg)
 
 
+Insertion Code:
+
+
+
 
 
 Max Heap Deletion
@@ -25,4 +29,6 @@ Max Heap Deletion
 ![inserting an Image](/images/heaps/max_heap_deletion/Page1.jpg)
 
 
+
+Deletion Code:
 
