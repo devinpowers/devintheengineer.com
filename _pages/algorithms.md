@@ -103,6 +103,8 @@ Includes:
     
     -B-Tree
 
+More Trees:
+
 ## Heaps
 
 
@@ -118,6 +120,6 @@ Includes:
 - Heap Sort
 
 
-
+## Maps and Hash Tables
 
 
