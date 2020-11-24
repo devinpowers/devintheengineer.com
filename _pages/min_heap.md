@@ -21,53 +21,53 @@ Insertion Into Min Heap
 
 Code:
 
-  class MinHeap:
-      
-      
-      def __init__(self):
-            
-          self.heap_list = [0]      
-          self.current_size = 0
-          
-      def print_(self):
-                
-          return self.heap_list
-    
-      def sift_up(self, i):
-                
-          while i // 2 > 0:
+    class MinHeap:
+        
+        
+        def __init__(self):
               
-              if self.heap_list[i] < self.heap_list[i // 2]:
+            self.heap_list = [0]      
+            self.current_size = 0
+            
+        def print_(self):
                   
-                  self.heap_list[i], self.heap_list[i // 2] = self.heap_list[i // 2], self.heap_list[i]
-
-              i = i // 2
-  
-      def insert(self, k):
+            return self.heap_list
       
-          self.heap_list.append(k)
-          self.current_size += 1
-          
-          # Move Element up the Heap
-          self.sift_up(self.current_size)
-  
-  
-  my_heap = MinHeap()
-  my_heap.insert(10)
-  my_heap.insert(30)
-  my_heap.insert(20)
-  my_heap.insert(35)
+        def sift_up(self, i):
+                  
+            while i // 2 > 0:
+                
+                if self.heap_list[i] < self.heap_list[i // 2]:
+                    
+                    self.heap_list[i], self.heap_list[i // 2] = self.heap_list[i // 2], self.heap_list[i]
 
-  my_heap.insert(40)
-  my_heap.insert(32)
+                i = i // 2
+    
+        def insert(self, k):
+        
+            self.heap_list.append(k)
+            self.current_size += 1
+            
+            # Move Element up the Heap
+            self.sift_up(self.current_size)
+    
+    
+    my_heap = MinHeap()
+    my_heap.insert(10)
+    my_heap.insert(30)
+    my_heap.insert(20)
+    my_heap.insert(35)
 
-  print("Before inserting 8")
-  print(my_heap.print_())
+    my_heap.insert(40)
+    my_heap.insert(32)
+
+    print("Before inserting 8")
+    print(my_heap.print_())
 
 
-  print("After inserting 8")
+    print("After inserting 8")
 
-  my_heap.insert(8)
-  print(my_heap.print_())
+    my_heap.insert(8)
+    print(my_heap.print_())
 
 
