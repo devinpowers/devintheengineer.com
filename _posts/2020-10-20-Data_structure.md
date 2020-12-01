@@ -1,9 +1,20 @@
 ---
-title: 'Learning C++ '
+title: 'Data Structures and Algorithms '
 
-date: 2020-12-1
+date: 2020-10-20
 
 ---
-Starting to Learn C++, I understand how important leanring a lower level programming langauge is, so here is my page that ill be updating daily:
+Data Structures and Algorithms in Python.
 
-[C++ Page](https://devintheengineer.com/C++)]
+includes:
+
+Sorting Algorithms
+Arrays
+Linked Lists
+Queues
+Trees
+Heaps
+etc....
+
+[Data Structures and Algorithms](https://devintheengineer.com/Algorithms)]
+
