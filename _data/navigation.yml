@@ -8,6 +8,8 @@ main:
     url: /discretemathematics
   - title: "Data Structures and Algorithms"
     url: /algorithms
+  - title: "Learn C++"
+    url: /C++
     
 
   # - title: "About"
