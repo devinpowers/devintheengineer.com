@@ -39,6 +39,8 @@ Here I will post links to different Algorithms
 
 [Quick Sort](https://devintheengineer.com/algorithms/quick)
 
+[Bubble Sort](https://devintheengineer.com/algorithms/bubble)
+
 
 | Algorithm      | Running Time (Average) | Running Time (Worst) | Space Complexity (Worst) |
 |----------------|------------------------|----------------------|--------------------------|
@@ -70,8 +72,7 @@ Here I will post links to different Data Structures and how to implement them in
 ![inserting an Image](/images/Q.jpg)
 
 [Queues](https://devintheengineer.com/algorithms/Queues)
-
-Deques
+- Deques
 
 ## Linked Lists
 
@@ -105,7 +106,7 @@ Includes:
 
 More Trees:
 
-## Heaps
+## Heaps (more Trees)
 
 
 [Heap Data Structure](https://devintheengineer.com/algorithms/heaps)
@@ -119,11 +120,12 @@ More Trees:
 
 - Heap Sort
 
+- Heap Project
+
 
 ## Maps and Hash Tables
 
 ![inserting an Image](/images/hash.jpg)
-
 
 ## Graphs
 
