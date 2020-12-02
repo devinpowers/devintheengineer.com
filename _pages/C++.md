@@ -9,7 +9,7 @@ header:
   
 ---
 
-I plan on starting to learn an study C++ in 2021.
+I plan on starting to learn C++ in 2021.
 
 
 
