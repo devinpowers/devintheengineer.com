@@ -9,7 +9,8 @@ header:
   
 ---
 
-After Learning Python, I should learn a lower level language like C++
+I plan on starting to learn an study C++ in 2021.
+
 
 
 
