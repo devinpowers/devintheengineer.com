@@ -5,15 +5,37 @@ title: "Intro to C++"
 author_profile: true
 
 header:
-  image: "/images/chicagotwo.jpeg"
+  image: "/images/tower.jpeg"
   
 ---
 
-I plan on starting to learn C++ in 2021.
+I plan on starting to learn C++ in 2021. (maybe the end of 2020)
 
-Projects:
+I plan on posting notes here with some basic projects to show understanding of concepts in C++
+
+### Functions
+
+- Intro to Functions in C++
+- other stuff
+
+### Control
+
+- logic/ operators
+- for loops and while loops
+
+
+### Object Oriented Programming in C++
+
+
+
+### Projects:
 
 Project One -- >
+
+Project Two -- >
+
+Project Three -- >
+
 
 
 
