@@ -5,7 +5,7 @@ title: "Intro to C++"
 author_profile: true
 
 header:
-  image: "/images/tower.jpeg"
+  image: "/images/tower3.jpeg"
   
 ---
 
