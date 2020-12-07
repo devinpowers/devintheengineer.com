@@ -25,6 +25,9 @@ I plan on posting notes here with some basic projects to show understanding of c
 
 ### Control
 
+[Control in C++ ](https://devintheengineer.com/C++/control_c++)
+
+
 - logic/ operators
 - for loops and while loops
 
