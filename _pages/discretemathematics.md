@@ -26,6 +26,7 @@ All my notes can be viewed here or download via PDF Format on my Github account
 
 # Chapter 1: The Foundations: Logic and Proofs
 
+
 [Chapter One](https://devintheengineer.com/discretemathematics/chapter_one)
 
 
@@ -55,6 +56,13 @@ All my notes can be viewed here or download via PDF Format on my Github account
 
 
 # Chapter 7: Introduction to Probability
+
+Includes:
+
+- LaPlace Definition
+- Probability Rules
+- Probability Theory
+- Random Variables and the Binomial Distribution
 
 [Chapter Seven](https://devintheengineer.com/discretemathematics/chapter_seven)
 
