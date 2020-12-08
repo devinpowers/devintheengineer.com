@@ -26,6 +26,18 @@ All my notes can be viewed here or download via PDF Format on my Github account
 
 # Chapter 1: The Foundations: Logic and Proofs
 
+Includes:
+
+- Propositions
+- Negations
+- Conjunctions
+- Disjunctions
+- Truth Tables
+- Direct Proofs
+- Proof by Contradiction
+- Proof by Cases
+
+
 
 [Chapter One](https://devintheengineer.com/discretemathematics/chapter_one)
 

@@ -11,6 +11,12 @@ header:
 7.1: An Introduction to Discrete Probability
 [Chapter 7.1](https://devintheengineer.com/discretemathematics/chapter_seven/section_seven_one)
 
+- LaPlace Definition
+- Probability Rules
+- Monte Hall Puzzle
+
 7.2: Probability Theory
 [Chapter 7.2](https://devintheengineer.com/discretemathematics/chapter_seven/section_seven_two)
 
+- Probability Theory
+- Random Variables and the Binomial Distribution
