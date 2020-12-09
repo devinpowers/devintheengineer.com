@@ -159,6 +159,28 @@ For Loop Code:
 #### While Loop
 
 
+While Loop Code:
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main () 
+    {
+        int i = 0; // initization
+
+        while (i < 10) // Condtion
+        {
+            cout << i << endl;
+
+            i ++; // Update
+        }
+
+        return 0;
+    }
+
+
+
 
 #### Do While Loop
 
