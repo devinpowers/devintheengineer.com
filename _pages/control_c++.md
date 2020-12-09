@@ -182,9 +182,52 @@ While Loop Code:
     }
 
 
+While Loop Factorial Example:
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main () 
+    {
+        int fact = 5;
+        int factorial = fact; // 5 * 4 * 3 * 2 * 1
+        int i = factorial - 1;
+
+        while( i > 1)
+        {
+            factorial *= i;
+            i-- ;
+
+        }
+
+        cout << "Factorial of " << fact << " is: " << factorial << endl;
+
+    }
+
 
 
 #### Do While Loop
 
 
+Do While Loop Code for Guessing the Correct Password:
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main () 
+    {
+        string  password = "Hellotacos123";
+        string guess;
+        do 
+        {
+            cout << "Guess the password: ";
+            cin >> guess;
+
+        } while(guess != password);
+
+        cout << "Exited out the 'Do While Loop' because you entered the Correct Password" << endl;
+
+    }
 
