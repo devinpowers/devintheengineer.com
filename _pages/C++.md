@@ -31,6 +31,10 @@ I plan on posting notes here with some basic projects to show understanding of c
 - logic/ operators
 - for loops and while loops
 
+### Basic Data Structures
+
+[Arrays](https://devintheengineer.com/C++/arrays)
+
 
 ### Object Oriented Programming in C++
 
