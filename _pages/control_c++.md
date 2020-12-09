@@ -135,6 +135,8 @@ Code for using the Not Operator:
 
 ### Loops 
 
+![inserting an Image](/images/C++/Control/Page1.jpg)
+
 
 #### For Loops 
 
