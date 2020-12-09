@@ -51,3 +51,29 @@ Array Example without knowing the "Size":
         cout << guesses[0] << endl;
 
     }
+
+
+More on Arrays:
+
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main()
+    {
+        int guesses[10] = {12, 43, 23, 43, 23};
+
+        int number_elements = 5;
+
+        int size = sizeof(guesses) / sizeof(int) ;
+
+        for (int i = 0; i < number_elements; i++ )
+        {
+            cout << guesses[i] << "\t";
+        }
+
+    }
+
+
+Using Arrays inside Functions
