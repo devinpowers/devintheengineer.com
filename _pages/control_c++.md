@@ -255,3 +255,105 @@ Can we do this "do while" loop using a regualr while loop?
         cout << "Exited out the 'Do While Loop' because you entered the Correct Password" << endl;
 
     }
+
+
+## Break and Continue Keywords
+
+- Include Break notes here
+
+
+Break out of Code Example:
+
+    #include <iostream>
+    #include <string>
+
+    using namespace std;
+
+    int main () 
+    {
+    string sentence = "Hello my name is Devin";
+
+    for (int i = 0; i < sentence.size(); i++ )
+    {
+        cout << sentence[i] << endl;
+        if (sentence[i] == 'o')
+        {
+            cout << "Found o!\n ";
+            break;
+        }
+    }
+    cout << "Done!\n";
+    }
+
+
+Continue Keyword to skip example:
+
+    #include <iostream>
+    #include <string>
+
+    using namespace std;
+
+    int main () 
+    {
+    string sentence = "Hello my name is Devin";
+
+    for (int i = 0; i < sentence.size(); i++ )
+    {
+        if (sentence[i] == 'o')
+        {
+            continue;
+        }
+        cout << sentence[i] << endl;
+        
+    }
+    cout << "Done!\n";
+    }
+
+
+
+## Conditional Operator Examples
+
+
+Conditional Operator Code:
+
+
+    #include <iostream>
+    #include <string>
+
+    using namespace std;
+
+    int main () 
+    {
+    int answer = 11;
+    cout << "Guess the number: ";
+    int guess;
+
+    cin >> guess;  
+
+    int points = guess == answer ? 10 : 0;
+
+    cout << points << endl;
+        
+    }
+
+
+Can also do this for the Conditional Operator:
+
+
+
+    #include <iostream>
+    #include <string>
+
+    using namespace std;
+
+    int main () 
+    {
+    int answer = 11;
+    cout << "Guess the number: ";
+    int guess;
+    cin >> guess;  
+
+    guess == answer ? cout << "Good Job\n" : cout << "bad job\n";
+        
+    }
+
