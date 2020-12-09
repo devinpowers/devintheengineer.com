@@ -209,6 +209,8 @@ While Loop Factorial Example:
 
 #### Do While Loop
 
+![inserting an Image](/images/C++/Control/dowhile.jpg)
+
 
 Do While Loop Code for Guessing the Correct Password:
 
