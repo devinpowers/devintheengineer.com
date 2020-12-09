@@ -233,3 +233,25 @@ Do While Loop Code for Guessing the Correct Password:
 
     }
 
+
+Can we do this "do while" loop using a regualr while loop?
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main () 
+    {
+        string  password = "Hellotacos123";
+        string guess;
+        cout << "Guess the Password: ";
+        cin >> guess;
+        while(guess != password)
+        {
+            cout << "Guess the Password: ";
+            cin >> guess;
+        }
+
+        cout << "Exited out the 'Do While Loop' because you entered the Correct Password" << endl;
+
+    }
