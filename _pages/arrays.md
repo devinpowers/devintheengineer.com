@@ -77,3 +77,33 @@ More on Arrays:
 
 
 Using Arrays inside Functions
+
+
+
+
+
+
+
+
+
+
+Vectors in C++
+
+
+
+    #include <iostream>
+    #include <vector>
+
+    using namespace std;
+
+    int main()
+    {
+
+        vector<int> data = {1, 2, 3};
+
+        data.push_back(4);
+
+        cout << data[3] << endl;
+
+    }
+
