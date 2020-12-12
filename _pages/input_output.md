@@ -73,3 +73,70 @@ Lets have an example of writing to a txt file we created and use a vector with a
         }
 
     }
+
+
+What if we dont want to overwrite the text in our file? We can do this:
+
+
+    #include <iostream>
+    #include <fstream>
+    #include <vector>
+
+    using namespace std;
+
+    int main()
+    {
+        ofstream file ("hello.txt", ios::app); 
+
+        vector <string> names;
+
+        names.push_back("Wade");
+        names.push_back("Bosh");
+
+        for (string name : names )
+        {
+            file << name << endl;
+
+        }
+
+        file.close();
+
+    }
+
+
+We can also check if the file was sucesfully opened using an "if" statement:
+
+
+
+    #include <iostream>
+    #include <fstream>
+    #include <vector>
+
+    using namespace std;
+
+    int main()
+    {
+        ofstream file ("hello.txt", ios::app); 
+
+        if(file.is_open())   
+
+        {
+            cout << "Sucessfully Opened the File\n";
+
+        }
+
+
+        vector <string> names;
+
+        names.push_back("Wade");
+        names.push_back("Bosh");
+
+        for (string name : names )
+        {
+            file << name << endl;
+
+        }
+
+        file.close();
+
+    }
