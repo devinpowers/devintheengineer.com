@@ -109,28 +109,27 @@ Vectors in C++
 
 Passing Vectors to Functions
 
-- note: make sure you use -std=c++11 when compiling the code
-
-
     #include <iostream>
     #include <vector>
 
     using namespace std;
 
     void print_vector(vector<int> data)
-    {
+        {
         for(int i = 0; i < data.size(); i++)
         {
             cout << data[i] << "\t";
         }
-    }
+        }
 
     int main()
-    {
+        {
         vector<int> data = {1, 2, 3};
         print_vector(data);
 
-    }
+        }
+
+
 
 
 If you want to share memory of the data between the print_vector and the main() function you can add the & sign:
