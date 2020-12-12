@@ -46,3 +46,30 @@ Other way to Open/Create a file:
 
     }
 
+
+Lets have an example of writing to a txt file we created and use a vector with a for loop
+
+    #include <iostream>
+    #include <fstream>
+    #include <vector>
+
+    using namespace std;
+
+    int main()
+    {
+        ofstream file ("hello.txt"); 
+
+        vector <string> names;
+
+        names.push_back("Devin");
+        names.push_back("Lebron");
+        names.push_back("Kobe");
+        names.push_back("Jordan");
+
+        for (string name : names )
+        {
+            file << name << endl;
+
+        }
+
+    }
