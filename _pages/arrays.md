@@ -193,7 +193,8 @@ Printing STL
 
 What if we don't want to print all the extra elements ( 17 0's)?
 
-- we can pass in an element indicating the size of the array we want printed
+we can pass in an element indicating the size of the array we want printed
+
 
     #include <iostream>
     #include<array>
