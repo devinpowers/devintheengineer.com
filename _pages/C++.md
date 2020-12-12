@@ -36,6 +36,11 @@ I plan on posting notes here with some basic projects to show understanding of c
 [Arrays](https://devintheengineer.com/C++/arrays)
 
 
+### Input and Output
+- working with files
+
+[input and output ](https://devintheengineer.com/C++/input_output)
+
 ### Object Oriented Programming in C++
 
 
