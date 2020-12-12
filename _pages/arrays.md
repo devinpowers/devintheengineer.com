@@ -159,3 +159,66 @@ If you want to share memory of the data between the print_vector and the main() 
         print_vector(data);
 
     }
+
+
+STL
+
+
+
+Printing STL 
+
+
+    #include <iostream>
+    #include<array>
+
+    using namespace std;
+
+
+    void print_array( array<int,20> data)
+    {
+        for (int i = 0; i < data.size(); i++)
+        {
+            cout << data[i] << "\t";
+        }
+        cout << "\n";
+
+    }
+
+    int main()
+
+    {
+        array <int, 20 > data = {1, 2, 3};
+        print_array(data);
+
+    }
+
+What if we don't want to print all the extra elements ( 17 0's)?
+
+- we can pass in an element indicating the size of the array we want printed
+
+    #include <iostream>
+    #include<array>
+
+    using namespace std;
+
+
+    void print_array( array<int,20> data, int size)
+    {
+        for (int i = 0; i < size; i++)
+        {
+            cout << data[i] << "\t";
+        }
+        cout << "\n";
+
+    }
+
+    int main()
+
+    {
+        array <int, 20 > data = {1, 2, 3};
+
+        print_array(data, 3);
+
+    }
+
+
