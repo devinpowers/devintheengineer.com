@@ -22,8 +22,11 @@ I plan on posting notes here with some basic projects to show understanding of c
 
 - Intro to Functions in C++
 - other stuff
+[Functions in C++ ](https://devintheengineer.com/C++/functions_cpp)
+
 
 ### Control
+
 
 [Control in C++ ](https://devintheengineer.com/C++/control_c++)
 
