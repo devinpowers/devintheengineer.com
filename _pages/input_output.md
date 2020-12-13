@@ -241,7 +241,7 @@ Using .get() method:
 
         return 0;
 
-}
+    }   
 
 Another way is getline()
 
