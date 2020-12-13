@@ -219,3 +219,29 @@ this example here is using a tacos.txt that we created above.
 
     }
 
+There are other ways to do input.
+
+Using .get() method:
+
+
+    #include <iostream>
+    #include <fstream>
+    #include <vector>
+
+
+    using namespace std;
+
+    int main()
+    {
+        ifstream file ("tacos.txt"); 
+
+        char temp = file.get(); 
+
+        cout << temp << "\n";
+
+        return 0;
+
+}
+
+Another way is getline()
+
