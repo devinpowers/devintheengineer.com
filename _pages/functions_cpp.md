@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /C++/functions_cpp
-title: "Working with Functions inC++ "
+title: "Working with Functions in C++ "
 author_profile: true
 
 header:
@@ -9,3 +9,4 @@ header:
   
 ---
 
+hello 
