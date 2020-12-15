@@ -9,3 +9,16 @@ header:
   
 ---
 
+Working with Variables in C++
+
+    #include <iostream>
+
+    int main()
+
+    {
+        int points = 5;
+
+        std::cout << "I scored " << points << "points" << std::endl;
+
+        return 0;
+    }
