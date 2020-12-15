@@ -15,18 +15,12 @@ I plan on starting to learn C++ in 2021. (maybe the end of 2020)
 I plan on posting notes here with some basic projects to show understanding of concepts in C++
 
 and some other stuff!!!!
-### Basics/ Variables and such
+### Introduction Basics/ Variables and such
 
 - Notes here
 - More Notes here
 
-
-### Functions
-
-[Functions in C++ ](https://devintheengineer.com/C++/functions_cpp)
-
-
-### Control
+### Flow Control
 
 
 [Control in C++ ](https://devintheengineer.com/C++/control_c++)
@@ -34,10 +28,26 @@ and some other stuff!!!!
 
 - logic/ operators
 - for loops and while loops
+- switch 
+- break and continue
+
+
+### Functions
+
+[Functions in C++ ](https://devintheengineer.com/C++/functions_cpp)
+
+- Intro to functions
+- Recursion
+
+
 
 ### Basic Data Structures
 
 [Arrays](https://devintheengineer.com/C++/arrays)
+
+- Arrays
+- Functions with arrays
+
 
 
 ### Input and Output
