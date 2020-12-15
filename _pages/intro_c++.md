@@ -23,6 +23,7 @@ Working with Variables in C++
         return 0;
     }
 
+Here the points value is return as 5.
 
 You can change the value of the varible points
 
@@ -40,14 +41,23 @@ You can change the value of the varible points
         return 0;
     }
 
+Here the points value is returned as 10.
 
 
 Literals
 
 -	Data used for representing “fixed”  values
 
+ 
+
+
+
 
 Constants
 
 -	Variables that cannot be changed 
+
+
+
+Data Types:
 
