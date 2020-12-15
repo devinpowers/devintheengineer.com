@@ -17,6 +17,8 @@ I plan on posting notes here with some basic projects to show understanding of c
 and some other stuff!!!!
 ### Introduction Basics/ Variables and such
 
+[Intro to C++ ](https://devintheengineer.com/C++/intro_c++)
+
 - Notes here
 - More Notes here
 
