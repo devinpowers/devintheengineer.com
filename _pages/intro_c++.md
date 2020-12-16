@@ -60,6 +60,21 @@ Literals
 
 1. Integers
 
+
+    #include <iostream>
+
+    int main() {
+
+    int practice = 0213;
+
+    std::cout << practice << std::endl;
+
+    return 0;
+    }
+
+will return the value 139
+
+
 2. Floating Points
 
 3. Characters
