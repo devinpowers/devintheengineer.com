@@ -15,7 +15,7 @@ I plan on starting to learn C++ in 2021. (maybe the end of 2020)
 I plan on posting notes here with some basic projects to show understanding of concepts in C++
 
 and some other stuff!!!!
-### Introduction Basics/ Variables and such
+### Introduction Basics
 
 [Intro to C++ ](https://devintheengineer.com/C++/intro_c++)
 
@@ -24,7 +24,10 @@ and some other stuff!!!!
 - Basic Input and Output
 - Type Conversion
 - Operators (adding, dividing, etc)
-- Reading and writing to files
+
+[Inputting and Outputting in C++ ](https://devintheengineer.com/C++/input_c++)
+
+- Inputting and Outputting in C++
 
 
 ### Flow Control
@@ -44,7 +47,6 @@ and some other stuff!!!!
 - Function types and overloading
 - Function return
 - Recursion
-
 
 
 ### Basic Data Structures
