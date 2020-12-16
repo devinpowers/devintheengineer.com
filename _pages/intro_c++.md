@@ -54,11 +54,11 @@ You can change the value of the varible points
 Here the points value is returned as 10.
 
 
-Literals
+#### Literals
 
 Data used for representing “fixed”  values that can be used directly in the code we write
 
-Integers
+###### Integers
 
 
     #include <iostream>
@@ -76,7 +76,7 @@ Integers
 Will return the value 139
 
 
-Floating Points
+###### Floating Points
 
 
     #include <iostream>
@@ -93,11 +93,15 @@ Floating Points
 Will return -4.5e-06
 
 
-3. Characters
 
-4. Escape Sequences
 
-5. String Literals
+###### Characters
+
+
+###### Escape Sequences
+
+
+###### String Literals
 
 
 
