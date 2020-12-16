@@ -56,9 +56,9 @@ Here the points value is returned as 10.
 
 Literals
 
--	Data used for representing “fixed”  values that can be used directly in the code we write
+Data used for representing “fixed”  values that can be used directly in the code we write
 
-1. Integers
+Integers
 
 
     #include <iostream>
@@ -71,6 +71,7 @@ Literals
 
     return 0;
     }
+
 
 will return the value 139
 
