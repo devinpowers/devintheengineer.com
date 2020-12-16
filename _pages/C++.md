@@ -29,13 +29,10 @@ and some other stuff!!!!
 
 ### Flow Control
 
-
 [Control in C++ ](https://devintheengineer.com/C++/control_c++)
 
-
 - logic/ operators
-- for loops and while loops
-- switch 
+- if statements, for loops, switch, and while loops 
 - break and continue
 
 
@@ -44,6 +41,8 @@ and some other stuff!!!!
 [Functions in C++ ](https://devintheengineer.com/C++/functions_cpp)
 
 - Intro to functions
+- Function types and overloading
+- Function return
 - Recursion
 
 

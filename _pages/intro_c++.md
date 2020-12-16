@@ -21,6 +21,12 @@ operators
 
 Working with Variables in C++
 
+![inserting an Image](/images/C++/basics/Page1.jpg)
+![inserting an Image](/images/C++/basics/Page2.jpg)
+![inserting an Image](/images/C++/basics/Page3.jpg)
+![inserting an Image](/images/C++/basics/Page4.jpg)
+
+
     #include <iostream>
 
     int main()
@@ -55,6 +61,9 @@ Here the points value is returned as 10.
 
 
 #### Literals
+
+![inserting an Image](/images/C++/basics/Page5.jpg)
+![inserting an Image](/images/C++/basics/Page6.jpg)
 
 Data used for representing “fixed”  values that can be used directly in the code we write
 
@@ -123,20 +132,12 @@ Special meaning in C++, you can make a new line by using \n for a tab
 
 
 
-
-
-
- 
-
-
-
-
-
-
-
 ### Constants
 
+
 Variables that cannot be changed 
+![inserting an Image](/images/C++/basics/Page7.jpg)
+
 
 
     #include <iostream>
@@ -155,7 +156,14 @@ Variables that cannot be changed
 
 ## Data Types:
 
+![inserting an Image](/images/C++/basics/Page8.jpg)
+![inserting an Image](/images/C++/basics/Page9.jpg)
+![inserting an Image](/images/C++/basics/Page10.jpg)
+![inserting an Image](/images/C++/basics/Page11.jpg)
+![inserting an Image](/images/C++/basics/Page12.jpg)
+![inserting an Image](/images/C++/basics/Page13.jpg)
 #### Integars
+
 
 #### Float
 
@@ -215,10 +223,29 @@ True or False
 Note, it will return 1 for true and 0 for anything else (including false)
 
 
+### Void
+
+The void keyword will indicate an absence of data which means "no value"
+
+
 
 ### Modify Data Types
+
+There are 4 Type Modifiers in C++
+
+1. signed
+2. unsigned
+3. short
+4. long
+
+Then we can modify the above modifiers:
+
+- int
+- double
+- char
 
 
 
 # Basic Input and Output in C++
+
 
