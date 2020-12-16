@@ -73,10 +73,25 @@ Integers
     }
 
 
-will return the value 139
+Will return the value 139
 
 
-2. Floating Points
+Floating Points
+
+
+    #include <iostream>
+
+    int main() {
+
+    double floating_point = -0.45E-5;
+
+    std::cout << floating_point << std::endl;
+
+    return 0;
+    }
+
+Will return -4.5e-06
+
 
 3. Characters
 
