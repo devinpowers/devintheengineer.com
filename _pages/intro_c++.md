@@ -155,3 +155,70 @@ Variables that cannot be changed
 
 ## Data Types:
 
+#### Integars
+
+#### Float
+
+#### Double
+
+Example of a integar, float, and a double in C++
+
+
+    #include <iostream>
+
+    int main() {
+
+
+    int salary = 89000;
+
+    float area = 78.9;
+    double volume = 134.242;
+
+
+    std::cout <<"Example of a integer: "<< salary << std::endl;
+    std::cout << "an Example of a float and double: " << area << " and " << volume <<std::endl;
+    return 0;
+    }
+
+
+### Char
+
+
+    #include <iostream>
+
+    int main() {
+
+
+    char char_practice = 'h';
+
+    std::cout <<"Example of a Char: "<< char_practice << std::endl;
+    
+    return 0;
+    }
+
+### Bool
+
+True or False
+
+    #include <iostream>
+
+    int main() {
+
+
+    bool cond = false;
+
+    std::cout <<"the Bool is: "<< cond << std::endl;
+    
+    return 0;
+    }
+
+Note, it will return 1 for true and 0 for anything else (including false)
+
+
+
+### Modify Data Types
+
+
+
+# Basic Input and Output in C++
+
