@@ -19,8 +19,13 @@ and some other stuff!!!!
 
 [Intro to C++ ](https://devintheengineer.com/C++/intro_c++)
 
-- Notes here
-- More Notes here
+- Variables, Literals, and Constants
+- Data Types (Int, Strings, Char)
+- Basic Input and Output
+- Type Conversion
+- Operators (adding, dividing, etc)
+- Reading and writing to files
+
 
 ### Flow Control
 
