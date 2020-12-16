@@ -97,8 +97,26 @@ Will return -4.5e-06
 
 ###### Characters
 
+single quotation marks
+
+
+
+    #include <iostream>
+
+    int main() {
+
+    char char_example = 'W';
+
+    std::cout << char_example << std::endl;
+
+    return 0;
+    }
+
+
 
 ###### Escape Sequences
+
+Special meaning in C++, you can make a new line by using \n for a tab
 
 
 ###### String Literals
@@ -116,7 +134,7 @@ Will return -4.5e-06
 
 
 
-Constants
+### Constants
 
 Variables that cannot be changed 
 
@@ -135,5 +153,5 @@ Variables that cannot be changed
     return 0;
     }
 
-Data Types:
+## Data Types:
 
