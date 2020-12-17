@@ -40,3 +40,37 @@ example:
         return 0;
     }
 
+
+#### Increment and Decrement Operators
+
+++ and -- increase and decreases the value by 1 
+
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main() {
+        int a = 10;
+        int b = 10;
+
+        a++;
+        b--;
+
+        cout << "a incremented by 1: " << a << endl;
+        cout << "b decremented by 1: " << b << endl;
+
+        return 0;
+    }
+
+
+##### Assignment Operators
+
+
+
+##### Relational Operators
+
+==
+!=
+
+
