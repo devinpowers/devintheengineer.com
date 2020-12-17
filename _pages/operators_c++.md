@@ -73,4 +73,14 @@ example:
 ==
 !=
 
+##### Logical Operators
+
+&& : AND
+
+|| : OR
+
+! : NOT
+
+
+#### Bitwise Operators
 
