@@ -158,7 +158,38 @@ For Loop Code:
         return 0;
     }
 
+Display name multiple times using a for loop:
 
+    #include <iostream>
+
+    using namespace std;
+
+    int main() {
+        for (int i = 1; i <= 5; ++i) {
+            cout <<  "My name is Devin!!! " << endl;
+        }
+        return 0;
+    }
+
+
+We can also do a Range Based for loop.
+
+
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main() {
+    
+        int number_array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    
+        for (int n : number_array) {
+            cout << n << " ";
+        }
+    
+        return 0;
+    }
 
 
 #### While Loop
