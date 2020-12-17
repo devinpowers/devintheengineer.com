@@ -17,3 +17,26 @@ header:
 4. Logical Operators
 5. Bitwise Operators
 6. Other Operators
+
+
+
+Arithmetic Operator
+
+basic adding, subtracting, multiplication, etc
+
+example:
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main() {
+        int d, b;
+
+        d = 10;
+        b = 2;
+
+        cout << "d + b = " << (d + b) << endl;
+        return 0;
+    }
+
