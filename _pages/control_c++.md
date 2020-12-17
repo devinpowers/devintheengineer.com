@@ -175,7 +175,6 @@ Display name multiple times using a for loop:
 We can also do a Range Based for loop.
 
 
-
     #include <iostream>
 
     using namespace std;
@@ -239,6 +238,36 @@ While Loop Factorial Example:
         cout << "Factorial of " << fact << " is: " << factorial << endl;
 
     }
+
+
+Here is an example of a while loop that will sum up numbers given, until 0 is entered in:
+
+
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+        int number;
+        int sum = 0;
+
+        cout << "Enter a number: ";
+        cin >> number;
+
+        while (number != 0) {
+
+            sum += number;
+
+            // take input again if the number is not 0
+            cout << "Enter a number: ";
+            cin >> number;
+        }
+
+        // display the sum
+        cout << "\nThe sum is " << sum << endl;
+        
+        return 0;
+    }
+
 
 
 
