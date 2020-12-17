@@ -34,7 +34,7 @@ and some other stuff!!!!
 
 [Control in C++ ](https://devintheengineer.com/C++/control_c++)
 
-- logic/ operators
+- Logic/ Operators
 - if statements, for loops, switch, and while loops 
 - break and continue
 
@@ -52,6 +52,9 @@ and some other stuff!!!!
 ### Basic Data Structures
 
 [Arrays](https://devintheengineer.com/C++/arrays)
+
+[Working with Strings in C++](https://devintheengineer.com/C++/c++_strings)
+
 
 - Arrays
 - Functions with arrays
@@ -76,6 +79,10 @@ Project Two -- >
 Project Three -- >
 
 Project Four -->
+
+Project Five -->
+
+Project Six -->
 
 
 
