@@ -38,7 +38,6 @@ and some other stuff!!!!
 
 [Control in C++ ](https://devintheengineer.com/C++/control_c++)
 
-- Logic/ Operators
 - if statements, for loops, switch, and while loops 
 - break and continue
 

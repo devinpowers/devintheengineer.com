@@ -14,7 +14,7 @@ header:
 - Insert Notes here for learning C++ Control Flow
 
 
-
+IF Else Conditions
 
 
 Code For using the Or Operator:
@@ -140,6 +140,9 @@ Code for using the Not Operator:
 
 #### For Loops 
 
+![inserting an Image](/images/C++/Control/for.jpg)
+
+
 For Loop Code:
 
     #include <iostream>
@@ -160,6 +163,7 @@ For Loop Code:
 
 #### While Loop
 
+![inserting an Image](/images/C++/Control/while.jpg)
 
 While Loop Code:
 
