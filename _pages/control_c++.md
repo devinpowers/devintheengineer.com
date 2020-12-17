@@ -263,7 +263,9 @@ Can we do this "do while" loop using a regualr while loop?
 
 ## Break and Continue Keywords
 
-- Include Break notes here
+![inserting an Image](/images/C++/Control/break1.jpg)
+![inserting an Image](/images/C++/Control/break2.jpg)
+![inserting an Image](/images/C++/Control/break3.jpg)
 
 
 Break out of Code Example:
