@@ -23,6 +23,10 @@ and some other stuff!!!!
 - Data Types (Int, Strings, Char)
 - Basic Input and Output
 - Type Conversion
+
+[Operators to C++ ](https://devintheengineer.com/C++/operators_c++)
+
+
 - Operators (adding, dividing, etc)
 
 [Inputting and Outputting in C++ ](https://devintheengineer.com/C++/input_c++)
