@@ -407,7 +407,9 @@ Output
     9
     10
 
-Another Continue Example:
+Another Continue Example using it with a while loop!
+
+
 
 
 ## Conditional Operator Examples
