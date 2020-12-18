@@ -16,8 +16,6 @@ FUNCTIONS IN C++
 
 Here's an example of using the built in math function to calculate the 'pow' x raised to power: x^p
 
-
-
   #include <cmath>
 
   using std::cout;
@@ -36,7 +34,7 @@ Making our own functions!
 
 
 
-Calling a Function example:
+Calling a Function example
 
   #include <iostream>
 
