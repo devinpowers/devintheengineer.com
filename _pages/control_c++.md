@@ -377,6 +377,39 @@ Continue Keyword to skip example:
 
 
 
+Using Continue in a for loop while printing the numbers 1 to 10, and skipping current iteration and updating the expression once i = 5
+
+
+    #include <iostream>
+
+
+    int main() {
+        for (int i = 1; i <= 10; i++) {
+            if (i == 5) {
+                continue;
+            }
+
+            std::cout << i << std::endl;
+        }
+
+        return 0;
+    }
+
+Output
+
+    1
+    2
+    3
+    4
+    6
+    7
+    8
+    9
+    10
+
+Another Continue Example:
+
+
 ## Conditional Operator Examples
 
 

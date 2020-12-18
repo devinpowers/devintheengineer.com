@@ -10,5 +10,5 @@ header:
 ---
 
 
-Multi-Dimensional Array
+FUNCTIONS IN C++
 
