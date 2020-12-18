@@ -14,7 +14,9 @@ FUNCTIONS IN C++
 
 ### Built-In Functions (Standard Libray Functions)
 
-Here's an example of using the built in math function to calculate the powe (raised to power: x^p)
+Here's an example of using the built in math function to calculate the 'pow' x raised to power: x^p
+
+
 
   #include <cmath>
 
