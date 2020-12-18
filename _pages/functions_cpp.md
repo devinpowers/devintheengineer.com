@@ -14,7 +14,7 @@ FUNCTIONS IN C++
 
 ### Built-In Functions (Standard Libray Functions)
 
-Here's an example of using the built in math function to calculate the 'pow' x raised to power: x^p
+Here's an example of using the built in math function to calculate the 'pow' x raised to power (x^p)
 
   #include <cmath>
 
@@ -28,7 +28,7 @@ Here's an example of using the built in math function to calculate the 'pow' x r
 
 ### User-Defined Functions
 
-Calling a function is similar to Python with the ;
+Calling a function is similar to Python with the ';'
 
 Making our own functions!
 
