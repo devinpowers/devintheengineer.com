@@ -46,9 +46,9 @@ and some other stuff!!!!
 
 [Functions in C++ ](https://devintheengineer.com/C++/functions_cpp)
 
-- Intro to functions
-- Function types and overloading
-- Function return
+- Intro to Functions
+- Function Types and Overloading
+- Function Return
 - Recursion
 
 
@@ -58,10 +58,7 @@ and some other stuff!!!!
 
 [Working with Strings in C++](https://devintheengineer.com/C++/c++_strings)
 
-
-- Arrays
-- Functions with arrays
-
+[Vectors](https://devintheengineer.com/C++/c++_vectors)
 
 
 ### Input and Output
