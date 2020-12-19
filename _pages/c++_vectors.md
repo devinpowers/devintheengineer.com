@@ -9,8 +9,8 @@ header:
   
 ---
 
-![inserting an Image](/images/C++/vectors/page1.jpg)
-![inserting an Image](/images/C++/vectors/page2.jpg)
+![inserting an Image](/images/C++/vectors/Page1.jpg)
+![inserting an Image](/images/C++/vectors/Page2.jpg)
 
 
 
@@ -60,7 +60,7 @@ How would you retrieve the last element in a Vector?
         
     }
 
-![inserting an Image](/images/C++/vectors/page3.jpg)
+![inserting an Image](/images/C++/vectors/Page3.jpg)
 
 
 How to Remove the last element in the Vector?
@@ -83,7 +83,7 @@ Lets remove 3!
         
     }
 
-![inserting an Image](/images/C++/vectors/page4.jpg)
+![inserting an Image](/images/C++/vectors/Page4.jpg)
 
 How do we pass Vectors to Functions?
 
