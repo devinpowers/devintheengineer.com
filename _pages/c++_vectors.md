@@ -111,7 +111,7 @@ How do we pass Vectors to Functions?
         print_vector(data);
     }
 
-### Multidimensional Vectos
+### Multidimensional Vectors
 
 ![inserting an Image](/images/C++/vectors/Page5.jpg)
 
@@ -137,7 +137,7 @@ How do we pass Vectors to Functions?
                 cout << grades[r][c] << "\t";
             }
             cout << "\n";
-        }    
+        };  
 
     }
 

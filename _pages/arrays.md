@@ -316,7 +316,7 @@ Lets print a 3 x 3 array using a nested for loop
                 cout << grades[r][c] << "\t";
             }
             cout << "\n";
-        }    
+        };  
 
     }
 
