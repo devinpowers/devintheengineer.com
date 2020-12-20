@@ -11,6 +11,8 @@ header:
 
 Standard Template Library
 
+![inserting an Image](/images/C++/stl/Page1.jpg)
+![inserting an Image](/images/C++/stl/Page2.jpg)
 
 How do we create an STL Array?
 
