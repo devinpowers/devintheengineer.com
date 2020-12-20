@@ -291,7 +291,7 @@ Ouput
 Can you for STL and Vectors as well!
 
 
-# Multidimensional Arrays and Nested Vectors
+# Multidimensional Arrays
 
 ![inserting an Image](/images/C++/arrays/Page9.jpg)
 
