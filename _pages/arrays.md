@@ -10,10 +10,28 @@ header:
 ---
 
 
-Common Arrays in C++
 
-Array example with already knowing the input:
+Arrays are Statically Sized, when you code out the application, you have to input the number of spaces!
 
+Heres an example of an Array, and we will return the 3 index from it
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main()
+    {
+
+        int guesses[] = {10, 13, 23, 45, 78, 12, 10};
+
+        cout << guesses[3] << endl;
+    }
+
+Output
+
+    45
+
+We can change any value in our array, here's an example of changing value at index 3:
 
     #include <iostream>
 
@@ -30,6 +48,13 @@ Array example with already knowing the input:
         cout << guesses[3] << endl;
 
     }
+
+Output
+
+    45
+    300
+
+
 
 Array Example without knowing the "Size":
 
