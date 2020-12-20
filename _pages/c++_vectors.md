@@ -111,6 +111,40 @@ How do we pass Vectors to Functions?
         print_vector(data);
     }
 
+### Multidimensional Vectos
+
+![inserting an Image](/images/C++/vectors/Page5.jpg)
+
+    #include <iostream>
+    #include <vector>
 
 
+    using namespace std;
+
+    int main()
+    {
+        vector <vector<int>> grades =
+        {
+            {1,2,3},
+            {4,5,6},
+            {7,8,9}
+        };
+
+        for (int r = 0; r < 3; r++)
+        {
+            for ( int c = 0; c < 3; c++ )
+            {
+                cout << grades[r][c] << "\t";
+            }
+            cout << "\n";
+        }    
+
+    }
+
+
+Output
+
+    1       2       3
+    4       5       6
+    7       8       9
 
