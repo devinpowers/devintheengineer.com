@@ -233,3 +233,59 @@ Output
 
     12      43      23      43      23
 
+
+### Range Based For Loops
+
+![inserting an Image](/images/C++/arrays/Page8.jpg)
+
+iterate through a collection
+
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main()
+    {
+        int data[] = {1,2,3,4,5,6};
+
+        for (int i = 0; i < 6; i++)
+        {
+            cout << data[i] << "\t";
+        }
+        cout << "\n";
+
+    }
+
+Output
+
+    1       2       3       4       5       6
+
+
+Using a For Range Loop:
+
+Using std=c++11
+
+
+    #include <iostream>
+
+    using namespace std;
+
+    int main()
+    {
+        int data[] = {1,2,3,4,5,6};
+
+        for (int n : data)
+        {
+            cout << n << "\t";
+        }
+        cout << "\n";
+
+    }
+
+Ouput
+
+    1       2       3       4       5       6
+
+
+Can you for STL and Vectors as well!
