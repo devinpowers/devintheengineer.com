@@ -303,7 +303,12 @@ Can you for STL and Vectors as well!
 
     int main()
     {
-        int grades[][3] = {{1,2,3},{4,5,6},{7,8,9}};
+        int grades[][3] = 
+        {
+            {1,2,3},
+            {4,5,6},
+            {7,8,9}
+        };
 
         for (int r = 0; r < 3; r++)
         {
