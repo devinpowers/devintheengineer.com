@@ -68,3 +68,61 @@ I should insert my notes to solve this problem here
 
 
     }
+
+
+Another way to write this Code using Hyper Perfect Number Function
+
+    #include <iostream>
+
+    using namespace std;
+
+    // Function of hyper_perfect_number
+
+
+
+    void hyper_perfect_number ( int input_number, int k_factor )
+
+    {
+        int sum = 0;
+
+        if (input_number < 6)
+
+        {
+        cout << "the Factor K is 0" << endl;
+        }
+
+        // otherwise we proceed
+
+        for (int i = 2; i < input_number; i++ )
+        {
+        if (input_number % i== 0)
+        {
+            //cout << "the Number " << i << " is Divisible in " << input_number  << endl;
+            sum += i;
+        }
+        
+        }
+
+        for ( int b = 0; b <= k_factor; b++ )
+        {
+            if (((sum*b) + 1 ) == input_number )
+            {
+                cout << "The K factor for " << input_number << " is " << b << endl;
+                break;
+
+            }
+        }
+
+    }
+
+
+Output
+
+    The K factor for 301 is 6
+    The K factor for 808861 is 366
+    The K factor for 542413 is 342
+    The K factor for 306181 is 35
+    The K factor for 389593 is 252
+    The K factor for 176661 is 2
+    The K factor for 130153 is 132
+    The K factor for 96361 is 132
