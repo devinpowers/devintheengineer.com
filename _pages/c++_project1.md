@@ -1,13 +1,14 @@
 ---
 layout: archive
 permalink: /C++/c++_project1
-title: "STL Arrays in C++ "
+title: "Project 1 in C++ "
 author_profile: true
 
 header:
   image: "/images/tower3.jpeg"
   
 ---
+
 
 Code:
 

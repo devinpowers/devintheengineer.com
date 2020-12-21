@@ -77,7 +77,7 @@ and some other stuff!!!!
 [Project One ](https://devintheengineer.com/C++/c++_project1)
 
 
-Project Two -- >
+[Project Two ](https://devintheengineer.com/C++/c++_project2)
 
 Project Three -- >
 
