@@ -99,7 +99,7 @@ Goal: Create a function that performs the game of Rock-Papers-Scissors
 
 Objectives: 
 
-Goal: Hyper
+Goal: 
 
 #### [Project Five ](https://devintheengineer.com/C++/c++_project5)
 
