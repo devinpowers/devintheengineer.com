@@ -9,8 +9,7 @@ header:
   
 ---
 
-Project 3 in C++
-
+included in the header
 
     #include<iostream>
 
