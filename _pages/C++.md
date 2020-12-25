@@ -12,7 +12,10 @@ header:
 
 I plan on posting notes here with some basic projects to show my understanding of concepts in C++
 
-After Learning Python the past year, C++ syntax looks so funky, but after a few weeks, it's not too bad! so far
+After Learning Python the past year, C++ syntax looks so funky, but after a few weeks, it's not too bad! so far...
+
+
+![](http://i.imgur.com/Ssfp7.gif)
 
 
 and some other stuff!!!!
