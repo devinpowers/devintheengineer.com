@@ -9,10 +9,11 @@ header:
   
 ---
 
-I plan on starting to learn C++ in 2021. (maybe the end of 2020)
 
+I plan on posting notes here with some basic projects to show my understanding of concepts in C++
 
-I plan on posting notes here with some basic projects to show understanding of concepts in C++
+After Learning Python the past year, C++ syntax looks so funky, but after a few weeks, it's not too bad! so far
+
 
 and some other stuff!!!!
 ### Introduction Basics
@@ -51,16 +52,18 @@ and some other stuff!!!!
 - Function Return
 - Recursion
 
+### Working with Strings and Vectors
+
+[Working with Strings in C++](https://devintheengineer.com/C++/c++_strings)
+
+[Vectors](https://devintheengineer.com/C++/c++_vectors)
+
 
 ### Basic Data Structures
 
 [Arrays](https://devintheengineer.com/C++/arrays)
 
 [STL Arrays](https://devintheengineer.com/C++/stl_arrays)
-
-[Working with Strings in C++](https://devintheengineer.com/C++/c++_strings)
-
-[Vectors](https://devintheengineer.com/C++/c++_vectors)
 
 
 ### Input and Output
