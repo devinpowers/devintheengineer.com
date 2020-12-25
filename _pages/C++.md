@@ -100,7 +100,7 @@ Goal: Create a function that performs the game of Rock-Papers-Scissors
 
 #### [Project Four ](https://devintheengineer.com/C++/c++_project4)
 
-Objectives: 
+Objectives: Working with Strings and more on Functions
 
 Goal: 
 
@@ -110,6 +110,12 @@ Objectives:
 
 Goal: 
 
+
+#### [Project Six ](https://devintheengineer.com/C++/c++_project6)
+
+Objectives: 
+
+Goal: 
 
 
 
