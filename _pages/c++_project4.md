@@ -16,7 +16,9 @@ Here we will encode a basic sequence of characters
 
 
   #include<iostream>
-  using std::cout; using std::cin; using std::endl;
+  using std::cout;
+  using std::cin;
+  using std::endl;
   #include<iomanip>
   using std::setprecision;
   #include<string>
