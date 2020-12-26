@@ -12,7 +12,10 @@ header:
 
 This Project is using strings and working with Functions!!!!
 
-Here we will encode a basic sequence of characters!!!
+Here we will encode a basic sequence of characters
+
+
+
 
   #include<iostream>
   using std::cout; using std::cin; using std::endl;
