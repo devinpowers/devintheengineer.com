@@ -98,14 +98,14 @@ Goal: Hyper number solver
 
 Objectives: Loops, Conditionals, and the introduction of Functions
 
-Goal: Create a function that performs the game of Rock-Papers-Scissors
+Goal: Create a function that performs different math equations
 
 
 #### [Project Four ](https://devintheengineer.com/C++/c++_project4)
 
 Objectives: Working with Strings and more on Functions
 
-Goal: 
+Goal: Create a program that will encode a sequence of strings!
 
 #### [Project Five ](https://devintheengineer.com/C++/c++_project5)
 
