@@ -15,12 +15,11 @@ This Project is using strings and working with Functions!!!!
 Here we will encode a basic sequence of characters
 
 
+
     #include<iostream>
-    using std::cout;
-    using std::cin;
-    using std::endl;
-    #include<iomanip>
-    using std::setprecision;
+    using std::cout; using std::cin; using std::endl;
+    //#include<iomanip>
+    //using std::setprecision;
     #include<string>
     using std::string;
 
@@ -28,17 +27,17 @@ Here we will encode a basic sequence of characters
     const string code = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     string encode_sequence(string sequence, char encoder) {
-      string results = "";
-      if (sequence.length() <= 3) {
-        //don't encode
-        return sequence;
-      }
-      else {
-        results.push_back(encoder);                       // adds encoder to results string (:)
-        results.push_back(code.at(sequence.length() - 4 ));  // Adds decimal reference from code string above ()
-        results.push_back(sequence.at(0));
-      }
-      return results;
+        string results = "";
+        if (sequence.length() <= 3) {
+            //don't encode
+            return sequence;
+        }
+        else {
+            results.push_back(encoder);                       // adds encoder to results string (:)
+            results.push_back(code.at(sequence.length() - 4 ));  // Adds decimal reference from code string above ()
+            results.push_back(sequence.at(0));
+        }
+        return results;
     }
 
     string encode ( string sequence, char encoder ){
@@ -62,17 +61,16 @@ Here we will encode a basic sequence of characters
         return final_encode;
 
     }
-
     string decode_sequence ( string sequence, char encoder)
-    {
-        string results = "" ;
-        int  number = (code.find(sequence.at(1)) + 4);
-        char character = sequence.at(2);
-        results.assign(number, character);
+        {
+            string results = "" ;
+            int  number = (code.find(sequence.at(1)) + 4);
+            char character = sequence.at(2);
+            results.assign(number, character);
 
-        return results;
+            return results;
 
-    }
+        }
 
     string decode (string sequence, char encoder)
         {
@@ -88,8 +86,8 @@ Here we will encode a basic sequence of characters
 
                     final_decode += decode_sequence (seq, encoder); // sends sliced seqeunce to decode
                 
-                    i++; // skip 1 iteration
-                    i++; // skip 1 more iteration
+                    i += 2; // skip 2 iterations
+                    
                     
                     
                 }
@@ -105,13 +103,29 @@ Here we will encode a basic sequence of characters
 
         }
 
+    double reduction ( string original, string encoded )
+        {
+            double reduction_ratio;
+
+            double og_length =  original.length();
+            double encode_length = encoded.length();
+        
+            reduction_ratio = (1-(og_length - encode_length)/(og_length));
+
+            return reduction_ratio;
+
+        }
+
+
+
     int main()
     {
         string sequence_check = "";
         char sep;
         int test;
+        string encoded_sequence = "";
 
-        cout << "Please enter (1,2,3, or 4) to perform " << endl << "1. Encode a Sequence using one variable: " << endl << "2. Encode a Long sequence using multiple varibles: " << endl << "3. Decode "<< endl << "4. Decode full Sequence" << endl;
+        cout << "Please enter (1,2,3,4, or 5) to perform " << endl << "1. Encode a Sequence using one variable: " << endl << "2. Encode a Long sequence using multiple varibles: " << endl << "3. Decode "<< endl << "4. Decode full Sequence" << endl << "5. Reduction Ratio" << endl;
 
         cin >> test;
 
@@ -169,6 +183,12 @@ Here we will encode a basic sequence of characters
         }
         case 5:
         {
+            cout << "Please enter the orginal Sequence: ";
+            cin >> sequence_check;
+            cout << "Please enter the new encoded Sequence: ";
+            cin >> encoded_sequence;
+            
+            cout << reduction (sequence_check, encoded_sequence) << endl;
             break;
         }    
         }
