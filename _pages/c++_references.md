@@ -12,7 +12,6 @@ header:
 ![inserting an Image](/images/C++/references/Page1.jpg)
 ![inserting an Image](/images/C++/references/Page2.jpg)
 ![inserting an Image](/images/C++/references/Page3.jpg)
-![inserting an Image](/images/C++/references/Page4.jpg)
 
 
 
@@ -45,6 +44,7 @@ Output
 
 
 
+![inserting an Image](/images/C++/references/Page4.jpg)
 ![inserting an Image](/images/C++/references/Page5.jpg)
 
 
