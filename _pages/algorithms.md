@@ -76,9 +76,15 @@ Here I will post links to different Data Structures and how to implement them in
 
 ## Linked Lists
 
+![inserting an Image](/images/Linked_Lists/home/single_node.jpg)
+
 [Linked Lists](https://devintheengineer.com/algorithms/linked_lists)
 
-- Includes Singly, Doubly, and Circular linked Lists
+- Includes Singly, Doubly, and Circular Linked Lists
+
+- Includes basic operations for each kind of linked list
+
+
 
 
 ## Trees
