@@ -55,21 +55,18 @@ and some other stuff!!!!
 - Function Return
 - Recursion
 
-### Working with Strings and Vectors
 
-[Working with Strings in C++](https://devintheengineer.com/C++/c++_strings)
-
-[Vectors](https://devintheengineer.com/C++/c++_vectors)
-
-
-### Basic Data Structures
+### Arrays and Vectors
 
 [Arrays](https://devintheengineer.com/C++/arrays)
 
 [STL Arrays](https://devintheengineer.com/C++/stl_arrays)
 
+[Vectors](https://devintheengineer.com/C++/c++_vectors)
+
 
 ### Input and Output
+
 - working with files
 
 [input and output ](https://devintheengineer.com/C++/input_output)
@@ -80,9 +77,10 @@ and some other stuff!!!!
 
 [Pointers](https://devintheengineer.com/C++/pointers)
 
+
+
+
 ### Object Oriented Programming in C++
-
-
 
 ### Projects:
 
@@ -128,7 +126,39 @@ Goal:
 
 
 
+#### [Project Seven ](https://devintheengineer.com/C++/c++_project7)
+
+Objectives: 
+
+Goal: 
 
 
+
+#### [Project Eight ](https://devintheengineer.com/C++/c++_project8)
+
+Objectives: 
+
+Goal: 
+
+
+#### [Project Nine ](https://devintheengineer.com/C++/c++_project9)
+
+Objectives: 
+
+Goal: 
+
+
+#### [Project Ten ](https://devintheengineer.com/C++/c++_project10)
+
+Objectives: 
+
+Goal: 
+
+
+#### [Project Eleven ](https://devintheengineer.com/C++/c++_project11)
+
+Objectives: 
+
+Goal: 
 
 
