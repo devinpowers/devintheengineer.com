@@ -118,9 +118,9 @@ Goal: Create a program that will encode a sequence of strings!
 
 #### [Project Five ](https://devintheengineer.com/C++/c++_project5)
 
-Objectives: 
+Objectives: Working with Strings, Functions, Multiple File
 
-Goal: 
+Goal: Creating a Four-Square Cipher
 
 
 #### [Project Six ](https://devintheengineer.com/C++/c++_project6)
