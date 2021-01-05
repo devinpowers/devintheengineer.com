@@ -21,6 +21,22 @@ Project 5 is Working on a 4-Square Cipher Using Strings and Functions in C++
 
     const string alphabet = "abcdefghijklmnoprstuvwxyz"; //without 'q'
 
+
+    string clean_string (string s)  // Function for "Cleaning the String!!"
+    {
+        string clean_string = "";
+    
+        for ( int i = 0; i < s.length(); i++)
+        {
+            if (s[i] != ' ')
+            {          
+                clean_string += tolower(s[i]); // lowers and cleans string ifthere is a space!
+            }
+        }
+        return clean_string;
+
+
+    }
     string create_encoding(string key){
 
         string keyword = ""; // string that were returning 
@@ -91,6 +107,11 @@ Project 5 is Working on a 4-Square Cipher Using Strings and Functions in C++
         string block1;
         string block2;
         string encode_message;
+        // Lets clean the msg first
+
+        string msg_clean;
+
+        msg_clean = clean_string(msg);
 
         // send key1 and key2 to create_encoding
 
@@ -98,17 +119,17 @@ Project 5 is Working on a 4-Square Cipher Using Strings and Functions in C++
         block2 = create_encoding(key2);
 
 
-        if (msg.length() % 2 != 0)
+        if (msg_clean.length() % 2 != 0)
             {
-                msg += "x";
+                msg_clean += "x";
             }
 
 
-        for (int i = 0; i < msg.length(); i++)
+        for (int i = 0; i < msg_clean.length(); i++)
         {
             // send to encode_digraph
 
-            encode_message += encode_digraph( msg.substr(i,2), block1, block2) ;
+            encode_message += encode_digraph( msg_clean.substr(i,2), block1, block2) ;
 
             i++; // makes sure we skip iteration so we dont repeat a value
         }
@@ -123,9 +144,20 @@ Project 5 is Working on a 4-Square Cipher Using Strings and Functions in C++
 
     int main() {
 
+        string message;
+        string keyword1;
+        string keyword2;
 
-        cout << encode( "helloworld", "example", "keyword") <<endl;
+        cout << "Please Input a message to encode: ";
+        cin >> message;
+        cout << "Please input a keyword: " ;
+        cin >> keyword1;
+        cout << "Please input another keyword: ";
+        cin >> keyword2;
+
+
+
+        cout << encode(message, keyword1, keyword2) <<endl;
 
     
-
     }
