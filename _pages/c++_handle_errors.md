@@ -39,3 +39,8 @@ header:
             cout << "Error: " << exp << "\n";
         }
     }
+
+![inserting an Image](/images/C++/errors/Page1.jpg)
+![inserting an Image](/images/C++/errors/Page2.jpg)
+![inserting an Image](/images/C++/errors/Page3.jpg)
+
