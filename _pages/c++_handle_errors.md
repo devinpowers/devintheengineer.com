@@ -44,3 +44,89 @@ header:
 ![inserting an Image](/images/C++/errors/Page2.jpg)
 ![inserting an Image](/images/C++/errors/Page3.jpg)
 
+
+
+more code
+
+
+    #include<iostream>
+    using std::cout; using std::cin; using std::endl; using std::exception;
+
+
+    int main() {
+
+        try {
+
+            int age = 15;
+            if (age >= 18) {
+                cout << "Access granted - you're old enough! " << endl;
+            }
+            else{
+
+                throw (age);
+            }
+
+        }
+        catch (int myNum)
+        {
+            cout << "Access Denied, you must be at least 18 years old " << endl;
+
+            cout << "your age is: " << myNum << endl;
+        }
+
+
+    }
+
+
+
+    #include<string>
+    using std::string;
+
+    #include<iostream>
+    using std::cout; using std::cin; using std::endl; using std::exception;
+
+
+    int main() {
+
+        try {
+
+            string name;
+
+            name = "Devin";
+
+            int age = 18;
+        
+            if (age >= 18) {
+                cout << "Access granted - you're old enough! " << endl;
+            }
+            else{
+
+                throw (age);
+            }
+
+            if (name == "Austin")
+            {
+                cout << "Hi Austin!!" << endl;
+            }
+            else{
+
+                throw (name); // should send it to the correct catch 
+            }
+
+
+        }
+        catch (int myNum)
+        {
+            cout << "Access Denied, you must be at least 18 years old " << endl;
+
+            cout << "your age is: " << myNum << endl;
+        }
+
+        catch (string name_wrong)
+
+        {
+            cout << "The name is wrong! " << endl;
+        }
+
+
+    }
