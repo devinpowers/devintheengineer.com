@@ -79,6 +79,9 @@ and some other stuff!!!!
 
 [Working with Multiple Files in C++](https://devintheengineer.com/C++/c++_headers)
 
+[Handling Errors in C++](https://devintheengineer.com/C++/c++_handle_errors)
+
+
 includes: Working with headers and such 
 
 
