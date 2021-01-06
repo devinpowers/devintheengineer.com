@@ -9,36 +9,33 @@ header:
   
 ---
 
-#include<iostream>
-using std::cout; using std::cin; using std::endl;
+    #include<iostream>
+    using std::cout; using std::cin; using std::endl;
 
-int main() {
+    int main() {
 
-    // handle errors
+        // handle errors
 
-    double num1 = 0, num2 = 0;
+        double num1 = 0, num2 = 0;
 
-    cout << "Enter Number 1: ";
-    cin >> num1;
+        cout << "Enter Number 1: ";
+        cin >> num1;
 
-    cout << "Enter Number 2: ";
-    cin >> num2;
+        cout << "Enter Number 2: ";
+        cin >> num2;
 
-    try{
+        try{
 
-        if(num2 == 0){
-            throw "Divison by zero is not possible";
+            if(num2 == 0){
+                throw "Divison by zero is not possible";
+            }
+            else{
+                cout << "yes it will work" << endl;
+                cout << "answer is: " << num1 / num2 << endl;       
+            }
         }
-        else{
-            cout << "yes it will work" << endl;
-            cout << "answer is: " << num1 + num2 << endl;
-        
+        catch(const char exp)
+        {
+            cout << "Error: " << exp << "\n";
         }
-
     }
-    catch(const char* exp)
-    {
-        cout << "Error: " << exp << "\n";
-    }
-
-}
