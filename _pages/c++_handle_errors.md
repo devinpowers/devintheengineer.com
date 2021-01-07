@@ -40,9 +40,14 @@ header:
         }
     }
 
-![inserting an Image](/images/C++/errors/Page1.jpg)
-![inserting an Image](/images/C++/errors/Page2.jpg)
+
 ![inserting an Image](/images/C++/errors/Page3.jpg)
+![inserting an Image](/images/C++/errors/Page4.jpg)
+![inserting an Image](/images/C++/errors/Page5.jpg)
+![inserting an Image](/images/C++/errors/Page6.jpg)
+![inserting an Image](/images/C++/errors/Page7.jpg)
+![inserting an Image](/images/C++/errors/Page8.jpg)
+
 
 
 
@@ -130,3 +135,7 @@ Handling Multiple "Catches"
 
 
     }
+
+
+![inserting an Image](/images/C++/errors/Page1.jpg)
+![inserting an Image](/images/C++/errors/Page2.jpg)
