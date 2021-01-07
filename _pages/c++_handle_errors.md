@@ -77,7 +77,7 @@ more code
 
     }
 
-
+Handling Multiple "Catches"
 
     #include<string>
     using std::string;
