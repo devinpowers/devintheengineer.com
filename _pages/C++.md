@@ -81,6 +81,10 @@ and some other stuff!!!!
 
 [Handling Errors in C++](https://devintheengineer.com/C++/c++_handle_errors)
 
+[Iterators in C++](https://devintheengineer.com/C++/c++_iterators)
+
+
+
 
 includes: Working with headers and such 
 

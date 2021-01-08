@@ -9,6 +9,14 @@ header:
   
 ---
 
+![inserting an Image](/images/C++/iterators/Page1.jpg)
+![inserting an Image](/images/C++/iterators/Page2.jpg)
+![inserting an Image](/images/C++/iterators/Page3.jpg)
+![inserting an Image](/images/C++/iterators/Page4.jpg)
+![inserting an Image](/images/C++/iterators/Page5.jpg)
+![inserting an Image](/images/C++/iterators/Page6.jpg)
+
+
 
 An example of using iterators, Vectors, and Functions together
 
