@@ -64,3 +64,24 @@ An example of using iterators, Vectors, and Functions together
 
     }
 
+
+
+## More on Reversing Iterators in C++
+
+
+    #include<vector>
+    using std::vector; 
+    #include<iostream>
+    using std::cout; using std::endl; 
+
+    int main() 
+    {
+        vector<int> v = {1,2,3,4,5};
+
+        for ( auto pos = v.rbegin(); pos != v.rend(); ++pos ){
+
+                cout << *pos << endl;
+        }
+    }
+
+
