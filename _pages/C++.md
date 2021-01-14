@@ -83,6 +83,8 @@ and some other stuff!!!!
 
 [Iterators in C++](https://devintheengineer.com/C++/c++_iterators)
 
+[IO Streams ](https://devintheengineer.com/C++/streams)
+
 
 
 
@@ -132,9 +134,9 @@ Goal: Creating a Four-Square Cipher
 
 #### [Project Six ](https://devintheengineer.com/C++/c++_project6)
 
-Objectives: 
+Objectives: Working with Vectors, Functions
 
-Goal: 
+Goal: Creating a Decoding thing
 
 
 
