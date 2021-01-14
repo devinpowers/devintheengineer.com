@@ -55,6 +55,13 @@ and some other stuff!!!!
 - Function Return
 - Recursion
 
+### Associative Containers
+
+
+[Maps](https://devintheengineer.com/C++/maps)
+
+[Sets](https://devintheengineer.com/C++/sets)
+
 
 ### Arrays and Vectors
 
@@ -66,8 +73,6 @@ and some other stuff!!!!
 
 
 ### Input and Output
-
-- working with files
 
 [input and output ](https://devintheengineer.com/C++/input_output)
 
@@ -86,9 +91,6 @@ and some other stuff!!!!
 [IO Streams ](https://devintheengineer.com/C++/streams)
 
 
-
-
-includes: Working with headers and such 
 
 
 
