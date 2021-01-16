@@ -11,6 +11,47 @@ header:
 
 Inserting, Deleting and other Methods in Map Data Structures
 
+Working with Pairs in C++, Different examples below
+
+
+
+    #include<iostream>
+    using std::cout; using std::endl;
+    #include<string>
+    using std::string;
+    #include<utility>
+    using std::pair; using std::make_pair;
+
+    int main(){
+
+        // initialize a pair
+
+        pair <int, string > a;
+        pair <int, string > b;
+
+        // lets use the make_pair function
+
+        a = make_pair( 3, "Chris Paul");
+        b = make_pair( 23, "Michael Jordan");
+
+        // printting out the first and second values of the pairs
+
+        cout << "a: " << a.first << " , " << a.second << endl;
+        cout << "b: " << b.first << " , " << b.second << endl;
+
+        return 0;
+
+    }
+
+Output
+
+    a: 3 , Chris Paul
+    b: 23 , Michael Jordan
+
+
+
+
+Maps
 
 Insert into Map 3 Different ways!
 
