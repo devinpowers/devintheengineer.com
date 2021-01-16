@@ -49,9 +49,57 @@ Output
     b: 23 , Michael Jordan
 
 
+    #include<iostream>
+    using std::cout; using std::endl;
+    #include<string>
+    using std::string;
+    #include<vector>
+    using std::vector;
+    #include<utility>
+    using std::pair; using std::make_pair;
+    #include<sstream>
+    using std::ostringstream;
+    #include<iterator>
+    using std::ostream_iterator;
+    #include<algorithm>
+    using std::transform;
 
 
-Maps
+    using NBA = pair<string,int>; 
+
+
+    string pair_to_string(NBA p){
+    ostringstream oss;
+    oss << p.first <<":"<<p.second;
+    return oss.str();
+    }
+
+
+    int main(){
+
+    
+        vector<NBA> v(3, NBA("Griffin", 23));
+
+        v.push_back(make_pair("Pippin", 33));
+        v.push_back(make_pair("Billups", 1));
+        v.push_back(make_pair("Wallace", 3));
+
+        // can print with normal pair_to_string
+
+        transform (v.begin(), v.end(), ostream_iterator<string>(cout, ", "), pair_to_string );
+        
+        cout << endl;
+
+
+    }
+
+Output
+
+    Griffin:23, Griffin:23, Griffin:23, Pippin:33, Billups:1, Wallace:3, 
+
+
+
+## Maps
 
 Insert into Map 3 Different ways!
 
