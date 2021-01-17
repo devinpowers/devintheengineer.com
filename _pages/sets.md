@@ -15,14 +15,14 @@ Sets Represent Mathematical Sets, I have plently of notes on Sets in my Discrete
 - They hold only one example of any element, if you add a duplicate of an existing element, it is ignored
 
 
-Insert and Erase are Similar to Map;s
+Insert and Erase are Similar to Map's
 
 - Insert on a set retruns a pair
   - while the iterator points to the base type (int, double, string), not the pair
 - When you erase, it erases all examples of the key (which is only one)
 - Iterator on sets are constant, you can't change a key in place
 
-# inserting into a set example
+### Inserting into a set example
 
     #include<iostream>
     using std::cout; using std::endl;
@@ -90,5 +90,15 @@ We can perform these on sets using generic Algorithms but for the Algorithms to 
 - set_difference
 - set_symmetric_difference
 
+
+
+### Set Algorithm Examples
+
+![inserting an Image](/images/C++/sets/Page1.jpg)
+![inserting an Image](/images/C++/sets/Page2.jpg)
+![inserting an Image](/images/C++/sets/Page3.jpg)
+![inserting an Image](/images/C++/sets/Page4.jpg)
+![inserting an Image](/images/C++/sets/Page5.jpg)
+![inserting an Image](/images/C++/sets/Page6.jpg)
 
 
