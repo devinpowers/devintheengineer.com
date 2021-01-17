@@ -144,9 +144,9 @@ Goal: Creating a Decoding thing
 
 #### [Project Seven ](https://devintheengineer.com/C++/c++_project7)
 
-Objectives: 
+Objectives: Working with importing text files, Maps, and Sets
 
-Goal: 
+Goal: Connect and Disconnect from Servers
 
 
 
