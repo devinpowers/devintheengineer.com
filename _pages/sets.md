@@ -77,7 +77,7 @@ Output
 
 Output
 
-  After removing the GOAT:   Kobe, Lebron,
+    After removing the GOAT:   Kobe, Lebron,
 
 Remember when we learned about sets in Discrete Mathmatics and about Union, intersection, etc? 
 
