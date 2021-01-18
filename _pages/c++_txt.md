@@ -11,7 +11,7 @@ header:
 
 This topic can sometimes confuse me so I have an example
 
-![inserting an Image](/images/C++/txt/Page1.jpg)
+![inserting an Image](/images/C++/txt/page1.jpg)
 
 Here is the txt file (file.txt)
 
