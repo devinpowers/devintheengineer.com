@@ -11,6 +11,8 @@ header:
 
 This topic can sometimes confuse me so I have an example
 
+![inserting an Image](/images/C++/txt/Page1.jpg)
+
 Here is the txt file (file.txt)
 
         devin join server1
