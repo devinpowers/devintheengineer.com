@@ -75,6 +75,8 @@ and some other stuff!!!!
 ### Input and Output
 
 [input and output ](https://devintheengineer.com/C++/input_output)
+[Working with txt files ](https://devintheengineer.com/C++/c++_txt)
+
 
 ### Extra Stuff in C++
 
