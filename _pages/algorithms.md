@@ -22,14 +22,14 @@ Link to my GitHub Repository:
 [Data Structures and Algorithms Repository](https://github.com/devinpowers/algorithms)
 
 
-
 # Algorithm Analysis
 
 - Here I will post Notes on Big O Notation
 
-# Algorithms:
+![bigO](https://user-images.githubusercontent.com/50432490/105179820-c85ea580-5af7-11eb-8c06-6b78e12a552f.gif)
 
-Here I will post links to different Algorithms
+
+# Algorithms:
 
 ## Sorting Algorithms
 
@@ -41,6 +41,7 @@ Here I will post links to different Algorithms
 
 [Bubble Sort](https://devintheengineer.com/algorithms/bubble)
 
+### Sorting Algorithm Complexity
 
 | Algorithm      | Running Time (Average) | Running Time (Worst) | Space Complexity (Worst) |
 |----------------|------------------------|----------------------|--------------------------|
@@ -51,11 +52,16 @@ Here I will post links to different Algorithms
 
 
 
-
-
 # Data Structures:
+- Arrays
 
-Here I will post links to different Data Structures and how to implement them in Python
+- Stacks
+
+- Queues and Deques
+
+- Linked Lists (Doubly, Circular)
+
+- Trees 
 
 ## Arrays:
 
@@ -85,8 +91,6 @@ Here I will post links to different Data Structures and how to implement them in
 - Includes basic operations for each kind of linked list
 
 
-
-
 ## Trees
 
 ![inserting an Image](/images/christmas.jpg)
@@ -100,41 +104,45 @@ Includes:
 2. Binary Tree
 3. Binary Search Tree
 
-    -AVL Tree
-    
-    -Red-Black Tree
-    
-    -Splay Tree
-    
-    -Treap
-    
-    -B-Tree
-
-More Trees:
+  - AVL Tree, Red-Black Tree, Splay Tree, Treap, B -Tree
 
 ## Heaps (more Trees)
 
 
 [Heap Data Structure](https://devintheengineer.com/algorithms/heaps)
 
-
 - Priority Queues
 
-- Max Heap
-
-- Min Heap
-
-- Heap Sort
-
-- Heap Project
+- Max Heap, Min Heap, Heap Sort
 
 
 ## Maps and Hash Tables
 
 ![inserting an Image](/images/hash.jpg)
+
 [Hash Tables](https://devintheengineer.com/algorithms/hash)
 
+- Hash Tables
+
+- Includes Hash Project
 
 
 ## Graphs
+
+- Graph Traversals
+    - DFS
+    - BFS
+
+- Topological Sort
+
+- Shortest Path
+
+  - Djikstra's Algorithm
+  - Warshall's Algorithm
+
+
+## Dynamic Programming
+
+- Greedy Algorithm
+
 
