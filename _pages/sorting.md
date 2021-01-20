@@ -14,7 +14,7 @@ Heres where sorting algorithms code will go:
 All Notes for step-by-step sorting algorithms are found on my Github
 
 ## Insertion Sort 
-[Insertion Sort Noes](/notes/Insertion_Sort.pdf)
+[Insertion Sort Notes](/notes/Insertion_Sort.pdf)
 
     from time import time
     ''' insertion sort Algorithm'''
