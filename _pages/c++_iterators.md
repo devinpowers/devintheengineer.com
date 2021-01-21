@@ -106,8 +106,16 @@ Output
     1
 
 
+
+
+
 # More on Iterators
 
-- coming soon
+![inserting an Image](/images/C++/iterators/Page7.jpg)
+![inserting an Image](/images/C++/iterators/Page8.jpg)
+![inserting an Image](/images/C++/iterators/Page9.jpg)
+
+
+
 
 
