@@ -9,6 +9,13 @@ header:
   
 ---
 
+Iterators are used to point to Memory Adresses of STL containers, they're an object designed to traverse through a container, which allows us access to each element on the way.
+
+Different container may provide different kinds of iterators.
+
+In the case of Maps, iterators "points" to the value of pair of key/value
+
+
 ![inserting an Image](/images/C++/iterators/Page1.jpg)
 ![inserting an Image](/images/C++/iterators/Page2.jpg)
 ![inserting an Image](/images/C++/iterators/Page3.jpg)
@@ -64,7 +71,12 @@ An example of using iterators, Vectors, and Functions together
 
     }
 
+Output
 
+    initial:
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+    reversed vector
+    10, 9, 8, 7, 6, 5, 4, 3, 2, 1
 
 ## More on Reversing Iterators in C++
 
@@ -83,5 +95,19 @@ An example of using iterators, Vectors, and Functions together
                 cout << *pos << endl;
         }
     }
+
+
+Output
+
+    5
+    4
+    3
+    2
+    1
+
+
+# More on Iterators
+
+- coming soon
 
 
