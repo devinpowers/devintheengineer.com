@@ -62,6 +62,9 @@ and some other stuff!!!!
 
 [Maps](https://devintheengineer.com/C++/maps)
 
+- Pairs
+- Maps
+
 [Sets](https://devintheengineer.com/C++/sets)
 
 

@@ -104,3 +104,19 @@ Output
 
 ## add more on iterators using different containers like Maps and Lists
 
+
+## Iterator using Maps
+
+When you iterate through a map, you're iterating through pairs
+
+A map iterator points to a pair
+
+If you want to print the key of the pair via the iterator, we can do either:
+
+- (*itr).first
+- itr->first
+
+The -> operator means a member of what the iterator points to
+
+When iterating through pairs, the KEY is CONSTANT value, we can view but not change a key value via iteration
+
