@@ -37,32 +37,85 @@ Includes:
 - Proof by Contradiction
 - Proof by Cases
 
-
-
 [Chapter One](https://devintheengineer.com/discretemathematics/chapter_one)
 
 
 # Chapter 2: Sets, Functions, Sequences, Sums, and Matrices
+
+Includes:
+
+- Introduction to Sets
+- Set Relationships
+- Operations on Sets
+- Set Identities
+- Proving Set Identities
+- Introduction to Functions
+- One to One and Onto Functions
+- Inverse Functions and Composition Functions
+- Introduction to Sequences
+- Recurrence Relations
+- Summations and Sigma Notation
+- Cardinality of Sets
+- Matrices and Matrox Operations
 
 [Chapter Two](https://devintheengineer.com/discretemathematics/chapter_two)
 
 
 # Chapter 3: Algorithms
 
+Includes:
+
+- Growth rate of Functions
+
 [Chapter Three](https://devintheengineer.com/discretemathematics/chapter_three)
 
 
 # Chapter 4: Number Theory
+
+Includes:
+
+- Divisibility
+- Modular Arithmetic
+- Decimal Expansions from Binary, Octal and Hexadecimal
+- Binary, Octal and Hexadecimal Expansions from Decimal
+- Conversions between Binary, Octal and Hexadecimal Expansions
+- Algorithms for Integer Operations
+- Prime Numbers and their Properties
+- Greatest Common Divisors and Least Common Multiples
+- The Euclidean Algorithm
+- The Greatest Common Divisor as Linear Combinations
+- Solving Linear Congruences using Inverse
 
 [Chapter Four](https://devintheengineer.com/discretemathematics/chapter_four)
 
 
 # Chapter 5: Induction and Recursion
 
+Includes:
+
+- Proof using Mathematical Induction
+   -Summation Formula
+   -Inequalities
+   -Divisibilty
+- The Well-Ordering Principle and Strong Induction
+- Structural Induction
+- Recursive Algorithms
+
 [Chapter Five](https://devintheengineer.com/discretemathematics/chapter_five)
 
 
 # Chapter 6: Counting Rules
+
+Includes:
+
+- The Basics of Counting
+  - Sum Rule
+  - Subtraction Rules
+  - Division Rule
+- The Pigeonhole Principle
+- Permutations and Combinations
+- The Binomial Theorem
+- Generalized Permutations and Combinations
 
 [Chapter Six](https://devintheengineer.com/discretemathematics/chapter_six)
 
@@ -80,6 +133,17 @@ Includes:
 
 
 # Chapter 9: Introduction to Relations
+
+Includes:
+
+- Introduction to Relations
+- Properties of Relations
+- Combining Relations
+- Matrix Representations of Relations and Properties
+- Representing Relations using Digraphs
+- Closures of Relations
+- Equivalence Relations
+
 
 [Chapter Nine](https://devintheengineer.com/discretemathematics/chapter_nine)
 
