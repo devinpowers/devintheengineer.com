@@ -81,23 +81,32 @@ and some other stuff!!!!
 [Working with txt files ](https://devintheengineer.com/C++/c++_txt)
 
 
+## Working with Iterators in C++
+
+[Iterators in C++](https://devintheengineer.com/C++/c++_iterators)
+
+- iterating using Strings and Vectors
+- iterating using Maps
+
+## Pointers in C++
+
+[Pointers](https://devintheengineer.com/C++/pointers)
+
+ - gotta work on
+
+
 ### Extra Stuff in C++
 
 [References in C++](https://devintheengineer.com/C++/c++_references)
-
-[Pointers](https://devintheengineer.com/C++/pointers)
 
 [Working with Multiple Files in C++](https://devintheengineer.com/C++/c++_headers)
 
 [Handling Errors in C++](https://devintheengineer.com/C++/c++_handle_errors)
 
-[Iterators in C++](https://devintheengineer.com/C++/c++_iterators)
-
 [IO Streams ](https://devintheengineer.com/C++/streams)
 
 [Makefiles](https://devintheengineer.com/C++/makefiles)
 
-Extra stuff here
 
 
 
@@ -157,7 +166,7 @@ Goal: Connect and Disconnect from Servers
 
 #### [Project Eight ](https://devintheengineer.com/C++/c++_project8)
 
-Objectives: 
+Objectives: Create your own Data Structure using Struct
 
 Goal: 
 
