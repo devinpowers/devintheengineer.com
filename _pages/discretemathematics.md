@@ -147,6 +147,11 @@ Includes:
 
 [Chapter Nine](https://devintheengineer.com/discretemathematics/chapter_nine)
 
+
+# Chapter 13: Language
+
+- notes coming soon
+
 # Homework Problems
 
 
