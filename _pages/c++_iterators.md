@@ -15,6 +15,8 @@ Different container may provide different kinds of iterators.
 
 In the case of Maps, iterators "points" to the value of pair of key/value
 
+Iterators are nice because we don't have to worry about the size of the containter
+
 
 ![inserting an Image](/images/C++/iterators/Page1.jpg)
 ![inserting an Image](/images/C++/iterators/Page2.jpg)

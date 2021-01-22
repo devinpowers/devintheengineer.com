@@ -10,6 +10,8 @@ header:
 
 
 
+My Programming Projects are either on my C++ page or my Github at github.com/devinpowers
+
 Here are a list of Civil Engineering projects:
 
 
@@ -57,10 +59,5 @@ Hydraulic Analysis of a river and design of pipe networks
 [Final Report](/images/civil/CE495.pdf)
 
 [Final Excel Report](/images/civil/CE495.xlsx)
-
-
-
-
-### Heres are a list of Computer Science Business related projects:
 
 
