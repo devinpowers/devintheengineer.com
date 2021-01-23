@@ -134,3 +134,143 @@ When iterating through pairs, the KEY is CONSTANT value, we can view but not cha
 
 - Order of a Map elements is based on the key!
 
+
+
+## Iterating thru a Vector with a Pair as its Data type:
+
+
+    #include<iostream>
+    using std::cout; using std::endl;
+    #include<string>
+    using std::string;
+    #include <vector>
+    using std::vector;
+    #include<utility>
+    using std::pair; using std::make_pair;
+    #include<sstream>
+    using std::ostringstream;
+
+    template <typename K, typename V >
+    string pair_to_string(pair<K,V> pair){
+    ostringstream oss;
+    oss << pair.first <<":"<<pair.second;
+    return oss.str();
+    }
+
+    int main()
+    {
+
+        vector<pair<string, int>> vec1;
+
+        vec1.push_back( make_pair("Devin", 25));
+        vec1.push_back( make_pair("Abe", 24));
+        vec1.push_back( make_pair("Luke", 56));
+
+        vector<pair<string, int>>::iterator itr;
+
+        for ( itr = vec1.begin(); itr != vec1.end(); itr++)
+        {
+            cout << pair_to_string(*itr) << endl;
+
+        }
+        
+
+    }
+
+Output 
+
+    Devin:25
+    Abe:24
+    Luke:56
+
+
+
+## Iterating thru a Vector with a Pair as its Data type using first and second
+
+Basic Problem
+
+    #include<iostream>
+    using std::cout; using std::endl;
+    #include<string>
+    using std::string;
+    #include <vector>
+    using std::vector;
+    #include<utility>
+    using std::pair; using std::make_pair;
+
+
+    int main()
+    {
+
+        vector<pair<string, int>> vec1;
+
+        vec1.push_back( make_pair("Devin", 25));
+        vec1.push_back( make_pair("Abe", 24));
+        vec1.push_back( make_pair("Luke", 56));
+
+        vector<pair<string, int>>::iterator itr;
+
+        for ( itr = vec1.begin(); itr != vec1.end(); itr++)
+        {
+            cout << itr->first << " : " << itr->second << endl;
+
+        }
+        
+
+    }
+
+Output
+
+    Devin : 25
+    Abe : 24
+    Luke : 56
+
+
+
+## Iterators and Maps!
+
+
+
+    #include<iostream>
+    using std::cout; using std::endl;
+    #include<string>
+    using std::string;
+    #include <vector>
+    using std::vector;
+    #include<utility>
+    using std::pair; using std::make_pair;
+    #include<sstream>
+    using std::ostringstream;
+    #include<map>
+    using std::map;
+
+
+    template <typename K, typename V >
+    void print_map ( map<K,V>&  map)
+    {
+        for (auto const& pair : map)
+        {
+            cout << pair.first << " : " << pair.second << endl;
+        }
+    }
+
+
+    int main()
+    {
+        map <string, string> map_0 = { {"Devin", "Powers"}, {"Luke", "Hirt"}};
+
+        map <int, string> map_1 = { {3, "Devin"}, {1, "Luke"}, {4, "Abe"}};
+
+        print_map(map_1);
+
+        print_map(map_0);
+
+    }
+
+Output
+
+    1 : Luke
+    3 : Devin
+    4 : Abe
+    Devin : Powers
+    Luke : Hirt
