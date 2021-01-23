@@ -274,3 +274,120 @@ Output
     4 : Abe
     Devin : Powers
     Luke : Hirt
+
+
+### Iterating over a Map with Data Type values of string and Set
+
+
+    #include<iostream>
+    using std::cout; using std::endl;
+    #include<string>
+    using std::string;
+    #include <vector>
+    using std::vector;
+    #include<utility>
+    using std::pair; using std::make_pair;
+    #include<sstream>
+    using std::ostringstream;
+    #include<map>
+    using std::map;
+    #include<set>
+    using std::set;
+
+
+    void print_map (  map <string, set<string>> map_passed)
+
+    {
+        map <string, set<string>>::iterator itr;
+
+        for (itr = map_passed.begin(); itr != map_passed.end(); itr++ )
+        {
+            cout << itr->first << " : ";
+
+            for (auto itr2 = itr->second.begin(); itr2 != itr->second.end(); itr2++ )
+            {
+                cout << *itr2 << ", ";
+            }
+            cout << "\n";
+        }
+    }
+
+
+
+
+    int main()
+    {
+        map <string, set<string> > map_sets = {
+
+            {"Server One", {"Devin","Luke", "Abe"}},
+            {"Server Two", {"Noah", "Nick"}},
+            {"Server Three", {"Jimmy"}}
+            
+            };
+
+        print_map(map_sets);
+
+    }
+
+
+Output 
+
+    Server One : Abe, Devin, Luke, 
+    Server Three : Jimmy, 
+    Server Two : Nick, Noah, 
+
+
+## We can do the same problem above without iterators!
+
+    #include<iostream>
+    using std::cout; using std::endl;
+    #include<string>
+    using std::string;
+    #include <vector>
+    using std::vector;
+    #include<utility>
+    using std::pair; using std::make_pair;
+    #include<sstream>
+    using std::ostringstream;
+    #include<map>
+    using std::map;
+    #include<set>
+    using std::set;
+
+
+    void print_map (  map <string, set<string>> map_passed)
+
+    {
+        for (auto pair : map_passed)
+        {
+            cout << pair.first << " : ";
+            for (auto element : pair.second)
+            {
+                cout << element << ", ";
+            }
+            cout << "\n";
+        }
+    }
+
+
+
+
+    int main()
+    {
+        map <string, set<string> > map_sets = {
+
+            {"Server One", {"Devin","Luke", "Abe"}},
+            {"Server Two", {"Noah", "Nick"}},
+            {"Server Three", {"Jimmy"}}
+            
+            };
+
+        print_map(map_sets);
+
+    }
+
+Output 
+
+    Server One : Abe, Devin, Luke, 
+    Server Three : Jimmy, 
+    Server Two : Nick, Noah, 
