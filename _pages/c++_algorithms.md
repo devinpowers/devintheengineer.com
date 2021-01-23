@@ -12,6 +12,8 @@ header:
 
 ### Accumulate
 
+![inserting an Image](/images/C++/algorithms/Page1.jpg)
+
     
     #include<iostream>
     using std::cout; using std::endl; 
@@ -46,6 +48,8 @@ Output
     The accumulation of vector 'Vect' is: 22
     Adding a string up: HellomynameisDevin!
 
+
+![inserting an Image](/images/C++/algorithms/Page2.jpg)
 
 
     #include<iostream>
@@ -86,4 +90,5 @@ Output
     The Sum is: 26
     The Product is: 288
     The Difference is : -26
+
 
