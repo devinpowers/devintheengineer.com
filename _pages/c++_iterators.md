@@ -135,6 +135,7 @@ When iterating through pairs, the KEY is CONSTANT value, we can view but not cha
 - Order of a Map elements is based on the key!
 
 
+![inserting an Image](/images/C++/iterators/Page81.jpg)
 
 ## Iterating thru a Vector with a Pair as its Data type:
 
@@ -224,6 +225,14 @@ Output
     Devin : 25
     Abe : 24
     Luke : 56
+
+![inserting an Image](/images/C++/iterators/Page9.jpg)
+![inserting an Image](/images/C++/iterators/Page10.jpg)
+![inserting an Image](/images/C++/iterators/Page11.jpg)
+![inserting an Image](/images/C++/iterators/Page12.jpg)
+![inserting an Image](/images/C++/iterators/Page13.jpg)
+![inserting an Image](/images/C++/iterators/Page14.jpg)
+
 
 
 
