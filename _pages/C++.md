@@ -111,6 +111,10 @@ and some other stuff!!!!
 
 [Makefiles](https://devintheengineer.com/C++/makefiles)
 
+[Basic Algorithms](https://devintheengineer.com/C++/c++_algorithms)
+
+
+
 
 
 
