@@ -49,6 +49,8 @@ Output
     b: 23 , Michael Jordan
 
 
+Another Example
+
     #include<iostream>
     using std::cout; using std::endl;
     #include<string>
@@ -284,6 +286,10 @@ Output
 ![inserting an Image](/images/C++/maps/Page9.jpg)
 ![inserting an Image](/images/C++/maps/Page10.jpg)
 ![inserting an Image](/images/C++/maps/Page11.jpg)
+![inserting an Image](/images/C++/maps/Page12.jpg)
+![inserting an Image](/images/C++/maps/Page13.jpg)
+![inserting an Image](/images/C++/maps/Page14.jpg)
+
 
 
 

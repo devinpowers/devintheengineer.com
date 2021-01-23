@@ -120,3 +120,17 @@ The -> operator means a member of what the iterator points to
 
 When iterating through pairs, the KEY is CONSTANT value, we can view but not change a key value via iteration
 
+## Maps Containers use Bidirectional iterators
+
+- Not a sequence (maps have an ordering, but not the order that the elements were inserted)
+
+- Can advance iterator both forward and backward
+
+- No random access via []
+
+- no pointer arithmetic of itr < v.end()
+
+- Instead use itr != v.end()
+
+- Order of a Map elements is based on the key!
+
