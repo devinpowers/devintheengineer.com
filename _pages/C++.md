@@ -64,7 +64,7 @@ and some other stuff!!!!
 
 - Pairs
 - Maps
-  -
+
 
 [Sets](https://devintheengineer.com/C++/sets)
 
@@ -90,7 +90,7 @@ and some other stuff!!!!
 [Iterators in C++](https://devintheengineer.com/C++/c++_iterators)
 
 - iterating using Strings and Vectors
-- iterating using Maps
+- iterating using Maps and Sets
 
 ## Pointers in C++
 
