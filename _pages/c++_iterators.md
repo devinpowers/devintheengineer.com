@@ -13,9 +13,9 @@ Iterators are used to point to Memory Adresses of STL containers, they're an obj
 
 Different container may provide different kinds of iterators.
 
-In the case of Maps, iterators "points" to the value of pair of key/value
+In the case of Maps, iterators "points" to the value of Pair of key:value
 
-Iterators are nice because we don't have to worry about the size of the containter
+Iterators are nice because we don't have to worry about the size of the containter (like we do with lists) and we can effectively get access to every container as not all containers allow .at or [] to access elements!
 
 
 ![inserting an Image](/images/C++/iterators/Page1.jpg)
