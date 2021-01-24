@@ -157,15 +157,8 @@ Output
     using std::cout; using std::endl;
     #include<set>
     using std::set;
-    #include<vector>
-    using std::vector;
-    #include<iterator>
-    using std::ostream_iterator;
     #include<algorithm>
-    using std::set_union; using std::set_intersection;
-    using std::set_difference;
-    using std::set_symmetric_difference;
-    using std::sort; using std::find;
+    using std::find;
 
     int main (){
 
@@ -187,7 +180,6 @@ Output
         }
         cout << endl;
 
-        
     }
 
 Output
@@ -195,3 +187,4 @@ Output
     The elements in the Set that come after 4 are: 4 5 6 
 
 
+## More
