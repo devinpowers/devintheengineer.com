@@ -309,5 +309,35 @@ Output
 
 
 
+    #include<iostream>
+    using std::cout; using std::endl;
+    #include <vector> 
+    using std::vector;
+    #include<string>
+    using std::string;
+    #include <algorithm> 
+    using std::copy;
+    #include<iterator>
+    using std::ostream_iterator;
+
+    int main() 
+    { 
+
+
+    vector<string> v1 = { "Hello", "my", "name", "is", "Devin" };
+
+    ostream_iterator<string> out(cout, " ");
+            
+    copy(v1.begin(), v1.end(), out);
+
+    cout << endl;
+        
+
+    } 
+
+Output
+
+    Hello my name is Devin 
+
 ### transform
 
