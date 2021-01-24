@@ -455,10 +455,12 @@ Output
 
 
 
-
 # Sorting Algorithms
 
 
 ### sort
 
 - Sorts elements in range
+
+
+The transform function takes the pointer to the starting and ending position of a single input string and to the starting position of the output string.

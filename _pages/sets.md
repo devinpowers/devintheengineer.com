@@ -102,3 +102,96 @@ We can perform these on sets using generic Algorithms but for the Algorithms to 
 ![inserting an Image](/images/C++/sets/Page6.jpg)
 
 
+
+## other things to do with Sets
+
+
+    #include<iostream>
+    using std::cout; using std::endl;
+    #include<set>
+    using std::set;
+    #include<vector>
+    using std::vector;
+    #include<iterator>
+    using std::ostream_iterator;
+    #include<algorithm>
+    using std::set_union; using std::set_intersection;
+    using std::set_difference;
+    using std::set_symmetric_difference;
+    using std::sort; using std::find;
+
+    int main (){
+
+        // Regular sets get sorted automatically in C++
+        set<long> set1 = {5,3,1,4,2};
+        set<long> set2 = {1,8,3,5,9};
+
+        //print our set
+        cout << "Set 1: ";
+        for (auto element : set1 )
+        {
+            cout << element << ", ";
+        }
+        cout << endl;
+
+        cout << "Set 2: ";
+        for (auto element : set2)
+        {
+            cout << element << ", ";
+        }
+        cout << endl;
+    
+    }
+
+Output
+
+    Set 1: 1, 2, 3, 4, 5, 
+    Set 2: 1, 3, 5, 8, 9,
+
+
+
+### Using the .find() algorithm on a Set
+
+
+    #include<iostream>
+    using std::cout; using std::endl;
+    #include<set>
+    using std::set;
+    #include<vector>
+    using std::vector;
+    #include<iterator>
+    using std::ostream_iterator;
+    #include<algorithm>
+    using std::set_union; using std::set_intersection;
+    using std::set_difference;
+    using std::set_symmetric_difference;
+    using std::sort; using std::find;
+
+    int main (){
+
+        // Regular sets get sorted automatically in C++
+        set<long> set1 = {5,3,1,4,2,6};   
+        set<long> set2 = {1,8,3,5,9};
+
+        set<long>::iterator iter, st;
+
+        long search_for = 4;
+
+        // iterator points to a position where 4 is
+        iter = find(set1.begin(), set1.end(), search_for);
+
+        cout << "The elements in the Set that come after " << search_for << " are: ";
+        for (  st = iter; st != set1.end(); st++)
+        {
+            cout << *st << " ";
+        }
+        cout << endl;
+
+        
+    }
+
+Output
+
+    The elements in the Set that come after 4 are: 4 5 6 
+
+
