@@ -8,6 +8,14 @@ header:
   image: "/images/tower3.jpeg"
   
 ---
+#### Different Categories of Algorithms
+
+- Non-modifying
+- Modifying
+- Removing (elements)
+- Mutating (elements)
+    - Sorting (elements order changes)
+- Operation on sorted collections
 
 
 ### Accumulate
