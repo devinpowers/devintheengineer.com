@@ -187,4 +187,64 @@ Output
     The elements in the Set that come after 4 are: 4 5 6 
 
 
-## More
+
+Can also use the method of find() in sort by using this
+
+    iter = set1.find(search_for); 
+
+## Set Union, Set intersection, and Symmetric Difference
+
+
+    #include<iostream>
+    using std::cout; using std::endl;
+    #include<set>
+    using std::set;
+    #include<algorithm>
+    using std::find;
+    using std::set_union; using std::set_intersection;
+    using std::set_difference;
+    using std::set_symmetric_difference;
+    using std::sort;
+    #include<vector>
+    using std::vector;
+    #include<iterator>
+    using std::ostream_iterator;
+
+
+    int main (){
+
+        ostream_iterator<long> os_itr (cout, ", ");
+
+        // Regular sets get sorted automatically in C++
+        set<long> set1 = {5,3,1,4,2,6};   
+        set<long> set2 = {1,8,3,5,9};
+
+        cout << "Union: " << endl;
+
+        set_union(set1.begin(), set1.end(), set2.begin(), set2.end(), os_itr);
+
+        cout << '\n';
+
+        cout << "Intersection: " << endl;
+
+        set_intersection(set1.begin(), set1.end(), set2.begin(), set2.end(), os_itr);
+
+        cout <<'\n';
+
+        cout << "Symmetric Difference: " << endl;
+        
+        set_symmetric_difference(set1.begin(), set1.end(), set2.begin(), set2.end(), os_itr);
+
+        cout << endl;
+
+    }
+
+Output
+
+    Union: 
+    1, 2, 3, 4, 5, 6, 8, 9, 
+    Intersection: 
+    1, 3, 5, 
+    Symmetric Difference: 
+    2, 4, 6, 8, 9, 
+
