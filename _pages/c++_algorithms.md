@@ -358,6 +358,99 @@ Output
 
 ### transform
 
+- transforms range
+
+#### Unary Operation
+
+
+    #include<iostream>
+    using std::cout; using std::endl;
+    #include <vector> 
+    using std::vector;
+    #include<string>
+    using std::string;
+    #include <algorithm> 
+    using std::toupper;
+    using std::transform;
+    #include<iterator>
+    using std::ostream_iterator;
+
+    char upper(char ch)
+    {
+        return toupper(ch);
+    }
+
+    int main() 
+    { 
+        string s = "Devin Powers ";
+
+        transform(s.begin(), s.end(), ostream_iterator<char> (cout, "\n"), upper);
+
+    } 
+
+Output
+
+    D
+    E
+    V
+    I
+    N
+    
+    P
+    O
+    W
+    E
+    R
+    S
+
+
+Another Example
+
+
+
+    #include<iostream>
+    using std::cout; using std::endl;
+    #include <vector> 
+    using std::vector;
+    #include<string>
+    using std::string;
+    #include <algorithm> 
+    using std::toupper;
+    using std::transform;
+
+    int increment( int l)
+    {
+        return l+9;
+    }
+
+    int main() 
+    { 
+        vector<int> vec = {1,2,4,5,6};
+
+        transform( vec.begin(), vec.end(), vec.begin(), increment);
+
+        // print Vector!!
+
+        for ( auto element : vec )
+        {
+            cout << element << ", ";
+        }
+    }
+
+Output
+
+
+    10, 11, 13, 14, 15, 
+
+
+#### Binary Operation
+
+
+
+
+# Sorting Algorithms
 
 
 ### sort
+
+- Sorts elements in range
