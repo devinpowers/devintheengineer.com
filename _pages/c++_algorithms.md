@@ -11,11 +11,15 @@ header:
 #### Different Categories of Algorithms
 
 - Non-modifying
+    - Examples: find, find_if, search
 - Modifying
+    - Examples: copy, transform
 - Removing (elements)
 - Mutating (elements)
     - Sorting (elements order changes)
+    - Examples: sort
 - Operation on sorted collections
+    - Examples: set_union, set_intersections, set_difference
 
 
 ### Accumulate
