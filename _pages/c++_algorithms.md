@@ -26,7 +26,7 @@ header:
     - Examples: set_union, set_intersections, set_difference
 
 
- # Non-modifying
+# Non-modifying
 
 ### Accumulate
 
@@ -63,6 +63,7 @@ header:
     }
 
 Output
+
     The accumulation of vector 'Vect' is: 22
     Adding a string up: HellomynameisDevin!
 
@@ -354,5 +355,9 @@ Output
 
     Hello my name is Devin 
 
+
 ### transform
 
+
+
+### sort
