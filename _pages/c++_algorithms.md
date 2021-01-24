@@ -26,6 +26,8 @@ header:
     - Examples: set_union, set_intersections, set_difference
 
 
+ # Non-modifying
+
 ### Accumulate
 
 ![inserting an Image](/images/C++/algorithms/Page1.jpg)
@@ -109,7 +111,7 @@ Output
 
 
 
-## Find Algorithm
+### Find Algorithm
 
 
 
@@ -157,4 +159,50 @@ Output
 
 
 
-## Other stuff
+### Using find_if Algorithm
+
+
+    #include<iostream>
+    using std::cout; using std::endl; using std::boolalpha;
+    #include <vector> 
+    using std::vector;
+    #include <algorithm> 
+    using std::find_if;
+
+
+    bool IsOdd( int i)
+    {
+        return i % 2;
+    }
+
+    int main () 
+    {
+        vector<int> vec { 10, 20, 30, 40, 55};
+
+        vector<int>::iterator it;
+
+        it = find_if(vec.begin(), vec.end(), IsOdd);
+
+        cout << "The first odd value is: " << *it << endl;
+    }
+
+Output
+
+    The first odd value is: 55
+
+
+### Serach Algorithm
+
+
+- add later
+
+
+# Modifying Algorithms
+
+
+### copy
+
+
+
+### transform
+
