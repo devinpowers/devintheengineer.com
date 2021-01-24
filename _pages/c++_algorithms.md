@@ -359,6 +359,9 @@ Output
 ### transform
 
 - transforms range
+![inserting an Image](/images/C++/algorithms/transform1.jpg)
+
+
 
 #### Unary Operation
 
@@ -406,6 +409,8 @@ Output
 
 Another Example
 
+![inserting an Image](/images/C++/algorithms/transform2.jpg)
+
 
 
     #include<iostream>
@@ -444,6 +449,9 @@ Output
 
 
 #### Binary Operation
+
+
+
 
 
 
