@@ -114,6 +114,9 @@ Output
 ### Find Algorithm
 
 
+![inserting an Image](/images/C++/algorithms/find.jpg)
+
+
 
     #include<iostream>
     using std::cout; using std::endl;
@@ -162,6 +165,8 @@ Output
 ### Using find_if Algorithm
 
 
+![inserting an Image](/images/C++/algorithms/find_if.jpg)
+
     #include<iostream>
     using std::cout; using std::endl; using std::boolalpha;
     #include <vector> 
@@ -201,6 +206,9 @@ Output
 
 
 ### copy
+
+![inserting an Image](/images/C++/algorithms/copy.jpg)
+
 
 
     #include<iostream>
@@ -248,6 +256,10 @@ Output
 
 ## back_inserter for copying a Vector
 
+![inserting an Image](/images/C++/algorithms/back.jpg)
+
+
+
     #include<iostream>
     using std::cout; using std::endl; using std::boolalpha;
     #include <vector> 
@@ -278,6 +290,9 @@ Output
 
 
 ### Stream Iterator (ostream_iterator)
+
+![inserting an Image](/images/C++/algorithms/ostream.jpg)
+
 
 
     #include<iostream>
