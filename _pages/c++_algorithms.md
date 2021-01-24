@@ -203,6 +203,56 @@ Output
 ### copy
 
 
+    #include<iostream>
+    using std::cout; using std::endl; using std::boolalpha;
+    #include <vector> 
+    using std::vector;
+    #include <algorithm> 
+    using std::copy;
+
+    int main() 
+    { 
+    vector<int> v1 = { 1, 8, 2, 3, 1, 3, 10 };
+        
+    vector<int> v2(7);
+        
+    copy(v1.begin(), v1.end(), v2.begin());
+        
+    // printing new vector
+    cout << "The new vector elements entered using copy() : ";
+    for(int i = 0; i < v2.size(); i++)
+    {
+        cout << v2[i] << " ";
+    }
+    cout << endl;
+
+    } 
+
+Output
+
+    The new vector elements entered using copy() : 1 8 2 3 1 3 10 
+
+
+
+## Special Iterators!
+
+- The Issue with Copy algorithm is that it requires that our destination container is large enough to hold what were copying. Theres two special kinds of iterators that allow us to get around this issue.
+    - Insert iterator
+    - Stream iterator
+
+### Insert Iterator
+
+- Depends on the container, a vector works best when we insert at the back
+- Lists, sets insert at a particular position
+
+
+
+
+### Stream Iterator
+
+
+
+
 
 ### transform
 
