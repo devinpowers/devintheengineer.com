@@ -21,7 +21,7 @@ header:
 - Mutating (elements)
     - Sorting (elements order changes)
     - Examples: sort
-    
+
 - Operation on sorted collections
     - Examples: set_union, set_intersections, set_difference
 
@@ -111,3 +111,50 @@ Output
 
 ## Find Algorithm
 
+
+
+    #include<iostream>
+    using std::cout; using std::endl;
+    #include <vector> 
+    using std::vector;
+    #include <algorithm> 
+    using std::find;
+
+    int main () 
+    { 
+        vector<int> vec { 10, 20, 30, 40 }; 
+        
+        // Print Original Vector 
+    cout << "Original vector :"; 
+        for (int i=0; i<vec.size(); i++) 
+        {
+            cout << " " << vec[i]; 
+        }
+            
+        cout << "\n"; 
+        
+        int search = 40; 
+        // Iterator used to store the position of the searched element
+        vector<int>::iterator it; 
+        
+        // find function call 
+        it = find (vec.begin(), vec.end(), search); 
+
+        if (it != vec.end()) 
+        { 
+            cout << "Element " << search <<" found at position : " ; 
+            cout << it - vec.begin() << " (counting from zero) \n" ; 
+        } 
+        else
+            cout << "Element not found.\n\n"; 
+            
+    } 
+
+Output
+
+    Original vector : 10 20 30 40
+    Element 40 found at position : 3 (counting from zero) 
+
+
+
+## Other stuff
