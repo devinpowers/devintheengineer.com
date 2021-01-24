@@ -118,9 +118,9 @@ and some other stuff!!!!
 
 
 
-### Object Oriented Programming in C++
 
-### Projects:
+
+## Projects:
 
 #### [Project One ](https://devintheengineer.com/C++/c++_project1)
 
