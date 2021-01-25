@@ -27,7 +27,7 @@ header:
 
 ## Advantages of Hash Tables
 
-- Speed
+- Speed!!!!!
 - Set of key-value pairs is fixed and known ahead of time, which reduces the average lookup cost
 
 
