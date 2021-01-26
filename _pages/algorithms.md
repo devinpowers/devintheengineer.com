@@ -9,13 +9,15 @@ header:
   
 ---
 
-Learning Data Structures and Algorithms is an important in becoming a Software Engineer, they allow you to solve challenging problems.
+Learning Data Structures and Algorithms is important in Computer Science because they allow you to solve challenging problems.
 
 Data Structures and Algorithms Resources that I have used:
 
-1. Data Structures & Algorithms in Python - Goodrich
-2. [CS Dojo youtube videos](https://www.youtube.com/playlist?list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H)
-3. [mycodeschool youtube channel](https://www.youtube.com/user/mycodeschool)
+1. Data Structures & Algorithms in Python Book - Goodrich
+2. The Algorithm Design Manual - Steven Skiena
+3. [CS Dojo youtube videos](https://www.youtube.com/playlist?list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H)
+4. [mycodeschool youtube channel](https://www.youtube.com/user/mycodeschool)
+
 
 Link to my GitHub Repository:
 
