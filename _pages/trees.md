@@ -1,13 +1,18 @@
 ---
 layout: archive
 permalink: /algorithms/trees
-title: "Trees"
+title: "Tree Data Structures"
 author_profile: true
 
 header:
   image: "/images/chicagotwo.jpeg"
   
 ---
+
+
+
+
+
 
 # General Trees
 
