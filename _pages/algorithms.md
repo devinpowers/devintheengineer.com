@@ -65,6 +65,9 @@ Project using Sorting Algorithms coming soon!
 
 ![inserting an Image](/images/array.jpg)
 
+[Intro to Arrays](https://devintheengineer.com/algorithms/array)
+
+
 - The Simplest Data Structure
 
 ## Stacks and Queues
