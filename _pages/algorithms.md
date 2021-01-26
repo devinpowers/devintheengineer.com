@@ -24,9 +24,9 @@ Link to my GitHub Repository:
 
 # Algorithm Analysis
 
-- Here I will post Notes on Big O Notation
-
 ![bigO](https://user-images.githubusercontent.com/50432490/105179820-c85ea580-5af7-11eb-8c06-6b78e12a552f.gif)
+
+[Big O Notation](https://devintheengineer.com/algorithms/big_O)
 
 
 # Algorithms:
