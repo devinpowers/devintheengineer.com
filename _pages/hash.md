@@ -33,6 +33,8 @@ header:
 
 ## Drawbacks
 
+- Inefficient when there are many collisions
+
 
 
 # Example of a Hash Table in Python
