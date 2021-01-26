@@ -53,15 +53,7 @@ Link to my GitHub Repository:
 
 
 # Data Structures:
-- Arrays
 
-- Stacks
-
-- Queues and Deques
-
-- Linked Lists (Doubly, Circular)
-
-- Trees 
 
 ## Arrays:
 
@@ -69,7 +61,7 @@ Link to my GitHub Repository:
 
 - The Simplest Data Structure
 
-## Stacks, Queues, and Deques
+## Stacks and Queues
 
 ![inserting an Image](/images/stack.jpg)
 
@@ -79,6 +71,8 @@ Link to my GitHub Repository:
 
 [Queues](https://devintheengineer.com/algorithms/Queues)
 - Deques
+
+- Circular Queue
 
 ## Linked Lists
 
@@ -115,6 +109,8 @@ Includes:
 
 - Max Heap, Min Heap, Heap Sort
 
+- Coming Soon: Heap Project
+
 
 ## Maps and Hash Tables
 
@@ -124,8 +120,10 @@ Includes:
 
 - Hash Tables
 
-- Includes Hash Project
+- Includes Hash Project (in progress)
 
+
+# Coming Soon:
 
 ## Graphs
 
@@ -140,9 +138,14 @@ Includes:
   - Djikstra's Algorithm
   - Warshall's Algorithm
 
+- Includes Graph Project
+
 
 ## Dynamic Programming
 
 - Greedy Algorithm
+
+- Includes Dynamic Programming Project
+
 
 
