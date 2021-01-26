@@ -10,7 +10,15 @@ header:
 ---
 
 
-Analyzing the Array- Based Stack Implementation
+
+![inserting an Image](/images/stacks/Page1.jpg)
+![inserting an Image](/images/stacks/Page2.jpg)
+![inserting an Image](/images/stacks/Page3.jpg)
+![inserting an Image](/images/stacks/Page4.jpg)
+
+
+
+Analyzing the Array - Based Stack Implementation
 
 | Operation  | Running Time |
 |------------|--------------|
@@ -80,9 +88,6 @@ Code:
 
 
 ## Implementing  a Stack using an Linked List:
-
-Pros:
-Cons:
 
 
 Code:
