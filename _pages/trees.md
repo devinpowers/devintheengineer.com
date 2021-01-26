@@ -65,7 +65,7 @@ Trees are a non-linear Data Structure, compared to arrays, linked lists, stacks 
 
 [General Properties of Trees](https://devintheengineer.com/algorithms/trees/general_tree)
 
- - Including the height and depth
+ - Including the Height and Depth of a Tree
 
 
  
@@ -144,6 +144,8 @@ Time Complexity of Different Operations in a Binary Tree
 
 [Deletion of a Node in a Regular Binary Tree](https://devintheengineer.com/algorithms/trees/deletion_regular_binary_tree)
 
+
+
 ### Implementing a Binary Tree
 
 Coming Soon:
@@ -160,7 +162,7 @@ Binary Tree from an Linked list
 
 ![inserting an Image](/images/tree/bst.jpg)
 
-A BST is a special form of a Binary Tree data structure where each node has a comparable value, and smaller valued childern attached to left and larger valued childern attached to the right
+A BST is a SPECIAL FORM of a Binary Tree data structure where each node has a comparable value, and smaller valued childern attached to left and larger valued childern attached to the right
 
 ## Pros and Cons of a Binary Search Tree
 
@@ -172,17 +174,7 @@ Pros:
 Cons:
 - Expensive because of their creation and management
 
-[Binary Search Tree](https://devintheengineer.com/algorithms/trees/bst)
-
-Time Complexity of Different Operations of a Binary Search Tree
-
-| Operation | Average  | Worst Case |
-|-----------|----------|------------|
-| Space     | O(n)     | O(n)       |
-| Search    | O(log n) | O(n)       |
-| Delete    | O(log n) | O(n)       |
-| Insertion | O(log n) | O(n)       |
-
+[Binary Search Tree Introduction](https://devintheengineer.com/algorithms/trees/bst)
 
 ### Operations on Binary Search Tree:
 
@@ -197,8 +189,19 @@ Time Complexity of Different Operations of a Binary Search Tree
 [Height of Binary Search Tree](https://devintheengineer.com/algorithms/trees/bst_height)
 
 
+Time Complexity of Different Operations of a Binary Search Tree
+
+| Operation | Average  | Worst Case |
+|-----------|----------|------------|
+| Space     | O(n)     | O(n)       |
+| Search    | O(log n) | O(n)       |
+| Delete    | O(log n) | O(n)       |
+| Insertion | O(log n) | O(n)       |
+
+
 
 ### Coming Soon:
+
 
 # Rebalancing a Binary Search Tree by Rotation
 
@@ -215,6 +218,7 @@ Time Complexity of Different Operations of a Binary Search Tree
     - Right Right Rotation
 
 
+
 ## AVL Tree
 
 [AVL Tree Introduction](https://devintheengineer.com/algorithms/trees/avl_intro)
@@ -224,6 +228,8 @@ Time Complexity of Different Operations of a Binary Search Tree
 [AVL Tree Insertion](https://devintheengineer.com/algorithms/trees/avl_insertion)
 
 [AVL Tree Deletion](https://devintheengineer.com/algorithms/trees/avl_deletion)
+
+- AVL Tree Search
 
 Time Complexity of Different Operations of a AVL Tree
 
@@ -236,12 +242,10 @@ Time Complexity of Different Operations of a AVL Tree
 
 
 
-# Coming Soon
+# Coming Soon ( End of 2021)
 
 
 ## Red-Black Tree
-
-- INSERT Red-Black Tree picture here
 
 - Red-Black Tree Introduction
 
@@ -250,6 +254,8 @@ Time Complexity of Different Operations of a AVL Tree
 - Red-Black Tree Insertion
 
 - Red-Black Tree Deletion
+
+- Red-Black Tree Search
 
 Time Complexity of Different Operations of a Red-Black Tree
 
@@ -263,8 +269,6 @@ Time Complexity of Different Operations of a Red-Black Tree
 
 ## Splay Tree
 
-- INSERT Splay TRee Picture here
-
 - Splay Tree Introduction
 
 ### Operations on a Splay Tree
@@ -272,6 +276,8 @@ Time Complexity of Different Operations of a Red-Black Tree
 - Splay Tree Insertion
 
 - Splay Tree Deletion
+
+- Splay Tree Search
 
 
 Time Complexity of Different Operations of a Splay Tree
@@ -286,6 +292,16 @@ Time Complexity of Different Operations of a Splay Tree
 
 ## Treap
 
+- Treap Tree Introduction
+
+## Operations on a Treap
+
+- Treap Tree Insertion
+
+- Treap Tree Deletion
+
+- Treap Tree Search
+
 Time Complexity of Different Operations of a Treap
 
 | Operation | Average  | Worst Case |
@@ -296,6 +312,16 @@ Time Complexity of Different Operations of a Treap
 | Insertion | O(log n) | O(n)       |
 
 ## B-Tree
+
+- B-Tree Introduction
+
+## Operations on a B-Tree
+
+- B-Tree Insertion
+
+- B-Tree Deletion
+
+- B-Tree Search
 
 Time Complexity of Different Operations of a B-Tree
 
