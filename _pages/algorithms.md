@@ -31,7 +31,7 @@ Link to my GitHub Repository:
 
 # Algorithms:
 
-## Sorting Algorithms
+### Sorting Algorithms
 
 [Insertion Sort](https://devintheengineer.com/algorithms/insertion)
 
@@ -41,6 +41,10 @@ Link to my GitHub Repository:
 
 [Bubble Sort](https://devintheengineer.com/algorithms/bubble)
 
+
+Project using Sorting Algorithms coming soon!
+
+
 ### Sorting Algorithm Complexity
 
 | Algorithm      | Running Time (Average) | Running Time (Worst) | Space Complexity (Worst) |
@@ -48,7 +52,7 @@ Link to my GitHub Repository:
 | QuickSort      | (n log(n))             | O (n^2)              | O(n log(n))              |
 | Insertion Sort | (n)                    | O (n^2)              | O(1)                     |
 | Merge Sort     | (n log(n))             | O(n log(n))          | O(n)                     |
-
+| Bubble Sort    | (n)                    | O (n^2)              | O(1)                     |
 
 
 
