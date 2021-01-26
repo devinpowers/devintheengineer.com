@@ -40,6 +40,17 @@ header:
 
 # Example of a Hash Table in Python
 
+![inserting an Image](/images/hashing/example/hash1.jpg)
+![inserting an Image](/images/hashing/example/hash2.jpg)
+![inserting an Image](/images/hashing/example/hash3.jpg)
+![inserting an Image](/images/hashing/example/hash4.jpg)
+![inserting an Image](/images/hashing/example/hash5.jpg)
+![inserting an Image](/images/hashing/example/hash6.jpg)
+![inserting an Image](/images/hashing/example/hash7.jpg)
+
+
+
+
     class Node:
         '''Hash Table node, part of Linked List'''
         '''each Bucket will contain a linked list of nodes containing
