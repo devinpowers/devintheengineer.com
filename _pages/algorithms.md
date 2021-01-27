@@ -109,16 +109,26 @@ Includes:
 
   - AVL Tree, Red-Black Tree, Splay Tree, Treap, B -Tree
 
-## Heaps (more Trees)
+## Heaps
 
+- Special Tree-Based data structure
+- Usually represented as an Array
 
 [Heap Data Structure](https://devintheengineer.com/algorithms/heaps)
 
-- Priority Queues
+- Two Types of Heaps
 
-- Max Heap, Min Heap, Heap Sort
+  1. Min Heap
+  2. Max Heap
 
-- Coming Soon: Heap Project
+Different Applications of Heaps:
+
+  1. Heap Sort
+    - One of the best sorting algorithms!
+
+  2. Priority Queues
+
+  3. Graph Algorithms
 
 
 ## Maps and Hash Tables
