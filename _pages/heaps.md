@@ -9,6 +9,27 @@ header:
   
 ---
 
+What is a Heap?
+
+
+  - Notes on heaps here
+
+
+Two Types of Heaps
+
+
+[Min Heap ](https://devintheengineer.com/algorithms/heaps/min_heap)
+
+
+[Max Heap ](https://devintheengineer.com/algorithms/heaps/max_heap)
+
+
+### Different Applications of Heaps:
+
+1. Heap Sort
+
+2. Priority Queues
+
 
 Priority Queues
 
@@ -31,11 +52,4 @@ An airplane may be full, and in-order to decided who on the waiting list is next
 ![inserting an Image](/images/heaps/Page7.jpg)
 
 
-
-[Min Heap ](https://devintheengineer.com/algorithms/heaps/min_heap)
-
-
-[Max Heap ](https://devintheengineer.com/algorithms/heaps/max_heap)
-
-Heap Sort
 
