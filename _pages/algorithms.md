@@ -168,3 +168,6 @@ Different Applications of Heaps:
 
 
 
+## Extra 
+
+[Iterators and Generators in Python](https://devintheengineer.com/algorithms/iterators_python)
