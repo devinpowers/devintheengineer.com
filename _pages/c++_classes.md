@@ -10,7 +10,26 @@ header:
 ---
 
 
-## Basic Class 
+## Object-Oriented Programming
+
+- OOP is a view of how both data and functions that work with that data
+
+- Organization of OPP is called a class (or struct)
+
+A class contains:
+    1. Data
+    2. Functions (or methods) that operate on that data
+
+
+OOP Principles
+
+1. General Principles
+
+- Composition
+- Abstraction
+- Encapsulation
+- Inheritance
+- Polymorphism
 
 
 Here is a basic Class
