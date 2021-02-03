@@ -146,6 +146,8 @@ Different Applications of Heaps:
 
 ## Graphs
 
+![inserting an Image](/images/graph.jpg)
+
 [Introduction to Graphs](https://devintheengineer.com/algorithms/intro_graph)
 
 - Graph Traversals
@@ -174,4 +176,4 @@ Different Applications of Heaps:
 
 [Iterators and Generators in Python](https://devintheengineer.com/algorithms/iterators_python)
 
-I;;
+
