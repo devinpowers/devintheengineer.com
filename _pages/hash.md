@@ -30,6 +30,8 @@ header:
 - Speed!!!!!
 - Set of key-value pairs is fixed and known ahead of time, which reduces the average lookup cost
 
+![](http://bitcoinmacroeconomics.com/btc-casinos-gambling/)
+
 
 ## Drawbacks
 
