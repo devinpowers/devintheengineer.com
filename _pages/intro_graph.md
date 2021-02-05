@@ -25,10 +25,10 @@ header:
 ![inserting an Image](/images/Graphs/intro/Page14.jpg)
 
 
-![inserting an Image](/images/Graphs/extra/Page1.jpg)
-![inserting an Image](/images/Graphs/extra/Page2.jpg)
-![inserting an Image](/images/Graphs/extra/Page3.jpg)
-![inserting an Image](/images/Graphs/extra/Page4.jpg)
+![inserting an Image](/images/Graphs/other/Page1.jpg)
+![inserting an Image](/images/Graphs/other/Page2.jpg)
+![inserting an Image](/images/Graphs/other/Page3.jpg)
+![inserting an Image](/images/Graphs/other/Page4.jpg)
 
 
 
