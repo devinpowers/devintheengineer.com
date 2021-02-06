@@ -150,6 +150,10 @@ Different Applications of Heaps:
 
 [Introduction to Graphs](https://devintheengineer.com/algorithms/intro_graph)
 
+- Graph Representation 
+
+  - List and Matrix Representation
+
 - Graph Traversals
     - DFS
     - BFS
