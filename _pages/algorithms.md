@@ -142,7 +142,7 @@ Different Applications of Heaps:
 - Includes Hash Project (in progress)
 
 
-# Coming Soon:
+
 
 ## Graphs
 
@@ -167,6 +167,7 @@ Different Applications of Heaps:
 
 - Includes Graph Project
 
+# Coming Soon:
 
 ## Dynamic Programming
 
