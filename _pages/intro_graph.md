@@ -8,6 +8,12 @@ header:
   image: "/images/chicagotwo.jpeg"
 ---
 
+[Using a List to Represent a Graph](https://devintheengineer.com/algorithms/intro_graph/adj_list)
+
+[Using a Matrix to Represent a Graph](https://devintheengineer.com/algorithms/intro_graph/adj_matrix)
+
+
+
 ## Intro to Graphs:
 
 
