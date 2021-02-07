@@ -9,24 +9,27 @@ header:
 ---
 
 
-def dfs(graph,start):
-    visited = set()
-    stack = [start]
-    
-    while stack:
-        
-        vertex = stack.pop()
-        
-        if vertex not in visited:
-            visited.add(vertex) 
-            stack.extend(graph[vertex]-visited)
-            
-    return visited
+
+Example Code:
 
 
-# dfs with graph and D which is the starting point
+  def dfs(graph,start):
+      visited = set()
+      stack = [start]
+      
+      while stack:
+          
+          vertex = stack.pop()
+          
+          if vertex not in visited:
+              visited.add(vertex) 
+              stack.extend(graph[vertex]-visited)
+              
+      return visited
 
-vis = dfs(graph,'D')
-print(vis)
+
+
+  vis = dfs(graph,'D')
+  print(vis)
 
 
