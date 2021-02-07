@@ -150,9 +150,17 @@ Different Applications of Heaps:
 
 [Introduction to Graphs](https://devintheengineer.com/algorithms/intro_graph)
 
+- Properties of Graphs
+  
+  - Self-Loop and Multi-Edges
+  - Walk, Path, Trail
+  - Connected and Strongly Connected Graphs
+  - Closed Walk, Cycle, Acyclic Graph
+
 - Graph Representation 
 
   - List and Matrix Representation
+
 
 - Graph Traversals
     - DFS
