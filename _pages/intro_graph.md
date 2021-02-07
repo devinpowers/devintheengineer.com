@@ -39,4 +39,4 @@ header:
 
 
 ### Breadth First Search
-[Breadth First Search](https://devintheengineer.com/algorithms/intro_graph/graphs_bfs)
+[Breadth First Search](https://devintheengineer.com/algorithms/intro_graph/graph_bfs)
