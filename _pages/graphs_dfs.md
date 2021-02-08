@@ -19,56 +19,56 @@ Example Code, heres Code of a Graph that we will use in our DFS Algorithm
 
 ```python
     
-    class Graph:
+class Graph:
+    
+    def __init__(self, Nodes, is_directed = False):
+        self.nodes = Nodes
+        self.adj_list = {}
         
-        def __init__(self, Nodes, is_directed = False):
-            self.nodes = Nodes
-            self.adj_list = {}
-            
-            self.is_directed = is_directed
-            
-            for node in self.nodes:
-                self.adj_list[node] = []
-                
-        def add_edge(self, u, v):
-            self.adj_list[u].append(v)
-            
-            if not self.is_directed:
-                
-                self.adj_list[v].append(u)
-            
+        self.is_directed = is_directed
         
-        def degree(self,node):
-            '''Total number of edges coming out a given node'''
-            deg = len(self.adj_list[node])
-            return deg
+        for node in self.nodes:
+            self.adj_list[node] = []
+            
+    def add_edge(self, u, v):
+        self.adj_list[u].append(v)
         
-        def print_adj_list(self):
+        if not self.is_directed:
             
-            for node in self.nodes:
-                print(node, "->", self.adj_list[node])
+            self.adj_list[v].append(u)
         
-        def __getitem__(self, node):
+    
+    def degree(self,node):
+        '''Total number of edges coming out a given node'''
+        deg = len(self.adj_list[node])
+        return deg
+    
+    def print_adj_list(self):
+        
+        for node in self.nodes:
+            print(node, "->", self.adj_list[node])
+    
+    def __getitem__(self, node):
+        
+        """retrives items from out Node/vertex"""
+        
+        return  self.adj_list[node]
             
-            """retrives items from out Node/vertex"""
-            
-            return  self.adj_list[node]
-                
 
-    all_edges = [
-        
-        ("A","B"),("A","C"),("B","D"),("C","D"),("C","E"),("D","E")
-    ]
-    nodes = ["A","B","C","D","E"]
+all_edges = [
+    
+    ("A","B"),("A","C"),("B","D"),("C","D"),("C","E"),("D","E")
+]
+nodes = ["A","B","C","D","E"]
 
-    graph1 = Graph(nodes)
-    #graph1.print_adj_list()
+graph1 = Graph(nodes)
+#graph1.print_adj_list()
 
-    for u,v in all_edges:
-        graph1.add_edge(u,v)
+for u,v in all_edges:
+    graph1.add_edge(u,v)
 
-    ##graph.add_edge("A","B")
-    graph1.print_adj_list()
+##graph.add_edge("A","B")
+graph1.print_adj_list()
 
 ```
 
@@ -77,25 +77,25 @@ Heres Depth First Search Algorithm
 
 
 ```python
-    visited = []
+visited = []
 
-    def dfs(graph, node):
+def dfs(graph, node):
+    
+    if node not in visited:
         
-        if node not in visited:
+        visited.append(node)
+        
+        for neighbor in graph[node]:
             
-            visited.append(node)
+            dfs(graph,neighbor)
             
-            for neighbor in graph[node]:
-                
-                dfs(graph,neighbor)
-                
-        return visited
+    return visited
 
 
-    dfs(graph1, "A")
+dfs(graph1, "A")
 
 
-    print("Nodes Visted: ", visited)
+print("Nodes Visted: ", visited)
 ```
 
 
