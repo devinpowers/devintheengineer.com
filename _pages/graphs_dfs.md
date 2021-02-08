@@ -10,7 +10,7 @@ header:
 
 
 
-Example Code:
+Example Code, heres Code of a Graph that we will use in our DFS Algorithm
 
 
     class Graph:
@@ -66,7 +66,12 @@ Example Code:
 
 
 
-    visited = []
+
+Heres Depth First Search Algorithm
+
+
+
+   visited = []
 
     def dfs(graph, node):
         
