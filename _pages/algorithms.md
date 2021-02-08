@@ -111,6 +111,8 @@ Includes:
 
 ## Heaps
 
+![inserting an Image](/images/heap.jpg)
+
 - Special Tree-Based data structure
 - Usually represented as an Array
 
@@ -189,5 +191,4 @@ Different Applications of Heaps:
 ## Extra 
 
 [Iterators and Generators in Python](https://devintheengineer.com/algorithms/iterators_python)
-
 
