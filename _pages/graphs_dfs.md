@@ -15,11 +15,10 @@ header:
 ![inserting an Image](/images/Graphs/dfs/dfs4.jpg)
 ![inserting an Image](/images/Graphs/dfs/dfs5.jpg)
 
-
-
 Example Code, heres Code of a Graph that we will use in our DFS Algorithm
 
-
+```python
+    
     class Graph:
         
         def __init__(self, Nodes, is_directed = False):
@@ -71,13 +70,13 @@ Example Code, heres Code of a Graph that we will use in our DFS Algorithm
     ##graph.add_edge("A","B")
     graph1.print_adj_list()
 
-
+```
 
 
 Heres Depth First Search Algorithm
 
 
-
+```python
     visited = []
 
     def dfs(graph, node):
@@ -97,6 +96,7 @@ Heres Depth First Search Algorithm
 
 
     print("Nodes Visted: ", visited)
+```
 
 
 Output:
