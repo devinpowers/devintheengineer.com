@@ -13,23 +13,36 @@ header:
 Example Code:
 
 
-    def dfs(graph,start):
-        visited = set()
-        stack = [start]
+    graph1 = {
+        'A' : ['B','S'],
+        'B' : ['A'],
+        'C' : ['D','E','F','S'],
+        'D' : ['C'],
+        'E' : ['C','H'],
+        'F' : ['C','G'],
+        'G' : ['F','S'],
+        'H' : ['E','G'],
+        'S' : ['A','C','G']
+    }
+
+    visited = []
+
+    def dfs(graph, node):
         
-        while stack:
-            
-            vertex = stack.pop()
-            
-            if vertex not in visited:
-                visited.add(vertex) 
-                stack.extend(graph[vertex]-visited)
-                
+        if node not in visited:
+            visited.append(node)
+            for neighbor in graph[node]:
+                dfs(graph,neighbor)
         return visited
 
 
+    dfs(graph1, "E")
 
-    vis = dfs(graph,'D')
-    print(vis)
 
+Output
+
+    ['E', 'C', 'D', 'F', 'G', 'S', 'A', 'B', 'H']
+
+
+        
 
