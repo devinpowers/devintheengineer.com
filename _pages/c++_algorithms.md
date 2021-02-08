@@ -32,36 +32,36 @@ header:
 
 ![inserting an Image](/images/C++/algorithms/Page1.jpg)
 
-    
-    #include<iostream>
-    using std::cout; using std::endl; 
-    #include<vector>
-    using std::vector;
-    #include<string>
-    using std::string;
-    #include<numeric>
-    using std::accumulate;
-    #include<functional>
-    using std::multiplies; using std::minus; using std::plus;
+```cpp
+#include<iostream>
+using std::cout; using std::endl; 
+#include<vector>
+using std::vector;
+#include<string>
+using std::string;
+#include<numeric>
+using std::accumulate;
+#include<functional>
+using std::multiplies; using std::minus; using std::plus;
 
-    int main()
-    {
-        vector <int > vect_numbers ={ 1,2,3,4,5,6};
-        vector <string> vect_string = {"Hello", "my", "name", "is", "Devin!"};
+int main()
+{
+    vector <int > vect_numbers ={ 1,2,3,4,5,6};
+    vector <string> vect_string = {"Hello", "my", "name", "is", "Devin!"};
 
-        string output_string;
-        int output_numbers;
+    string output_string;
+    int output_numbers;
 
-        output_numbers = accumulate(vect_numbers.begin(), vect_numbers.end(), 0);
+    output_numbers = accumulate(vect_numbers.begin(), vect_numbers.end(), 0);
 
-        output_string = accumulate(vect_string.begin(), vect_string.end(), string(""));
+    output_string = accumulate(vect_string.begin(), vect_string.end(), string(""));
 
-        cout << "The accumulation of vector 'Vect' is: " <<  output_numbers << endl;
+    cout << "The accumulation of vector 'Vect' is: " <<  output_numbers << endl;
 
-        cout << "Adding a string up: " << output_string << endl;
+    cout << "Adding a string up: " << output_string << endl;
 
-    }
-
+}
+```
 Output
 
     The accumulation of vector 'Vect' is: 22
