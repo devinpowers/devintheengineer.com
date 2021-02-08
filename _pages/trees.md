@@ -20,51 +20,51 @@ header:
 
 Trees are a non-linear Data Structure, compared to arrays, linked lists, stacks and queues which are linear data strcutures
 
+```python
+class Node(object):
 
-    class Node(object):
+    def __init__(self, data):
+        self.data = data
+        self.children = []
 
-        def __init__(self, data):
-            self.data = data
-            self.children = []
+    def add_child(self, obj):
+        self.children.append(obj)
 
-        def add_child(self, obj):
-            self.children.append(obj)
+Root = Node(1)
 
-    Root = Node(1)
+Red = Node(2)
 
-    Red = Node(2)
+Yellow = Node(3)
 
-    Yellow = Node(3)
+Pink_1 = Node(4)
+Pink_2 = Node(5)
+Pink_3 = Node(6)
 
-    Pink_1 = Node(4)
-    Pink_2 = Node(5)
-    Pink_3 = Node(6)
+Brown_2 = Node(7)
 
-    Brown_2 = Node(7)
+Brown_1 = Node(8)
 
-    Brown_1 = Node(8)
+Green_1 = Node(9)
+Green_2 = Node(10)
 
-    Green_1 = Node(9)
-    Green_2 = Node(10)
+Blue = Node(11)
 
-    Blue = Node(11)
+Root.add_child(Red)
+Root.add_child(Yellow)
 
-    Root.add_child(Red)
-    Root.add_child(Yellow)
+Red.add_child(Pink_1)
+Red.add_child(Pink_2)
+Red.add_child(Pink_3)
 
-    Red.add_child(Pink_1)
-    Red.add_child(Pink_2)
-    Red.add_child(Pink_3)
+Yellow.add_child(Brown_1)
+Yellow.add_child(Brown_2)
 
-    Yellow.add_child(Brown_1)
-    Yellow.add_child(Brown_2)
+Pink_1.add_child(Green_1)
+Pink_1.add_child(Green_2)
 
-    Pink_1.add_child(Green_1)
-    Pink_1.add_child(Green_2)
+Brown_2.add_child(Blue)
+```
 
-    Brown_2.add_child(Blue)
-
-    
 
 
 
@@ -88,28 +88,28 @@ When we implement a binary tree each node has three attributes:
 - Left Child
 - Right Child.
 
+```python
+class Node(object):
 
-        class Node(object):
-        
-            def __init__(self, value):
-                self.value = value
-                self.left = None
-                self.right = None
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
 
 
-        class BinaryTree(object):
-        
-            def __init__(self, root):
-                self.root = Node(root)
+class BinaryTree(object):
 
-        tree = BinaryTree(1)
-        tree.root.left = Node(2)
-        tree.root.right = Node(3)
-        tree.root.left.left = Node(4)
-        tree.root.left.right = Node(5)
-        tree.root.right.left = Node(6)
-        tree.root.right.right = Node(7)
+    def __init__(self, root):
+        self.root = Node(root)
 
+tree = BinaryTree(1)
+tree.root.left = Node(2)
+tree.root.right = Node(3)
+tree.root.left.left = Node(4)
+tree.root.left.right = Node(5)
+tree.root.right.left = Node(6)
+tree.root.right.right = Node(7)
+```
 
 
 ## Binary Tree Traversals
