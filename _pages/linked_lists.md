@@ -20,19 +20,22 @@ header:
 
 A new Class "Node" is required to create the data structure:
 
-    class Node:
+```python
+class Node:
 
-        def __init__ (self,data):
-            self.data = data
-            self.next = None
+    def __init__ (self,data):
+        self.data = data
+        self.next = None
 
+```
 Once we have created a Node Class we can Create a Linked List Class:
 
-    class linkedList():
+```python
+class linkedList():
 
-        def __init__(self):
-            self.head = None
-
+    def __init__(self):
+        self.head = None
+```
 From here we can add functionality like insertion and deletion of Nodes, the following links on this page show the step-by-step processes of different functionality of a Singly Linked List.
 
 
@@ -84,13 +87,14 @@ Coming Soon:
 
 For a Doubly Linked List we need to adjust the Node Class to include Previous
 
-    class Node:
+```python
+class Node:
 
-        def __init__(self, data):
-            self.data = data 
-            self.next = None
-            self.prev = None
-
+    def __init__(self, data):
+        self.data = data 
+        self.next = None
+        self.prev = None
+```
 From here we can add functionality like we did in Single Linked List
 
 
