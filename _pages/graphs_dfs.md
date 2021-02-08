@@ -71,7 +71,7 @@ Heres Depth First Search Algorithm
 
 
 
-   visited = []
+    visited = []
 
     def dfs(graph, node):
         
