@@ -22,10 +22,17 @@ Applications:
 
 ![inserting an Image](/images/Graphs/bfs/bfs1.jpg)
 ![inserting an Image](/images/Graphs/bfs/bfs2.jpg)
+![inserting an Image](/images/Graphs/bfs/bfs4.jpg)
+![inserting an Image](/images/Graphs/bfs/bfs5.jpg)
+![inserting an Image](/images/Graphs/bfs/bfs6.jpg)
+![inserting an Image](/images/Graphs/bfs/bfs7.jpg)
+![inserting an Image](/images/Graphs/bfs/bfs8.jpg)
 
 
 
 Example Code:
+
+Queue Code:
 
 ```python
 class Queue:
@@ -51,8 +58,10 @@ class Queue:
         "Return True if the queue is empty"
         return self.size == 0
     
+```
 
-
+Graph Code:
+```python
 class Graph:
     
     def __init__(self, Nodes, is_directed = False):
@@ -88,6 +97,11 @@ class Graph:
         
         return  self.adj_list[node]
             
+```
+
+Lets created a Graph instance and the Vertex/Nodes and Edges
+
+```python
 all_edges = [
     
     ("A","B"),("A","D"),("B","F"),("D","F"),("F","C"),("F","E"), ("C","I"), ("I","L"),("L","J"),
@@ -96,16 +110,31 @@ all_edges = [
 nodes = ["A","B","C","D","E", "F","G", "H","I", "J", "K","L","M"]
 
 graph1 = Graph(nodes)
-#graph1.print_adj_list()
 
 for u,v in all_edges:
     graph1.add_edge(u,v)
 
-##graph.add_edge("A","B")
-#graph1.print_adj_list()
+graph1.print_adj_list()
+```
+
+Here is out Graph:
+
+```python
+
+A -> ['B', 'E', 'C']
+B -> ['A', 'E', 'D']
+C -> ['A', 'F', 'G']
+D -> ['E', 'B']
+E -> ['A', 'B', 'D']
+F -> ['C']
+G -> ['C']
+
+```
+
+Breadth-First Search
 
 
-
+```python
 def bfs(graph, start):
     # keep track of all visited nodes
     visited = []
@@ -131,8 +160,6 @@ def bfs(graph, start):
 
 print("Breadth First Search, Nodes visited: ")
 print(bfs(graph1,'A') )
-
-
 
 ```
 

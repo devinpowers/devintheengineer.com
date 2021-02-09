@@ -16,6 +16,14 @@ header:
 [Using a Matrix to Represent a Graph](https://devintheengineer.com/algorithms/intro_graph/adj_matrix)
 
 
+### Depth First Search
+
+[Depth First Search](https://devintheengineer.com/algorithms/intro_graph/graphs_dfs)
+
+
+### Breadth First Search
+[Breadth First Search](https://devintheengineer.com/algorithms/intro_graph/graph_bfs)
+
 
 ## Intro to Graphs:
 
@@ -32,11 +40,3 @@ header:
 
 
 
-
-### Depth First Search
-
-[Depth First Search](https://devintheengineer.com/algorithms/intro_graph/graphs_dfs)
-
-
-### Breadth First Search
-[Breadth First Search](https://devintheengineer.com/algorithms/intro_graph/graph_bfs)
