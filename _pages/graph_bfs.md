@@ -102,12 +102,12 @@ class Graph:
 Lets created a Graph instance and the Vertex/Nodes and Edges
 
 ```python
-all_edges = [
+all_edges = [ 
     
-    ("A","B"),("A","D"),("B","F"),("D","F"),("F","C"),("F","E"), ("C","I"), ("I","L"),("L","J"),
-    ("L","E"),("E","M"),("M","K"),("E","H"),("H","G"),("D","G"), ("G","E")
+    ("A","B"), ("A","E"), ("B","E"), ("E","D"), ("B","D"), ("A","C"), ("C","F"), ("C","G")
 ]
-nodes = ["A","B","C","D","E", "F","G", "H","I", "J", "K","L","M"]
+nodes = ["A","B","C","D","E", "F", "G"]
+
 
 graph1 = Graph(nodes)
 
@@ -169,7 +169,6 @@ Output:
 ```python
 
 Breadth First Search, Nodes visited: 
-['A', 'B', 'D', 'F', 'G', 'C', 'E', 'H', 'I', 'L', 'M', 'J', 'K']
-
+['A', 'B', 'E', 'C', 'D', 'F', 'G']
 ```
 
