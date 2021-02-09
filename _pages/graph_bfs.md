@@ -20,6 +20,10 @@ Applications:
 - Social Networking
 - Solving Puzzles and Games
 
+![inserting an Image](/images/Graphs/bfs/bfs1.jpg)
+![inserting an Image](/images/Graphs/bfs/bfs2.jpg)
+
+
 
 Example Code:
 
@@ -131,3 +135,14 @@ print(bfs(graph1,'A') )
 
 
 ```
+
+
+Output:
+
+```python
+
+Breadth First Search, Nodes visited: 
+['A', 'B', 'D', 'F', 'G', 'C', 'E', 'H', 'I', 'L', 'M', 'J', 'K']
+
+```
+
