@@ -22,6 +22,7 @@ Applications:
 
 ![inserting an Image](/images/Graphs/bfs/bfs1.jpg)
 ![inserting an Image](/images/Graphs/bfs/bfs2.jpg)
+![inserting an Image](/images/Graphs/bfs/bfs3.jpg)
 ![inserting an Image](/images/Graphs/bfs/bfs4.jpg)
 ![inserting an Image](/images/Graphs/bfs/bfs5.jpg)
 ![inserting an Image](/images/Graphs/bfs/bfs6.jpg)
