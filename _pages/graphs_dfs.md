@@ -14,6 +14,8 @@ header:
 ![inserting an Image](/images/Graphs/dfs/dfs3.jpg)
 ![inserting an Image](/images/Graphs/dfs/dfs4.jpg)
 ![inserting an Image](/images/Graphs/dfs/dfs5.jpg)
+![inserting an Image](/images/Graphs/dfs/dfs6.jpg)
+
 
 Example Code, heres Code of a Graph that we will use in our DFS Algorithm
 
