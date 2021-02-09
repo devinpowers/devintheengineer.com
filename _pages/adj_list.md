@@ -50,4 +50,32 @@ class Graph:
     
 ```
 
-          
+Create a Graph Instance, add Nodes, Edges, and print
+
+```python
+
+all_edges = [
+
+    ("A","B"),("A","C"),("B","D"),("C","D"),("C","E"),("D","E")
+]
+nodes = ["A","B","C","D","E"]
+
+
+graph1 = Graph(nodes)
+
+for u,v in all_edges:
+    graph1.add_edge(u,v)
+
+graph1.print_adj_list()
+
+```
+
+Output:
+
+```python
+A -> ['B', 'C']
+B -> ['A', 'D']
+C -> ['A', 'D', 'E']
+D -> ['B', 'C', 'E']
+E -> ['C', 'D']
+```
