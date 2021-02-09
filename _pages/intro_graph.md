@@ -24,6 +24,13 @@ header:
 ### Breadth First Search
 [Breadth First Search](https://devintheengineer.com/algorithms/intro_graph/graph_bfs)
 
+### Topological Sort
+
+### Shortest Paths:
+
+  ### Djikstra's Algorithm
+
+  ### Warshall's Algorithm
 
 ## Intro to Graphs:
 
