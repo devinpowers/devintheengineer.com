@@ -28,12 +28,13 @@ header:
 
 ### Shortest Paths:
 
-  ### Djikstra's Algorithm
+  - #### Djikstra's Algorithm
 
-  ### Warshall's Algorithm
+  - #### Warshall's Algorithm
 
+### Minimum Spanning Trees
 
-## Intro to Graphs:
+# Intro to Graphs:
 
 
 ![inserting an Image](/images/Graphs/intro/intro1.jpg)
