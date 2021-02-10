@@ -25,6 +25,7 @@ header:
 [Breadth First Search](https://devintheengineer.com/algorithms/intro_graph/graph_bfs)
 
 ### Topological Sort
+[Topological Sort](https://devintheengineer.com/algorithms/intro_graph/topological)
 
 ### Shortest Paths:
 
