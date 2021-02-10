@@ -13,6 +13,13 @@ header:
 
 ![inserting an Image](/images/Graphs/topo/top1.jpg)
 ![inserting an Image](/images/Graphs/topo/top2.jpg)
+![inserting an Image](/images/Graphs/topo/top3.jpg)
+![inserting an Image](/images/Graphs/topo/top4.jpg)
+![inserting an Image](/images/Graphs/topo/top5.jpg)
+![inserting an Image](/images/Graphs/topo/top6.jpg)
+![inserting an Image](/images/Graphs/topo/top7.jpg)
+
+
 
 
 
@@ -145,5 +152,52 @@ class Deque:
 ```
 
 
-Now lets Create a Topological Function:
+Now lets Create a Topological Function and Corresponding DFS
 
+```python
+
+def dfs(graph, source, stack, visited):
+    
+    visited.append(source)
+
+    for neighbour in graph[source]:
+    
+        if neighbour not in visited:
+            
+            dfs(graph, neighbour, stack, visited)
+
+    stack.addRear(source)
+
+
+
+def topological_sort_of(graph):
+    
+    stack = Deque() 
+    visited = []
+
+    for vertex in graph:
+        
+        if vertex not in visited:
+            
+            dfs(graph, vertex, stack, visited)
+    
+    return stack
+```
+
+Running our Topological Sort Algorithm
+```python
+
+topological_ordering = topological_sort_of(graph1)
+
+topological_ordering._print()
+
+```
+
+Topological Ordering Output:
+
+
+```python
+
+['E', 'F', 'K', 'C', 'B', 'A', 'D', 'G', 'H', 'I', 'J', 'L', 'M']
+
+```
