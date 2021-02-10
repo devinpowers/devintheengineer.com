@@ -11,6 +11,11 @@ header:
 
 
 
+![inserting an Image](/images/Graphs/topo/top1.jpg)
+![inserting an Image](/images/Graphs/topo/top2.jpg)
+
+
+
 Creating our "Directed Graph"
 
 ```python
@@ -42,14 +47,25 @@ class Graph:
         
         for node in self.nodes:
             print(node, "->", self.adj_list[node])
+            
+    def __len__(self):
+        return len(self.nodes)
     
     def __getitem__(self, node):
         
         """retrives items from out Node/vertex"""
-        
+        """[] override"""
+
         return  self.adj_list[node]
-            
+    
+    def __iter__(self):
+        """ This will allow us to iterate over our Graph Object"""
+        """ We can iterate over the keys or "Vertexs" by: """
+        """ using just the Object->  graph:  """
+        return iter(self.adj_list)
+    
 ```
+
 
 Lets add out Edges and Nodes
 
@@ -95,3 +111,7 @@ K -> ['J']
 L -> []
 M -> []
 ```
+
+Now lets Create a Topological Function:
+
+kokok
