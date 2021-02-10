@@ -54,7 +54,6 @@ class Graph:
     def __getitem__(self, node):
         
         """retrives items from out Node/vertex"""
-        """[] override"""
 
         return  self.adj_list[node]
     
@@ -112,6 +111,39 @@ L -> []
 M -> []
 ```
 
+Let's add a Deque Data Structure
+
+```python
+
+class Deque:
+    def __init__(self):
+        self.items = []
+
+    def isEmpty(self):
+        return self.items == []
+
+    def addFront(self, item):
+        self.items.append(item)
+
+    def addRear(self, item):
+        """ add to rear"""
+        self.items.insert(0,item)
+
+    def removeFront(self):
+        return self.items.pop()
+
+    def removeRear(self):
+        return self.items.pop(0)
+
+    def size(self):
+        return len(self.items)
+    
+    def _print(self):
+        '''print Deque Values'''
+        return self.items
+        
+```
+
+
 Now lets Create a Topological Function:
 
-kokok
