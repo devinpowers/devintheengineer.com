@@ -15,6 +15,8 @@ header:
 
 [Using a Matrix to Represent a Graph](https://devintheengineer.com/algorithms/intro_graph/adj_matrix)
 
+#### Graph with Weights included
+[Using a List to Represent a Graph with weights](https://devintheengineer.com/algorithms/intro_graph/adj_list_weights)
 
 ### Depth First Search
 
