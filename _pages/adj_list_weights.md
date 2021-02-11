@@ -8,6 +8,9 @@ header:
   image: "/images/chicagotwo.jpeg"
 ---
 
+![inserting an Image](/images/Graphs/adj_list_weighted/weighted1.jpg)
+![inserting an Image](/images/Graphs/adj_list_weighted/weighted2.jpg)
+
 
 #### Weighted Graph
 
