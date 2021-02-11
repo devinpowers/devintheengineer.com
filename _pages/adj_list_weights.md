@@ -54,9 +54,12 @@ Lets add some Nodes, Edges, and the corresponding weights
 ```python
 all_edges = [
 
-    ("A","B", 3),("A","C", 5),("B","D", 2),("C","D", 9)
+    ("A","B", 5),("A","C", 4),("B","D", 6),("C","D", 8),
+    ("C","E", 6),("D","E",7)
 ]
-nodes = ["A","B","C","D"]
+nodes = ["A","B","C","D","E"]
+
+
 
 graph1 = Graph(nodes)
 
@@ -76,9 +79,10 @@ graph1.print_adj_list()
 Output:
 ```python
 
-A -> {'B': 3, 'C': 5}
-B -> {'A': 3, 'D': 2}
-C -> {'A': 5, 'D': 9}
-D -> {'B': 2, 'C': 9}
+A -> {'B': 5, 'C': 4}
+B -> {'A': 5, 'D': 6}
+C -> {'A': 4, 'D': 8, 'E': 6}
+D -> {'B': 6, 'C': 8, 'E': 7}
+E -> {'C': 6, 'D': 7}
 
 ```
