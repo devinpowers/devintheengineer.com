@@ -9,7 +9,11 @@ header:
 ---
 
 
-Heres are Graph:
+![inserting an Image](/images/Graphs/dijkstras/dijk1.jpg)
+![inserting an Image](/images/Graphs/dijkstras/dijk2.jpg)
+![inserting an Image](/images/Graphs/dijkstras/dijk3.jpg)
+![inserting an Image](/images/Graphs/dijkstras/dijk4.jpg)
+![inserting an Image](/images/Graphs/dijkstras/dijk5.jpg)
 
 
 ```python
@@ -61,13 +65,15 @@ class Graph:
     
 
 ```
+Let's add some Nodes(Vertex), Edges, and the weights to our Graph!
 ```python
 
 all_edges = [
 
-    ("A","B", 5),("A","C", 4),("B","D", 6),("C","D", 8),
-    ("C","E", 6),("D","E",7)
+    ("A","B", 4),("A","C", 1),("B","D", 1),("C","D", 5),
+    ("C","B", 2),("D","E",3)
 ]
+
 nodes = ["A","B","C","D","E"]
 
 graph1 = Graph(nodes)
@@ -87,11 +93,11 @@ graph1.print_adj_list()
 Graph Printed with Edges and Weights
 
 ```python
-A -> {'B': 5, 'C': 4}
-B -> {'A': 5, 'D': 6}
-C -> {'A': 4, 'D': 8, 'E': 6}
-D -> {'B': 6, 'C': 8, 'E': 7}
-E -> {'C': 6, 'D': 7}
+A -> {'B': 4, 'C': 1}
+B -> {'A': 4, 'D': 1, 'C': 2}
+C -> {'A': 1, 'D': 5, 'B': 2}
+D -> {'B': 1, 'C': 5, 'E': 3}
+E -> {'D': 3}
 
 ```
 
@@ -99,45 +105,34 @@ E -> {'C': 6, 'D': 7}
  
 ```python
 
+
 import heapq
 
-def calculate_distances(graph, starting_vertex):
+def Dijkstras(graph, starting_vertex):
     distances = {}
     distances = {vertex: float('infinity') for vertex in graph}
-    
-    distances[starting_vertex] = 0
-    
-    
-    ## Priority Queue
-    pq = [(0, starting_vertex)]
-    
-    
-    while len(pq) > 0:
-        
-        print("Current Priority Queue:",pq)
-        
-        current_distance, current_vertex = heapq.heappop(pq)
-        
 
-        # Nodes can get added to the priority queue multiple times. We only
-        # process a vertex the first time we remove it from the priority queue.
+    distances[starting_vertex] = 0
+
+    pq = [(0, starting_vertex)]
+
+
+    while len(pq) > 0:
+
+
+        current_distance, current_vertex = heapq.heappop(pq)
         
         if current_distance > distances[current_vertex]:
             continue
 
         for neighbor, weight in graph[current_vertex].items():
             distance = current_distance + weight
-
-            # Only consider this new path if it's better than any path we've
-            # already found.
+           
             if distance < distances[neighbor]:
                 distances[neighbor] = distance
-                print("Distance:", distance)
-                print("Neighbor:", neighbor)
-                print("Next")
-                heapq.heappush(pq, (distance, neighbor))
                 
-                print("Priority Q now: ", pq)
+               
+                heapq.heappush(pq, (distance, neighbor))
 
     return distances
 
@@ -145,7 +140,7 @@ def calculate_distances(graph, starting_vertex):
 
 ```python
 
-calculate_distances(graph1, "A")
+Dijkstras(graph1, "A")
 
 ```
 
@@ -153,7 +148,7 @@ Distance from Vertex A
 
 ```python
 
-{'A': 0, 'B': 3, 'C': 4, 'D': 9, 'E': 10}
+{'A': 0, 'B': 3, 'C': 1, 'D': 4, 'E': 7}
 
 
 ```
