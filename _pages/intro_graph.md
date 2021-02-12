@@ -31,14 +31,14 @@ header:
 
 ### Shortest Paths:
 
-  - #### Djikstra's Algorithm
+  - #### [Djikstras Algorithm](https://devintheengineer.com/algorithms/intro_graph/Djikstras)
+
 
   - #### Warshall's Algorithm
 
 ### Minimum Spanning Trees
 
 # Intro to Graphs:
-
 
 ![inserting an Image](/images/Graphs/intro/intro1.jpg)
 ![inserting an Image](/images/Graphs/intro/intro2.jpg)
