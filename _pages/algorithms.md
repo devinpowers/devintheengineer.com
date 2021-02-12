@@ -118,7 +118,7 @@ Includes:
 
 [Heap Data Structure](https://devintheengineer.com/algorithms/heaps)
 
-- Two Types of Heaps
+Two Types of Heaps
 
   1. Min Heap
   2. Max Heap
@@ -127,9 +127,7 @@ Different Applications of Heaps:
 
   1. Heap Sort
     - One of the best sorting algorithms!
-
   2. Priority Queues
-
   3. Graph Algorithms
 
 
@@ -163,8 +161,6 @@ Different Applications of Heaps:
 
   - List and Matrix Representation
   
-
-
 - Graph Traversals
     - DFS
     - BFS
@@ -172,13 +168,14 @@ Different Applications of Heaps:
 - Topological Sort
 
 - Shortest Path
-
   - Djikstra's Algorithm
   - Warshall's Algorithm
 
+- Minimum Spanning Tree (MST)
+
 - Includes Graph Project
 
-# Coming Soon:
+# Coming Soon.......
 
 ## Dynamic Programming
 
