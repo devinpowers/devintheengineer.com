@@ -145,12 +145,6 @@ def calculate_distances(graph, starting_vertex):
 
 ```python
 
-{'A': inf, 'B': inf, 'C': inf, 'D': inf, 'E': inf}
-
-```
-
-```python
-
 calculate_distances(graph1, "A")
 
 ```
