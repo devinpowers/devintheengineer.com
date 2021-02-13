@@ -151,29 +151,27 @@ Different Applications of Heaps:
 [Introduction to Graphs](https://devintheengineer.com/algorithms/intro_graph)
 
 - Properties of Graphs
-  
-  - Self-Loop and Multi-Edges
-  - Walk, Path, Trail
-  - Connected and Strongly Connected Graphs
-  - Closed Walk, Cycle, Acyclic Graph
+
+  - Self-Loop, Multi-Edges, Walk, Path, Trail
+  - Connected and Strongly Connected Graphs, Closed Walk, Cycle, Acyclic Graph 
 
 - Graph Representation 
 
   - List and Matrix Representation
   
 - Graph Traversals
-    - DFS
-    - BFS
+    - Depth First Search and Breadth First Search
 
 - Topological Sort
 
 - Shortest Path
-  - Djikstra's Algorithm
-  - Warshall's Algorithm
+  - Djikstra's Algorithm and  Warshall's Algorithm
 
 - Minimum Spanning Tree (MST)
 
 - Includes Graph Project
+
+
 
 # Coming Soon.......
 
