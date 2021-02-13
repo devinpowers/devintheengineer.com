@@ -17,13 +17,11 @@ header:
 - Organization of OPP is called a class (or struct)
 
 A class contains:
-    1. Data
-    2. Functions (or methods) that operate on that data
+    1. Attributes (Data)
+    2. Behaviours (Functions or methods) that operate on that data
 
 
-OOP Principles
-
-1. General Principles
+General OOP Principles:
 
 - Composition
 - Abstraction
@@ -34,101 +32,121 @@ OOP Principles
 
 Here is a basic Class
 
-    #include <iostream>
-    using std::cout; using std::endl;
-    #include<string>
-    using std::string;
+```cpp
 
+#include <iostream>
+using std::cout; using std::endl;
+#include<string>
+using std::string;
 
+struct Employee{
 
-    // represents Blueprint
-    struct Employee{
-        // inside the class we need to put attributes and behaviors
-    public:
-        string name;
-        string company;
-        int age;
+public:
+    // attributes
+    string Name;
+    string Company;
+    string Email;
+    int Age;
 
-        void Introduceyourself(){
-
-            cout << "Hello my name is " << name << endl;
-            cout << "I am "  << age << " years old." << endl;
-            cout << "I work for " << company << endl;
-        }
-
-    };
-
-
-    int main()
+    void IntroduceYourself()
     {
-        Employee employee1;
-        employee1.name = "Devin";
-        employee1.company = "ADAC";
-        employee1.age = 100;
-        
-        employee1.Introduceyourself();
-
+        cout << "Hi, My name is " << Name << endl;
+        cout << "I work for " << Company << endl;
+        cout << "I am " << Age << " years old" << endl;
+        cout << "My email address is: " << Email << endl;
 
     }
+};
 
+int main()
+{
+    Employee employee1;
+    employee1.Name = "Devin";
+    employee1.Company = "ADAC";
+    employee1.Email = "powers88@msu.edu";
+    employee1.Age = 25;
+
+    // invoke function
+
+    employee1.IntroduceYourself();
+
+}
+
+```
 
 Output
 
-    Hello my name is Devin
-    I am 100 years old.
-    I work for ADAC
+```cpp
+
+Hi, My name is Devin
+I work for ADAC
+I am 25 years old
+My email address is: powers88@msu.edu
+
+```
 
 
 
 ## constructors
+```cpp
 
+#include <iostream>
+using std::cout; using std::endl;
+#include<string>
+using std::string;
 
+struct Employee{
 
-    #include <iostream>
-    using std::cout; using std::endl;
-    #include<string>
-    using std::string;
+public:
+    // attributes
+    string Name;
+    string Company;
+    string Email;
+    int Age;
 
-
-
-    // represents Blueprint
-    struct Employee{
-        // inside the class we need to put attributes and behaviors
-    public:
-        string Name;
-        string Company;
-        int Age;
-
-        void Introduceyourself(){
-
-            cout << "Hello my name is " << Name << endl;
-            cout << "I am "  << Age << " years old." << endl;
-            cout << "I work for " << Company << endl;
-        }
-
-        Employee(string name, string company, int age){
-
-            Name = name;
-            Company = company;
-            Age = age;   
-        }
-
-    };
-
-
-    int main()
+    void IntroduceYourself()
     {
-        Employee employee1 = Employee("Devin", "ADAC", 100);
-
-
-        Employee employee2 = Employee("Kobe", "Lakers", 43);
-
-        employee1.Introduceyourself();
-        employee2.Introduceyourself();
-        employee
-    
+        cout << "Hi, My name is " << Name << endl;
+        cout << "I work for " << Company << endl;
+        cout << "I am " << Age << " years old" << endl;
+        cout << "My email address is: " << Email << endl;
 
     }
+    Employee(string name, string company, string email, int age){
+
+        Name = name;
+        Company = company;
+        Email = email;
+        Age = age;   
+        }
+};
+
+int main()
+{
+    Employee employee1 = Employee("Devin", "ADAC", "powers88@msu.edu", 25);
+
+    employee1.IntroduceYourself();
+
+    Employee employee2 = Employee("Bob", "Apple", "bob23@amazon.com", 67);
+
+    employee2.IntroduceYourself();
+
+}
+
+```
+Output:
+
+```cpp
+Hi, My name is Devin
+I work for ADAC
+I am 25 years old
+My email address is: powers88@msu.edu
+Hi, My name is Bob
+I work for Apple
+I am 67 years old
+My email address is: bob23@amazon.com
+
+```
 
 
 ## Encapsulation
