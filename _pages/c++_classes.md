@@ -362,7 +362,6 @@ Devin works at: ADAC Automotive
 
 Here's a Contract
 ```cpp
-
 #include <iostream>
 using std::cout; using std::endl;
 #include<string>
@@ -460,4 +459,152 @@ int main()
 }
 ```
 
+
+
+## Inheritance 
+
+
+
+
+```cpp
+
+
+#include <iostream>
+using std::cout; using std::endl;
+#include<string>
+using std::string;
+
+
+struct AbstractEmployee {
+    // serve as a contract
+    virtual void AskForPromotion() = 0;       
+
+};
+
+
+struct Employee: AbstractEmployee{
+
+private:
+    string Name;
+    string Company;
+    string Email;
+    int Age;
+
+public:
+    
+    void setName(string name) { //setter
+        Name = name;
+    }
+    string getName(){ //getter
+        return Name;
+    }
+    void setCompany(string company){
+
+        if (company == "ADAC"){
+            Company = "ADAC Automotive";
+        }
+        else {
+            Company = company;
+        }    
+    }
+    string getCompany(){
+        return Company;
+    }
+    void setEmail(string email){
+        Email = email;
+    }
+    string getEmail(){
+        return Email;
+    }
+    void setAge(int age){
+        
+        if (age >= 18){
+            Age = age;
+        }    
+    }
+    int getAge(){
+        return Age;
+    }
+
+    void IntroduceYourself()
+    {
+        cout << "Hi, My name is " << Name << endl;
+        cout << "I work for " << Company << endl;
+        cout << "I am " << Age << " years old" << endl;
+        cout << "My email address is: " << Email << endl;
+
+    }
+    Employee(string name, string company, string email, int age){
+
+        Name = name;
+        Company = company;
+        Email = email;
+        Age = age;   
+        }
+    
+    void AskForPromotion(){
+        // provide logic
+        
+        if (Age > 30){
+            cout << Name << " got promoted!! " << endl;
+        }
+        else
+        {
+            cout << Name << " sorry NO promotion for you!" << endl;
+        }
+        
+    }
+};
+
+struct Developer: Employee {
+
+    // Developer became a Child Class
+    // Employee :base class, super class, or parent class
+    // developer has all the properties that Employee has
+
+    //constructors for Developer Type
+
+
+public: 
+    string  FavProgrammingLanguage;
+
+    Developer(string name, string company, string email ,int age, string favProgrammingLanguage)
+
+        :Employee(name, company, email, age)
+    {
+        FavProgrammingLanguage = favProgrammingLanguage;
+    }
+    void FixBug(){
+
+        cout << getName() << " Fixed bug using " << FavProgrammingLanguage << endl;
+    }
+
+};
+
+int main()
+{
+    Employee employee1 = Employee("Devin", "ADAC", "powers88@msu.edu", 25);
+    Employee employee2 = Employee("Bob", "Apple", "bob23@amazon.com", 67);
+
+
+    // object for developer class
+    Developer developer1 = Developer ("Kobe", "Lakers", "braynt@lakers", 34, "C++");
+
+    developer1.FixBug();
+
+}
+
+
+
+
+```
+
+Output:
+
+```cpp
+
+Kobe Fixed bug using C++
+
+
+```
 
