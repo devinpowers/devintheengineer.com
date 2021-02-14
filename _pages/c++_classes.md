@@ -463,11 +463,7 @@ int main()
 
 ## Inheritance 
 
-
-
-
 ```cpp
-
 
 #include <iostream>
 using std::cout; using std::endl;
@@ -485,10 +481,12 @@ struct AbstractEmployee {
 struct Employee: AbstractEmployee{
 
 private:
-    string Name;
+
     string Company;
     string Email;
     int Age;
+protected:
+    string Name;
 
 public:
     
@@ -556,14 +554,7 @@ public:
     }
 };
 
-struct Developer: Employee {
-
-    // Developer became a Child Class
-    // Employee :base class, super class, or parent class
-    // developer has all the properties that Employee has
-
-    //constructors for Developer Type
-
+struct Developer:public Employee {
 
 public: 
     string  FavProgrammingLanguage;
@@ -576,8 +567,11 @@ public:
     }
     void FixBug(){
 
-        cout << getName() << " Fixed bug using " << FavProgrammingLanguage << endl;
+        cout << Name << " Fixed bug using " << FavProgrammingLanguage << endl;
+
     }
+
+    
 
 };
 
@@ -586,14 +580,17 @@ int main()
     Employee employee1 = Employee("Devin", "ADAC", "powers88@msu.edu", 25);
     Employee employee2 = Employee("Bob", "Apple", "bob23@amazon.com", 67);
 
-
     // object for developer class
     Developer developer1 = Developer ("Kobe", "Lakers", "braynt@lakers", 34, "C++");
 
     developer1.FixBug();
+    developer1.FixBug();
+    developer1.FixBug();
+
+    developer1.AskForPromotion();
+
 
 }
-
 
 
 
@@ -604,7 +601,511 @@ Output:
 ```cpp
 
 Kobe Fixed bug using C++
+Kobe Fixed bug using C++
+Kobe Fixed bug using C++
+Kobe got promoted!! 
 
+```
+
+
+Adding on to our example of inheritance!
+
+```cpp
+
+#include <iostream>
+using std::cout; using std::endl;
+#include<string>
+using std::string;
+
+
+struct AbstractEmployee {
+    // serve as a contract
+    virtual void AskForPromotion() = 0;       
+
+};
+
+
+struct Employee: AbstractEmployee{
+
+private:
+
+    string Company;
+    string Email;
+    int Age;
+protected:
+    string Name;
+
+public:
+    
+    void setName(string name) { //setter
+        Name = name;
+    }
+    string getName(){ //getter
+        return Name;
+    }
+    void setCompany(string company){
+
+        if (company == "ADAC"){
+            Company = "ADAC Automotive";
+        }
+        else {
+            Company = company;
+        }    
+    }
+    string getCompany(){
+        return Company;
+    }
+    void setEmail(string email){
+        Email = email;
+    }
+    string getEmail(){
+        return Email;
+    }
+    void setAge(int age){
+        
+        if (age >= 18){
+            Age = age;
+        }    
+    }
+    int getAge(){
+        return Age;
+    }
+
+    void IntroduceYourself()
+    {
+        cout << "Hi, My name is " << Name << endl;
+        cout << "I work for " << Company << endl;
+        cout << "I am " << Age << " years old" << endl;
+        cout << "My email address is: " << Email << endl;
+
+    }
+    Employee(string name, string company, string email, int age){
+
+        Name = name;
+        Company = company;
+        Email = email;
+        Age = age;   
+        }
+    
+    void AskForPromotion(){
+        // provide logic
+        
+        if (Age > 30){
+            cout << Name << " got promoted!! " << endl;
+        }
+        else
+        {
+            cout << Name << " sorry NO promotion for you!" << endl;
+        }
+        
+    }
+};
+
+struct Developer:public Employee {
+
+public: 
+    string  FavProgrammingLanguage;
+
+    Developer(string name, string company, string email ,int age, string favProgrammingLanguage)
+
+        :Employee(name, company, email, age)
+    {
+        FavProgrammingLanguage = favProgrammingLanguage;
+    }
+    void FixBug(){
+
+        cout << Name << " Fixed bug using " << FavProgrammingLanguage << endl;
+
+    }
+
+
+};
+
+
+struct Teacher: public Employee {
+
+    string Subject;
+
+    void PrepareLesson(){
+        cout << Name << " is preparing " << Subject << " lesson" << endl;
+    }
+    Teacher(string name, string company, string email ,int age, string subject)
+
+        :Employee(name, company, email, age)
+    
+    {
+        Subject = subject;
+
+    }
+
+
+};
+
+int main()
+{
+    Developer developer1 = Developer ("Kobe", "Lakers", "braynt@lakers", 34, "C++");
+
+    Teacher t = Teacher("Jacob", "Cool School", "jack@school.com", 34, "Math");
+
+    t.PrepareLesson();
+    t.AskForPromotion();
+
+}
+
+
+```
+
+Output
+
+```python
+Jacob is preparing Math lesson
+Jacob got promoted!! 
+
+
+```
+
+Poly
+
+```cpp
+
+#include <iostream>
+using std::cout; using std::endl;
+#include<string>
+using std::string;
+
+
+struct AbstractEmployee {
+    // serve as a contract
+    virtual void AskForPromotion() = 0;       
+
+};
+
+
+struct Employee: AbstractEmployee{
+
+private:
+
+    string Company;
+    string Email;
+    int Age;
+protected:
+    string Name;
+
+public:
+    
+    void setName(string name) { //setter
+        Name = name;
+    }
+    string getName(){ //getter
+        return Name;
+    }
+    void setCompany(string company){
+
+        if (company == "ADAC"){
+            Company = "ADAC Automotive";
+        }
+        else {
+            Company = company;
+        }    
+    }
+    string getCompany(){
+        return Company;
+    }
+    void setEmail(string email){
+        Email = email;
+    }
+    string getEmail(){
+        return Email;
+    }
+    void setAge(int age){
+        
+        if (age >= 18){
+            Age = age;
+        }    
+    }
+    int getAge(){
+        return Age;
+    }
+
+    void IntroduceYourself()
+    {
+        cout << "Hi, My name is " << Name << endl;
+        cout << "I work for " << Company << endl;
+        cout << "I am " << Age << " years old" << endl;
+        cout << "My email address is: " << Email << endl;
+
+    }
+    Employee(string name, string company, string email, int age){
+
+        Name = name;
+        Company = company;
+        Email = email;
+        Age = age;   
+        }
+    
+    void AskForPromotion(){
+
+        // provide logic
+        
+        if (Age > 30){
+            cout << Name << " got promoted!! " << endl;
+        }
+        else
+        {
+            cout << Name << " sorry NO promotion for you!" << endl;
+        }
+        
+    }
+    
+    virtual void Work(){
+
+        cout << Name << " is checking email, task backlog, performing tasks....." << endl;
+
+    }
+};
+
+struct Developer:public Employee {
+
+public: 
+    string  FavProgrammingLanguage;
+
+    Developer(string name, string company, string email ,int age, string favProgrammingLanguage)
+
+        :Employee(name, company, email, age)
+    {
+        FavProgrammingLanguage = favProgrammingLanguage;
+    }
+    void FixBug(){
+
+        cout << Name << " Fixed bug using " << FavProgrammingLanguage << endl;
+
+    }
+
+  /*  void Work() {
+        cout << Name << " is writing " << FavProgrammingLanguage <<  "code " << endl;
+    } */
+
+};
+
+
+struct Teacher: public Employee {
+
+    string Subject;
+
+    void PrepareLesson(){
+        cout << Name << " is preparing " << Subject << " lesson" << endl;
+    }
+    Teacher(string name, string company, string email ,int age, string subject)
+
+        :Employee(name, company, email, age)
+    
+    {
+        Subject = subject;
+
+    }
+
+    void Work() {
+        cout << Name << " is teaching " << Subject << endl;
+    }
+
+};
+
+int main()      // the most common use of polymorphism is when a parent class reference is used to refer to a child class object
+{
+
+    Developer d = Developer ("Kobe", "Lakers", "braynt@lakers", 34, "C++");
+
+    Teacher t = Teacher("Jacob", "Cool School", "jack@school.com", 34, "Math");
+
+    Employee *e1 = &d; //hold reference to derived class
+
+    Employee *e2 = &t;
+
+    e1->Work();
+    e2->Work();
+}
+
+
+
+```
+
+Ouput
+
+```cpp
+Kobe is checking email, task backlog, performing tasks.....
+Jacob is teaching Math
+
+```
+
+Now..
+
+
+```cpp
+#include <iostream>
+using std::cout; using std::endl;
+#include<string>
+using std::string;
+
+
+struct AbstractEmployee {
+    // serve as a contract
+    virtual void AskForPromotion() = 0;       
+
+};
+
+
+struct Employee: AbstractEmployee{
+
+private:
+
+    string Company;
+    string Email;
+    int Age;
+protected:
+    string Name;
+
+public:
+    
+    void setName(string name) { //setter
+        Name = name;
+    }
+    string getName(){ //getter
+        return Name;
+    }
+    void setCompany(string company){
+
+        if (company == "ADAC"){
+            Company = "ADAC Automotive";
+        }
+        else {
+            Company = company;
+        }    
+    }
+    string getCompany(){
+        return Company;
+    }
+    void setEmail(string email){
+        Email = email;
+    }
+    string getEmail(){
+        return Email;
+    }
+    void setAge(int age){
+        
+        if (age >= 18){
+            Age = age;
+        }    
+    }
+    int getAge(){
+        return Age;
+    }
+
+    void IntroduceYourself()
+    {
+        cout << "Hi, My name is " << Name << endl;
+        cout << "I work for " << Company << endl;
+        cout << "I am " << Age << " years old" << endl;
+        cout << "My email address is: " << Email << endl;
+
+    }
+    Employee(string name, string company, string email, int age){
+
+        Name = name;
+        Company = company;
+        Email = email;
+        Age = age;   
+        }
+    
+    void AskForPromotion(){
+
+        // provide logic
+        
+        if (Age > 30){
+            cout << Name << " got promoted!! " << endl;
+        }
+        else
+        {
+            cout << Name << " sorry NO promotion for you!" << endl;
+        }
+        
+    }
+    
+    virtual void Work(){
+
+        cout << Name << " is checking email, task backlog, performing tasks....." << endl;
+
+    }
+};
+
+struct Developer:public Employee {
+
+public: 
+    string  FavProgrammingLanguage;
+
+    Developer(string name, string company, string email ,int age, string favProgrammingLanguage)
+
+        :Employee(name, company, email, age)
+    {
+        FavProgrammingLanguage = favProgrammingLanguage;
+    }
+    void FixBug(){
+
+        cout << Name << " Fixed bug using " << FavProgrammingLanguage << endl;
+
+    }
+
+    void Work() {
+        cout << Name << " is writing " << FavProgrammingLanguage <<  "code " << endl;
+    } 
+
+};
+
+
+struct Teacher: public Employee {
+
+    string Subject;
+
+    void PrepareLesson(){
+        cout << Name << " is preparing " << Subject << " lesson" << endl;
+    }
+    Teacher(string name, string company, string email ,int age, string subject)
+
+        :Employee(name, company, email, age)
+    
+    {
+        Subject = subject;
+
+    }
+
+    void Work() {
+        cout << Name << " is teaching " << Subject << endl;
+    }
+
+};
+
+int main()      // the most common use of polymorphism is when a parent class reference is used to refer to a child class object
+{
+
+    Developer d = Developer ("Kobe", "Lakers", "braynt@lakers", 34, "C++");
+
+    Teacher t = Teacher("Jacob", "Cool School", "jack@school.com", 34, "Math");
+
+    Employee *e1 = &d; //hold reference to derived class
+
+    Employee *e2 = &t;
+
+    e1->Work();
+    e2->Work();
+}
+
+
+```
+
+Output:
+
+```cpp
+Kobe is writing C++code 
+Jacob is teaching Math
 
 ```
 
