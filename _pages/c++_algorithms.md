@@ -118,84 +118,90 @@ Output
 ![inserting an Image](/images/C++/algorithms/find.jpg)
 
 
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector> 
+using std::vector;
+#include <algorithm> 
+using std::find;
 
-    #include<iostream>
-    using std::cout; using std::endl;
-    #include <vector> 
-    using std::vector;
-    #include <algorithm> 
-    using std::find;
+int main () 
+{ 
+    vector<int> vec { 10, 20, 30, 40 }; 
+    
+    // Print Original Vector 
+cout << "Original vector :"; 
+    for (int i=0; i<vec.size(); i++) 
+    {
+        cout << " " << vec[i]; 
+    }
+        
+    cout << "\n"; 
+    
+    int search = 40; 
+    // Iterator used to store the position of the searched element
+    vector<int>::iterator it; 
+    
+    // find function call 
+    it = find (vec.begin(), vec.end(), search); 
 
-    int main () 
+    if (it != vec.end()) 
     { 
-        vector<int> vec { 10, 20, 30, 40 }; 
-        
-        // Print Original Vector 
-    cout << "Original vector :"; 
-        for (int i=0; i<vec.size(); i++) 
-        {
-            cout << " " << vec[i]; 
-        }
-            
-        cout << "\n"; 
-        
-        int search = 40; 
-        // Iterator used to store the position of the searched element
-        vector<int>::iterator it; 
-        
-        // find function call 
-        it = find (vec.begin(), vec.end(), search); 
-
-        if (it != vec.end()) 
-        { 
-            cout << "Element " << search <<" found at position : " ; 
-            cout << it - vec.begin() << " (counting from zero) \n" ; 
-        } 
-        else
-            cout << "Element not found.\n\n"; 
-            
+        cout << "Element " << search <<" found at position : " ; 
+        cout << it - vec.begin() << " (counting from zero) \n" ; 
     } 
+    else
+        cout << "Element not found.\n\n"; 
+        
+} 
+```
 
 Output
 
-    Original vector : 10 20 30 40
-    Element 40 found at position : 3 (counting from zero) 
+```cpp
 
+Original vector : 10 20 30 40
+Element 40 found at position : 3 (counting from zero) 
 
+```
 
 ### Using find_if Algorithm
 
 
 ![inserting an Image](/images/C++/algorithms/find_if.jpg)
 
-    #include<iostream>
-    using std::cout; using std::endl; using std::boolalpha;
-    #include <vector> 
-    using std::vector;
-    #include <algorithm> 
-    using std::find_if;
+```cpp
+#include<iostream>
+using std::cout; using std::endl; using std::boolalpha;
+#include <vector> 
+using std::vector;
+#include <algorithm> 
+using std::find_if;
 
 
-    bool IsOdd( int i)
-    {
-        return i % 2;
-    }
+bool IsOdd( int i)
+{
+    return i % 2;
+}
 
-    int main () 
-    {
-        vector<int> vec { 10, 20, 30, 40, 55};
+int main () 
+{
+    vector<int> vec { 10, 20, 30, 40, 55};
 
-        vector<int>::iterator it;
+    vector<int>::iterator it;
 
-        it = find_if(vec.begin(), vec.end(), IsOdd);
+    it = find_if(vec.begin(), vec.end(), IsOdd);
 
-        cout << "The first odd value is: " << *it << endl;
-    }
+    cout << "The first odd value is: " << *it << endl;
+}
+```
 
 Output
 
-    The first odd value is: 55
-
+```cpp
+The first odd value is: 55
+```
 
 ### Serach Algorithm
 
@@ -211,36 +217,39 @@ Output
 ![inserting an Image](/images/C++/algorithms/copy.jpg)
 
 
+```cpp
+#include<iostream>
+using std::cout; using std::endl; using std::boolalpha;
+#include <vector> 
+using std::vector;
+#include <algorithm> 
+using std::copy;
 
-    #include<iostream>
-    using std::cout; using std::endl; using std::boolalpha;
-    #include <vector> 
-    using std::vector;
-    #include <algorithm> 
-    using std::copy;
+int main() 
+{ 
+vector<int> v1 = { 1, 8, 2, 3, 1, 3, 10 };
+    
+vector<int> v2(7);
+    
+copy(v1.begin(), v1.end(), v2.begin());
+    
+// printing new vector
+cout << "The new vector elements entered using copy() : ";
+for(int i = 0; i < v2.size(); i++)
+{
+    cout << v2[i] << " ";
+}
+cout << endl;
 
-    int main() 
-    { 
-    vector<int> v1 = { 1, 8, 2, 3, 1, 3, 10 };
-        
-    vector<int> v2(7);
-        
-    copy(v1.begin(), v1.end(), v2.begin());
-        
-    // printing new vector
-    cout << "The new vector elements entered using copy() : ";
-    for(int i = 0; i < v2.size(); i++)
-    {
-        cout << v2[i] << " ";
-    }
-    cout << endl;
+} 
+```
 
-    } 
 
 Output
 
-    The new vector elements entered using copy() : 1 8 2 3 1 3 10 
-
+```cpp
+The new vector elements entered using copy() : 1 8 2 3 1 3 10 
+```
 
 
 ## Special Iterators!
@@ -260,34 +269,34 @@ Output
 ![inserting an Image](/images/C++/algorithms/back.jpg)
 
 
+```cpp
+#include<iostream>
+using std::cout; using std::endl; using std::boolalpha;
+#include <vector> 
+using std::vector;
+#include <algorithm> 
+using std::copy;
+#include<iterator>
+using std::back_inserter;
 
-    #include<iostream>
-    using std::cout; using std::endl; using std::boolalpha;
-    #include <vector> 
-    using std::vector;
-    #include <algorithm> 
-    using std::copy;
-    #include<iterator>
-    using std::back_inserter;
+int main() 
+{ 
+vector<int> v1 = { 1, 8, 2, 3, 1, 3, 10, 12, 67, 90, 100, 82 };
+    
+vector<int> v2;
+    
+copy(v1.begin(), v1.end(),back_inserter(v2));
+    
+// printing new vector
+cout << "The new vector elements entered using copy() : ";
+for(int i = 0; i < v2.size(); i++)
+{
+    cout << v2[i] << " ";
+}
+cout << endl;
 
-    int main() 
-    { 
-    vector<int> v1 = { 1, 8, 2, 3, 1, 3, 10, 12, 67, 90, 100, 82 };
-        
-    vector<int> v2;
-        
-    copy(v1.begin(), v1.end(),back_inserter(v2));
-        
-    // printing new vector
-    cout << "The new vector elements entered using copy() : ";
-    for(int i = 0; i < v2.size(); i++)
-    {
-        cout << v2[i] << " ";
-    }
-    cout << endl;
-
-    } 
-
+} 
+```
 
 
 ### Stream Iterator (ostream_iterator)
@@ -295,65 +304,70 @@ Output
 ![inserting an Image](/images/C++/algorithms/ostream.jpg)
 
 
+```cpp
+#include<iostream>
+using std::cout; using std::endl; using std::boolalpha;
+#include <vector> 
+using std::vector;
+#include <algorithm> 
+using std::copy;
+#include<iterator>
+using std::ostream_iterator;
 
-    #include<iostream>
-    using std::cout; using std::endl; using std::boolalpha;
-    #include <vector> 
-    using std::vector;
-    #include <algorithm> 
-    using std::copy;
-    #include<iterator>
-    using std::ostream_iterator;
+int main() 
+{ 
 
-    int main() 
-    { 
+vector<int> v1 = { 1, 8, 2, 3, 1, 3, 10, 12, 67, 90, 100, 82 };
 
-    vector<int> v1 = { 1, 8, 2, 3, 1, 3, 10, 12, 67, 90, 100, 82 };
-
-    ostream_iterator<int> out(cout, ",");
-            
-    copy(v1.begin(), v1.end(), out);
-
-    cout << endl;
+ostream_iterator<int> out(cout, ",");
         
+copy(v1.begin(), v1.end(), out);
 
-    } 
+cout << endl;
+    
+
+} 
+```
 
 Output
 
-    1,8,2,3,1,3,10,12,67,90,100,82,
+```cpp
+1,8,2,3,1,3,10,12,67,90,100,82,
+```
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector> 
+using std::vector;
+#include<string>
+using std::string;
+#include <algorithm> 
+using std::copy;
+#include<iterator>
+using std::ostream_iterator;
+
+int main() 
+{ 
 
 
+vector<string> v1 = { "Hello", "my", "name", "is", "Devin" };
 
-    #include<iostream>
-    using std::cout; using std::endl;
-    #include <vector> 
-    using std::vector;
-    #include<string>
-    using std::string;
-    #include <algorithm> 
-    using std::copy;
-    #include<iterator>
-    using std::ostream_iterator;
-
-    int main() 
-    { 
-
-
-    vector<string> v1 = { "Hello", "my", "name", "is", "Devin" };
-
-    ostream_iterator<string> out(cout, " ");
-            
-    copy(v1.begin(), v1.end(), out);
-
-    cout << endl;
+ostream_iterator<string> out(cout, " ");
         
+copy(v1.begin(), v1.end(), out);
 
-    } 
+cout << endl;
+    
+
+} 
+```
 
 Output
 
-    Hello my name is Devin 
+```cpp
+Hello my name is Devin 
+```
 
 
 ### transform
@@ -365,46 +379,50 @@ Output
 
 #### Unary Operation
 
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector> 
+using std::vector;
+#include<string>
+using std::string;
+#include <algorithm> 
+using std::toupper;
+using std::transform;
+#include<iterator>
+using std::ostream_iterator;
 
-    #include<iostream>
-    using std::cout; using std::endl;
-    #include <vector> 
-    using std::vector;
-    #include<string>
-    using std::string;
-    #include <algorithm> 
-    using std::toupper;
-    using std::transform;
-    #include<iterator>
-    using std::ostream_iterator;
+char upper(char ch)
+{
+    return toupper(ch);
+}
 
-    char upper(char ch)
-    {
-        return toupper(ch);
-    }
+int main() 
+{ 
+    string s = "Devin Powers ";
 
-    int main() 
-    { 
-        string s = "Devin Powers ";
+    transform(s.begin(), s.end(), ostream_iterator<char> (cout, "\n"), upper);
 
-        transform(s.begin(), s.end(), ostream_iterator<char> (cout, "\n"), upper);
+} 
 
-    } 
+```
 
 Output
 
-    D
-    E
-    V
-    I
-    N
-    
-    P
-    O
-    W
-    E
-    R
-    S
+```cpp
+D
+E
+V
+I
+N
+
+P
+O
+W
+E
+R
+S
+```
 
 
 Another Example
@@ -412,45 +430,48 @@ Another Example
 ![inserting an Image](/images/C++/algorithms/transform2.jpg)
 
 
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector> 
+using std::vector;
+#include<string>
+using std::string;
+#include <algorithm> 
+using std::toupper;
+using std::transform;
 
-    #include<iostream>
-    using std::cout; using std::endl;
-    #include <vector> 
-    using std::vector;
-    #include<string>
-    using std::string;
-    #include <algorithm> 
-    using std::toupper;
-    using std::transform;
+int increment( int l)
+{
+    return l+9;
+}
 
-    int increment( int l)
+int main() 
+{ 
+    vector<int> vec = {1,2,4,5,6};
+
+    transform( vec.begin(), vec.end(), vec.begin(), increment);
+
+    // print Vector!!
+
+    for ( auto element : vec )
     {
-        return l+9;
+        cout << element << ", ";
     }
+}
+```
 
-    int main() 
-    { 
-        vector<int> vec = {1,2,4,5,6};
-
-        transform( vec.begin(), vec.end(), vec.begin(), increment);
-
-        // print Vector!!
-
-        for ( auto element : vec )
-        {
-            cout << element << ", ";
-        }
-    }
 
 Output
 
+```cpp
+10, 11, 13, 14, 15, 
+```
 
-    10, 11, 13, 14, 15, 
 
+# Add some more Algorithms later....
 
 #### Binary Operation
-
-
 
 
 

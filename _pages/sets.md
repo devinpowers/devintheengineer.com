@@ -24,60 +24,69 @@ Insert and Erase are Similar to Map's
 
 ### Inserting into a set example
 
-    #include<iostream>
-    using std::cout; using std::endl;
-    #include<iterator>
-    using std::ostream_iterator;
-    #include<set>
-    using std::set;
-    #include<string>
-    using std::string;
 
-    int main()
-    {
-        set<string> NBA;
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include<iterator>
+using std::ostream_iterator;
+#include<set>
+using std::set;
+#include<string>
+using std::string;
 
-        // insert method
+int main()
+{
+    set<string> NBA;
 
-        NBA.insert("Jordan");
-        NBA.insert("Lebron");
-        NBA.insert("Kobe");
+    // insert method
 
-        //declaring iterator to a set
-        set<string>::iterator it;
+    NBA.insert("Jordan");
+    NBA.insert("Lebron");
+    NBA.insert("Kobe");
 
-        cout << "Elements of the set:     ";
+    //declaring iterator to a set
+    set<string>::iterator it;
 
-        for (it = NBA.begin(); it != NBA.end(); it++)
-        {
-            cout << *it << ", ";
-        }
-        cout << endl;
-    }
+    cout << "Elements of the set:     ";
 
-Output
-
-    Elements of the set:     Jordan, Kobe, Lebron, 
-
-
-### Removing an Element from a set Example
-
-
-    NBA.erase("Jordan");
-
-    cout << "After removing the GOAT:   ";
-    
     for (it = NBA.begin(); it != NBA.end(); it++)
     {
         cout << *it << ", ";
     }
     cout << endl;
+}
 
+```
+
+Output
+
+```cpp
+Elements of the set:     Jordan, Kobe, Lebron, 
+
+```
+
+### Removing an Element from a set Example
+
+```cpp
+NBA.erase("Jordan");
+
+cout << "After removing the GOAT:   ";
+
+for (it = NBA.begin(); it != NBA.end(); it++)
+{
+    cout << *it << ", ";
+}
+cout << endl;
+
+```
 
 
 Output
 
-    After removing the GOAT:   Kobe, Lebron,
+```cpp
+After removing the GOAT:   Kobe, Lebron,
+```
 
 Remember when we learned about sets in Discrete Mathmatics and about Union, intersection, etc? 
 
@@ -105,87 +114,93 @@ We can perform these on sets using generic Algorithms but for the Algorithms to 
 
 ## other things to do with Sets
 
+```cpp 
+#include<iostream>
+using std::cout; using std::endl;
+#include<set>
+using std::set;
+#include<vector>
+using std::vector;
+#include<iterator>
+using std::ostream_iterator;
+#include<algorithm>
+using std::set_union; using std::set_intersection;
+using std::set_difference;
+using std::set_symmetric_difference;
+using std::sort; using std::find;
 
-    #include<iostream>
-    using std::cout; using std::endl;
-    #include<set>
-    using std::set;
-    #include<vector>
-    using std::vector;
-    #include<iterator>
-    using std::ostream_iterator;
-    #include<algorithm>
-    using std::set_union; using std::set_intersection;
-    using std::set_difference;
-    using std::set_symmetric_difference;
-    using std::sort; using std::find;
+int main (){
 
-    int main (){
+    // Regular sets get sorted automatically in C++
+    set<long> set1 = {5,3,1,4,2};
+    set<long> set2 = {1,8,3,5,9};
 
-        // Regular sets get sorted automatically in C++
-        set<long> set1 = {5,3,1,4,2};
-        set<long> set2 = {1,8,3,5,9};
-
-        //print our set
-        cout << "Set 1: ";
-        for (auto element : set1 )
-        {
-            cout << element << ", ";
-        }
-        cout << endl;
-
-        cout << "Set 2: ";
-        for (auto element : set2)
-        {
-            cout << element << ", ";
-        }
-        cout << endl;
-    
+    //print our set
+    cout << "Set 1: ";
+    for (auto element : set1 )
+    {
+        cout << element << ", ";
     }
+    cout << endl;
+
+    cout << "Set 2: ";
+    for (auto element : set2)
+    {
+        cout << element << ", ";
+    }
+    cout << endl;
+
+}
+
+```
+
 
 Output
 
-    Set 1: 1, 2, 3, 4, 5, 
-    Set 2: 1, 3, 5, 8, 9,
+```cpp
+Set 1: 1, 2, 3, 4, 5, 
+Set 2: 1, 3, 5, 8, 9,
 
-
+```
 
 ### Using the .find() algorithm on a Set
 
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include<set>
+using std::set;
+#include<algorithm>
+using std::find;
 
-    #include<iostream>
-    using std::cout; using std::endl;
-    #include<set>
-    using std::set;
-    #include<algorithm>
-    using std::find;
+int main (){
 
-    int main (){
+    // Regular sets get sorted automatically in C++
+    set<long> set1 = {5,3,1,4,2,6};   
+    set<long> set2 = {1,8,3,5,9};
 
-        // Regular sets get sorted automatically in C++
-        set<long> set1 = {5,3,1,4,2,6};   
-        set<long> set2 = {1,8,3,5,9};
+    set<long>::iterator iter, st;
 
-        set<long>::iterator iter, st;
+    long search_for = 4;
 
-        long search_for = 4;
+    // iterator points to a position where 4 is
+    iter = find(set1.begin(), set1.end(), search_for);
 
-        // iterator points to a position where 4 is
-        iter = find(set1.begin(), set1.end(), search_for);
-
-        cout << "The elements in the Set that come after " << search_for << " are: ";
-        for (  st = iter; st != set1.end(); st++)
-        {
-            cout << *st << " ";
-        }
-        cout << endl;
-
+    cout << "The elements in the Set that come after " << search_for << " are: ";
+    for (  st = iter; st != set1.end(); st++)
+    {
+        cout << *st << " ";
     }
+    cout << endl;
+
+}
+```
 
 Output
 
-    The elements in the Set that come after 4 are: 4 5 6 
-
+```cpp
+The elements in the Set that come after 4 are: 4 5 6 
+```
 
 
 Can also use the method of find() in sort by using this
@@ -194,57 +209,60 @@ Can also use the method of find() in sort by using this
 
 ## Set Union, Set intersection, and Symmetric Difference
 
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include<set>
+using std::set;
+#include<algorithm>
+using std::find;
+using std::set_union; using std::set_intersection;
+using std::set_difference;
+using std::set_symmetric_difference;
+using std::sort;
+#include<vector>
+using std::vector;
+#include<iterator>
+using std::ostream_iterator;
 
-    #include<iostream>
-    using std::cout; using std::endl;
-    #include<set>
-    using std::set;
-    #include<algorithm>
-    using std::find;
-    using std::set_union; using std::set_intersection;
-    using std::set_difference;
-    using std::set_symmetric_difference;
-    using std::sort;
-    #include<vector>
-    using std::vector;
-    #include<iterator>
-    using std::ostream_iterator;
 
+int main (){
 
-    int main (){
+    ostream_iterator<long> os_itr (cout, ", ");
 
-        ostream_iterator<long> os_itr (cout, ", ");
+    // Regular sets get sorted automatically in C++
+    set<long> set1 = {5,3,1,4,2,6};   
+    set<long> set2 = {1,8,3,5,9};
 
-        // Regular sets get sorted automatically in C++
-        set<long> set1 = {5,3,1,4,2,6};   
-        set<long> set2 = {1,8,3,5,9};
+    cout << "Union: " << endl;
 
-        cout << "Union: " << endl;
+    set_union(set1.begin(), set1.end(), set2.begin(), set2.end(), os_itr);
 
-        set_union(set1.begin(), set1.end(), set2.begin(), set2.end(), os_itr);
+    cout << '\n';
 
-        cout << '\n';
+    cout << "Intersection: " << endl;
 
-        cout << "Intersection: " << endl;
+    set_intersection(set1.begin(), set1.end(), set2.begin(), set2.end(), os_itr);
 
-        set_intersection(set1.begin(), set1.end(), set2.begin(), set2.end(), os_itr);
+    cout <<'\n';
 
-        cout <<'\n';
+    cout << "Symmetric Difference: " << endl;
+    
+    set_symmetric_difference(set1.begin(), set1.end(), set2.begin(), set2.end(), os_itr);
 
-        cout << "Symmetric Difference: " << endl;
-        
-        set_symmetric_difference(set1.begin(), set1.end(), set2.begin(), set2.end(), os_itr);
+    cout << endl;
 
-        cout << endl;
-
-    }
+}
+```
 
 Output
 
-    Union: 
-    1, 2, 3, 4, 5, 6, 8, 9, 
-    Intersection: 
-    1, 3, 5, 
-    Symmetric Difference: 
-    2, 4, 6, 8, 9, 
+```cpp
+Union: 
+1, 2, 3, 4, 5, 6, 8, 9, 
+Intersection: 
+1, 3, 5, 
+Symmetric Difference: 
+2, 4, 6, 8, 9, 
 
+```
