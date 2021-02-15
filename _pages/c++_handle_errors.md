@@ -8,38 +8,38 @@ header:
   image: "/images/tower3.jpeg"
   
 ---
+```cpp
+#include<iostream>
+using std::cout; using std::cin; using std::endl;
 
-    #include<iostream>
-    using std::cout; using std::cin; using std::endl;
+int main() {
 
-    int main() {
+    // handle errors
 
-        // handle errors
+    double num1 = 0, num2 = 0;
 
-        double num1 = 0, num2 = 0;
+    cout << "Enter Number 1: ";
+    cin >> num1;
 
-        cout << "Enter Number 1: ";
-        cin >> num1;
+    cout << "Enter Number 2: ";
+    cin >> num2;
 
-        cout << "Enter Number 2: ";
-        cin >> num2;
+    try{
 
-        try{
-
-            if(num2 == 0){
-                throw "Divison by zero is not possible";
-            }
-            else{
-                cout << "yes it will work" << endl;
-                cout << "answer is: " << num1 / num2 << endl;       
-            }
+        if(num2 == 0){
+            throw "Divison by zero is not possible";
         }
-        catch(const char exp)
-        {
-            cout << "Error: " << exp << "\n";
+        else{
+            cout << "yes it will work" << endl;
+            cout << "answer is: " << num1 / num2 << endl;       
         }
     }
-
+    catch(const char exp)
+    {
+        cout << "Error: " << exp << "\n";
+    }
+}
+```
 
 ![inserting an Image](/images/C++/errors/Page3.jpg)
 ![inserting an Image](/images/C++/errors/Page4.jpg)
@@ -53,88 +53,91 @@ header:
 
 more code
 
+```cpp
+#include<iostream>
+using std::cout; using std::cin; using std::endl; using std::exception;
 
-    #include<iostream>
-    using std::cout; using std::cin; using std::endl; using std::exception;
 
+int main() {
 
-    int main() {
+    try {
 
-        try {
-
-            int age = 15;
-            if (age >= 18) {
-                cout << "Access granted - you're old enough! " << endl;
-            }
-            else{
-
-                throw (age);
-            }
-
+        int age = 15;
+        if (age >= 18) {
+            cout << "Access granted - you're old enough! " << endl;
         }
-        catch (int myNum)
-        {
-            cout << "Access Denied, you must be at least 18 years old " << endl;
+        else{
 
-            cout << "your age is: " << myNum << endl;
+            throw (age);
+        }
+
+    }
+    catch (int myNum)
+    {
+        cout << "Access Denied, you must be at least 18 years old " << endl;
+
+        cout << "your age is: " << myNum << endl;
+    }
+
+
+}
+```
+
+Handling Multiple "Catches
+
+```cpp
+#include<string>
+using std::string;
+
+#include<iostream>
+using std::cout; using std::cin; using std::endl; using std::exception;
+
+
+int main() {
+
+    try {
+
+        string name;
+
+        name = "Devin";
+
+        int age = 18;
+    
+        if (age >= 18) {
+            cout << "Access granted - you're old enough! " << endl;
+        }
+        else{
+
+            throw (age);
+        }
+
+        if (name == "Austin")
+        {
+            cout << "Hi Austin!!" << endl;
+        }
+        else{
+
+            throw (name); // should send it to the correct catch 
         }
 
 
     }
+    catch (int myNum)
+    {
+        cout << "Access Denied, you must be at least 18 years old " << endl;
 
-Handling Multiple "Catches"
-
-    #include<string>
-    using std::string;
-
-    #include<iostream>
-    using std::cout; using std::cin; using std::endl; using std::exception;
-
-
-    int main() {
-
-        try {
-
-            string name;
-
-            name = "Devin";
-
-            int age = 18;
-        
-            if (age >= 18) {
-                cout << "Access granted - you're old enough! " << endl;
-            }
-            else{
-
-                throw (age);
-            }
-
-            if (name == "Austin")
-            {
-                cout << "Hi Austin!!" << endl;
-            }
-            else{
-
-                throw (name); // should send it to the correct catch 
-            }
-
-
-        }
-        catch (int myNum)
-        {
-            cout << "Access Denied, you must be at least 18 years old " << endl;
-
-            cout << "your age is: " << myNum << endl;
-        }
-
-        catch (string name_wrong)
-
-        {
-            cout << "The name is wrong! " << endl;
-        }
-
-
+        cout << "your age is: " << myNum << endl;
     }
+
+    catch (string name_wrong)
+
+    {
+        cout << "The name is wrong! " << endl;
+    }
+
+
+}
+```
 
 
 ![inserting an Image](/images/C++/errors/Page1.jpg)
