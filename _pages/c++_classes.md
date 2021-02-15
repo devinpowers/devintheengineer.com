@@ -215,6 +215,11 @@ My email address is: bob23@amazon.com
 
 - Using Getters and Setters
 
+Why Encapsulation?
+
+- Better control of your data, because you or someone else can change part of the code without it affecting other parts
+- Plus it adds an increase in the security of data
+
 ```cpp
 
 #include <iostream>
@@ -396,6 +401,101 @@ int main()
 }
 
 ```
+
+Lets do some more examples using setters and getters with the NBA!
+
+```cpp
+
+
+#include <iostream>
+#include <string>
+using std::string;
+using std::cout;
+using std::endl;
+
+
+class NBA {        
+private:
+
+    string Name;
+    string Team;
+    int Number;
+ 
+public:
+
+    void SetName(string x)
+    {
+        Name = x;
+    }
+    
+    string GetName(){
+        return Name;
+    }
+    void SetTeam(string y){
+        Team = y;
+    }
+    string GetTeam(){
+        return Team;
+    }
+
+    void SetNumber(int z){
+        Number = z;
+    }
+    int GetNumber(){
+        return Number;
+    }
+
+
+    NBA(string x, string y, int z){
+
+        Name = x;
+        Team = y;
+        Number = z;
+    }
+
+
+};
+
+
+int main() {
+
+   NBA player1 = NBA("STEPH CURRY", "Warriors", 35);
+
+   cout << player1.GetName() << endl;
+   cout << "Player 1 team: " << player1.GetTeam() << endl;
+   cout << "Player 1 Number: " << player1.GetNumber() << endl;
+   
+   NBA player2 = NBA("Lebron James", "Lakers", 23);
+
+   cout << "PLayer 2: " << player2.GetName() << endl;
+   cout << "PLayer 2 Team: " << player2.GetTeam() << endl;
+   cout << "Player 2 number: " << player2.GetNumber() << endl;
+
+   // can also change any of the attributes using the Setters!
+
+   player1.SetNumber(1);
+
+   cout << "Steph Curry Changed his number from 35 to: " << player1.GetNumber() << endl;
+
+}
+
+
+```
+
+Output:
+
+```cpp
+
+STEPH CURRY
+Player 1 team: Warriors
+Player 1 Number: 35
+PLayer 2: Lebron James
+PLayer 2 Team: Lakers
+Player 2 number: 23
+Steph Curry Changed his number from 35 to: 1
+
+```
+
 
 Output:
 
