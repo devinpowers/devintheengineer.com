@@ -99,6 +99,8 @@ and some other stuff!!!!
 
 ## Classes in C++
 
+- Composition, Abstraction, Encapsulation, Inheritance, and Polymorphism
+
 [Classes](https://devintheengineer.com/C++/c++_classes)
 
 
