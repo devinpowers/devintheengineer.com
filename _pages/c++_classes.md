@@ -139,7 +139,7 @@ Car Manufactoring number is (Private) : 98973131234134
 ![inserting an Image](/images/C++/classes/oop3.jpg)
 
 
-## constructors
+## Constructors
 ```cpp
 
 #include <iostream>
@@ -206,6 +206,7 @@ My email address is: bob23@amazon.com
 - Protecting our data
 
 - Using Getters and Setters
+
 ```cpp
 
 #include <iostream>
