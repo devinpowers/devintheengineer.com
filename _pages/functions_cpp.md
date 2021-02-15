@@ -16,15 +16,18 @@ FUNCTIONS IN C++
 
 Here's an example of using the built in math function to calculate the 'pow' x raised to power (x^p)
 
-  #include <cmath>
+```cpp
+#include <cmath>
 
-  using std::cout;
-  using std::endl;
+using std::cout;
+using std::endl;
 
-  int main()
-  {
-      cout << pow(10,2)<< endl;
-  }
+int main()
+{
+    cout << pow(10,2)<< endl;
+}
+```
+
 
 ### User-Defined Functions
 
@@ -36,20 +39,22 @@ Making our own functions!
 
 Calling a Function example
 
-  #include <iostream>
+```cpp
+#include <iostream>
 
-  using std::cout;
+using std::cout;
 
 
-  void greet(){
+void greet(){
 
-      cout << "Hi my name is Devin!";
-  }
-  int main()
+    cout << "Hi my name is Devin!";
+}
+int main()
 
-  {
-      greet();
-  }
+{
+    greet();
+}
+```
 
 ### Function Parameters
 
@@ -57,32 +62,33 @@ A function can be declared with parameters (arguments), a parameter is a value t
 
 example:
 
+```cpp
+#include <iostream>
+#include <string>
 
-  #include <iostream>
-  #include <string>
+using namespace std;
 
-  using namespace std;
+void print_name(string name)
+{
+    cout << name << endl;
+}
 
-  void print_name(string name)
-  {
-      cout << name << endl;
-  }
+int main()
+{
+    string name = "Devin";
 
-  int main()
-  {
-      string name = "Devin";
+    string name2 = "Paul";
 
-      string name2 = "Paul";
+    string name3 = "Jordan";
 
-      string name3 = "Jordan";
+    print_name(name);
 
-      print_name(name);
+    print_name(name2);
 
-      print_name(name2);
-
-      print_name(name3);
+    print_name(name3);
 
 }
+```
 
 
 
@@ -93,28 +99,30 @@ function that doesnt return any value
 example: Multiply two numbers
 
 
+```cpp
+#include <iostream>
+#include <string>
 
-  #include <iostream>
-  #include <string>
+using namespace std;
 
-  using namespace std;
+int multiply(int a, int b)
+{
+    return (a * b);
+}
 
-  int multiply(int a, int b)
-  {
-      return (a * b);
-  }
+int main()
+{
+  int sum;
 
-  int main()
-  {
-    int sum;
+  sum = multiply(100, 5);
 
-    sum = multiply(100, 5);
+  cout << "100 * 5 = " << sum << endl;
 
-    cout << "100 * 5 = " << sum << endl;
+  return 0;
 
-    return 0;
+}
+```
 
-  }
 
 ## Function Prototype
 
