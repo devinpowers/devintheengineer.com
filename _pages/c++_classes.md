@@ -88,6 +88,54 @@ My email address is: powers88@msu.edu
 
 ```
 
+More on Private and Public accesss
+
+```cpp
+#include <iostream> 
+using std::cout; using std::endl;
+#include <string>
+using std::string;
+  
+class car { 
+
+private:
+    // private cannont change this number from the object
+    long car_manufactoring = 98973131234134;
+
+public: 
+    int car_id; 
+    double distance; 
+  
+    void distance_travelled(); 
+  
+    void display(int a, int b) 
+    { 
+        cout << "car id is=\t" << a << "\ndistance travelled =\t" << b + 5 << endl;
+        cout << "Car Manufactoring number is (Private) : " << car_manufactoring << endl;
+    } 
+}; 
+  
+int main() 
+{ 
+    car c1; // Declare c1 of type car 
+    c1.car_id = 321; 
+    c1.distance = 12; 
+    c1.display(321, 12); 
+
+    return 0; 
+} 
+
+```
+
+Output:
+
+```cpp
+car id is=      321
+distance travelled =    17
+Car Manufactoring number is (Private) : 98973131234134
+
+```
+
 ![inserting an Image](/images/C++/classes/oop3.jpg)
 
 
