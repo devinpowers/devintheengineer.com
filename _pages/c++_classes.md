@@ -518,6 +518,7 @@ Devin works at: ADAC Automotive
 - hiding complex things behind things that are simple
 - Think of using your smart phone and its different functions like (moving apps, camera, pressing buttons), we dont need to know the code that is going on after we perform one of these functions
 
+![inserting an Image](/images/C++/classes/abstraction1.jpg)
 
 
 Here's a Contract
