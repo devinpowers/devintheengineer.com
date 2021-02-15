@@ -12,13 +12,6 @@ header:
 
 ## Object-Oriented Programming
 
-![inserting an Image](/images/C++/OOP/OPP1.jpg)
-![inserting an Image](/images/C++/OOP/OPP2.jpg)
-![inserting an Image](/images/C++/OOP/OPP3.jpg)
-![inserting an Image](/images/C++/OOP/OPP4.jpg)
-![inserting an Image](/images/C++/OOP/OPP5.jpg)
-
-
 
 - OOP is a view of how both data and functions that work with that data
 
@@ -37,6 +30,8 @@ General OOP Principles:
 - Inheritance
 - Polymorphism
 
+![inserting an Image](/images/C++/classes/oop1.jpg)
+![inserting an Image](/images/C++/classes/oop2.jpg)
 
 Here is a basic Class
 
@@ -93,6 +88,7 @@ My email address is: powers88@msu.edu
 
 ```
 
+![inserting an Image](/images/C++/classes/oop3.jpg)
 
 
 ## constructors
