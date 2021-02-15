@@ -624,6 +624,10 @@ int main()
 
 ## Inheritance 
 
+![inserting an Image](/images/C++/classes/inhert1.jpg)
+![inserting an Image](/images/C++/classes/inhert2.jpg)
+
+
 ```cpp
 
 #include <iostream>
@@ -770,6 +774,11 @@ Kobe got promoted!!
 
 
 Adding on to our example of inheritance!
+
+![inserting an Image](/images/C++/classes/inhert3.jpg)
+![inserting an Image](/images/C++/classes/inhert4.jpg)
+
+
 
 ```cpp
 
@@ -918,15 +927,131 @@ int main()
 
 Output
 
-```python
+```cpp
 Jacob is preparing Math lesson
 Jacob got promoted!! 
 
 
 ```
 
-Polymorphism
 
+Another Example of inheritance using the NBA:
+
+```cpp
+#include <iostream>
+#include <string>
+using std::string;
+using std::cout;
+using std::endl;
+
+
+class NBA {        
+private:
+
+    string Team;
+    int Number;
+
+protected:
+    string Name;
+ 
+public:
+
+    void SetName(string x)
+    {
+        Name = x;
+    }
+    
+    string GetName(){
+        return Name;
+    }
+    void SetTeam(string y){
+        Team = y;
+    }
+    string GetTeam(){
+        return Team;
+    }
+
+    void SetNumber(int z){
+        Number = z;
+    }
+    int GetNumber(){
+        return Number;
+    }
+
+    NBA(string x, string y, int z){
+
+        Name = x;
+        Team = y;
+        Number = z;
+    }
+
+    void Introduce(){
+
+        cout << "This is " << Name << endl;
+        cout << "I play for the " << Team << endl;
+        cout << "My number is: " << Number << endl;
+    }
+
+};
+
+class Team: public NBA {
+
+public:
+
+    string League;
+
+    // constructor:
+
+    Team(string x, string y, int z, string league)
+
+        :NBA(x,y,z)
+    
+    {
+        League = league;
+
+    }
+
+    void speak(){
+
+        // By making the attribute Name "protected" in NBA Class
+        // We can access it otherwise it wouldnt work!!
+
+        cout << Name << " plays in the " << League << endl;
+    }
+
+
+}; 
+
+
+int main() {
+
+    Team team1 = Team("Michael Jordan", "bulls", 23, "NBA");
+
+    team1.Introduce();
+
+    team1.speak();
+}
+
+
+
+```
+
+Output:
+
+```cpp
+This is Michael Jordan
+I play for the bulls
+My number is: 23
+Michael Jordan plays in the NBA
+
+```
+
+
+
+
+
+### Polymorphism
+ 
 ```cpp
 
 #include <iostream>
