@@ -306,7 +306,7 @@ Devin is 39 years old!
 
 Lets add some Validation Rules to our Setters!
 
-![inserting an Image](/images/C++/classes/encap1\2.jpg)
+![inserting an Image](/images/C++/classes/encap2.jpg)
 
 
 - Added some rules for age and company name
