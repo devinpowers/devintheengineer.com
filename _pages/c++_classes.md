@@ -220,6 +220,8 @@ Why Encapsulation?
 - Better control of your data, because you or someone else can change part of the code without it affecting other parts
 - Plus it adds an increase in the security of data
 
+![inserting an Image](/images/C++/classes/encap1.jpg)
+
 ```cpp
 
 #include <iostream>
@@ -303,6 +305,9 @@ Devin is 39 years old!
 
 
 Lets add some Validation Rules to our Setters!
+
+![inserting an Image](/images/C++/classes/encap1\2.jpg)
+
 
 - Added some rules for age and company name
 
@@ -403,6 +408,8 @@ int main()
 ```
 
 Lets do some more examples using setters and getters with the NBA!
+
+![inserting an Image](/images/C++/classes/encap3.jpg)
 
 ```cpp
 
@@ -917,7 +924,7 @@ Jacob got promoted!!
 
 ```
 
-Poly
+Polymorphism
 
 ```cpp
 
