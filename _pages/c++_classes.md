@@ -140,6 +140,14 @@ Car Manufactoring number is (Private) : 98973131234134
 
 
 ## Constructors
+
+3 Rules for Constructors:
+
+1. No return type
+2. Has the same name as the Class
+3. Must be Public
+
+
 ```cpp
 
 #include <iostream>
