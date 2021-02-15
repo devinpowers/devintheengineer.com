@@ -9,16 +9,31 @@ header:
   
 ---
 
+What is a function ? 
 
-FUNCTIONS IN C++
+ - its the encapsulation of some calculation
+
+ - We invoke a function and provide informatino in the form of arguments
+
+ - The function receives the arguments as "parameters", and uses the parameters to make its calculation!
+
+ - A value is returned by the function to the Caller!
+
+
+ Functions are very useful to break down programs into smaller and more understable pieces
+
+ - Functions should have one purpose and only one purpose ( a function abstracts one idea)
+ - Should be generic, resuable, and readable
+
+
 
 ### Built-In Functions (Standard Library Functions)
 
-Here's an example of using the built in math function to calculate the 'pow' x raised to power (x^p)
+Here's an example of using the built-in math function to calculate the 'pow' x raised to power (x^p)
 
 ```cpp
 #include <cmath>
-
+#include <iostream>
 using std::cout;
 using std::endl;
 
@@ -28,26 +43,26 @@ int main()
 }
 ```
 
+Output:
+```cpp
+100
+```
 
 ### User-Defined Functions
 
 Calling a function is similar to Python with the ';'
 
-Making our own functions!
-
-
-
-Calling a Function example
+Making our own functions! Void doesnt return anything, it used when were calling a function to print something! Here is an example:
 
 ```cpp
 #include <iostream>
 
 using std::cout;
-
+using std::endl;
 
 void greet(){
 
-    cout << "Hi my name is Devin!";
+    cout << "Hi my name is Devin!" << endl;
 }
 int main()
 
@@ -55,12 +70,18 @@ int main()
     greet();
 }
 ```
+Output:
+
+```cpp
+Hi my name is Devin!
+```
+
 
 ### Function Parameters
 
 A function can be declared with parameters (arguments), a parameter is a value that is passed when declaring a function.
 
-example:
+Example:
 
 ```cpp
 #include <iostream>
@@ -89,21 +110,32 @@ int main()
 
 }
 ```
+Output:
 
+```cpp
+Devin
+Paul
+Jordan
+```
 
 
 ### Void Functions and Return Statements
 
-function that doesnt return any value 
+Function that doesnt return any value is a void function, which is used to print!
 
 example: Multiply two numbers
 
 
 ```cpp
+
+
 #include <iostream>
 #include <string>
 
-using namespace std;
+#include<cmath>
+
+using std::cout;
+using std::endl;
 
 int multiply(int a, int b)
 {
@@ -123,15 +155,12 @@ int main()
 }
 ```
 
+Output:
 
-## Function Prototype
+```cpp
+100 * 5 = 500
+```
 
 
-
-Why use user-defined functions?
-
-- reusable code
-- divide tasks
-- readabilty
-
+## Scope
 
