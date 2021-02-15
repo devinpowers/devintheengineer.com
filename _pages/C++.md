@@ -12,15 +12,10 @@ header:
 
 I plan on posting notes here with some basic projects to show my understanding of concepts in C++
 
-After Learning Python the past year, C++ syntax looks so funky, but after a few weeks, it's not too bad! so far...
+After Learning Python the past year, C++ syntax looks so funky, but after a few weeks, it's not too bad! so far..
 
 
-![](http://i.imgur.com/Ssfp7.gif)
-
-![](https://media.giphy.com/media/DHqth0hVQoIzS/giphy.gif)
-
-and some other stuff!!!!
-### Introduction Basics
+## Week 1: C++ and Types
 
 [Intro to C++ ](https://devintheengineer.com/C++/intro_c++)
 
@@ -29,25 +24,20 @@ and some other stuff!!!!
 - Basic Input and Output
 - Type Conversion
 
+## Week 2: Control Conditionals and References
+
 [Operators to C++ ](https://devintheengineer.com/C++/operators_c++)
 
-
 - Operators (adding, dividing, etc)
-
-[Inputting and Outputting in C++ ](https://devintheengineer.com/C++/input_c++)
-
-- Inputting and Outputting in C++
-
-
-### Flow Control
 
 [Control in C++ ](https://devintheengineer.com/C++/control_c++)
 
 - if statements, for loops, switch, and while loops 
 - break and continue
 
+[References in C++](https://devintheengineer.com/C++/c++_references)
 
-### Functions
+## Week 3: Functions
 
 [Functions in C++ ](https://devintheengineer.com/C++/functions_cpp)
 
@@ -56,73 +46,65 @@ and some other stuff!!!!
 - Function Return
 - Recursion
 
-### Associative Containers
+## Week 4: Strings and Type Modifers
+- Dont have any notes uploaded!
+
+## Week 5: Functions and Multiple File Compilation (working with Headers)
+
+[Working with Multiple Files in C++](https://devintheengineer.com/C++/c++_headers)
 
 
-[Maps](https://devintheengineer.com/C++/maps)
-
-- Pairs
-- Maps
-
-
-[Sets](https://devintheengineer.com/C++/sets)
-
-
-### Arrays and Vectors
-
-[Arrays](https://devintheengineer.com/C++/arrays)
-
-[STL Arrays](https://devintheengineer.com/C++/stl_arrays)
-
-[Vectors](https://devintheengineer.com/C++/c++_vectors)
-
-
-### Input and Output
+## Week 6: Vectors, Exceptions, and String Stream
 
 [input and output ](https://devintheengineer.com/C++/input_output)
 
 [Working with txt files ](https://devintheengineer.com/C++/c++_txt)
 
+[Vectors](https://devintheengineer.com/C++/c++_vectors)
 
-## Working with Iterators in C++
+[Handling Errors in C++](https://devintheengineer.com/C++/c++_handle_errors)
+
+
+## Week 7: Generic Algorithms and Iterators
+
+[Basic Algorithms](https://devintheengineer.com/C++/c++_algorithms)
 
 [Iterators in C++](https://devintheengineer.com/C++/c++_iterators)
 
 - iterating using Strings and Vectors
 - iterating using Maps and Sets
 
-## Pointers in C++
 
-[Pointers](https://devintheengineer.com/C++/pointers)
+## Week 8: Associative Containers and Streams
 
- - gotta work on
+[Maps](https://devintheengineer.com/C++/maps)
 
-## Classes in C++
+- Pairs
+- Maps
 
-- Composition, Abstraction, Encapsulation, Inheritance, and Polymorphism
+[Sets](https://devintheengineer.com/C++/sets)
+
+[IO Streams ](https://devintheengineer.com/C++/streams)
+
+
+## Week 9: Introduction to Classes
+
+-  Introduction to Composition, Abstraction, Encapsulation, Inheritance, and Polymorphism
 
 [Classes](https://devintheengineer.com/C++/c++_classes)
 
 
+# Extras:
 
-### Extra Stuff in C++
+[Arrays](https://devintheengineer.com/C++/arrays)
 
-[References in C++](https://devintheengineer.com/C++/c++_references)
-
-[Working with Multiple Files in C++](https://devintheengineer.com/C++/c++_headers)
-
-[Handling Errors in C++](https://devintheengineer.com/C++/c++_handle_errors)
-
-[IO Streams ](https://devintheengineer.com/C++/streams)
+[STL Arrays](https://devintheengineer.com/C++/stl_arrays)
 
 [Makefiles](https://devintheengineer.com/C++/makefiles)
 
-[Basic Algorithms](https://devintheengineer.com/C++/c++_algorithms)
+[Pointers](https://devintheengineer.com/C++/pointers)
 
-
-
-
-
+ - gotta work on
 
 
 
