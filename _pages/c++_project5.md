@@ -195,12 +195,12 @@ string decode (string msg, string key1, string key2)
         msg += "x";
     }
 
-    for (int i = 0; i < msg.length(); i++ )
+    for (int a = 0; a < msg.length(); a++ )
     {
 
-        result += decode_digraph(msg.substr(i,2),block1, block2);
+        result += decode_digraph(msg.substr(a,2),block1, block2);
 
-        i++; // make sure we iteration by 2, so we don't repeat a value
+        a++; // make sure we iteration by 2, so we don't repeat a value
 
     }
 
@@ -213,3 +213,108 @@ string decode (string msg, string key1, string key2)
 
 main.cpp file
 
+```python
+#include<iostream>
+using std::cout; using std::cin; using std::endl; using std::boolalpha;
+#include<string>
+using std::string; using std::to_string; using std::tolower;
+#include<cmath>
+#include <locale>
+using std::tolower;
+#include "functions.h"
+
+int main(){
+
+    //here is some function testing, not included in mimir submission
+
+    //clean string
+    string s = "Hello World I love C plus plus"; 
+    cout << "The orginal Message : " << s << endl;
+    cout << endl;
+    /*
+    string clean = clean_string(s);
+    cout << clean << endl;
+    */
+
+    //create encoding
+    
+    //string result = create_encoding("example");
+    /*
+    // encode_digraph
+    string first_keyword = create_encoding("example");
+    string second_keyword = create_encoding("keyword");
+    string result = encode_digraph("he", first_keyword, second_keyword);
+    cout << result << endl;
+
+    */
+
+    /*
+    // decode_digraph
+    string first_keyword = create_encoding("example");
+    string second_keyword = create_encoding("keyword");
+    string result = decode_digraph("fy", first_keyword, second_keyword);
+    cout << result << endl; 
+
+    */
+
+
+    string first_keyword = create_encoding("example");
+    string second_keyword = create_encoding("keyword");
+
+    string result = encode(s,first_keyword,second_keyword);
+
+    cout << "Encode: " << result << endl;
+
+    cout << endl;
+
+    //now lets decode out result
+
+    string decode_msg = "fyhghzhsjebigzaoofrsofrs";
+
+    string result2 = decode(decode_msg, first_keyword, second_keyword);
+    cout << "Decode: " <<result2 << endl;
+    
+
+    return 0;
+}
+
+
+```
+
+Some output:
+
+```python
+The orginal Message : Hello World I love C plus plus
+
+Encode: fyhghzhsjebigzaoofrsofrs
+
+Decode: helloworldilovecplusplus
+
+```
+
+
+The header file - functions.h
+
+```python
+#ifndef PROJ05_FOURSQUARE
+#define PROJ05_FOURSQUARE
+
+#include<iostream>
+using std::cout; using std::cin; using std::endl; using std::boolalpha;
+#include<string>
+using std::string; using std::to_string; using std::tolower;
+#include<cmath>
+#include <locale>
+using std::tolower;
+
+string clean_string(string s);
+string create_encoding(string key);
+string encode_digraph(string dg, string block1, string block2);
+string decode_digraph(string dg, string block1, string block2);
+string encode(string msg, string key1, string key2);
+string decode(string msg, string key1, string key2);
+
+#endif
+
+
+```
