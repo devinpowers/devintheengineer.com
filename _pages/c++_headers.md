@@ -129,137 +129,57 @@ Private
 
 We have 3 files:
 
-1. main.cpp
+1. functions.cpp
 
 ```cpp
-#include <iostream>
-using std::cout; using std::endl; using std::fixed;
-#include <iomanip>
-using std::setprecision; 
 
-#include "support.h"
+#include "functions.h"
+
+
+long f1(long p1, long p2){
+  return p1 * p2;
+}
+
+```
+
+2. main.cpp
+
+```cpp
+
+#include<iostream>
+using std::cout; using std::endl;
+
+#include "functions.h"
 
 int main(){
-    int input_status, root_status;
-    double A, B, C, root_1, root_2;
-
-    cout << fixed << setprecision( 1 );
-
-    input_status = get_coefficients( A, B, C );
-    while (input_status != 0) {
-		root_status = roots( A, B, C, root_1, root_2 );
-		cout << endl << "The equation:" << endl;
-		cout << "  " << A << " x^2 + " << B
-			<< " x + " << C << endl;
-		switch (root_status) {
-			case 0:
-				cout << "\n has the following roots"<<endl;
-				cout << "  root 1 = " << root_1 << endl;
-				cout << "  root 2 = " << root_2 << endl;
-				break;
-			
-			case 1:
-				cout <<"\n has the following root:" << endl;
-				cout << "  root = " << root_1 << endl;
-				break;
-			
-			case 2:
-				cout << endl << "has complex roots." << endl;
-				break;
-			
-			case 3:
-				cout << "\n is not quadratic." << endl;
-				break;
-		}
-		input_status = get_coefficients( A, B, C );
-    }
+  cout << f1(10,20) << endl;
+  cout << f1(20) << endl;
 }
 
 ```
 
-2. support.cpp
+3. functions.h
 
 ```cpp
-#include <iostream>
-using std::cout; using std::endl; using std::cin;
-#include <cmath>
-using std::sqrt;
+#ifndef DEFAULT_TEST
+#define DEFAULT_TEST
 
-#include "support.h"
-
-/*
-  Purpose:  Accept the three coefficients of 
-            an equation from the user.
-  params:   Coefficients (A, B and C) of the equation
-  return: True if "end-of-file"; 
-        : false otherwise (as the return expression)
-*/
-
-bool get_coefficients( double & A, double & B,
-		       double & C ){
-    int status;
-
-    cout << "\nEnter quadratic equation coefficients\n";
-    cout << "(space separated A, B and C, EOF to halt):";
-    cin >> A >> B >> C;
-
-    if (cin.eof())
-	    status = false;
-    else
-	    status = true;
-
-    return status;
-}
-
-/*
-  Purpose: Given the coefficients, compute roots
-           of a quadratic equation.
-  params: (A, B and C) of the equation
-          root_1, root_2 (as ref parameters)
-  return status:(3-not a quad, 2-complex,
-                1-one real root, 0-two real roots
-*/
-
-int roots(double A, double B, double C,
-	      double & root_1, double & root_2){
-    int status;
-    double discriminant;
-
-    if (A == 0.0) {
-	status = 3;    // Not a quadratic equation
-    } else {
-        discriminant = B*B - 4.0*A*C;
-        if (discriminant < 0.0) {
-            status = 2;    // two complex roots
-        } else if (discriminant == 0.0) {
-            status = 1;    // one real root
-            root_1 = (-B)/(2.0*A);
-        } else {
-            status = 0;    // two real roots
-            root_1 = (-B + sqrt(discriminant))/(2.0*A);
-            root_2 = (-B - sqrt(discriminant))/(2.0*A);
-        }
-    }
-    return status;
-}
-```
-
-3. support.h
-
-```cpp
-
-#ifndef ROOTS_SOLVER
-#define ROOTS_SOLVER
-
-bool get_coefficients( double &, double &, double & );
-int roots( double, double, double, double &, double & );
+long f1(long p1, long p2=2);
 
 #endif
 
-
 ```
 
-As you can see both the main.cpp and support.cpp file have the #include "support.h" file
+We see that the Header file contains Declerations
+
+
+As you can see both the main.cpp and support.cpp file have the #include "support.h" file,
+when we include header files from C++ standard libraries or other tools we use the angle brackets <>
+- #include <iosteam>
+
+But when we include from our own local directory we use " "
+
+- #include "header.h"
 
 
 How do we complile everything?
@@ -267,9 +187,9 @@ How do we complile everything?
 - lets go to our terminal
 
 ```cpp
-g++ -Wall -std=c++17 -c support.cpp
+g++ -Wall -std=c++17 -c functions.cpp
 ```
-Will return -> support.o file
+Will return -> functions.o file
 
 ```cpp
 g++ -Wall -std=c++17 -c main.cpp
@@ -279,7 +199,7 @@ Will return -> main.o file
 Now that we have object files we can link them
 
 ```cpp
-g++ main.o support.o
+g++ main.o functions.o
 ```
 
 Will return -> a.out
@@ -294,7 +214,7 @@ Now we can run the File (a.out or outfile.exe)
 We can also just compile in one-step:
 
 ```cpp
-g++ -Wall -std=c++17 main.cpp support.cpp
+g++ -Wall -std=c++17 main.cpp functions.cpp
 ```
 
 And it spits out the a.out file, that we can run to execute the program!!
