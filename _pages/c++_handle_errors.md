@@ -1,13 +1,30 @@
 ---
 layout: archive
 permalink: /C++/c++_handle_errors
-title: "Handling Errors in C++ "
+title: "Handling Errors in C++ (Exceptions) "
 author_profile: true
 
 header:
   image: "/images/tower3.jpeg"
   
 ---
+
+try: A block where code is run and if an error occurs an exception is thrown, potentially to catch with other code
+throw: raises an exception (when something bad happens, someone should handle the problem!!!!!)
+catch: a block where an exception is caught and handled (in conjunction with try)
+
+
+The idea is to keep a watch on particular section of code, if we get an exception raise/throw that exception. Then look for a "Catcher" that can handle that kind of exception. If a Catcher is found, the Catcher will handle the error, otherwise the program will end!!
+
+
+#### Try Block
+- contains code that we want to keep an eye on, to watch if any kind of errors occur
+
+- If an error occurs anywhere in the try block, execution stops immediately in the block, and the try looks for an appropraite catch to deal with the error.
+
+
+#### Exception Block
+
 ```cpp
 #include<iostream>
 using std::cout; using std::cin; using std::endl;
