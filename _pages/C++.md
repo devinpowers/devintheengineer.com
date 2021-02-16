@@ -47,8 +47,10 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 - Recursion
 
 ## Week 4: Strings and Type Modifers
-- Dont have any notes uploaded!
-
+- Chars ('') and Strings ("")
+- Type Modifers
+  - const
+  
 ## Week 5: Functions and Multiple File Compilation (working with Headers)
 
 [Working with Multiple Files in C++](https://devintheengineer.com/C++/c++_headers)
