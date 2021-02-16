@@ -276,3 +276,29 @@ g++ -Wall -std=c++17 -c main.cpp
 ```
 Will return -> main.o file
 
+Now that we have object files we can link them
+
+```cpp
+g++ main.o support.o
+```
+
+Will return -> a.out
+
+Now we can run the File (a.out or outfile.exe)
+
+```
+./a.out
+```
+
+
+We can also just compile in one-step:
+
+```cpp
+g++ -Wall -std=c++17 main.cpp support.cpp
+```
+
+And it spits out the a.out file, that we can run to execute the program!!
+
+```
+./a.out
+```
