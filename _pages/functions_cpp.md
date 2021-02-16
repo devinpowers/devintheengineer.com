@@ -274,9 +274,7 @@ Its a really good way to get around the problem of making a function for each ty
 
 - For return type you can use auto, since auto will automatically know what type to return based on the parameter passeds in.
 
-Example of 
-
-![inserting an Image](/images/C++/functions/func1.jpg)
+Example of a Template, we can pass types int, long, double, string to the Template and the function works!!!
 
 
 ```python
