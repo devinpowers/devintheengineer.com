@@ -50,10 +50,11 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 - Chars ('') and Strings ("")
 - Type Modifers
   - const
-  
+
 ## Week 5: Functions and Multiple File Compilation (working with Headers)
 
-[Working with Multiple Files in C++](https://devintheengineer.com/C++/c++_headers)
+[Working with Multiple Files (Headers) in C++](https://devintheengineer.com/C++/c++_headers)
+
 
 
 ## Week 6: Vectors, Exceptions, and String Stream
