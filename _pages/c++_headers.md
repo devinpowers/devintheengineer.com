@@ -19,12 +19,13 @@ We do this in C++ where we create seperate file for each code section and then c
 
  A Declaration function has no function body, but it does have all the types the function uses.
 
-    - Knowing the types, the complier can compile (check types) under the assumption that the function definition is provided later at link time.
+- Knowing the types, the complier can compile (check types) under the assumption that the function definition is provided later at link time.
 
-    - A declaration  registers the signature of a function:
-        - its name
-        - its return type 
-        - its parameter types
+- A declaration  registers the signature of a function:
+    - its name
+    - its return type 
+    - its parameter types
+
 
 ### Header Files
 
@@ -53,3 +54,4 @@ file.o
 ```
 
 The .o file is an object file to be linked, it's not executable!, it still needs to be linked!
+
