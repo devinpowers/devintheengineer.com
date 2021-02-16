@@ -57,9 +57,9 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 
 
-## Week 6: Vectors, Exceptions, and String Stream
+## Week 6: Vectors, Exceptions, and String Stream (importing txt files)
 
-[input and output ](https://devintheengineer.com/C++/input_output)
+[Input and output ](https://devintheengineer.com/C++/input_output)
 
 [Working with txt files ](https://devintheengineer.com/C++/c++_txt)
 

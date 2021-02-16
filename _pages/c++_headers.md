@@ -9,11 +9,9 @@ header:
   
 ---
 
-It is common to break a large problem into smaller problems
+C++ code files (with a .cpp extension) are not the only files commonly seen in C++ programs. The other type of file is called a header file. Header files usually have a .h extension, but you will occasionally see them with a .hpp extension or no extension at all. The primary purpose of a header file is to propagate declarations to code files.
 
-We do this in C++ where we create seperate file for each code section and then combine them later
-
-
+Header files allow us to put declarations in one location and then import them wherever we need them. This can save a lot of typing in multi-file programs.
 
 ### Declaration
 
