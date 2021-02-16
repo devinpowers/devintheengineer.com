@@ -263,3 +263,14 @@ As you can see, the number after it was changed in the function has remained cha
 
 
 ## Function Templates
+
+What is a Template?
+
+Its a really good way to get around the problem of making a function for each type (int, long)
+
+- its a pattern that can be used to create a function with whatever types we want!!
+
+- The template itself is not a function, it creates a function with some type information set
+
+- For return type you can use auto, since auto will automatically know what type to return based on the parameter passeds in.
+
