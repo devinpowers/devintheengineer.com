@@ -11,12 +11,23 @@ header:
 
 Project 5 is Working on a 4-Square Cipher Using Strings and Functions in C++
 
-```cpp
-#include <iostream>
-using std::cout; using std::cin; using std::endl;
-#include<string>
-using std::string;
+File Directory:
 
+1. functions.cpp
+2. main.cpp
+3. functions.h
+
+
+Here is the functions.cpp file!
+
+```cpp
+#include<iostream>
+using std::cout; using std::cin; using std::endl; using std::boolalpha;
+#include<string>
+using std::string; using std::to_string; using std::tolower;
+#include<cmath>
+#include <locale>
+using std::tolower;
 
 
 const string alphabet = "abcdefghijklmnoprstuvwxyz"; //without 'q'
@@ -37,6 +48,7 @@ string clean_string (string s)  // Function for "Cleaning the String!!"
 
 
 }
+
 string create_encoding(string key){
 
     string keyword = ""; // string that were returning 
@@ -103,7 +115,6 @@ string encode_digraph(string dg, string block1, string block2){
 
 string encode(string msg, string key1, string key2){
 
-
     string block1;
     string block2;
     string encode_message;
@@ -129,6 +140,8 @@ string encode(string msg, string key1, string key2){
     {
         // send to encode_digraph
 
+        cout << "MSG CLEAN PAIR: " << msg_clean.substr(i,2) << endl;
+
         encode_message += encode_digraph( msg_clean.substr(i,2), block1, block2) ;
 
         i++; // makes sure we skip iteration so we dont repeat a value
@@ -139,26 +152,64 @@ string encode(string msg, string key1, string key2){
 
 }
 
+string decode_digraph(string dg, string block1, string block2)
+{
+    string results;
+
+    char first_letter = dg[0];
+    char second_letter = dg[1];
+    // return index from blocks
+    int index_1 = block1.find(first_letter);
+    int index_2 = block2.find(second_letter);
+    
+    int first_row = index_1/5;
+    int first_column = index_2 %5;
+
+    int second_row = index_2/5;
+    int second_column = index_1 %5;
 
 
+    int first_location_index = (first_row * 5) + first_column;
 
-int main() {
+    int second_location_index = (second_row * 5) + second_column;
 
-    string message;
-    string keyword1;
-    string keyword2;
+    results += alphabet[first_location_index];
+    results += alphabet[second_location_index];
 
-    cout << "Please Input a message to encode: ";
-    cin >> message;
-    cout << "Please input a keyword: " ;
-    cin >> keyword1;
-    cout << "Please input another keyword: ";
-    cin >> keyword2;
-
-
-
-    cout << encode(message, keyword1, keyword2) <<endl;
-
+    return results;
 
 }
+
+
+string decode (string msg, string key1, string key2)
+{
+    string result;
+
+    // take 2 keywords and create_encoding so I can pass them to our decode_digraph functionm
+
+    string block1 = create_encoding(key1);
+    string block2 = create_encoding(key2);
+
+    if (msg.length() % 2 != 0 )
+    {
+        msg += "x";
+    }
+
+    for (int i = 0; i < msg.length(); i++ )
+    {
+
+        result += decode_digraph(msg.substr(i,2),block1, block2);
+
+        i++; // make sure we iteration by 2, so we don't repeat a value
+
+    }
+
+    return result;
+
+}
+
 ```
+
+
+main.cpp file
+
