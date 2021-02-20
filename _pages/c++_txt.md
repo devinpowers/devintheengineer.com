@@ -513,5 +513,65 @@ What does the ostringstream allow for?
 - It allows you to output using all the cout operators, and then turn it into one string at the end!
 - So you can use different cout methods like rounding and widths
 - std::ostringstream does not support reading
+
 Example:
+
+```cpp
+#include <iostream>
+#include <sstream>
+#include <string>
+using std::istringstream; using std::ostringstream;
+using std::string;
+using std::cout;
+using std::endl;
+
+
+int main() {
+
+    string input = "Devin Powers 25 1995";
+
+    string first, last;
+    long age, year;
+
+   istringstream iss;
+   iss.str(input);
+
+   iss >> first;
+   iss >> last;
+   iss >> age;
+   iss >> year;
+
+   cout << "Last: " << last << endl;
+   cout << "First: " << first << endl;
+   cout << "Age: " << age << endl;
+   cout << "Year: " << year << endl;
+
+   //ostringstream
+
+
+
+
+   ostringstream oss;
+
+   long actual_age = 2017 - year + age;
+
+   //one big string
+
+   oss << first << " " << last << " was " << age << " in " << year << " so should be " << actual_age << endl;
+
+   cout << oss.str() << endl;
+
+}
+```
+
+Output:
+
+```cpp
+Last: Powers
+First: Devin
+Age: 25
+Year: 1995
+Devin Powers was 25 in 1995 so should be 47
+
+```
 
