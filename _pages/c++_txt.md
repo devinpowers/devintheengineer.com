@@ -306,6 +306,9 @@ istringstream iss(line); //declare
 
 iss.str(line); // using str method
 ```
+![inserting an Image](/images/C++/stream/stream1.jpg)
+![inserting an Image](/images/C++/stream/stream2.jpg)
+
 
 
 Using cin 
@@ -410,6 +413,8 @@ Output:
 
 Using istringstream with a while loop to check all values in the string! 
 
+![inserting an Image](/images/C++/stream/stream3.jpg)
+
 
 ```cpp
 #include <iostream>
@@ -507,6 +512,9 @@ That stream was not sucessful!
 
 
 ### istringstream vs. ostringstream
+
+![inserting an Image](/images/C++/stream/stream4.jpg)
+
 
 What does the ostringstream allow for?
 
@@ -616,4 +624,4 @@ std::stol(): converts the string, provided as an argument in the function call, 
 
 Can convert decimal, dexadecimal, and binary number
 
-
+Example
