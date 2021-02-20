@@ -308,10 +308,73 @@ iss.str(line); // using str method
 ```
 
 
+Using cin 
+
+Using iss and .get() together we can see that iss >> word will take the entire word, regardless if there is a space between it. get() will take just the next character, which could be a space! As shown below:
+
+```cpp
+
+#include <iostream>
+#include <sstream>
+#include <string>
+using std::istringstream;
+using std::string;
+using std::cout;
+using std::endl;
 
 
+int main() {
 
-example:
+    string word;
+    char ch;
+
+    istringstream iss("Devin Powers is Cool");
+
+    iss >> word;
+    cout << "Word: " << word << endl;
+
+    iss >> word;
+
+    cout << "Word: " << word << endl;
+
+    iss >> word;
+
+    cout << "Word: " << word << endl;
+
+    iss.get(ch);
+    cout << "Char: " << ch << endl;
+    
+    iss.get(ch);
+    cout << "Char: " << ch << endl;
+
+    iss.get(ch);
+    cout << "Char: " << ch << endl;
+
+    iss.get(ch);
+    cout << "Char: " << ch << endl;
+
+    iss.get(ch);
+    cout << "Char: " << ch << endl;
+
+}
+
+```
+
+Output:
+```cpp
+Word: Devin
+Word: Powers
+Word: is
+Char:  
+Char: C
+Char: o
+Char: o
+Char: l
+
+```
+
+
+Other Examples with istringstream!
 
 ```cpp
 #include <iostream>
@@ -441,4 +504,14 @@ Stream was sucessful: 3
 That stream was not sucessful! 
 
 ```
+
+
+### istringstream vs. ostringstream
+
+What does the ostringstream allow for?
+
+- It allows you to output using all the cout operators, and then turn it into one string at the end!
+- So you can use different cout methods like rounding and widths
+- std::ostringstream does not support reading
+Example:
 
