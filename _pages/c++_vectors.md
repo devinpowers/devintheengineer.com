@@ -96,6 +96,53 @@ If we want to check the value, we use .back()
 ### Operators
 
 
+```cpp
+#include <iostream>
+using std::cout;using std::endl;
+
+#include <vector>
+using std::vector;
+
+int main() {
+
+    vector<int> v = {1, 2, 3, 4, 5};
+
+    cout << "v.front(): " << v.front() << endl;
+
+    cout << "v.back(): " << v.back() << endl;
+
+    v.clear();
+
+    cout << "Lets use v.size():  " << v.size() << endl;
+    v.assign(2,10);
+
+    cout << "Lets check the front and back of our vector" << endl;
+    
+    cout << "v.front(): " << v.front() << endl;
+
+    cout << "v.back(): " << v.back() << endl;
+}
+```
+Output:
+```cpp
+v.front(): 1
+v.back(): 5
+Lets use v.size():  0
+Lets check the front and back of our vector
+v.front(): 10
+v.back(): 10
+```
+
+
+
+
+
+
+
+
+
+### Iterating Through a vector
+
 
 
 ![inserting an Image](/images/C++/vectors/Page1.jpg)
