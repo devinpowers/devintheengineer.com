@@ -27,7 +27,6 @@ vector<T> : Definition
 vector <double> temp;
 vector <int> points;
 vector <string> names;
-
 ```
 
 The <> describe the type that will be used with the class!
@@ -57,13 +56,21 @@ vector<int> vec(5);
 #### Different vector<T> member functions
 
 v.capacity()
+
 v.size()
+
 v.empty()
+
 v.reserve()
+
 v.push_back(value)
+
 v.pop_back()
+
 v.size() is useful because v.size() - 1 is the index of the last element in v
+
 v.empty() is equivalent to v.size() == 0
+
 v.reserve()
 
 ### Access front and back of a Vector
