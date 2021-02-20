@@ -138,10 +138,7 @@ v.back(): 10
 
 
 
-
-
-
-### Iterating Through a vector
+### Iterating Through a vector in order to Print!
 
 
 
@@ -156,7 +153,6 @@ Lets Create a Vector
 #include <iostream>
 using std::cout;
 using std::endl;
-
 #include <vector>
 using std::vector;
 
@@ -174,6 +170,14 @@ int main()
 
 }
 ```
+Output:
+```cpp
+First Index: 1
+Second Index: 2
+Third Index: 3
+Fourth index: 4
+```
+
 
 
 How would you retrieve the last element in a Vector?
