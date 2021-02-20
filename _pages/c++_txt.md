@@ -292,9 +292,24 @@ Eric
 
 # String Streams
 
-### istringstream
+### istringstream in #include<sstream>
 
 - is a string class object which is used to stream the string into different variables 
+A string stream is basically a mix of string and stream as is holds a string as its contents and allows the use os stream operators on that string
+
+
+istringstream is a string stream that you can use cin- type operators on! There is two different ways:
+
+```cpp
+string line = "Devin Powers";
+istringstream iss(line); //declare
+
+iss.str(line); // using str method
+```
+
+
+
+
 
 example:
 
