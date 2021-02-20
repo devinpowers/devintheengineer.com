@@ -63,6 +63,8 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 [Working with txt files ](https://devintheengineer.com/C++/c++_txt)
 
+- ostringstream
+
 [Vectors](https://devintheengineer.com/C++/c++_vectors)
 
 [Handling Errors in C++](https://devintheengineer.com/C++/c++_handle_errors)

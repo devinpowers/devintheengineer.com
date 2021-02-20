@@ -289,3 +289,141 @@ Jimmy
 James
 Eric
 ```
+
+# String Streams
+
+### istringstream
+
+- is a string class object which is used to stream the string into different variables 
+
+example:
+
+```cpp
+#include <iostream>
+#include <sstream>
+#include <string>
+using std::istringstream;
+using std::string;
+using std::cout;
+using std::endl;
+
+
+int main() {
+
+    string a = "1 2 3";
+    
+    istringstream my_stream(a);
+
+    int n;
+
+    my_stream >> n;
+
+    cout << n << endl;
+
+}
+
+
+```
+Output:
+
+```cpp
+1
+```
+
+Using istringstream with a while loop to check all values in the string! 
+
+
+```cpp
+#include <iostream>
+#include <sstream>
+#include <string>
+using std::istringstream;
+using std::string;
+using std::cout;
+using std::endl;
+
+
+int main() {
+
+    string a = "1 2 3";
+
+    istringstream my_stream(a);
+
+    int n;
+
+
+    // testing to see if the stream was successful 
+
+    while (my_stream) {
+
+        my_stream >> n;
+
+        if (my_stream ){
+
+            cout << "Stream was sucessful: " << n << endl;
+        }
+
+        else{
+            cout << "That stream was not sucessful! " << endl;
+        }
+    }
+
+
+}
+```
+
+Output:
+
+```cpp
+Stream was sucessful: 1
+Stream was sucessful: 2
+Stream was sucessful: 3
+That stream was not sucessful! 
+
+```
+
+Lets do the same problem above, another way!
+
+```cpp
+#include <iostream>
+#include <sstream>
+#include <string>
+using std::istringstream;
+using std::string;
+using std::cout;
+using std::endl;
+
+
+int main() {
+
+    string a = "1 2 3";
+
+    istringstream my_stream(a);
+
+    int n;
+
+
+    // testing to see if the stream was successful 
+
+    while (my_stream >> n)
+
+    {
+        cout << "Stream was sucessful: " << n << endl;
+    }
+
+
+    cout << "That stream was not sucessful! " << endl;
+
+}
+```
+
+Output:
+
+```cpp
+Stream was sucessful: 1
+Stream was sucessful: 2
+Stream was sucessful: 3
+That stream was not sucessful! 
+
+```
+
