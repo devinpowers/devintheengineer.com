@@ -511,7 +511,7 @@ That stream was not sucessful!
 What does the ostringstream allow for?
 
 - It allows you to output using all the cout operators, and then turn it into one string at the end!
-- So you can use different cout methods like rounding and widths
+- So you can use different cout methods like rounding and widths (further manipulate)
 - std::ostringstream does not support reading
 
 Example:
@@ -574,4 +574,46 @@ Year: 1995
 Devin Powers was 25 in 1995 so should be 47
 
 ```
+
+One Big String oss
+
+```cpp
+
+#include <iostream>
+#include <sstream>
+#include <string>
+using std::ostringstream;
+using std::string;
+using std::cout;
+using std::endl;
+
+
+int main() {
+
+    string name = "Devin";
+    string word = "Loves";
+    string dog = "Kava";
+
+    ostringstream oss;
+
+    oss << name << " " << word << " his dog " << dog << endl;
+
+    cout << oss.str();
+}
+
+```
+
+Ouput:
+
+```cpp
+Devin Loves his dog Kava
+
+```
+
+## What the heck is stol?
+
+std::stol(): converts the string, provided as an argument in the function call, to long int.
+
+Can convert decimal, dexadecimal, and binary number
+
 
