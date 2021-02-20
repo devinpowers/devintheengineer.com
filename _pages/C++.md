@@ -61,9 +61,13 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 [Input and output ](https://devintheengineer.com/C++/input_output)
 
-[Working with txt files ](https://devintheengineer.com/C++/c++_txt)
+- Opening Files (txt) and writing to files
 
-- ostringstream
+[Working with txt files and Streams ](https://devintheengineer.com/C++/c++_txt)
+
+- Reading txt file, using getline() and ifstreams
+
+- ostringstream and istringstream
 
 [Vectors](https://devintheengineer.com/C++/c++_vectors)
 
