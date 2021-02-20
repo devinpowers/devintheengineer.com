@@ -9,6 +9,88 @@ header:
   
 ---
 
+Outside of the string class, all the STL containers are templated! Therefore the types they hold must be specified at compile time
+
+vector<T> are sequential containers, which means they have order to their elements
+
+for vectors: #include <vector>
+
+Whats good about vectors?
+
+Well they have fast random access, only fast to add/delete at the end
+
+Plus they're dynammic! Which allows them to grow or shrink in size while they're running
+
+vector<T> : Definition
+
+```cpp
+vector <double> temp;
+vector <int> points;
+vector <string> names;
+
+```
+
+The <> describe the type that will be used with the class!
+
+Since they're Dynamic they grow with size. Some methods that reflect this are:
+
+- size(): which tells use how much the container presently holds
+- capacity: how much it could hold before it has to grow and manage memory
+
+#### Lets start making some vectors!!
+
+A vector of size and capacity zero:
+
+```cpp
+
+vector<int> vec;
+
+```
+Create a vector of capacity 5, size 5, with each initialized to the default value (0 for int)
+```cpp
+
+vector<int> vec(5);
+```
+
+
+
+#### Different vector<T> member functions
+
+v.capacity()
+v.size()
+v.empty()
+v.reserve()
+v.push_back(value)
+v.pop_back()
+v.size() is useful because v.size() - 1 is the index of the last element in v
+v.empty() is equivalent to v.size() == 0
+v.reserve()
+
+### Access front and back of a Vector
+
+v.front()
+- the element at the front of the vector
+
+v.back()
+- the element at the back of the vector
+
+
+
+### How do we add and delete a element in a vector?
+
+Use push_back method, which is the primary way to add to a vector 
+
+Use pop_back method to access a vector from the end, it doesnt return the value, it just removes it!
+
+If we want to check the value, we use .back()
+
+
+
+### Operators
+
+
+
+
 ![inserting an Image](/images/C++/vectors/Page1.jpg)
 ![inserting an Image](/images/C++/vectors/Page2.jpg)
 
