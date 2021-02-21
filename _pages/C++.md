@@ -94,10 +94,13 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 [Maps](https://devintheengineer.com/C++/maps)
 
-- Pairs
+- Pairs, make_pair, 
 - Maps
+- Different way to insert into a Map
 
 [Sets](https://devintheengineer.com/C++/sets)
+
+- Set Union, Set intersection, and Symmetric Difference
 
 [IO Streams ](https://devintheengineer.com/C++/streams)
 
@@ -108,6 +111,8 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 [Classes](https://devintheengineer.com/C++/c++_classes)
 
+
+## Week 10: More on Classes
 
 # Extras:
 
