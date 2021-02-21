@@ -76,28 +76,7 @@ v.reserve() // Increases the Capacity of the Vector
 
 ```
 
-### Access front and back of a Vector
-
-```cpp
-v.front() // the element at the front of the vector
-
-v.back() // the element at the back of the vector
-
-```
-
-
-### How do we add and delete a element in a vector?
-
-Use push_back method, which is the primary way to add to a vector 
-
-Use pop_back method to access a vector from the end, it doesnt return the value, it just removes it!
-
-If we want to check the value, we use .back()
-
-
-
-### Operators
-
+Examples Below:
 
 ```cpp
 #include <iostream>
@@ -135,6 +114,33 @@ Lets check the front and back of our vector
 v.front(): 10
 v.back(): 10
 ```
+
+
+
+
+
+### Access front and back of a Vector
+
+```cpp
+v.front() // the element at the front of the vector
+
+v.back() // the element at the back of the vector
+
+```
+
+
+### How do we add and delete a element in a vector?
+
+Use push_back method, which is the primary way to add to a vector 
+
+Use pop_back method to access a vector from the end, it doesnt return the value, it just removes it!
+
+If we want to check the value, we use .back()
+
+
+
+### Operators
+
 
 
 
