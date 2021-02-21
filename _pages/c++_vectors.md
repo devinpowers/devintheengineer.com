@@ -55,32 +55,35 @@ vector<int> vec(5);
 
 #### Different vector<T> member functions
 
-v.capacity()
+```cpp
+v.capacity()  // How much the Vector can store before growing
 
-v.size()
+v.size()   // Vectors current size
 
-v.empty()
+v.empty() // Returns True is size == 0
 
-v.reserve()
+v.reserve(n) // Will grow the capacity of the vector to n size
 
-v.push_back(value)
+v.push_back(value) // Append value to end of the Vector
 
-v.pop_back()
+v.pop_back() // Removes the last value in the Vector (no return like python)
 
-v.size() is useful because v.size() - 1 is the index of the last element in v
+v.size() // is useful because v.size() - 1 is the index of the last element in v
 
-v.empty() is equivalent to v.size() == 0
+v.empty() // is equivalent to v.size() == 0
 
-v.reserve()
+v.reserve() // Increases the Capacity of the Vector
+
+```
 
 ### Access front and back of a Vector
 
-v.front()
-- the element at the front of the vector
+```cpp
+v.front() // the element at the front of the vector
 
-v.back()
-- the element at the back of the vector
+v.back() // the element at the back of the vector
 
+```
 
 
 ### How do we add and delete a element in a vector?
