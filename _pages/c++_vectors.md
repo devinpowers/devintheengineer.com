@@ -129,6 +129,29 @@ v.back() // the element at the back of the vector
 ```
 
 
+How would you retrieve the last element in a Vector?
+
+```cpp
+
+#include <iostream>
+
+#include <vector>
+
+using namespace std;
+
+int main()
+
+{
+    vector<int> data = {1, 2, 3};
+
+    data.push_back(4);
+
+    cout <<data[data.size()-1] << endl;
+    
+}
+```
+
+
 ### How do we add and delete a element in a vector?
 
 Use push_back method, which is the primary way to add to a vector 
@@ -141,22 +164,31 @@ If we want to check the value, we use .back()
 
 ### Operators
 
+How can we access data values inside our vector(s)? 
+
+- We can use either [index] or .at(index)
+
+But we cannot use them to "append", in order to append we need to use push_back(item)
 
 
+```cpp
 
+#include <iostream>
+using std::cout;
+using std::endl;
+#include <vector>
+using std::vector;
 
+int main()
 
+{
+    vector<int> data = {1, 2, 3};
 
-### Iterating Through a vector in order to Print!
+    cout << data[1] << endl;  //accessing items
+    cout << data.at(1) << endl;   
 
-
-
-![inserting an Image](/images/C++/vectors/Page1.jpg)
-![inserting an Image](/images/C++/vectors/Page2.jpg)
-
-
-
-Lets Create a Vector
+}
+```
 
 ```cpp
 #include <iostream>
@@ -187,29 +219,17 @@ Third Index: 3
 Fourth index: 4
 ```
 
+We can also copy one vector into another vector!
+
+- by using assignment v1 == v2
 
 
-How would you retrieve the last element in a Vector?
 
-```cpp
 
-#include <iostream>
 
-#include <vector>
 
-using namespace std;
 
-int main()
 
-{
-    vector<int> data = {1, 2, 3};
-
-    data.push_back(4);
-
-    cout <<data[data.size()-1] << endl;
-    
-}
-```
 
 ![inserting an Image](/images/C++/vectors/Page3.jpg)
 
