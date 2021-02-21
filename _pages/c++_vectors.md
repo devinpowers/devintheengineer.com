@@ -223,38 +223,52 @@ We can also copy one vector into another vector!
 
 - by using assignment v1 == v2
 
-
-
-
-
-
-
-
-
-![inserting an Image](/images/C++/vectors/Page3.jpg)
-
-
-How to Remove the last element in the Vector?
-Lets remove 3!
+Example:
 
 ```cpp
 #include <iostream>
-
+using std::cout;
+using std::endl;
 #include <vector>
+using std::vector;
 
-using namespace std;
 
+void print_vector(vector<int> vec)
+{
+    for (auto element : vec)
+    {
+        cout << element << endl;
+    }
+    
+}
 int main()
 
 {
     vector<int> data = {1, 2, 3};
 
-    data.pop_back();
+    vector<int> data2;
 
-    cout <<data[data.size()-1] << endl;
-    
+    data2 = data;
+
+    print_vector(data);
+
+    print_vector(data2);
 }
+
 ```
+
+Output:
+```cpp
+1
+2
+3
+1
+2
+3
+```
+
+
+For printing Vectors, we can't just normally print, we need to iterate through them!
 
 ![inserting an Image](/images/C++/vectors/Page4.jpg)
 
@@ -262,11 +276,13 @@ How do we pass Vectors to Functions?
 
 
 ```cpp
+
 #include <iostream>
-
+using std::cout;
+using std::endl;
 #include <vector>
+using std::vector;
 
-using namespace std;
 
 void print_vector(vector<int> data)
 {
@@ -285,17 +301,67 @@ int main()
 }
 
 ```
+Output:
 
-### Multidimensional Vectors
+```cpp
+1
+2
+3
+
+```
+
+Otherwise to Print the vector!
+
+```cpp
+
+
+#include <iostream>
+using std::cout;
+using std::endl;
+#include <vector>
+using std::vector;
+
+
+void print_vector(vector<int> vec)
+{
+    for (auto element : vec)
+    {
+        cout << element << ", ";
+    }
+    cout << endl;
+}
+int main()
+
+{
+    vector<int> data = {1, 2, 3};
+
+    print_vector(data);
+}
+
+```
+
+Output:
+
+```cpp
+1, 2, 3, 
+```
+
+
+
+
+
+### Multidimensional Vectors (2-D)
 
 ![inserting an Image](/images/C++/vectors/Page5.jpg)
 
 ```cpp
+
+
 #include <iostream>
+using std::cout;
+using std::endl;
 #include <vector>
-
-
-using namespace std;
+using std::vector;
 
 int main()
 {
@@ -327,3 +393,51 @@ Output
 7       8       9
 
 ```
+
+
+### Range Based Loops
+
+
+changing the vector using the & sign!
+Example:
+
+```cpp
+#include <iostream>
+using std::cout;
+using std::endl;
+#include <vector>
+using std::vector;
+
+int main()
+{
+    vector<int> my_ints { 1, 2, 3, 4, 5};
+
+    for (auto element : my_ints){
+
+        cout << element << " : ";
+    }
+    cout << endl;
+
+    for (auto & x : my_ints){
+
+        x += 2;
+    }
+
+    for (auto element : my_ints)
+    {
+        cout << element << " : ";
+    }
+    cout << endl;
+   
+
+}
+```
+
+Output:
+
+```cpp
+1 : 2 : 3 : 4 : 5 : 
+3 : 4 : 5 : 6 : 7 :
+
+```
+
