@@ -71,7 +71,13 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 [Vectors](https://devintheengineer.com/C++/c++_vectors)
 
+ - Working with vectors
+ - How to print vectors
+ - 2-D vectors
+
 [Handling Errors in C++](https://devintheengineer.com/C++/c++_handle_errors)
+
+- try and catch 
 
 
 ## Week 7: Generic Algorithms and Iterators
