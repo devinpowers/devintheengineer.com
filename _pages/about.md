@@ -13,32 +13,28 @@ Hi, my name is Devin Powers. I am a Civil Engineering graduate from Michigan Sta
 
 ## Interests
 
-* Python
-* Machine Learning
+* Python, C++
+* Machine Learning 
 * Data Analytics
 * Software Development
 * Michigan State Basketball & Football
 
-2020 Learning Goals:
+* Self-Exploration, Self-Empowering 
+
+### 2020 Learning Goals:
 
 - Programming Language (Python) X
 - Discrete Mathematics   X
-- Data Structures and Algorithms (In Progress)
+- Data Structures and Algorithms X
+- Basic SQL, Machine Learning, and data science/analysis
 
+### 2021 Learning Goals:
 
-Can use Python to work with:
-- SQl and Databases
-- Machine Learning Basics
-- Big Data/Data Analysis
-
-
-
-
-2021 Learning Goals:
-
-- low-level programming language (C, C++)
 - Computer Architecture
 - Computer Systems
+- Operating Systems
+
+- Work on bigger Projects in Python and C++
 
 
 
