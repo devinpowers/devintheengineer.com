@@ -6,7 +6,10 @@ header:
    image: "/images/tower3.jpeg"
 ---
 
-Hi, my name is Devin Powers. I am a Civil Engineering graduate from Michigan State University. I am looking to use my academic background in engineering and mathematics to work in a data-driven business/engineering role. Passionate about continuing to develop programming competence.
+Hi, my name is Devin Powers. I am a Civil Engineering graduate from Michigan State University. I am looking to use my academic background in engineering and mathematics to work in a data-driven business/engineering role.  I am passionate about continuing to develop programming competence as I see the ever-changing impact technology is having on the future.
+
+I have a tremendous passion for learning and plan to use my website as a blog of everything that I have worked on and currently working on. 
+
 
 
 [Resume](/resume/Devin_Powers_Resume.pdf)
