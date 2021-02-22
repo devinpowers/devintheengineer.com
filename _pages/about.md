@@ -27,6 +27,8 @@ Hi, my name is Devin Powers. I am a Civil Engineering graduate from Michigan Sta
 - Discrete Mathematics   X
 - Data Structures and Algorithms X
 - Basic SQL, Machine Learning, and data science/analysis
+- Yoga and Meditation
+
 
 ### 2021 Learning Goals:
 
