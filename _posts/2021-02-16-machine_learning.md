@@ -32,7 +32,8 @@ machine learning.....
 
 Lets use pandas read_csv function to load our file into a data fram object and display the data frame!
 
-[Downloaded From HERE!! ] (https://data.world/baltimore/baltimore-crime-data)
+[Downloaded CSV File from Here](https://data.world/baltimore/baltimore-crime-data)
+
 
 ```python
 import pandas as pd
