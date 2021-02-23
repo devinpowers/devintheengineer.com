@@ -27,3 +27,6 @@ df = quandl.get("WIKI/AAPL")
 machine learning.....
 
 
+## Day TWO:
+
+
