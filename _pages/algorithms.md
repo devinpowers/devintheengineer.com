@@ -89,15 +89,24 @@ Project using Sorting Algorithms coming soon!
 
 [Linked Lists](https://devintheengineer.com/algorithms/linked_lists)
 
-- Includes Singly, Doubly, and Circular Linked Lists
+- Includes:
 
-- Includes basic operations for each kind of linked list
+Singly Linked Lists:
+* Insertion, Deletion, Find the Nth-to-last Node, Length of Singly Linked List
+* Rotate around a Pivot, Reverse Linked List, Node Swap, Remove Duplicates
+* Move Tail to Head, Merge two Sorted signly Linked Lists
+
+Doubly:
+* Insertion, Deletion, Append and Prepend Doubly Linked List
+* Pairs with Sum, Remove Duplicates, Reverse Doubly Linked List
+
+Circular Linked Lists:
+* Insertion, Deletion, Split list, and Josephus Problem using Circular Linked Lists
 
 
 ## Trees
 
 ![inserting an Image](/images/christmas.jpg)
-
 
 [Tree Data Structure](https://devintheengineer.com/algorithms/trees)
 
@@ -107,7 +116,7 @@ Includes:
 2. Binary Tree
 3. Binary Search Tree
 
-  - AVL Tree, Red-Black Tree, Splay Tree, Treap, B -Tree
+  * AVL Tree, Red-Black Tree, Splay Tree, Treap, B -Tree
 
 ## Heaps
 
