@@ -23,10 +23,124 @@ What type is an iterator?
 
 #### Operators of Iterator:
 
-1. begin() : This function is used to return the Beginning position of the container
-2. end() : This function is used to return the afterend position of the container
+1. **begin()** : This function is used to return the Beginning position of the container
+2. **end()** : This function is used to return the afterend position of the container
+
+3. **advance()**
+
+Advance Example:
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector>
+using std::vector;
 
 
+int main(){
+
+    vector <int> v ={1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    vector<int>::iterator ptr = v.begin();
+
+    advance(ptr, 6);
+
+    cout << "The position of iterator after advancing is: ";
+
+    cout << *ptr << " ";
+
+}
+```
+
+Output:
+```cpp
+The position of iterator after advancing is : 7 
+
+```
+4. **next()** : This function returns the NEW iterator that the iteraor would point to after advancing the positions mentioned in its arguemnts
+5. **prev()** This function returns the NEW iterator that the iterator would point to after decrementing the positions mentioned in its arguments.
+
+An Example of **next()** and **prev()**
+
+```cpp
+
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector>
+using std::vector;
+
+
+int main(){
+
+    vector <int> v ={1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    // Declaring iterators to a Vector
+    vector <int>:: iterator ptr = v.begin();
+    vector <int>:: iterator ftr = v.end();
+
+    auto it = next(ptr,8); 
+
+    auto it1 = prev(ftr,4); // end() would point at 10 and move back 4 spots so point to 7
+
+    cout << "The position of the new iterator using next() is : ";
+    cout << *it << " ";
+    cout << endl;
+
+    cout << "The position of the new iterator using prev() is : ";
+    cout << *it1 << " ";
+    cout << endl;
+
+}
+
+```
+Output:
+```cpp
+The position of the new iterator using next() is : 9 
+The position of the new iterator using prev() is : 7 
+```
+
+6. **inserter()** This function is used to insert the elements at any position in the container! It accepts 2 arguments, the container and iterator to position where the elements have to be inserted.
+
+Example of **inserter()**:
+```cpp
+
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector>
+using std::vector;
+
+
+int main(){
+
+    vector <int> v = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    
+    vector <int> v2 = { 10, 20, 30, 40, 50, 60, 70, 80};
+
+    vector <int>:: iterator ptr = v.begin();
+
+    advance(ptr, 4);
+
+    //Lets copy 1 vector elements in other using the inserter() aftr the 4th position in our Vector v
+    // little intro to algorithms!!! (more on that soon)
+    copy(v2.begin(), v2.end(), inserter(v, ptr));
+
+    cout << " Our new vector after inserting elements is: ";
+    
+    for ( auto &element : v)
+    {
+        cout << element << " ";
+    }
+
+    cout << endl;
+   
+}
+
+```
+
+Output:
+```cpp
+ Our new vector after inserting elements is: 1 2 3 4 10 20 30 40 50 60 70 80 5 6 7 8 9 10 
+```
 
 ![inserting an Image](/images/C++/iterators/Page1.jpg)
 
