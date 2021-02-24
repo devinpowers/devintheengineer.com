@@ -19,8 +19,104 @@ Iterators are nice because we don't have to worry about the size of the containt
 
 
 ![inserting an Image](/images/C++/iterators/Page1.jpg)
+
+Example of an iterator:
+
+```cpp
+
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector>
+using std::vector;
+
+int main(){
+
+    vector <int> v ={1, 2, 3};
+
+    vector <int >::iterator i; // declaring the iterator here
+
+    for (i = v.begin(); i != v.end(); i++)
+    {
+        cout << *i << " ";
+    }
+
+}
+```
+Output:
+
+```cpp
+1 2 3
+```
+
 ![inserting an Image](/images/C++/iterators/Page2.jpg)
+
+
 ![inserting an Image](/images/C++/iterators/Page3.jpg)
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector>
+using std::vector;
+
+
+void print_vector(vector<int> vec)
+{
+    //prints vector out
+    vector <int >::iterator i; // have to declare the iterator!!!
+    for ( i = vec.begin(); i != vec.end(); i++ ){
+        cout << *i << " ";
+    }
+}
+
+int main(){
+
+    vector <int> v ={1, 2, 3};
+
+    vector <int >::iterator i; // declaring the iterator here
+
+    for (i = v.begin(); i != v.end(); i++)
+    {
+        if ( i == v.begin() ) {
+
+            i = v.insert(i, 5); // insert 5
+        }
+    }
+    cout << "Vector after adding value: " << endl;
+    print_vector(v);
+    cout << endl;
+
+    // lets delete a element using iterators
+
+    for (i = v.begin(); i != v.end(); i++)
+    {
+        if ( i == v.begin() + 1 ) {
+
+            i = v.erase(i);
+    }
+    }
+
+
+    cout << "Vector after deleting a Value: " << endl;
+
+    print_vector(v);
+
+    cout << endl;
+
+}
+
+```
+
+Output:
+
+```cpp
+Vector after adding value: 
+5 1 2 3 
+Vector after deleting a Value: 
+5 2 3 
+```
+
+
 ![inserting an Image](/images/C++/iterators/Page4.jpg)
 ![inserting an Image](/images/C++/iterators/Page5.jpg)
 ![inserting an Image](/images/C++/iterators/Page6.jpg)
