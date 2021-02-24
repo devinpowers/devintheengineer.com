@@ -9,16 +9,19 @@ header:
   
 ---
 
-**Iterators are used to point to Memory Adresses of STL containers**, they're an object designed to traverse through a container, which allows us access to each element on the way.
+**Iterators are used to point to Memory Adresses of STL containers**, they're an __object__ designed to __traverse through a container__, which allows us __access to each element on the way.__
 
 Different container may provide different kinds of iterators.
 
 In the case of Maps, iterators "points" to the value of Pair of key:value
 
-Iterators are nice because we don't have to worry about the size of the containter (like we do with lists) and we can effectively get access to every container as not all containers allow .at or [] to access elements!
+Iterators are nice because **we don't have to worry about the size of the containter** (like we do with lists, .size()) and we can effectively get access to every container as not all containers allow .at or [] to access elements!
 
+What type is an iterator?
 
-#### Operators of iterator:
+- an iterator type is **dependent on the container** that they point to!
+
+#### Operators of Iterator:
 
 1. begin() : This function is used to return the Beginning position of the container
 2. end() : This function is used to return the afterend position of the container
@@ -56,7 +59,93 @@ Output:
 ```
 
 
-### Another Way to Declare an Iterator
+### There is 3 ways to iterate!
+
+1.
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector>
+using std::vector;
+
+
+int main(){
+
+    vector <int> v ={1, 2, 3, 4, 5};
+
+    for (int i = 0; i < static_cast<int>(v.size()); i++ ){
+        cout << v[i] << endl;
+    }
+}
+```
+Output:
+```cpp
+1
+2
+3
+4
+5
+```
+2. 
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector>
+using std::vector;
+
+
+int main(){
+
+    vector <int> v ={1, 2, 3, 4, 5};
+
+    for (auto element : v)
+    {
+        cout << element << endl;
+    }
+}
+```
+Output:
+```cpp
+1
+2
+3
+4
+5
+```
+3.
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector>
+using std::vector;
+
+
+int main(){
+
+    vector <int> v ={1, 2, 3, 4, 5};
+
+    for (auto ptr = v.begin(); ptr != v.end(); ++ptr)
+    {
+        cout << *ptr << endl;
+    }
+
+}
+
+```
+
+Output:
+```cpp
+1
+2
+3
+4
+5
+```
+
+
 
 
 
