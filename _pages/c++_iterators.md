@@ -9,13 +9,20 @@ header:
   
 ---
 
-Iterators are used to point to Memory Adresses of STL containers, they're an object designed to traverse through a container, which allows us access to each element on the way.
+**Iterators are used to point to Memory Adresses of STL containers**, they're an object designed to traverse through a container, which allows us access to each element on the way.
 
 Different container may provide different kinds of iterators.
 
 In the case of Maps, iterators "points" to the value of Pair of key:value
 
 Iterators are nice because we don't have to worry about the size of the containter (like we do with lists) and we can effectively get access to every container as not all containers allow .at or [] to access elements!
+
+
+#### Operators of iterator:
+
+1. begin() : This function is used to return the Beginning position of the container
+2. end() : This function is used to return the afterend position of the container
+
 
 
 ![inserting an Image](/images/C++/iterators/Page1.jpg)
@@ -47,6 +54,14 @@ Output:
 ```cpp
 1 2 3
 ```
+
+
+### Another Way to Declare an Iterator
+
+
+
+
+
 
 ![inserting an Image](/images/C++/iterators/Page2.jpg)
 
@@ -115,6 +130,8 @@ Vector after adding value:
 Vector after deleting a Value: 
 5 2 3 
 ```
+
+As you can see, we can easily and dynamically add and remove elements from the containers using iterator, if we tried to do the same without them, it would be very tedious and require shifting the elements everytime before we inserted and deleted!
 
 
 
@@ -187,7 +204,6 @@ Output:
 
 
 ![inserting an Image](/images/C++/iterators/Page6.jpg)
-![inserting an Image](/images/C++/iterators/Page7.jpg)
 
 
 ## More on Reversing Iterators in C++
@@ -218,7 +234,8 @@ Output
 2
 1
 ```
-### More on Iterators 
+### Vector to String Function with ostringstream using iterators!!!
+![inserting an Image](/images/C++/iterators/Page7.jpg)
 
 ```cpp
 #include<iostream>
