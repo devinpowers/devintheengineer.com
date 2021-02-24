@@ -117,13 +117,77 @@ Vector after deleting a Value:
 ```
 
 
+
+
+What if I don't Declare an Iterator? (USe auto)
 ![inserting an Image](/images/C++/iterators/Page4.jpg)
+
+
+```cpp
+
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector>
+using std::vector;
+
+
+int main(){
+
+    vector <int> v ={1, 2, 3, 4, 5};
+
+    for (auto itr = v.begin(); itr != v.end(); ++ itr)
+    {
+        cout << *itr << endl;
+    }
+
+}
+
+```
+
+Output:
+
+```cpp
+1
+2
+3
+4
+5
+```
+
+## For Each
 ![inserting an Image](/images/C++/iterators/Page5.jpg)
+
+```cpp
+
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector>
+using std::vector;
+
+
+int main(){
+
+    vector <int> v ={1, 2, 3, 4, 5};
+
+    for (auto itr : v )
+    {
+        cout << itr << endl;
+    }
+
+}
+```
+Output:
+```cpp
+1
+2
+3
+4
+5
+```
+
+
 ![inserting an Image](/images/C++/iterators/Page6.jpg)
 ![inserting an Image](/images/C++/iterators/Page7.jpg)
-
-
-
 
 
 ## More on Reversing Iterators in C++
