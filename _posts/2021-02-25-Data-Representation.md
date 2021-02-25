@@ -144,7 +144,22 @@ Output:
 This looks way **cleaner** and easier to manage!
 
 
+Lets Look at the First 5 Rows
 
+```python
+data[:5]
+```
+
+Output:
+```python
+	Sex	Age	Vaccine Type	Facility Type	Number of Doses	Week	Month	Year	Data as of
+0	F	20-29 years	Moderna	Public Health Provider	1	52	December	2020	23-Dec-20
+1	F	20-29 years	Moderna	Public Health Provider	1	53	December	2020	28-Dec-20
+2	F	20-29 years	Pfizer	Hospital	1	51	December	2020	19-Dec-20
+3	F	20-29 years	Pfizer	Public Health Provider	1	53	December	2020	29-Dec-20
+4	F	30-39 years	Moderna	Public Health Provider	2	52	December	2020	23-Dec-20
+
+```
 
 
 
