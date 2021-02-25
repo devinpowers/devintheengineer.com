@@ -1,5 +1,5 @@
 ---
-title: 'Big Data Analysis Day 4: SQL '
+title: 'Big Data Analysis Day 4: SQL and NoSQL '
 
 date: 2021-2-25
 
@@ -34,6 +34,20 @@ date: 2021-2-25
 * ETC
 
 
+**Theres a tutorial using SQLite and Python** post on my website
+
 
 ### Using MySQL with Python
+
+
+
+### NoSQL
+
+NoSQL standds for **Not only SQL**
+
+MongoDB is an open-source, document database, which is the most popular database used for modern apps 
+
+Difference between SQL and NoSQL?
+
+
 
