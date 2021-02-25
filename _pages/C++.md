@@ -92,6 +92,8 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 * Mutating (elements) : sorting
 
+* Lambdas
+
 
 [Iterators in C++](https://devintheengineer.com/C++/c++_iterators)
 

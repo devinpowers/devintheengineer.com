@@ -36,8 +36,27 @@ header:
 
 ### Accumulate
 
-![inserting an Image](/images/C++/algorithms/Page1.jpg)
+- accumulate is to gather together or acquire increasing number of quantity of
 
+**Syntax 1:** This function will return the sum of all the values between the first and last in the container!
+
+```cpp
+accumulate(first.begin(), last.end(), sum);
+```
+Where: first and last are the elements of whatever container that needs to be added, and sum is the initial value of the sum.
+
+**Syntax 2:** This function will return the sum of all the values between the first and last in the container! 
+```cpp
+accumulate(first.begin(), last.end(), sum, my_function);
+```
+Where my_function (of any task) is performed on elements between the first and last in the container!
+
+
+![inserting an Image](/images/C++/algorithms/accum1.jpg)
+
+Example using accumulate on a vector or integars and a string:
+
+**Form 1**
 ```cpp
 #include<iostream>
 using std::cout; using std::endl; 
@@ -69,52 +88,60 @@ int main()
 }
 ```
 Output
-
-    The accumulation of vector 'Vect' is: 22
-    Adding a string up: HellomynameisDevin!
-
-
-![inserting an Image](/images/C++/algorithms/Page2.jpg)
+```cpp
+The accumulation of vector 'Vect' is: 22
+Adding a string up: HellomynameisDevin!
+```
 
 
-    #include<iostream>
-    using std::cout; using std::endl; 
-    #include<vector>
-    using std::vector;
-    #include<string>
-    using std::string;
-    #include<numeric>
-    using std::accumulate;
-    #include<functional>
-    using std::multiplies; using std::minus; using std::plus;
+![inserting an Image](/images/C++/algorithms/accum2.jpg)
 
-    int main()
-    {
-        vector <int > vect_numbers ={ 1,8,3,6,2,6};
-        vector <string> vect_string = {"Hello", "my", "name", "is", "Devin!"};
+**Form 2**
+```cpp
+#include<iostream>
+using std::cout; using std::endl; 
+#include<vector>
+using std::vector;
+#include<string>
+using std::string;
+#include<numeric>
+using std::accumulate;
+#include<functional>
+using std::multiplies; using std::minus; using std::plus;
 
-        string output_string;
-        int output_numbers;
+int main()
+{
+    vector <int > vect_numbers ={ 1,8,3,6,2,6};
+    vector <string> vect_string = {"Hello", "my", "name", "is", "Devin!"};
 
-        output_string = accumulate(vect_string.begin(), vect_string.end(), string(""));
-        //cout << "Adding a string up: " << output_string << endl;
+    string output_string;
+    int output_numbers;
 
-        output_numbers = accumulate(vect_numbers.begin(), vect_numbers.end(), 1 , multiplies<int>());
+    output_string = accumulate(vect_string.begin(), vect_string.end(), string(""));
+    //cout << "Adding a string up: " << output_string << endl;
+
+    output_numbers = accumulate(vect_numbers.begin(), vect_numbers.end(), 1 , multiplies<int>());
 
 
-        cout << "The Sum is: " << accumulate(vect_numbers.begin(), vect_numbers.end(), 0 , plus<int>()) << endl;
+    cout << "The Sum is: " << accumulate(vect_numbers.begin(), vect_numbers.end(), 0 , plus<int>()) << endl;
 
-        cout << "The Product is: " << accumulate(vect_numbers.begin(), vect_numbers.end()-1, 1 , multiplies<int>()) << endl;
-        
-        
-        cout << "The Difference is : " << accumulate(vect_numbers.begin(), vect_numbers.end(), 0, minus<int>() ) << endl;
-    }
+    cout << "The Product is: " << accumulate(vect_numbers.begin(), vect_numbers.end()-1, 1 , multiplies<int>()) << endl;
+    
+    
+    cout << "The Difference is : " << accumulate(vect_numbers.begin(), vect_numbers.end(), 0, minus<int>() ) << endl;
+}
+```
 
-Output
+Output:
 
-    The Sum is: 26
-    The Product is: 288
-    The Difference is : -26
+```cpp
+The Sum is: 26
+The Product is: 288
+The Difference is : -26
+```
+
+More on Accumulate Algorithm:
+![inserting an Image](/images/C++/algorithms/accum3.jpg)
 
 
 
