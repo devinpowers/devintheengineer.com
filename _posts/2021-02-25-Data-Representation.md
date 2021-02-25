@@ -272,5 +272,6 @@ f.close()
 
 **Issues with Data Representation**
 
+- How to handle "missing values" in the data
 
 
