@@ -26,6 +26,12 @@ header:
     - Examples: set_union, set_intersections, set_difference
 
 
+**The Key to Algorithms are iterators**, because they work with **any container of any type** 
+
+- every algorithm somehow utilizes iterators to perform tasks!
+
+
+
 # Non-modifying
 
 ### Accumulate

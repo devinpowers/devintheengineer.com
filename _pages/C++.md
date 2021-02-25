@@ -84,6 +84,15 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 [Basic Algorithms](https://devintheengineer.com/C++/c++_algorithms)
 
+* Non-Modifying: find, find_if, search, accumulate
+
+* Modifying: copy, transform
+
+* Removing
+
+* Mutating (elements) : sorting
+
+
 [Iterators in C++](https://devintheengineer.com/C++/c++_iterators)
 
 - iterating using Strings and Vectors

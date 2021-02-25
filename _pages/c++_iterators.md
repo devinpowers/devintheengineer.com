@@ -485,10 +485,9 @@ Vector of Ints to String: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 Vector of Long to String: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 ```
 
-## add more on iterators using different containers like Maps and Lists
 
 
-## Iterator using Maps
+# Iterator using Maps
 
 When you iterate through a map, you're iterating through pairs
 
