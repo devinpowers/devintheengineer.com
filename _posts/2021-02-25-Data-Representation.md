@@ -44,7 +44,23 @@ Data is a collection of objects and their attributes, with object being a 'data 
 
 **Working with CSV Files**
 
+
 - using import csv, numpy, and pandas library
+
+This covid.csv file can be found:
+
+[Covid Vacine file](url here)
+
+```python
+with open('covid.csv','r') as f:
+    column_names = f.readline().strip().split(',')  # stripping first column headers of commas
+    data = []
+    for line in f:
+        data.append(line.strip().split(','))       #iterating through each row and stipping commas
+```
+
+
+
 
 
 
