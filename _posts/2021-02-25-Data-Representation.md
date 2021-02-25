@@ -31,15 +31,29 @@ Data is a collection of objects and their attributes, with object being a 'data 
 
 **How do we Represent Data?**
 
-    - Structured Data in relational databases -> SQL
-    - Unstructured Data
-    - Flat files (CSV)
-    - Complex (JSON, XML, etc)
+- Structured Data in relational databases -> SQL
+- Unstructured Data
+- Flat files (CSV)
+- Complex (JSON, XML, etc)
 
 
 **How do we load data?**
 
+- Parse a file using regular expressions is an important skill to learn/develop
 
-- Parse a file using regular expressions
 
 **Working with CSV Files**
+
+- using import csv, numpy, and pandas library
+
+
+
+
+
+**Working with JSON files**
+
+
+**Issues with Data Representation**
+
+
+
