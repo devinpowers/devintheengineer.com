@@ -233,10 +233,34 @@ Output:
 
 
 
-
-
-
 **Working with JSON files**
+
+- JSON files are Javascript Object Notation and thier properties are encoded as **key-value** pairs that are seperated by (:)
+
+How would you work with a JSON file using Python?
+
+```python
+import json
+
+f =  open('example.json',)
+
+data = json.load(f) 
+```
+
+```python
+for i in data['users']:
+    print(i)
+```
+
+Output:
+
+```python
+{'userId': 1, 'firstName': 'Krish', 'lastName': 'Lee', 'phoneNumber': '123456', 'emailAddress': 'krish.lee@learningcontainer.com'}
+{'userId': 2, 'firstName': 'racks', 'lastName': 'jacson', 'phoneNumber': '123456', 'emailAddress': 'racks.jacson@learningcontainer.com'}
+{'userId': 3, 'firstName': 'denial', 'lastName': 'roast', 'phoneNumber': '33333333', 'emailAddress': 'denial.roast@learningcontainer.com'}
+{'userId': 4, 'firstName': 'devid', 'lastName': 'neo', 'phoneNumber': '222222222', 'emailAddress': 'devid.neo@learningcontainer.com'}
+{'userId': 5, 'firstName': 'jone', 'lastName': 'mac', 'phoneNumber': '111111111', 'emailAddress': 'jone.mac@learningcontainer.com'}
+```
 
 
 **Issues with Data Representation**
