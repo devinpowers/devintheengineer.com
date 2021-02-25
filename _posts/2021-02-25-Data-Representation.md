@@ -17,16 +17,20 @@ Data is a collection of objects and their attributes, with object being a 'data 
 
 * Record-Based Data
 
-    - Collection of unordered tuples, where is 
+    - Collection of unordered tuples, where each tupe represents an object and contains a set of field (attributes) that characterize properties of the object
+    - Examples:  Census data, web server logs, document data, transaction data
 
 * Ordered Data
 
-    - Collection
+    - Collection of ordered tuples
+    - Examples: sequence and time series data
 
 * Graph-Based Data:
 
-    - Data is a collection of linked objects and attributes
+    - Data is a collection of linked objects and attributes in which consits of G = (V, E), where G = Graph, V = vertices (a set of nodes), and E = edges (a set of links )
     - Check out my Graphs in my Data Structures and Algorithms Page!!!!
+    -[Graph data Structure Page](https://devintheengineer.com/algorithms/intro_graph)
+    - Examples: Web Traversal Pattern
 
 
 **How do we Represent Data?**
@@ -34,12 +38,12 @@ Data is a collection of objects and their attributes, with object being a 'data 
 - Structured Data in relational databases -> SQL
 - Unstructured Data
 - Flat files (CSV)
-- Complex (JSON, XML, etc)
+- Complex (JSON, XML, KML, etc)
 
 
 **How do we load data?**
 
-- Parse a file using regular expressions is an important skill to learn/develop
+Note: **Parse a file using regular expressions** is an important skill to learn/develop
 
 
 **Working with CSV Files**
@@ -110,15 +114,27 @@ data = read_csv(file_name, header, names)
 Which:
 * file_name: name of the file .csv
 * header: Column that contains the "attributes", which is usually column 0
-* names: Which is the attribute names (just in case if the csv file doesnt contain them!!)
+* names: Which is the **attribute names** (just in case if the csv file doesnt contain them!!)
 
 ```python
 import pandas as p
 data = p.read_csv('covid.csv',header=0)
-
-# can use read_table as well -> p.read_table('covid.csv', sep = ',', header = 'infer ')
 ```
-Now lets check out the data with in Pandas is stored in a **DataFrame Object**
+
+We can also load data this way:
+
+```python
+p.read_table(file_name, sep, header = 'infer ', names)
+```
+Where:
+
+* file_name : name of csv we want to open
+* sep : separator/delimiter between the columns (',' in csv files)
+* header : Column that contains the attribute name (or None)
+* names: Attribute names (if not given in the CSV file)
+
+
+Now lets check out the data with in Pandas is stored in a **DataFrame Object** lets work with it!
 
 
 ```python
