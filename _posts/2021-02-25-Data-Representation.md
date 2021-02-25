@@ -229,6 +229,9 @@ vaccine_counts.plot( kind = 'bar', rot= 0)
 
 Output:
 
+![inserting an Image](/images/big_data/covid_vaccines.jpg)
+
+
 
 
 
