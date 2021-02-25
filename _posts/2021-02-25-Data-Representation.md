@@ -155,13 +155,79 @@ Output:
 	Sex	Age	Vaccine Type	Facility Type	Number of Doses	Week	Month	Year	Data as of
 0	F	20-29 years	Moderna	Public Health Provider	1	52	December	2020	23-Dec-20
 1	F	20-29 years	Moderna	Public Health Provider	1	53	December	2020	28-Dec-20
-2	F	20-29 years	Pfizer	Hospital	1	51	December	2020	19-Dec-20
+2	F	20-29 years	Pfizer	Hospital	            1	51	December	2020	19-Dec-20
 3	F	20-29 years	Pfizer	Public Health Provider	1	53	December	2020	29-Dec-20
 4	F	30-39 years	Moderna	Public Health Provider	2	52	December	2020	23-Dec-20
 
 ```
 
 
+Working with the dataframe
+
+```python
+
+data[:5][['Sex','Age', 'Vaccine Type']]
+```
+Output:
+```python
+	Sex	Age	Vaccine Type
+0	F	20-29 years	Moderna
+1	F	20-29 years	Moderna
+2	F	20-29 years	Pfizer
+3	F	20-29 years	Pfizer
+4	F	30-39 years	Moderna
+```
+
+other things.
+
+```python
+data.columns.values
+```
+Output:
+
+```python
+array(['Sex', 'Age', 'Vaccine Type', 'Facility Type', 'Number of Doses',
+       'Week', 'Month', 'Year', 'Data as of'], dtype=object)
+```
+
+Lets check out the dimensions of the DataFrame (tuple: (rows, columns))
+
+```python
+data.shape
+```
+Output:
+```python
+(10866, 9)
+```
+
+Lets check out the Number of each vaccine has been admitted:
+
+```python
+vaccine_counts = data['Vaccine Type'].value_counts()
+```
+
+```python
+vaccine_counts
+```
+Output:
+
+```python
+Pfizer     8137
+Moderna    2729
+Name: Vaccine Type, dtype: int64
+```
+
+Awesome, not lets import matplotlib library and start plotting !!
+
+```python
+%matplotlib inline
+import matplotlib
+```
+```python
+vaccine_counts.plot( kind = 'bar', rot= 0)
+```
+
+Output:
 
 
 
