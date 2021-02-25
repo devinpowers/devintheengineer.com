@@ -521,7 +521,9 @@ Hello my name is Devin
 ```
 
 
-### Transform Algorithm
+## Transform Algorithm
+
+- 2 forms (Unary and Binary Operation)
 
 - transforms range
 ![inserting an Image](/images/C++/algorithms/transform1.jpg)
