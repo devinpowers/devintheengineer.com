@@ -21,7 +21,7 @@ date: 2021-2-25
 
 ### Lets work with Twitters API
 
-(Heres a Link to my Twitter Web Scraper)[https://github.com/devinpowers/twitter]
+[Heres a Link to my Twitter Web Scraper](https://github.com/devinpowers/twitter)
 
 
 **Simple Twitter Search API**
