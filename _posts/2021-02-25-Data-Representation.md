@@ -278,16 +278,29 @@ Output:
 {'userId': 5, 'firstName': 'jone', 'lastName': 'mac', 'phoneNumber': '111111111', 'emailAddress': 'jone.mac@learningcontainer.com'}
 ```
 
-closing the file stream:
+closing the file stream for JSON:
 
 ```python
 f.close()
 ```
+**Other ways that we commonly Represent Data**
 
+- Matrix (matrices)
+    * numpy library in Python is good for dealing with matrices
 
 
 **Issues with Data Representation**
 
 - How to handle "missing values" in the data
+
+    * Can use values like NULL or N/A when values are missing
+
+### Types of Attributes
+
+* Atrribute type depends on the properties of its values
+
+
+
+Next -> Data Collection
 
 
