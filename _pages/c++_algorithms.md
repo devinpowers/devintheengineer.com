@@ -144,9 +144,86 @@ More on Accumulate Algorithm:
 ![inserting an Image](/images/C++/algorithms/accum3.jpg)
 
 
+## Lambdas
+
+- inline functions that can best be used for short snippets of code that are not going to be reused and are not worth naming!
+
+Basic Lambda Syntax:
+
+[Capture]  (Parameters) -> returnType { Body };
+
+Where:
+
+Capture: globals (varibles) used in the function
+
+Parameters: Parameters of the function
+
+{ Body }: the function body
+
+returnType: (optional not required)
+
+![inserting an Image](/images/C++/algorithms/lambdas.jpg)
+
+
+**Lambdas Example**
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl; 
+#include<vector>
+using std::vector;
+#include<numeric>
+using std::accumulate;
+
+
+int main()
+{
+    vector <int > v ={ 1,2,3,4,5,6};
+
+    int sum;
+
+    sum = accumulate(v.begin(), v.end(), 0, 
+
+    [] (const int& total, const int& value){
+        cout << "Total: " << total << endl;
+        cout << "Value: " << value << endl;
+
+        return total + value + 2;
+    }
+    );
+   
+   cout << "The Sum of x+2 is: " << sum << endl;
+
+}
+```
+
+Output:
+```cpp
+Total: 0
+Value: 1
+Total: 3
+Value: 2
+Total: 7
+Value: 3
+Total: 12
+Value: 4
+Total: 18
+Value: 5
+Total: 25
+Value: 6
+The Sum of x+2 is: 33
+```
+
+
+
 
 ### Find Algorithm
 
+- more non-modifying algorithms
+
+What does find() Algorithm do?
+
+- it finds the first element in range and returns an iterator point to that position!!
 
 ![inserting an Image](/images/C++/algorithms/find.jpg)
 
@@ -164,7 +241,8 @@ int main ()
     vector<int> vec { 10, 20, 30, 40 }; 
     
     // Print Original Vector 
-cout << "Original vector :"; 
+    cout << "Original vector :"; 
+
     for (int i=0; i<vec.size(); i++) 
     {
         cout << " " << vec[i]; 
@@ -230,22 +308,62 @@ int main ()
 }
 ```
 
-Output
+Output:
 
 ```cpp
 The first odd value is: 55
 ```
 
-### Serach Algorithm
+### Search Algorithm
+
+![inserting an Image](/images/C++/algorithms/search.jpg)
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include <vector> 
+using std::vector;
+#include <algorithm> 
+using std::search;
 
 
-- add later
+
+int main () 
+{
+    vector<int> vec { 0, 5, 10, 20, 30, 40, 56};
+
+    vector<int> vec2 {20,30};
+
+     // Declaring an iterator for storing the returning pointer
+    vector<int>::iterator it;
+
+    it = search (vec.begin(),vec.end(), vec2.begin(), vec2.end());
+
+    if (it != vec.end() )
+    {
+        cout << "Vec2 is present at index: " << (it - vec.begin()) << endl;
+    }
+    else
+    {
+        cout << "Vec2 is not present in vec" << endl;
+    }
+    
+}
+```
+
+Output:
+
+```cpp
+Vec2 is present at index: 3
+```
 
 
 # Modifying Algorithms
 
 
-### copy
+### Copy Algorithm
+
+- One of the most useful algorithms!
 
 ![inserting an Image](/images/C++/algorithms/copy.jpg)
 
@@ -403,7 +521,7 @@ Hello my name is Devin
 ```
 
 
-### transform
+### Transform Algorithm
 
 - transforms range
 ![inserting an Image](/images/C++/algorithms/transform1.jpg)
