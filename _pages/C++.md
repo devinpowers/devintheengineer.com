@@ -115,6 +115,10 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 [IO Streams ](https://devintheengineer.com/C++/streams)
 
+- Buffers
+- istream and ostreams
+- File Streams
+
 
 ## Week 9: Introduction to Classes
 
@@ -124,6 +128,8 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 
 ## Week 10: More on Classes
+
+- Constructors
 
 # Extras:
 
@@ -135,7 +141,7 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 [Pointers](https://devintheengineer.com/C++/pointers)
 
- - gotta work on
+ - gotta work on!!
 
 
 
@@ -170,16 +176,16 @@ Goal: Create a program that will encode a sequence of strings!
 
 #### [Project Five ](https://devintheengineer.com/C++/c++_project5)
 
-Objectives: Working with Strings, Functions, Multiple File
+Objectives: Working with Strings, Functions, Multiple Files (header files)
 
-Goal: Creating a Four-Square Cipher
+Goal: Creating a Four-Square Cipher to hide a messsage!
 
 
 #### [Project Six ](https://devintheengineer.com/C++/c++_project6)
 
 Objectives: Working with Vectors, Functions
 
-Goal: Creating a Decoding thing
+Goal: Creating another Decoding thing
 
 
 
@@ -187,9 +193,10 @@ Goal: Creating a Decoding thing
 
 Objectives: Working with importing text files, Maps, and Sets
 
-Goal: Connect and Disconnect from Servers
+Goal: Connect and Disconnect from Servers 
 
 
+# coming soon...
 
 #### [Project Eight ](https://devintheengineer.com/C++/c++_project8)
 
