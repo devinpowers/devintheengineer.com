@@ -262,6 +262,13 @@ Output:
 {'userId': 5, 'firstName': 'jone', 'lastName': 'mac', 'phoneNumber': '111111111', 'emailAddress': 'jone.mac@learningcontainer.com'}
 ```
 
+closing the file stream:
+
+```python
+f.close()
+```
+
+
 
 **Issues with Data Representation**
 
