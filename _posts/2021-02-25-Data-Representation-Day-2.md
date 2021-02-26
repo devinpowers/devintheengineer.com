@@ -501,4 +501,4 @@ counts.plot(kind='bar')
 
 Output:
 
-![Insert](/images/)
+![Insert](/images/big_data/Baltimore_crime.png)
