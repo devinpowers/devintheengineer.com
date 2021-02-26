@@ -502,3 +502,28 @@ counts.plot(kind='bar')
 Output:
 
 ![Insert](/images/big_data/Baltimore_crime.png)
+
+
+Lets look at some other things to possibly Graph/Plot
+
+Maybe Latitude and Longitude??
+
+```python
+long = data["Longitude"]
+lat = data["Latitude"]
+```
+
+Lets plot!
+
+```python
+fig, ax = plot.subplots(figsize=(20, 12))
+ax.scatter(x = long, y = lat)
+plot.xlabel("Longitude")
+plot.ylabel("Latitude")
+```
+
+Output:
+![Insert](/images/big_data/balt_lat.png)
+
+
+
