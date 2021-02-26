@@ -330,7 +330,7 @@ data.head(10)
 Output:
 
 ```python
-	CrimeDate	CrimeTime	CrimeCode	Location	             Description	Inside/Outside	Weapon	   Post	District	Neighborhood	             Longitude	Latitude	Location 1	                    Premise	Total Incidents
+	CrimeDate	CrimeTime	CrimeCode	Location	             Description	Inside/Outside	Weapon	   Post	District	Neighborhood	             Longitude	  Latitude      	Location 1	           Premise	Total Incidents
 0	11/04/2017	23:39:00	4E	5700 HAZELWOOD CIR	            COMMON ASSAULT	I	            HANDS	    444.0	NORTHEASTERN	Frankford	            -76.53114	39.33952	(39.3395200000, -76.5311400000)	APT/CONDO	1
 1	11/04/2017	23:16:00	4E	200 N MOUNT ST	                COMMON ASSAULT	I	            HANDS	    711.0	WESTERN	Franklin Square	                -76.64393	39.29141	(39.2914100000, -76.6439300000)	APT/CONDO	1
 2	11/04/2017	23:15:00	6C	1100 E NORTH AVE	            LARCENY     	I	            NaN	        342.0	EASTERN	East Baltimore Midway	        -76.60333	39.31177	(39.3117700000, -76.6033300000)	GROCERY/CO	1
@@ -344,3 +344,4 @@ Output:
 ```
 
 Now lets organize the Dataframes a bit
+
