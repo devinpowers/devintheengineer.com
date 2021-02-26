@@ -345,3 +345,120 @@ Output:
 
 Now lets organize the Dataframes a bit
 
+
+```python
+from pandas import DataFrame
+```
+
+Lets create a DataFrame of only Auto Thefts 
+
+```python
+auto_theft = data[data["Description"]=="AUTO THEFT"]
+```
+
+
+```python
+auto_theft[:5]
+```
+
+Output:
+
+```python
+CrimeDate	CrimeTime	CrimeCode	Location	Description	Inside/Outside	Weapon	Post	District	Neighborhood	Longitude	Latitude	Location 1	Premise	Total Incidents
+3	11/04/2017	23:15:00	7A	4800 ERDMAN AVE	AUTO THEFT	O	NaN	433.0	NORTHEASTERN	Armistead Gardens	-76.55972	39.30727	(39.3072700000, -76.5597200000)	STREET	1
+13	11/04/2017	19:35:00	7A	NORTH AV & EUTAW PL	AUTO THEFT	O	NaN	132.0	CENTRAL	Bolton Hill	-76.63404	39.31047	(39.3104700000, -76.6340400000)	GAS STATIO	1
+40	11/04/2017	12:30:00	7A	3800 SHANNON DR	AUTO THEFT	O	NaN	432.0	NORTHEASTERN	Belair-Edison	-76.55854	39.32009	(39.3200900000, -76.5585400000)	STREET	1
+105	11/03/2017	17:30:00	7A	3200 ELMLEY AVE	AUTO THEFT	NaN	NaN	434.0	NORTHEASTERN	Belair-Edison	-76.57787	39.31706	(39.3170600000, -76.5778700000)	NaN	1
+115	11/03/2017	15:42:00	7A	2400 PELHAM AVE	AUTO THEFT	NaN	NaN	431.0	NORTHEASTERN	Mayfield	-76.57737	39.32894	(39.3289400000, -76.5773700000)	NaN	1
+
+```
+
+Lets create a DataFrame of Auto Thefts from each District
+
+```python
+auto_counts = DataFrame(auto_theft["District"])
+```
+
+```python
+auto_counts[:5]
+```
+
+Output:
+```python
+
+District
+3	NORTHEASTERN
+13	CENTRAL
+40	NORTHEASTERN
+105	NORTHEASTERN
+115	NORTHEASTERN
+```
+
+Awesome, now lets sum up and order them by alphabetically
+
+```python
+
+auto_counts = DataFrame(auto_theft["District"].value_counts().sort_index())
+
+```
+
+```python
+auto_counts
+```
+
+Output:
+
+```python
+	        District
+CENTRAL	        1797
+EASTERN	        1914
+NORTHEASTERN	5155
+NORTHERN	    2826
+NORTHWESTERN	3635
+SOUTHEASTERN	2737
+SOUTHERN	    3140
+SOUTHWESTERN	3476
+WESTERN	        2912
+
+```
+
+Now Lets Create DataFrames for all the Types of Crimes
+
+```python
+
+auto_theft = data[data["Description"]=="AUTO THEFT"]
+auto_counts = DataFrame(auto_theft["District"].value_counts().sort_index())
+
+
+assault = data[data["Description"]=="COMMON ASSAULT"]
+assault_counts = DataFrame(assault["District"].value_counts().sort_index())
+
+robbery = data[data["Description"]=="ROBBERY - STREET"]
+robbery_counts = DataFrame(robbery["District"].value_counts().sort_index())
+
+homicide = data[data["Description"]=="HOMICIDE"]
+homicide_counts = DataFrame(homicide["District"].value_counts().sort_index())
+
+counts = pd.concat([auto_counts,assault_counts,robbery_counts,homicide_counts], axis=1) ## combine
+counts.columns = ['Auto Theft', 'Assault', 'Robbery', 'Homicide'] ## Give new Dataframe column names
+
+```
+
+```python
+counts
+```
+
+```python
+	             Auto Theft	Assault	Robbery	Homicide
+CENTRAL     	1797	5387	    2696	112
+EASTERN	        1914	5303    	1408	242
+NORTHEASTERN	5155	7077	    2881	217
+NORTHERN	    2826	4229	    2154	119
+NORTHWESTERN	3635	4234	    1809	223
+SOUTHEASTERN	2737	6376	    3002	99
+SOUTHERN	    3140	5388	    1916	136
+SOUTHWESTERN	3476	4483	    1373	212
+WESTERN	        2912	4520	    1227	264
+
+```
+
