@@ -525,5 +525,7 @@ plot.ylabel("Latitude")
 Output:
 ![Insert](/images/big_data/balt_lat.png)
 
+What does that graph above look like?
 
+![Insert](/images/big_data/Baltimore_map.png)
 
