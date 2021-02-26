@@ -462,3 +462,43 @@ WESTERN	        2912	4520	    1227	264
 
 ```
 
+```python
+counts = DataFrame(data["Description"].value_counts())
+```
+
+```python
+counts
+````
+
+Output:
+
+```python
+                    Description
+LARCENY	                62531
+COMMON ASSAULT	        47018
+BURGLARY	            44048
+LARCENY FROM AUTO	    37309
+AGG. ASSAULT	        28550
+AUTO THEFT	            27597
+ROBBERY - STREET	    18469
+ROBBERY - COMMERCIAL	4331
+ASSAULT BY THREAT	    3609
+SHOOTING	            3055
+ROBBERY - RESIDENCE	    2965
+RAPE	                1721
+HOMICIDE	            1624
+ROBBERY - CARJACKING	1623
+ARSON	                1510
+```
+
+```python
+import matplotlib
+%matplotlib inline
+
+counts.plot(kind='bar') 
+
+```
+
+Output:
+
+![Insert](/images/)
