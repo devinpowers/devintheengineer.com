@@ -62,3 +62,9 @@ Output:
 Will output a bunch of JSON code
 
 
+
+## Lets work on an Exercise using Python Tweetpy
+
+[Read the Tweetpy Documentation](https://docs.tweepy.org/en/latest/)
+Using the Twitter Search (REST) API in order to download the 10 most recent tweets from the twitter feed containing whatever **keyword** we decide.
+
