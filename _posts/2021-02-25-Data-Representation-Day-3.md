@@ -97,7 +97,7 @@ This will return a relevant Tweets matching a specified query.
 * mad_id :  Returns only statuses with an ID less than or equal to the specified ID
 * include_entities : he entities node will not be included when set to false. Defaults to true
 
-In our case, were only intrested in using the **q** (query for our keyword) and  **count** to limit the number of tweets to search for. Lets add the **geocode**
+In our case, were only intrested in using the **q** (query for our keyword) and  **count** to limit the number of tweets to search for. 
 
 The keyword to search for in this example will be: **Michigan State Spartans**v(Go Green!)
 
@@ -122,17 +122,17 @@ api = tweepy.API(auth)
 ## Search Method
 keyword = "Michigan State Spartans"
 
-post = api.search(q = keyword, gecode, count = 10 )
+post = api.search(q = keyword, count = 10 )
 
 # now lets save the data of the tweet and the username
 
-data = pd.DataFrame(columns = ["Tweet", "UserName", "Location" ])
+data = pd.DataFrame(columns = ["Tweet", "UserName"])
 
 ## Lets add the stuff to our DataFrame
 
-for tweet in posts:
+for tweet in post:
 
-    data = data.append( {"Tweet":tweet.txt. "UserName":tweet.user.screen_name "Location":tweet. }, ignore_index = True)
+    data = data.append( {"Tweet":tweet.text. "UserName":tweet.user.screen_name }, ignore_index = True)
 
 ```
 Lets see our DataFrame:
@@ -143,5 +143,19 @@ Output:
 
 ```python
 
+	Tweet	                                            UserName
+0	RT @chrissolari: Michigan State basketball's F...	TheAndyKatz
+1	Michigan State basketball's Foster Loyer could...	chrissolari
+2	@PekalaLaw Truly another crazy story. I guess ...	LoganSimios
+3	Michigan State Women’s Basketball: Nebraska Co...	SpartyOnHuskers
+4	Late-night shooting pays off as Gabe Brown tur...	SpartansMLive
+5	Late-night shooting pays off as Gabe Brown tur...	MLive
+6	Late-night shooting pays off as Gabe Brown tur...	MLiveSports
+7	RT @SportsCenter: THE SPARTANS HANDLE BUSINESS...	Krueger24Kyle
+8	RT @onlinelisting: #RecentSportNews #sportcap ...	onlinelisting
+9	RT @Graham_Couch: I pity the 2-seed that faces...	RyanMSU21
+
 
 ```
+
+COOL
