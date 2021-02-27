@@ -55,14 +55,20 @@ One of the best Python libraries with Data Analysis is **Pandas** as we already 
 
 The Pandas Library has two main data structures
 
-1. Series: a one-dimensional array-like object
-2. DataFrame: spreadsheet-like data structure containing a collection of ordered columns
+1. **Series**: a one-dimensional array-like object
+2. **DataFrame**: spreadsheet-like data structure containing a collection of ordered columns
 
 
 
 **Series**
 
+[Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/reference/series.html)
 
+Lets use an example of Series
+
+```python
+
+```
 
 
 
