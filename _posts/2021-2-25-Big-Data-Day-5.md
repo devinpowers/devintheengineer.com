@@ -185,6 +185,59 @@ Output:
 
 ![inserting image](images/big_data/nba.png)
 
+**Dealing with Missing Values**
+
+```python
+NBA_['1/6/2019'] = None
+```
+
+```python
+NBA_.count()
+```
+Ouput:
+```
+7
+```
+
+```python
+NBA_.isnull()
+```
+
+Output:
+```python
+1/5/2019     False
+1/6/2019      True
+1/8/2019     False
+1/4/2019     False
+1/19/2019    False
+1/21/2019    False
+1/23/2019    False
+1/30/2019    False
+dtype: bool
+```
+
+How would we fill that Null value (missing value) in ?
+
+Well we could use the median value of all the points scored and then fill it in.
+
+Well there is a Pandas function for that (.fillna(value to fill)) and we can find the median value of our points scored and fill it in our missing value during the time
+
+```python
+NBA_.fillna(NBA_.median())
+```
+
+Output:
+```python
+1/5/2019     40.0
+1/6/2019     33.0
+1/8/2019     25.0
+1/4/2019     29.0
+1/19/2019    32.0
+1/21/2019    33.0
+1/23/2019    45.0
+1/30/2019    54.0
+dtype: float64
+```
 
 
 
