@@ -239,6 +239,101 @@ Output:
 dtype: float64
 ```
 
+Note: The data 1/6/2019 was filled in with 33 which is the **median** value of points scored
+
+Another thing that we could do, if we had a **"missing"** value for example
+
+```python
+NBA_['1/6/2019'] = None
+NBA_
+```
+
+Output:
+```python
+1/5/2019     40.0
+1/6/2019      NaN
+1/8/2019     25.0
+1/4/2019     29.0
+1/19/2019    32.0
+1/21/2019    33.0
+1/23/2019    45.0
+1/30/2019    54.0
+dtype: float64
+```
+
+We could just remove the date
+
+```python
+NBA_ = NBA_[NBA_.notnull()]
+NBA_
+```
+
+Output:
+```python
+1/5/2019     40.0
+1/8/2019     25.0
+1/4/2019     29.0
+1/19/2019    32.0
+1/21/2019    33.0
+1/23/2019    45.0
+1/30/2019    54.0
+dtype: float64
+```
+
+or this way:
+
+```python
+NBA_ = NBA_.dropna()
+NBA_
+```
+
+Output:
+```python
+1/5/2019     40
+1/8/2019     25
+1/4/2019     29
+1/19/2019    32
+1/21/2019    33
+1/23/2019    45
+1/30/2019    54
+dtype: object
+```
+
+Either or drops the timestamp (index)!
+
+**Lets look at Outliers**
+
+```python
+NBA_['1/6/2019'] = 100
+```
+
+```python
+NBA_.hist()
+```
+
+Output:
+
+![inserting image](images/big_data/nba_hist.png)
+
+```python
+std_values = (NBA_ - NBA_.mean())/NBA_.std()
+std_points = Series(std_values, index = NBA_.index)
+std_points.hist()
+```
+Output:
+
+![inserting image](images/big_data/nba_hist2.png)
+
+
+```python
+std_points[std_points > 2]
+```
+
+Output:
+```python
+1/6/2019    2.28305
+dtype: object
+```
 
 
 
