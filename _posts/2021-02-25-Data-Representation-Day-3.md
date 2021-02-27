@@ -63,8 +63,85 @@ Will output a bunch of JSON code
 
 
 
-## Lets work on an Exercise using Python Tweetpy
+## Lets work on an Exercise using Python Tweepy
 
-[Read the Tweetpy Documentation](https://docs.tweepy.org/en/latest/)
+[Read the Tweepy Documentation](https://docs.tweepy.org/en/latest/)
+
 Using the Twitter Search (REST) API in order to download the 10 most recent tweets from the twitter feed containing whatever **keyword** we decide.
 
+APIs do have rate limitation which is how many requests can be made per day or per hour, if the rate is exceeded, the API returns an error. (possibly blocks IP address if abused)
+
+Twitters REST API limit is 180 queries per 15 minute window
+
+Replace the XXX's with your own consumer tokens and access tokens
+
+Let's extract the **screen name** of the user who posts the tweet of our keyword and the tweet message as well, and store the results in a DataFrame object.
+
+**Search Methods** (from tweepy documentation)
+
+```python
+api.search(q,[,geocode][,lang] [,locale][,result_type][,count][,until] [,since_id][,max_id] [,include_entities] )
+```
+This will return a relevant Tweets matching a specified query.
+
+**Parameters:**
+
+* q : The search query string
+* geocode : Returns tweets by users location (lat/long)
+* lang : Restricts tweets to a given language
+* locale : Specify the language of the Query we sent
+* result_type : Specifies what type of search results you would prefer to receive
+* count : The number of results to try and retrieve
+* until : Returns tweets created before a given data
+* since_id : Returns only statuses with an ID greater than the specified ID
+* mad_id :  Returns only statuses with an ID less than or equal to the specified ID
+* include_entities : he entities node will not be included when set to false. Defaults to true
+
+In our case, were only intrested in using the **q** (query for our keyword) and  **count** to limit the number of tweets to search for. Lets add the **geocode**
+
+The keyword to search for in this example will be: **Michigan State Spartans**v(Go Green!)
+
+```python
+import tweepy
+from tweepy import OAuthHandler
+from tweepy import API
+
+import pandas as pd
+
+
+consumer_key = 'XXX'
+consumer_secret = 'XXX'
+access_token = 'XXX'
+access_token_secret = 'XXX'
+
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
+
+api = tweepy.API(auth)
+
+## Search Method
+keyword = "Michigan State Spartans"
+
+post = api.search(q = keyword, gecode, count = 10 )
+
+# now lets save the data of the tweet and the username
+
+data = pd.DataFrame(columns = ["Tweet", "UserName", "Location" ])
+
+## Lets add the stuff to our DataFrame
+
+for tweet in posts:
+
+    data = data.append( {"Tweet":tweet.txt. "UserName":tweet.user.screen_name "Location":tweet. }, ignore_index = True)
+
+```
+Lets see our DataFrame:
+```python
+data
+```
+Output:
+
+```python
+
+
+```
