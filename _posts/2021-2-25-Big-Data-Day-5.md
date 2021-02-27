@@ -37,7 +37,7 @@ Are data objects with charactersitics that are considerbly different than most o
 
 How do we handle Duplicate Data?
 
-- 
+
 
 **Missing Values**
 
@@ -50,3 +50,20 @@ How do we handle missing values?
 - We could remove data objects with missing values
 - Ignore the missing values during analysis
 
+
+One of the best Python libraries with Data Analysis is **Pandas** as we already know
+
+The Pandas Library has two main data structures
+
+1. Series: a one-dimensional array-like object
+2. DataFrame: spreadsheet-like data structure containing a collection of ordered columns
+
+
+
+**Series**
+
+
+
+
+
+**DataFrame**
