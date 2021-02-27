@@ -173,4 +173,20 @@ Ouput:
 dtype: int64
 ```
 
+Lets plot
+```python
+%matplotlib inline
+plt.figure(figsize=(10,5)) 
+
+NBA_.plot(kind = "line", color = 'green')
+```
+
+Output:
+
+![inserting image](images/big_data/nba.png)
+
+
+
+
+
 **DataFrame**
