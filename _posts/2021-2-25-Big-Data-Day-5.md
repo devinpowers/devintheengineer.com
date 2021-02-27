@@ -183,7 +183,7 @@ NBA_.plot(kind = "line", color = 'green')
 
 Output:
 
-![inserting image](images/big_data/nba.png)
+![inserting image](/images/big_data/nba.png)
 
 **Dealing with Missing Values**
 
@@ -313,7 +313,7 @@ NBA_.hist()
 
 Output:
 
-![inserting image](images/big_data/nba_hist.png)
+![inserting an Image](/images/big_data/nba_hist.png)
 
 ```python
 std_values = (NBA_ - NBA_.mean())/NBA_.std()
@@ -322,7 +322,7 @@ std_points.hist()
 ```
 Output:
 
-![inserting image](images/big_data/nba_hist2.png)
+![inserting an Image](/images/big_data/nba_hist2.png)
 
 
 ```python
