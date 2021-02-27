@@ -337,4 +337,105 @@ dtype: object
 
 
 
-**DataFrame**
+## DataFrame
+
+
+Lets work more with DataFrames
+
+```python
+import pandas as pd
+from pandas import DataFrame
+```
+
+```python
+
+data = {'Name': ['Lebron James', 'Steph Curry', 'Kevin Durant','Chris Paul'],
+       'Age': [36, 31, 34, 36],
+       'Height': [6.8, 6.2, 6.9, 6.0]}
+users = DataFrame(data)
+
+
+```
+
+```python
+users
+```
+
+Output:
+```python
+
+Name	            Age	Height
+0	Lebron James	36	6.8
+1	Steph Curry	    31	6.2
+2	Kevin Durant	34	6.9
+3	Chris Paul  	36	6.0
+```
+
+```python
+users["Age"]
+```
+
+Output:
+```python
+0    36
+1    31
+2    34
+3    36
+Name: Age, dtype: int64
+```
+
+```python
+users.columns
+```
+
+Output:
+
+```python
+Index(['Name', 'Age', 'Height'], dtype='object')
+```
+
+```python
+users.shape
+```
+
+```python
+(4, 3)
+```
+
+```python
+users.index = [1,2,3,4]
+users.transpose()
+```
+
+Output:
+
+```python
+            	1	            2	        3	        4
+Name	Lebron James	Steph Curry 	Kevin Durant	Chris Paul
+Age	        36          	31	            34	            36
+Height  	6.8	            6.2	            6.9         	6
+```
+
+```python
+users[users.Age>33]
+```
+Output:
+
+```python
+	Name	        Age	    Height
+1	Lebron James	36	    6.8
+3	Kevin Durant	34	    6.9
+4	Chris Paul      36	    6.0
+```
+
+```python
+users.describe().transpose()
+```
+
+Output:
+
+```python
+	    count	mean	std	        min	    25%	    50%	    75%	    max
+Age     4.0	    34.250	2.362908	31.0	33.25	35.0	36.000	36.0
+Height	4.0 	6.475	0.442531	6.0	    6.15	6.5 	6.825	6.9
+```
