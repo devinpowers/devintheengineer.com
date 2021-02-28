@@ -50,9 +50,7 @@ Now we will use the **DataFrame.sample()** in Pandas, the sample method returns 
 
 **Parameters**
 
-n = int -> Number of items from axis to return
-
-frac = float -> Fraction of axis items to return
+**n** = int -> Number of items from axis to return
 
 Other Parameters in the link below
 
@@ -66,11 +64,18 @@ sample
 Output:
 
 ```python
-
-preg	plas	pres	skin	insu	mass	pedi	age	class
-351	4	137	84	0	0	31.2	0.252	30	tested_negative
-466	0	74	52	10	36	27.8	0.269	22	tested_negative
-528	0	117	66	31	188	30.8	0.493	22	tested_negative
-683	4	125	80	0	0	32.3	0.536	27	tested_positive
-3	1	89	66	23	94	28.1	0.167	21	tested_negative
+        preg	plas	pres	skin	insu	mass	pedi	age	class
+351	    4	    137	    84	    0	    0	    31.2	0.252	30	tested_negative
+466	    0	    74	    52	    10	    36	    27.8	0.269	22	tested_negative
+528	    0	    117	    66	    31	    188	    30.8	0.493	22	tested_negative
+683	    4	    125	    80  	0	    0	    32.3	0.536	27	tested_positive
+3	    1	    89	    66	    23	    94	    28.1	0.167	21	tested_negative
 ```
+
+Now we have 5 random samples from our CSV file
+
+
+
+#### Aggregation
+
+
