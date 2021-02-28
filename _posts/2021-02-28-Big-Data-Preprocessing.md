@@ -97,11 +97,11 @@ Lets first look at Ordinal and Numeric Attributes
 
 Ordinal Attributes are where order matters but not the difference between values
 
-* Examples: social economic status (low income, middle income, high income)
+* **Examples:** social economic status (low income, middle income, high income)
 
 Numeric Attribute is data expressed in numbers 
 
-* Examples:  Weight, Height, Salary
+* **Examples:**  Weight, Height, Salary
 
 
 We use **Discretization** to split the range of numeric attributes into discrete number of intervals
@@ -210,10 +210,11 @@ NumPurchases	    -0.393919	0.900591	0.288885	        0.853188	1.000000
 
 **Entropy-based Discretization**
 
-- A very common supervised Discretization method
-- Entropy is a measure of **impurity**
-    * Higher entropy implies data points are from a large number of classes
-    * Lower entropy implies most of the data points are from the same class
+- A very common **Supervised Discretization method**
+- Entropy is a measure of **impurity** (randomnes in a set ) 
+    * Measured from range of 0 to 1
+    * Higher entropy implies data points are from a large number of classes (heterogeneous)
+    * Lower entropy implies most of the data points are from the same class 
 
 
-
+["insert image"](/images/big_data/entropy.png)
