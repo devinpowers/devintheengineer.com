@@ -97,11 +97,11 @@ Lets first look at Ordinal and Numeric Attributes
 
 Ordinal Attributes are where order matters but not the difference between values
 
-    - Examples: social economic status (low income, middle income, high income)
+    * Examples: social economic status (low income, middle income, high income)
 
 Numeric Attribute is data expressed in numbers 
 
-    - Examples:  Weight, Height, Salary
+    * Examples:  Weight, Height, Salary
 
 
 We use **Discretization** to split the range of numeric attributes into discrete number of intervals
@@ -217,4 +217,3 @@ NumPurchases	    -0.393919	0.900591	0.288885	        0.853188	1.000000
 
 
 
-    
