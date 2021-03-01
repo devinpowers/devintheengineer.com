@@ -234,7 +234,7 @@ data
 Output:
 ```python
 	    age 	membershipYears	numberOfFriends	AmountSpent	NumPurchases
-0	    21	        2           	5	            100     	2
+0	    21	        2           	 5	            100     	2
 1	    38      	0	            10          	10	        1
 2	    18      	0	            5	            25      	1
 3	    19      	5	            30	            1000	    25
