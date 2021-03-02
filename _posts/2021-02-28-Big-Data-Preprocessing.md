@@ -267,6 +267,8 @@ Calculating the Entropy = *0*
 
 **Bin 2**
 
+|     |   |
+|-----|---|
 | Yes | 1 |
 |-----|---|
 | No  | 5 |
@@ -275,6 +277,8 @@ Calculating the Entropy = *0.65*
 
 **Bin 3**
 
+|     |   |
+|-----|---|
 | Yes | 2 |
 |-----|---|
 | No  | 4 |
