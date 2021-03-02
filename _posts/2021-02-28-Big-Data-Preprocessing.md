@@ -559,3 +559,37 @@ data[column_names[8]] = temp_data[1]
 data.head()
 ```
 
+Output:
+
+Here our Updated table with all the Correct Column names
+
+|   |  MPG | Cylinders | Displacement | Horsepower | Weight | Acceleration | Model Year | Origin |                  Car Name |
+|--:|-----:|----------:|-------------:|-----------:|-------:|-------------:|-----------:|-------:|--------------------------:|
+| 0 | 18.0 |         8 |        307.0 |      130.0 |  3504. |         12.0 |         70 |      1 | chevrolet chevelle malibu |
+| 1 | 15.0 |         8 |        350.0 |      165.0 |  3693. |         11.5 |         70 |      1 |         buick skylark 320 |
+| 2 | 18.0 |         8 |        318.0 |      150.0 |  3436. |         11.0 |         70 |      1 |        plymouth satellite |
+| 3 | 16.0 |         8 |        304.0 |      150.0 |  3433. |         12.0 |         70 |      1 |             amc rebel sst |
+| 4 | 17.0 |         8 |        302.0 |      140.0 |  3449. |         10.5 |         70 |      1 |               ford torino |
+
+
+Let do some more Preprocessing Stuff with our DataFrame, lets use the **describe()** function to obtain some statistics of the dataframe.
+
+```python
+data.describe()
+```
+
+
+Output:
+
+|        |  MPG | Cylinders | Displacement | Horsepower | Weight | Acceleration | Model Year | Origin |   Car Name |
+|-------:|-----:|----------:|-------------:|-----------:|-------:|-------------:|-----------:|-------:|-----------:|
+|  count |  398 |       398 |          398 |        392 |    398 |          398 |        398 |    398 |        398 |
+| unique |  129 |         5 |           82 |         93 |    351 |           96 |         13 |      3 |        305 |
+|    top | 13.0 |         4 |        97.00 |      150.0 |  1985. |         14.5 |         73 |      1 | ford pinto |
+|   freq |   20 |       204 |           21 |         22 |      4 |           23 |         40 |    249 |          6 |
+
+
+
+Looking at the table above generated from the describe() function we can see that there most be missing values from the "Horsepower" Column since the **count** for every single other Column is at 398 while the Horsepower column only has 392.
+
+Lets take a extra look at the **Horsepower** Column to see the missing values and handle them.
