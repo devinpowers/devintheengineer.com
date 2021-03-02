@@ -117,7 +117,7 @@ We use **Discretization** to split the range of **numeric attributes** into disc
 
 [Pandas Documentation on Cutting ](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.cut.html)
 
-Python Examples of both using **age** as 
+Python Examples of both using **age** to put into bins
 
 ```python
 data.age.describe()
@@ -135,7 +135,7 @@ min       21.000000
 max       81.000000
 Name: age, dtype: float64
 ```
-
+**Equal Interval Width** putting *age* paramter into 5 different bins
 
 ```python
 age_bins = p.cut(data.age, 5)
@@ -152,11 +152,11 @@ Output:
 Name: age, dtype: category
 Categories (5, interval[float64]): [(20.94, 33.0] < (33.0, 45.0] < (45.0, 57.0] < (57.0, 69.0] < (69.0, 81.0]]
 ```
+We can see the 5 **equal-width** bins : (20.94, 33.0] < (33.0, 45.0] < (45.0, 57.0] < (57.0, 69.0] < (69.0, 81.0] 
 
-The Output above Discretize into 5 **equal-width** bins
-
+Lets put them into 5 **equal-frequency** bins
 ```python
-age_bins = p.cut(data.age, [20,40,50,60,80])
+age_bins = p.cut(data.age, [20,40,50,60,81])
 age_bins.head()
 ```
 
@@ -168,13 +168,51 @@ Output:
 3    (20, 40]
 4    (20, 40]
 Name: age, dtype: category
-Categories (4, interval[int64]): [(20, 40] < (40, 50] < (50, 60] < (60, 80]]
+Categories (4, interval[int64]): [(20, 40] < (40, 50] < (50, 60] < (60, 81]]
 ```
 
-The Output above Discretize into 5 equal frequency bins for the Ages!!
+The Output above Discretize into 5 **equal frequency** bins: (20, 40] < (40, 50] < (50, 60] < (60, 81]
 
 
 **Supervised Discretization Example**
+
+In this example, let *Buy* be the class attribute and were intrested in discretize the *Age* attribute
+
+- We also want the intervals (bins) to contain data points from the same class
+
+| Age | Buy |
+|-----|-----|
+| 10  | No  |
+| 15  | No  |
+| 18  | Yes |
+| 19  | Yes |
+| 24  | No  |
+| 29  | Yes |
+| 30  | Yes |
+| 31  | Yes |
+| 40  | No  |
+| 44  | No  |
+| 55  | No  |
+| 64  | No  |
+
+**Equal Width:** interval = (64-10)/3 = 54/3 = 18
+
+|         | Yes | No |
+|---------|-----|----|
+| <28     | 2   | 3  |
+| (28,46) | 3   | 2  |
+| > 46    | 0   | 2  |
+
+**Equal Frequency:**
+
+|             | Yes | No |
+|-------------|-----|----|
+| <21.5       | 2   | 2  |
+| (21.5,35.5) | 3   | 1  |
+| > 35.5      | 0   | 4  |
+
+We can see that both approaches can produce intervals that contain non-homogeneous classes
+
 
 ```python
 import pandas as p
