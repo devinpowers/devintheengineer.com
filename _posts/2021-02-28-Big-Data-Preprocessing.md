@@ -176,7 +176,7 @@ The Output above Discretize into 5 **equal frequency** bins: (20, 40] < (40, 50]
 
 **Supervised Discretization Example**
 
-In this example, let *Buy* be the class attribute and were intrested in discretize the *Age* attribute
+In this example, let *Buy* be the **class attribute** and were intrested in discretize the *Age* attribute, we want the bins to be as close to homogeneous as possible
 
 - Supervised Discretization methods take the class into account when setting discretization boundaries
 
@@ -213,7 +213,7 @@ In this example, let *Buy* be the class attribute and were intrested in discreti
 | (21.5,35.5) | 3   | 1  |
 | > 35.5      | 0   | 4  |
 
-We can see that both approaches can produce intervals that contain non-homogeneous classes
+We can see that both approaches can produce intervals that contain *non-homogeneous* classes
 
 
 **Using Supervised Discretization**
@@ -225,8 +225,48 @@ We can see that both approaches can produce intervals that contain non-homogeneo
 | (16.5, 35.5) | 5   | 1  |
 | > 35.5       | 0   | 4  |
 
-We see that our goal is to ensure that each bin contains data points from *one class*
+We see that our goal is to ensure that each bin contains data points from *one class*, in the above table we can see a more **homogeneous** classes representation
 
+
+### Different Supervised Discretization Techniques
+
+**Entropy-based Discretization**
+
+- A very common **Supervised Discretization method**
+- Entropy is a measure of **impurity** (randomness in a set) (Remember Thermodynamics)
+- Measure of Disorder
+    * Measured from range of 0 to 1
+    * **Higher entropy** implies data points are from a large number of classes (heterogeneous)
+    * **Lower entropy** implies *most* of the data points are from the same class 
+
+!["insert image"](/images/big_data/entropy.png)
+
+If we look back on our table above:
+
+*using the Entropy Equation*
+
+**Bin 1**
+| Yes | 0 |
+|-----|---|
+| No  | 6 |
+
+Calculating the Entropy = *0*
+
+**Bin 2**
+| Yes | 1 |
+|-----|---|
+| No  | 5 |
+
+Calculating the Entropy = *0.65*
+
+**Bin 3**
+| Yes | 2 |
+|-----|---|
+| No  | 4 |
+
+Calculating the Entropy = *0.92*
+
+As we can see after calculating the entropy of each *bin*, as the bin becomes less homogeneous, the entropy increases!
 
 
 ```python
@@ -267,17 +307,6 @@ NumPurchases	    -0.393919	0.900591	0.288885	        0.853188	1.000000
 ```
 
 
-**Entropy-based Discretization**
-
-- A very common **Supervised Discretization method**
-- Entropy is a measure of **impurity** (randomness in a set) 
-- Measure of Disorder
-    * Measured from range of 0 to 1
-    * Higher entropy implies data points are from a large number of classes (heterogeneous)
-    * Lower entropy implies most of the data points are from the same class 
-
-
-!["insert image"](/images/big_data/entropy.png)
 
 
 
