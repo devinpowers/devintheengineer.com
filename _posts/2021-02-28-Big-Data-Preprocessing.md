@@ -981,3 +981,181 @@ Output:
 !["insert image"](/images/big_data/scatter_.png)
 
 
+
+### Another Example
+
+Lets do some more *cleaning* of Data Examples, this time using a file that has stocks! (Microsoft)
+
+```python
+import pandas as pd
+
+data = pd.read_csv('msft.csv',header=0)
+data.head()
+```
+
+Output:
+
+|   |       Date |      Open |      High |       Low |     Close |   Volume | Adj Close |
+|--:|-----------:|----------:|----------:|----------:|----------:|---------:|----------:|
+| 0 | 12/30/2016 | 62.959999 | 62.990002 | 62.029999 | 62.139999 | 25465900 | 62.139999 |
+| 1 | 12/29/2016 | 62.860001 | 63.200001 | 62.730000 | 62.900002 | 10181600 | 62.900002 |
+| 2 | 12/28/2016 | 63.400002 | 63.400002 | 62.830002 | 62.990002 | 14247400 | 62.990002 |
+| 3 | 12/27/2016 | 63.209999 | 64.070000 | 63.209999 | 63.279999 | 11583900 | 63.279999 |
+| 4 | 12/23/2016 | 63.450001 | 63.540001 | 62.799999 | 63.240002 | 12398000 | 63.240002 |
+
+
+Lets look at the Stats of this DataFrame:
+
+```python
+data.describe()
+```
+
+Output:
+
+|       |        Open |        High |         Low |       Close |       Volume |   Adj Close |
+|------:|------------:|------------:|------------:|------------:|-------------:|------------:|
+| count | 2518.000000 | 2518.000000 | 2518.000000 | 2518.000000 | 2.518000e+03 | 2518.000000 |
+|  mean |   33.980318 |   34.312530 |   33.654591 |   33.993987 | 5.296776e+07 |   30.456126 |
+|   std |   10.536277 |   10.589226 |   10.491077 |   10.549777 | 2.908349e+07 |   11.711547 |
+|   min |   15.200000 |   15.620000 |   14.870000 |   15.150000 | 8.370500e+06 |   12.381153 |
+|   25% |   26.760000 |   27.000000 |   26.480000 |   26.770000 | 3.370250e+07 |   22.349302 |
+|   50% |   29.969999 |   30.219999 |   29.730000 |   29.980000 | 4.754195e+07 |   25.306451 |
+|   75% |   41.369999 |   41.682499 |   41.040001 |   41.475000 | 6.389458e+07 |   39.035395 |
+|   max |   63.840000 |   64.099998 |   63.410000 |   63.619999 | 3.193179e+08 |   63.619999 |
+
+
+
+We want to look at the *closing* numbers
+
+```python
+closing = data["Close"]
+closing.head()
+```
+
+Output:
+
+```python
+0    62.139999
+1    62.900002
+2    62.990002
+3    63.279999
+4    63.240002
+Name: Close, dtype: float64
+```
+
+```python
+from pandas import Series
+
+closing_date = data['Date'].values
+closing_date = closing_date[1:]
+
+N = closing.size
+
+change = closing[:N-1].values-closing[1:].values
+changeData = Series(change, index=closing_date)
+changeData.head()
+```
+
+```python
+%matplotlib inline
+
+changeData.hist()
+```
+
+!["insert image"](/images/big_data/preprocess/micro_hist.png)
+
+Lets look at the **Z-Score**
+
+```python
+Z = (changeData - changeData.mean())/changeData.std()
+Z.describe()
+```
+
+Output:
+
+```python
+count    2.517000e+03
+mean     1.161720e-17
+std      1.000000e+00
+min     -7.694267e+00
+25%     -4.811551e-01
+50%     -2.261778e-02
+75%      4.888204e-01
+max      8.513198e+00
+dtype: float64
+```
+
+
+Z-Score Above 4
+
+```python
+Z[Z>4]
+```
+
+Output:
+
+```python
+10/20/2016    4.227654
+7/19/2016     4.950729
+1/28/2016     5.321083
+10/22/2015    8.513198
+4/23/2015     7.966481
+8/22/2013     4.139476
+10/10/2008    7.031775
+10/25/2007    5.338719
+dtype: float64
+```
+
+Z-Score Below 4
+
+```python
+Z[Z<-4]
+```
+Output:
+
+```python
+4/21/2016   -7.077011
+8/20/2015   -4.590337
+1/26/2015   -7.694267
+7/18/2013   -7.147553
+1/21/2009   -4.025982
+9/26/2008   -4.237618
+dtype: float64
+```
+
+**More** Discretization
+
+```python
+bins = pd.cut(closing,5)
+bins.head()
+```
+
+Output:
+
+```python
+0    (53.926, 63.62]
+1    (53.926, 63.62]
+2    (53.926, 63.62]
+3    (53.926, 63.62]
+4    (53.926, 63.62]
+Name: Close, dtype: category
+Categories (5, object): [(15.102, 24.844] < (24.844, 34.538] < (34.538, 44.232] < (44.232, 53.926] < (53.926, 63.62]]
+```
+
+
+```python
+bins = pd.qcut(closing,[0,0.2,0.4,0.6,0.8,1])
+bins.head()
+```
+
+Output:
+
+```python
+0    (44.4, 63.62]
+1    (44.4, 63.62]
+2    (44.4, 63.62]
+3    (44.4, 63.62]
+4    (44.4, 63.62]
+Name: Close, dtype: category
+Categories (5, object): [[15.15, 25.89] < (25.89, 28.678] < (28.678, 31.854] < (31.854, 44.4] < (44.4, 63.62]]
+```
