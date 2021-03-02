@@ -593,3 +593,69 @@ Output:
 Looking at the table above generated from the describe() function we can see that there most be missing values from the "Horsepower" Column since the **count** for every single other Column is at 398 while the Horsepower column only has 392.
 
 Lets take a extra look at the **Horsepower** Column to see the missing values and handle them.
+
+```python
+missing_index = list(data[data['Horsepower'].isnull()].index)
+missing_index
+```
+
+Output:
+
+Heres a list of the indexes in which the Horsepower value is missing:
+```python
+[32, 126, 330, 336, 354, 374]
+```
+Lets locate the missing **Horsepower** rows!
+
+```python
+data.loc[missing_index]
+```
+Output:
+
+|     |  MPG | Cylinders | Displacement | Horsepower | Weight | Acceleration | Model Year | Origin |             Car Name |
+|----:|-----:|----------:|-------------:|-----------:|-------:|-------------:|-----------:|-------:|---------------------:|
+|  32 | 25.0 |         4 |        98.00 |       None |  2046. |         19.0 |         71 |      1 |           ford pinto |
+| 126 | 21.0 |         6 |        200.0 |       None |  2875. |         17.0 |         74 |      1 |        ford maverick |
+| 330 | 40.9 |         4 |        85.00 |       None |  1835. |         17.3 |         80 |      2 | renault lecar deluxe |
+| 336 | 23.6 |         4 |        140.0 |       None |  2905. |         14.3 |         80 |      1 |   ford mustang cobra |
+| 354 | 34.5 |         4 |        100.0 |       None |  2320. |         15.8 |         81 |      2 |          renault 18i |
+| 374 | 23.0 |         4 |        151.0 |       None |  3035. |         20.5 |         82 |      1 |        amc concord d |
+
+
+What should we fill the missing values with? We could take the median values of all the other vehicles horsepower and use that as the Horsepower values.
+
+```python
+median = data['Horsepower'].median()
+median
+```
+
+Output:
+
+```python
+93.5
+```
+
+Lets not update all the *none* values in our table set equal to the median value of 93.5
+
+```python
+data['Horsepower'] = data["Horsepower"].fillna(data["Horsepower"].median())
+```
+
+Let's check those missing index's again
+
+```python
+data.loc[missing_index]
+```
+
+Output:
+
+|     |  MPG | Cylinders | Displacement | Horsepower | Weight | Acceleration | Model Year | Origin |             Car Name |
+|----:|-----:|----------:|-------------:|-----------:|-------:|-------------:|-----------:|-------:|---------------------:|
+|  32 | 25.0 |         4 |        98.00 |       93.5 |  2046. |         19.0 |         71 |      1 |           ford pinto |
+| 126 | 21.0 |         6 |        200.0 |       93.5 |  2875. |         17.0 |         74 |      1 |        ford maverick |
+| 330 | 40.9 |         4 |        85.00 |       93.5 |  1835. |         17.3 |         80 |      2 | renault lecar deluxe |
+| 336 | 23.6 |         4 |        140.0 |       93.5 |  2905. |         14.3 |         80 |      1 |   ford mustang cobra |
+| 354 | 34.5 |         4 |        100.0 |       93.5 |  2320. |         15.8 |         81 |      2 |          renault 18i |
+| 374 | 23.0 |         4 |        151.0 |       93.5 |  3035. |         20.5 |         82 |      1 |       amc concord dl |
+
+Awesome, we have successfully cleaned the missing data!
