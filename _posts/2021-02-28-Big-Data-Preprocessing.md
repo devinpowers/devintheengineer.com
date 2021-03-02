@@ -19,13 +19,14 @@ date: 2021-2-28
 
 What is Sampling?
 
-- Sampling is a technique use for **data reduction**
-- There is different Types of Sampling
+- Sampling is a technique use for **data reduction**, it's key principle for effective sampling is to find a representative sample
 
-    * Simple Random Sampling
-    * Stratified Sampling
-    * Sampling without Replacement
-    * Sample with Replacement
+- There are different Types of Sampling
+
+    * Simple Random Sampling: Equal probability of selecting any particular item in the dataset
+    * Stratified Sampling: split the data into several partition, then draw random samples from each partition
+    * Sampling without Replacement: As each item is selected, it is removed from the population
+    * Sample with Replacement: Items are not removed from the population as they're selected for the sample, therefore the same item can be selected more than once
 
 
 
@@ -72,7 +73,7 @@ Output:
 3	    1	    89	    66	    23	    94	    28.1	0.167	21	tested_negative
 ```
 
-Now we have 5 random samples from our CSV file
+Now we have **5 random samples** (rows) from our CSV file
 
 
 
@@ -91,45 +92,50 @@ Why?
 
 #### Discretization
 
-- Discretization is the process of transferring continuous functions, models, variables, and equations into **discrete counterparts**.
+- Discretization is the process of transferring continuous functions, models, variables, and equations into **discrete counterparts**. (think of bins)
 
 Lets first look at Ordinal and Numeric Attributes
 
-Ordinal Attributes are where order matters but not the difference between values
+**Ordinal Attributes** are where order matters but not the difference between values
 
-* **Examples:** social economic status (low income, middle income, high income)
+* *Examples:* social economic status (low income, middle income, high income)
 
-Numeric Attribute is data expressed in numbers 
+**Numeric Attribute** is data expressed in numbers 
 
-* **Examples:**  Weight, Height, Salary
+* *Examples:*  Weight, Height, Salary
 
 
-We use **Discretization** to split the range of numeric attributes into discrete number of intervals
+We use **Discretization** to split the range of **numeric attributes** into discrete number of intervals (split age groups: 20-30, 31-40, 41-50, 51-60, etc)
 
 **Unsupervised Discretization**
 
-- Is  splits the range of the numeric attributes into bins
-- There is **Equal Interval Width** and **Equal Frequency** which both have their pros and cons
+*Is  splits the range of the numeric attributes into bins*
 
+- There is **Equal Interval Width**, which splits the range of numeric attribute into equal length intervals (bins), its easy to implement, but susceptible to outliers
 
-Python Examples of both:
+- There is **Equal Frequency**, which splits the range of numeric attribute in such a way that each interval (bin) has the same number of points, reduces outliers, but may not be consistent with structure of the data
+
+[Pandas Documentation on Cutting ](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.cut.html)
+
+Python Examples of both using **age** as 
 
 ```python
-data.mass.describe()
+data.age.describe()
 ```
 
 Output:
 ```python
 count    768.000000
-mean      31.992578
-std        7.884160
-min        0.000000
-25%       27.300000
-50%       32.000000
-75%       36.600000
-max       67.100000
-Name: mass, dtype: float64
+mean      33.240885
+std       11.760232
+min       21.000000
+25%       24.000000
+50%       29.000000
+75%       41.000000
+max       81.000000
+Name: age, dtype: float64
 ```
+
 
 ```python
 age_bins = p.cut(data.age, 5)
