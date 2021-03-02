@@ -358,7 +358,22 @@ How do we **Overcome the Curse of Dimensionality**?
 
 **Python Example of Feature Selection**
 
+Here is our table:
 
+| Age | Buy | Time Spent | Member | # Friends | Amount Spent ($) |
+|-----|-----|------------|--------|-----------|------------------|
+| 10  | No  | 40         | 2      | 5         | 0                |
+| 15  | No  | 105        | 0      | 10        | 0                |
+| 18  | Yes | 100        | 0      | 5         | 20.5             |
+| 19  | Yes | 110        | 5      | 30        | 55.45            |
+| 24  | No  | 95         | 0      | 2         | 0                |
+| 29  | Yes | 180        | 2      | 20        | 100.5            |
+| 30  | Yes | 120        | 4      | 5         | 35.5             |
+| 31  | Yes | 100        | 2      | 70        | 200.5            |
+| 40  | No  | 60         | 0      | 11        | 0                |
+| 44  | No  | 44         | 0      | 8         | 0                |
+| 55  | No  | 110        | 1      | 2         | 0                |
+| 64  | No  | 74         | 1      | 0         | 0                |
 
 ```python
 import pandas as p
