@@ -395,14 +395,16 @@ data.corr()
 ```
 
 Output (Correlation Matrix):
-```python
-	                    age	    membershipYears	numberOfFriends	AmountSpent	NumPurchases
-age             	1.000000	-0.334731	-0.253233	        -0.303731	-0.393919
-membershipYears	    -0.334731	1.000000	0.343459	        0.851307	0.900591
-numberOfFriends 	-0.253233	0.343459	1.000000	        0.085086	0.288885
-AmountSpent	        -0.303731	0.851307	0.085086	        1.000000	0.853188
-NumPurchases	    -0.393919	0.900591	0.288885	        0.853188	1.000000
-```
+
+|                 |       age | membershipYears | numberOfFriends | AmountSpent | NumPurchases |
+|----------------:|----------:|----------------:|----------------:|------------:|-------------:|
+|             age |  1.000000 |       -0.334731 |       -0.253233 |   -0.303731 |    -0.393919 |
+| membershipYears | -0.334731 |        1.000000 |        0.343459 |    0.851307 |     0.900591 |
+| numberOfFriends | -0.253233 |        0.343459 |        1.000000 |    0.085086 |     0.288885 |
+|     AmountSpent | -0.303731 |        0.851307 |        0.085086 |    1.000000 |     0.853188 |
+|    NumPurchases | -0.393919 |        0.900591 |        0.288885 |    0.853188 |     1.000000 |
+
+
 Now we can select the *non-correlated* features for our analysis
 
 
@@ -424,6 +426,7 @@ data
 ```
 
 Output:
+
 |    | Age | Membership Years | Number Of Friends | Amount Spent | Number of Purchases |
 |---:|----:|-----------------:|------------------:|-------------:|--------------------:|
 |  0 |  21 |                2 |                 5 |          100 |                   2 |
