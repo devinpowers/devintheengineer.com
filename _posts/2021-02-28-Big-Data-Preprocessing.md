@@ -659,3 +659,200 @@ Output:
 | 374 | 23.0 |         4 |        151.0 |       93.5 |  3035. |         20.5 |         82 |      1 |       amc concord dl |
 
 Awesome, we have successfully cleaned the missing data!
+
+
+Now lets create a new DataFream object containing different cars and then take a random samplings from it!
+
+```python
+data["Car Name]
+```
+
+Output:
+
+```python
+0      chevrolet chevelle malibu
+1              buick skylark 320
+2             plymouth satellite
+3                  amc rebel sst
+4                    ford torino
+                 ...            
+393              ford mustang gl
+394                    vw pickup
+395                dodge rampage
+396                  ford ranger
+397                   chevy s-10
+Name: Car Name, Length: 398, dtype: object
+```
+
+Let pick a *toyota corolla*!
+
+```python
+data_frame_2 = data[(data["Car Name"] =="toyota corolla")]
+data_frame_2.describe()
+```
+
+Output:
+
+|        |  MPG | Cylinders | Displacement | Horsepower | Weight | Acceleration | Model Year | Origin |       Car Name |
+|-------:|-----:|----------:|-------------:|-----------:|-------:|-------------:|-----------:|-------:|---------------:|
+|  count |    5 |         5 |            5 |          5 |      5 |            5 |          5 |      5 |              5 |
+| unique |    5 |         1 |            2 |          2 |      5 |            5 |          5 |      1 |              1 |
+|    top | 32.2 |         4 |        108.0 |      75.00 |   2245 |         16.9 |         75 |      3 | toyota corolla |
+|   freq |    1 |         5 |            3 |          4 |      1 |            1 |          1 |      5 |              5 |
+
+
+Now lets add another Car to the new DataFrame! This time lets pick the Chevy Impala
+
+```python
+data_frame_2 = data_frame_2.append(data[(data["Car Name"] =="chevrolet impala")])
+data_frame_2
+```
+
+Output:
+
+|     |  MPG | Cylinders | Displacement | Horsepower | Weight | Acceleration | Model Year | Origin |         Car Name |
+|----:|-----:|----------:|-------------:|-----------:|-------:|-------------:|-----------:|-------:|-----------------:|
+| 167 | 29.0 |         4 |        97.00 |      75.00 |  2171. |         16.0 |         75 |      3 |   toyota corolla |
+| 205 | 28.0 |         4 |        97.00 |      75.00 |  2155. |         16.4 |         76 |      3 |   toyota corolla |
+| 321 | 32.2 |         4 |        108.0 |      75.00 |  2265. |         15.2 |         80 |      3 |   toyota corolla |
+| 356 | 32.4 |         4 |        108.0 |      75.00 |  2350. |         16.8 |         81 |      3 |   toyota corolla |
+| 382 | 34.0 |         4 |        108.0 |      70.00 |   2245 |         16.9 |         82 |      3 |   toyota corolla |
+|   6 | 14.0 |         8 |        454.0 |      220.0 |  4354. |          9.0 |         70 |      1 | chevrolet impala |
+|  38 | 14.0 |         8 |        350.0 |      165.0 |  4209. |         12.0 |         71 |      1 | chevrolet impala |
+|  62 | 13.0 |         8 |        350.0 |      165.0 |  4274. |         12.0 |         72 |      1 | chevrolet impala |
+| 103 | 11.0 |         8 |        400.0 |      150.0 |  4997. |         14.0 |         73 |      1 | chevrolet impala |
+
+
+Maybe lets add another Car to our DataFrame! (Ford Ranger)
+
+
+```python
+data_frame_2 = data_frame_2.append(data[(data["Car Name"] =="ford ranger")])
+data_frame_2
+```
+
+Output:
+
+|     |  MPG | Cylinders | Displacement | Horsepower | Weight | Acceleration | Model Year | Origin |         Car Name |
+|----:|-----:|----------:|-------------:|-----------:|-------:|-------------:|-----------:|-------:|-----------------:|
+| 167 | 29.0 |         4 |        97.00 |      75.00 |  2171. |         16.0 |         75 |      3 |   toyota corolla |
+| 205 | 28.0 |         4 |        97.00 |      75.00 |  2155. |         16.4 |         76 |      3 |   toyota corolla |
+| 321 | 32.2 |         4 |        108.0 |      75.00 |  2265. |         15.2 |         80 |      3 |   toyota corolla |
+| 356 | 32.4 |         4 |        108.0 |      75.00 |  2350. |         16.8 |         81 |      3 |   toyota corolla |
+| 382 | 34.0 |         4 |        108.0 |      70.00 |   2245 |         16.9 |         82 |      3 |   toyota corolla |
+|   6 | 14.0 |         8 |        454.0 |      220.0 |  4354. |          9.0 |         70 |      1 | chevrolet impala |
+|  38 | 14.0 |         8 |        350.0 |      165.0 |  4209. |         12.0 |         71 |      1 | chevrolet impala |
+|  62 | 13.0 |         8 |        350.0 |      165.0 |  4274. |         12.0 |         72 |      1 | chevrolet impala |
+| 103 | 11.0 |         8 |        400.0 |      150.0 |  4997. |         14.0 |         73 |      1 | chevrolet impala |
+|   6 | 14.0 |         8 |        454.0 |      220.0 |  4354. |          9.0 |         70 |      1 | chevrolet impala |
+|  38 | 14.0 |         8 |        350.0 |      165.0 |  4209. |         12.0 |         71 |      1 | chevrolet impala |
+|  62 | 13.0 |         8 |        350.0 |      165.0 |  4274. |         12.0 |         72 |      1 | chevrolet impala |
+| 103 | 11.0 |         8 |        400.0 |      150.0 |  4997. |         14.0 |         73 |      1 | chevrolet impala |
+| 396 | 28.0 |         4 |        120.0 |      79.00 |  2625. |         18.6 |         82 |      1 |      ford ranger |
+
+
+
+Now lets take 3 different Random Samples of size 5 from our New DataFrame.
+
+Sample 1: *Sampling without replacement*
+
+```python
+sample1 = data_frame_2.sample(n = 5, replace = False, random_state = 1)
+sample1
+```
+Output:
+
+|     |  MPG | Cylinders | Displacement | Horsepower | Weight | Acceleration | Model Year | Origin |         Car Name |
+|----:|-----:|----------:|-------------:|-----------:|-------:|-------------:|-----------:|-------:|-----------------:|
+| 356 | 32.4 |         4 |        108.0 |      75.00 |  2350. |         16.8 |         81 |      3 |   toyota corolla |
+|  62 | 13.0 |         8 |        350.0 |      165.0 |  4274. |         12.0 |         72 |      1 | chevrolet impala |
+|  38 | 14.0 |         8 |        350.0 |      165.0 |  4209. |         12.0 |         71 |      1 | chevrolet impala |
+| 321 | 32.2 |         4 |        108.0 |      75.00 |  2265. |         15.2 |         80 |      3 |   toyota corolla |
+|  38 | 14.0 |         8 |        350.0 |      165.0 |  4209. |         12.0 |         71 |      1 | chevrolet impala |
+
+
+Sample 2: *sampling with replacement*
+
+
+```python
+sample2 = data_frame_2.sample(n = 5, replace = True, random_state = 1)
+sample2
+```
+
+Output:
+
+|     |  MPG | Cylinders | Displacement | Horsepower | Weight | Acceleration | Model Year | Origin |         Car Name |
+|----:|-----:|----------:|-------------:|-----------:|-------:|-------------:|-----------:|-------:|-----------------:|
+|   6 | 14.0 |         8 |        454.0 |      220.0 |  4354. |          9.0 |         70 |      1 | chevrolet impala |
+|  62 | 13.0 |         8 |        350.0 |      165.0 |  4274. |         12.0 |         72 |      1 | chevrolet impala |
+| 103 | 11.0 |         8 |        400.0 |      150.0 |  4997. |         14.0 |         73 |      1 | chevrolet impala |
+| 103 | 11.0 |         8 |        400.0 |      150.0 |  4997. |         14.0 |         73 |      1 | chevrolet impala |
+|   6 | 14.0 |         8 |        454.0 |      220.0 |  4354. |          9.0 |         70 |      1 | chevrolet impala |
+
+
+Sample 3: *Sample via stratified, where each strata corresponds to number of cylinders of the car (column 2)*
+
+```python
+sample3 = data_frame_2[data_frame_2["Car Name"] == "toyota corolla"].sample( n = 2, random_state = 1)  
+sample3 = sample3.append(data_frame_2[data_frame_2["Car Name"] == "toyota corolla"].sample(n = 2, random_state = 1 ))
+
+sample3
+```
+
+
+Output:
+
+
+|     |  MPG | Cylinders | Displacement | Horsepower | Weight | Acceleration | Model Year | Origin |       Car Name |
+|----:|-----:|----------:|-------------:|-----------:|-------:|-------------:|-----------:|-------:|---------------:|
+| 321 | 32.2 |         4 |        108.0 |      75.00 |  2265. |         15.2 |         80 |      3 | toyota corolla |
+| 205 | 28.0 |         4 |        97.00 |      75.00 |  2155. |         16.4 |         76 |      3 | toyota corolla |
+| 321 | 32.2 |         4 |        108.0 |      75.00 |  2265. |         15.2 |         80 |      3 | toyota corolla |
+| 205 | 28.0 |         4 |        97.00 |      75.00 |  2155. |         16.4 |         76 |      3 | toyota corolla |
+
+
+
+Lets apply different Discretization methods to the **MPG** attribute
+
+```python
+bins = pd.cut(data["MPG"].astype(float), 5)
+bins
+```
+
+Output:
+```python
+0      (16.52, 24.04]
+1      (8.962, 16.52]
+2      (16.52, 24.04]
+3      (8.962, 16.52]
+4      (16.52, 24.04]
+            ...      
+393    (24.04, 31.56]
+394     (39.08, 46.6]
+395    (31.56, 39.08]
+396    (24.04, 31.56]
+397    (24.04, 31.56]
+Name: MPG, Length: 398, dtype: category
+Categories (5, interval[float64]): [(8.962, 16.52] < (16.52, 24.04] < (24.04, 31.56] < (31.56, 39.08] < (39.08, 46.6]]
+```
+
+```python
+bins = pd.qcut(data["MPG"].astype(float), [0, 0.2, 0.4, 0.6, 0.8, 1.0])
+bins.head()
+```
+
+Output:
+
+```python
+0     (16.0, 20.0]
+1    (8.999, 16.0]
+2     (16.0, 20.0]
+3    (8.999, 16.0]
+4     (16.0, 20.0]
+Name: MPG, dtype: category
+Categories (5, interval[float64]): [(8.999, 16.0] < (16.0, 20.0] < (20.0, 25.0] < (25.0, 31.0] < (31.0, 46.6]]
+```
+
+
+
+
