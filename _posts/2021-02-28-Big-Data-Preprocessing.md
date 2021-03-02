@@ -853,6 +853,131 @@ Name: MPG, dtype: category
 Categories (5, interval[float64]): [(8.999, 16.0] < (16.0, 20.0] < (20.0, 25.0] < (25.0, 31.0] < (31.0, 46.6]]
 ```
 
+### More Preprocessing Exercises
 
+Lets load the same DataFrame we had in the Car Example again.
+
+
+```python
+import pandas as pd
+import re
+
+column_names = ['MPG','Cylinders','Displacement','Horsepower','Weight','Acceleration','Model Year','Origin','Car Name']
+
+
+def load_data(row):
+    
+    reg = '\s+' # this splits by 'spaces'
+    print("row: ", row)
+    fields = pd.Series([None if x == '?' else x for x in re.split(reg, row)])
+    return fields
+
+
+temp_data = pd.read_csv("auto-mpg.data", sep = '\t', header = None)
+
+data = pd.DataFrame(temp_data[0].apply(load_data))
+
+data.columns = column_names[:8]
+
+data[column_names[8]] = temp_data[1]
+
+## lets fill in the Horsepower missing values
+data = data.fillna(data.median())
+
+data.head()
+```
+
+
+Output:
+
+|   |  MPG | Cylinders | Displacement | Horsepower | Weight | Acceleration | Model Year | Origin |                  Car Name |
+|--:|-----:|----------:|-------------:|-----------:|-------:|-------------:|-----------:|-------:|--------------------------:|
+| 0 | 18.0 |         8 |        307.0 |      130.0 |  3504. |         12.0 |         70 |      1 | chevrolet chevelle malibu |
+| 1 | 15.0 |         8 |        350.0 |      165.0 |  3693. |         11.5 |         70 |      1 |         buick skylark 320 |
+| 2 | 18.0 |         8 |        318.0 |      150.0 |  3436. |         11.0 |         70 |      1 |        plymouth satellite |
+| 3 | 16.0 |         8 |        304.0 |      150.0 |  3433. |         12.0 |         70 |      1 |             amc rebel sst |
+| 4 | 17.0 |         8 |        302.0 |      140.0 |  3449. |         10.5 |         70 |      1 |               ford torino |
+
+
+Ok perfect now, lets work with it!
+
+Lets Drop the *Car Name* column from the DataFrame *data* and then calculate the correlation for all the columns.
+
+```python
+data = data.drop('Car Name', 1)
+corr = data.astype('float').corr() 
+corr
+```
+
+Output:
+
+|              |       MPG | Cylinders | Displacement | Horsepower |    Weight | Acceleration | Model Year |    Origin |
+|-------------:|----------:|----------:|-------------:|-----------:|----------:|-------------:|-----------:|----------:|
+|          MPG |  1.000000 | -0.775396 |    -0.804203 |  -0.773453 | -0.831741 |     0.420289 |   0.579267 |  0.563450 |
+|    Cylinders | -0.775396 |  1.000000 |     0.950721 |   0.841284 |  0.896017 |    -0.505419 |  -0.348746 | -0.562543 |
+| Displacement | -0.804203 |  0.950721 |     1.000000 |   0.895778 |  0.932824 |    -0.543684 |  -0.370164 | -0.609409 |
+|   Horsepower | -0.773453 |  0.841284 |     0.895778 |   1.000000 |  0.862442 |    -0.686590 |  -0.413733 | -0.452096 |
+|       Weight | -0.831741 |  0.896017 |     0.932824 |   0.862442 |  1.000000 |    -0.417457 |  -0.306564 | -0.581024 |
+| Acceleration |  0.420289 | -0.505419 |    -0.543684 |  -0.686590 | -0.417457 |     1.000000 |   0.288137 |  0.205873 |
+|   Model Year |  0.579267 | -0.348746 |    -0.370164 |  -0.413733 | -0.306564 |     0.288137 |   1.000000 |  0.180662 |
+|       Origin |  0.563450 | -0.562543 |    -0.609409 |  -0.452096 | -0.581024 |     0.205873 |   0.180662 | 1.000     |
+
+
+Now lets Apply **Principle Component Analysis** to reduce the data to 2-dimensions.
+
+```python
+from sklearn.decomposition import PCA
+    
+pca = PCA(n_components=2)
+pca.fit(data.values)
+
+projected = pca.transform(data)
+projected = pd.DataFrame(projected,columns=['pc1','pc2'], index=data.index)
+
+projected.head()
+```
+
+Output:
+
+|   |        pc1 |       pc2 |
+|--:|-----------:|----------:|
+| 0 | 543.692090 | 51.046890 |
+| 1 | 737.597223 | 79.416262 |
+| 2 | 478.223494 | 75.668525 |
+| 3 | 473.659818 | 62.795232 |
+| 4 | 488.921154 | 56.018148 |
+
+
+Now that we've done that, we can now use matplotlub to draw a horizontal bar plot to display the contribution of each attribute to the first two principal components.
+
+```python
+import matplotlib.pyplot as plt
+from pandas import Series
+%matplotlib inline
+
+comp = pd.DataFrame(pca.components_, columns=data.columns, index=['pc1','pc2'])
+comp
+
+fig,axes = plt.subplots(2,1,sharex=True)
+comp.loc['pc1'].plot(kind='barh',ax=axes[0],color='k',alpha=0.7)
+axes[0].set_title('1st PC', size = 'x-large')
+comp.loc['pc2'].plot(kind='barh',ax=axes[1],color='k',alpha=0.7)
+axes[1].set_title('2nd PC', size = 'x-large')
+```
+
+Output:
+
+!["insert image"](/images/big_data/pc_graph.png)
+
+
+Now that we have this graphed, lets draw a 2-Dimensional Scatter Plot of the data points along their first two principal components
+
+```python
+projected.plot(kind='scatter',x='pc1',y='pc2', color = 'Green')
+```
+
+Output:
+
+!["insert image"](/images/big_data/scatter_.png)
 
 
