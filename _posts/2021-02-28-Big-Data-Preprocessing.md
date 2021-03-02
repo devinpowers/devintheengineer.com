@@ -257,9 +257,11 @@ If we look back on our table above:
 
 **Bin 1**
 
-| Yes | 0 |
+|     |   |
 |-----|---|
-| No  | 6 |
+| Yes | 6 |
+|-----|---|
+|  No | 6 |
 
 Calculating the Entropy = *0*
 
@@ -550,6 +552,6 @@ Output:
 Lets add the last column to the DataFrame
 ```python
 data[column_names[8]] = temp_data[1]
-data
+data.head()
 ```
 
