@@ -243,7 +243,7 @@ We see that our goal is to ensure that each bin contains data points from *one c
 
 Where:
 
-**pj**: is the fraction of the data objects belonging to class **j**
+**pi**: is the fraction of the data objects belonging to class **i**
 
 example: For Bin 2 below:
 
@@ -256,6 +256,7 @@ If we look back on our table above:
 *using the Entropy Equation*
 
 **Bin 1**
+
 | Yes | 0 |
 |-----|---|
 | No  | 6 |
@@ -263,6 +264,7 @@ If we look back on our table above:
 Calculating the Entropy = *0*
 
 **Bin 2**
+
 | Yes | 1 |
 |-----|---|
 | No  | 5 |
@@ -270,9 +272,11 @@ Calculating the Entropy = *0*
 Calculating the Entropy = *0.65*
 
 **Bin 3**
+
 | Yes | 2 |
 |-----|---|
 | No  | 4 |
+
 
 Calculating the Entropy = *0.92*
 
