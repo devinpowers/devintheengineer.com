@@ -460,6 +460,96 @@ Output:
 We can Note that **Membership Years**, **Amount Spend**, and the **number of purchases** are correlated
 
 
-Now lets Compute the Principal Components
+*Now lets Compute the Principal Components*
 
+[ insert example of Principal Components here]
+
+
+### Exercises to help learn how to use some of the Preprocessing Functions in Python
+
+[Using Dataset from here](https://archive.ics.uci.edu/ml/datasets/Auto+MPG)
+
+
+[Regular Expression Documentation](https://docs.python.org/3/library/re.html)
+
+```python
+import pandas as pd
+import re
+```
+
+```python
+column_names = ['MPG','Cylinders','Displacement','Horsepower','Weight','Acceleration','Model Year','Origin','Car Name']
+```
+
+```python
+def load_data(row):
+    
+    reg = '\s+' # this splits by 'spaces'
+    
+    fields = pd.Series([None if x == '?' else x for x in re.split(reg, row)])
+    return fields
+```
+
+
+```python
+temp_data = pd.read_csv("auto-mpg.data", sep = '\t', header = None)
+```
+
+
+```python
+temp_data
+```
+
+Output:
+
+```python
+	            0	                                        1
+0	18.0 8 307.0 130.0 3504. 12...	chevrolet chevelle malibu
+1	15.0 8 350.0 165.0 3693. 11...	buick skylark 320
+2	18.0 8 318.0 150.0 3436. 11...	plymouth satellite
+
+```
+
+```python
+data = pd.DataFrame(temp_data[0].apply(load_data))
+data
+```
+
+```python
+	0	    1	    2	    3	    4	    5	 6	7
+0	18.0	8	307.0	130.0	3504.	12.0	70	1
+1	15.0	8	350.0	165.0	3693.	11.5	70	1
+2	18.0	8	318.0	150.0	3436.	11.0	70	1
+```
+
+
+Lets add the first 8 Columns to the DataFrame Data 
+```python
+data.columns = column_names[:8]
+column_names[:8]
+```
+
+Lets print the dataframe!
+
+```python
+data.head()
+```
+
+Output:
+
+```python
+	MPG	Cylinders	Displacement	Horsepower	Weight	Acceleration	Model Year	Origin
+0	18.0	8	        307.0	        130.0	3504.	    12.0	        70	        1
+1	15.0	8	        350.0	        165.0	3693.	    11.5	        70	        1
+2	18.0	8	        318.0	        150.0	3436.	    11.0	        70	        1
+3	16.0	8	        304.0	        150.0	3433.	    12.0	        70      	1
+4	17.0	8	        302.0	        140.0	3449.	    10.5	        70	        1
+```
+
+
+Lets add the last column to the DataFrame
+```python
+data[column_names[8]] = temp_data[1]
+data
+```
 
