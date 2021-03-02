@@ -5,7 +5,7 @@ date: 2021-2-28
 
 ---
 
-#### How do we **Transform Raw Data** into a more useful representation ?:exclamation:
+#### How do we **Transform Raw Data** into a more useful representation ?
 
 - Data Cleaning
     * Noise, Outliers, Duplicate Data, Missing Values
