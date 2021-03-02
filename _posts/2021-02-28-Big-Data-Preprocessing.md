@@ -375,34 +375,22 @@ Here is our table:
 | 55  | No  | 110        | 1      | 2         | 0                |
 | 64  | No  | 74         | 1      | 0         | 0                |
 
+
+For our model, we should select the *non-correlated features* when doing our analysis.
+
+
+
 ```python
 import pandas as p
 data = p.read_csv('buy.csv', header=0')
-data
 ```
-
-Output:
-```python
-	age	membershipYears	numberOfFriends	AmountSpent	NumPurchases
-0	21	        2	        5	        100	        2
-1	38      	0	        10	        10      	1
-2	18	        0	        5	        25      	1
-3	19	        5	        30      	1000	    25
-4	24      	0	        2	        50          3
-5	29	        2	        20	        200	        7
-6	30	        4	        5	        1500	    15
-7	31      	2	        70	        150	        5
-8	40      	0	        11	        70	        4
-9	44	        0	        8	        10	        1
-10	55      	1	        2	        80	        3
-11	64	        1	        0	        30	        1
-```
+Use .corr() function in Pandas
 
 ```python
 data.corr()
 ```
 
-Output:
+Output (Correlation Matrix):
 ```python
 	                    age	    membershipYears	numberOfFriends	AmountSpent	NumPurchases
 age             	1.000000	-0.334731	-0.253233	        -0.303731	-0.393919
@@ -411,13 +399,19 @@ numberOfFriends 	-0.253233	0.343459	1.000000	        0.085086	0.288885
 AmountSpent	        -0.303731	0.851307	0.085086	        1.000000	0.853188
 NumPurchases	    -0.393919	0.900591	0.288885	        0.853188	1.000000
 ```
-
-
-
+Now we can select the *non-correlated* features for our analysis
 
 
 ### Feature Selection Example
 
+* Where we create a new set of attributes from our original *raw* data
+
+Example: Face Detection in Images
+
+### Principal Component Analysis
+
+* A common approach for **Feature Extraction**
+* Construct a new set of dimensions (attributes) that better represents (captures) variability of the data 
 
 ```python
 import pandas as p
@@ -425,23 +419,22 @@ data = p.read_csv('buy.csv', header=0)
 data
 ```
 
-
 Output:
-```python
-	    age 	membershipYears	numberOfFriends	AmountSpent	NumPurchases
-0	    21	        2           	 5	            100     	2
-1	    38      	0	            10          	10	        1
-2	    18      	0	            5	            25      	1
-3	    19      	5	            30	            1000	    25
-4	    24      	0	            2	            50      	3
-5	    29	        2	            20	            200	        7
-6	    30	        4	            5	            1500	    15
-7	    31	        2	            70          	150	        5
-8	    40         	0	            11	            70	        4
-9	    44	        0	            8	            10  	    1
-10	    55      	1	            2	            80      	3
-11  	64      	1	            0	            30	        1
-```
+|    | Age | Membership Years | Number Of Friends | Amount Spent | Number of Purchases |
+|---:|----:|-----------------:|------------------:|-------------:|--------------------:|
+|  0 |  21 |                2 |                 5 |          100 |                   2 |
+|  1 |  38 |                0 |                10 |           10 |                   1 |
+|  2 |  18 |                0 |                 5 |           25 |                   1 |
+|  3 |  19 |                5 |                30 |         1000 |                  25 |
+|  4 |  24 |                0 |                 2 |           50 |                   3 |
+|  5 |  29 |                2 |                20 |          200 |                   7 |
+|  6 |  30 |                4 |                 5 |         1500 |                  15 |
+|  7 |  31 |                2 |                70 |          150 |                   5 |
+|  8 |  40 |                0 |                11 |           70 |                   4 |
+|  9 |  44 |                0 |                 8 |           10 |                   1 |
+| 10 |  55 |                1 |                 2 |           80 |                   3 |
+| 11 |  64 |                1 |                 0 |           30 |                   1 |
+
 
 ```python
 data.corr()
@@ -449,18 +442,17 @@ data.corr()
 
 Output:
 
-```python
-	                    age	membershipYears	numberOfFriends	AmountSpent	NumPurchases
-age	                1.000000	-0.334731	-0.253233	-0.303731	-0.393919
-membershipYears 	-0.334731	1.000000	0.343459	0.851307	0.900591
-numberOfFriends	    -0.253233	0.343459	1.000000	0.085086	0.288885
-AmountSpent     	-0.303731	0.851307	0.085086	1.000000	0.853188
-NumPurchases	    -0.393919	0.900591	0.288885	0.853188	1.000000
-```
+|                 |      ages | membershipYears | numberOfFriends | AmountSpent | NumPurchases |
+|----------------:|----------:|----------------:|----------------:|------------:|-------------:|
+|             age |  1.000000 |       -0.334731 |       -0.253233 |   -0.303731 |    -0.393919 |
+| membershipYears | -0.334731 |        1.000000 |        0.343459 |    0.851307 |     0.900591 |
+| numberOfFriends | -0.253233 |        0.343459 |        1.000000 |    0.085086 |     0.288885 |
+|     AmountSpent | -0.303731 |        0.851307 |        0.085086 |    1.000000 |     0.853188 |
+|    NumPurchases | -0.393919 |        0.900591 |        0.288885 |    0.853188 |     1.000000 |
+
+We can Note that **Membership Years**, **Amount Spend**, and the **number of purchases** are correlated
 
 
-### Principle Component Analysis
+Now lets Compute the Principal Components
 
-- very common approach for feature extraction
 
-- Goald is to construct a new set of dimensions (attributes) that better captures the variability of the data
