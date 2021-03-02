@@ -241,6 +241,16 @@ We see that our goal is to ensure that each bin contains data points from *one c
 
 !["insert image"](/images/big_data/entropy.png)
 
+Where:
+
+**pj**: is the fraction of the data objects belonging to class **j**
+
+example: For Bin 2 below:
+
+P(Yes) = 1/6 and P(No) = 5/6 
+
+**Entropy** = -(1/6)log2(1/6)) - (5/6)log2(1/6) = *0.65*
+
 If we look back on our table above:
 
 *using the Entropy Equation*
@@ -266,7 +276,76 @@ Calculating the Entropy = *0.65*
 
 Calculating the Entropy = *0.92*
 
-As we can see after calculating the entropy of each *bin*, as the bin becomes less homogeneous, the entropy increases!
+As we can see after calculating the entropy of each *bin*, as the bin becomes less homogeneous, the entropy increases (value is closer to 1)!
+
+How would one come up with the best way to split the data into Bins?
+
+- kinda trial and error
+
+### Curse of Dimensionality
+
+* The Curse of Dimensionality indicates that the number of samples needed to estimate an arbitrary function with a given level of accuracy grows exponentially with respect to the number of input variables
+
+![insert image](/images/big_data/curse_dim.png)
+
+* As the number of dimensions increases, the higher chance for the model to overfit *noisy* observations and need for more examples to figure out which attributes are most relevant to predict the different classes
+
+*Lets Look at where this would occur:*
+
+Lets say we want to *build a model* to **predict if a user will buy an item at a store by using their age.** We will be using the previous table that we've been working with!
+
+| Age | Buy |
+|-----|-----|
+| 10  | No  |
+| 15  | No  |
+| 18  | Yes |
+| 19  | Yes |
+| 24  | No  |
+| 29  | Yes |
+| 30  | Yes |
+| 31  | Yes |
+| 40  | No  |
+| 44  | No  |
+| 55  | No  |
+| 64  | No  |
+
+Lets add more features like time spent at the store:
+
+| Age | Buy | Time Spent |
+|-----|-----|------------|
+| 10  | No  | 40         |
+| 15  | No  | 105        |
+| 18  | Yes | 100        |
+| 19  | Yes | 110        |
+| 24  | No  | 95         |
+| 29  | Yes | 180        |
+| 30  | Yes | 120        |
+| 31  | Yes | 100        |
+| 40  | No  | 60         |
+| 44  | No  | 44         |
+| 55  | No  | 110        |
+| 64  | No  | 74         |
+
+
+Now we can use two attributes *age* and *Time Spent* to predict if a user will buy an item from the store.
+
+Lets add even more features to our table!
+
+| Age | Buy | Time Spent | Member | # Friends |
+|-----|-----|------------|--------|-----------|
+| 10  | No  | 40         | 2      | 5         |
+| 15  | No  | 105        | 0      | 10        |
+| 18  | Yes | 100        | 0      | 5         |
+| 19  | Yes | 110        | 5      | 30        |
+| 24  | No  | 95         | 0      | 2         |
+| 29  | Yes | 180        | 2      | 20        |
+| 30  | Yes | 120        | 4      | 5         |
+| 31  | Yes | 100        | 2      | 70        |
+| 40  | No  | 60         | 0      | 11        |
+| 44  | No  | 44         | 0      | 8         |
+| 55  | No  | 110        | 1      | 2         |
+| 64  | No  | 74         | 1      | 0         |
+
 
 
 ```python
