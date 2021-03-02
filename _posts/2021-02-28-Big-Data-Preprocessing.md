@@ -348,6 +348,18 @@ Lets add even more features to our table!
 
 
 
+This is when  the *Curse of Dimensionality* could come into play.
+
+How do we **Overcome the Curse of Dimensionality**?
+
+1. Feature Subset Selection: Where we *pick a set of attributes* to build our prediction model that eliminate the irrelevant and highly correlated ones
+
+2. Feature Extraction: Where we construct a new set of attributes based on combination of our original attributes
+
+**Python Example of Feature Selection**
+
+
+
 ```python
 import pandas as p
 data = p.read_csv('buy.csv', header=0')
