@@ -178,7 +178,7 @@ The Output above Discretize into 5 **equal frequency** bins: (20, 40] < (40, 50]
 
 In this example, let *Buy* be the class attribute and were intrested in discretize the *Age* attribute
 
-- We also want the intervals (bins) to contain data points from the same class
+- Supervised Discretization methods take the class into account when setting discretization boundaries
 
 | Age | Buy |
 |-----|-----|
@@ -194,6 +194,8 @@ In this example, let *Buy* be the class attribute and were intrested in discreti
 | 44  | No  |
 | 55  | No  |
 | 64  | No  |
+
+*Unsupervised Discretization* Approach
 
 **Equal Width:** interval = (64-10)/3 = 54/3 = 18
 
@@ -212,6 +214,19 @@ In this example, let *Buy* be the class attribute and were intrested in discreti
 | > 35.5      | 0   | 4  |
 
 We can see that both approaches can produce intervals that contain non-homogeneous classes
+
+
+**Using Supervised Discretization**
+
+
+|              | Yes | No |
+|--------------|-----|----|
+| <16.5        | 0   | 2  |
+| (16.5, 35.5) | 5   | 1  |
+| > 35.5       | 0   | 4  |
+
+We see that our goal is to ensure that each bin contains data points from *one class*
+
 
 
 ```python
