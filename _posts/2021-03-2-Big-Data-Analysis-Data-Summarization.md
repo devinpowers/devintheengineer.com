@@ -426,15 +426,43 @@ Output:
 
 
 
-**Histogram**
+**Histogram and Kernal Density Plots**
+
+- Shows the distribution of values in a single variable
+- Kernel density plots: smoothed version of histogram
 
 ```python
 %matplotlib inline
 data['Age'].hist(normed=True)
 data['Age'].plot(kind='kde',style='k--', 'color'= green)
 ```
-
 Output:
 
-
 !["Insert Image"](/images/big_data/data_sum/hist.png)
+
+
+
+**Box Plots**
+
+- Another way to display the distribution of data
+
+- "Whiskers" of the plot shows the max and minimum values
+
+```python
+data.boxplot()
+```
+
+Output:
+!["Insert Image"](/images/big_data/data_sum/box_plot.png)
+
+
+
+**Scatter Plots**
+
+```python
+data.plot.scatter(x='Age',y='GPA', color = 'green')
+```
+
+Output:
+!["Insert Image"](/images/big_data/data_sum/scatter.png)
+sa
