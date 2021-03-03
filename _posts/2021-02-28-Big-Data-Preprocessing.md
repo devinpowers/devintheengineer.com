@@ -427,7 +427,7 @@ Output:
 !["insert image"](/images/big_data/preprocess/heat_map.png)
 
 
-
+Now we can look at the *Heatmap* and see all the data that correlates and such
 
 
 
