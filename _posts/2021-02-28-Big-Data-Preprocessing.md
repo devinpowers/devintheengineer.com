@@ -425,6 +425,24 @@ Example: Face Detection in Images
 * A common approach for **Feature Extraction**
 * Construct a new set of dimensions (attributes) that better represents (captures) variability of the data 
 
+
+**My notes on Principal Component Analysis:**
+!["insert image"](/images/big_data/preprocess/PCA1.jpg)
+!["insert image"](/images/big_data/preprocess/PCA2.jpg)
+!["insert image"](/images/big_data/preprocess/PCA3.jpg)
+!["insert image"](/images/big_data/preprocess/PCA4.jpg)
+!["insert image"](/images/big_data/preprocess/PCA5.jpg)
+!["insert image"](/images/big_data/preprocess/PCA6.jpg)
+!["insert image"](/images/big_data/preprocess/PCA7.jpg)
+!["insert image"](/images/big_data/preprocess/PCA8.jpg)
+!["insert image"](/images/big_data/preprocess/PCA9.jpg)
+!["insert image"](/images/big_data/preprocess/PCA10.jpg)
+!["insert image"](/images/big_data/preprocess/PCA11.jpg)
+!["insert image"](/images/big_data/preprocess/PCA12.jpg)
+
+
+
+
 ```python
 import pandas as p
 data = p.read_csv('buy.csv', header=0)
