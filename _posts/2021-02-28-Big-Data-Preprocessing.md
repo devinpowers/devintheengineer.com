@@ -362,38 +362,34 @@ This is when  the *Curse of Dimensionality* could come into play.
 
 How do we **Overcome the Curse of Dimensionality**?
 
-1. Feature Subset Selection: Where we *pick a set of attributes* to build our prediction model that eliminate the irrelevant and highly correlated ones
+1. **Feature Subset Selection:** Where we *pick a set of attributes* to build our prediction model that eliminate the irrelevant and highly correlated ones
 
-2. Feature Extraction: Where we construct a new set of attributes based on combination of our original attributes
+2. **Feature Extraction:** Where we construct a *new set of attributes* based on combination of our original attributes
 
 **Python Example of Feature Selection**
-
-Here is our table:
-
-| Age | Buy | Time Spent | Member | # Friends | Amount Spent ($) |
-|-----|-----|------------|--------|-----------|------------------|
-| 10  | No  | 40         | 2      | 5         | 0                |
-| 15  | No  | 105        | 0      | 10        | 0                |
-| 18  | Yes | 100        | 0      | 5         | 20.5             |
-| 19  | Yes | 110        | 5      | 30        | 55.45            |
-| 24  | No  | 95         | 0      | 2         | 0                |
-| 29  | Yes | 180        | 2      | 20        | 100.5            |
-| 30  | Yes | 120        | 4      | 5         | 35.5             |
-| 31  | Yes | 100        | 2      | 70        | 200.5            |
-| 40  | No  | 60         | 0      | 11        | 0                |
-| 44  | No  | 44         | 0      | 8         | 0                |
-| 55  | No  | 110        | 1      | 2         | 0                |
-| 64  | No  | 74         | 1      | 0         | 0                |
-
-
-For our model, we should select the *non-correlated features* when doing our analysis.
-
-
 
 ```python
 import pandas as p
 data = p.read_csv('buy.csv', header=0')
 ```
+
+Output:
+
+| age | membershipYears | numberOfFriends | AmountSpent | NumPurchases |
+|----:|----------------:|----------------:|------------:|-------------:|
+|  21 |               2 |               5 |         100 |            2 |
+|  38 |               0 |              10 |          10 |            1 |
+|  18 |               0 |               5 |          25 |            1 |
+|  19 |               5 |              30 |        1000 |           25 |
+|  24 |               0 |               2 |          50 |            3 |
+|  29 |               2 |              20 |         200 |            7 |
+|  30 |               4 |               5 |        1500 |           15 |
+|  31 |               2 |              70 |         150 |            5 |
+|  40 |               0 |              11 |          70 |            4 |
+|  44 |               0 |               8 |          10 |            1 |
+|  55 |               1 |               2 |          80 |            3 |
+|  64 |               1 |               0 |          30 |            1 |
+
 Use .corr() function in Pandas
 
 ```python
@@ -411,7 +407,28 @@ Output (Correlation Matrix):
 |    NumPurchases | -0.393919 |        0.900591 |        0.288885 |    0.853188 |     1.000000 |
 
 
+
+
 Now we can select the *non-correlated* features for our analysis
+
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.figure(figsize = (18,10))
+sns.heatmap(data.corr(), annot = True)
+plt.show()
+
+```
+
+Output:
+
+!["insert image"](/images/big_data/preprocess/heat_map.png)
+
+
+
+
 
 
 ### Feature Selection Example
