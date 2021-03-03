@@ -6,8 +6,6 @@ date: 2021-3-2
 ---
 
 
-Ok Lets SUM UP SOME DATA
-
 ### Data Exploration
 
 What is Data Exploration?
@@ -18,12 +16,12 @@ What is Data Exploration?
 
 ## Summary Statistics
 
-- summarizes properties of data
+- summarizes *properties of data*
 
-|                     | Quantitative                                 | Qualitative        |
-|---------------------|----------------------------------------------|--------------------|
-| Single Attributes   | Mean Standard Deviation Median and Quantiles | Frequency Entropy  |
-| Pairs of Attributes | Correlation and Covariance                   | Mutual Information |
+|                     | Quantitative                                    | Qualitative        |
+|---------------------|-------------------------------------------------|--------------------|
+| Single Attributes   | Mean, Standard Deviation, Median, and Quantiles | Frequency Entropy  |
+| Pairs of Attributes | Correlation and Covariance                      | Mutual Information |
 
 
 Lets start using Python
@@ -153,4 +151,97 @@ junior       3
 senior       2
 Name: status, dtype: int64
 ```
+
+
+
+Lets Look at the Entropy
+
+```python
+import numpy as np
+
+prob = data.status.value_counts()
+prob = prob/sum(prob)
+
+print("Entropy = ", -np.dot(prob.transpose(),np.log(prob)/np.log(2)))
+
+```
+
+Output:
+
+```python
+Entropy =  1.865437105319908
+```
+
+### Multivariate Statistics
+
+**Covariance**
+
+- Measures the strength of association between a pair of *quantitative variables*
+
+
+```python
+data[['Age','GPA']]
+```
+
+Output:
+
+|    | Age |  GPA |
+|---:|----:|-----:|
+|  0 |  18 | 3.70 |
+|  1 |  20 | 3.30 |
+|  2 |  19 | 2.50 |
+|  3 |  17 | 3.70 |
+|  4 |  18 | 4.00 |
+|  5 |  19 | 3.60 |
+|  6 |  19 | 2.50 |
+|  7 |  19 | 3.25 |
+|  8 |  19 | 4.00 |
+|  9 |  21 | 2.33 |
+| 10 |  20 | 3.45 |
+| 11 |  20 | 2.75 |
+| 12 |  23 | 3.85 |
+| 13 |  22 | 3.33 |
+| 14 |  22 | 3.65 |
+| 15 |  25 | 3.45 |
+| 16 |  23 | 3.75 |
+
+
+```python
+data.cov()
+```
+
+Output:
+
+|     |      Age |      GPA |
+|----:|---------:|---------:|
+| Age | 4.566176 | 0.034522 |
+| GPA | 0.034522 | 0.283081 |
+
+
+
+**Correlation Coefficient**
+
+- Normalized measure of association between a pair of quantitative variables
+
+
+```python
+data.corr()
+```
+
+|     	|      Age 	|      GPA 	|
+|----:	|---------:	|---------:	|
+| Age 	| 1.000000 	| 0.030364 	|
+| GPA 	| 0.030364 	| 1.000000 	|
+
+
+**Covariance vs Correlation**
+
+- add more
+
+
+
+
+### Mutual Information
+
+- measure of association between two qualitative variables
 
