@@ -465,4 +465,40 @@ data.plot.scatter(x='Age',y='GPA', color = 'green')
 
 Output:
 !["Insert Image"](/images/big_data/data_sum/scatter.png)
-sa
+
+
+
+### Visualizing Multivariate Data
+
+
+**Parallel Coordinates**
+
+
+
+```python
+data = p.read_csv('diabetes.csv',header='infer')
+data.head()
+````
+Output:
+
+|   	| preg 	| plas 	| pres 	| skin 	| insu 	| mass 	|  pedi 	| age 	|           class 	|
+|--:	|-----:	|-----:	|-----:	|-----:	|-----:	|-----:	|------:	|----:	|----------------:	|
+| 0 	|    6 	|  148 	|   72 	|   35 	|    0 	| 33.6 	| 0.627 	|  50 	| tested_positive 	|
+| 1 	|    1 	|   85 	|   66 	|   29 	|    0 	| 26.6 	| 0.351 	|  31 	| tested_negative 	|
+| 2 	|    8 	|  183 	|   64 	|    0 	|    0 	| 23.3 	| 0.672 	|  32 	| tested_positive 	|
+| 3 	|    1 	|   89 	|   66 	|   23 	|   94 	| 28.1 	| 0.167 	|  21 	| tested_negative 	|
+| 4 	|    0 	|  137 	|   40 	|   35 	|  168 	| 43.1 	| 2.288 	|  33 	| tested_positive 	|
+
+```python
+import pandas
+from pandas.plotting import parallel_coordinates
+%matplotlib inline
+
+parallel_coordinates(data, 'class')
+```
+
+Output:
+
+!["Insert Image"](/images/big_data/data_sum/parallel.png)
+
+
