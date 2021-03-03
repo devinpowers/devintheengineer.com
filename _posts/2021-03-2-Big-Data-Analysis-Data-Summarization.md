@@ -502,3 +502,13 @@ Output:
 !["Insert Image"](/images/big_data/data_sum/parallel.png)
 
 
+### Visualization of Big Data
+
+
+* Pie Chart
+* Bar Chart
+* Line Chart
+* Bubble Plot
+* Tree Map
+* Scatter Plot
+* Graph/Network-Based
