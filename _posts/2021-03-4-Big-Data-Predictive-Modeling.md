@@ -38,10 +38,28 @@ Predictive Analysis can be used in many fields (domains) including:
 
 * The task of predicting the value of a target variable (y) as a function of the predictor variables (X)
 
-y = f(X)
+            y = f(X)
 
 
 | Task           	| Target Variable              	| Example Applications                                                                        	|
 |----------------	|------------------------------	|---------------------------------------------------------------------------------------------	|
 | Regression     	| Quantitative (ratio/interval 	| Stock Market Prediction, revenue/sales Forecast, Temperature Prediction, Calorie Prediction 	|
 | Classification 	| Qualitative (nominal)        	| Disease Prediction, Image Classification, Twitter Mood Prediction                           	|
+
+
+**Predictive Modeling Techniques**
+
+**Single Models**
+
+- Decison Tree Methods
+- Support Vector Machine/Regression
+- Artifical Neural Network
+
+
+**Ensemble Models**
+
+- Boosting, Random Forest, Bagging
+
+
+Lets work with a **Decision Tree Classifier**
+
