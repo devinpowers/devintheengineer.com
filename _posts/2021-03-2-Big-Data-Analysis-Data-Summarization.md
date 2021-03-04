@@ -776,3 +776,60 @@ Output:
 * Tree Map
 * Scatter Plot
 * Graph/Network-Based
+
+
+# Exercises
+
+* Extra Practice Graphing
+
+
+```python
+import pandas as p
+
+data = p.read_csv('vehicle.csv',header=0)
+data.head()
+```
+
+Output:
+
+|   	| compactness 	| circularity 	| distance_circularity 	| radius_ratio 	| pr_axis_aspect_ratio 	| max_length_aspect_ratio 	| scatter_ratio 	| elongatedness 	| pr_axisrectangular 	| lengthrectangular 	| majorvariance 	| minorvariance 	| gyrationradius 	| majorskewness 	| minorskewness 	| minorkurtosis 	| majorkurtosis 	| hollows_ratio 	| class 	|
+|--:	|------------:	|------------:	|---------------------:	|-------------:	|---------------------:	|------------------------:	|--------------:	|--------------:	|-------------------:	|------------------:	|--------------:	|--------------:	|---------------:	|--------------:	|--------------:	|--------------:	|--------------:	|--------------:	|------:	|
+| 0 	|          95 	|          43 	|                   96 	|          202 	|                   65 	|                      10 	|           189 	|            35 	|                 22 	|               143 	|           217 	|           534 	|            166 	|            71 	|             6 	|            27 	|           190 	|           197 	|  opel 	|
+| 1 	|          96 	|          52 	|                  104 	|          222 	|                   67 	|                       9 	|           198 	|            33 	|                 23 	|               163 	|           217 	|           589 	|            226 	|            67 	|            12 	|            20 	|           192 	|           201 	|  opel 	|
+| 2 	|         107 	|          52 	|                  101 	|          218 	|                   64 	|                      11 	|           202 	|            33 	|                 23 	|               164 	|           219 	|           610 	|            192 	|            65 	|            17 	|             2 	|           197 	|           206 	|  opel 	|
+| 3 	|          97 	|          37 	|                   78 	|          181 	|                   62 	|                       8 	|           161 	|            41 	|                 20 	|               131 	|           182 	|           389 	|            117 	|            62 	|             2 	|            28 	|           203 	|           211 	|  opel 	|
+| 4 	|          96 	|          54 	|                  104 	|          175 	|                   58 	|                      10 	|           215 	|            31 	|                 24 	|               175 	|           221 	|           682 	|            222 	|            75 	|            13 	|            23 	|           186 	|           194 	|  opel 	|
+
+
+
+Lets use some Columns that were intrested in and see how they relate to one another.
+
+```python
+data[['compactness','circularity','distance_circularity','radius_ratio']].corr()
+```
+
+Output:
+
+|                      	| compactness 	| circularity 	| distance_circularity 	| radius_ratio 	|
+|---------------------:	|------------:	|------------:	|---------------------:	|-------------:	|
+|          compactness 	|    1.000000 	|    0.692869 	|             0.792444 	|     0.691659 	|
+|          circularity 	|    0.692869 	|    1.000000 	|             0.798492 	|     0.622778 	|
+| distance_circularity 	|    0.792444 	|    0.798492 	|             1.000000 	|     0.771644 	|
+|         radius_ratio 	|    0.691659 	|    0.622778 	|             0.771644 	|     1.000000 	|
+
+
+Lets do some Plotting!
+
+```python
+%matplotlib inline
+data['compactness'].hist()
+```
+
+!["Insert Image"](/images/big_data/data_sum/car_hist.png)
+
+
+```python
+data[['compactness','circularity','distance_circularity','radius_ratio']].boxplot()
+```
+
+!["Insert Image"](/images/big_data/data_sum/car_box_plot.png)
