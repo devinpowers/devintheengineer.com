@@ -24,12 +24,12 @@ What is Data Exploration?
 | Pairs of Attributes | Correlation and Covariance                      | Mutual Information |
 
 
-Lets start using Python
+Lets start using Python and a NBA Combine data csv file!
 
 ```python
 import pandas as p
 
-data = p.read_csv('students.csv',header=0)
+data = p.read_csv('nba_draft_combine_all_years.csv',header=0)
 data
 ```
 
@@ -49,6 +49,12 @@ Output:
 | 515 	|        515 	|          Thomas Welsh 	| 2017 	|        NaN 	|             83.50 	|               84.50 	|    84.00 	|          109.5 	|            NaN 	|                  NaN 	|                NaN 	|                      NaN 	|  254.0 	|     10.9 	|          9.00 	|        10.50 	|   NaN 	|     NaN 	|    NaN 	|
 | 516 	|        516 	|          V.J. Beachem 	| 2017 	|        NaN 	|             78.25 	|               80.00 	|    82.25 	|          104.5 	|           37.0 	|                141.5 	|               30.0 	|                    134.5 	|  193.0 	|      6.8 	|          8.50 	|         9.00 	|   NaN 	|   11.18 	|   3.26 	|
 
+
+
+
+Lets First clean up some of this data and take only the **Columns** that were intrested in using!
+
+This file is awesome becuase we actually do need to *Clean* it!, we have alot of *missing data* (NaN)
 
 Lets convert Series to a DataFrame using *to_frame()* in Pandas
 
