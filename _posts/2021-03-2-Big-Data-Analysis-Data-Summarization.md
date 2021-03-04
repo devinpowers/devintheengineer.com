@@ -54,7 +54,64 @@ Output:
 
 Lets First clean up some of this data and take only the **Columns** that were intrested in using!
 
+**Columns that I am intrested in:** Player, Year, Height (No Shoes), Wingspan, Vertical (Max), Weight, Body Fat
+
+Lets create a new DataFrame using just those Columns!
+
+
 This file is awesome becuase we actually do need to *Clean* it!, we have alot of *missing data* (NaN)
+
+
+```python
+data_update = data[['Player','Year', 'Height (No Shoes)', 'Wingspan', 'Vertical (Max)', 'Weight', 'Body Fat']]
+
+data_update
+```
+
+
+Output:
+
+|     	|                Player 	| Year 	| Height (No Shoes) 	| Wingspan 	| Vertical (Max) 	| Weight 	| Body Fat 	|   	|
+|----:	|----------------------:	|-----:	|------------------:	|---------:	|---------------:	|-------:	|---------:	|---	|
+|   0 	|         Blake Griffin 	| 2009 	|             80.50 	|    83.25 	|           35.5 	|  248.0 	|      8.2 	|   	|
+|   1 	|     Terrence Williams 	| 2009 	|             77.00 	|    81.00 	|           37.0 	|  213.0 	|      5.1 	|   	|
+|   2 	|      Gerald Henderson 	| 2009 	|             76.00 	|    82.25 	|           35.0 	|  215.0 	|      4.4 	|   	|
+|   3 	|      Tyler Hansbrough 	| 2009 	|             80.25 	|    83.50 	|           34.0 	|  234.0 	|      8.5 	|   	|
+|   4 	|            Earl Clark 	| 2009 	|             80.50 	|    86.50 	|           33.0 	|  228.0 	|      5.2 	|   	|
+| ... 	|                   ... 	|  ... 	|               ... 	|      ... 	|            ... 	|    ... 	|      ... 	|   	|
+| 512 	|             Peter Jok 	| 2017 	|             76.25 	|    80.00 	|           31.0 	|  202.0 	|     11.0 	|   	|
+| 513 	|          Rawle Alkins 	| 2017 	|             74.50 	|    80.75 	|           40.5 	|  223.0 	|     11.0 	|   	|
+| 514 	| Sviatoslav Mykhailiuk 	| 2017 	|             78.50 	|    77.00 	|           33.0 	|  220.0 	|     11.4 	|   	|
+| 515 	|          Thomas Welsh 	| 2017 	|             83.50 	|    84.00 	|            NaN 	|  254.0 	|     10.9 	|   	|
+| 516 	|          V.J. Beachem 	| 2017 	|             78.25 	|    82.25 	|           37.0 	|  193.0 	|      6.8 	|   	|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Another Example Using School Grade File!!
 
 Lets convert Series to a DataFrame using *to_frame()* in Pandas
 
