@@ -38,7 +38,7 @@ Predictive Analysis can be used in many fields (domains) including:
 
 * The task of predicting the value of a target variable (y) as a function of the predictor variables (X)
 
-            y = f(X)
+    **y = f(X)**
 
 
 | Task           	| Target Variable              	| Example Applications                                                                        	|
@@ -63,3 +63,4 @@ Predictive Analysis can be used in many fields (domains) including:
 
 Lets work with a **Decision Tree Classifier**
 
+Insert Decision Tree Classifier
