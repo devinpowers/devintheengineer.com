@@ -20,3 +20,28 @@ Predictive Analysis can be used in many fields (domains) including:
 - Eduction
 - Predicting Weather Forecasting
 - Social Media Analysis
+
+
+**What are the Steps to Perform Predictive Analysis?**
+
+1. Define Problem Statement
+2. Collect Data
+3. Clean Data
+4. Data Analysis
+5. Build a Predictive Model
+6. Validate the Model
+7. Deployment of the Model
+8. Monitor the Model
+
+
+**Predictive Modeling**
+
+* The task of predicting the value of a target variable (y) as a function of the predictor variables (X)
+
+y = f(X)
+
+
+| Task           	| Target Variable              	| Example Applications                                                                        	|
+|----------------	|------------------------------	|---------------------------------------------------------------------------------------------	|
+| Regression     	| Quantitative (ratio/interval 	| Stock Market Prediction, revenue/sales Forecast, Temperature Prediction, Calorie Prediction 	|
+| Classification 	| Qualitative (nominal)        	| Disease Prediction, Image Classification, Twitter Mood Prediction                           	|
