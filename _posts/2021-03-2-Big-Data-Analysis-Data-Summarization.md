@@ -24,6 +24,8 @@ What is Data Exploration?
 | Pairs of Attributes | Correlation and Covariance                      | Mutual Information |
 
 
+
+
 Lets start using Python and a NBA Combine data csv file!
 
 ```python
@@ -87,24 +89,199 @@ Output:
 
 
 
+Lets look into *Height* more...
 
 
+Lets use *Series.to_frame()* function to convert the given series object to a dataframe
+
+```python
+from pandas import Series
+
+data_update["Height (No Shoes)"].to_frame()
+```
+
+Output:
+
+|     	| Height (No Shoes) 	|
+|----:	|------------------:	|
+|   0 	|             80.50 	|
+|   1 	|             77.00 	|
+|   2 	|             76.00 	|
+|   3 	|             80.25 	|
+|   4 	|             80.50 	|
+| ... 	|               ... 	|
+| 512 	|             76.25 	|
+| 513 	|             74.50 	|
+| 514 	|             78.50 	|
+| 515 	|             83.50 	|
+| 516 	|             78.25 	|
 
 
+As we can see in the output, the Series.to_frame() function has successfully converted the *"Height (No Shoes) "* series object to a dataframe.
+
+Now lets look at some basic statistics like Mean and Standard Deviation of *Height*
+
+```python
+print("Average Height: ", data_update["Height (No Shoes)"].mean())
+print("Standard deviation of Height: ", data_update["Height (No Shoes)"].std())
+print("Quantiles of Height%:\n", data_update["Height (No Shoes)"].quantile([.25,.5,.75]))
+```
+
+Output:
+
+```python
+Average Height:  77.60928433268859
+Standard deviation of Height:  3.287632579106095
+Quantiles of Height%:
+ 0.25    75.25
+0.50    77.75
+0.75    80.00
+Name: Height (No Shoes), dtype: float64
+```
+
+Lets look into another column, *Year* (which is the year the player was drafted).
+
+```python
+data_update["Year"].to_frame()
+```
+
+Output:
+
+|     	| Year 	|
+|----:	|-----:	|
+|   0 	| 2009 	|
+|   1 	| 2009 	|
+|   2 	| 2009 	|
+|   3 	| 2009 	|
+|   4 	| 2009 	|
+| ... 	|  ... 	|
+| 512 	| 2017 	|
+| 513 	| 2017 	|
+| 514 	| 2017 	|
+| 515 	| 2017 	|
+| 516 	| 2017 	|
+
+```python
+print("Frequency distribution of Years:\n ", data_update["Year"].value_counts())
+```
+
+Output:
+
+```python
+Frequency distribution of Years:
+  2015    63
+2013    62
+2016    61
+2012    61
+2017    60
+2014    59
+2011    53
+2009    50
+2010    48
+Name: Year, dtype: int64
+```
 
 
+### Lets look at the Entropy
+
+```python
+import numpy as np
+
+prob = data_update["Year"].value_counts()
+prob = prob/sum(prob)
+print("Entropy = ", -np.dot(prob.transpose(),np.log(prob)/np.log(2)))
+```
+
+Output:
+
+```python
+Entropy =  3.163693718146242
+```
+
+#### Multivariate Statistics
+
+**Covariance** and **Correlation**
+
+```python
+data_update_2 = data[["Weight","Height (No Shoes)"]]
+data_update_2
+```
+
+Output:
+
+|     	| Weight 	| Height (No Shoes) 	|
+|----:	|-------:	|------------------:	|
+|   0 	|  248.0 	|             80.50 	|
+|   1 	|  213.0 	|             77.00 	|
+|   2 	|  215.0 	|             76.00 	|
+|   3 	|  234.0 	|             80.25 	|
+|   4 	|  228.0 	|             80.50 	|
+| ... 	|    ... 	|               ... 	|
+| 512 	|  202.0 	|             76.25 	|
+| 513 	|  223.0 	|             74.50 	|
+| 514 	|  220.0 	|             78.50 	|
+| 515 	|  254.0 	|             83.50 	|
+| 516 	|  193.0 	|             78.25 	|
 
 
+**Covariance**
+
+```python
+data_update_2.cov()
+```
+
+Output:
+
+|                   	|     Weight 	| Height (No Shoes) 	|
+|------------------:	|-----------:	|------------------:	|
+|            Weight 	| 609.277023 	|         60.195793 	|
+| Height (No Shoes) 	|  60.195793 	|         10.808528 	|
+
+**Correlation**
+
+```python
+data_update_2.corr()
+```
+
+Output:
+
+|                   	|   Weight 	| Height (No Shoes) 	|
+|------------------:	|---------:	|------------------:	|
+|            Weight 	| 1.000000 	|          0.741515 	|
+| Height (No Shoes) 	| 0.741515 	|          1.000000 	|
+
+#### Some Plotting with this Data!
+
+```python
+%matplotlib inline
+```
+**BoxPlot**
+
+```python
+data_update_2.boxplot()
+```
+
+!["Insert Image"](/images/big_data/data_sum/nba_box_plot.png)
 
 
+**Histogram**
+
+```python
+%matplotlib inline
+data_update_2['Height (No Shoes)'].hist(normed=True)
+data_update_2['Height (No Shoes)'].plot(kind='kde',style='k--')
+```
+
+!["Insert Image"](/images/big_data/data_sum/nba_hist.png)
 
 
+**Scatter Plot**
 
+```python
+data_update_2.plot.scatter(x ='Weight', y = 'Height (No Shoes)', color = 'blue')
+```
 
-
-
-
-
+!["Insert Image"](/images/big_data/data_sum/nba_scatter.png)
 
 
 
@@ -114,6 +291,36 @@ Output:
 ## Another Example Using School Grade File!!
 
 Lets convert Series to a DataFrame using *to_frame()* in Pandas
+
+```python
+import pandas as p
+
+data = p.read_csv('students.csv',header=0)
+data
+```
+Output:
+
+|    	|    status 	| Gender 	| Age 	|  GPA 	|
+|---:	|----------:	|-------:	|----:	|-----:	|
+|  0 	|  freshman 	|   Male 	|  18 	| 3.70 	|
+|  1 	|  freshman 	|   Male 	|  20 	| 3.30 	|
+|  2 	|  freshman 	| Female 	|  19 	| 2.50 	|
+|  3 	|  freshman 	| Female 	|  17 	| 3.70 	|
+|  4 	|  freshman 	| Female 	|  18 	| 4.00 	|
+|  5 	|  freshman 	| Female 	|  19 	| 3.60 	|
+|  6 	| sophomore 	|   Male 	|  19 	| 2.50 	|
+|  7 	| sophomore 	|   Male 	|  19 	| 3.25 	|
+|  8 	| sophomore 	|   Male 	|  19 	| 4.00 	|
+|  9 	| sophomore 	|   Male 	|  21 	| 2.33 	|
+| 10 	| sophomore 	| Female 	|  20 	| 3.45 	|
+| 11 	| sophomore 	| Female 	|  20 	| 2.75 	|
+| 12 	|    junior 	|   Male 	|  23 	| 3.85 	|
+| 13 	|    junior 	| Female 	|  22 	| 3.33 	|
+| 14 	|    junior 	| Female 	|  22 	| 3.65 	|
+| 15 	|    senior 	|   Male 	|  25 	| 3.45 	|
+| 16 	|    senior 	| Female 	|  23 	| 3.75 	|
+
+
 
 ```python
 from pandas import Series
