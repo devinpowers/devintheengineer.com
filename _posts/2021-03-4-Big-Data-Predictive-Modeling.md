@@ -43,8 +43,8 @@ Predictive Analysis can be used in many fields (domains) including:
 
 | Task           	| Target Variable              	| Example Applications                                                                        	|
 |----------------	|------------------------------	|---------------------------------------------------------------------------------------------	|
-| Regression     	| Quantitative (ratio/interval 	| Stock Market Prediction, revenue/sales Forecast, Temperature Prediction, Calorie Prediction 	|
-| Classification 	| Qualitative (nominal)        	| Disease Prediction, Image Classification, Twitter Mood Prediction                           	|
+| **Regression**    | Quantitative (ratio/interval 	| Stock Market Prediction, revenue/sales Forecast, Temperature Prediction, Calorie Prediction 	|
+| **Classification**| Qualitative (nominal)        	| Disease Prediction, Image Classification, Twitter Mood Prediction                           	|
 
 
 **Predictive Modeling Techniques**
