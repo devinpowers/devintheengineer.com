@@ -65,5 +65,4 @@ Lets work with a **Decision Tree Classifier**
 
 Insert Decision Tree Classifier
 
-
-w
+- inser tre
