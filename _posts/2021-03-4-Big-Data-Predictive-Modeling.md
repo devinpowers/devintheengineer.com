@@ -108,4 +108,14 @@ All 5 of those algorithms are used in Greedy decision tree induction.
 
 We have to split the “Nodes”. We can do a two-way split or a multi-way split. A two-way split is easy for when there are binary attributes (Yes or No). If there is a Nominal (many names) attributes which could have many values, a test condition can be expressed into a multiway split. For continuous attributes (example of money $0- 1,000,000), we could split into comparison tests ($0-100,000, $100,001-500,000, $500,001-1,000,000) (< & >). Since there are many ways to specify the test conditions from a given training set, we need a measurement to determine the best way to split the records.
 
+The goal of the best test condition is whether it leads to a homogenous distribution of the nodes, which is the purity of child nodes before and after splitting. The larger the degree of purity, the better the class distribution.
+
+
+Measurement of impurity can be determined by:
+
+1.	Gina Index
+2.	Entropy
+3.	Misclassification Error
+
+
 
