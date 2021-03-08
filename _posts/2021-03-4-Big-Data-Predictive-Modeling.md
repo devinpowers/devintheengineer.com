@@ -91,6 +91,8 @@ In a decision tree, the root and internal nodes contain attribute test condition
 
 **How do we Build a Decision Tree?**
 
+- It's called/referred to as *decision tree induction*
+
 Building an optimal decision tee is key in decision tree classifiers, there are many efficient algorithms that use Greedy approach/strategy. Greedy Algorithms is an algorithm paradigm that builds up a solution piece-by-piece, which makes locally optimum decisions about what attributes to use for dividing the data.
 
 Examples of different Greedy Algorithms:
