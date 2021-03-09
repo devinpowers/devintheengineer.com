@@ -56,6 +56,30 @@ Predictive Analysis can be used in many fields (domains) including:
 
 Classification is about predicting a label and regression is about predicting a quantity.
 
+**Classification vs Regression**
+
+**Classification** is the task of “classifying” things into sub-categories.
+
+It has two types:
+
+1. Binary Classification:Categorizes given data into two distinct classes
+
+2. Multiclass Classification: The number of classes is more than 2
+
+Involves prediction of Discrete Values
+
+Method of Calculation: Measuring Accuracy 
+
+**Examples of Classification:** Decision Tree, Logestic Regression
+
+
+**Regression** is the process of finding a model or function for distinguishing the data into continuous real values instead of using classes
+
+Involves prediction Continuous Values
+
+Method of Calculation: Measurement of root mean square error
+
+**Examples of Regression** Regression Tree (random forest) , Linear Regression
 
 
 **Terminology for Predicitve Modeling**
@@ -65,8 +89,6 @@ Classification is about predicting a label and regression is about predicting a 
 * **Test Set**: is used to predict the target values of the unknown data or it's used to evaluate the performance of the model (if its for evaluation, the target values of test examples must be known)
 
 * **Predictive Model**: An *abstract* representation of the relationship between the predictor and the target variables
-
-
 
 
 
