@@ -125,3 +125,15 @@ Measurement of impurity can be determined by:
 
 
 
+## Decision Tree Example Notes: 
+
+![insert image](/images/big_data/predictive_modeling/tree1.jpg)
+![insert image](/images/big_data/predictive_modeling/tree2.jpg)
+![insert image](/images/big_data/predictive_modeling/tree3.jpg)
+![insert image](/images/big_data/predictive_modeling/tree4.jpg)
+![insert image](/images/big_data/predictive_modeling/tree5.jpg)
+![insert image](/images/big_data/predictive_modeling/tree6.jpg)
+![insert image](/images/big_data/predictive_modeling/tree7.jpg)
+![insert image](/images/big_data/predictive_modeling/tree8.jpg)
+![insert image](/images/big_data/predictive_modeling/tree9.jpg)
+![insert image](/images/big_data/predictive_modeling/tree10.jpg)
