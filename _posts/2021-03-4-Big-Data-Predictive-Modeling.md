@@ -378,8 +378,91 @@ https://youtu.be/4jRBRDbJemM
 **Python Example**
 
 ```python
+from sklearn.metrics import confusion_matrix
 
-````
+cm = confusion_matrix(Y_test, Y_pred, labels=['tested_negative','tested_positive'])
+cm
+```
+
+Output:
+
+```python
+array([[284, 119],
+       [ 79, 133]])
+```
+
+```python
+from sklearn.metrics import f1_score
+
+f1 = f1_score(Y_test,Y_pred,labels=['tested_negative','tested_positive'],pos_label='tested_positive')
+f1
+```
+
+Output:
+
+```python
+0.5732758620689655
+```
+
+```python
+Y_prob = clf.predict_proba(X_test)
+Y_prob
+```
+
+Output:
+
+```python
+array([[0.33333333, 0.66666667],
+       [1.        , 0.        ],
+       [0.33333333, 0.66666667],
+       ...,
+       [0.88888889, 0.11111111],
+       [0.33333333, 0.66666667],
+       [0.33333333, 0.66666667]])
+```
+
+```python
+import matplotlib.pyplot as plt
+
+from sklearn.metrics import roc_curve, auc
+%matplotlib inline
+
+true_labels = (Y_test == 'tested_positive');
+
+fpr, tpr, thresholds = roc_curve(true_labels, Y_prob[:,1])
+roc_auc = auc(fpr, tpr)
+plt.plot(fpr, tpr)
+
+```
+
+Output:
+
+![insert image](/images/big_data/predictive_modeling/roc_curve.png)
+
+
+```python
+from sklearn.model_selection import cross_val_score
+clf = tree.DecisionTreeClassifier(max_depth=3)
+scores = cross_val_score(clf, X, Y, cv=5)
+scores
+```
+
+Output:
+
+```python
+array([0.72727273, 0.72077922, 0.74025974, 0.7124183 , 0.74509804])
+```
+
+```python
+print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+```
+
+Output:
+
+```python
+Accuracy: 0.73 (+/- 0.02)
+```
+
 
 
 
