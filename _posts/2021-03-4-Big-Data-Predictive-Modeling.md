@@ -762,3 +762,45 @@ Model Overfitting and Underfitting
 
 
 ### Mammal Classification Problem
+
+
+
+```python
+import pandas as pd
+
+data = pd.read_csv('vertebrate.csv',header='infer')
+data
+```
+
+Output:
+
+|    	|          Name 	| Body Temperature 	| Skin Cover 	| Gives Birth 	| Aquatic Creature 	| Aerial Creature 	| Has Legs 	| Hibernates 	| Class Label 	|
+|---:	|--------------:	|-----------------:	|-----------:	|------------:	|-----------------:	|----------------:	|---------:	|-----------:	|------------:	|
+|  0 	|         human 	|     warm-blooded 	|       hair 	|         yes 	|               no 	|              no 	|      yes 	|         no 	|      mammal 	|
+|  1 	|        python 	|     cold-blooded 	|     scales 	|          no 	|               no 	|              no 	|       no 	|        yes 	|     reptile 	|
+|  2 	|        salmon 	|     cold-blooded 	|     scales 	|          no 	|              yes 	|              no 	|       no 	|         no 	|        fish 	|
+|  3 	|         whale 	|     warm-blooded 	|       hair 	|         yes 	|              yes 	|              no 	|       no 	|         no 	|      mammal 	|
+|  4 	|          frog 	|     cold-blooded 	|       none 	|          no 	|             semi 	|              no 	|      yes 	|        yes 	|   amphibian 	|
+|  5 	| komodo dragon 	|     cold-blooded 	|     scales 	|          no 	|               no 	|              no 	|      yes 	|         no 	|     reptile 	|
+|  6 	|           bat 	|     warm-blooded 	|       hair 	|         yes 	|               no 	|             yes 	|      yes 	|        yes 	|      mammal 	|
+|  7 	|        pigeon 	|     warm-blooded 	|   feathers 	|          no 	|               no 	|             yes 	|      yes 	|         no 	|        bird 	|
+|  8 	|           cat 	|     warm-blooded 	|        fur 	|         yes 	|               no 	|              no 	|      yes 	|         no 	|      mammal 	|
+|  9 	| leopard shark 	|     cold-blooded 	|     scales 	|         yes 	|              yes 	|              no 	|       no 	|         no 	|        fish 	|
+| 10 	|        turtle 	|     cold-blooded 	|     scales 	|          no 	|             semi 	|              no 	|      yes 	|         no 	|     reptile 	|
+| 11 	|       penguin 	|     warm-blooded 	|   feathers 	|          no 	|             semi 	|              no 	|      yes 	|         no 	|        bird 	|
+| 12 	|     porcupine 	|     warm-blooded 	|     quills 	|         yes 	|               no 	|              no 	|      yes 	|        yes 	|      mammal 	|
+| 13 	|           eel 	|     cold-blooded 	|     scales 	|          no 	|              yes 	|              no 	|       no 	|         no 	|        fish 	|
+| 14 	|    salamander 	|     cold-blooded 	|       none 	|          no 	|             semi 	|              no 	|      yes 	|        yes 	|   amphibian 	|
+| 15 	|  gila monster 	|     cold-blooded 	|     scales 	|          no 	|               no 	|              no 	|      yes 	|        yes 	|         NaN 	|
+
+## Lessons on Overfitting
+
+
+
+## Other Predictive Modeling Techniques
+
+
+
+## Nearest-Neighbor Method
+
+
