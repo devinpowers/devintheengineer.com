@@ -564,8 +564,144 @@ Model Selection
 
     *	Model Overfitting is error that occur when a function is too closely fit to a *limited set of data points*
 
+    * Too many details and noise
+
     * The goal of Predictive Modeling is to build a model with low training and test errors
 
     * Which is challenging because a model with low training erro does not guarantee it will have low test error (due to model overfitting problem)
 
-An example of Model Overfitting
+An example of Model Overfitting:
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from numpy.random import random
+
+%matplotlib inline
+
+N = 1500
+
+mean1 = [6, 14]
+mean2 = [10, 6]
+mean3 = [14, 14]
+cov = [[3.5, 0], [0, 3.5]]  # diagonal covariance
+
+np.random.seed(50)
+x1, y1 = np.random.multivariate_normal(mean1, cov, N//6).T
+x2, y2 = np.random.multivariate_normal(mean2, cov, N//6).T
+x3, y3 = np.random.multivariate_normal(mean3, cov, N//6).T
+x4 = 20*np.random.random(N//2)
+y4 = 20*np.random.random(N//2)
+
+plt.plot(x1,y1,'ro',x2,y2,'ro',x3,y3,'ro',x4,y4,'g+',ms=4)
+```
+
+Output:
+
+![insert image](/images/big_data/predictive_modeling/model_overfitting.png)
+
+
+## Building Trees of Different Sizes
+
+
+```python
+from sklearn import tree
+from sklearn.metrics import accuracy_score
+
+maxdepths = [2,3,4,5,6,7,8,9,10,15,20,25,30,35,40,45,50]
+
+trainAcc = np.zeros(len(maxdepths))
+testAcc = np.zeros(len(maxdepths))
+index = 0
+
+for depth in maxdepths:
+    clf = tree.DecisionTreeClassifier(max_depth=depth)
+    clf = clf.fit(X_train, Y_train)
+    Y_predTrain = clf.predict(X_train)
+    Y_predTest = clf.predict(X_test)
+    trainAcc[index] = accuracy_score(Y_train, Y_predTrain)
+    testAcc[index] = accuracy_score(Y_test, Y_predTest)
+    index += 1
+```
+
+Lets Plot
+
+```python
+plt.plot(maxdepths,trainAcc,'ro-',maxdepths,testAcc,'bv--')
+plt.legend(['Training Accuracy','Test Accuracy'])
+```
+
+Output:
+
+Training Accuracy vs Test Accuracy
+
+![insert image](/images/big_data/predictive_modeling/training_plot.png)
+
+
+**Lets plot a Tree with MaxDepth = 4**
+
+```python
+depth = 4
+clf = tree.DecisionTreeClassifier(max_depth=depth)
+clf = clf.fit(X_train, Y_train)
+Y_predTrain = clf.predict(X_train)
+Y_predTest = clf.predict(X_test)
+AccTrain = accuracy_score(Y_train, Y_predTrain)
+AccTest = accuracy_score(Y_test, Y_predTest)
+[AccTrain, AccTest]
+```
+
+Output:
+
+Accuracy Train and Accuracy Test
+
+```python
+[0.8888888888888888, 0.6959349593495935]
+```
+
+Lets Plot the Tree with Depth = 4
+
+```python
+import pydotplus 
+from IPython.display import Image
+
+dot_data = tree.export_graphviz(clf, out_file=None) 
+graph = pydotplus.graph_from_dot_data(dot_data) 
+Image(graph.create_png())
+```
+
+Output:
+
+![insert image](/images/big_data/predictive_modeling/tree_4.png)
+
+
+**Lets plot a Tree with MaxDepth = 20**
+
+
+```python
+depth = 20
+clf = tree.DecisionTreeClassifier(max_depth=depth)
+clf = clf.fit(X_train, Y_train)
+Y_predTrain = clf.predict(X_train)
+Y_predTest = clf.predict(X_test)
+AccTrain = accuracy_score(Y_train, Y_predTrain)
+AccTest = accuracy_score(Y_test, Y_predTest)
+[AccTrain, AccTest]
+```
+
+Output:
+
+```python
+[0.8888888888888888, 0.7121951219512195]
+```
+
+```python
+import pydotplus 
+from IPython.display import Image
+
+dot_data = tree.export_graphviz(clf, out_file=None) 
+graph = pydotplus.graph_from_dot_data(dot_data) 
+Image(graph.create_png())
+```
+
+![insert image](/images/big_data/predictive_modeling/tree_20.png)
