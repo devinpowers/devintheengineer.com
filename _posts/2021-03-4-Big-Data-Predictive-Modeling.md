@@ -312,7 +312,8 @@ y_pred = clf.predict(X_test)
 ```python
 from sklearn.metrics import accuracy_score
 
-print("Accuracy:",metrics.accuracy_score(y_test, y_pred))```
+print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
+```
 
 Output:
 
