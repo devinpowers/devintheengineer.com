@@ -368,6 +368,7 @@ data[['compactness','circularity','distance_circularity','radius_ratio']].corr()
 ```
 
 Output:
+
 |                      	| compactness 	| circularity 	| distance_circularity 	| radius_ratio 	|
 |---------------------:	|------------:	|------------:	|---------------------:	|-------------:	|
 |          compactness 	|    1.000000 	|    0.692869 	|             0.792444 	|     0.691659 	|
