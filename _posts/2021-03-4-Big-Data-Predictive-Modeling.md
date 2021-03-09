@@ -117,9 +117,9 @@ We have to split the “Nodes”. We can do a two-way split or a multi-way split
 The goal of the best test condition is whether it leads to a homogenous distribution of the nodes, which is the purity of child nodes before and after splitting. The larger the degree of purity, the better the class distribution.
 
 
-Measurement of impurity can be determined by:
+**Measurement of impurity can be determined by:**
 
-1.	Gina Index
+1.	Gina Index (used in our example below)
 2.	Entropy
 3.	Misclassification Error
 
@@ -192,7 +192,7 @@ Now that we have the data split.
 ```python
 from sklearn.tree import DecisionTreeClassifier 
 from sklearn.model_selection import train_test_split
-from sklearn import metrics #I
+from sklearn import metrics 
 ```
 
 ```python
@@ -338,3 +338,87 @@ Output:
 ![insert image](/images/big_data/predictive_modeling/diabetes_tree.png)
 
 
+### Model Evaluation
+
+
+### Extras
+
+```python
+import pandas as p
+
+data = p.read_csv('vehicle.csv',header=0)
+data.head()
+```
+
+Output:
+
+|   	| compactness 	| circularity 	| distance_circularity 	| radius_ratio 	| pr_axis_aspect_ratio 	| max_length_aspect_ratio 	| scatter_ratio 	| elongatedness 	| pr_axisrectangular 	| lengthrectangular 	| majorvariance 	| minorvariance 	| gyrationradius 	| majorskewness 	| minorskewness 	| minorkurtosis 	| majorkurtosis 	| hollows_ratio 	| class 	|
+|--:	|------------:	|------------:	|---------------------:	|-------------:	|---------------------:	|------------------------:	|--------------:	|--------------:	|-------------------:	|------------------:	|--------------:	|--------------:	|---------------:	|--------------:	|--------------:	|--------------:	|--------------:	|--------------:	|------:	|
+| 0 	|          95 	|          43 	|                   96 	|          202 	|                   65 	|                      10 	|           189 	|            35 	|                 22 	|               143 	|           217 	|           534 	|            166 	|            71 	|             6 	|            27 	|           190 	|           197 	|  opel 	|
+| 1 	|          96 	|          52 	|                  104 	|          222 	|                   67 	|                       9 	|           198 	|            33 	|                 23 	|               163 	|           217 	|           589 	|            226 	|            67 	|            12 	|            20 	|           192 	|           201 	|  opel 	|
+| 2 	|         107 	|          52 	|                  101 	|          218 	|                   64 	|                      11 	|           202 	|            33 	|                 23 	|               164 	|           219 	|           610 	|            192 	|            65 	|            17 	|             2 	|           197 	|           206 	|  opel 	|
+| 3 	|          97 	|          37 	|                   78 	|          181 	|                   62 	|                       8 	|           161 	|            41 	|                 20 	|               131 	|           182 	|           389 	|            117 	|            62 	|             2 	|            28 	|           203 	|           211 	|  opel 	|
+| 4 	|          96 	|          54 	|                  104 	|          175 	|                   58 	|                      10 	|           215 	|            31 	|                 24 	|               175 	|           221 	|           682 	|            222 	|            75 	|            13 	|            23 	|           186 	|           194 	|   ope 	|
+
+
+
+```python
+data[['compactness','circularity','distance_circularity','radius_ratio']].corr()
+```
+
+Output:
+|                      	| compactness 	| circularity 	| distance_circularity 	| radius_ratio 	|
+|---------------------:	|------------:	|------------:	|---------------------:	|-------------:	|
+|          compactness 	|    1.000000 	|    0.692869 	|             0.792444 	|     0.691659 	|
+|          circularity 	|    0.692869 	|    1.000000 	|             0.798492 	|     0.622778 	|
+| distance_circularity 	|    0.792444 	|    0.798492 	|             1.000000 	|     0.771644 	|
+|         radius_ratio 	|    0.691659 	|    0.622778 	|             0.771644 	|     1.000000 	|
+
+
+
+**Histogram**
+
+```python
+%matplotlib inline
+data['compactness'].hist()
+```
+![insert image](/images/big_data/predictive_modeling/pred_hist.png)
+
+**Box Plot**
+
+```python
+data[['compactness','circularity','distance_circularity','radius_ratio']].boxplot()
+```
+![insert image](/images/big_data/predictive_modeling/box_plot_pred.png)
+
+
+
+```python
+from sklearn.model_selection import train_test_split
+
+Y = data['class']
+X = data.drop('class',axis=1)
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.23, random_state=1)
+```
+
+```python
+Y
+```
+
+Output:
+
+|     	|      	|
+|-----	|------	|
+| 0   	| opel 	|
+| 1   	| opel 	|
+| 2   	| opel 	|
+| 3   	| opel 	|
+| 4   	| opel 	|
+| ... 	|      	|
+| 841 	| van  	|
+| 842 	| van  	|
+| 843 	| van  	|
+| 844 	| van  	|
+| 845 	| van  	|
+
+OK Sweet!!!
