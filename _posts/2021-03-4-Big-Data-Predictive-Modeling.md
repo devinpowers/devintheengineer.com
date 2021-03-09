@@ -364,6 +364,26 @@ Output:
 ### Model Evaluation
 
 
+- Alternative Measures of Classification
+
+
+**F-Measure:** (or F-Score) is a measure of a test’s accuracy 
+
+**Area under ROC Curve**
+
+https://youtu.be/4jRBRDbJemM
+
+**ROC Curve**
+
+**Python Example**
+
+```python
+
+````
+
+
+
+
 ### Extras
 
 ```python
