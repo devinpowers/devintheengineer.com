@@ -657,18 +657,6 @@ for depth in maxdepths:
     index += 1
 ```
 
-Lets Plot
-
-```python
-plt.plot(maxdepths,trainAcc,'ro-',maxdepths,testAcc,'bv--')
-plt.legend(['Training Accuracy','Test Accuracy'])
-```
-
-Output:
-
-Training Accuracy vs Test Accuracy
-
-![insert image](/images/big_data/predictive_modeling/training_plot.png)
 
 
 **Lets plot a Tree with MaxDepth = 4**
@@ -750,10 +738,27 @@ Image(graph.create_png())
 ![insert image](/images/big_data/predictive_modeling/tree_20.png)
 
 
-### Overfitting
 
-    * An overfitting model is undesirable because the model may fit noise in the training data
 
+### Lets Plot Model Overfitting and Underfitting
+
+```python
+plt.plot(maxdepths,trainAcc,'ro-',maxdepths,testAcc,'bv--')
+plt.legend(['Training Accuracy','Test Accuracy'])
+```
+
+Output:
+
+Model Overfitting and Underfitting
+
+![insert image](/images/big_data/predictive_modeling/training_plot.png)
+
+
+**Defintions:**
+
+     * Underfitting: When the model is too simple
+
+     * Overfitting: When the model is too complex 
 
 
 ### Mammal Classification Problem
