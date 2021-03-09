@@ -653,13 +653,16 @@ AccTest = accuracy_score(Y_test, Y_predTest)
 
 Output:
 
-Accuracy Train and Accuracy Test
-
 ```python
 [0.8888888888888888, 0.6959349593495935]
 ```
 
-Lets Plot the Tree with Depth = 4
+Accuracy Training = 88.88%
+
+Accuracy Test = 69.59%
+
+
+**Lets Plot the Tree with Depth = 4**
 
 ```python
 import pydotplus 
@@ -692,8 +695,15 @@ AccTest = accuracy_score(Y_test, Y_predTest)
 Output:
 
 ```python
-[0.8888888888888888, 0.7121951219512195]
+[1.0, 0.640650406504065]
 ```
+
+
+Accuracy Training = 100%
+
+Accuracy Test = 64.07%
+
+**Lets Plot the Tree with Depth = 20**
 
 ```python
 import pydotplus 
