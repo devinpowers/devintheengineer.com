@@ -56,8 +56,47 @@ Predictive Analysis can be used in many fields (domains) including:
 
 Classification is about predicting a label and regression is about predicting a quantity.
 
-**Classification vs Regression**
+## Classification vs Regression
 
+## Regression
+
+**Regression** is the process of finding a model or function for distinguishing the data into continuous real values instead of using classes
+
+Involves prediction Continuous Values
+
+Method of Calculation: Measurement of root mean square error
+
+**Examples of Regression** Regression Tree (random forest) , Linear Regression
+
+
+Let's see how **Linear Regression** works
+
+
+```python
+%matplotlib inline
+import numpy as np
+import matplotlib.pyplot as plt
+
+seed = 1            # seed for random number generation 
+numInstances = 200  # number of data instances
+np.random.seed(seed)
+X = np.random.rand(numInstances,1).reshape(-1,1)
+y_true = -3*X + 1 
+y = y_true + np.random.normal(size=numInstances).reshape(-1,1)
+
+plt.scatter(X, y,  color='black')
+plt.plot(X, y_true, color='blue', linewidth=3)
+plt.title('True function: y = -3X + 1')
+plt.xlabel('X')
+plt.ylabel('y')
+```
+
+Output:
+
+![insert image](/images/big_data/predictive_modeling/regression_plot.png)
+
+
+## Classification
 **Classification** is the task of “classifying” things into sub-categories.
 
 It has two types:
@@ -73,14 +112,8 @@ Method of Calculation: Measuring Accuracy
 **Examples of Classification:** Decision Tree, Logestic Regression
 
 
-**Regression** is the process of finding a model or function for distinguishing the data into continuous real values instead of using classes
 
-Involves prediction Continuous Values
-
-Method of Calculation: Measurement of root mean square error
-
-**Examples of Regression** Regression Tree (random forest) , Linear Regression
-
+## Predictive Modeling
 
 **Terminology for Predicitve Modeling**
 
@@ -715,3 +748,12 @@ Image(graph.create_png())
 ```
 
 ![insert image](/images/big_data/predictive_modeling/tree_20.png)
+
+
+### Overfitting
+
+    * An overfitting model is undesirable because the model may fit noise in the training data
+
+
+
+### Mammal Classification Problem
