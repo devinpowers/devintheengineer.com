@@ -298,3 +298,43 @@ Output:
 
 There are 231 rows in y_test.
 
+**Step 4**: Build the decision tree model and apply it to the test data
+```python
+from sklearn import tree
+clf = DecisionTreeClassifier()
+clf = clf.fit(X_train,y_train)
+y_pred = clf.predict(X_test)
+```
+
+
+**Step 5**: Evaluate the accuracy of the model on the test data
+
+```python
+from sklearn.metrics import accuracy_score
+
+print("Accuracy:",metrics.accuracy_score(y_test, y_pred))```
+
+Output:
+
+```python
+Accuracy: 0.6666666666666666
+```
+
+We can Visualize the Decision Tree using Scikit-learn's export_graphviz function:
+
+```python
+from sklearn import tree
+import pydotplus 
+dot_data = tree.export_graphviz(clf, out_file=None) 
+graph = pydotplus.graph_from_dot_data(dot_data) 
+graph.write_pdf("diabetes.pdf") 
+
+from IPython.display import Image
+Image(graph.create_png())
+```
+
+Output:
+
+![insert image](/images/big_data/predictive_modeling/diabetes_tree.png)
+
+
