@@ -42,6 +42,8 @@ Predictive Analysis can be used in many fields (domains) including:
 
 * The task of predicting the value of a target variable (y) as a function of the predictor variables (X)
 
+* Problem of learning a mapping function from inputs to outputs called function approximation
+
     **y = f(X)**
 
 
@@ -51,6 +53,8 @@ Predictive Analysis can be used in many fields (domains) including:
 | **Classification**| Qualitative (nominal)        	| Disease Prediction, Image Classification, Twitter Mood Prediction                           	|
 
 
+
+Classification is about predicting a label and regression is about predicting a quantity.
 
 
 
