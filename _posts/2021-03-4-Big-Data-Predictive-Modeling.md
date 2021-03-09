@@ -138,3 +138,6 @@ Measurement of impurity can be determined by:
 ![insert image](/images/big_data/predictive_modeling/tree9.jpg)
 ![insert image](/images/big_data/predictive_modeling/tree10.jpg)
 
+
+testing testing testing
+
