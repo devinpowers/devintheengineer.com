@@ -32,7 +32,7 @@ Predictive Analysis can be used in many fields (domains) including:
 2. Collect Data
 3. Clean Data
 4. Data Analysis
-5. Build a Predictive Model
+5. **Build a Predictive Model**
 6. Validate the Model
 7. Deployment of the Model
 8. Monitor the Model
