@@ -595,13 +595,13 @@ Model Selection
 
 **What is Model Overfitting?**
 
-    *	Model Overfitting is error that occur when a function is too closely fit to a *limited set of data points*
+*	Model Overfitting is error that occur when a function is too closely fit to a *limited set of data points*
 
-    * Too many details and noise
+* Too many details and noise
 
-    * The goal of Predictive Modeling is to build a model with low training and test errors
+* The goal of Predictive Modeling is to build a model with low training and test errors
 
-    * Which is challenging because a model with low training erro does not guarantee it will have low test error (due to model overfitting problem)
+* Which is challenging because a model with low training errors does not guarantee it will have low test error (due to model overfitting problem)
 
 An example of Model Overfitting:
 
@@ -801,6 +801,19 @@ Output:
 
 
 
-## Nearest-Neighbor Method
+## Nearest-Neighbor Methods
+
+
+    * Linear Method
+    * Nonlinear Method
+    * Ensemble Methods
+
+
+
+
+## Other Issues in Classification
+
+
+##
 
 
