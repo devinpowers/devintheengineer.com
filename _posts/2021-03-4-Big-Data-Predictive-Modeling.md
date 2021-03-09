@@ -440,6 +440,11 @@ Output:
 ![insert image](/images/big_data/predictive_modeling/roc_curve.png)
 
 
+**Holdout Method**
+
+
+
+**5-Fold Cross Validation Method**
 ```python
 from sklearn.model_selection import cross_val_score
 clf = tree.DecisionTreeClassifier(max_depth=3)
@@ -548,4 +553,19 @@ Output:
 | 844 	| van  	|
 | 845 	| van  	|
 
-OK Sweet!!!
+
+
+# Model Selection and Overfitting
+
+Model Selection
+
+
+**What is Model Overfitting?**
+
+    *	Model Overfitting is error that occur when a function is too closely fit to a *limited set of data points*
+
+    * The goal of Predictive Modeling is to build a model with low training and test errors
+
+    * Which is challenging because a model with low training erro does not guarantee it will have low test error (due to model overfitting problem)
+
+An example of Model Overfitting
