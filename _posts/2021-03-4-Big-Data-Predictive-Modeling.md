@@ -94,7 +94,7 @@ Output:
 
 
 ## Classification
-**Classification** is the task of *classifying*  things into sub-categories.
+**Classification** is the task of *classifying*  things into sub-categories. Definition: Classification is the task of learning a **Target function f** that maps each attribute set **x** to one of the predefined class labels *y*.
 
 ![insert image](/images/big_data/predictive_modeling/classification.jpg)
 
@@ -104,12 +104,11 @@ It has **two types:**
 
 2. Multiclass Classification: The number of classes is more than 2
 
-Involves prediction of Discrete Values
+Involves prediction of Discrete Values (individually seperate and distinct)
 
 Method of Calculation: Measuring Accuracy 
 
 **Examples of Classification:** Decision Tree, Logestic Regression
-
 
 
 ## Predictive Modeling
