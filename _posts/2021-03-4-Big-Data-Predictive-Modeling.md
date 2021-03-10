@@ -121,6 +121,7 @@ Method of Calculation: Measuring Accuracy
 
 * **Predictive Model**: An *abstract* representation of the relationship between the predictor and the target variables
 
+![insert image](/images/big_data/predictive_modeling/training_test.jpg)
 
 
 **Predictive Modeling Techniques**
