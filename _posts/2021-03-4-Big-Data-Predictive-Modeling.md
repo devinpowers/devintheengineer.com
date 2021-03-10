@@ -100,13 +100,13 @@ Output:
 
 It has **two types:**
 
-1. Binary Classification:Categorizes given data into two distinct classes
+1. Binary Classification :Categorizes given data into two distinct classes
 
 2. Multiclass Classification: The number of classes is more than 2
 
 Involves prediction of Discrete Values (individually seperate and distinct)
 
-Method of Calculation: Measuring Accuracy 
+**Method of Calculation:** Measuring Accuracy 
 
 **Examples of Classification:** Decision Tree, Logestic Regression
 
