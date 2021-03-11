@@ -100,7 +100,7 @@ Output:
 
 It has **two types:**
 
-1. Binary Classification :Categorizes given data into two distinct classes
+1. Binary Classification: Categorizes given data into two distinct classes
 
 2. Multiclass Classification: The number of classes is more than 2
 
@@ -197,7 +197,9 @@ The goal of the best test condition is whether it leads to a homogenous distribu
 
 - using sklearn in Python
 
-* Using a *diabetes* file to predict if the person will test positive for Diabetes
+* Using a *NBA Draft Combine Information* file to predict if the player will be drafted based on picking a few different categories.
+
+Heres the csv file -> [file](/Files/Data_Series/predictive/nba.csv)
 
 **Steps**
 
@@ -812,9 +814,3 @@ Output:
 
 ## Other Issues in Classification
 
-
-##
-
-
-updaye
-adasd
