@@ -208,36 +208,122 @@ Heres the csv file -> [file](/Files/Data_Series/predictive/nba.csv)
 ```python
 import pandas as p
 
-col_names = ['pregnant', 'glucose', 'bp', 'skin', 'insulin', 'bmi', 'pedigree', 'age', 'label']
-# load dataset
-pima = p.read_csv("diabetes.csv", header=None, names=col_names )
-
-pima
+data = p.read_csv('nba_draft_combine_all_years.csv', header = 0)
+data
 ```
 
 Output
+|     	|                Player 	| Year 	| Drafted 	| Height (No Shoes) 	| Height (With Shoes) 	| Wingspan 	| Standing reach 	| Vertical (Max) 	| Vertical (Max Reach) 	| Vertical (No Step) 	| Vertical (No Step Reach) 	| Weight 	| Body Fat 	| Hand (Length) 	| Hand (Width) 	| Bench 	| Agility 	| Sprint 	|
+|----:	|----------------------:	|-----:	|--------:	|------------------:	|--------------------:	|---------:	|---------------:	|---------------:	|---------------------:	|-------------------:	|-------------------------:	|-------:	|---------:	|--------------:	|-------------:	|------:	|--------:	|-------:	|
+|   0 	|         Blake Griffin 	| 2009 	|     Yes 	|             80.50 	|               82.00 	|    83.25 	|          105.0 	|           35.5 	|                140.5 	|               32.0 	|                    137.0 	|  248.0 	|      8.2 	|           NaN 	|          NaN 	|  22.0 	|   10.95 	|   3.28 	|
+|   1 	|     Terrence Williams 	| 2009 	|     Yes 	|             77.00 	|               78.25 	|    81.00 	|          103.5 	|           37.0 	|                140.5 	|               30.5 	|                    134.0 	|  213.0 	|      5.1 	|           NaN 	|          NaN 	|   9.0 	|   11.15 	|   3.18 	|
+|   2 	|      Gerald Henderson 	| 2009 	|     Yes 	|             76.00 	|               77.00 	|    82.25 	|          102.5 	|           35.0 	|                137.5 	|               31.5 	|                    134.0 	|  215.0 	|      4.4 	|           NaN 	|          NaN 	|   8.0 	|   11.17 	|   3.14 	|
+|   3 	|      Tyler Hansbrough 	| 2009 	|     Yes 	|             80.25 	|               81.50 	|    83.50 	|          106.0 	|           34.0 	|                140.0 	|               27.5 	|                    133.5 	|  234.0 	|      8.5 	|           NaN 	|          NaN 	|  18.0 	|   11.12 	|   3.27 	|
+|   4 	|            Earl Clark 	| 2009 	|     Yes 	|             80.50 	|               82.25 	|    86.50 	|          109.5 	|           33.0 	|                142.5 	|               28.5 	|                    138.0 	|  228.0 	|      5.2 	|           NaN 	|          NaN 	|   5.0 	|   11.17 	|   3.35 	|
+| ... 	|                   ... 	|  ... 	|     ... 	|               ... 	|                 ... 	|      ... 	|            ... 	|            ... 	|                  ... 	|                ... 	|                      ... 	|    ... 	|      ... 	|           ... 	|          ... 	|   ... 	|     ... 	|    ... 	|
+| 512 	|             Peter Jok 	| 2017 	|      No 	|             76.25 	|               77.75 	|    80.00 	|          102.0 	|           31.0 	|                133.0 	|               26.5 	|                    128.5 	|  202.0 	|     11.0 	|          8.25 	|         9.50 	|   NaN 	|   11.34 	|   3.41 	|
+| 513 	|          Rawle Alkins 	| 2017 	|      No 	|             74.50 	|               75.75 	|    80.75 	|           99.0 	|           40.5 	|                139.5 	|               31.5 	|                    130.5 	|  223.0 	|     11.0 	|          8.75 	|        10.00 	|   NaN 	|   11.99 	|   3.30 	|
+| 514 	| Sviatoslav Mykhailiuk 	| 2017 	|      No 	|             78.50 	|               79.50 	|    77.00 	|          100.0 	|           33.0 	|                133.0 	|               27.0 	|                    127.0 	|  220.0 	|     11.4 	|          8.00 	|         9.25 	|   NaN 	|   12.40 	|   3.53 	|
+| 515 	|          Thomas Welsh 	| 2017 	|      No 	|             83.50 	|               84.50 	|    84.00 	|          109.5 	|            NaN 	|                  NaN 	|                NaN 	|                      NaN 	|  254.0 	|     10.9 	|          9.00 	|        10.50 	|   NaN 	|     NaN 	|    NaN 	|
+| 516 	|          V.J. Beachem 	| 2017 	|      No 	|             78.25 	|               80.00 	|    82.25 	|          104.5 	|           37.0 	|                141.5 	|               30.0 	|                    134.5 	|  193.0 	|      6.8 	|          8.50 	|         9.00 	|   NaN 	|   11.18 	|   3.26 	|
 
-|     	| pregnant 	| glucose 	|   bp 	| skin 	| insulin 	|  bmi 	| pedigree 	| age 	|           label 	|
-|----:	|---------:	|--------:	|-----:	|-----:	|--------:	|-----:	|---------:	|----:	|----------------:	|
-|   0 	|     preg 	|    plas 	| pres 	| skin 	|    insu 	| mass 	|     pedi 	| age 	|           class 	|
-|   1 	|        6 	|     148 	|   72 	|   35 	|       0 	| 33.6 	|    0.627 	|  50 	| tested_positive 	|
-|   2 	|        1 	|      85 	|   66 	|   29 	|       0 	| 26.6 	|    0.351 	|  31 	| tested_negative 	|
-|   3 	|        8 	|     183 	|   64 	|    0 	|       0 	| 23.3 	|    0.672 	|  32 	| tested_positive 	|
-|   4 	|        1 	|      89 	|   66 	|   23 	|      94 	| 28.1 	|    0.167 	|  21 	| tested_negative 	|
-| ... 	|      ... 	|     ... 	|  ... 	|  ... 	|     ... 	|  ... 	|      ... 	| ... 	|             ... 	|
-| 764 	|       10 	|     101 	|   76 	|   48 	|     180 	| 32.9 	|    0.171 	|  63 	| tested_negative 	|
-| 765 	|        2 	|     122 	|   70 	|   27 	|       0 	| 36.8 	|     0.34 	|  27 	| tested_negative 	|
-| 766 	|        5 	|     121 	|   72 	|   23 	|     112 	| 26.2 	|    0.245 	|  30 	| tested_negative 	|
-| 767 	|        1 	|     126 	|   60 	|    0 	|       0 	| 30.1 	|    0.349 	|  47 	| tested_positive 	|
-| 768 	|        1 	|      93 	|   70 	|   31 	|       0 	| 30.4 	|    0.315 	|  23 	| tested_negative 	|
 
-
-**Step 2**: Extract the predictor (X) and the Target (y) variables
+**Step 2** Lets clean this data because there are missing values, here are the columns were intrested in using!
 
 ```python
-feature_cols = ['pregnant', 'insulin', 'bmi', 'age','glucose','bp','pedigree']
-X = pima[feature_cols] # Features
-y = pima.label # Target variable
+feature_columns = ["Height (No Shoes)", "Wingspan", "Standing reach","Vertical (Max)", "Weight", "Agility", "Sprint"] 
+update_data = data[feature_columns]
+update_data
+```
+
+Output:
+
+|     	| Height (No Shoes) 	| Wingspan 	| Standing reach 	| Vertical (Max) 	| Weight 	| Agility 	| Sprint 	|
+|----:	|------------------:	|---------:	|---------------:	|---------------:	|-------:	|--------:	|-------:	|
+|   0 	|             80.50 	|    83.25 	|          105.0 	|           35.5 	|  248.0 	|   10.95 	|   3.28 	|
+|   1 	|             77.00 	|    81.00 	|          103.5 	|           37.0 	|  213.0 	|   11.15 	|   3.18 	|
+|   2 	|             76.00 	|    82.25 	|          102.5 	|           35.0 	|  215.0 	|   11.17 	|   3.14 	|
+|   3 	|             80.25 	|    83.50 	|          106.0 	|           34.0 	|  234.0 	|   11.12 	|   3.27 	|
+|   4 	|             80.50 	|    86.50 	|          109.5 	|           33.0 	|  228.0 	|   11.17 	|   3.35 	|
+| ... 	|               ... 	|      ... 	|            ... 	|            ... 	|    ... 	|     ... 	|    ... 	|
+| 512 	|             76.25 	|    80.00 	|          102.0 	|           31.0 	|  202.0 	|   11.34 	|   3.41 	|
+| 513 	|             74.50 	|    80.75 	|           99.0 	|           40.5 	|  223.0 	|   11.99 	|   3.30 	|
+| 514 	|             78.50 	|    77.00 	|          100.0 	|           33.0 	|  220.0 	|   12.40 	|   3.53 	|
+| 515 	|             83.50 	|    84.00 	|          109.5 	|            NaN 	|  254.0 	|     NaN 	|    NaN 	|
+| 516 	|             78.25 	|    82.25 	|          104.5 	|           37.0 	|  193.0 	|   11.18 	|   3.26 	|
+
+
+Now lets check for missing values!!!
+
+```python
+update_data.describe()
+```
+
+|       	| Height (No Shoes) 	|   Wingspan 	| Standing reach 	| Vertical (Max) 	|     Weight 	|    Agility 	|     Sprint 	|
+|------:	|------------------:	|-----------:	|---------------:	|---------------:	|-----------:	|-----------:	|-----------:	|
+| count 	|        517.000000 	| 517.000000 	|     517.000000 	|     450.000000 	| 516.000000 	| 444.000000 	| 446.000000 	|
+|  mean 	|         77.609284 	|  82.497292 	|     103.275629 	|      35.136667 	| 214.833333 	|  11.330248 	|   3.299664 	|
+|   std 	|          3.287633 	|   3.943068 	|       4.897515 	|       3.561688 	|  24.683537 	|   0.563144 	|   0.128422 	|
+|   min 	|         68.250000 	|  70.000000 	|      88.500000 	|      25.000000 	| 149.000000 	|  10.070000 	|   3.010000 	|
+|   25% 	|         75.250000 	|  79.750000 	|     100.000000 	|      32.500000 	| 196.000000 	|  10.940000 	|   3.200000 	|
+|   50% 	|         77.750000 	|  82.500000 	|     103.500000 	|      35.000000 	| 213.500000 	|  11.255000 	|   3.280000 	|
+|   75% 	|         80.000000 	|  85.500000 	|     107.000000 	|      37.500000 	| 232.000000 	|  11.660000 	|   3.380000 	|
+|   max 	|         85.250000 	|  92.500000 	|     115.000000 	|      44.500000 	| 303.000000 	|  13.440000 	|   3.810000 	|
+
+
+
+We can see the count for the total players is 517, and in different columns like Vertical, Weight, Agility, and Sprint here is missing data. Ill just insert the **Median** value for the missing values.
+
+```python
+## Vertical Max
+
+update_data['Vertical (Max)'] = update_data['Vertical (Max)'].fillna(update_data['Vertical (Max)'].median())
+
+## Weight
+
+update_data['Weight'] = update_data['Weight'].fillna(update_data['Weight'].median())
+
+## Agility
+
+update_data['Agility'] = update_data['Agility'].fillna(update_data['Agility'].median())
+
+
+## Sprint
+
+update_data['Sprint'] = update_data['Sprint'].fillna(update_data['Sprint'].median())
+
+```
+
+Now all the Columns are filled in, no more missing data!
+
+```python
+update_data
+```
+
+Output:
+
+|     	| Height (No Shoes) 	| Wingspan 	| Standing reach 	| Vertical (Max) 	| Weight 	| Agility 	| Sprint 	|
+|----:	|------------------:	|---------:	|---------------:	|---------------:	|-------:	|--------:	|-------:	|
+|   0 	|             80.50 	|    83.25 	|          105.0 	|           35.5 	|  248.0 	|  10.950 	|   3.28 	|
+|   1 	|             77.00 	|    81.00 	|          103.5 	|           37.0 	|  213.0 	|  11.150 	|   3.18 	|
+|   2 	|             76.00 	|    82.25 	|          102.5 	|           35.0 	|  215.0 	|  11.170 	|   3.14 	|
+|   3 	|             80.25 	|    83.50 	|          106.0 	|           34.0 	|  234.0 	|  11.120 	|   3.27 	|
+|   4 	|             80.50 	|    86.50 	|          109.5 	|           33.0 	|  228.0 	|  11.170 	|   3.35 	|
+| ... 	|               ... 	|      ... 	|            ... 	|            ... 	|    ... 	|     ... 	|    ... 	|
+| 512 	|             76.25 	|    80.00 	|          102.0 	|           31.0 	|  202.0 	|  11.340 	|   3.41 	|
+| 513 	|             74.50 	|    80.75 	|           99.0 	|           40.5 	|  223.0 	|  11.990 	|   3.30 	|
+| 514 	|             78.50 	|    77.00 	|          100.0 	|           33.0 	|  220.0 	|  12.400 	|   3.53 	|
+| 515 	|             83.50 	|    84.00 	|          109.5 	|           35.0 	|  254.0 	|  11.255 	|   3.28 	|
+| 516 	|             78.25 	|    82.25 	|          104.5 	|           37.0 	|  193.0 	|  11.180 	|   3.26 	|
+
+
+
+**Step 3**: Extract the predictor (X) and the Target (y) variables
+
+```python
+X = update_data
+y = data["Drafted"]
+
 ```
 
 Now that we have the data split.
@@ -265,23 +351,22 @@ from sklearn import metrics
 
  Output:
 
- |     	| pregnant 	| insulin 	|  bmi 	| age 	| glucose 	|  bp 	| pedigree 	|
-|----:	|---------:	|--------:	|-----:	|----:	|--------:	|----:	|---------:	|
-|  89 	|       15 	|     110 	| 37.1 	|  43 	|     136 	|  70 	|    0.153 	|
-| 468 	|        0 	|     100 	| 36.8 	|  25 	|      97 	|  64 	|      0.6 	|
-| 551 	|        1 	|       0 	| 27.4 	|  21 	|     116 	|  70 	|    0.204 	|
-| 148 	|        2 	|     119 	| 30.5 	|  34 	|     106 	|  64 	|      1.4 	|
-| 482 	|        0 	|       0 	| 35.2 	|  29 	|     123 	|  88 	|    0.197 	|
-| ... 	|      ... 	|     ... 	|  ... 	| ... 	|     ... 	| ... 	|      ... 	|
-| 646 	|        2 	|     440 	| 39.4 	|  30 	|     157 	|  74 	|    0.134 	|
-| 716 	|        7 	|     392 	| 33.9 	|  34 	|     187 	|  50 	|    0.826 	|
-|  73 	|       13 	|       0 	| 43.4 	|  42 	|     126 	|  90 	|    0.583 	|
-| 236 	|        4 	|       0 	| 43.6 	|  26 	|     171 	|  72 	|    0.479 	|
-|  38 	|        9 	|       0 	| 32.9 	|  46 	|     102 	|  76 	|    0.665 	|
+|     	| Height (No Shoes) 	| Wingspan 	| Standing reach 	| Vertical (Max) 	| Weight 	| Agility 	| Sprint 	|
+|----:	|------------------:	|---------:	|---------------:	|---------------:	|-------:	|--------:	|-------:	|
+|  13 	|             79.75 	|    81.25 	|          106.5 	|           32.5 	|  211.0 	|  11.150 	|   3.28 	|
+|  61 	|             76.75 	|    80.50 	|          104.0 	|           35.5 	|  208.0 	|  11.860 	|   3.19 	|
+| 453 	|             75.25 	|    81.75 	|           97.5 	|           35.5 	|  212.0 	|  10.770 	|   3.45 	|
+|  39 	|             71.25 	|    74.00 	|           95.0 	|           33.0 	|  175.0 	|  10.870 	|   3.10 	|
+| 373 	|             76.50 	|    80.25 	|          100.5 	|           34.5 	|  209.0 	|  11.255 	|   3.27 	|
+| ... 	|               ... 	|      ... 	|            ... 	|            ... 	|    ... 	|     ... 	|    ... 	|
+| 129 	|             76.00 	|    81.75 	|          101.5 	|           35.5 	|  198.0 	|  11.200 	|   3.09 	|
+| 144 	|             78.50 	|    85.25 	|          106.5 	|           30.5 	|  242.0 	|  12.430 	|   3.46 	|
+|  72 	|             75.75 	|    81.00 	|          101.0 	|           40.0 	|  203.0 	|  11.380 	|   3.15 	|
+| 235 	|             79.50 	|    86.50 	|          106.5 	|           38.0 	|  236.0 	|  11.820 	|   3.52 	|
+|  37 	|             72.50 	|    75.75 	|           97.0 	|           31.0 	|  193.0 	|  10.990 	|   3.22 	|
 
 
-
-There are 537 rows in  X_train!
+There are 361 rows in  X_train!
 
   ```python
  X_test
@@ -289,22 +374,22 @@ There are 537 rows in  X_train!
 
  Output:
 
-|     	| pregnant 	| insulin 	|  bmi 	| age 	| glucose 	|  bp 	| pedigree 	|
-|----:	|---------:	|--------:	|-----:	|----:	|--------:	|----:	|---------:	|
-| 286 	|        7 	|     135 	|   26 	|  51 	|     136 	|  74 	|    0.647 	|
-| 102 	|        1 	|       0 	| 26.1 	|  22 	|     151 	|  60 	|    0.179 	|
-| 582 	|        6 	|       0 	|   25 	|  27 	|     109 	|  60 	|    0.206 	|
-| 353 	|        3 	|       0 	| 34.4 	|  46 	|      61 	|  82 	|    0.243 	|
-| 727 	|        1 	|     180 	| 36.1 	|  25 	|     116 	|  78 	|    0.496 	|
-| ... 	|      ... 	|     ... 	|  ... 	| ... 	|     ... 	| ... 	|      ... 	|
-| 242 	|        4 	|      88 	| 33.1 	|  22 	|      91 	|  70 	|    0.446 	|
-| 600 	|        1 	|     120 	| 23.1 	|  26 	|     109 	|  38 	|    0.407 	|
-| 651 	|        1 	|     100 	| 25.2 	|  23 	|      91 	|  54 	|    0.234 	|
-|  12 	|       10 	|       0 	|   38 	|  34 	|     168 	|  74 	|    0.537 	|
-| 215 	|        9 	|     175 	| 34.2 	|  36 	|     112 	|  82 	|     0.26 	|
+|     	| Height (No Shoes) 	| Wingspan 	| Standing reach 	| Vertical (Max) 	| Weight 	| Agility 	| Sprint 	|
+|----:	|------------------:	|---------:	|---------------:	|---------------:	|-------:	|--------:	|-------:	|
+| 270 	|             73.00 	|    76.00 	|          97.50 	|           35.0 	|  179.0 	|  11.255 	|   3.28 	|
+|  90 	|             78.75 	|    79.75 	|         103.00 	|           34.5 	|  211.0 	|  11.730 	|   3.22 	|
+| 133 	|             82.00 	|    87.75 	|         109.50 	|           36.0 	|  217.0 	|  11.880 	|   3.35 	|
+| 221 	|             81.75 	|    87.50 	|         111.50 	|           35.0 	|  230.0 	|  11.255 	|   3.28 	|
+| 224 	|             76.50 	|    79.00 	|         101.00 	|           37.5 	|  199.0 	|  10.680 	|   3.25 	|
+| ... 	|               ... 	|      ... 	|            ... 	|            ... 	|    ... 	|     ... 	|    ... 	|
+| 494 	|             75.00 	|    78.50 	|          99.50 	|           35.0 	|  185.0 	|  11.380 	|   3.35 	|
+|  95 	|             76.00 	|    78.75 	|         101.75 	|           32.0 	|  207.0 	|  11.430 	|   3.17 	|
+| 122 	|             79.75 	|    84.25 	|         106.50 	|           30.5 	|  247.0 	|  12.740 	|   3.45 	|
+| 165 	|             75.25 	|    80.50 	|          98.00 	|           36.5 	|  212.0 	|  11.360 	|   3.37 	|
+|  23 	|             80.75 	|    85.00 	|         107.00 	|           35.0 	|  240.0 	|  11.980 	|   3.14 	|
 
  
- There are 231 rows in the X_test!
+ There are 156 rows in the X_test!
 
 
 ```python
@@ -312,22 +397,22 @@ y_train
 ```
 
 Output:
+|                                           	|     	|
+|-------------------------------------------	|-----	|
+| 13                                        	| Yes 	|
+| 61                                        	| Yes 	|
+| 453                                       	| No  	|
+| 39                                        	| Yes 	|
+| 373                                       	| No  	|
+| ...                                       	|     	|
+| 129                                       	| Yes 	|
+| 144                                       	| No  	|
+| 72                                        	| Yes 	|
+| 235                                       	| Yes 	|
+| 37                                        	| Yes 	|
+| Name: Drafted, Length: 361, dtype: object 	|     	|
 
-|     	|                 	|
-|-----	|-----------------	|
-| 89  	| tested_positive 	|
-| 468 	| tested_negative 	|
-| 551 	| tested_negative 	|
-| 148 	| tested_negative 	|
-| 482 	| tested_negative 	|
-| ... 	|                 	|
-| 646 	| tested_negative 	|
-| 716 	| tested_positive 	|
-| 73  	| tested_positive 	|
-| 236 	| tested_positive 	|
-| 38  	| tested_positive 	|
-
-There are 527 rows in  y_train.
+There are 361 rows in  y_train.
 
 
 
@@ -337,22 +422,22 @@ y_test
 
 Output:
 
-|     	|                 	|
-|-----	|-----------------	|
-| 286 	| tested_negative 	|
-| 102 	| tested_negative 	|
-| 582 	| tested_negative 	|
-| 353 	| tested_negative 	|
-| 727 	| tested_negative 	|
-| ... 	|                 	|
-| 242 	| tested_negative 	|
-| 600 	| tested_negative 	|
-| 651 	| tested_negative 	|
-| 12  	| tested_positive 	|
-| 215 	| tested_positive 	|
+|                                           	|     	|
+|-------------------------------------------	|-----	|
+| 270                                       	| No  	|
+| 90                                        	| Yes 	|
+| 133                                       	| Yes 	|
+| 221                                       	| Yes 	|
+| 224                                       	| Yes 	|
+| ...                                       	|     	|
+| 494                                       	| No  	|
+| 95                                        	| No  	|
+| 122                                       	| Yes 	|
+| 165                                       	| Yes 	|
+| 23                                        	| Yes 	|
+| Name: Drafted, Length: 156, dtype: object 	|     	|
 
-
-There are 231 rows in y_test.
+There are 156 rows in y_test.
 
 **Step 4**: Build the decision tree model and apply it to the test data
 ```python
@@ -374,7 +459,7 @@ print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 Output:
 
 ```python
-Accuracy: 0.6666666666666666
+Accuracy: 0.6794871794871795
 ```
 
 We can Visualize the Decision Tree using Scikit-learn's export_graphviz function:
@@ -384,7 +469,7 @@ from sklearn import tree
 import pydotplus 
 dot_data = tree.export_graphviz(clf, out_file=None) 
 graph = pydotplus.graph_from_dot_data(dot_data) 
-graph.write_pdf("diabetes.pdf") 
+graph.write_pdf("NBA_Draft_Prediction.pdf") 
 
 from IPython.display import Image
 Image(graph.create_png())
@@ -392,7 +477,7 @@ Image(graph.create_png())
 
 Output:
 
-![insert image](/images/big_data/predictive_modeling/diabetes_tree.png)
+![insert image](/images/big_data/predictive_modeling/NBA_tree.png)
 
 
 ### Model Evaluation
