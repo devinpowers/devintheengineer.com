@@ -212,7 +212,8 @@ data = p.read_csv('nba_draft_combine_all_years.csv', header = 0)
 data
 ```
 
-Output
+Output:
+
 |     	|                Player 	| Year 	| Drafted 	| Height (No Shoes) 	| Height (With Shoes) 	| Wingspan 	| Standing reach 	| Vertical (Max) 	| Vertical (Max Reach) 	| Vertical (No Step) 	| Vertical (No Step Reach) 	| Weight 	| Body Fat 	| Hand (Length) 	| Hand (Width) 	| Bench 	| Agility 	| Sprint 	|
 |----:	|----------------------:	|-----:	|--------:	|------------------:	|--------------------:	|---------:	|---------------:	|---------------:	|---------------------:	|-------------------:	|-------------------------:	|-------:	|---------:	|--------------:	|-------------:	|------:	|--------:	|-------:	|
 |   0 	|         Blake Griffin 	| 2009 	|     Yes 	|             80.50 	|               82.00 	|    83.25 	|          105.0 	|           35.5 	|                140.5 	|               32.0 	|                    137.0 	|  248.0 	|      8.2 	|           NaN 	|          NaN 	|  22.0 	|   10.95 	|   3.28 	|
@@ -258,6 +259,9 @@ Now lets check for missing values!!!
 ```python
 update_data.describe()
 ```
+
+Output:
+
 
 |       	| Height (No Shoes) 	|   Wingspan 	| Standing reach 	| Vertical (Max) 	|     Weight 	|    Agility 	|     Sprint 	|
 |------:	|------------------:	|-----------:	|---------------:	|---------------:	|-----------:	|-----------:	|-----------:	|
