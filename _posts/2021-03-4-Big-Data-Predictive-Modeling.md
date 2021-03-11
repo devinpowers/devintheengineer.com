@@ -487,8 +487,9 @@ Output:
 ## Model Evaluation
 
 
-- Alternative Measures of Classification
+- Accuracy
 
+**Alternative Measures for Classification**
 
 **F-Measure:** (or F-Score) is a measure of a test’s accuracy 
 
