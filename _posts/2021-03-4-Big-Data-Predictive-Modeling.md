@@ -491,7 +491,6 @@ Output:
 
 **Alternative Measures for Classification**
 
-**F-Measure:** (or F-Score) is a measure of a test’s accuracy 
 
 **Area under ROC Curve**
 
@@ -499,33 +498,38 @@ https://youtu.be/4jRBRDbJemM
 
 **ROC Curve**
 
-**Python Example**
+**Python Example Confusion Matrix**
 
 ```python
 from sklearn.metrics import confusion_matrix
 
-cm = confusion_matrix(Y_test, Y_pred, labels=['tested_negative','tested_positive'])
+cm = confusion_matrix(y_test, y_pred, labels=['No','Yes'])
 cm
 ```
 
 Output:
 
 ```python
-array([[284, 119],
-       [ 79, 133]])
+array([[11, 28],
+       [22, 95]])
 ```
+
+**Python Example F Score**
+
+**F-Measure:** (or F-Score) is a measure of a test’s accuracy 
+
 
 ```python
 from sklearn.metrics import f1_score
 
-f1 = f1_score(Y_test,Y_pred,labels=['tested_negative','tested_positive'],pos_label='tested_positive')
+f1 = f1_score(y_test, y_pred, labels=['No','Yes'], pos_label = "Yes")
 f1
 ```
 
 Output:
 
 ```python
-0.5732758620689655
+0.7916666666666667
 ```
 
 ```python
