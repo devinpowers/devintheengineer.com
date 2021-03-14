@@ -495,6 +495,9 @@ Output:
 
 ### ROC Curve
 
+**What is a ROC Curve?**
+An ROC curve (receiver operating characteristic curve) is a graph showing the performance of a classification model at all classification thresholds. The curve plots two parameters: True Positive Rate (TPR) and False Positive Rate (FPR).
+
 **Python Example Confusion Matrix Using the NBA Draft Prediction that we've been working with above!!**
 
 ```python
