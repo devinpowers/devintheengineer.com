@@ -493,13 +493,9 @@ Output:
 **Alternative Measures for Classification**
 
 
-**Area under ROC Curve**
+### ROC Curve
 
-https://youtu.be/4jRBRDbJemM
-
-**ROC Curve**
-
-**Python Example Confusion Matrix**
+**Python Example Confusion Matrix Using the NBA Draft Prediction that we've been working with above!!**
 
 ```python
 from sklearn.metrics import confusion_matrix
@@ -511,8 +507,8 @@ cm
 Output:
 
 ```python
-array([[11, 28],
-       [22, 95]])
+array([[13, 26],
+       [27, 90]])
 ```
 
 **Python Example F Score**
@@ -530,7 +526,7 @@ f1
 Output:
 
 ```python
-0.7916666666666667
+0.7725321888412018
 ```
 
 ```python
@@ -770,6 +766,8 @@ Output:
 
 You can see the plot above shows the training accuracy will continue to imporive as the "maximum depth" becomes more complex. However, the test accuracy initally improves up to a maximum depth of 5, before it sharply decreases due to model overfitting.
 
+
+
 ## Building Trees of Different Sizes
 
 
@@ -892,9 +890,10 @@ Model Overfitting and Underfitting
 
 **Defintions:**
 
-     * Underfitting: When the model is too simple
 
-     * Overfitting: When the model is too complex 
+* Underfitting: When the model is too simple
+
+* Overfitting: When the model is too complex 
 
 
 ### Mammal Classification Problem
@@ -929,20 +928,22 @@ Output:
 | 14 	|    salamander 	|     cold-blooded 	|       none 	|          no 	|             semi 	|              no 	|      yes 	|        yes 	|   amphibian 	|
 | 15 	|  gila monster 	|     cold-blooded 	|     scales 	|          no 	|               no 	|              no 	|      yes 	|        yes 	|         NaN 	|
 
-## Lessons on Overfitting
+
+- to be continued
 
 
 
-## Other Predictive Modeling Techniques
+
+## Other Predictive Modeling Techniques with Classification in Sklearn (L10)
 
 
 
 ## Nearest-Neighbor Methods
 
 
-    * Linear Method
-    * Nonlinear Method
-    * Ensemble Methods
+* Linear Method
+* Nonlinear Method
+* Ensemble Methods
 
 
 
