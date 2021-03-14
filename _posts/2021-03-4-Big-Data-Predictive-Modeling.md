@@ -860,13 +860,13 @@ Model Overfitting and Underfitting
 ### Mammal Classification Problem
 
 
-
 ```python
 import pandas as pd
 
 data = pd.read_csv('vertebrate.csv',header='infer')
 data
 ```
+
 
 Output:
 
