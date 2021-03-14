@@ -684,6 +684,8 @@ Output:
 
 
 
+
+
 # Model Selection and Overfitting
 
 Model Selection
@@ -727,8 +729,46 @@ plt.plot(x1,y1,'ro',x2,y2,'ro',x3,y3,'ro',x4,y4,'g+',ms=4)
 
 Output:
 
+
 ![insert image](/images/big_data/predictive_modeling/model_overfitting.png)
 
+
+```python
+from sklearn.model_selection import train_test_split
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.8, random_state=1)
+
+from sklearn import tree
+from sklearn.metrics import accuracy_score
+
+
+
+maxdepths = [2,3,4,5,6,7,8,9,10,15,20,25,30,35,40,45,50]
+
+trainAcc = np.zeros(len(maxdepths))
+testAcc = np.zeros(len(maxdepths))
+
+index = 0
+for depth in maxdepths:
+    clf = tree.DecisionTreeClassifier(max_depth=depth)
+    clf = clf.fit(X_train, Y_train)
+    Y_predTrain = clf.predict(X_train)
+    Y_predTest = clf.predict(X_test)
+    trainAcc[index] = accuracy_score(Y_train, Y_predTrain)
+    testAcc[index] = accuracy_score(Y_test, Y_predTest)
+    index += 1
+    
+plt.plot(maxdepths,trainAcc,'ro-',maxdepths,testAcc,'bv--')
+plt.legend(['Training Accuracy','Test Accuracy'])
+plt.xlabel('Max depth')
+plt.ylabel('Accuracy')
+
+```
+Output:
+
+![insert image](/images/big_data/predictive_modeling/pred_acc.png)
+
+
+You can see the plot above shows the training accuracy will continue to imporive as the "maximum depth" becomes more complex. However, the test accuracy initally improves up to a maximum depth of 5, before it sharply decreases due to model overfitting.
 
 ## Building Trees of Different Sizes
 
