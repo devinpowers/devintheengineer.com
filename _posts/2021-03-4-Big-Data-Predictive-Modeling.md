@@ -555,7 +555,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, auc
 %matplotlib inline
 
-true_labels = (Y_test == 'tested_positive');
+true_labels = (Y_test == 'Yes');
 
 fpr, tpr, thresholds = roc_curve(true_labels, Y_prob[:,1])
 roc_auc = auc(fpr, tpr)
@@ -570,7 +570,7 @@ Output:
 
 **Holdout Method**
 
-
+- add later
 
 **5-Fold Cross Validation Method**
 ```python
@@ -685,8 +685,7 @@ Output:
 
 
 
-# Model Selection and Overfitting
-
+# Model Selection and Overfitting (More on Predictive Modeling)
 Model Selection
 
 
@@ -899,40 +898,19 @@ Model Overfitting and Underfitting
 * Overfitting: When the model is too complex 
 
 
-### Mammal Classification Problem
+### Model Selection Using Validation Set
+
+- A *general* model selection approach that does not depend on the predicitive modeling technique used
+
+- It divides the training data into two parts:
+    - Training Set: for model building
+    - Validation set: for estimating generalization error
 
 
-```python
-import pandas as pd
+A drawback is that less data would be available for training
 
-data = pd.read_csv('vertebrate.csv',header='infer')
-data
-```
+Lets do an example of Model Selection Using Validation Set!
 
-
-Output:
-
-|    	|          Name 	| Body Temperature 	| Skin Cover 	| Gives Birth 	| Aquatic Creature 	| Aerial Creature 	| Has Legs 	| Hibernates 	| Class Label 	|
-|---:	|--------------:	|-----------------:	|-----------:	|------------:	|-----------------:	|----------------:	|---------:	|-----------:	|------------:	|
-|  0 	|         human 	|     warm-blooded 	|       hair 	|         yes 	|               no 	|              no 	|      yes 	|         no 	|      mammal 	|
-|  1 	|        python 	|     cold-blooded 	|     scales 	|          no 	|               no 	|              no 	|       no 	|        yes 	|     reptile 	|
-|  2 	|        salmon 	|     cold-blooded 	|     scales 	|          no 	|              yes 	|              no 	|       no 	|         no 	|        fish 	|
-|  3 	|         whale 	|     warm-blooded 	|       hair 	|         yes 	|              yes 	|              no 	|       no 	|         no 	|      mammal 	|
-|  4 	|          frog 	|     cold-blooded 	|       none 	|          no 	|             semi 	|              no 	|      yes 	|        yes 	|   amphibian 	|
-|  5 	| komodo dragon 	|     cold-blooded 	|     scales 	|          no 	|               no 	|              no 	|      yes 	|         no 	|     reptile 	|
-|  6 	|           bat 	|     warm-blooded 	|       hair 	|         yes 	|               no 	|             yes 	|      yes 	|        yes 	|      mammal 	|
-|  7 	|        pigeon 	|     warm-blooded 	|   feathers 	|          no 	|               no 	|             yes 	|      yes 	|         no 	|        bird 	|
-|  8 	|           cat 	|     warm-blooded 	|        fur 	|         yes 	|               no 	|              no 	|      yes 	|         no 	|      mammal 	|
-|  9 	| leopard shark 	|     cold-blooded 	|     scales 	|         yes 	|              yes 	|              no 	|       no 	|         no 	|        fish 	|
-| 10 	|        turtle 	|     cold-blooded 	|     scales 	|          no 	|             semi 	|              no 	|      yes 	|         no 	|     reptile 	|
-| 11 	|       penguin 	|     warm-blooded 	|   feathers 	|          no 	|             semi 	|              no 	|      yes 	|         no 	|        bird 	|
-| 12 	|     porcupine 	|     warm-blooded 	|     quills 	|         yes 	|               no 	|              no 	|      yes 	|        yes 	|      mammal 	|
-| 13 	|           eel 	|     cold-blooded 	|     scales 	|          no 	|              yes 	|              no 	|       no 	|         no 	|        fish 	|
-| 14 	|    salamander 	|     cold-blooded 	|       none 	|          no 	|             semi 	|              no 	|      yes 	|        yes 	|   amphibian 	|
-| 15 	|  gila monster 	|     cold-blooded 	|     scales 	|          no 	|               no 	|              no 	|      yes 	|        yes 	|         NaN 	|
-
-
-- to be continued
 
 
 
@@ -942,6 +920,12 @@ Output:
 
 
 ## Nearest-Neighbor Methods
+
+**What is Nearest-Neighbors?**
+
+- One of the simple/basic classification algorithms in Machine Learning.
+- Supervised Learning
+- Most People use **K Nearest Neighbors**
 
 
 * Linear Method
