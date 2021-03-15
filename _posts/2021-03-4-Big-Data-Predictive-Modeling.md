@@ -933,6 +933,24 @@ Lets do an example of Model Selection Using Validation Set!
 * Ensemble Methods
 
 
+## K Nearest Neighbors
+
+[Insert Linked to Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/)
+
+```python
+import numpy as np
+from sklearn import preprocessing, neighbors
+from sklearn.model_selection import cross_validate
+
+import pandas as pd
+
+df = pd.read_csv('breast-cancer-wisconsin.data')
+df.replace('?',-99999, inplace=True)
+## Drop ID, completly useless
+df.drop(['id'], 1, inplace=True)
+
+```
+
 
 
 ## Other Issues in Classification
