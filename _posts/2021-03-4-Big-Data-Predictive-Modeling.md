@@ -935,7 +935,10 @@ Lets do an example of Model Selection Using Validation Set!
 
 ## K Nearest Neighbors
 
-[Insert Linked to Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/)
+
+[K Nearest Neighbors in Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)
+
+[Linked to Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/)
 
 
 - First opened the .data file and added a "header row" with the columns:
