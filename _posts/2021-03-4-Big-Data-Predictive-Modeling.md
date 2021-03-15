@@ -937,6 +937,11 @@ Lets do an example of Model Selection Using Validation Set!
 
 [Insert Linked to Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/)
 
+
+- First opened the .data file and added a "header row" with the columns:
+
+id,clump_thickness,unif_cell_size,unif_cell_shape,marg_adhesion,single_epith_cell_size,bare_nuclei,bland_chrom,norm_nucleoli,mitoses,class
+
 ```python
 import numpy as np
 from sklearn import preprocessing, neighbors
@@ -945,10 +950,65 @@ from sklearn.model_selection import cross_validate
 import pandas as pd
 
 df = pd.read_csv('breast-cancer-wisconsin.data')
+# Replace missing data!
 df.replace('?',-99999, inplace=True)
 ## Drop ID, completly useless
 df.drop(['id'], 1, inplace=True)
 
+df
+```
+
+Output:
+
+|     	| clump_thickness 	| uniform_cell_size 	| uniform_cell_shape 	| marginal_adhesion 	| single_epi_cell_size 	| bare_nuclei 	| bland_chromation 	| normal_nucleoli 	| mitoses 	| class 	|
+|----:	|----------------:	|------------------:	|-------------------:	|------------------:	|---------------------:	|------------:	|-----------------:	|----------------:	|--------:	|------:	|
+|   0 	|               5 	|                 1 	|                  1 	|                 1 	|                    2 	|           1 	|                3 	|               1 	|       1 	|     2 	|
+|   1 	|               5 	|                 4 	|                  4 	|                 5 	|                    7 	|          10 	|                3 	|               2 	|       1 	|     2 	|
+|   2 	|               3 	|                 1 	|                  1 	|                 1 	|                    2 	|           2 	|                3 	|               1 	|       1 	|     2 	|
+|   3 	|               6 	|                 8 	|                  8 	|                 1 	|                    3 	|           4 	|                3 	|               7 	|       1 	|     2 	|
+|   4 	|               4 	|                 1 	|                  1 	|                 3 	|                    2 	|           1 	|                3 	|               1 	|       1 	|     2 	|
+| ... 	|             ... 	|               ... 	|                ... 	|               ... 	|                  ... 	|         ... 	|              ... 	|             ... 	|     ... 	|   ... 	|
+| 694 	|               3 	|                 1 	|                  1 	|                 1 	|                    3 	|           2 	|                1 	|               1 	|       1 	|     2 	|
+| 695 	|               2 	|                 1 	|                  1 	|                 1 	|                    2 	|           1 	|                1 	|               1 	|       1 	|     2 	|
+| 696 	|               5 	|                10 	|                 10 	|                 3 	|                    7 	|           3 	|                8 	|              10 	|       2 	|     4 	|
+| 697 	|               4 	|                 8 	|                  6 	|                 4 	|                    3 	|           4 	|               10 	|               6 	|       1 	|     4 	|
+| 698 	|               4 	|                 8 	|                  8 	|                 5 	|                    4 	|           5 	|                  	|                 	|         	|       	|
+
+
+
+
+```python
+X = np.array(df.drop(['class'],1))
+y = np.array(df['class'])
+
+X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = 0.2)
+
+clf = neighbors.KNeighborsClassifier()
+clf.fit(X_train, y_train)
+
+accuracy = clf.score(X_test, y_test)
+accuracy
+```
+
+Output:
+
+```python
+0.9785714285714285
+```
+
+Lets add 
+
+```python
+example_measures = np.array([4,2,1,1,1,2,3,2,1])
+example_measures = example_measures.reshape(1, -1)
+prediction = clf.predict(example_measures)
+
+```
+
+Output:
+
+```python
+array([2])
 ```
 
 
