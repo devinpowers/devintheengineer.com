@@ -935,6 +935,10 @@ Lets do an example of Model Selection Using Validation Set!
 
 ## K Nearest Neighbors
 
+- Common algorithm used to solve classification model problems
+
+![insert image](/images/big_data/predictive_modeling/knn.jpg)
+
 
 [K Nearest Neighbors in Sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html)
 
@@ -1016,5 +1020,32 @@ array([2])
 
 
 
-## Other Issues in Classification
+### Ensemble Methods
+
+- Ensemble Methods is taking the orginal training data
+
+1. Creating Multiple Data Sets
+2. Build Multiple Base Classifiers
+3. Combine the Base Classifiers
+
+
+**Why use Ensemble models?**
+
+- Better accuracy
+- Higher Consistency
+- Reduces bias and variance errors
+
+
+**When and Where to use Ensemble Models?**
+
+- When single model overfits (decision trees usually overfit)
+
+**What are the different Ensemble Methods?**
+
+* **Bagging**: Build multiple classifiers by resampling the data with replacement
+* **Boosting**: Build multiple classifiers by resampling the (weighted) data with replacement
+* **Random Forests**: Train multiple decision tree classifiers and combine their prediction
+
+
+Python Example
 
