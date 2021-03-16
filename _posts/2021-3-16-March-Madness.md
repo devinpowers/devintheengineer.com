@@ -273,3 +273,94 @@ Output:
 ### Now that we have our **Model** we can import a file from 2018 and use that as a test to see how accurate our model is!!
 
 
+Lets start again by importing data from 2018 College Basketball Season
+
+```python
+test_data_2018 = pd.read_csv("cbb18.csv")
+```
+
+Then lets *clean* the data like we did above
+
+
+```python
+# Lets Drop the teams that didn't make the tournment in 2018 and who ever didnt get into the round of 64
+
+test_data_2018 = test_data_2018.dropna()
+
+test_data_2018 = test_data_2018[test_data_2018["POSTSEASON"] != 'R68']
+ 
+## Lets replace the POSTSEASON with the number of wins
+
+test_data_2018 = test_data_2018.replace({
+    
+    'Champions': 6,
+    '2ND': 5,
+    'F4': 4,
+    'E8': 3,
+    'S16': 2,
+    'R32': 1,
+    'R64': 0
+})
+
+# Lets grab the teams that made the Tournment
+team_names = test_data_2018.get("TEAM")
+
+labels = test_data_2018.get("POSTSEASON")
+# Lets drop the Columns like we did above to the dataset
+test_data_2018 = test_data_2018.drop(columns = ["POSTSEASON","TEAM","CONF","G","W"])
+
+
+# Lets finally standardize the data! 
+
+test_data_2018 = (test_data_2018 - test_data_2018.mean())/test_data_2018.std()
+
+
+test_data_2018
+```
+
+Output:
+
+|     	|     ADJOE 	|     ADJDE 	|   BARTHAG 	|     EFG_O 	|     EFG_D 	|       TOR 	|      TORD 	|       ORB 	|       DRB 	|       FTR 	|      FTRD 	|      2P_O 	|      2P_D 	|      3P_O 	|      3P_D 	|     ADJ_T 	|       WAB 	|      SEED 	|
+|----:	|----------:	|----------:	|----------:	|----------:	|----------:	|----------:	|----------:	|----------:	|----------:	|----------:	|----------:	|----------:	|----------:	|----------:	|----------:	|----------:	|----------:	|----------:	|
+|   0 	|  2.579463 	| -0.761656 	|  1.152933 	|  2.430809 	| -0.082145 	| -1.263596 	| -0.245655 	| -0.109757 	| -0.212295 	| -1.025966 	| -0.965148 	|  2.222601 	|  0.568321 	|  1.587796 	| -1.074600 	|  0.020946 	|  2.092867 	| -1.614218 	|
+|   1 	|  0.337820 	| -2.427031 	|  1.075074 	| -0.241975 	| -2.107888 	| -1.860864 	|  1.002849 	| -0.726767 	| -0.744418 	| -2.031728 	| -1.054851 	| -0.786654 	| -1.735150 	|  0.795617 	| -1.437116 	| -3.106958 	|  2.253664 	| -1.614218 	|
+|   2 	|  1.588592 	| -1.031717 	|  1.061294 	|  1.015805 	| -1.095017 	|  0.229575 	| -0.661823 	|  2.073512 	|  0.816476 	|  0.041372 	| -1.754534 	|  1.208245 	| -0.769178 	|  0.311508 	| -0.919236 	|  0.467789 	|  1.174030 	| -1.398989 	|
+|   3 	|  1.734786 	| -0.401575 	|  0.986881 	|  1.723307 	| -0.805625 	| -0.785781 	| -0.476859 	| -0.489456 	|  0.106979 	|  0.246630 	| -1.413662 	|  0.565820 	| -0.732025 	|  2.423986 	| -0.297781 	| -0.288407 	|  1.403739 	| -1.398989 	|
+|   4 	| -0.149494 	| -2.201980 	|  0.940717 	| -0.831560 	| -2.590208 	| -0.069059 	|  1.326536 	|  2.002318 	|  0.177929 	|  0.328733 	| -0.947207 	| -0.752842 	| -2.255288 	| -0.524681 	| -1.488904 	| -1.147722 	|  1.013233 	| -1.398989 	|
+| ... 	|       ... 	|       ... 	|       ... 	|       ... 	|       ... 	|       ... 	|       ... 	|       ... 	|       ... 	|       ... 	|       ... 	|       ... 	|       ... 	|       ... 	|       ... 	|       ... 	|       ... 	|       ... 	|
+| 153 	| -0.604320 	|  2.276528 	| -1.873209 	|  0.229692 	|  1.847134 	| -0.666328 	|  0.031791 	| -1.320047 	|  1.100275 	| -0.861760 	| -0.624276 	| -0.313288 	|  1.571445 	|  0.795617 	|  1.048706 	|  0.674025 	| -2.018929 	|  1.398989 	|
+| 163 	| -1.692654 	|  1.061254 	| -2.128143 	| -0.438504 	|  1.413046 	|  0.050395 	|  0.910368 	| -0.987810 	|  0.213403 	| -0.861760 	| -0.229583 	| -1.462891 	|  1.311376 	|  0.751607 	|  0.634402 	| -0.082172 	| -1.467627 	|  1.614218 	|
+| 171 	| -1.773873 	|  1.128770 	| -2.268013 	| -0.674338 	| -0.226841 	|  2.140834 	| -0.245655 	| -0.964079 	|  0.426253 	|  2.299204 	|  0.559802 	| -0.144229 	| -0.917789 	| -1.184830 	|  1.359434 	|  0.399044 	| -1.605453 	|  1.398989 	|
+| 182 	| -1.822604 	|  1.196285 	| -2.406504 	| -1.578368 	|  0.689567 	|  0.946297 	|  0.679163 	|  0.459792 	|  0.106979 	| -0.656503 	| -0.068118 	| -1.801009 	|  0.531168 	| -0.656711 	|  0.427251 	| -1.835173 	| -1.835162 	|  1.614218 	|
+| 258 	| -1.367778 	|  3.356771 	| -3.528905 	| -1.106700 	|  1.220118 	|  0.050395 	| -1.170473 	| -0.370800 	|  1.703347 	|  1.745009 	| -0.157821 	| -1.327643 	|  0.716932 	| -0.260621 	|  1.463010 	|  1.052123 	| -2.845883 	|  1.614218 	|
+
+64 rows × 18 columns
+
+
+Now that we have everything formated, we can test our data on the train model that we build to test for accuracy!
+
+```python
+outcomes = randTree.predict(test_data_2018)
+```
+
+Lets look at the MSE and r^2
+
+```python
+from sklearn.metrics import mean_squared_error, r2_score
+```
+
+```python
+#from sci learn metrics
+print('Mean squared error: %.2f'
+      %mean_squared_error(labels, outcomes)) 
+# The coefficient of determination: 1 is perfect prediction
+print('Coefficient of determination: %.2f'
+      % r2_score(labels, outcomes))
+
+```
+
+Output:
+
+**Mean squared error: 1.13**
+**Coefficient of determination: 0.37**
+
