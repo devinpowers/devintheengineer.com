@@ -915,7 +915,7 @@ Model Overfitting and Underfitting
     - Validation set: for estimating generalization error
 
 
-A drawback is that less data would be available for training
+A drawback is that **less data** would be available for training
 
 Lets do an example of Model Selection Using Validation Set!
 
