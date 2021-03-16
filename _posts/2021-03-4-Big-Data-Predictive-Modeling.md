@@ -814,10 +814,9 @@ Output:
 [0.8888888888888888, 0.6959349593495935]
 ```
 
-Accuracy Training = 88.88%
+What do these numbers tell us? 
 
-Accuracy Test = 69.59%
-
+- With a tree of depth 4, our training accuracy was 88.88% which is pretty solid. Once we tested our model on our test data, the accuracy was 69.59% which is also solid.
 
 **Lets Plot the Tree with Depth = 4**
 
@@ -835,7 +834,10 @@ Output:
 ![insert image](/images/big_data/predictive_modeling/tree_4.png)
 
 
+
 **Lets plot a Tree with MaxDepth = 20**
+
+A tree with a MaxDepth of 20 should be very acccurate for the **training data set**. But how about when we test our model on the test data??
 
 
 ```python
@@ -859,6 +861,12 @@ Output:
 Accuracy Training = 100%
 
 Accuracy Test = 64.07%
+
+
+As you can see our training data was 100% accurate, but it was so **overfitted** aka too complex, that the test data accuracy was lower than the tree with a max depth of 4!
+
+- The model may fit exceptional cases (rather than normal) in the training data!!
+
 
 **Lets Plot the Tree with Depth = 20**
 
