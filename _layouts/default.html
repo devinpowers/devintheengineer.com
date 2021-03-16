@@ -11,8 +11,8 @@
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
     {% include head.html %}
-    {% include head/custom.html %}
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    include head/custom.html
+    {% <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> %}
   </head>
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
