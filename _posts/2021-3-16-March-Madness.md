@@ -11,6 +11,9 @@ header:
 
 Lets predict who will win in the tournament....
 
+![insert image](/images/big_data/march/bracket.jpg)
+
+
 
 ![insert image](/images/big_data/msu.jpg)
 
