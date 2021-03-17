@@ -66,8 +66,8 @@ Output:
 
 
 
-Lets drop all the teams that didn't make the tournement.
-In the POSTSEASON Column teams that didnt make the tournemnt are left with a ??? marks so we can use dropna() to remove those rows.
+Lets **drop all the teams that didn't make the tournement.**
+In the **Postseason** Column teams that didnt make the tournemnt are read as a ??? marks (meaning missing) in the csv so we can use **dropna()** to remove those empty/missing rows.
 
 ```python
 data = data.dropna()
@@ -98,7 +98,7 @@ Output:
 | 1755 	|        Gonzaga 	|  WCC 	|  35 	|  27 	| 117.4 	|  94.5 	|  0.9238 	|  55.2 	|  44.8 	| 17.1 	| 28.1 	| 54.3 	| 44.4 	| 37.8 	| 30.3 	|  68.2 	|  2.1 	|        S16 	| 11.0 	| 2016 	|
 | 1756 	|        Gonzaga 	|  WCC 	|  37 	|  32 	| 117.2 	|  94.9 	|  0.9192 	|  57.0 	|  47.1 	| 16.1 	| 29.1 	| 58.2 	| 44.1 	| 36.8 	| 35.0 	|  70.5 	|  4.9 	|        S16 	|  4.0 	| 2018 	|
 
-320 rows × 24 columns
+448 rows × 24 columns
 
 
 
@@ -116,6 +116,8 @@ From the CSV file rows in the Column **POSTSEASON**
 - R64 =  0 Round of 64 the first round
 
 We can use .replace() and a dictionary to *map/update* the values to reflect the number of games won in each row!!
+
+This will be our **Predictor** (y)
 
 
 ```python
@@ -135,49 +137,52 @@ data
 
 Output:
 
-|      	|           TEAM 	| CONF 	|   G 	|   W 	| ADJOE 	| ADJDE 	| BARTHAG 	| EFG_O 	| EFG_D 	|  TOR 	| FTRD 	| 2P_O 	| 2P_D 	| 3P_O 	| 3P_D 	| ADJ_T 	|  WAB 	| POSTSEASON 	| SEED 	| YEAR 	|
-|-----:	|---------------:	|-----:	|----:	|----:	|------:	|------:	|--------:	|------:	|------:	|-----:	|-----:	|-----:	|-----:	|-----:	|-----:	|------:	|-----:	|-----------:	|-----:	|-----:	|
-|    0 	| North Carolina 	|  ACC 	|  40 	|  33 	| 123.3 	|  94.9 	|  0.9531 	|  52.6 	|  48.1 	| 15.4 	| 30.4 	| 53.9 	| 44.6 	| 32.7 	| 36.2 	|  71.7 	|  8.6 	|          5 	|  1.0 	| 2016 	|
-|    1 	|      Wisconsin 	|  B10 	|  40 	|  36 	| 129.1 	|  93.6 	|  0.9758 	|  54.8 	|  47.7 	| 12.4 	| 22.4 	| 54.8 	| 44.7 	| 36.5 	| 37.5 	|  59.3 	| 11.3 	|          5 	|  1.0 	| 2015 	|
-|    2 	|       Michigan 	|  B10 	|  40 	|  33 	| 114.4 	|  90.4 	|  0.9375 	|  53.9 	|  47.7 	| 14.0 	| 30.0 	| 54.7 	| 46.8 	| 35.2 	| 33.2 	|  65.9 	|  6.9 	|          5 	|  3.0 	| 2018 	|
-|    3 	|     Texas Tech 	|  B12 	|  38 	|  31 	| 115.2 	|  85.2 	|  0.9696 	|  53.5 	|  43.0 	| 17.7 	| 36.6 	| 52.8 	| 41.9 	| 36.5 	| 29.7 	|  67.5 	|  7.0 	|          5 	|  3.0 	| 2019 	|
-|    4 	|        Gonzaga 	|  WCC 	|  39 	|  37 	| 117.8 	|  86.3 	|  0.9728 	|  56.6 	|  41.1 	| 16.2 	| 26.9 	| 56.3 	| 40.0 	| 38.2 	| 29.0 	|  71.5 	|  7.7 	|          5 	|  1.0 	| 2017 	|
-|  ... 	|            ... 	|  ... 	| ... 	| ... 	|   ... 	|   ... 	|     ... 	|   ... 	|   ... 	|  ... 	|  ... 	|  ... 	|  ... 	|  ... 	|  ... 	|   ... 	|  ... 	|        ... 	|  ... 	|  ... 	|
-| 1752 	|      Texas A&M 	|  SEC 	|  35 	|  22 	| 111.2 	|  94.7 	|  0.8640 	|  51.4 	|  46.9 	| 19.2 	| 27.6 	| 52.5 	| 45.7 	| 32.9 	| 32.6 	|  70.3 	|  1.9 	|          2 	|  7.0 	| 2018 	|
-| 1753 	|            LSU 	|  SEC 	|  35 	|  28 	| 117.9 	|  96.6 	|  0.9081 	|  51.2 	|  49.9 	| 17.9 	| 33.1 	| 52.9 	| 49.4 	| 31.9 	| 33.7 	|  71.2 	|  7.3 	|          2 	|  3.0 	| 2019 	|
-| 1754 	|      Tennessee 	|  SEC 	|  36 	|  31 	| 122.8 	|  95.2 	|  0.9488 	|  55.3 	|  48.1 	| 15.8 	| 34.9 	| 55.4 	| 44.7 	| 36.7 	| 35.4 	|  68.8 	|  9.9 	|          2 	|  2.0 	| 2019 	|
-| 1755 	|        Gonzaga 	|  WCC 	|  35 	|  27 	| 117.4 	|  94.5 	|  0.9238 	|  55.2 	|  44.8 	| 17.1 	| 28.1 	| 54.3 	| 44.4 	| 37.8 	| 30.3 	|  68.2 	|  2.1 	|          2 	| 11.0 	| 2016 	|
-| 1756 	|        Gonzaga 	|  WCC 	|  37 	|  32 	| 117.2 	|  94.9 	|  0.9192 	|  57.0 	|  47.1 	| 16.1 	| 29.1 	| 58.2 	| 44.1 	| 36.8 	| 35.0 	|  70.5 	|  4.9 	|          2 	|  4.0 	| 2018 	|
-
-320 rows × 24 columns
+|      	|               Team 	| Conference 	| Games Played 	| Games Wons 	| Adjusted Offensive Efficiency 	| Adjusted Defensive Efficiency 	| Power Ranking 	| Effective Field Goal % 	| Effective Field Goal % (D) 	| Turnover % 	| ... 	| Free Throw Rate (D) 	| 2-PT% 	| 2-PT% (D) 	| 3-PT% 	| 3-PT (D) 	| Adjusted Tempo 	| Wins above Bubble 	| Postseason 	| Seed in Tournament 	| Year 	|
+|-----:	|-------------------:	|-----------:	|-------------:	|-----------:	|------------------------------:	|------------------------------:	|--------------:	|-----------------------:	|---------------------------:	|-----------:	|----:	|--------------------:	|------:	|----------:	|------:	|---------:	|---------------:	|------------------:	|-----------:	|-------------------:	|-----:	|
+|    0 	|     North Carolina 	|        ACC 	|           40 	|         33 	|                         123.3 	|                          94.9 	|        0.9531 	|                   52.6 	|                       48.1 	|       15.4 	| ... 	|                30.4 	|  53.9 	|      44.6 	|  32.7 	|     36.2 	|           71.7 	|               8.6 	|          5 	|                1.0 	| 2016 	|
+|    1 	|          Wisconsin 	|        B10 	|           40 	|         36 	|                         129.1 	|                          93.6 	|        0.9758 	|                   54.8 	|                       47.7 	|       12.4 	| ... 	|                22.4 	|  54.8 	|      44.7 	|  36.5 	|     37.5 	|           59.3 	|              11.3 	|          5 	|                1.0 	| 2015 	|
+|    2 	|           Michigan 	|        B10 	|           40 	|         33 	|                         114.4 	|                          90.4 	|        0.9375 	|                   53.9 	|                       47.7 	|       14.0 	| ... 	|                30.0 	|  54.7 	|      46.8 	|  35.2 	|     33.2 	|           65.9 	|               6.9 	|          5 	|                3.0 	| 2018 	|
+|    3 	|         Texas Tech 	|        B12 	|           38 	|         31 	|                         115.2 	|                          85.2 	|        0.9696 	|                   53.5 	|                       43.0 	|       17.7 	| ... 	|                36.6 	|  52.8 	|      41.9 	|  36.5 	|     29.7 	|           67.5 	|               7.0 	|          5 	|                3.0 	| 2019 	|
+|    4 	|            Gonzaga 	|        WCC 	|           39 	|         37 	|                         117.8 	|                          86.3 	|        0.9728 	|                   56.6 	|                       41.1 	|       16.2 	| ... 	|                26.9 	|  56.3 	|      40.0 	|  38.2 	|     29.0 	|           71.5 	|               7.7 	|          5 	|                1.0 	| 2017 	|
+|  ... 	|                ... 	|        ... 	|          ... 	|        ... 	|                           ... 	|                           ... 	|           ... 	|                    ... 	|                        ... 	|        ... 	| ... 	|                 ... 	|   ... 	|       ... 	|   ... 	|      ... 	|            ... 	|               ... 	|        ... 	|                ... 	|  ... 	|
+| 2450 	|       Michigan St. 	|        B10 	|           35 	|         26 	|                         111.4 	|                          87.8 	|        0.9392 	|                   50.6 	|                       44.5 	|       20.8 	| ... 	|                32.4 	|  50.4 	|      44.3 	|  34.1 	|     30.1 	|           64.4 	|               6.7 	|          2 	|                3.0 	| 2013 	|
+| 2451 	|            Arizona 	|        P12 	|           35 	|         27 	|                         114.4 	|                          92.2 	|        0.9229 	|                   52.5 	|                       46.6 	|       19.5 	| ... 	|                32.9 	|  50.6 	|      43.4 	|  37.1 	|     35.8 	|           66.8 	|               4.6 	|          2 	|                6.0 	| 2013 	|
+| 2452 	|             Oregon 	|        P12 	|           37 	|         28 	|                         104.8 	|                          88.6 	|        0.8728 	|                   49.3 	|                       46.4 	|       21.4 	| ... 	|                33.3 	|  49.1 	|      44.9 	|  33.3 	|     33.4 	|           69.2 	|               2.9 	|          2 	|               12.0 	| 2013 	|
+| 2453 	|           La Salle 	|        A10 	|           34 	|         24 	|                         112.0 	|                          96.2 	|        0.8516 	|                   51.9 	|                       49.3 	|       17.1 	| ... 	|                28.5 	|  49.3 	|      50.6 	|  37.7 	|     30.2 	|           66.0 	|               0.3 	|          2 	|               13.0 	| 2013 	|
+| 2454 	| Florida Gulf Coast 	|       ASun 	|           35 	|         24 	|                         103.4 	|                          96.3 	|        0.6952 	|                   51.6 	|                       46.9 	|       21.0 	| ... 	|                32.7 	|  52.3 	|      46.9 	|  33.4 	|     31.3 	|           69.1 	|              -4.0 	|          2 	|               15.0 	| 2013 	|
 
 
+448 rows × 24 columns
 
-Sweet, now lets save that column as our predictor
+
+
+Sweet, now lets save that column as our **Predictor (y)**
 ```python
-y = data["POSTSEASON"]
+y = data["Postseason"]
 y
 ```
 
 Output:
 
-```python
-0       5
-1       5
-2       5
-3       5
-4       5
-       ..
-1752    2
-1753    2
-1754    2
-1755    2
-1756    2
-Name: POSTSEASON, Length: 320, dtype: int64
-```
+| Index                                       	| Postseason (Number of Wins) 	|
+|---------------------------------------------	|-----------------------------	|
+| 0                                           	| 5                           	|
+| 1                                           	| 5                           	|
+| 2                                           	| 5                           	|
+| 3                                           	| 5                           	|
+| 4                                           	| 5                           	|
+| ..                                          	|                             	|
+| 2450                                        	| 2                           	|
+| 2451                                        	| 2                           	|
+| 2452                                        	| 2                           	|
+| 2453                                        	| 2                           	|
+| 2454                                        	| 2                           	|
+| Name: Postseason, Length: 448, dtype: int64 	|                             	|
 
 
-Now the question is... What columns should we keep and what columns should we remove??
+
+
+#### Now the question is... What columns should we keep and what columns should we remove??
 
 - The number of games won in the regular reason will be different during our 2020-21 season since some teams werent able to play everyone, so I dont care about Games Played (record) and number of wins.
 
