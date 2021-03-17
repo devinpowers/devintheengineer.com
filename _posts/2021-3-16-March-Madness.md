@@ -35,7 +35,16 @@ Lets open the data set
 
 
 ```python
-data = pd.read_csv('cbb.csv',header="infer")
+
+column_names = ["Team", "Conference", "Games Played","Games Wons",
+          "Adjusted Offensive Efficiency", "Adjusted Defensive Efficiency",
+          "Power Ranking", "Effective Field Goal %","Effective Field Goal % (D)",
+          "Turnover %", "Turnover % (D)", "Offensive Rebounds", "Defensive Rebounds",
+          "Free Throw Rate", "Free Throw Rate (D)", "2-PT%", "2-PT% (D)",
+          "3-PT%", "3-PT (D)", "Adjusted Tempo", "Wins above Bubble", "Postseason","Seed in Tournament", "Year"]
+
+data = pd.read_csv("cbb.csv", header = None, names = column_names, skiprows = 1)
+data
 ```
 
 ```python
@@ -45,13 +54,13 @@ data.head()
 Output:
 
 
-|   	|           TEAM 	| CONF 	|  G 	|  W 	| ADJOE 	| ADJDE 	| BARTHAG 	| EFG_O 	| EFG_D 	|  TOR 	| FTRD 	| 2P_O 	| 2P_D 	| 3P_O 	| 3P_D 	| ADJ_T 	|  WAB 	| POSTSEASON 	| SEED 	| YEAR 	|
-|--:	|---------------:	|-----:	|---:	|---:	|------:	|------:	|--------:	|------:	|------:	|-----:	|-----:	|-----:	|-----:	|-----:	|-----:	|------:	|-----:	|-----------:	|-----:	|-----:	|
-| 0 	| North Carolina 	|  ACC 	| 40 	| 33 	| 123.3 	|  94.9 	|  0.9531 	|  52.6 	|  48.1 	| 15.4 	| 30.4 	| 53.9 	| 44.6 	| 32.7 	| 36.2 	|  71.7 	|  8.6 	|        2ND 	|  1.0 	| 2016 	|
-| 1 	|      Wisconsin 	|  B10 	| 40 	| 36 	| 129.1 	|  93.6 	|  0.9758 	|  54.8 	|  47.7 	| 12.4 	| 22.4 	| 54.8 	| 44.7 	| 36.5 	| 37.5 	|  59.3 	| 11.3 	|        2ND 	|  1.0 	| 2015 	|
-| 2 	|       Michigan 	|  B10 	| 40 	| 33 	| 114.4 	|  90.4 	|  0.9375 	|  53.9 	|  47.7 	| 14.0 	| 30.0 	| 54.7 	| 46.8 	| 35.2 	| 33.2 	|  65.9 	|  6.9 	|        2ND 	|  3.0 	| 2018 	|
-| 3 	|     Texas Tech 	|  B12 	| 38 	| 31 	| 115.2 	|  85.2 	|  0.9696 	|  53.5 	|  43.0 	| 17.7 	| 36.6 	| 52.8 	| 41.9 	| 36.5 	| 29.7 	|  67.5 	|  7.0 	|        2ND 	|  3.0 	| 2019 	|
-| 4 	|        Gonzaga 	|  WCC 	| 39 	| 37 	| 117.8 	|  86.3 	|  0.9728 	|  56.6 	|  41.1 	| 16.2 	| 26.9 	| 56.3 	| 40.0 	| 38.2 	| 29.0 	|  71.5 	|  7.7 	|        2ND 	|  1.0 	| 2017 	|
+|   	|           Team 	| Conference 	| Games Played 	| Games Wons 	| Adjusted Offensive Efficiency 	| Adjusted Defensive Efficiency 	| Power Ranking 	| Effective Field Goal % 	| Effective Field Goal % (D) 	| Turnover % 	| ... 	| Free Throw Rate (D) 	| 2-PT% 	| 2-PT% (D) 	| 3-PT% 	| 3-PT (D) 	| Adjusted Tempo 	| Wins above Bubble 	| Postseason 	| Seed in Tournament 	| Year 	|
+|--:	|---------------:	|-----------:	|-------------:	|-----------:	|------------------------------:	|------------------------------:	|--------------:	|-----------------------:	|---------------------------:	|-----------:	|----:	|--------------------:	|------:	|----------:	|------:	|---------:	|---------------:	|------------------:	|-----------:	|-------------------:	|-----:	|
+| 0 	| North Carolina 	|        ACC 	|           40 	|         33 	|                         123.3 	|                          94.9 	|        0.9531 	|                   52.6 	|                       48.1 	|       15.4 	| ... 	|                30.4 	|  53.9 	|      44.6 	|  32.7 	|     36.2 	|           71.7 	|               8.6 	|        2ND 	|                1.0 	| 2016 	|
+| 1 	|      Wisconsin 	|        B10 	|           40 	|         36 	|                         129.1 	|                          93.6 	|        0.9758 	|                   54.8 	|                       47.7 	|       12.4 	| ... 	|                22.4 	|  54.8 	|      44.7 	|  36.5 	|     37.5 	|           59.3 	|              11.3 	|        2ND 	|                1.0 	| 2015 	|
+| 2 	|       Michigan 	|        B10 	|           40 	|         33 	|                         114.4 	|                          90.4 	|        0.9375 	|                   53.9 	|                       47.7 	|       14.0 	| ... 	|                30.0 	|  54.7 	|      46.8 	|  35.2 	|     33.2 	|           65.9 	|               6.9 	|        2ND 	|                3.0 	| 2018 	|
+| 3 	|     Texas Tech 	|        B12 	|           38 	|         31 	|                         115.2 	|                          85.2 	|        0.9696 	|                   53.5 	|                       43.0 	|       17.7 	| ... 	|                36.6 	|  52.8 	|      41.9 	|  36.5 	|     29.7 	|           67.5 	|               7.0 	|        2ND 	|                3.0 	| 2019 	|
+| 4 	|        Gonzaga 	|        WCC 	|           39 	|         37 	|                         117.8 	|                          86.3 	|        0.9728 	|                   56.6 	|                       41.1 	|       16.2 	| ... 	|                26.9 	|  56.3 	|      40.0 	|  38.2 	|     29.0 	|           71.5 	|               7.7 	|        2ND 	|                1.0 	| 2017 	|
 
 
 
