@@ -671,3 +671,14 @@ Adjusted Tempo : 0.02421667878283044
 Wins above Bubble : 0.021567611916927697
 Seed in Tournament : 0.022620151623313163
 ```
+
+
+# And the Winner of the 2021 NCAA Division 1 Basketball is...
+
+
+
+## Colgate!!!
+![insert image](/images/big_data/March/champ.jpeg)
+
+
+
