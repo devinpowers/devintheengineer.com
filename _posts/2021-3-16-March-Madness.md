@@ -11,13 +11,10 @@ header:
 
 Lets predict who will win in the tournament....
 
-![insert image](/images/big_data/March/bracket.jpg)
-
-
 
 ![insert image](/images/big_data/March/msu.jpg)
 
-kidding.....maybe
+kidding.....maybe..i wish
 
 
 
@@ -678,7 +675,7 @@ Seed in Tournament : 0.022620151623313163
 
 
 ## Colgate!!!
-![insert image](/images/big_data/March/champ.jpg)
+
 
 
 
