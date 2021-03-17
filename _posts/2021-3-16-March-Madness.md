@@ -679,7 +679,7 @@ From here I am just going to look at the matchups on the NCAA Bracket and pick t
 ![insert image](/images/big_data/March/ncaa_bracket_filled.jpg)e
 
 
-Some notably upsets include:
+#### Some notably upsets include:
 
 **West**
 * Missouri over Oklahoma in the 1st round
