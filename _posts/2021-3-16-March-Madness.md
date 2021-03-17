@@ -3,6 +3,10 @@ title: 'March Madness Prediction '
 
 date: 2021-3-16
 
+header:
+
+  image: "/images/chicago.jpeg"
+
 ---
 
 Lets predict who will win in the tournament....
