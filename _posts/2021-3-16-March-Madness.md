@@ -676,7 +676,7 @@ From here I am just going to look at the matchups on the NCAA Bracket and pick t
 
 ### Bracket:
 
-![insert image](/images/big_data/March/ncaa_bracket_filled.jpg)
+![insert image](/images/big_data/March/ncaa_bracket_filled.jpg)e
 
 
 Some notably upsets include:
@@ -718,10 +718,12 @@ Some notably upsets include:
 
 # And the Winner of the 2021 NCAA Division 1 Basketball is...
 
-## Gonzaga!!!
+# Gonzaga!!!
 
 ![insert image](/images/big_data/March/adam.jpeg)
 
-THE GOAT ADAM MORRISON
+THE GOAT **ADAM MORRISON**
+
+
 
 
