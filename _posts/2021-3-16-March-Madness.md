@@ -667,6 +667,13 @@ Wins above Bubble : 0.018270456403570653
 Seed in Tournament : 0.020000555719018376
 ```
 
+We can see above that some important Features (stats) are **Power Ranking**, **Rebounding (both offensive and defensive**, **Free Throws**
+
+
+
+From here I am just going to look at the matchups on the NCAA Bracket and pick the winners of each game based on the the **Projected wins**, so whoever has the **Higher Projected wins** will advance in each matchup.
+ 
+
 
 # And the Winner of the 2021 NCAA Division 1 Basketball is...
 
