@@ -18,7 +18,7 @@ kidding.....maybe..i wish
 
 
 
-I found a College Basketball Dataset 2013 - 2021 seasons on Kaggle
+I found a College Basketball Dataset (2013 - 2021 seasons on Kaggle) for their annual challenge.
 
 [Link to College Basketball Dataset](https://www.kaggle.com/andrewsundberg/college-basketball-dataset)
 
