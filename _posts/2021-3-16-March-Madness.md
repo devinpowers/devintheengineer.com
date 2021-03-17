@@ -674,13 +674,54 @@ We can see above that some important Features (stats) are **Power Ranking**, **R
 From here I am just going to look at the matchups on the NCAA Bracket and pick the winners of each game based on the the **Projected wins**, so whoever has the **Higher Projected wins** will advance in each matchup.
 
 
+### Bracket:
+
+![insert image](/images/big_data/March/ncaa_bracket_filled.jpg)
+
+
+Some notably upsets include:
+
+**West**
+
+* USC over Kansas in the 2nd round
+* VCU over Oregon in the 1st round
+* Creighton over Virgina (returning champions) in the 2nd round
+
+**East**
+
+* Maryland over Uconn in the first round
+* Maryland over Alabama in the 2nd round
+* BYU over Texas in the 2nd round
+* Maryland making it to the Elite 8
+
+**South**
+
+* Wisconsin over UNC (not really suprising)
+* Villanova over Purdue in the 2nd round
+
+**Midwest**
+
+* Tennessee over OSU in the 2nd round
+* Houston over Illinois in the Elite 8 to make it to the Final 4
+
+
+### Final Four Projections
+
+* Gonzaga over Michigan
+
+* Baylor over Houston
+
+### Championship
+
+* Gonzaga over Baylor for the Title!
+
 
 # And the Winner of the 2021 NCAA Division 1 Basketball is...
 
+## Gonzaga!!!
 
+![insert image](/images/big_data/March/adam.jpeg)
 
-## Colgate!!!
-
-
+THE GOAT ADAM MORRISON
 
 
