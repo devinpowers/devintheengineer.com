@@ -682,7 +682,7 @@ From here I am just going to look at the matchups on the NCAA Bracket and pick t
 Some notably upsets include:
 
 **West**
-
+* Missouri over Oklahoma in the 1st round
 * USC over Kansas in the 2nd round
 * VCU over Oregon in the 1st round
 * Creighton over Virgina (returning champions) in the 2nd round
