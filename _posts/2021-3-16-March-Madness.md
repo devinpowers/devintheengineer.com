@@ -426,3 +426,37 @@ Output:
 Mean squared error: 1.2053217759220127
 Coefficient of determination: 0.3291210770245191
 ```
+Wow those numbers blow
+
+## Decision Tree Test
+
+```python
+from sklearn.model_selection import train_test_split
+X_train, X_test, Y_train, Y_test = train_test_split(X, y, test_size=0.8, random_state=1)
+```
+
+Our Model was trained
+
+```python
+from sklearn import tree
+
+clf = tree.DecisionTreeClassifier(max_depth = 15)
+clf = clf.fit(X_train, Y_train)
+Y_pred = clf.predict(X_test)
+```
+
+```python
+from sklearn.metrics import accuracy_score
+
+accuracy_score(Y_test, Y_pred)
+```
+
+Output:
+
+```python
+0.362116991643454
+```
+
+
+
+## Lets now run our trained model on the 2021 Data to predict the number of wins for each team!!
