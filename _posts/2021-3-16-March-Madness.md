@@ -623,7 +623,7 @@ Oral Roberts 0.12994520485084304
 Grand Canyon 0.15566156131186967
 Cleveland St. 0.07748425598062622
 Drexel 0.08898296549941286
-Mount St. Mary's 0.09433592975651799
+Mount St. Marys 0.09433592975651799
 Hartford 0.16023764568764565
 Norfolk St. 0.056979379782011355
 Texas Southern 0.023908293460925042
@@ -672,7 +672,7 @@ We can see above that some important Features (stats) are **Power Ranking**, **R
 
 
 From here I am just going to look at the matchups on the NCAA Bracket and pick the winners of each game based on the the **Projected wins**, so whoever has the **Higher Projected wins** will advance in each matchup.
- 
+
 
 
 # And the Winner of the 2021 NCAA Division 1 Basketball is...
