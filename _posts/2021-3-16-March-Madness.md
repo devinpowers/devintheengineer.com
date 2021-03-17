@@ -3,10 +3,6 @@ title: 'March Madness Prediction '
 
 date: 2021-3-16
 
-header:
-
-  image: "/images/chicago.jpeg"
-
 ---
 
 Lets predict who will win in the tournament....
@@ -14,6 +10,7 @@ Lets predict who will win in the tournament....
 
 ![insert image](/images/big_data/msu.jpg)
 
+kidding.....
 
 I found some datasets of NCAA from kaggle -->
 
