@@ -224,7 +224,7 @@ Note that the (D) stands for Defensively
 
 
 
-Lets drop those columns:
+Lets **drop** those columns:
 
 ```python
 data = data.drop(columns = ["Postseason", "Team","Conference","Year","Games Played","Games Won"])
@@ -284,7 +284,6 @@ Output:
 - One way to use predictive modeling is using **Random Forest Classifier**
 
 
-
 ```python
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 
@@ -304,7 +303,7 @@ Now **randTree** is our trained model that we can input data (features X) and pr
 ### Now that we have our **Model** we can import a file from 2018 and use that as a test to see how accurate our model is!!
 
 
-Lets start again by importing data from 2018 College Basketball Season
+Lets start again by importing data from 2019 College Basketball Season
 
 **Note:** We removed **Year** from column_names since it's not a column in the CSV file
 
@@ -314,10 +313,31 @@ column_names = ["Team", "Conference", "Games Played","Games Won",
           "Power Ranking", "Effective Field Goal %","Effective Field Goal % (D)",
           "Turnover %", "Turnover % (D)", "Offensive Rebounds", "Defensive Rebounds",
           "Free Throw Rate", "Free Throw Rate (D)", "2-PT%", "2-PT% (D)",
-          "3-PT%", "3-PT (D)", "Adjusted Tempo", "Wins above Bubble", "Postseason","Seed in Tournament"]
+          "3-PT%", "3-PT (D)", "Adjusted Tempo", "Wins above Bubble","Seed in Tournament"]
 
-test_data_2018 = pd.read_csv("cbb18.csv", header = None, names = column_names, skiprows = 1)
+
+test_data_2019 = pd.read_csv("cbb19.csv", header = None, names = column_names, skiprows = 1)
+test_data_2019
 ```
+
+Output:
+
+|     	|                   Team 	| Conference 	| Games Played 	| Games Won 	| Adjusted Offensive Efficiency 	| Adjusted Defensive Efficiency 	| Power Ranking 	| Effective Field Goal % 	| Effective Field Goal % (D) 	| Turnover % 	| ... 	| Free Throw Rate 	| Free Throw Rate (D) 	| 2-PT% 	| 2-PT% (D) 	| 3-PT% 	| 3-PT (D) 	| Adjusted Tempo 	| Wins above Bubble 	| Postseason 	| Seed in Tournament 	|
+|----:	|-----------------------:	|-----------:	|-------------:	|----------:	|------------------------------:	|------------------------------:	|--------------:	|-----------------------:	|---------------------------:	|-----------:	|----:	|----------------:	|--------------------:	|------:	|----------:	|------:	|---------:	|---------------:	|------------------:	|-----------:	|-------------------:	|
+|   0 	|                Gonzaga 	|        WCC 	|           37 	|        33 	|                         123.4 	|                          89.9 	|        0.9744 	|                   59.0 	|                       44.2 	|       14.9 	| ... 	|            35.3 	|                25.9 	|  61.4 	|      43.4 	|  36.3 	|     30.4 	|           72.0 	|               7.0 	|         E8 	|                1.0 	|
+|   1 	|               Virginia 	|        ACC 	|           38 	|        35 	|                         123.0 	|                          89.9 	|        0.9736 	|                   55.2 	|                       44.7 	|       14.7 	| ... 	|            29.1 	|                26.3 	|  52.5 	|      45.7 	|  39.5 	|     28.9 	|           60.7 	|              11.1 	|  Champions 	|                1.0 	|
+|   2 	|                   Duke 	|        ACC 	|           38 	|        32 	|                         118.9 	|                          89.2 	|        0.9646 	|                   53.6 	|                       45.0 	|       17.5 	| ... 	|            33.2 	|                24.0 	|  58.0 	|      45.0 	|  30.8 	|     29.9 	|           73.6 	|              11.2 	|         E8 	|                1.0 	|
+|   3 	|         North Carolina 	|        ACC 	|           36 	|        29 	|                         120.1 	|                          91.4 	|        0.9582 	|                   52.9 	|                       48.9 	|       17.2 	| ... 	|            30.2 	|                28.4 	|  52.1 	|      47.9 	|  36.2 	|     33.5 	|           76.0 	|              10.0 	|        S16 	|                1.0 	|
+|   4 	|               Michigan 	|        B10 	|           37 	|        30 	|                         114.6 	|                          85.6 	|        0.9665 	|                   51.6 	|                       44.1 	|       13.9 	| ... 	|            27.5 	|                24.1 	|  51.8 	|      44.3 	|  34.2 	|     29.1 	|           65.9 	|               9.2 	|        S16 	|                2.0 	|
+| ... 	|                    ... 	|        ... 	|          ... 	|       ... 	|                           ... 	|                           ... 	|           ... 	|                    ... 	|                        ... 	|        ... 	| ... 	|             ... 	|                 ... 	|   ... 	|       ... 	|   ... 	|      ... 	|            ... 	|               ... 	|        ... 	|                ... 	|
+| 348 	|             Alcorn St. 	|       SWAC 	|           27 	|        10 	|                          89.0 	|                         112.6 	|        0.0628 	|                   45.7 	|                       52.7 	|       24.1 	| ... 	|            30.5 	|                36.5 	|  45.0 	|      55.3 	|  31.3 	|     32.1 	|           67.1 	|             -16.7 	|        NaN 	|                NaN 	|
+| 349 	|          New Hampshire 	|         AE 	|           27 	|         5 	|                          83.7 	|                         106.1 	|        0.0613 	|                   44.0 	|                       51.5 	|       18.4 	| ... 	|            21.9 	|                38.0 	|  39.4 	|      52.1 	|  32.6 	|     33.6 	|           67.1 	|             -20.2 	|        NaN 	|                NaN 	|
+| 350 	|            Chicago St. 	|        WAC 	|           30 	|         3 	|                          88.5 	|                         117.3 	|        0.0380 	|                   44.2 	|                       57.8 	|       22.5 	| ... 	|            33.1 	|                33.9 	|  43.5 	|      57.9 	|  30.7 	|     38.5 	|           71.9 	|             -20.9 	|        NaN 	|                NaN 	|
+| 351 	|           Delaware St. 	|       MEAC 	|           29 	|         6 	|                          84.3 	|                         112.2 	|        0.0358 	|                   40.0 	|                       52.4 	|       19.0 	| ... 	|            25.5 	|                39.2 	|  37.7 	|      52.6 	|  29.0 	|     34.7 	|           71.6 	|             -21.7 	|        NaN 	|                NaN 	|
+| 352 	| Maryland Eastern Shore 	|       MEAC 	|           30 	|         7 	|                          85.7 	|                         114.4 	|        0.0346 	|                   43.5 	|                       54.4 	|       20.7 	| ... 	|            28.3 	|                36.6 	|  44.5 	|      53.2 	|  27.9 	|     37.3 	|           64.5 	|             -19.9 	|        NaN 	|                NaN 	|
+
+
+
 
 Then lets *clean* the data like we did above!!
 
