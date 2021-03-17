@@ -379,26 +379,50 @@ Now that we have everything formated, we can **test our data on the train model*
 
 ```python
 outcomes = randTree.predict(test_data_2018)
+outcomes
 ```
 
-Lets look at the MSE and r^2
+```python
+array([4.79374106, 4.50706001, 4.63436916, 2.92119834, 2.44943964,
+       2.92408205, 2.53887016, 1.85535918, 1.97381219, 1.7675324 ,
+       1.9517013 , 2.0826024 , 1.69939146, 1.50933805, 1.64787509,
+       1.8062911 , 1.48300696, 1.41080189, 1.34507522, 1.30606804,
+       0.84765406, 0.92654377, 0.56113908, 0.77383816, 0.62359858,
+       0.71972569, 0.59706735, 0.65653557, 0.84654274, 0.27220807,
+       0.48551756, 0.85555839, 0.79078947, 0.5566213 , 0.75432677,
+       0.68419701, 0.49255355, 0.58879836, 1.12082712, 0.64836982,
+       0.87441541, 0.4570832 , 0.24411728, 0.24689467, 0.3344182 ,
+       0.22142439, 0.31518034, 0.11686592, 0.20606556, 0.25557758,
+       0.05800339, 0.18187103, 0.29142277, 0.04124938, 0.26513749,
+       0.33923594, 0.01466802, 0.11317538, 0.18958856, 0.04887212,
+       0.09793627, 0.048189  , 0.14309469, 0.03703799])
+```
+
+
+#### Lets look at the MSE and R Squared Values
+
+**R Squared**: is the proportion of the variance in the dependent variable that is predictable from the independent variable(s).
+
+- Range from 0 to 1, closer to 1 is the best! ( 1 being Perfect)
+
+**MSE**: Means Squared Error! (lower number the better)
+
+
+The **sklearn** library has MSE and R Squared metrics build in, lets first import them!
+
 
 ```python
 from sklearn.metrics import mean_squared_error, r2_score
 ```
 
 ```python
-#from sci learn metrics
-print('Mean squared error: %.2f'
-      %mean_squared_error(labels, outcomes)) 
-# The coefficient of determination: 1 is perfect prediction
-print('Coefficient of determination: %.2f'
-      % r2_score(labels, outcomes))
-
+print('Mean squared error:', mean_squared_error(actual_outcomes, outcomes)) 
+print('Coefficient of determination:', r2_score(actual_outcomes, outcomes))
 ```
 
 Output:
 
-**Mean squared error: 1.13**
-**Coefficient of determination: 0.37**
-
+```python
+Mean squared error: 1.2053217759220127
+Coefficient of determination: 0.3291210770245191
+```
