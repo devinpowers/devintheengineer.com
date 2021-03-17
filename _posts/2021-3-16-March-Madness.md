@@ -9,7 +9,7 @@ header:
 
 ---
 
-Lets predict who will win in the tournament....
+Lets predict who will th 2021 NCCA Basketball Tournament
 
 
 ![insert image](/images/big_data/March/msu.jpg)
@@ -676,7 +676,7 @@ From here I am just going to look at the matchups on the NCAA Bracket and pick t
 
 ### Bracket:
 
-![insert image](/images/big_data/March/ncaa_bracket_filled.jpg)e
+![insert image](/images/big_data/March/ncaa_bracket_filled.jpg)
 
 
 #### Some notably upsets include:
