@@ -460,3 +460,211 @@ Output:
 
 
 ## Lets now run our trained model on the 2021 Data to predict the number of wins for each team!!
+
+
+```python
+column_names = ["Team", "Conference", "Games Played","Games Won",
+          "Adjusted Offensive Efficiency", "Adjusted Defensive Efficiency",
+          "Power Ranking", "Effective Field Goal %","Effective Field Goal % (D)",
+          "Turnover %", "Turnover % (D)", "Offensive Rebounds", "Defensive Rebounds",
+          "Free Throw Rate", "Free Throw Rate (D)", "2-PT%", "2-PT% (D)",
+          "3-PT%", "3-PT (D)", "Adjusted Tempo", "Wins above Bubble", "Seed in Tournament"]
+
+data_2021 = pd.read_csv("cbb21.csv", header = None, names = column_names, skiprows = 1)
+data_2021
+```
+Output:
+
+|     	|             Team 	| Conference 	| Games Played 	| Games Won 	| Adjusted Offensive Efficiency 	| Adjusted Defensive Efficiency 	| Power Ranking 	| Effective Field Goal % 	| Effective Field Goal % (D) 	| Turnover % 	| ... 	| Defensive Rebounds 	| Free Throw Rate 	| Free Throw Rate (D) 	| 2-PT% 	| 2-PT% (D) 	| 3-PT% 	| 3-PT (D) 	| Adjusted Tempo 	| Wins above Bubble 	| Seed in Tournament 	|
+|----:	|-----------------:	|-----------:	|-------------:	|----------:	|------------------------------:	|------------------------------:	|--------------:	|-----------------------:	|---------------------------:	|-----------:	|----:	|-------------------:	|----------------:	|--------------------:	|------:	|----------:	|------:	|---------:	|---------------:	|------------------:	|-------------------:	|
+|   0 	|         Michigan 	|        B10 	|           24 	|        20 	|                         118.1 	|                          91.1 	|        0.9521 	|                   54.9 	|                       44.9 	|       16.3 	| ... 	|               24.8 	|            28.9 	|                24.5 	|  53.3 	|      42.3 	|  38.7 	|     33.5 	|           66.9 	|               7.2 	|                1.0 	|
+|   1 	|           Baylor 	|        B12 	|           24 	|        22 	|                         123.2 	|                          94.5 	|        0.9548 	|                   57.5 	|                       49.1 	|       17.6 	| ... 	|               30.9 	|            27.0 	|                31.7 	|  54.1 	|      48.1 	|  41.8 	|     34.0 	|           68.8 	|               6.6 	|                1.0 	|
+|   2 	|         Illinois 	|        B10 	|           29 	|        23 	|                         117.7 	|                          90.4 	|        0.9539 	|                   55.6 	|                       46.6 	|       18.2 	| ... 	|               22.2 	|            39.2 	|                30.5 	|  55.3 	|      45.4 	|  37.6 	|     32.7 	|           70.7 	|               8.9 	|                1.0 	|
+|   3 	|          Gonzaga 	|        WCC 	|           26 	|        26 	|                         125.4 	|                          89.8 	|        0.9791 	|                   61.0 	|                       47.5 	|       16.1 	| ... 	|               23.4 	|            36.7 	|                25.9 	|  64.0 	|      46.8 	|  36.5 	|     32.5 	|           74.6 	|               8.5 	|                1.0 	|
+|   4 	|             Iowa 	|        B10 	|           29 	|        21 	|                         123.5 	|                          95.7 	|        0.9491 	|                   54.6 	|                       48.3 	|       13.3 	| ... 	|               28.6 	|            32.0 	|                22.6 	|  52.4 	|      45.8 	|  38.6 	|     34.8 	|           70.0 	|               5.6 	|                2.0 	|
+| ... 	|              ... 	|        ... 	|          ... 	|       ... 	|                           ... 	|                           ... 	|           ... 	|                    ... 	|                        ... 	|        ... 	| ... 	|                ... 	|             ... 	|                 ... 	|   ... 	|       ... 	|   ... 	|      ... 	|            ... 	|               ... 	|                ... 	|
+| 342 	|   Louisiana Tech 	|       CUSA 	|           27 	|        21 	|                         102.7 	|                          93.4 	|        0.7479 	|                   50.5 	|                       45.6 	|       18.4 	| ... 	|               23.4 	|            35.3 	|                26.4 	|  49.7 	|      46.4 	|  34.6 	|     29.6 	|           69.6 	|              -1.7 	|                NaN 	|
+| 343 	|           Toledo 	|        MAC 	|           29 	|        21 	|                         113.3 	|                         101.8 	|        0.7743 	|                   54.3 	|                       48.3 	|       15.5 	| ... 	|               30.7 	|            28.5 	|                23.4 	|  52.5 	|      51.0 	|  37.7 	|     29.5 	|           69.1 	|              -2.1 	|                NaN 	|
+| 344 	|              UAB 	|       CUSA 	|           27 	|        22 	|                         102.5 	|                          94.6 	|        0.7153 	|                   48.6 	|                       47.0 	|       15.6 	| ... 	|               25.4 	|            29.9 	|                27.1 	|  49.4 	|      46.1 	|  31.1 	|     32.4 	|           67.5 	|              -2.7 	|                NaN 	|
+| 345 	| Eastern Kentucky 	|        OVC 	|           27 	|        22 	|                         101.5 	|                         102.3 	|        0.4749 	|                   51.2 	|                       51.0 	|       16.6 	| ... 	|               30.2 	|            25.6 	|                32.2 	|  49.6 	|      51.8 	|  35.8 	|     33.0 	|           75.1 	|              -3.8 	|                NaN 	|
+| 346 	|          Belmont 	|        OVC 	|           29 	|        26 	|                         108.5 	|                         101.6 	|        0.6786 	|                   56.3 	|                       49.3 	|       16.6 	| ... 	|               27.2 	|            27.9 	|                24.6 	|  59.4 	|      48.2 	|  34.7 	|     34.0 	|           71.1 	|              -1.1 	|                NaN 	|
+
+
+Now we can Clean and Adjust the data!
+
+```python
+
+# Drop teams that didn't make the tournament
+data_2021 = data_2021.dropna()
+
+#Grab Team names
+
+team_names = data_2021.get("Team")
+
+# Lets drop the Columns like we did above to the dataset
+
+data_2021 = data_2021.drop(columns = ["Team","Conference","Games Played","Games Won"])
+
+# Lets finally standardize the data! 
+
+data_2021 = (data_2021 - data_2021.mean())/data_2021.std()
+
+data_2021
+
+```
+
+Output:
+
+|     	| Adjusted Offensive Efficiency 	| Adjusted Defensive Efficiency 	| Power Ranking 	| Effective Field Goal % 	| Effective Field Goal % (D) 	| Turnover % 	| Turnover % (D) 	| Offensive Rebounds 	| Defensive Rebounds 	| Free Throw Rate 	| Free Throw Rate (D) 	|     2-PT% 	| 2-PT% (D) 	|     3-PT% 	|  3-PT (D) 	| Adjusted Tempo 	| Wins above Bubble 	| Seed in Tournament 	|
+|----:	|------------------------------:	|------------------------------:	|--------------:	|-----------------------:	|---------------------------:	|-----------:	|---------------:	|-------------------:	|-------------------:	|----------------:	|--------------------:	|----------:	|----------:	|----------:	|----------:	|---------------:	|------------------:	|-------------------:	|
+|   0 	|                      1.254529 	|                     -0.974462 	|      0.932161 	|               0.994790 	|                  -1.565422 	|  -0.665798 	|      -1.700853 	|          -0.208926 	|          -0.735535 	|       -0.676980 	|           -1.116763 	|  0.508850 	| -2.126998 	|  1.395668 	|  0.642816 	|      -0.302966 	|          1.712498 	|          -1.658834 	|
+|   1 	|                      2.040990 	|                     -0.204484 	|      0.948353 	|               1.944973 	|                   0.797604 	|  -0.067054 	|       2.207902 	|           1.853376 	|           1.237944 	|       -1.128067 	|            0.244709 	|  0.757337 	|  0.360808 	|  2.669843 	|  0.907414 	|       0.347254 	|          1.544582 	|          -1.658834 	|
+|   2 	|                      1.192845 	|                     -1.132987 	|      0.942956 	|               1.250609 	|                  -0.608959 	|   0.209289 	|      -1.289405 	|           0.707653 	|          -1.576689 	|        1.768387 	|            0.017797 	|  1.130067 	| -0.797309 	|  0.943542 	|  0.219460 	|       0.997474 	|          2.188261 	|          -1.658834 	|
+|   3 	|                      2.380248 	|                     -1.268865 	|      1.094084 	|               3.224066 	|                  -0.102596 	|  -0.757912 	|       0.438676 	|           0.045679 	|          -1.188464 	|        1.174851 	|           -0.852032 	|  3.832363 	| -0.196804 	|  0.491416 	|  0.113621 	|       2.332137 	|          2.076317 	|          -1.658834 	|
+|   4 	|                      2.087253 	|                      0.067273 	|      0.914169 	|               0.885154 	|                   0.347504 	|  -2.047515 	|      -1.207115 	|           0.122061 	|           0.493845 	|        0.059004 	|           -1.476040 	|  0.229302 	| -0.625736 	|  1.354566 	|  1.330770 	|       0.757919 	|          1.264722 	|          -1.446003 	|
+| ... 	|                           ... 	|                           ... 	|           ... 	|                    ... 	|                        ... 	|        ... 	|            ... 	|                ... 	|                ... 	|             ... 	|                 ... 	|       ... 	|       ... 	|       ... 	|       ... 	|            ... 	|               ... 	|                ... 	|
+|  63 	|                     -2.199734 	|                      1.176947 	|     -2.622953 	|              -1.271031 	|                  -1.227847 	|   1.084377 	|      -1.207115 	|           0.376666 	|          -0.800239 	|       -0.487048 	|           -1.097853 	| -1.230559 	| -0.711523 	| -0.659452 	| -1.156447 	|      -1.911406 	|         -2.317490 	|           1.533639 	|
+|  64 	|                     -1.953001 	|                      0.950483 	|     -2.171967 	|              -0.649758 	|                  -0.046334 	|   0.577747 	|       0.479821 	|          -1.380110 	|           0.493845 	|       -0.748204 	|           -1.022216 	| -0.112367 	|  1.476031 	| -1.070476 	| -1.897320 	|      -0.302966 	|         -1.673812 	|           1.533639 	|
+|  65 	|                     -1.629164 	|                      1.969572 	|     -2.559983 	|              -0.905576 	|                  -0.158859 	|   0.025061 	|       0.603255 	|          -0.361689 	|           0.526197 	|        1.625938 	|            2.192370 	| -1.727532 	| -0.025231 	|  0.861337 	| -0.309735 	|       0.039255 	|         -1.701798 	|           1.533639 	|
+|  66 	|                     -1.953001 	|                      1.833693 	|     -2.794472 	|              -1.417213 	|                  -0.665222 	|   1.683121 	|      -0.013917 	|           0.682192 	|          -0.444366 	|        1.697163 	|            0.641805 	| -0.205550 	| -0.883095 	| -3.125596 	|  0.060702 	|       1.373918 	|         -1.561867 	|           1.533639 	|
+|  67 	|                     -1.690847 	|                      2.037511 	|     -2.671530 	|              -1.636486 	|                   1.529017 	|  -0.113111 	|       0.315242 	|          -0.616294 	|           1.140887 	|        0.296419 	|           -1.211309 	| -1.541167 	|  1.347351 	| -1.111578 	|  0.642816 	|      -0.816298 	|         -2.457420 	|           1.533639 	|
+
+
+Predictions
+
+```python
+outcomes = randTree.predict(test_data_2018)
+outcomes
+```
+
+```python
+array([5.33, 4.45, 5.16, 3.16, 2.72, 3.3 , 2.84, 1.73, 2.  , 1.71, 1.92,
+       1.96, 1.61, 1.77, 1.56, 1.43, 1.55, 1.49, 0.97, 1.15, 0.74, 0.9 ,
+       0.57, 0.78, 0.5 , 0.71, 0.9 , 0.7 , 1.06, 0.34, 0.48, 0.7 , 0.8 ,
+       0.52, 0.91, 0.97, 0.47, 0.66, 1.39, 0.29, 0.66, 0.44, 0.19, 0.19,
+       0.4 , 0.3 , 0.33, 0.2 , 0.18, 0.22, 0.04, 0.22, 0.31, 0.02, 0.19,
+       0.39, 0.01, 0.04, 0.15, 0.03, 0.06, 0.1 , 0.04, 0.02])
+```
+
+Convert Team names to a Frame
+
+```python
+team_names = team_names.to_numpy()
+```
+
+Lets print out the **Projected Wins** for each team!
+
+
+```python
+for i in range(len(team_names)):
+    print(team_names[i], outcomes[i])
+```
+
+
+Projected Number of Win Output:
+
+```python
+Michigan 5.33
+Baylor 4.45
+Illinois 5.16
+Gonzaga 3.16
+Iowa 2.72
+Ohio St. 3.3
+Houston 2.84
+Alabama 1.73
+West Virginia 2.0
+Texas 1.71
+Kansas 1.92
+Arkansas 1.96
+Florida St. 1.61
+Virginia 1.77
+Purdue 1.56
+Oklahoma St. 1.43
+Villanova 1.55
+Tennessee 1.49
+Creighton 0.97
+Colorado 1.15
+Texas Tech 0.74
+BYU 0.9
+USC 0.57
+San Diego St. 0.78
+Florida 0.5
+Connecticut 0.71
+Clemson 0.9
+Oregon 0.7
+Oklahoma 1.06
+North Carolina 0.34
+LSU 0.48
+Loyola Chicago 0.7
+St. Bonaventure 0.8
+Missouri 0.52
+Wisconsin 0.91
+Georgia Tech 0.97
+Rutgers 0.47
+Virginia Tech 0.66
+Maryland 1.39
+VCU 0.29
+Michigan St. 0.66
+Wichita St. 0.44
+Syracuse 0.19
+UCLA 0.19
+Utah St. 0.4
+Drake 0.3
+Georgetown 0.33
+Oregon St. 0.2
+UC Santa Barbara 0.18
+Winthrop 0.22
+Ohio 0.04
+North Texas 0.22
+UNC Greensboro 0.31
+Liberty 0.02
+Colgate 0.19
+Eastern Washington 0.39
+Abilene Christian 0.01
+Morehead St. 0.04
+Iona 0.15
+Oral Roberts 0.03
+Grand Canyon 0.06
+Cleveland St. 0.1
+Drexel 0.04
+Mount St. Mary's 0.02
+```
+
+
+
+What are the important Features?
+
+```python
+Importances = randTree.feature_importances_
+print('Features | Coefficients:')
+print('-------------------------------')
+for i in range(len(Importances)):
+    print(test_data_2018.columns[i], ":", Importances[i])
+    
+```
+
+Output:
+
+```python
+Features | Coefficients:
+-------------------------------
+Win % : 0.03403094283767831
+Adjusted Offensive Efficiency : 0.019456285101709367
+Adjusted Defensive Efficiency : 0.016341678689969313
+Power Ranking : 0.5543967300969924
+Effective Field Goal % : 0.022431980885339493
+Effective Field Goal % (D) : 0.01869910939061002
+Turnover % : 0.020422325083687947
+Turnover % (D) : 0.019608628714396063
+Offensive Rebounds : 0.0454775389189267
+Defensive Rebounds : 0.04092010612287391
+Free Throw Rate : 0.033527046850362015
+Free Throw Rate (D) : 0.01988510536920064
+2-PT% : 0.022248486818011518
+2-PT% (D) : 0.018940858348472964
+3-PT% : 0.01996632171051876
+3-PT (D) : 0.02524241273817921
+Adjusted Tempo : 0.02421667878283044
+Wins above Bubble : 0.021567611916927697
+Seed in Tournament : 0.022620151623313163
+```
