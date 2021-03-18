@@ -28,7 +28,7 @@ toc_label: "Table of Contents"
 * Clustering can adapt to changes made and helps *single out* useful features that differentiate different groups
 
 
-## Examples of using Clustering
+### Examples of using Clustering
 
 | Data          	| Attribute Set (x)                    	| Clustering Task                        	|
 |---------------	|--------------------------------------	|----------------------------------------	|
@@ -36,7 +36,7 @@ toc_label: "Table of Contents"
 | Word Document 	| Words                                	| Group Documents based on similar words 	|
 
 
-## Clustering Methods
+### Clustering Methods
 
 * Partitioning Method
 
@@ -50,24 +50,39 @@ toc_label: "Table of Contents"
 
 
 
+## K-Means Clustering
+
+- One of the more popular "clustering" algorithms, K-Means stores centroids that it uses to define clusters. A point is considered to be in a particular cluster if its close to that cluster's centroid than any other centroid.
+
+
+[insert an Image of K-mneans]
+
+### Example of K-Means in Python
 
 
 
-### Extra Clusters
+
+### Errors with K-Means
 
 
-### More on extras
+### Limitations of K-Means
+
+**When are there problems with K-Means Clustering?**
+
+* When clusters are of differing Sizes, Densities, and Non-Globular Shapes
+* When there are outliers in the Data
 
 
 
-## Next 
+## Cluster Validity
+
+### Issues in Cluster Validation
 
 
-## Other
-
-### Sup
-
-### Sup
+### Python Examples of Cluster Validation
 
 
-## Last
+## Hierarchical Clustering
+
+
+### Python Examples
