@@ -3,6 +3,10 @@ title: 'Big Data Analysis Day 6: Data Preprocessing '
 
 date: 2021-2-28
 
+toc: true
+toc_label: "Table of Contents" 
+
+
 ---
 
 #### How do we **Transform Raw Data** into a more useful representation ?
