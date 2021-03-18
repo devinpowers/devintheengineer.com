@@ -74,6 +74,99 @@ Note: The quality of the cluster assignment is determined by computing the **sum
 [sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
 
 
+```python
+from sklearn import cluster
+```
+
+**Steps**
+
+1. Import Pandas and Load the input data
+
+```python
+import pandas as pd
+
+data = pd.read_csv('ratings.csv',header=None)
+data
+```
+
+Output:
+
+The Columns are movie titles and the indexes are user reviews  
+
+|   	| Jaws 	| Star Wars 	| James Bond 	| It 	|
+|--:	|-----:	|----------:	|-----------:	|---:	|
+| 0 	|    5 	|         5 	|          2 	|  1 	|
+| 1 	|    4 	|         5 	|          3 	|  2 	|
+| 2 	|    4 	|         4 	|          4 	|  3 	|
+| 3 	|    2 	|         2 	|          4 	|  5 	|
+| 4 	|    1 	|         2 	|          3 	|  4 	|
+| 5 	|    2 	|         1 	|          5 	|  5 	|
+
+
+2. Create Cluster Object
+
+```python
+k_means = cluster.KMeans(n_clusters=2)
+```
+
+3. Apply K-Means Clustering to the Data
+
+```python
+k_means.fit(data) 
+values = k_means.cluster_centers_
+pd.DataFrame(values)
+```
+Ouput:
+
+|   	|     Jaws 	| Star Wars 	| James Bond 	|       It 	|
+|--:	|---------:	|----------:	|-----------:	|---------:	|
+| 0 	| 4.333333 	|  4.666667 	|        3.0 	| 2.000000 	|
+| 1 	| 1.666667 	|  1.666667 	|        4.0 	| 4.666667 	|
+
+
+4. Obtain the Centroids and Cluster Labels
+
+```python
+labels = k_means.labels_
+pd.DataFrame(labels)
+```
+
+Output:
+
+|   	| 0 	|
+|--:	|--:	|
+| 0 	| 1 	|
+| 1 	| 1 	|
+| 2 	| 1 	|
+| 3 	| 0 	|
+| 4 	| 0 	|
+| 5 	| 0 	|
+
+
+**Now lets import another csv file**
+
+```python
+testdata = pd.read_csv('ratings2.csv',header=None)
+testdata
+```
+
+Applying cluster to new data points
+
+```python
+predicted = k_means.predict(testdata)
+pd.DataFrame(predicted)
+```
+
+Output:
+
+|   	| 0 	|
+|--:	|--:	|
+| 0 	| 0 	|
+| 1 	| 1 	|
+| 2 	| 0 	|
+| 3 	| 1 	|
+| 4 	| 0 	|
+
 
 
 
