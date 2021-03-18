@@ -3,9 +3,6 @@ title: 'March Madness Prediction '
 
 date: 2021-3-16
 
-tags:
-    - Machine Learning
-
 header:
 
   image: "/images/magic.jpeg"
@@ -252,7 +249,7 @@ Output:
 
 
 
-### Normalizing the Data
+## Normalizing the Data
 
 In general, learning algorithms benefit from standardization of the data set.
 
@@ -647,7 +644,7 @@ Appalachian St. 0.09276995322684975
 
 
 
-#### Important Features
+### Important Features
 
 
 **What are the important Features?**
@@ -730,7 +727,7 @@ From here I am just going to look at the matchups on the NCAA Bracket and pick t
 
 * Baylor over Houston
 
-### Championship
+## Championship
 
 * Gonzaga over Baylor for the Title!
 
