@@ -5,7 +5,7 @@ title: "Data Structures and Algorithms"
 author_profile: true
 
 header:
-  image: "/images/chicagotwo.jpeg"
+  image: "/images/home_page.jpeg"
   
 ---
 
