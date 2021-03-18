@@ -117,7 +117,9 @@ values = k_means.cluster_centers_
 pd.DataFrame(values)
 ```
 Ouput:
-
+                            
+                            Centroids
+                            
 |   	    |     Jaws 	| Star Wars 	| James Bond 	|       It 	|
 |---------: |---------:	|----------:	|-----------:	|---------:	|
 | Cluster 1	| 4.333333 	|  4.666667 	|        3.0 	| 2.000000 	|
