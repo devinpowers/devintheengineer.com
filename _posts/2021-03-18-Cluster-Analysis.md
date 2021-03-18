@@ -119,7 +119,7 @@ pd.DataFrame(values)
 Ouput:
                             
                             Centroids
-                            
+
 |   	    |     Jaws 	| Star Wars 	| James Bond 	|       It 	|
 |---------: |---------:	|----------:	|-----------:	|---------:	|
 | Cluster 1	| 4.333333 	|  4.666667 	|        3.0 	| 2.000000 	|
@@ -179,6 +179,30 @@ Output:
 * SSE measures the sum-of-squared distance between every data point **x** to their cluster centroid **c**
 
 * SSE can be used to determine the number of clusters
+
+
+```python
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+sz = [1,2,3,4,5,6]
+SSE = []
+for numClusters in sz:
+    k_means = cluster.KMeans(n_clusters=numClusters)
+    k_means.fit(data)
+    SSE.append(k_means.inertia_)
+
+plt.plot(sz, SSE)
+plt.xlabel('Number of Clusters')
+plt.ylabel('SSE')
+````
+
+Output:
+
+!['Insert Image'](/images/big_data/clustering/cluster_graph.png)
+cluster_graph.png
+
+
 
 ### Limitations of K-Means
 
