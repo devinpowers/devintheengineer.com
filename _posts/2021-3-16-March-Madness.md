@@ -11,9 +11,7 @@ header:
   image: "/images/magic.jpeg"
 
 toc: true
-toc_label: "Table of Contents"
-toc_icon: "heart"  # corresponding Font Awesome icon name (without fa prefix)
-
+toc_label: "Table of Contents" 
 ---
 
 Lets predict who will th 2021 NCCA Basketball Tournament
@@ -72,6 +70,7 @@ Output:
 
 
 
+## Cleaning the Data
 
 Lets **drop all the teams that didn't make the tournement.**
 
@@ -190,7 +189,9 @@ Output:
 
 
 
-#### Now the question is... What columns should we keep and what columns should we remove??
+## Selecting the Feature Columns
+
+**Now the question is... What columns should we keep and what columns should we remove??**
 
 - The number of games won in the regular reason will be different during our 2020-21 season since some teams werent able to play everyone, so I dont care about Games Played (record) and number of wins.
 
@@ -251,7 +252,7 @@ Output:
 
 
 
-### Now lets normalize our data
+### Normalizing the Data
 
 In general, learning algorithms benefit from standardization of the data set.
 
@@ -307,7 +308,10 @@ RandomForestRegressor(min_samples_split=20, random_state=5)
 Now **randTree** is our trained model that we can input data (features X) and predict the number of wins that each team will win!
 
 
-### Now that we have our **Model** we can import a file from 2018 and use that as a test to see how accurate our model is!!
+## Testing our Model 
+
+
+Now that we have our **Model** we can import a file from 2018 and use that as a test to see how accurate our model is!!
 
 
 Lets start again by importing data from 2019 College Basketball Season
@@ -430,7 +434,7 @@ array([1.07743918, 1.13519988, 2.65392151, 1.41487909, 2.47988569,
 ```
 
 
-#### Lets look at the MSE and R Squared Values
+**Lets look at the MSE and R Squared Values**
 
 **R Squared**: is the proportion of the variance in the dependent variable that is predictable from the independent variable(s).
 
@@ -462,7 +466,9 @@ Are trained model looks pretty solid when testing the 2019 NCAA Data on it!
 
 
 
-## Lets now run our trained model on the 2021 Data to predict the number of wins for each team!!
+## Running Model on 2021 Data
+
+Lets now run our trained model on the 2021 Data to predict the number of wins for each team!!
 
 We have to Change a few columns in the 2021 dataset!
 
@@ -524,7 +530,7 @@ Output:
 
 
 
-##### Predictions
+Now we can use our trained model to make Predictions (number of wins for each team)
 
 ```python
 outcomes = randTree.predict(data_2021)
@@ -563,6 +569,8 @@ for i in range(len(team_names)):
     print(team_names[i], outcomes[i])
 ```
 
+
+### Projected Number of Wins for 2021 Tourny
 
 **Projected Number of Wins in Tourny for Teams**
 
@@ -639,7 +647,11 @@ Appalachian St. 0.09276995322684975
 
 
 
-##### What are the important Features?
+#### Important Features
+
+
+**What are the important Features?**
+
 
 ```python
 Importances = randTree.feature_importances_
@@ -681,12 +693,12 @@ We can see above that some important Features (stats) are **Power Ranking**, **R
 From here I am just going to look at the matchups on the NCAA Bracket and pick the winners of each game based on the the **Projected wins**, so whoever has the **Higher Projected wins** will advance in each matchup.
 
 
-### Bracket:
+### Bracket Filled Out
 
 ![insert image](/images/big_data/March/ncaa_bracket_filled.jpg)
 
 
-#### Some notably upsets include:
+**Some notably upsets include:**
 
 **West**
 * Missouri over Oklahoma in the 1st round
@@ -723,7 +735,7 @@ From here I am just going to look at the matchups on the NCAA Bracket and pick t
 * Gonzaga over Baylor for the Title!
 
 
-# And the Winner of the 2021 NCAA Division 1 Basketball is...
+**And the Winner of the 2021 NCAA Division 1 Basketball is...**
 
 # Gonzaga!!!
 
