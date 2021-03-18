@@ -5,8 +5,10 @@ title: "Intro to C++"
 author_profile: true
 
 header:
-  image: "/images/tower3.jpeg"
-  
+  image: "/images/C++/C++_home.jpeg"
+
+toc: true
+toc_label: "Table of Contents" 
 ---
 
 
