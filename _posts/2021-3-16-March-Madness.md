@@ -3,6 +3,8 @@ title: 'March Madness Prediction '
 
 date: 2021-3-16
 
+tags:
+    - Machine Learning
 
 header:
 
