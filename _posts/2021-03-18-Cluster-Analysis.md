@@ -118,10 +118,10 @@ pd.DataFrame(values)
 ```
 Ouput:
 
-|   	|     Jaws 	| Star Wars 	| James Bond 	|       It 	|
-|--:	|---------:	|----------:	|-----------:	|---------:	|
-| 0 	| 4.333333 	|  4.666667 	|        3.0 	| 2.000000 	|
-| 1 	| 1.666667 	|  1.666667 	|        4.0 	| 4.666667 	|
+|   	    |     Jaws 	| Star Wars 	| James Bond 	|       It 	|
+|---------: |---------:	|----------:	|-----------:	|---------:	|
+| Cluster 1	| 4.333333 	|  4.666667 	|        3.0 	| 2.000000 	|
+| Cluster 2	| 1.666667 	|  1.666667 	|        4.0 	| 4.666667 	|
 
 
 4. Obtain the Centroids and Cluster Labels
@@ -172,6 +172,11 @@ Output:
 
 ### Errors with K-Means
 
+
+* K-Means Clustering was designed to minimize the sum of square error (SSE)
+* SSE measures the sum-of-squared distance between every data point **x** to their cluster centroid **c**
+
+* SSE can be used to determine the number of clusters
 
 ### Limitations of K-Means
 
