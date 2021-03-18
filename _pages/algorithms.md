@@ -6,7 +6,9 @@ author_profile: true
 
 header:
   image: "/images/home_page.jpeg"
-  
+
+toc: true
+toc_label: "Table of Contents" 
 ---
 
 Learning Data Structures and Algorithms is important in Computer Science because they allow you to solve challenging problems.
@@ -24,7 +26,7 @@ Link to my GitHub Repository:
 [Data Structures and Algorithms Repository](https://github.com/devinpowers/algorithms)
 
 
-# Algorithm Analysis
+## Algorithm Analysis
 
 ![bigO](https://user-images.githubusercontent.com/50432490/105179820-c85ea580-5af7-11eb-8c06-6b78e12a552f.gif)
 
@@ -61,7 +63,7 @@ Project using Sorting Algorithms coming soon!
 # Data Structures:
 
 
-# Arrays:
+## Arrays:
 
 ![inserting an Image](/images/array.jpg)
 
@@ -70,7 +72,7 @@ Project using Sorting Algorithms coming soon!
 
 - The Simplest Data Structure
 
-# Stacks and Queues
+## Stacks and Queues
 
 ![inserting an Image](/images/stack.jpg)
 
@@ -83,7 +85,7 @@ Project using Sorting Algorithms coming soon!
 
 - Circular Queue
 
-# Linked Lists
+## Linked Lists
 
 ![inserting an Image](/images/Linked_Lists/home/single_node.jpg)
 
@@ -118,7 +120,7 @@ Includes:
 
   * AVL Tree, Red-Black Tree, Splay Tree, Treap, B -Tree
 
-# Heaps
+## Heaps
 
 ![inserting an Image](/images/heap.jpg)
 
@@ -140,7 +142,7 @@ Different Applications of Heaps:
   3. Graph Algorithms
 
 
-# Maps and Hash Tables
+## Maps and Hash Tables
 
 ![inserting an Image](/images/hash.jpg)
 
@@ -151,7 +153,7 @@ Different Applications of Heaps:
 - Includes Hash Project (in progress)
 
 
-# Graphs
+## Graphs
 
 ![inserting an Image](/images/graph.jpg)
 
@@ -178,15 +180,14 @@ Different Applications of Heaps:
 
 - Includes Graph Project
 
-# Coming Soon.......
 
-# Dynamic Programming
+## Dynamic Programming
 
 - Greedy Algorithm
 
 - Includes Dynamic Programming Project
 
-# Extra 
+## Extra 
 
 [Iterators and Generators in Python](https://devintheengineer.com/algorithms/iterators_python)
 
