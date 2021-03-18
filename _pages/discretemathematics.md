@@ -4,11 +4,12 @@ permalink: /discretemathematics/
 title: "Discrete Mathematics"
 author_profile: true
 
+toc: true
+toc_label: "Table of Contents" 
+
 header:
   image: "/images/math_home.jpeg"
 
-toc: true
-toc_label: "Table of Contents" 
 ---
 
 
