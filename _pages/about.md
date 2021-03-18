@@ -10,6 +10,7 @@ Hi, my name is Devin Powers. I am a Civil Engineering graduate from Michigan Sta
 
 I have a tremendous passion for learning and plan to use my website as a blog of everything that I have worked on and currently working on. 
 
+<a href="/resume/Devin_Powers_Resume.pdf" class="btn btn--success">Resume</a>
 
 
 [Resume](/resume/Devin_Powers_Resume.pdf)
