@@ -5,13 +5,9 @@ title: "Tree Data Structures"
 author_profile: true
 
 header:
-  image: "/images/chicagotwo.jpeg"
+  image: "/images/christmas.jpg"
   
 ---
-
-
-
-
 
 
 ## General Trees
