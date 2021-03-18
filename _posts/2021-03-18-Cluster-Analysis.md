@@ -12,15 +12,13 @@ toc_label: "Table of Contents"
 
 **What is Clustering?**
 
-* Clustering is dividing up the population of data points into groups that are more similar to other data points in the same group
+* Clustering is **partitioning** (dividing up) the population of data points into groups that are more similar to other data points in the same group
 
+* Helps identify two qualities of data:
 
+1. Meaningfulness
+2. Usefulness
 
-**What is K-Means Clustering?**
-
-* K-Means Clustering is a popular way
-
-**What is Cluster Validation?**
 
 
 **Why Clustering over Classification?**
@@ -48,16 +46,31 @@ toc_label: "Table of Contents"
 * Heirarchial Method
 
 
-
-
 ## K-Means Clustering
+
+- Unsuprervised Machine Learning Techniue
 
 - One of the more popular "clustering" algorithms, K-Means stores centroids that it uses to define clusters. A point is considered to be in a particular cluster if its close to that cluster's centroid than any other centroid.
 
 
-[insert an Image of K-mneans]
+## K-Means Algorithm
 
-### Example of K-Means in Python
+Steps: (**Pseudocode**)
+
+1. Specify the number of k clusters to assign.
+2. Randomly pick number of k centroids.
+3. Repeat
+4.      Expectation: Assign each point to its closet centroids.
+5.      Maximization: Compute the new centroid (mean) of each cluster.
+6. Until The centroid positions do not change.
+
+Note: The quality of the cluster assignment is determined by computing the **sum of the squared error (SSE)** after the centroids converge.
+
+
+### Example of K-Means Algorithm in Python
+
+[sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
+
 
 
 
