@@ -13,8 +13,6 @@ I have a tremendous passion for learning and plan to use my website as a blog of
 <a href="/resume/Devin_Powers_Resume.pdf" class="btn btn--success">Resume</a>
 
 
-[Resume](/resume/Devin_Powers_Resume.pdf)
-
 ## Interests
 
 * Python, C++
