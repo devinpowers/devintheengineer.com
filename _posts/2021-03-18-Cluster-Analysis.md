@@ -28,10 +28,12 @@ toc_label: "Table of Contents"
 
 ### Examples of using Clustering
 
-| Data          	| Attribute Set (x)                    	| Clustering Task                        	|
-|---------------	|--------------------------------------	|----------------------------------------	|
-| Customer      	| Demographic and Location Information 	| Group together similar customers       	|
-| Word Document 	| Words                                	| Group Documents based on similar words 	|
+| Data          	| Attribute Set (x)                    	| Clustering Task                        	    |
+|---------------	|--------------------------------------	|----------------------------------------	    |
+| Customer      	| Demographic and Location Information 	| Group together similar customers       	    |
+| Word Document 	| Words                                	| Group Documents based on similar words 	    |
+| Ads               | Number of different Ads               | Group together similar people and target them |
+|Fantasy Football   | Performance Data                      | Group together similar players to compare     |
 
 
 ### Clustering Methods
