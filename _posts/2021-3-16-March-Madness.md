@@ -11,7 +11,7 @@ toc: true
 toc_label: "Table of Contents" 
 ---
 
-Lets predict who will th 2021 NCCA Basketball Tournament
+Lets predict who will win the 2021 NCCA Basketball Tournament
 
 
 ![insert image](/images/big_data/March/msu.jpg)
