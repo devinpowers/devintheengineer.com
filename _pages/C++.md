@@ -1,5 +1,5 @@
 ---
-layout: archive
+##layout: archive
 permalink: /C++/
 title: "Intro to C++"
 author_profile: true
