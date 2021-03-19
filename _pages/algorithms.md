@@ -1,5 +1,4 @@
 ---
-layout: splash
 permalink: /algorithms/
 title: "Data Structures and Algorithms"
 author_profile: true
