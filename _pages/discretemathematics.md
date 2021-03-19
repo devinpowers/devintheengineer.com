@@ -8,7 +8,7 @@ toc: true
 toc_label: "Table of Contents" 
 
 header:
-  image: "/images/math_home.jpeg"
+  image: "/images/chicago_math.jpeg"
 
 ---
 
