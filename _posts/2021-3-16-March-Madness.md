@@ -14,12 +14,6 @@ toc_label: "Table of Contents"
 Lets predict who will win the 2021 NCCA Basketball Tournament
 
 
-![insert image](/images/big_data/March/msu.jpg)
-
-kidding.....maybe..i wish
-
-
-
 I found a College Basketball Dataset (2013 - 2021 seasons on Kaggle) for their annual challenge.
 
 [Link to College Basketball Dataset](https://www.kaggle.com/andrewsundberg/college-basketball-dataset)

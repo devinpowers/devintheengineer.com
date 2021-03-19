@@ -195,7 +195,7 @@ for numClusters in sz:
 plt.plot(sz, SSE)
 plt.xlabel('Number of Clusters')
 plt.ylabel('SSE')
-````
+```
 
 Output:
 
