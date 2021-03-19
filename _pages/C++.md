@@ -133,7 +133,7 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 - Constructors
 
-# Extras:
+## Extras:
 
 [Arrays](https://devintheengineer.com/C++/arrays)
 
@@ -147,7 +147,7 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 
 
-# Projects:
+## Projects:
 
 #### [Project One ](https://devintheengineer.com/C++/c++_project1)
 

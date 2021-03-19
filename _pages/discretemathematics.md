@@ -26,7 +26,7 @@ The resources that I have been using to learn Discrete Mathematics:
 All my notes can be viewed here or download via PDF Format on my Github account
 [Link to Notes via Github](https://github.com/devinpowers/discrete-mathematics)
 
-# Notes:
+
 
 # Chapter 1: The Foundations: Logic and Proofs
 
