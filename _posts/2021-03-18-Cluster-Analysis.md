@@ -185,6 +185,31 @@ plt.ylabel('Salary')
 plt.legend()
 ```
 
+Output:
+
+!['Insert Image'](/images/big_data/clustering/nba_graph2.png)
+
+Lets use the Sum of Squared Error (SEE) to plot an **Elbow Plot**
+
+
+```python
+sse = []
+k_range = range(1,10)
+for k in k_range:
+    km = KMeans(n_clusters=k)
+    km.fit(df[['Age','Salary']])
+    sse.append(km.inertia_)
+```
+
+```python
+plt.xlabel('K')
+plt.ylabel('Sum of squared error')
+plt.plot(k_range,sse)
+```
+
+Output:
+
+!['Insert Image'](/images/big_data/clustering/elbow_plot.png)
 
 
 
