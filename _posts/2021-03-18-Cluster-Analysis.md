@@ -189,6 +189,17 @@ Output:
 
 !['Insert Image'](/images/big_data/clustering/nba_graph2.png)
 
+
+
+### Errors with K-Means
+
+
+* K-Means Clustering was designed to minimize the sum of square error (SSE)
+* SSE measures the sum-of-squared distance between every data point **x** to their cluster centroid **c**
+
+* SSE can be used to determine the number of clusters
+
+
 Lets use the Sum of Squared Error (SEE) to plot an **Elbow Plot**
 
 
@@ -212,37 +223,6 @@ Output:
 !['Insert Image'](/images/big_data/clustering/elbow_plot.png)
 
 
-
-
-### Errors with K-Means
-
-
-* K-Means Clustering was designed to minimize the sum of square error (SSE)
-* SSE measures the sum-of-squared distance between every data point **x** to their cluster centroid **c**
-
-* SSE can be used to determine the number of clusters
-
-
-```python
-import matplotlib.pyplot as plt
-%matplotlib inline
-
-sz = [1,2,3,4,5,6]
-SSE = []
-for numClusters in sz:
-    k_means = cluster.KMeans(n_clusters=numClusters)
-    k_means.fit(data)
-    SSE.append(k_means.inertia_)
-
-plt.plot(sz, SSE)
-plt.xlabel('Number of Clusters')
-plt.ylabel('SSE')
-```
-
-Output:
-
-!['Insert Image'](/images/big_data/clustering/cluster_graph.png)
-cluster_graph.png
 
 
 
