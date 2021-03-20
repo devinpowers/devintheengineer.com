@@ -50,7 +50,7 @@ toc_label: "Table of Contents"
 
 ## K-Means Clustering
 
-- Unsuprervised Machine Learning Techniue
+- Unsuprervised Machine Learning Technique
 
 - One of the more popular "clustering" algorithms, K-Means stores centroids that it uses to define clusters. A point is considered to be in a particular cluster if its close to that cluster's centroid than any other centroid.
 
@@ -118,7 +118,7 @@ pd.DataFrame(values)
 ```
 Ouput:
                             
-                            Centroids
+**Centroids**
 
 |   	    |     Jaws 	| Star Wars 	| James Bond 	|       It 	|
 |---------: |---------:	|----------:	|-----------:	|---------:	|
