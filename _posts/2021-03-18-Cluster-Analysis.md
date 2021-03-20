@@ -55,6 +55,16 @@ toc_label: "Table of Contents"
 - One of the more popular "clustering" algorithms, K-Means stores centroids that it uses to define clusters. A point is considered to be in a particular cluster if its close to that cluster's centroid than any other centroid.
 
 
+!['Insert Image'](/images/big_data/clustering/kmeans1.jpg)
+!['Insert Image'](/images/big_data/clustering/kmeans2.jpg)
+!['Insert Image'](/images/big_data/clustering/kmeans3.jpg)
+!['Insert Image'](/images/big_data/clustering/kmeans4.jpg)
+!['Insert Image'](/images/big_data/clustering/kmeans5.jpg)
+!['Insert Image'](/images/big_data/clustering/kmeans6.jpg)
+!['Insert Image'](/images/big_data/clustering/kmeans7.jpg)
+
+
+
 ## K-Means Algorithm
 
 Steps: (**Pseudocode**)
