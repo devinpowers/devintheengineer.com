@@ -449,3 +449,90 @@ Adjusted Rand Index: **0.07438695547529094**
 
 ### Python Examples of Hierarchical Clustering
 
+```python
+import pandas as pd
+
+data = pd.read_csv('animals.csv',header='infer')
+names = data['Name']
+Y = data['Class']
+X = data.drop(['Name','Class'],axis=1)
+data[:10]
+```
+Output:
+
+|   	|          Name 	| warmBlooded 	| coldBlooded 	| GiveBirth 	| LayEggs 	| CanSwim 	| CanFly 	| HasLegs 	| HasScales 	|     Class 	|
+|--:	|--------------:	|------------:	|------------:	|----------:	|--------:	|--------:	|-------:	|--------:	|----------:	|----------:	|
+| 0 	|         human 	|           1 	|           0 	|         1 	|       0 	|       0 	|      0 	|       1 	|         0 	|    mammal 	|
+| 1 	|        python 	|           0 	|           1 	|         0 	|       1 	|       0 	|      0 	|       0 	|         1 	|   reptile 	|
+| 2 	|        salmon 	|           0 	|           1 	|         0 	|       1 	|       1 	|      0 	|       0 	|         1 	|      fish 	|
+| 3 	|         whale 	|           1 	|           0 	|         1 	|       0 	|       1 	|      0 	|       0 	|         0 	|    mammal 	|
+| 4 	|          frog 	|           0 	|           1 	|         0 	|       1 	|       1 	|      0 	|       1 	|         0 	| amphibian 	|
+| 5 	| komodo dragon 	|           0 	|           1 	|         0 	|       1 	|       0 	|      0 	|       1 	|         1 	|   reptile 	|
+| 6 	|           bat 	|           1 	|           0 	|         1 	|       0 	|       0 	|      1 	|       1 	|         0 	|    mammal 	|
+| 7 	|        pigeon 	|           1 	|           0 	|         0 	|       1 	|       0 	|      1 	|       1 	|         0 	|      bird 	|
+| 8 	|           cat 	|           1 	|           0 	|         1 	|       0 	|       0 	|      0 	|       1 	|         0 	|    mammal 	|
+| 9 	| leopard shark 	|           0 	|           1 	|         1 	|       0 	|       1 	|      0 	|       0 	|         1 	|      fish 	|
+
+
+
+```python
+from scipy.cluster import hierarchy
+import matplotlib.pyplot as plt
+%matplotlib inline
+from pandas import Series
+import numpy as np
+
+Z = hierarchy.linkage(X.to_numpy(), 'complete')
+dn = hierarchy.dendrogram(Z,labels=names.tolist(),orientation='right')
+
+```
+
+Output:
+
+!['Insert Image'](/images/big_data/clustering/hierarchy.png)
+
+
+
+```python
+Z = hierarchy.linkage(X.to_numpy(), 'complete')
+threshold = 1.1
+labels = hierarchy.fcluster(Z, threshold)
+labels
+```
+
+Output:
+
+```python
+array([1, 4, 5, 2, 3, 4, 1, 1, 1, 2, 6, 1, 1, 5, 3, 6], dtype=int32)
+```
+
+**Rand Score**
+
+```python
+metrics.adjusted_rand_score(Y,labels)
+```
+
+Output:
+
+Rand Score: **0.4411764705882353**
+
+```python
+Z = hierarchy.linkage(X.to_numpy(), 'complete')
+threshold = 1.0
+labels = hierarchy.fcluster(Z, threshold)
+labels
+```
+
+Output:
+
+```python
+array([1, 5, 6, 3, 4, 5, 1, 2, 1, 3, 7, 2, 1, 6, 4, 7], dtype=int32)
+```
+
+```python
+metrics.adjusted_rand_score(Y,labels)
+```
+
+Output:
+
+Rand Score: **0.6180555555555556**
