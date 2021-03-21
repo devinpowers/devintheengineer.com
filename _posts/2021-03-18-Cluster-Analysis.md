@@ -234,6 +234,14 @@ Output:
 * When there are outliers in the Data
 
 
+## More Examples using Clustering (another NBA Example)
+
+Lets look at the Top 50 NBA Scorers!!
+
+
+
+
+
 
 ## Cluster Validity
 
