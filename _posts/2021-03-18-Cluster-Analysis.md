@@ -370,7 +370,7 @@ Output:
 
 ## Cluster Validity
 
-* Cluster Validitation is used to measure/evaluate how good our model is!
+* Cluster Validitation is used to *measure/evaluate* how good our model is!
     - Accuracy, True Positive Rate
 
 **How does one evalute the "goodness" of the resulting Clusters?**
@@ -388,6 +388,8 @@ Typical Questions to answer:
 
 
 ### Python Examples of Cluster Validation
+
+<a href="/Files/Data_Series/clustering/diabetes.csv" class="btn btn--success">Diabetes File Download</a>
 
 
 ## Hierarchical Clustering
