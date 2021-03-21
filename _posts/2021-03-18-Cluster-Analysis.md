@@ -5,7 +5,7 @@ date: 2021-3-18
 
 header:
 
-  image: "/images/big_data/clustering/nba_prac.png"
+  image: "/images/big_data/clustering/cluster_points.png"
 
 toc: true
 toc_label: "Table of Contents" 
