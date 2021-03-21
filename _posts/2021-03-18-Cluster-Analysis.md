@@ -225,15 +225,6 @@ Output:
 
 
 
-
-### Limitations of K-Means
-
-**When are there problems with K-Means Clustering?**
-
-* When clusters are of differing Sizes, Densities, and Non-Globular Shapes
-* When there are outliers in the Data
-
-
 ## More Examples using Clustering (another NBA Example)
 
 Lets look at the Top 50 NBA Scorers!!
@@ -368,15 +359,32 @@ Output:
 
 
 
+## Limitations of K-Means
 
+**When are there problems with K-Means Clustering?**
 
-
+* When clusters are of differing Sizes, Densities, and Non-Globular Shapes
+* When there are outliers in the Data (James Harden in the example above)
 
 
 
 ## Cluster Validity
 
+* Cluster Validitation is used to measure/evaluate how good our model is!
+    - Accuracy, True Positive Rate
+
+**How does one evalute the "goodness" of the resulting Clusters?**
+
+
+
 ### Issues in Cluster Validation
+
+Typical Questions to answer:
+
+* How many Clusters are there in  the data?
+* Are the clusters real or are they nothing more than accidental groupings of thedata
+
+
 
 
 ### Python Examples of Cluster Validation
@@ -385,4 +393,8 @@ Output:
 ## Hierarchical Clustering
 
 
-### Python Examples
+* Hierachical Clustering produces nested clusters organized as a tree!
+
+
+### Python Examples of Hierarchical Clustering
+
