@@ -309,6 +309,7 @@ pts_usg_clustered.savefig('pts-usg-clustered.png', dpi = 400, bbox_inches = 'tig
 
 Output:
 
+!['Insert Image'](/images/big_data/clustering/nba_prac.png)
 
 
 ## Cluster Validity
