@@ -238,8 +238,76 @@ Output:
 
 Lets look at the Top 50 NBA Scorers!!
 
+<a href="/Files/Data_Series/clustering/top_50_NBA.csv" class="btn btn--success">NBA File Download</a>
 
+```python
+data = pd.read_csv('top_50_NBA.csv')
+```
 
+```python
+kmeans = KMeans(n_clusters = 3, random_state = 98)
+
+x = np.column_stack((df_counting['PTS'], df_advanced['USG%']))
+
+kmeans.fit(x)
+
+y_kmeans = kmeans.predict(x)
+```
+
+```python
+for i, j in zip(df_counting['Player'], y_kmeans):
+    print(i, j)
+```
+
+Graph the **Clustered** **Points** and **Usage**
+
+```python
+plt.style.use('fivethirtyeight')
+
+pts_usg_clustered, ax = plt.subplots()
+
+cluster_1 = []
+cluster_2 = []
+cluster_3 = []
+
+for i in range(len(y_kmeans)):
+    if(y_kmeans[i] == 0):
+        cluster_1.append(x[i])
+    elif(y_kmeans[i] == 1):
+        cluster_2.append(x[i])
+    elif(y_kmeans[i] == 2):
+        cluster_3.append(x[i])
+        
+cluster_1 = np.vstack(cluster_1)
+cluster_2 = np.vstack(cluster_2)
+cluster_3 = np.vstack(cluster_3)
+
+ax.scatter(cluster_1[:, 0], cluster_1[:, 1], label = "Cluster 1 (secondary scorers)")
+ax.scatter(cluster_2[:, 0], cluster_2[:, 1], label = "Cluster 2 (primary scorers)")
+ax.scatter(cluster_3[:, 0], cluster_3[:, 1], label = "Cluster 3 (James Harden)")
+
+centers = kmeans.cluster_centers_
+ax.scatter(centers[:, 0], centers[:, 1], c = 'black', s = 200, alpha = .5, label = 'Cluster center')
+
+ax.legend(loc='best', prop={'size': 12, "family": "Rockwell"})
+
+ax.set_xlabel('PPG')
+ax.set_ylabel('USG%')
+
+pts_usg_clustered.suptitle("Clustered points and usage", weight = 'bold', size = 18)
+
+pts_usg_clustered.text(x = -0.02, y = -0.08,
+    s = '____________________________________________________________',
+    fontsize = 14, color = 'grey', horizontalalignment='left')
+
+pts_usg_clustered.text(x = -0.02, y = -.14,
+    s = 'https://dribbleanalytics.blog                     ',
+    fontsize = 14, fontname = 'Rockwell', color = 'grey', horizontalalignment='left')
+
+pts_usg_clustered.savefig('pts-usg-clustered.png', dpi = 400, bbox_inches = 'tight')
+```
+
+Output:
 
 
 
