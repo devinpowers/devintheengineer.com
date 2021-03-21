@@ -245,9 +245,9 @@ data = pd.read_csv('top_50_NBA.csv')
 ```
 
 ```python
-kmeans = KMeans(n_clusters = 3, random_state = 98)
+kmeans = KMeans(n_clusters = 4, random_state = 98)
 
-x = np.column_stack((df_counting['PTS'], df_advanced['USG%']))
+x = np.column_stack((data['PTS'], data['USG%']))
 
 kmeans.fit(x)
 
@@ -258,18 +258,73 @@ y_kmeans = kmeans.predict(x)
 for i, j in zip(df_counting['Player'], y_kmeans):
     print(i, j)
 ```
+Output:
+
+```python
+James Harden 2
+Paul George 1
+Giannis Antetokounmpo 1
+Joel Embiid 1
+Stephen Curry 1
+Kawhi Leonard 1
+Devin Booker 1
+Kevin Durant 1
+Damian Lillard 1
+Bradley Beal 1
+Kemba Walker 1
+Blake Griffin 1
+Karl-Anthony Towns 1
+Kyrie Irving 1
+Donovan Mitchell 1
+Zach LaVine 1
+Russell Westbrook 1
+Klay Thompson 3
+Julius Randle 3
+LaMarcus Aldridge 3
+Jrue Holiday 3
+DeMar DeRozan 3
+Luka Doncic 3
+Mike Conley 3
+DAngelo Russell 3
+CJ McCollum 3
+Nikola Vucevic 3
+Buddy Hield 3
+Nikola Jokic 3
+Tobias Harris 0
+Lou Williams 3
+Danilo Gallinari 0
+John Collins 0
+Trae Young 3
+Jimmy Butler 0
+Kyle Kuzma 0
+Khris Middleton 0
+Jamal Murray 0
+Andrew Wiggins 0
+J.J. Redick 0
+Tim Hardaway 0
+Bojan Bogdanovic 0
+Andre Drummond 0
+DeAaron Fox 0
+Ben Simmons 0
+Pascal Siakam 0
+Spencer Dinwiddie 0
+Jordan Clarkson 3
+Collin Sexton 0
+Clint Capela 0
+```
+
 
 Graph the **Clustered** **Points** and **Usage**
 
 ```python
-plt.style.use('fivethirtyeight')
-
-pts_usg_clustered, ax = plt.subplots()
+points_usage_clustered, ax = plt.subplots()
 
 cluster_1 = []
 cluster_2 = []
 cluster_3 = []
+cluster_4 = []
 
+# add Cluster to each desinated cluster list above
 for i in range(len(y_kmeans)):
     if(y_kmeans[i] == 0):
         cluster_1.append(x[i])
@@ -277,39 +332,46 @@ for i in range(len(y_kmeans)):
         cluster_2.append(x[i])
     elif(y_kmeans[i] == 2):
         cluster_3.append(x[i])
+    elif(y_kmeans[i] == 3):
+        cluster_4.append(x[i])
         
+# vstack stacks things refer to numpy doc --> https://numpy.org/doc/stable/reference/generated/numpy.vstack.html
 cluster_1 = np.vstack(cluster_1)
 cluster_2 = np.vstack(cluster_2)
 cluster_3 = np.vstack(cluster_3)
+cluster_4 = np.vstack(cluster_4)
 
-ax.scatter(cluster_1[:, 0], cluster_1[:, 1], label = "Cluster 1 (secondary scorers)")
-ax.scatter(cluster_2[:, 0], cluster_2[:, 1], label = "Cluster 2 (primary scorers)")
-ax.scatter(cluster_3[:, 0], cluster_3[:, 1], label = "Cluster 3 (James Harden)")
+ax.scatter(cluster_1[:, 0], cluster_1[:, 1], label = "Cluster 1 (Bottom Top 50)")
+ax.scatter(cluster_2[:, 0], cluster_2[:, 1], label = "Cluster 2 (Top Scorers in NBA)")
+ax.scatter(cluster_3[:, 0], cluster_3[:, 1], label = "Cluster 3 (James Freaking Harden)")
+ax.scatter(cluster_4[:, 0], cluster_4[:, 1], label = "Cluster 4 (Middle Top 50 Scorers) ")
+
+
 
 centers = kmeans.cluster_centers_
-ax.scatter(centers[:, 0], centers[:, 1], c = 'black', s = 200, alpha = .5, label = 'Cluster center')
 
-ax.legend(loc='best', prop={'size': 12, "family": "Rockwell"})
+ax.scatter(centers[:, 0], centers[:, 1], c = 'black', s = 200, alpha = .5, label = 'Cluster Center')
 
-ax.set_xlabel('PPG')
-ax.set_ylabel('USG%')
+ax.legend(loc ='best', prop = {'size': 8})
 
-pts_usg_clustered.suptitle("Clustered points and usage", weight = 'bold', size = 18)
+ax.set_xlabel('Points Per Game')
+ax.set_ylabel('Usage (%)')
 
-pts_usg_clustered.text(x = -0.02, y = -0.08,
-    s = '____________________________________________________________',
-    fontsize = 14, color = 'grey', horizontalalignment='left')
+points_usage_clustered.suptitle("Clustered Points and Usage")
 
-pts_usg_clustered.text(x = -0.02, y = -.14,
-    s = 'https://dribbleanalytics.blog                     ',
-    fontsize = 14, fontname = 'Rockwell', color = 'grey', horizontalalignment='left')
 
-pts_usg_clustered.savefig('pts-usg-clustered.png', dpi = 400, bbox_inches = 'tight')
 ```
 
 Output:
 
-!['Insert Image'](/images/big_data/clustering/nba_prac.png)
+!['Insert Image'](/images/big_data/clustering/cluster_points.png)
+
+
+
+
+
+
+
 
 
 ## Cluster Validity
