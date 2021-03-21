@@ -391,6 +391,52 @@ Typical Questions to answer:
 
 <a href="/Files/Data_Series/clustering/diabetes.csv" class="btn btn--success">Diabetes File Download</a>
 
+```python
+import pandas as pd
+
+data = pd.read_csv('diabetes.csv',header='infer')
+data.head()
+```
+
+Output:
+
+|   	| preg 	| plas 	| pres 	| skin 	| insu 	| mass 	|  pedi 	| age 	|           class 	|
+|--:	|-----:	|-----:	|-----:	|-----:	|-----:	|-----:	|------:	|----:	|----------------:	|
+| 0 	|    6 	|  148 	|   72 	|   35 	|    0 	| 33.6 	| 0.627 	|  50 	| tested_positive 	|
+| 1 	|    1 	|   85 	|   66 	|   29 	|    0 	| 26.6 	| 0.351 	|  31 	| tested_negative 	|
+| 2 	|    8 	|  183 	|   64 	|    0 	|    0 	| 23.3 	| 0.672 	|  32 	| tested_positive 	|
+| 3 	|    1 	|   89 	|   66 	|   23 	|   94 	| 28.1 	| 0.167 	|  21 	| tested_negative 	|
+| 4 	|    0 	|  137 	|   40 	|   35 	|  168 	| 43.1 	| 2.288 	|  33 	| tested_positive 	|
+
+
+```python
+Y = (data['class'] == 'tested_positive')*1
+X = data.drop('class',axis=1)
+```
+
+```python
+from sklearn import cluster, metrics
+
+k_means = cluster.KMeans(n_clusters = 2)
+k_means.fit(X)
+metrics.confusion_matrix(Y,k_means.labels_)
+```
+Output:
+
+```python
+array([[421,  79],
+       [182,  86]])
+```
+
+```python
+metrics.adjusted_rand_score(Y,k_means.labels_)
+```
+
+Output:
+
+**0.07438695547529094**
+
+
 
 ## Hierarchical Clustering
 
