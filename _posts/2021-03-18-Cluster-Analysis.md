@@ -3,6 +3,9 @@ title: 'Cluster Analysis'
 
 date: 2021-3-18
 
+header:
+
+  image: "/images/big_data/clustering/nba_prac.png"
 
 toc: true
 toc_label: "Table of Contents" 
@@ -382,10 +385,10 @@ Output:
 Typical Questions to answer:
 
 * How many Clusters are there in  the data?
-* Are the clusters real or are they nothing more than accidental groupings of thedata
+* Are the clusters real or are they nothing more than accidental groupings of the data
 
 
-
+We need some sort of *statistical framework* to interpet a measure fir 
 
 ### Python Examples of Cluster Validation
 
@@ -434,7 +437,7 @@ metrics.adjusted_rand_score(Y,k_means.labels_)
 
 Output:
 
-**0.07438695547529094**
+Adjusted Rand Index: **0.07438695547529094**
 
 
 
