@@ -18,12 +18,10 @@ I found a College Basketball Dataset (2013 - 2021 seasons on Kaggle) for their a
 
 [Link to College Basketball Dataset](https://www.kaggle.com/andrewsundberg/college-basketball-dataset)
 
-Here direct downloads
+Here direct download to the College Basketball CSV file, using data from 2013-2019
+
 
 <a href="/Files/Data_Series/march_madness/cbb.csv" class="btn btn--success">CBB File Download</a>
-
-<a href="/Files/Data_Series/march_madness/cbb21.csv" class="btn btn--success">2021 CBB File Download</a>
-
 
 
 ```python
@@ -313,6 +311,9 @@ Now that we have our **Model** we can import a file from 2018 and use that as a 
 
 Lets start again by importing data from 2019 College Basketball Season
 
+
+<a href="/Files/Data_Series/march_madness/cbb19.csv" class="btn btn--success">2019 CBB File Download</a>
+
 **Note:** We removed **Year** from column_names since it's not a column in the CSV file
 
 ```python
@@ -466,6 +467,9 @@ Are trained model looks pretty solid when testing the 2019 NCAA Data on it!
 ## Running Model on 2021 Data
 
 Lets now run our trained model on the 2021 Data to predict the number of wins for each team!!
+
+<a href="/Files/Data_Series/march_madness/cbb21.csv" class="btn btn--success">2021 CBB File Download</a>
+
 
 We have to Change a few columns in the 2021 dataset!
 
