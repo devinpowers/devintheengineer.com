@@ -474,29 +474,36 @@ Adjusted Rand Index: **0.07438695547529094**
 ```python
 import pandas as pd
 
-data = pd.read_csv('animals.csv',header='infer')
+data = pd.read_csv('animals.csv')
 names = data['Name']
 Y = data['Class']
 X = data.drop(['Name','Class'],axis=1)
-data[:10]
+data
 ```
 Output:
 
-|   	|          Name 	| warmBlooded 	| coldBlooded 	| GiveBirth 	| LayEggs 	| CanSwim 	| CanFly 	| HasLegs 	| HasScales 	|     Class 	|
-|--:	|--------------:	|------------:	|------------:	|----------:	|--------:	|--------:	|-------:	|--------:	|----------:	|----------:	|
-| 0 	|         human 	|           1 	|           0 	|         1 	|       0 	|       0 	|      0 	|       1 	|         0 	|    mammal 	|
-| 1 	|        python 	|           0 	|           1 	|         0 	|       1 	|       0 	|      0 	|       0 	|         1 	|   reptile 	|
-| 2 	|        salmon 	|           0 	|           1 	|         0 	|       1 	|       1 	|      0 	|       0 	|         1 	|      fish 	|
-| 3 	|         whale 	|           1 	|           0 	|         1 	|       0 	|       1 	|      0 	|       0 	|         0 	|    mammal 	|
-| 4 	|          frog 	|           0 	|           1 	|         0 	|       1 	|       1 	|      0 	|       1 	|         0 	| amphibian 	|
-| 5 	| komodo dragon 	|           0 	|           1 	|         0 	|       1 	|       0 	|      0 	|       1 	|         1 	|   reptile 	|
-| 6 	|           bat 	|           1 	|           0 	|         1 	|       0 	|       0 	|      1 	|       1 	|         0 	|    mammal 	|
-| 7 	|        pigeon 	|           1 	|           0 	|         0 	|       1 	|       0 	|      1 	|       1 	|         0 	|      bird 	|
-| 8 	|           cat 	|           1 	|           0 	|         1 	|       0 	|       0 	|      0 	|       1 	|         0 	|    mammal 	|
-| 9 	| leopard shark 	|           0 	|           1 	|         1 	|       0 	|       1 	|      0 	|       0 	|         1 	|      fish 	|
+|    	|          Name 	| warmBlooded 	| coldBlooded 	| GiveBirth 	| LayEggs 	| CanSwim 	| CanFly 	| HasLegs 	| HasScales 	|     Class 	|
+|---:	|--------------:	|------------:	|------------:	|----------:	|--------:	|--------:	|-------:	|--------:	|----------:	|----------:	|
+|  0 	|         human 	|           1 	|           0 	|         1 	|       0 	|       0 	|      0 	|       1 	|         0 	|    mammal 	|
+|  1 	|        python 	|           0 	|           1 	|         0 	|       1 	|       0 	|      0 	|       0 	|         1 	|   reptile 	|
+|  2 	|        salmon 	|           0 	|           1 	|         0 	|       1 	|       1 	|      0 	|       0 	|         1 	|      fish 	|
+|  3 	|         whale 	|           1 	|           0 	|         1 	|       0 	|       1 	|      0 	|       0 	|         0 	|    mammal 	|
+|  4 	|          frog 	|           0 	|           1 	|         0 	|       1 	|       1 	|      0 	|       1 	|         0 	| amphibian 	|
+|  5 	| komodo dragon 	|           0 	|           1 	|         0 	|       1 	|       0 	|      0 	|       1 	|         1 	|   reptile 	|
+|  6 	|           bat 	|           1 	|           0 	|         1 	|       0 	|       0 	|      1 	|       1 	|         0 	|    mammal 	|
+|  7 	|        pigeon 	|           1 	|           0 	|         0 	|       1 	|       0 	|      1 	|       1 	|         0 	|      bird 	|
+|  8 	|           cat 	|           1 	|           0 	|         1 	|       0 	|       0 	|      0 	|       1 	|         0 	|    mammal 	|
+|  9 	| leopard shark 	|           0 	|           1 	|         1 	|       0 	|       1 	|      0 	|       0 	|         1 	|      fish 	|
+| 10 	|        turtle 	|           0 	|           1 	|         0 	|       1 	|       1 	|      0 	|       1 	|         1 	|   reptile 	|
+| 11 	|       penguin 	|           1 	|           0 	|         0 	|       1 	|       1 	|      0 	|       1 	|         0 	|      bird 	|
+| 12 	|     porcupine 	|           1 	|           0 	|         1 	|       0 	|       0 	|      0 	|       1 	|         0 	|    mammal 	|
+| 13 	|           eel 	|           0 	|           1 	|         0 	|       1 	|       1 	|      0 	|       0 	|         1 	|      fish 	|
+| 14 	|    salamander 	|           0 	|           1 	|         0 	|       1 	|       1 	|      0 	|       1 	|         0 	| amphibian 	|
+| 15 	|     alligator 	|           0 	|           1 	|         0 	|       1 	|       1 	|      0 	|       1 	|         1 	|   reptile 	|
 
 
 
+Import these *Libraries*
 ```python
 from scipy.cluster import hierarchy
 import matplotlib.pyplot as plt
