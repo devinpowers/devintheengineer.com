@@ -5,7 +5,7 @@ date: 2021-3-18
 
 header:
 
-  image: "/images/big_data/clustering/cluster_points.png"
+  image: "/images/big_data/clustering/james_harden.png"
 
 toc: true
 toc_label: "Table of Contents" 
