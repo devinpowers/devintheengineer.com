@@ -18,6 +18,12 @@ I found a College Basketball Dataset (2013 - 2021 seasons on Kaggle) for their a
 
 [Link to College Basketball Dataset](https://www.kaggle.com/andrewsundberg/college-basketball-dataset)
 
+Here direct downloads
+
+<a href="/Files/Data_Series/march_madness/cbb.csv" class="btn btn--success">CBB File Download</a>
+
+<a href="/Files/Data_Series/march_madness/cbb21.csv" class="btn btn--success">2021 CBB File Download</a>
+
 
 
 ```python
