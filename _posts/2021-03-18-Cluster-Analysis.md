@@ -397,9 +397,20 @@ Typical Questions to answer:
 * Are the clusters real or are they nothing more than accidental groupings of the data
 
 
-We need some sort of *statistical framework* to interpet a measure fir 
+We need some sort of *statistical framework* to interpet a measure for Cluster Validity
 
-### Python Examples of Cluster Validation
+
+### Rand Index
+
+**What is the Rand Index?**
+
+* Rand Index or Rand Measure in statistics (data clustering), is a measure of the similarity between two *two clustering*.
+
+[Heres the wiki link ](https://en.wikipedia.org/wiki/Rand_index)
+
+
+
+### Python Examples of Cluster Validation (using the Rand Index)
 
 <a href="/Files/Data_Series/clustering/diabetes.csv" class="btn btn--success">Diabetes File Download</a>
 
@@ -454,6 +465,8 @@ Adjusted Rand Index: **0.07438695547529094**
 
 
 * Hierachical Clustering produces nested clusters organized as a tree!
+* It has the advantage of not having a *pre-defined* number of clusters, but it doesn't work well when we have huge amounts of data!
+
 
 
 ### Python Examples of Hierarchical Clustering
@@ -545,3 +558,9 @@ metrics.adjusted_rand_score(Y,labels)
 Output:
 
 Rand Score: **0.6180555555555556**
+
+
+
+
+## More examples of Clustering 
+
