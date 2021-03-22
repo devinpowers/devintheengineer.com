@@ -312,12 +312,14 @@ Graph the **Clustered** **Points** and **Usage**
 ```python
 points_usage_clustered, ax = plt.subplots()
 
+# List of the 4 Clusters
+
 cluster_1 = []
 cluster_2 = []
 cluster_3 = []
 cluster_4 = []
 
-# add Cluster to each desinated cluster list above
+# Add Cluster to each desinated cluster list above
 for i in range(len(y_kmeans)):
     if(y_kmeans[i] == 0):
         cluster_1.append(x[i])
@@ -329,30 +331,38 @@ for i in range(len(y_kmeans)):
         cluster_4.append(x[i])
         
 # vstack stacks things refer to numpy doc --> https://numpy.org/doc/stable/reference/generated/numpy.vstack.html
+
+#vstacks is an array so array([[21.5, 25.6],[points, usage(%)],..])
+
 cluster_1 = np.vstack(cluster_1)
 cluster_2 = np.vstack(cluster_2)
 cluster_3 = np.vstack(cluster_3)
 cluster_4 = np.vstack(cluster_4)
 
+
+# ax.scatter(x,y, label = 'name of what were plotting', s = size )
 ax.scatter(cluster_1[:, 0], cluster_1[:, 1], label = "Cluster 1 (Bottom Top 50)")
 ax.scatter(cluster_2[:, 0], cluster_2[:, 1], label = "Cluster 2 (Top Scorers in NBA)")
 ax.scatter(cluster_3[:, 0], cluster_3[:, 1], label = "Cluster 3 (James Freaking Harden)")
 ax.scatter(cluster_4[:, 0], cluster_4[:, 1], label = "Cluster 4 (Middle Top 50 Scorers) ")
 
-
-
+## Heres the centroids! array([[20.56666667, 27.84666667], [x,y],..]) 
 centers = kmeans.cluster_centers_
 
+## Now we can plot the centroids (4 of them)
 ax.scatter(centers[:, 0], centers[:, 1], c = 'black', s = 200, alpha = .5, label = 'Cluster Center')
 
+# lets plot the Legend, which will include the labels for each of our 4 clusters above
 ax.legend(loc ='best', prop = {'size': 8})
 
+## Labeling the x-axis and y-axis
 ax.set_xlabel('Points Per Game')
 ax.set_ylabel('Usage (%)')
 
+## Naming our Scattered Plot!!!!
 points_usage_clustered.suptitle("Clustered Points and Usage")
 
-
+plt.show()
 ```
 
 Output:
