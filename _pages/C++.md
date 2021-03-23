@@ -220,7 +220,7 @@ Goal: Connect and Disconnect from Servers
 
 Objectives: Create your own Data Structure using Struct
 
-Goal: 
+Goal: Working with OOP
 
 
 ### Project 9
@@ -229,7 +229,7 @@ Goal:
 
 Objectives: 
 
-Goal: 
+Goal: Working with OOP
 
 
 ### Project 10
@@ -238,7 +238,7 @@ Goal:
 
 Objectives: 
 
-Goal: 
+Goal: Working with OOP
 
 
 ### Project 11
@@ -247,6 +247,6 @@ Goal:
 
 Objectives: 
 
-Goal: 
+Goal: Working with OOP
 
 
