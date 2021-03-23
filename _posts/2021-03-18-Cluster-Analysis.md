@@ -21,7 +21,7 @@ toc_label: "Table of Contents"
 
 1. Meaningfulness
 2. Usefulness
-3. u
+
 
 **Why Clustering over Classification?**
 
