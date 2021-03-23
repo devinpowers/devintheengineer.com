@@ -149,7 +149,7 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 ## Projects:
 
-#### Project 1
+### Project 1
 
 [Project One ](https://devintheengineer.com/C++/c++_project1)
 
@@ -158,7 +158,7 @@ Objectives: Intro to C++, Input and Output, using Data Types
 Goal: Simple Program to input temperature and convert it
 
 
-#### Project 2
+### Project 2
 
 [Project Two ](https://devintheengineer.com/C++/c++_project2)
 
@@ -167,7 +167,7 @@ Objectives: Loops, Conditionals
 Goal: Hyper number solver
 
 
-#### Project 3
+### Project 3
 
 [Project Three ](https://devintheengineer.com/C++/c++_project3)
 
@@ -176,15 +176,15 @@ Objectives: Loops, Conditionals, and the introduction of Functions
 Goal: Create a function that performs different math equations
 
 
-#### Project 4
+### Project 4
 
- [Project Four ](https://devintheengineer.com/C++/c++_project4)
+[Project Four ](https://devintheengineer.com/C++/c++_project4)
 
 Objectives: Working with Strings and more on Functions
 
 Goal: Create a program that will encode a sequence of strings!
 
-#### Project 5
+### Project 5
 
 [Project Five ](https://devintheengineer.com/C++/c++_project5)
 
@@ -193,7 +193,7 @@ Objectives: Working with Strings, Functions, Multiple Files (header files)
 Goal: Creating a Four-Square Cipher to hide a messsage!
 
 
-#### Project 6
+### Project 6
 
 [Project Six ](https://devintheengineer.com/C++/c++_project6)
 
@@ -203,7 +203,7 @@ Goal: Creating another Decoding thing
 
 
 
-#### Project 7
+### Project 7
 
 [Project Seven](https://devintheengineer.com/C++/c++_project7)
 
@@ -212,9 +212,9 @@ Objectives: Working with importing text files, Maps, and Sets
 Goal: Connect and Disconnect from Servers 
 
 
-# coming soon...
+### coming soon...
 
-#### Project 8
+### Project 8
 
 [Project Eight ](https://devintheengineer.com/C++/c++_project8)
 
@@ -223,16 +223,16 @@ Objectives: Create your own Data Structure using Struct
 Goal: 
 
 
-#### Project 9
+### Project 9
 
- [Project Nine ](https://devintheengineer.com/C++/c++_project9)
+[Project Nine ](https://devintheengineer.com/C++/c++_project9)
 
 Objectives: 
 
 Goal: 
 
 
-#### Project 10
+### Project 10
 
 [Project Ten ](https://devintheengineer.com/C++/c++_project10)
 
@@ -241,9 +241,9 @@ Objectives:
 Goal: 
 
 
-#### Project 11
+### Project 11
 
- [Project Eleven ](https://devintheengineer.com/C++/c++_project11)
+[Project Eleven ](https://devintheengineer.com/C++/c++_project11)
 
 Objectives: 
 
