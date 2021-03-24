@@ -404,7 +404,9 @@ We need some sort of *statistical framework* to interpet a measure for Cluster V
 
 **What is the Rand Index?**
 
-* Rand Index or Rand Measure in statistics (data clustering), is a measure of the similarity between two *two clustering*.
+* Rand Index or Rand Measure in *statistics* (data clustering), is a measure of the similarity between two *two clustering*.
+
+
 
 [Heres the wiki link ](https://en.wikipedia.org/wiki/Rand_index)
 
