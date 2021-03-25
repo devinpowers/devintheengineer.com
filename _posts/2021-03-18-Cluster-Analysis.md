@@ -394,15 +394,15 @@ Output:
 Typical Questions to answer:
 
 * How many Clusters are there in  the data?
-* Are the clusters real or are they nothing more than accidental groupings of the data
+* Are the clusters real or are they nothing more than "accidental" groupings of the data
 
 
 We need some sort of *statistical framework* to interpet a measure for Cluster Validity
 
 
-### Rand Index
+### Rand Index 
 
-**What is the Rand Index?**
+**What is the Rand Index? (External Measure)**
 
 * Rand Index or Rand Measure in *statistics* (data clustering), is a measure of the similarity between two *two clustering*.
 
