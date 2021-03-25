@@ -506,9 +506,69 @@ Output:
 
 
 Import these *Libraries*
+
+```python
+import numpy as np
+
+X.to_numpy()
+X
+```
+
+Output:
+
+```python
+array([[1, 0, 1, 0, 0, 0, 1, 0],
+       [0, 1, 0, 1, 0, 0, 0, 1],
+       [0, 1, 0, 1, 1, 0, 0, 1],
+       [1, 0, 1, 0, 1, 0, 0, 0],
+       [0, 1, 0, 1, 1, 0, 1, 0],
+       [0, 1, 0, 1, 0, 0, 1, 1],
+       [1, 0, 1, 0, 0, 1, 1, 0],
+       [1, 0, 0, 1, 0, 1, 1, 0],
+       [1, 0, 1, 0, 0, 0, 1, 0],
+       [0, 1, 1, 0, 1, 0, 0, 1],
+       [0, 1, 0, 1, 1, 0, 1, 1],
+       [1, 0, 0, 1, 1, 0, 1, 0],
+       [1, 0, 1, 0, 0, 0, 1, 0],
+       [0, 1, 0, 1, 1, 0, 0, 1],
+       [0, 1, 0, 1, 1, 0, 1, 0],
+       [0, 1, 0, 1, 1, 0, 1, 1]])
+
+```
+Turns our table into a Matrix!! (**to_numpy()** function)
+
+
+
+["Link to Scipy Documentation"](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html)
+
+
+scipy.cluster.hierarchy.linkage( y, Method , Metric, optimal_ordering)
+
+**y**: May be either a *1-D condensed distance matrix* or a *2-D array of observation vectors*
+**Method**:  Used to compute the distance d(s,t) between the 2 clusters s and t
+
+    * method = 'single'
+    * method = 'complete'
+    * method = 'average'
+    * method = 'ward'
+    * method = 'weighted'
+    * method = 'centroid'
+    * method = 'median'
+
+**Metric**: The distance metric to use in the case that y is a collection of observation vectors; ignored otherwise.
+**optimal_ordering**: If True, the linkage matrix will be reordered so that the distance between successive leaves is minimal
+
+Note that method, metric and optimal_ordering are all **optional**
+
+**Returns:**
+
+* a hierarchical clustering encoded as a linkage matrix.
+
+
 ```python
 from scipy.cluster import hierarchy
 import matplotlib.pyplot as plt
+
 %matplotlib inline
 from pandas import Series
 import numpy as np
@@ -517,6 +577,8 @@ Z = hierarchy.linkage(X.to_numpy(), 'complete')
 dn = hierarchy.dendrogram(Z,labels=names.tolist(),orientation='right')
 
 ```
+
+
 
 Output:
 
