@@ -657,6 +657,13 @@ Rand Score: **0.4411764705882353**
 
 **Adjusting the Threshold to (t=1)**
 
+[Scipy Doc](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.fcluster.html)
+
+**What does the fcluster to?**
+
+* Form flat clusters from the hierarchical clustering defined by the given linkage matrix.
+
+
 ```python
 Z = hierarchy.linkage(X.to_numpy(), 'complete')
 labels = hierarchy.fcluster(Z, t=1)
