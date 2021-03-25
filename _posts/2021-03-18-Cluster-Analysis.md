@@ -565,6 +565,20 @@ Note that method, metric and optimal_ordering are all **optional**
 * a hierarchical clustering encoded as a linkage matrix.
 
 
+**How about hierarchy.dendrogram ?**
+
+["Link to Hierarchy Dendrogram"](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.dendrogram.html)
+
+**Parameters**:
+
+* **Z**: The linkage matrix encoding the hierarchical clustering to render as a dendrogram
+* **Orientation**: The direction to plot the dendrogram, which can be any of the following strings:
+
+    * top, bottom, left, right
+* **labels**: text
+
+
+
 ```python
 from scipy.cluster import hierarchy
 import matplotlib.pyplot as plt
@@ -573,12 +587,11 @@ import matplotlib.pyplot as plt
 from pandas import Series
 import numpy as np
 
-Z = hierarchy.linkage(X.to_numpy(), 'complete')
+Z = hierarchy.linkage(X.to_numpy(), 'average')
+
 dn = hierarchy.dendrogram(Z,labels=names.tolist(),orientation='right')
 
 ```
-
-
 
 Output:
 
