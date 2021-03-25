@@ -539,7 +539,7 @@ Turns our table into a Matrix!! (**to_numpy()** function)
 
 
 
-["Link to Scipy Documentation"](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html)
+[Link to Scipy Documentation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html)
 
 
 scipy.cluster.hierarchy.linkage( y, Method , Metric, optimal_ordering)
@@ -547,13 +547,13 @@ scipy.cluster.hierarchy.linkage( y, Method , Metric, optimal_ordering)
 **y**: May be either a *1-D condensed distance matrix* or a *2-D array of observation vectors*
 **Method**:  Used to compute the distance d(s,t) between the 2 clusters s and t
 
-    * method = 'single'
-    * method = 'complete'
-    * method = 'average'
-    * method = 'ward'
-    * method = 'weighted'
-    * method = 'centroid'
-    * method = 'median'
+* method = 'single'
+* method = 'complete'
+* method = 'average'
+* method = 'ward'
+* method = 'weighted'
+* method = 'centroid'
+* method = 'median'
 
 **Metric**: The distance metric to use in the case that y is a collection of observation vectors; ignored otherwise.
 **optimal_ordering**: If True, the linkage matrix will be reordered so that the distance between successive leaves is minimal
@@ -567,7 +567,7 @@ Note that method, metric and optimal_ordering are all **optional**
 
 **How about hierarchy.dendrogram ?**
 
-["Link to Hierarchy Dendrogram"](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.dendrogram.html)
+[Link to Hierarchy Dendrogram](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.dendrogram.html)
 
 **Parameters**:
 
@@ -578,7 +578,6 @@ Note that method, metric and optimal_ordering are all **optional**
 * **labels**: text
 
 
-
 ```python
 from scipy.cluster import hierarchy
 import matplotlib.pyplot as plt
@@ -587,9 +586,9 @@ import matplotlib.pyplot as plt
 from pandas import Series
 import numpy as np
 
-Z = hierarchy.linkage(X.to_numpy(), 'average')
+Z = hierarchy.linkage(X.to_numpy(), 'complete')
 
-dn = hierarchy.dendrogram(Z,labels=names.tolist(),orientation='right')
+dn = hierarchy.dendrogram(Z,labels=names.tolist(),orientation='left')
 
 ```
 
@@ -598,11 +597,11 @@ Output:
 !['Insert Image'](/images/big_data/clustering/hierarchy.png)
 
 
+Lets check to see the number of Clusters given the threshold (t = 1.1)
 
 ```python
 Z = hierarchy.linkage(X.to_numpy(), 'complete')
-threshold = 1.1
-labels = hierarchy.fcluster(Z, threshold)
+labels = hierarchy.fcluster(Z, t = 1.1)
 labels
 ```
 
@@ -614,6 +613,39 @@ array([1, 4, 5, 2, 3, 4, 1, 1, 1, 2, 6, 1, 1, 5, 3, 6], dtype=int32)
 
 **Rand Score**
 
+What is Y again?
+
+```python
+Y
+```
+
+Output:
+
+```python
+0        mammal
+1       reptile
+2          fish
+3        mammal
+4     amphibian
+5       reptile
+6        mammal
+7          bird
+8        mammal
+9          fish
+10      reptile
+11         bird
+12       mammal
+13         fish
+14    amphibian
+15      reptile
+Name: Class, dtype: object
+```
+
+**Adjusted Rand Score**
+
+adjusted_rand_score(labels_true, labels_predicted)
+
+
 ```python
 metrics.adjusted_rand_score(Y,labels)
 ```
@@ -622,10 +654,11 @@ Output:
 
 Rand Score: **0.4411764705882353**
 
+**Adjusting the Threshold to (t=1)**
+
 ```python
 Z = hierarchy.linkage(X.to_numpy(), 'complete')
-threshold = 1.0
-labels = hierarchy.fcluster(Z, threshold)
+labels = hierarchy.fcluster(Z, t=1)
 labels
 ```
 
@@ -634,6 +667,7 @@ Output:
 ```python
 array([1, 5, 6, 3, 4, 5, 1, 2, 1, 3, 7, 2, 1, 6, 4, 7], dtype=int32)
 ```
+**Adjusted Rand Score**
 
 ```python
 metrics.adjusted_rand_score(Y,labels)
@@ -646,7 +680,7 @@ Rand Score: **0.6180555555555556**
 
 
 
-## More examples of Clustering 
+## More examples of Clustering....
 
 ```python
 import pandas as pd
