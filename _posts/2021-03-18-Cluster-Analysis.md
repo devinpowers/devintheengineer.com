@@ -466,7 +466,7 @@ Adjusted Rand Index: **0.07438695547529094**
 ## Hierarchical Clustering
 
 
-* Hierachical Clustering produces nested clusters organized as a tree!
+* Hierachical Clustering produces *nested clusters* organized as a tree!
 * It has the advantage of not having a *pre-defined* number of clusters, but it doesn't work well when we have huge amounts of data!
 
 
