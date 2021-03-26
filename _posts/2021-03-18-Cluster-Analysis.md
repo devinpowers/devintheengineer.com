@@ -1170,7 +1170,9 @@ plt.scatter(y_test, y_pred_test)
 Output:
 
 Root mean squared error = 78.1049
+
 R-square = 0.2560
+
 Slope Coefficients: [[-1.56802833  0.75050291  1.63264151  4.80497766 -6.6414188  -1.47624944-0.25073801 -2.70947104 -7.33484175]]
 
 Intercept: [1660.6910474]
