@@ -546,7 +546,7 @@ scipy.cluster.hierarchy.linkage( y, Method , Metric, optimal_ordering)
 
 **y**: May be either a *1-D condensed distance matrix* or a *2-D array of observation vectors*
 
-**Method**:  Used to compute the distance d(s,t) between the 2 clusters s and t
+**Method**:  Used to compute the distance d(s,t) between the 2 clusters s and t (Inter-Cluster Proximity)
 
 * method = 'single'
 * method = 'complete'
