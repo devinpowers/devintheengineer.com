@@ -1130,3 +1130,51 @@ Output:
 | 27 	|     1 	|   2 	|    3 	|   -7 	| -5.0 	| 1022.0 	| 5.36 	|  1 	|  0 	|
 | 28 	|     1 	|   2 	|    4 	|   -7 	| -5.0 	| 1022.0 	| 6.25 	|  2 	|  0 	|
 
+
+Lets divide the data into 70% training and 30% test sets using **train_test_split** 
+
+```python
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split( X,Y,test_size =0.3, random_state=1)
+```
+
+Now Lets fit a Linear Regression model to the training data.
+
+```python
+from sklearn import linear_model
+from sklearn.metrics import mean_squared_error, r2_score
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Create linear regression object
+regr = linear_model.LinearRegression()
+
+# Fit regression model to the training set
+regr.fit(X_train, y_train)
+
+# Apply model to the test set
+y_pred_test = regr.predict(X_test)
+
+
+# Evaluate the results
+
+print("Root mean squared error = %.4f" % np.sqrt(mean_squared_error(y_test, y_pred_test)))
+print("R-square = %.4f" % r2_score(y_test, y_pred_test))
+print('Slope Coefficients:', regr.coef_ )
+print('Intercept:', regr.intercept_)
+
+plt.scatter(y_test, y_pred_test)
+```
+
+Output:
+
+Root mean squared error = 78.1049
+R-square = 0.2560
+Slope Coefficients: [[-1.56802833  0.75050291  1.63264151  4.80497766 -6.6414188  -1.47624944-0.25073801 -2.70947104 -7.33484175]]
+
+Intercept: [1660.6910474]
+
+!['Insert Image'](/images/big_data/clustering/regression_model.png)
+
+
