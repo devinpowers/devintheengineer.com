@@ -906,3 +906,161 @@ Output:
 
 !['Insert Image'](/images/big_data/clustering/color_scattered.png)
 
+
+
+### More examples
+
+The goal for this example is to predict wheather the office room is occupied (1) or not (0).
+
+
+```python
+import pandas as p
+
+data = p.read_csv('train.csv')
+data.head()
+```
+
+Output:
+
+|   	|           date 	| Temperature 	| Humidity 	| Light 	|   CO2 	| HumidityRatio 	| Occupancy 	|
+|--:	|---------------:	|------------:	|---------:	|------:	|------:	|--------------:	|----------:	|
+| 0 	| 2/4/2015 18:07 	|      23.000 	|   27.200 	|   0.0 	| 681.5 	|      0.004728 	|         0 	|
+| 1 	| 2/4/2015 18:16 	|      22.790 	|   27.445 	|   0.0 	| 689.0 	|      0.004710 	|         0 	|
+| 2 	| 2/4/2015 19:05 	|      22.245 	|   27.290 	|   0.0 	| 602.5 	|      0.004530 	|         0 	|
+| 3 	| 2/4/2015 19:06 	|      22.200 	|   27.290 	|   0.0 	| 598.0 	|      0.004517 	|         0 	|
+| 4 	| 2/4/2015 19:12 	|      22.200 	|   27.290 	|   0.0 	| 593.5 	|      0.004517 	|         0 	|
+
+
+Drop any useless columns (data) and save X as our columns of intrest and Y as our predictor 
+
+```python
+data = data.drop('date',axis=1)
+Y = data['Occupancy']
+X = data.drop('Occupancy',axis=1)
+```
+
+Now lets train the following classifiers (using 5-fold cross validation) on the data above and calculate the average accuracy of the cross-validation for each method  (Decision Tree, K-Nearest Neighbor, Logistic Regression).  Vary the hyperparameter of the classifier and draw a plot that shows the average *cross-validation* accuracy versus hyperparamter values for each classification method shown below:
+
+
+1) Decision Tree (MaxDepth = 1,5,10,50,100)
+2) K-Nearest Neigbor (k = 1,2,3,4,5,10,15)
+3) Logestic Regression (C = 0.001, 0.01, 0.1, 0.5, 1)
+
+
+**Decision Tree Classifier**
+
+```python
+import numpy as np
+from sklearn import tree
+from sklearn.metrics import accuracy_score
+from sklearn.model_selection import cross_val_score
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+maxdepths = [1, 5, 10, 50, 100]
+treeAcc = []
+
+for depth in maxdepths:
+    clf = tree.DecisionTreeClassifier(max_depth=depth)
+    scores = cross_val_score(clf, X, Y, cv=5)
+    treeAcc.append(scores.mean())
+
+plt.plot(maxdepths, treeAcc, 'ro-')
+plt.xlabel('Maximum depth')
+plt.ylabel('Accuracy')
+
+```
+Output:
+
+!['Insert Image'](/images/big_data/clustering/decison_tree.png)
+
+
+**K-Nearest Neigbor**
+
+```python
+from sklearn.neighbors import KNeighborsClassifier
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+numNeighbors = [1, 5, 10, 15, 20, 25, 30]
+knn_acc = []
+
+for nn in numNeighbors:
+    clf = KNeighborsClassifier(n_neighbors=nn)
+    scores = cross_val_score(clf, X, Y, cv=5)
+    knn_acc.append(scores.mean())
+    
+plt.plot(numNeighbors, knn_acc, 'ro-', color = 'blue')
+plt.xlabel('Number of neighbors')
+plt.ylabel('Accuracy')
+```
+
+Output:
+
+!['Insert Image'](/images/big_data/clustering/k_nearest.png)
+
+
+**Logestic Regression**
+
+```python
+from sklearn import linear_model
+
+regularizers = [0.001, 0.01, 0.1, 0.5, 1]
+logistic_acc = []
+for C in regularizers:
+    clf = linear_model.LogisticRegression(C=C)
+    scores = cross_val_score(clf, X, Y, cv=5)
+    logistic_acc.append(scores.mean())
+print(logistic_acc)
+
+plt.plot(regularizers, logistic_acc, 'ro-')
+plt.xlabel('Regularizer')
+plt.ylabel('Accuracy')
+```
+
+Output:
+
+!['Insert Image'](/images/big_data/clustering/logestics_regression.png)
+
+
+
+Now lets draw a Bar Chart to compare the test accuracies using the 3 methods above!
+
+```python
+data = p.read_csv('test.csv',header='infer')
+data = data.drop('date',axis=1)
+Y_test = data['Occupancy']
+X_test = data.drop('Occupancy',axis=1)
+```
+
+```python
+from sklearn import tree
+from sklearn.metrics import accuracy_score
+
+bestdepth = 5
+clf = tree.DecisionTreeClassifier(max_depth=bestdepth)
+clf = clf.fit(X, Y)
+Ypred = clf.predict(X_test)
+tree_acc = accuracy_score(Y_test, Ypred)
+
+bestNN = 5
+clf = KNeighborsClassifier(n_neighbors=nn)
+clf = clf.fit(X, Y)
+Ypred = clf.predict(X_test)
+knn_acc = accuracy_score(Y_test, Ypred)
+
+bestC = 1
+clf = linear_model.LogisticRegression(C=bestC)
+clf = clf.fit(X, Y)
+Ypred = clf.predict(X_test)
+logistic_acc = accuracy_score(Y_test, Ypred)
+
+methods = ['Dtree', 'KNN', 'Logistic']
+plt.bar([1,2,3], [tree_acc, knn_acc, logistic_acc])
+plt.xticks([1.5,2.5,3.5], methods)
+plt.ylim(0.9,1.0)
+```
+
+Output:
+
+!['Insert Image'](/images/big_data/clustering/bar_chart.png)
