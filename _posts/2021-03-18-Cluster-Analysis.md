@@ -943,7 +943,9 @@ Now lets train the following classifiers (using 5-fold cross validation) on the 
 
 
 1) Decision Tree (MaxDepth = 1,5,10,50,100)
+
 2) K-Nearest Neigbor (k = 1,2,3,4,5,10,15)
+
 3) Logestic Regression (C = 0.001, 0.01, 0.1, 0.5, 1)
 
 
