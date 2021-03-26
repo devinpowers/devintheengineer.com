@@ -1064,3 +1064,69 @@ plt.ylim(0.9,1.0)
 Output:
 
 !['Insert Image'](/images/big_data/clustering/bar_chart.png)
+
+
+### Another One
+
+<a href="/Files/Data_Series/clustering/PRSA_data.csv" class="btn btn--success">File Download</a>
+
+```python
+import pandas as pd
+
+data = pd.read_csv("PRSA_data.csv")
+data.head()
+```
+
+Output:
+
+|   	| No 	| year 	| month 	| day 	| hour 	| pm2.5 	| DEWP 	|  TEMP 	|   PRES 	| cbwd 	|   Iws 	| Is 	| Ir 	|
+|--:	|---:	|-----:	|------:	|----:	|-----:	|------:	|-----:	|------:	|-------:	|-----:	|------:	|---:	|---:	|
+| 0 	|  1 	| 2010 	|     1 	|   1 	|    0 	|   NaN 	|  -21 	| -11.0 	| 1021.0 	|   NW 	|  1.79 	|  0 	|  0 	|
+| 1 	|  2 	| 2010 	|     1 	|   1 	|    1 	|   NaN 	|  -21 	| -12.0 	| 1020.0 	|   NW 	|  4.92 	|  0 	|  0 	|
+| 2 	|  3 	| 2010 	|     1 	|   1 	|    2 	|   NaN 	|  -21 	| -11.0 	| 1019.0 	|   NW 	|  6.71 	|  0 	|  0 	|
+| 3 	|  4 	| 2010 	|     1 	|   1 	|    3 	|   NaN 	|  -21 	| -14.0 	| 1019.0 	|   NW 	|  9.84 	|  0 	|  0 	|
+| 4 	|  5 	| 2010 	|     1 	|   1 	|    4 	|   NaN 	|  -20 	| -12.0 	| 1018.0 	|   NW 	| 12.97 	|  0 	|  0 	|
+
+
+Lets look the missing values! Lets remove any rows that contain missing values. Lets also discard the columsn named **"No"**, **"year"**, **"cbwd"**.
+
+```python
+data = data.drop('No', 1)
+data = data.drop('cbwd', 1)
+data = data.drop('year', 1)
+
+# Drop any columns with missing values
+data = data.dropna()
+data.head()
+```
+
+Output:
+
+|    	| month 	| day 	| hour 	| pm2.5 	| DEWP 	| TEMP 	|   PRES 	|  Iws 	| Is 	| Ir 	|
+|---:	|------:	|----:	|-----:	|------:	|-----:	|-----:	|-------:	|-----:	|---:	|---:	|
+| 24 	|     1 	|   2 	|    0 	| 129.0 	|  -16 	| -4.0 	| 1020.0 	| 1.79 	|  0 	|  0 	|
+| 25 	|     1 	|   2 	|    1 	| 148.0 	|  -15 	| -4.0 	| 1020.0 	| 2.68 	|  0 	|  0 	|
+| 26 	|     1 	|   2 	|    2 	| 159.0 	|  -11 	| -5.0 	| 1021.0 	| 3.57 	|  0 	|  0 	|
+| 27 	|     1 	|   2 	|    3 	| 181.0 	|   -7 	| -5.0 	| 1022.0 	| 5.36 	|  1 	|  0 	|
+| 28 	|     1 	|   2 	|    4 	| 138.0 	|   -7 	| -5.0 	| 1022.0 	| 6.25 	|  2 	|  0 	|
+
+
+say stuff here!!
+
+
+```python
+Y = pd.DataFrame(data['pm2.5'])
+X = pd.DataFrame(data.drop('pm2.5',1))
+X.head()
+```
+
+Output:
+
+|    	| month 	| day 	| hour 	| DEWP 	| TEMP 	|   PRES 	|  Iws 	| Is 	| Ir 	|
+|---:	|------:	|----:	|-----:	|-----:	|-----:	|-------:	|-----:	|---:	|---:	|
+| 24 	|     1 	|   2 	|    0 	|  -16 	| -4.0 	| 1020.0 	| 1.79 	|  0 	|  0 	|
+| 25 	|     1 	|   2 	|    1 	|  -15 	| -4.0 	| 1020.0 	| 2.68 	|  0 	|  0 	|
+| 26 	|     1 	|   2 	|    2 	|  -11 	| -5.0 	| 1021.0 	| 3.57 	|  0 	|  0 	|
+| 27 	|     1 	|   2 	|    3 	|   -7 	| -5.0 	| 1022.0 	| 5.36 	|  1 	|  0 	|
+| 28 	|     1 	|   2 	|    4 	|   -7 	| -5.0 	| 1022.0 	| 6.25 	|  2 	|  0 	|
+
