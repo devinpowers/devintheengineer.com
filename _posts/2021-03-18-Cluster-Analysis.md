@@ -551,7 +551,7 @@ scipy.cluster.hierarchy.linkage( y, Method , Metric, optimal_ordering)
 * method = 'single' (or Min, shortest distance)
 * method = 'complete' (or Max, largest distance)
 * method = 'average'
-* method = 'ward'
+* method = 'ward' (Proximity of two clusters is based on the increase in the SSE when two clusters are merged)
 * method = 'weighted'
 * method = 'centroid'
 * method = 'median'
