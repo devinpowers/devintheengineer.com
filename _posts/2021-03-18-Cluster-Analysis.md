@@ -548,8 +548,8 @@ scipy.cluster.hierarchy.linkage( y, Method , Metric, optimal_ordering)
 
 **Method**:  Used to compute the distance d(s,t) between the 2 clusters s and t (Inter-Cluster Proximity)
 
-* method = 'single'
-* method = 'complete'
+* method = 'single' (or Min, shortest distance)
+* method = 'complete' (or Max, largest distance)
 * method = 'average'
 * method = 'ward'
 * method = 'weighted'
