@@ -807,3 +807,102 @@ Output:
 !['Insert Image'](/images/big_data/clustering/time_cluster.png)
 
 
+### Another Example of K-Means Clustering Algorithm
+
+Here we will  write the code for a variation of k-means clustering algorithm known as **bisecting k-means**.
+
+Suppose you want to create 4 clusters. The algorithm will first apply standard k-means algorithm to bisect the entire data into 2 clusters, say, C1 and C2. It then computes the sum-of-squared error (SSE) of each cluster and choose the cluster with higher SSE to be further partitioned into 2 smaller clusters. For example, if cluster C1 has larger SSE than C2, the algorithm will apply standard k-means to all the data points in cluster C1 and divide the cluster into 2 smaller clusters, say, C1a and C1b. At this time, you have 3 clusters: C1a, C1b, and C2. Next, you will compare the SSE of the 3 clusters and choose the one with highest SSE. You will bisect the cluster with highest SSE into 2 smaller clusters, thereby creating the 4 clusters needed.
+
+
+Lets first download the dataset here:
+
+<a href="/Files/Data_Series/clustering/2d_data.csv" class="btn btn--success">File Download</a>
+
+
+a) Lets load our csv file into a Pandas DataFrame Object to work with. Lets assign the names of its two columns as 'x1' and 'x2'.
+
+```python
+import pandas as pd
+import matplotlib
+
+%matplotlib inline
+
+data = pd.read_csv("2d_data.csv", header= None, names = ['x1','x2'])
+
+#plot scatter graph
+data.plot.scatter(x=0,y=1, label = 'data', color = 'green' )
+data.head()
+```
+
+Output:
+
+|   	|     x1 	|     x2 	|
+|--:	|-------:	|-------:	|
+| 0 	| 1.1700 	| 1.2809 	|
+| 1 	| 1.5799 	| 0.6373 	|
+| 2 	| 0.2857 	| 0.6620 	|
+| 3 	| 1.2726 	| 0.7440 	|
+| 4 	| 1.1008 	| 0.0689 	|
+
+
+!['Insert Image'](/images/big_data/clustering/scatter_x_y.png)
+
+
+b) Next lets write the function **bisect()** that will take in three input arguments: data to be clustered, k (number of clusters), and seed (for random number generator). The function should return the cluster labels as output.
+
+```python
+from sklearn import cluster
+import numpy as np
+
+def bisect(data, k, seed = 1):
+    labels = pd.Series(np.zeros(data.shape[0]))
+    
+    SSE = []
+    k_means = cluster.KMeans(n_clusters=1, random_state=seed)
+    k_means.fit(data)
+    SSE.append(k_means.inertia_)
+    print('Iteration 0  SSE =', SSE)
+    
+    clusterID = [np.arange(0,data.shape[0]).tolist()]
+
+    for numClusters in np.arange(1,k): 
+        s_data = data.iloc[clusterID[SSE.index(max(SSE))]]
+        k_means = cluster.KMeans(n_clusters=2, random_state=seed)
+        k_means.fit(s_data)
+
+        label = [[],[]]
+
+        for i in range(0, s_data.shape[0]):
+            if k_means.labels_[i]==0:  
+                label[0].append(clusterID[SSE.index(max(SSE))][i])
+            elif k_means.labels_[i]==1: 
+                label[1].append(clusterID[SSE.index(max(SSE))][i])
+
+        for j in range(0, 2):
+            if j == 0:
+                labels[label[j]] = labels[label[j][0]]
+            elif j == 1:
+                labels[label[j]] = numClusters
+            clusterID.append(label[j])
+            SSE.append(((s_data[k_means.labels_==j]-k_means.cluster_centers_[j])**2).sum().sum())
+        
+        clusterID.pop(SSE.index(max(SSE)))
+        SSE.pop(SSE.index(max(SSE)))
+
+        print('Iteration', numClusters, ' SSE =', SSE)
+
+    return labels
+```
+
+
+c) Apply the bisecting k-means algorithm to generate 8 clusters from the data. Assign the clustering result as another column, named 'labels' of the dataframe. Draw a scatter plot of the data using the cluster labels as color of the data points in the scatter plot.
+
+```python
+data['labels'] = bisect(data, 8, 1)
+data.plot.scatter(x='x1',y='x2',c='labels',colormap='jet')
+```
+
+Output:
+
+!['Insert Image'](/images/big_data/clustering/color_scattered.png)
+
