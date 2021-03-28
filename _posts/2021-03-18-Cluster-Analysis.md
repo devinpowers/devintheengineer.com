@@ -82,6 +82,8 @@ Note: The quality of the cluster assignment is determined by computing the **sum
 
 ### Example of K-Means Algorithm in Python
 
+YEs
+
 [sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
 
 Import Libraries
