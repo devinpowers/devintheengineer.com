@@ -1,0 +1,11 @@
+
+
+Hello, I'm doing a take-home data science assignment for a company and they've given me a dataset with some questions to answer. The dataset is similar to one below.  They want to understand what features/characteristic are important to the business regarding if a customer will renew their lease or not. They want a simple analysis using core probability and statistical theory to draw insights and conclusions to the business. The dataset is given in terms of binary (1 or 0) with 1 being true and 0 being no/false.
+The problem is I have never worked with a Binary Dataset so I'm unsure of what kinds of tests I should run to draw up simple conclusions. I'm working in a Juypter notebook (pandas, seaborm, bumpy, matplotlib, sklearn). I would appreciate it if someone could help lead me in a direction to what kind of simple analysis I can run on binary data.
+
+| ID  	| Age 20-29 	| Age 30-39 	| Age 40-49 	| Age 50 > 	| Lease Length < 1 year 	| Lease Length 1-2 Years 	| Lease Length > 3 Years 	| Late Payment  	| No Fine Violations 	| Credit Score Below 600 	| Renews 	|
+|-----	|-----------	|-----------	|-----------	|----------	|-----------------------	|------------------------	|------------------------	|---------------	|--------------------	|------------------------	|--------	|
+| 312 	| 1         	| 0         	| 0         	| 0        	| 0                     	| 1                      	| 0                      	| 1             	| 0                  	| 0                      	| 1      	|
+| 313 	| 0         	| 0         	| 1         	| 0        	| 0                     	| 0                      	| 1                      	| 0             	| 1                  	| 1                      	| 0      	|
+| 314 	| 0         	| 1         	| 0         	| 0        	| 0                     	| 1                      	| 0                      	| 0             	| 0                  	| 0                      	| 0      	|
+| 315 	| 0         	| 0         	| 0         	| 1        	| 1                     	| 0                      	| 0                      	| 0             	| 0                  	| 1                      	| 1      	|
