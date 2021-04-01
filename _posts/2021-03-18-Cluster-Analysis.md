@@ -839,7 +839,16 @@ Output:
 
 Here we will  write the code for a variation of k-means clustering algorithm known as **bisecting k-means**.
 
-Suppose you want to create 4 clusters. The algorithm will first apply standard k-means algorithm to bisect the entire data into 2 clusters, say, C1 and C2. It then computes the sum-of-squared error (SSE) of each cluster and choose the cluster with higher SSE to be further partitioned into 2 smaller clusters. For example, if cluster C1 has larger SSE than C2, the algorithm will apply standard k-means to all the data points in cluster C1 and divide the cluster into 2 smaller clusters, say, C1a and C1b. At this time, you have 3 clusters: C1a, C1b, and C2. Next, you will compare the SSE of the 3 clusters and choose the one with highest SSE. You will bisect the cluster with highest SSE into 2 smaller clusters, thereby creating the 4 clusters needed.
+This is how the algorithm works:
+
+Suppose you want to create 4 clusters. The algorithm will first apply standard k-means algorithm to bisect the entire data into 2 clusters, say, C1 and C2. 
+
+It then computes the **sum-of-squared error (SSE)** of each cluster and choose the cluster with higher SSE to be further partitioned into 2 smaller clusters.
+
+ For example, if cluster C1 has larger SSE than C2, the algorithm will apply standard k-means to all the data points in cluster C1 and divide the cluster into 2 smaller clusters, say, C1a and C1b. At this time, you have 3 clusters: C1a, C1b, and C2. 
+ 
+ 
+ Next, you will compare the SSE of the 3 clusters and choose the one with highest SSE. You will bisect the cluster with highest SSE into 2 smaller clusters, thereby creating the 4 clusters needed.
 
 
 Lets first download the dataset here:
