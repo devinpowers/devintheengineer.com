@@ -424,10 +424,7 @@ We need some sort of *statistical framework* to interpet a measure for Cluster V
 
 * Rand Index or Rand Measure in *statistics* (data clustering), is a measure of the similarity between two *two clustering*.
 
-
-
 [Heres the wiki link ](https://en.wikipedia.org/wiki/Rand_index)
-
 
 
 ### Python Examples of Cluster Validation (using the Rand Index)
@@ -460,9 +457,17 @@ X = data.drop('class',axis=1)
 ```python
 from sklearn import cluster, metrics
 
+## group into 2 clusters tested positive and tested negative
 k_means = cluster.KMeans(n_clusters = 2)
+# Fit
 k_means.fit(X)
+```
+
+Confusion Matrix
+
+```python
 metrics.confusion_matrix(Y,k_means.labels_)
+
 ```
 Output:
 
@@ -470,6 +475,10 @@ Output:
 array([[421,  79],
        [182,  86]])
 ```
+
+**Adjusted Rand Score**
+
+ARI = (RI - Expected_RI) / (max(RI) - Expected_RI)
 
 ```python
 metrics.adjusted_rand_score(Y,k_means.labels_)
@@ -497,6 +506,7 @@ import pandas as pd
 data = pd.read_csv('animals.csv')
 names = data['Name']
 Y = data['Class']
+## Drop Name Column and Class (predictor) Column
 X = data.drop(['Name','Class'],axis=1)
 data
 ```
@@ -527,7 +537,7 @@ Import these *Libraries*
 
 ```python
 import numpy as np
-
+# convert X to a matrix using nunpy
 X.to_numpy()
 X
 ```
@@ -553,9 +563,8 @@ array([[1, 0, 1, 0, 0, 0, 1, 0],
        [0, 1, 0, 1, 1, 0, 1, 1]])
 
 ```
-Turns our table into a Matrix!! (**to_numpy()** function)
 
-
+Intro to Scipy:
 
 [Link to Scipy Documentation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html)
 
@@ -564,7 +573,7 @@ scipy.cluster.hierarchy.linkage( y, Method , Metric, optimal_ordering)
 
 **y**: May be either a *1-D condensed distance matrix* or a *2-D array of observation vectors*
 
-**Method**:  Used to compute the distance d(s,t) between the 2 clusters s and t (Inter-Cluster Proximity)
+**Method(s)**:  Used to compute the **distance d(s,t) between the 2 clusters s and t (Inter-Cluster Proximity)**
 
 * method = 'single' (or Min, shortest distance)
 * method = 'complete' (or Max, largest distance)
@@ -577,7 +586,7 @@ scipy.cluster.hierarchy.linkage( y, Method , Metric, optimal_ordering)
 **Metric**: The distance metric to use in the case that y is a collection of observation vectors; ignored otherwise.
 **optimal_ordering**: If True, the linkage matrix will be reordered so that the distance between successive leaves is minimal
 
-Note that method, metric and optimal_ordering are all **optional**
+Note that *method*, *metric* and *optimal_ordering* are all **optional**
 
 **Returns:**
 
@@ -596,6 +605,7 @@ Note that method, metric and optimal_ordering are all **optional**
     * top, bottom, left, right
 * **labels**: text
 
+Lets start by importing the Libraries needed!
 
 ```python
 from scipy.cluster import hierarchy
@@ -706,7 +716,7 @@ Rand Score: **0.6180555555555556**
 
 
 
-## More examples of Clustering....
+# More Examples of Clustering.... (Cluster Analysis)
 
 ```python
 import pandas as pd
