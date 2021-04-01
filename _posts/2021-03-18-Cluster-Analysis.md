@@ -82,7 +82,6 @@ Note: The quality of the cluster assignment is determined by computing the **sum
 
 ### Example of K-Means Algorithm in Python
 
-YEs
 
 [sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
 
@@ -198,7 +197,7 @@ Output:
 ### Errors with K-Means
 
 
-* K-Means Clustering was designed to minimize the sum of square error (SSE)
+* K-Means Clustering was designed to minimize the **sum of square error (SSE)**
 * SSE measures the sum-of-squared distance between every data point **x** to their cluster centroid **c**
 
 * SSE can be used to determine the number of clusters
@@ -226,7 +225,7 @@ Output:
 
 !['Insert Image'](/images/big_data/clustering/elbow_plot.png)
 
-
+We can use the Elbow Graph to determine the number of clusters we want!
 
 
 ## More Examples using Clustering (another NBA Example)
@@ -235,9 +234,12 @@ Lets look at the Top 50 NBA Scorers!!
 
 <a href="/Files/Data_Series/clustering/top_50_NBA.csv" class="btn btn--success">NBA File Download</a>
 
+Lets open our File:
+
 ```python
 data = pd.read_csv('top_50_NBA.csv')
 ```
+Lets use Clustering to *cluster* Points and Usage categories.
 
 ```python
 kmeans = KMeans(n_clusters = 4, random_state = 98)
