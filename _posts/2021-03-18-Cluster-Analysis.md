@@ -394,22 +394,28 @@ Output:
 
 ## Cluster Validity 
 
-* Cluster Validitation is used to *measure/evaluate* how good our model is!
+* For *supervised classification* have different ways to measure how good our model is!
+
     - Accuracy, True Positive Rate
 
 **How does one evalute the "goodness" of the resulting Clusters?**
 
+- Isn't a easy answer because "clusters" are in the eye of the beholder!
+
+- Notion of a cluster can be Ambiguous
 
 
 ### Issues in Cluster Validation
 
-Typical Questions to answer:
+Typical **Questions** to answer:
 
-* How many Clusters are there in  the data?
-* Are the clusters real or are they nothing more than "accidental" groupings of the data
+* How many Clusters are there in the data?
+* Are the clusters real or are they nothing more than *"accidental"* groupings of the data
 
 
 We need some sort of *statistical framework* to interpet a measure for Cluster Validity
+
+* To measure cluster quality and a statistical approach for testing vality of the clusters
 
 
 ### Rand Index 
