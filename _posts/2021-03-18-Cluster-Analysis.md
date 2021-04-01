@@ -130,7 +130,7 @@ Output:
 Lets plot the Age and Salary
 
 ```python
-plt.scatter(df.Age,df['Salary'])
+plt.scatter(data.Age,data['Salary'])
 
 plt.xlabel('Age')
 plt.ylabel('Salary')
@@ -142,7 +142,7 @@ Output:
 
 ```python
 km = KMeans(n_clusters=3)
-y_predicted = km.fit_predict(df[['Age','Salary']])
+y_predicted = km.fit_predict(data[['Age','Salary']])
 y_predicted
 ```
 
@@ -154,35 +154,42 @@ array([0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 1, 2, 2, 2, 2], dtype=int32)
 
 
 ```python
-df['cluster']=y_predicted
-df.head()
+data['cluster']=y_predicted
+data.head()
 ```
 
 Output:
 
 |   	|          Name 	| Age 	|   Salary 	| cluster 	|
 |--:	|--------------:	|----:	|---------:	|--------:	|
-| 0 	|  Lebron James 	|  36 	| 40000000 	|       0 	|
-| 1 	|   Steph Curry 	|  31 	| 41000000 	|       0 	|
-| 2 	|  Kevin Durant 	|  33 	| 39000000 	|       0 	|
-| 3 	|    Chris Paul 	|  35 	| 41500000 	|       0 	|
-| 4 	| Anthony Davis 	|  28 	| 33000000 	|       0 	|
+| 0 	|  Lebron James 	|  36 	| 40000000 	|       1 	|
+| 1 	|   Steph Curry 	|  31 	| 41000000 	|       1 	|
+| 2 	|  Kevin Durant 	|  33 	| 39000000 	|       1 	|
+| 3 	|    Chris Paul 	|  35 	| 41500000 	|       1 	|
+| 4 	| Anthony Davis 	|  28 	| 33000000 	|       1 	|
 
 
 
 ```python
-km.cluster_centers_
+## Location of "Cluster Centers (x,y)"
+kmeans.cluster_centers_
 ```
 
+Output:
+
+array([[2.7000e+01, 1.4035e+07],
+       [3.2600e+01, 3.8900e+07],
+       [2.2600e+01, 1.3170e+06]])
+
 
 ```python
-df1 = df[df.cluster==0]
-df2 = df[df.cluster==1]
-df3 = df[df.cluster==2]
-plt.scatter(df1.Age,df1['Salary'],color='blue')
-plt.scatter(df2.Age,df2['Salary'],color='orange')
-plt.scatter(df3.Age,df3['Salary'],color='green')
-plt.scatter(km.cluster_centers_[:,0],km.cluster_centers_[:,1],color='purple',marker='*',label='centroid')
+data1 = data[data.cluster==0]
+data2 = data[data.cluster==1]
+data3 = data[data.cluster==2]
+plt.scatter(data1.Age,data1['Salary'],color='blue')
+plt.scatter(data2.Age,data2['Salary'],color='orange')
+plt.scatter(data3.Age,data3['Salary'],color='green')
+plt.scatter(kmeans.cluster_centers_[:,0],kmeans.cluster_centers_[:,1],color='purple',marker='*',label='centroid')
 plt.xlabel('Age')
 plt.ylabel('Salary')
 plt.legend()
@@ -211,11 +218,10 @@ sse = []
 k_range = range(1,10)
 for k in k_range:
     km = KMeans(n_clusters=k)
-    km.fit(df[['Age','Salary']])
+    km.fit(data[['Age','Salary']])
     sse.append(km.inertia_)
-```
 
-```python
+## label and plot the Elbow Graph
 plt.xlabel('K')
 plt.ylabel('Sum of squared error')
 plt.plot(k_range,sse)
@@ -225,7 +231,7 @@ Output:
 
 !['Insert Image'](/images/big_data/clustering/elbow_plot.png)
 
-We can use the Elbow Graph to determine the number of clusters we want!
+We can use the *Elbow Graph* to determine the number of clusters we want!
 
 
 ## More Examples using Clustering (another NBA Example)
@@ -246,6 +252,7 @@ kmeans = KMeans(n_clusters = 4, random_state = 98)
 
 x = np.column_stack((data['PTS'], data['USG%']))
 
+## Fit to our Kmeans
 kmeans.fit(x)
 
 y_kmeans = kmeans.predict(x)
@@ -379,12 +386,13 @@ Output:
 
 **When are there problems with K-Means Clustering?**
 
-* When clusters are of differing Sizes, Densities, and Non-Globular Shapes
+* When clusters are of differing Sizes, Densities, and Non-Globular Shapes (think dount shaped data)
 * When there are outliers in the Data (James Harden in the example above)
 
 
+# Part 2 of Cluster Analysis 
 
-## Cluster Validity
+## Cluster Validity 
 
 * Cluster Validitation is used to *measure/evaluate* how good our model is!
     - Accuracy, True Positive Rate
