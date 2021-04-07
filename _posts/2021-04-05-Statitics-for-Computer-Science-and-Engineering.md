@@ -20,5 +20,6 @@ toc_label: "Table of Contents"
 
 * Given an experiment and a sample space *S*, the objective of probability is to assign to each event A a number P(A), called the probability of the event A, which will give a precise measure of the chance the A will occur.
 
+Professor Lenoard Video Notes:
 
 [Notes on Probabilty](/Files/stats/prob_notes.pdf)
