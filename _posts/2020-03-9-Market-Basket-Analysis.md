@@ -7,4 +7,7 @@ date: 2021-3-9
 
 Market Basket Stuff!!
 Coming Soon
-Stats
+StatsWi
+
+Will be adding stat page soon!!
+
