@@ -23,3 +23,5 @@ toc_label: "Table of Contents"
 Professor Lenoard Video Notes:
 
 [Notes on Probabilty](/Files/stats/prob_notes.pdf)
+
+More Notes coming soon...
