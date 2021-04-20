@@ -12,9 +12,7 @@ toc_label: "Table of Contents"
 
 ### Chapter One: Descriptive Stats
 
-* Histograms
 * mean/median/mode
-
 
 ### Chapter Two: Frequency Distribution and Histograms
 
