@@ -16,14 +16,36 @@ toc_label: "Table of Contents"
 * mean/median/mode
 
 
-### Chapter Two: Probability
+### Chapter Two: Frequency Distribution and Histograms
+
+* Histograms
+* Relative Frequency
+
+### Chapter Three: Discrete Random Variables and Probability Distributions
 
 * Given an experiment and a sample space *S*, the objective of probability is to assign to each event A a number P(A), called the probability of the event A, which will give a precise measure of the chance the A will occur.
 
-Professor Lenoard Video Notes:
+* Random Variables
+* Binomial Probability Distribution
 
 [Notes on Probabilty](/Files/stats/prob_notes.pdf)
 
-More Notes coming soon...
 
-Eazy
+### Chapter Four: Continuous Random Variables and Probability Distributions
+
+* Standard Normal Distribution
+* Z-Scores (Standard Score)
+* Central Limit Theorem
+
+### Chapter Five: Joint Probability Distributions and Random Samples
+
+### Chapter Six: Point Estimation
+
+### Chapter Seven: Confidence Intervals
+
+* Confidence interval for sample mean, population standard deviation -KNOWN
+* Confidence interval for sample mean, population standard deviation -UNKNOWN
+* Confidence interval for Variance and Standard Deviation Chi-Squared Distribution
+
+### Chapter Eight: Tests of Hypotheses Based on a Single Sample
+
