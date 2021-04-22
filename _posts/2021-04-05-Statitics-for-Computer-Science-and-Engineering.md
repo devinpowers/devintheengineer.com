@@ -59,3 +59,14 @@ toc_label: "Table of Contents"
 
 ### Chapter Eight: Tests of Hypotheses Based on a Single Sample
 
+
+### Homework/Example Problems
+
+1. 
+2.
+3.
+4.
+5.
+6.
+7.
+8.
