@@ -13,11 +13,15 @@ toc_label: "Table of Contents"
 ### Chapter One: Descriptive Stats
 
 * mean/median/mode
+[Notes on Descriptive Stats](/Files/stats/Stats_Chapter_1.pdf)
 
 ### Chapter Two: Frequency Distribution and Histograms
 
 * Histograms
 * Relative Frequency
+
+[Notes on Frequency Distribution and Histograms](/Files/stats/Stats_Chapter_2.pdf)
+
 
 ### Chapter Three: Discrete Random Variables and Probability Distributions
 
@@ -26,7 +30,7 @@ toc_label: "Table of Contents"
 * Random Variables
 * Binomial Probability Distribution
 
-[Notes on Probabilty](/Files/stats/prob_notes.pdf)
+[Notes on Probabilty](/Files/stats/Stats_Chapter_3.pdf)
 
 
 ### Chapter Four: Continuous Random Variables and Probability Distributions
@@ -35,7 +39,11 @@ toc_label: "Table of Contents"
 * Z-Scores (Standard Score)
 * Central Limit Theorem
 
+[Notes on Continuous Random Variables](/Files/stats/Stats_Chapter_4.pdf)
+
+
 ### Chapter Five: Joint Probability Distributions and Random Samples
+
 
 ### Chapter Six: Point Estimation
 
@@ -44,6 +52,9 @@ toc_label: "Table of Contents"
 * Confidence interval for sample mean, population standard deviation -KNOWN
 * Confidence interval for sample mean, population standard deviation -UNKNOWN
 * Confidence interval for Variance and Standard Deviation Chi-Squared Distribution
+
+[Notes on Confience Intervals](/Files/stats/Stats_Chapter_7.pdf)
+
 
 ### Chapter Eight: Tests of Hypotheses Based on a Single Sample
 
