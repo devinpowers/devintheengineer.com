@@ -13,6 +13,7 @@ toc_label: "Table of Contents"
 ### Chapter One: Descriptive Stats
 
 * mean/median/mode
+
 [Notes on Descriptive Stats](/Files/stats/Stats_Chapter_1.pdf)
 
 ### Chapter Two: Frequency Distribution and Histograms
