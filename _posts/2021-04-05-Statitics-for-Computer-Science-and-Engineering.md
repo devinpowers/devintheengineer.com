@@ -62,11 +62,18 @@ toc_label: "Table of Contents"
 
 ### Homework/Example Problems
 
-1. 
-2.
-3.
-4.
-5.
-6.
-7.
-8.
+[Chapter One Homework](/Files/stats/HW/Stats_HW1.pdf)
+
+[Chapter Two Homework](/Files/stats/HW/Stats_HW2.pdf)
+
+[Chapter Three Homework](/Files/stats/HW/Stats_HW3.pdf)
+
+[Chapter Four Homework](/Files/stats/HW/Stats_HW4.pdf)
+
+[Chapter Five Homework](/Files/stats/HW/Stats_HW5.pdf)
+
+[Chapter Six Homework](/Files/stats/HW/Stats_HW6.pdf)
+
+[Chapter Seven Homework](/Files/stats/HW/Stats_HW7.pdf)
+
+[Chapter Eight Homework](/Files/stats/HW/Stats_HW8.pdf)
