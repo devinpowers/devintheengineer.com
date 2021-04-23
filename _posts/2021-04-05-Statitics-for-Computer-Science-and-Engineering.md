@@ -1,10 +1,8 @@
 ---
-title: 'Basic Stats '
+title: 'Statistics for Those in a Hurry'
 
 date: 2021-4-05
 
-toc: true
-toc_label: "Table of Contents" 
 ---
 
 
