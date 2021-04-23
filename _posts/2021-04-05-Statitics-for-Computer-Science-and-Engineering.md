@@ -1,6 +1,10 @@
 ---
 title: 'Statistics for Those in a Hurry'
 
+header:
+
+  image: "/images/stats_homepage.jpeg"
+
 date: 2021-4-05
 
 ---
