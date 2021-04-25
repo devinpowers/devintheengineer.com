@@ -1,9 +1,9 @@
 ---
 title: "Statistics"
 permalink: /Statistics/
-
 header:
-   image: "/images/tower3.jpeg"
+
+  image: "/images/stats_homepage.jpeg"
 ---
 
 
