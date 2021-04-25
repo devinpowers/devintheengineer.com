@@ -3,7 +3,8 @@ title: "Big Data"
 permalink: /Big_Data/
 
 header:
-   image: "/images/tower3.jpeg"
+
+  image: "/images/big_data.jpeg"
 ---
 
 
