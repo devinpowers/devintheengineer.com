@@ -10,6 +10,8 @@ main:
     url: /algorithms
   - title: "Learn C++"
     url: /C++
+  - title: "Statistics for Those in a Hurry"
+    url: /Statistics
     
 
   # - title: "About"
