@@ -1,6 +1,8 @@
 ---
 title: "Statistics"
 permalink: /Statistics/
+author_profile: true
+
 header:
 
   image: "/images/stats_homepage.jpeg"

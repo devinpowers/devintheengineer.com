@@ -3,6 +3,8 @@ title: "Big Data"
 permalink: /Big_Data/
 layout: collection
 entries_layout: grid
+author_profile: true
+
 header:
 
   image: "/images/big_data.jpeg"
