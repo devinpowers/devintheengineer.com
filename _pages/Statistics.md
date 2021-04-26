@@ -9,6 +9,11 @@ header:
 
 ## Collection of Stats notes and Homework (example problems)
 
+* I followed along with Professor Leonard Statistics Lectures on Youtube. I use to watch his Calculus 1-3 in undergrad, one of the best Professors for math on the internet!
+
+* I also used the book **Probability and Statistics for Engineering and the Sciences**
+
+
 ### Chapter One: Descriptive Stats
 
 * mean/median/mode
