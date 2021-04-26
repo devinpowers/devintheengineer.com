@@ -12,6 +12,15 @@ header:
 
 ---
 
+* This Page will consist of *working with big data* using Python, SQL, and other Applications as I continue to learn.
+
+* Most of the CSV files and code are included
+
+
+## March Madness Machine Learning Project
+
+* Here is a March Madness Win prediction project I did using different machine learning algorithms
+
 
 ## Day One: Introduction to Big Data
 
@@ -58,3 +67,5 @@ header:
 ## Day Ten:
 
 ## Day Eleven:
+
+
