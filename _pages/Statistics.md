@@ -13,6 +13,9 @@ header:
 
 * I also used the book **Probability and Statistics for Engineering and the Sciences**
 
+* Statistics is probabaly the *most important* **math** that is useful for any engineering or business job/career
+
+
 
 ### Chapter One: Descriptive Stats
 
