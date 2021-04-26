@@ -27,12 +27,16 @@ header:
 [Day 3 Link](https://devintheengineer.com/Big_Data/big_data/day_3)
 
 
-## Day Four: Working with 
+## Day Four: Working with SQL
+
+[Day 4: SQL Link](https://devintheengineer.com/Big_Data/big_data/day_4)
+
+* Working with CitiBikes example using SQL
 
 
-## Day Five:
+## Day Five: NoSQL
 
-[Day 3 Link](https://devintheengineer.com/Big_Data/big_data/day_5)
+[Day 5: NoSQL Link](https://devintheengineer.com/Big_Data/big_data/day_5)
 
 
 ## Day Six: Big Data Preprocessing
