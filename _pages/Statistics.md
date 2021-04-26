@@ -61,10 +61,13 @@ header:
 * Confidence interval for sample mean, population standard deviation -UNKNOWN
 * Confidence interval for Variance and Standard Deviation Chi-Squared Distribution
 
-[Notes on Confience Intervals](/Files/stats/Stats_Chapter_7.pdf)
+[Notes on Confidence Intervals](/Files/stats/Stats_Chapter_7.pdf)
 
 
 ### Chapter Eight: Tests of Hypotheses Based on a Single Sample
+
+
+[Notes on Hypotheses Tests](/Files/stats/Stats_Chapter_8.pdf)
 
 
 ### Chapter Nine:
