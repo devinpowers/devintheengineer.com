@@ -6,6 +6,7 @@ author_profile: true
 
 header:
   image: "/images/chicagotwo.jpeg"
+  teaser: "/images/chicagotwo.jpeg"
   
 ---
 
