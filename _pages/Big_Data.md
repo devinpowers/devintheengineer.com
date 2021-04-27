@@ -30,8 +30,6 @@ header:
 [Day 1 Link](https://devintheengineer.com/Big_Data/big_data/day_1)
 
 
-<video src="https://media.giphy.com/media/3ndAvMC5LFPNMCzq7m/giphy.mp4" controls></video>
-
 ## Day Two: Data Representation
 
 [Day 2 Link](https://devintheengineer.com/Big_Data/big_data/day_2)
@@ -58,12 +56,16 @@ header:
 [Day 6 Link](https://devintheengineer.com/Big_Data/big_data/day_6)
 
 
-## Day Seven:
+## Day Seven: Data Exploration
+
+[Day 7 Link](https://devintheengineer.com/Big_Data/big_data/day_7)
 
 
 ## Day Eight: Predictive Modeling
 
 [Day 8 Link](https://devintheengineer.com/Big_Data/big_data/day_8)
+
+
 
 ## Day Nine:
 
