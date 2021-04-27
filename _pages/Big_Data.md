@@ -36,17 +36,18 @@ header:
 
 ## Day Three: Data Collection
 
+* Including scrapping from Twitter API
 [Day 3 Link](https://devintheengineer.com/Big_Data/big_data/day_3)
 
 
-## Day Four: Working with SQL
+## Day Four: Working with SQL and NoSQL
 
 [Day 4: SQL Link](https://devintheengineer.com/Big_Data/big_data/day_4)
 
 * Working with CitiBikes example using SQL
 
 
-## Day Five: NoSQL
+## Day Five: Data Quality and Working with Pandas Library
 
 [Day 5: NoSQL Link](https://devintheengineer.com/Big_Data/big_data/day_5)
 
@@ -66,11 +67,15 @@ header:
 [Day 8 Link](https://devintheengineer.com/Big_Data/big_data/day_8)
 
 
+## Day Nine: Market Basket Analysis
 
-## Day Nine:
+* Coming soon
 
+## Day Ten: Cluster Analysis
 
-## Day Ten:
+* k-means
+[Day 10 Link](https://devintheengineer.com/Big_Data/big_data/day_10)
+
 
 ## Day Eleven:
 
