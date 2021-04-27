@@ -22,6 +22,9 @@ header:
 * Here is a March Madness Win prediction project I did using different machine learning algorithms
 
 
+[March Madness Project Link](https://devintheengineer.com/Big_Data/big_data/march_madness)
+
+
 ## Day One: Introduction to Big Data
 
 [Day 1 Link](https://devintheengineer.com/Big_Data/big_data/day_1)
@@ -58,8 +61,9 @@ header:
 ## Day Seven:
 
 
-## Day Eight:
+## Day Eight: Predictive Modeling
 
+[Day 8 Link](https://devintheengineer.com/Big_Data/big_data/day_8)
 
 ## Day Nine:
 
