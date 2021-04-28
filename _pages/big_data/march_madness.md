@@ -5,8 +5,7 @@ title: "Machine Learning Project"
 author_profile: true
 
 header:
-  image: "/images/chicagotwo.jpeg"
-  
+  image: "/images/magic.jpeg"
 ---
 
 Lets predict who will win the 2021 NCCA Basketball Tournament
