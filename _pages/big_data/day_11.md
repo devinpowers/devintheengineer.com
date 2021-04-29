@@ -25,7 +25,12 @@ header:
 * Number of anomalies are usually unknown
 * Method is unsupervised
 
-### Python Example
+### Python Example of Distance-Based Approach
+
+* Compute the distance between every pair of data points
+* Anomaly score of a data point is given by its distance to the k-th nearest neighbor
+    * The larger distance, the more anomalous is the data point
+
 
 ```python
 import pandas as pd
@@ -207,4 +212,49 @@ array([ 1,  1,  1,  1,  1,  1, -1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,
         1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, -1,
         1, -1, -1, -1])
 ```
+
+
+### Excercise
+
+#### Applying Anomaly Detection Algorithms to a Dataset
+
+
+Load the dataset into a pandas DataFrame object
+
+**Note:** the last column (6) corresponds to the true class of each data point (0: normal, 1: anomaly)
+
+```python
+
+import pandas as pd
+
+data = pd.read_csv('mammography.csv', header = None)
+data.head()
+
+```
+
+Output:
+
+|   	|       0 	|       1 	|       2 	|       3 	|       4 	|       5 	| 6 	|
+|--:	|--------:	|--------:	|--------:	|--------:	|--------:	|--------:	|--:	|
+| 0 	| -0.5378 	| -0.3640 	|  5.3141 	| -0.2190 	|  0.2685 	|  1.1080 	| 0 	|
+| 1 	| -0.7844 	| -0.4702 	| -0.5916 	| -0.8596 	| -0.3779 	| -0.9457 	| 0 	|
+| 2 	| -0.7844 	| -0.4702 	| -0.5916 	| -0.8596 	| -0.3779 	| -0.9457 	| 0 	|
+| 3 	|  0.3804 	| -0.0278 	| -0.4113 	|  0.7261 	|  3.5478 	|  1.2421 	| 0 	|
+| 4 	| -0.7844 	| -0.4702 	| -0.5916 	| -0.8596 	| -0.3779 	| -0.9457 	| 0 	|
+
+
+Draw a scatter plot based on the 4th and 5th column in the DataFrame.
+
+```python
+import matplotlib
+%matplotlib inline
+
+data.plot.scatter(x=3,y=4,c=6,colormap='cool')
+```
+
+Output:
+
+![insert image](/images/big_data/day14/exercise1.png)
+
+
 
