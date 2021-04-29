@@ -53,15 +53,158 @@ import matplotlib.pyplot as plt
 %matplotlib inline
 
 plt.figure().add_subplot(2,2,1)
-plt.plot(data.ix[5].T)
+plt.plot(data.iloc[5].T)
 plt.figure().add_subplot(2,2,1)
-plt.plot(data.ix[10].T)
+plt.plot(data.iloc[10].T)
 plt.figure().add_subplot(2,2,1)
-plt.plot(data.ix[45].T)
+plt.plot(data.iloc[45].T)
 plt.figure().add_subplot(2,2,1)
-plt.plot(data.ix[50].T)
+plt.plot(data.iloc[50].T)
 ```
 
 Output:
 
 ![insert image](/images/big_data/day14/graphs.png)
+
+
+```python
+plt.figure().add_subplot(2,1,1)
+plt.plot(data.iloc[:49].T)
+plt.figure().add_subplot(2,1,2)
+plt.plot(data.iloc[50:55].T)
+```
+
+Output:
+
+![insert image](/images/big_data/day14/graphs2.png)
+
+
+```python
+from scipy.spatial import distance
+
+Y = distance.pdist(data.to_numpy(), 'correlation')
+Y = distance.squareform(Y)
+Y
+```
+
+Output:
+
+```python
+array([[ 0.        ,  0.20237268,  1.16745543, ...,  1.07495438,
+         1.02072118,  1.11979732],
+       [ 0.20237268,  0.        ,  0.9807679 , ...,  1.09614197,
+         1.01776417,  1.01390679],
+       [ 1.16745543,  0.9807679 ,  0.        , ...,  0.94071103,
+         0.97634081,  0.95014835],
+       ..., 
+       [ 1.07495438,  1.09614197,  0.94071103, ...,  0.        ,
+         0.23309714,  0.29398105],
+       [ 1.02072118,  1.01776417,  0.97634081, ...,  0.23309714,
+         0.        ,  0.19070761],
+       [ 1.11979732,  1.01390679,  0.95014835, ...,  0.29398105,
+         0.19070761,  0.        ]])
+```
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+knn = 6
+index = np.argsort(Y, axis=1)    # sort each row by increasing distance
+index = index[:,knn]             
+knnDist = Y[np.arange(len(index)),index]  # identify the k-th smallest distance
+plt.hist(knnDist)
+```
+
+![insert image](/images/big_data/day14/graph3.png)
+
+
+### Identify the Outliers
+
+```python
+outlier = np.flipud(np.argsort(knnDist))
+sort_dist = np.flipud(np.sort(knnDist))
+p = pd.DataFrame(np.column_stack((outlier,sort_dist)),columns=['index','score'])
+p.head()
+```
+
+Output:
+
+|   	| index 	|    score 	|
+|--:	|------:	|---------:	|
+| 0 	|  50.0 	| 0.955814 	|
+| 1 	|  53.0 	| 0.945165 	|
+| 2 	|  54.0 	| 0.927089 	|
+| 3 	|  51.0 	| 0.902902 	|
+| 4 	|  52.0 	| 0.888707 	|
+
+
+### Distance-based Outlier Detection (using scikit-learn)
+
+
+```python
+from sklearn.neighbors import NearestNeighbors
+import numpy as np
+from scipy.spatial import distance
+
+knn = 6
+nbrs = NearestNeighbors(n_neighbors=knn+1, metric=distance.correlation).fit(data.to_numpy())
+distances, indices = nbrs.kneighbors(data.to_numpy())
+plt.hist(distances[:,knn])
+```
+
+![insert image](/images/big_data/day14/graph4.png)
+
+
+```python
+outlier = np.flipud(np.argsort(distances[:,knn]))
+sort_dist = np.flipud(np.sort(distances[:,knn]))
+
+p = pd.DataFrame(np.column_stack((outlier,sort_dist)),columns=['index','score'])
+p.head()
+```
+
+Output:
+
+|   	| index 	|    score 	|
+|--:	|------:	|---------:	|
+| 0 	|  50.0 	| 0.955814 	|
+| 1 	|  53.0 	| 0.945165 	|
+| 2 	|  54.0 	| 0.927089 	|
+| 3 	|  51.0 	| 0.902902 	|
+| 4 	|  52.0 	| 0.888707 	|
+
+
+### Isolation Forest
+
+```python
+import numpy as np
+X = np.array([0.1,0.8,0.84,0.87,0.89,0.92,0.95])
+plt.plot(X,np.ones(len(X)),'ro')
+plt.xlim(-0.1,1.1)
+plt.ylim([0.95,1.5])
+```
+
+![insert image](/images/big_data/day14/graph5.png)
+
+
+```python
+from sklearn.ensemble import IsolationForest
+
+clf = IsolationForest(n_estimators=100, max_samples=30, contamination=0.1)
+clf.fit(data.to_numpy())
+score = clf.predict(data.to_numpy())
+score
+```
+
+Output:
+
+```python
+array([ 1,  1,  1,  1,  1,  1, -1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,
+        1,  1,  1,  1,  1,  1,  1,  1,  1,  1, -1,  1,  1,  1,  1,  1,  1,
+        1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, -1,
+        1, -1, -1, -1])
+```
+
