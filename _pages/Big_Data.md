@@ -77,6 +77,13 @@ header:
 [Day 10 Link](https://devintheengineer.com/Big_Data/big_data/day_10)
 
 
-## Day Eleven:
+## Day Eleven: Anomaly Detection
+
+Day 11 Link
+
+##
+
+
+- Also need to add stuff about Pig and Hadoof
 
 
