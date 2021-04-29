@@ -79,13 +79,12 @@ header:
 
 ## Day Eleven: Anomaly Detection
 
-Day 11 Link
+[Day 11 Link](https://devintheengineer.com/Big_Data/big_data/day_11)
 
+## Day Twelve: Collaborative Filtering
 
-- Also need to add stuff about Pig and Hadoof
+[Day 12 Link](https://devintheengineer.com/Big_Data/big_data/day_12)
 
-
-## Day Twelve
 
 
 ## Day Thirteen 

@@ -257,4 +257,25 @@ Output:
 ![insert image](/images/big_data/day14/exercise1.png)
 
 
+Extract the last column of the dataframe and store it in a pandas Series object named *classes*. Remove the last column from the dataframe. Count the number of data points that belong to each class. You should also display the size of the remaining dataframe to prove that you have removed the last column.
 
+```python
+classes = data[6]
+data = data.drop(6,1)
+print('Size of data:', data.shape)
+print('Class distribution:')
+
+print(classes.value_counts())
+```
+
+Output:
+
+```python
+Size of data: (200, 6)
+Class distribution:
+0    195
+1      5
+Name: 6, dtype: int64
+```
+
+### Anomaly Detection using Mahalanobis Distance 
