@@ -1,5 +1,4 @@
 ---
-layout: archive
 permalink: /Big_Data/big_data/day_11
 title: "Anomaly Detection"
 author_profile: true
