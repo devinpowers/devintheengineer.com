@@ -11,17 +11,16 @@ toc_label: "Table of Contents"
 
   
 ---
-# Questions to Answer:
+## Questions to Answer:
 
-## What is a Recommender System?
+### What is a Recommender System?
 
-## What is Collaborative Filtering?
+### What is Collaborative Filtering?
 
-## What are the Collaborative Filtering Techniques?
+### What are the Collaborative Filtering Techniques?
 
 
-
-### Recommender System
+## Recommender System
 
 * Automated systems that *make recommendations* based on the preference of users
 
@@ -60,12 +59,9 @@ toc_label: "Table of Contents"
     ["Insert Equation for User-Based Nearest Neighbor]
 
 
+##### Similarity Measure
 
-  
-
-### Similarity Measure
-
-* Numerical measure of how alike two data instances are
+* Numerical measure of **how alike two data instances are**
 
 Examples of Similarity Measures include:
 
