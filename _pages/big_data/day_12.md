@@ -41,9 +41,27 @@ toc_label: "Table of Contents"
 
 * Collaborative Filtering Techniques are used to predict how well a user will like an item that he/she has not rated given a set of historical preference judgements for a community of users.
 
-* **User-Based Nearest Neighbor** (we've seen this many times before!)
+#### Nearest Neighbor
 
-  * The process is given a user *u*, generate a prediction for an item *i* by using the ratings for *i* from users in *u's* neighborhood
+
+* For Nearest Neighbor we need to define the **similarity measure** and **neighborhood size**
+
+  **User-Based Nearest Neighbor** (we've seen this many times before!)
+
+    * The process is given a user *u*, generate a prediction for an item *i* by using the ratings for *i* from users in *u's* neighborhood
+    * Where Neighbor is equal to users with similar interests
+
+    ["Insert Equation for User-Based Nearest Neighbor]
+
+  **Item-Based Nearest Neighbour**
+
+    * Given a user *u*, generate a prediction for an item *i* by using a weighted sum of the users *u's* rating for items that are most similar to i.
+
+    ["Insert Equation for User-Based Nearest Neighbor]
+
+
+
+  
 
 ### Similarity Measure
 
@@ -58,5 +76,5 @@ Examples of Similarity Measures include:
 
 
 
-### Natrix Factorization
+### Matrix Factorization
 
