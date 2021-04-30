@@ -179,4 +179,9 @@ Output:
 
 ## Another Technique: Matrix Factorization
 
+* Matrix factorization algorithms work by *decomposing* the user-item interaction matrix **into** the product of two lower dimensionality rectangular matrices.
+
+![insert image](/images/big_data/collaborative/matrix_factorization.png)
+
+### Python Example of Matrix Factorization
 
