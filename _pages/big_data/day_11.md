@@ -4,6 +4,10 @@ permalink: /Big_Data/big_data/day_11
 title: "Anomaly Detection"
 author_profile: true
 
+
+toc: true
+toc_label: "Table of Contents" 
+
 header:
   image: "/images/chicagotwo.jpeg"
   
@@ -18,6 +22,10 @@ header:
 **Example Applications**
 
 * Detecting fraud purchases on credit cards
+* Detecting deforestation using remote sensing data
+* Smart Homes/Building
+  * Water or electrical theft detection
+  * Pip burst detection
 
 ### Challenges in Anomaly Detection
 
