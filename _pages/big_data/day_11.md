@@ -30,8 +30,39 @@ header:
 ### Challenges in Anomaly Detection
 
 * Like finding a needle in a haystack
+  * very rare
 * Number of anomalies are usually unknown
 * Method is unsupervised
+  * therefore validation is hard
+
+### Output of Anomaly Detection
+
+**Continuous-Valued Output**
+
+* In which every data instance is assigned an anomaly score
+
+**Binary-Valued Output**
+
+* A threshold is needed to convert the anomaly score into a binary label
+
+
+## How do we Approach/Strategize for Anomaly Detection
+
+* Assuming that there are more "normal" data than "anomalous" instances
+
+* The general approach is to build a profile of the *normal* behavior and then use the *normal* profile to flag anomalies
+
+
+### Z-Score Approach
+
+* Think back to statistics and gaussian *normal* distribution
+
+### Distance-Based Approach
+
+* In this method, when we do is take in the data as *data points* and *k* which is the number of nearest neighbors
+
+* Then the approach is to compute the distance between every pair of data points and a *anomaly score* of a data point is given by its distance to the k-th nearest neighnor (the larger the distance, the more anomalous the data point is!)
+
 
 ### Python Example of Distance-Based Approach
 
