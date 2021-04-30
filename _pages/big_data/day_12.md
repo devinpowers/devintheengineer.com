@@ -162,6 +162,20 @@ Output:
 | 3 	| 0.135335 	| 0.110803 	| 0.670320 	| 1.000000 	|
 
 
+```python
+import numpy as np
+
+ratings = data.iloc[0][:3].to_numpy()
+simval = isim[3][:3]
+prediction = (simval*ratings).sum()/simval.sum()
+prediction
+```
+
+Output:
+
+**4.026768397265431**
+
+
 
 ## Another Technique: Matrix Factorization
 
