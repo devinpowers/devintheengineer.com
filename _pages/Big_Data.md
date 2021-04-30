@@ -69,7 +69,7 @@ header:
 
 ## Day Nine: Market Basket Analysis
 
-* Coming soon
+[Day 9 Link](https://devintheengineer.com/Big_Data/big_data/day_9)
 
 ## Day Ten: Cluster Analysis
 
