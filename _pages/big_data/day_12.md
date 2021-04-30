@@ -9,8 +9,8 @@ header:
 toc: true
 toc_label: "Table of Contents" 
 
-  
 ---
+
 ## Questions to Answer:
 
 ### What is a Recommender System?
@@ -184,4 +184,8 @@ Output:
 ![insert image](/images/big_data/collaborative/matrix_factorization.png)
 
 ### Python Example of Matrix Factorization
+
+
+
+### Exercises
 
