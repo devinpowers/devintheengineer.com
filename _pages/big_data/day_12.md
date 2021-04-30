@@ -59,16 +59,25 @@ toc_label: "Table of Contents"
     ["Insert Equation for User-Based Nearest Neighbor]
 
 
-##### Similarity Measure
+#### Similarity Measure
 
-* Numerical measure of **how alike two data instances are**
+* Numerical measure of **how alike two data instances are**, the higher they're the more alike the instances are
 
-Examples of Similarity Measures include:
+**Examples of Similarity Measures include:**
 
 * Jaccard Similarity
 * Cosine Similarity
 * Correlation Similarity
 * Gaussian RBF Similarity
+
+##### Jaccard Similarity
+
+##### Cosine Similarity
+
+##### Correlation Similarity
+
+##### Gaussian RBF Similarity
+
 
 
 
