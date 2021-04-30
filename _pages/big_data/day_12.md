@@ -1,5 +1,4 @@
 ---
-layout: archive
 permalink: /Big_Data/big_data/day_12
 title: "Collaborative Filtering"
 author_profile: true

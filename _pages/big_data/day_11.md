@@ -4,7 +4,6 @@ permalink: /Big_Data/big_data/day_11
 title: "Anomaly Detection"
 author_profile: true
 
-
 toc: true
 toc_label: "Table of Contents" 
 

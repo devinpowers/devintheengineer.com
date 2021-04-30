@@ -1,11 +1,13 @@
 ---
-layout: archive
 permalink: /Big_Data/big_data/march_madness
 title: "Machine Learning Project"
 author_profile: true
 
 header:
   image: "/images/magic.jpeg"
+
+toc: true
+toc_label: "Table of Contents" 
 ---
 
 Lets predict who will win the 2021 NCCA Basketball Tournament
