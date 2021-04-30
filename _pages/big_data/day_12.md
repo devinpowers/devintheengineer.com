@@ -5,6 +5,10 @@ author_profile: true
 
 header:
   image: "/images/chicagotwo.jpeg"
+
+toc: true
+toc_label: "Table of Contents" 
+
   
 ---
 # Questions to Answer:
@@ -31,7 +35,6 @@ header:
 * is the tech behind *most* recommender systems, which is the *process of filtering information* by soliciting judgements from others to overcome the information overload problem.
 
 ![insert image](/images/big_data/collaborative/Collaborative_filtering.gif)
-
 
 
 ### Collaborative Filtering Techniques
