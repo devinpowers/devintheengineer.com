@@ -86,8 +86,13 @@ header:
 [Day 12 Link](https://devintheengineer.com/Big_Data/big_data/day_12)
 
 
+## Day Thirteen: Intro to MapReduce
 
-## Day Thirteen 
+
+## Day Fourteen: Inro to Hadoop
 
 
-## Day fourteen
+## Day Fifteen: Intro to Pig
+
+
+## Day Sixteen: Intro to Hive
