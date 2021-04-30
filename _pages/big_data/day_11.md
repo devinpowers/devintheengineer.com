@@ -92,6 +92,8 @@ Output:
 
 Lets graph our data above:
 
+* We can plot it as a *time series*
+
 ```python
 import matplotlib.pyplot as plt
 %matplotlib inline
@@ -111,6 +113,8 @@ Output:
 ![insert image](/images/big_data/day14/graphs.png)
 
 
+Now lets plot the first 50 **time series** and last 5 **time series** 
+
 ```python
 plt.figure().add_subplot(2,1,1)
 plt.plot(data.iloc[:49].T)
@@ -122,6 +126,8 @@ Output:
 
 ![insert image](/images/big_data/day14/graphs2.png)
 
+
+Now lets use the pairwise distances between obseravations in n-dimensional space
 
 ```python
 from scipy.spatial import distance
@@ -150,6 +156,7 @@ array([[ 0.        ,  0.20237268,  1.16745543, ...,  1.07495438,
 ```
 
 
+Now lets do a 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -221,6 +228,14 @@ Output:
 | 4 	|  52.0 	| 0.888707 	|
 
 
+
+### Model-Based Approach
+
+* Fits a model to the data, most models tend to fit the general characteristics of the data
+
+* Then apply the model to each data instance, the more *anomalous* the data instance, the easier it is to *isolate* the instance from the model
+
+
 ### Isolation Forest
 
 ```python
@@ -253,7 +268,7 @@ array([ 1,  1,  1,  1,  1,  1, -1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,
 ```
 
 
-### Excercise
+### Excercises
 
 #### Applying Anomaly Detection Algorithms to a Dataset
 
@@ -318,3 +333,63 @@ Name: 6, dtype: int64
 ```
 
 ### Anomaly Detection using Mahalanobis Distance 
+
+
+
+
+### Anomaly Detection using Isolation Forest
+
+* Apply the isolaion forest method to detect outliers!!
+
+
+```python
+from sklearn.ensemble import IsolationForest
+
+clf = IsolationForest(n_estimators=200, max_samples=50, contamination=0.025, random_state=1)
+
+clf.fit(data.values)
+result = clf.predict(data.values)
+result[result == 1] = 0
+result[result == -1] = 1
+result = pd.DataFrame(result, columns =['predicted'])
+result
+```
+
+Output:
+
+|     	| Predicted 	|
+|----:	|-----------	|
+|   0 	|         0 	|
+|   1 	|         0 	|
+|   2 	|         0 	|
+|   3 	|         0 	|
+|   4 	|         0 	|
+| ... 	|       ... 	|
+| 195 	|         0 	|
+| 196 	|         1 	|
+| 197 	|         1 	|
+| 198 	|         1 	|
+| 199 	|         1 	|
+
+200 rows x 1 columns
+
+Now lets check the accuracy as well as the confusion matrix of the prediction results compared to the real class of the data points
+
+```python
+print('Accuracy =', accuracy_score(classes,result) )
+cm = confusion_matrix(classes,result)
+pd.DataFrame(cm)
+```
+
+Output:
+
+Accuracy = 0.99
+
+|   	|   0 	| 1 	|
+|--:	|----:	|---	|
+| 0 	| 194 	| 1 	|
+| 1 	|   1 	| 4 	|
+
+
+
+Isolation Forest has a higher Accuracy!!!!!
