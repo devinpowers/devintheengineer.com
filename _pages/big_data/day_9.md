@@ -29,3 +29,25 @@ toc_label: "Table of Contents"
 
 ### Mining Association Rules
 
+* **Two-Step Approach**
+
+1. Frequent Itemset Generation
+
+    * Generate all **itemsets** who support >= minsup
+
+2. Rule Generation
+
+### Apriori Algorithm
+
+    * Geeks for Geeks
+
+### Association Rule Generation
+
+* Example is the S&P 500 Stock Market Data
+
+### Preprocessing
+
+### Transaction Data
+
+
+##

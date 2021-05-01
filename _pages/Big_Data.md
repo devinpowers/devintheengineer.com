@@ -98,5 +98,3 @@ toc_label: "Table of Contents"
 
 
 ## Day Sixteen: Intro to Hive
-
-##
