@@ -94,6 +94,7 @@ toc_label: "Table of Contents"
 
 ## Day Fourteen: Intro to Pig
 
+* Main use of Pig is to help users transform data or compute summary statistics from the data
 
 ## Day Fifteen: Intro to Hive
 

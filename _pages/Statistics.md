@@ -78,7 +78,9 @@ header:
 
 ### Chapter Eleven:
 
-[Notes on Hypotheses Tests](/Files/stats/Stats_Chapter_8.pdf)
+
+[Chi-Squared Link](https://devintheengineer.com/Statistics/stats/chi_)
+
 
 
 
