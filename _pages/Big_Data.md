@@ -98,4 +98,6 @@ toc_label: "Table of Contents"
 
 ## Day Fifteen: Intro to Hive
 
+* 
+
 
