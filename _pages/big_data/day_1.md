@@ -1,5 +1,4 @@
 ---
-layout: archive
 permalink: /Big_Data/big_data/day_1
 title: "Practice Data Page"
 author_profile: true
