@@ -88,13 +88,13 @@ toc_label: "Table of Contents"
 [Day 12 Link](https://devintheengineer.com/Big_Data/big_data/day_12)
 
 
-## Day Thirteen: Intro to MapReduce
+## Day Thirteen: Intro to MapReduce and Hadoop
+
+- Using Amazon Webservices
+
+## Day Fourteen: Intro to Pig
 
 
-## Day Fourteen: Inro to Hadoop
+## Day Fifteen: Intro to Hive
 
 
-## Day Fifteen: Intro to Pig
-
-
-## Day Sixteen: Intro to Hive
