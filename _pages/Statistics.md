@@ -18,8 +18,6 @@ header:
 * Statistics is probabaly the *most important* **math** that is useful for any engineering or business job/career
 
 
-<video src="https://media.giphy.com/media/fxe8ALQKJAyYNEzbPC/giphy.mp4" controls></video>
-
 
 ### Chapter One: Descriptive Stats
 
@@ -79,6 +77,10 @@ header:
 ### Chapter Ten:
 
 ### Chapter Eleven:
+
+[Notes on Hypotheses Tests](/Files/stats/Stats_Chapter_8.pdf)
+
+
 
 ### Homework/Example Problems
 
