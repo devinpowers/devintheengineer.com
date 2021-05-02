@@ -79,9 +79,10 @@ header:
 ### Chapter Eleven:
 
 
-[Chi-Squared Link](https://devintheengineer.com/Statistics/stats/chi_)
+[Chi-Squared Link](https://devintheengineer.com/Statistics/stats/chi)
 
 
+[Day 4: SQL Link](https://devintheengineer.com/Big_Data/big_data/day_4)
 
 
 ### Homework/Example Problems

@@ -1,6 +1,6 @@
 ---
 title: "Chi-Squared Test"
-permalink: /Statistics/stats/chi_
+permalink: /Statistics/stats/chi
 author_profile: true
 
 header:
