@@ -10,3 +10,4 @@ header:
 
 insert stuff about chi-squared tests here!
 
+\frac{n!}{k!(n-k)!} = \binom{n}{k}
