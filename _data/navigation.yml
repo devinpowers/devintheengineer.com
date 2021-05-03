@@ -2,7 +2,7 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Projects"
+  - title: "Civil Engineering Projects"
     url: /projects/
   - title: "Discrete Mathematics"
     url: /discretemathematics
