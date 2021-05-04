@@ -13,7 +13,7 @@ header:
 ## Object-Oriented Programming
 
 
-- OOP is a view of how both data and functions that work with that data
+- **OOP** is a view of how both data and functions that work with that data
 
 - Organization of OPP is called a class (or struct)
 
@@ -31,6 +31,7 @@ A class (or struct) contains:
 - Encapsulation
 - Inheritance
 - Polymorphism
+
 
 ![inserting an Image](/images/C++/classes/oop1.jpg)
 ![inserting an Image](/images/C++/classes/oop2.jpg)
@@ -1401,3 +1402,32 @@ Jacob is teaching Math
 
 ```
 
+### More on structure of Programs
+
+* Normally we place the *structure* definition in the header file and then any functions associated with the structure in an implementation file
+
+For example:
+
+**main.cpp** file:
+
+```cpp
+
+#include "clock.h"
+
+int main(){
+
+    Clock my_c;
+}
+
+```
+**clock.h** file:
+
+```cpp
+
+struct Clock {
+    int minutes;
+    int hours;
+    string period;
+};
+
+```
