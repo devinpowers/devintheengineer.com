@@ -1402,7 +1402,7 @@ Jacob is teaching Math
 
 ```
 
-### More on structure of Programs
+### More on structure of Programs....
 
 * Normally we place the *structure* definition in the header file and then any functions associated with the structure in an implementation file
 
@@ -1417,6 +1417,9 @@ For example:
 int main(){
 
     Clock my_c;
+    my_c.hours = 10; // change data attributes in our struc
+
+    cout << my_c.hours << endl;
 }
 
 ```
@@ -1431,3 +1434,19 @@ struct Clock {
 };
 
 ```
+
+
+### Constructors in C++
+
+**Initializer List**
+
+Example of the **Format**
+
+```cpp
+Clock(int m, int h, string s) : minutes(m), hours(h), period(s) {};
+```
+
+* The colon indicates what follows is a init list
+* Each comma seperates phrases afterwards
+* **The empty {} is required at the end**
+
