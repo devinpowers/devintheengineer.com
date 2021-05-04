@@ -17,12 +17,14 @@ header:
 
 - Organization of OPP is called a class (or struct)
 
-A class contains:
+A class (or struct) contains:
+
     1. Attributes (Data)
+
     2. Behaviours (Functions or methods) that operate on that data
 
 
-General OOP Principles:
+**General OOP Principles:**
 
 - Composition
 - Abstraction
