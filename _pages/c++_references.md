@@ -97,3 +97,7 @@ Location of c: 0x7ffee076271c
 ### Extra on Pointers vs a reference in C++
 
 ![inserting an Image](/images/C++/references/difference.jpg)
+
+
+
+

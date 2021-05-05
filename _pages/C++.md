@@ -39,6 +39,8 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 [References in C++](https://devintheengineer.com/C++/c++_references)
 
+* References vs Pointers
+
 ## Week 3: Functions
 
 [Functions in C++ ](https://devintheengineer.com/C++/functions_cpp)

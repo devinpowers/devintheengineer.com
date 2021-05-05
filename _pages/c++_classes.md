@@ -1450,3 +1450,80 @@ Clock(int m, int h, string s) : minutes(m), hours(h), period(s) {};
 * Each comma seperates phrases afterwards
 * **The empty {} is required at the end**
 
+
+### More on Classes and Their Setup
+
+
+**clock.h** File
+
+```cpp
+#ifndef CLOCK_H
+#define CLOCK_H
+
+#include<string>
+using std::string;
+
+struct Clock {
+  int minutes;
+  int hours;
+  string period;
+};
+
+string print_clk(const Clock &c);
+
+#endif
+
+```
+
+
+**clock.cpp** File
+
+* Here we pass a clock var to a function !
+
+```cpp
+#include<string>
+using std::string;
+#include<sstream>
+using std::ostringstream;
+
+#include "clock.h"
+
+// convert a clock to a string
+string print_clk(const Clock& c){
+  ostringstream oss;
+  oss << "Hours:"<< c.hours <<", Minutes:"<< c.minutes <<", Period:"<< c.period;
+  return oss.str();
+}
+```
+
+
+**Note:** Clock is a type just like int or string, so we can make references and pointers to it just like we could for any other type!!
+
+```cpp
+#include<iostream>
+#include<string>
+
+#include "clock.h"
+
+using std::cout; using std::endl;
+using std::string;
+
+int main (){
+  Clock clk1, clk2;
+  
+  clk1.hours = 10;
+  clk2.hours = 1;
+  cout << clk1.hours <<":"<< clk2.hours << endl;
+  clk1.minutes = 20;
+  clk1.period = "AM";
+  
+  Clock &ref_c = clk1;  //reference to clock !
+  Clock *ptr_c = &clk1; // pointer to clock!
+  ref_c.minutes = 10;
+  ptr_c->period = "PM";
+  
+  // Call function to print our clock structure !!
+  cout << "clk1:" << print_clk(clk1) << endl;
+}
+
+```
