@@ -9,27 +9,37 @@ header:
   
 ---
 
-C++ code files (with a .cpp extension) are not the only files commonly seen in C++ programs. The other type of file is called a header file. Header files usually have a .h extension, but you will occasionally see them with a .hpp extension or no extension at all. The **primary purpose** of a **header file** is to propagate *declarations* to code files.
+### Multiple File Compilation
+
+* In C++ you can compile multiple files separetly which can be combined/linked
+
+* It's very common to break a large problem into smaller problems
+* You can actually create seperate files for each code solution and then combine them later (link time)
+
+
+C++ code files (with a .cpp extension) are not the only files commonly seen in C++ programs. The other type of file is called a **header file**. Header files usually have a .h extension, but you will occasionally see them with a .hpp extension or no extension at all. The **primary purpose** of a **header file** is to propagate *declarations* to code files.
 
 Header files allow us to put **declarations in one location** and then **import them wherever we need them**. This can save a lot of typing in multi-file programs.
 
 ### Declaration
 
- A Declaration function has no function body, but it does have all **the types** the function uses.
+ A Declaration function has **no function body**, but it does have all **the types** the function uses.
 
-- Knowing the types, the complier can compile (check types) under the assumption that the function definition is provided later at link time.
+- Knowing the types, the complier can compile (check types) under the assumption that the **function definition** is provided later at link time (which is usually include when you compile a main.cpp and functions.cpp)
 
-- A declaration  registers the signature of a function:
-    - its name
-    - its return type 
-    - its parameter types
+- A declaration  registers the *signature* of a function:
+    - **its name**
+    - **its return type** 
+    - **its parameter types**
 
 
-### Header Files
+### Header Files (.h)
 
-Header files are those filled with function declarations 
+Header files are those filled with **function declarations**
 
 With the functions signature, C++ can check that the types used by calling a program are correct
+
+
 
 
 ### An Example of Complile Execute Cycle:
@@ -66,13 +76,18 @@ Here, the -o allows us to name the executable (.exe is common)
 
 ### Declaration vs Definition
 
-Declaration Example
+**Declaration Example**
+
+* Which includes the **name of the function** (swap_nodes), its **return type** (void), and its **parameters** (long &, long &)
 
 ```cpp
 void swap_nodes(long &, long &);
 ```
 
-Definition Example
+**Definition Example**
+
+* Here is the definition of the function, a semicolon at the end of declaration Param name not necessary
+
 ```cpp
 void swap_nodes(long &first, long &second){
     long temp = first;
@@ -81,31 +96,31 @@ void swap_nodes(long &first, long &second){
 }
 ```
 
-What are the benefit of seperating definitions and declerations?
+What are the **benefits** of seperating **definitions** and **declerations**?
 
 - Reusable
 - Hides implementation details (the library doesnt need to explain how any of the function need to work)
 - Independent coding
-
-
+- Ease maintenance
+- Simplify testing
+- Support independent coding
 
 ### Libraries
 
 - increases the power of language becuase they allow commonly-used functions to be shared
 
-What are the components in a Library
+What are the **components** in a Library?
 
-1. Header File
-- interface
-- declarations
-- templates
-- inserted into using program using #include
+1. **Header File**
+- Interface
+- Declarations
+- Templates
+- Inserted into using program using **#include**
 
-
-2. Implementation File
+2. **Implementation File**
 
 - (Function) Definitions
-- Classes
+- Classes (covered in bit later!!!)
 - Must be seperately complied and linked by the complier (.o files)
 
 
