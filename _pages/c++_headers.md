@@ -9,13 +9,13 @@ header:
   
 ---
 
-C++ code files (with a .cpp extension) are not the only files commonly seen in C++ programs. The other type of file is called a header file. Header files usually have a .h extension, but you will occasionally see them with a .hpp extension or no extension at all. The primary purpose of a header file is to propagate declarations to code files.
+C++ code files (with a .cpp extension) are not the only files commonly seen in C++ programs. The other type of file is called a header file. Header files usually have a .h extension, but you will occasionally see them with a .hpp extension or no extension at all. The **primary purpose** of a **header file** is to propagate *declarations* to code files.
 
-Header files allow us to put declarations in one location and then import them wherever we need them. This can save a lot of typing in multi-file programs.
+Header files allow us to put **declarations in one location** and then **import them wherever we need them**. This can save a lot of typing in multi-file programs.
 
 ### Declaration
 
- A Declaration function has no function body, but it does have all the types the function uses.
+ A Declaration function has no function body, but it does have all **the types** the function uses.
 
 - Knowing the types, the complier can compile (check types) under the assumption that the function definition is provided later at link time.
 

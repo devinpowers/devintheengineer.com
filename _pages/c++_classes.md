@@ -1479,6 +1479,7 @@ string print_clk(const Clock &c);
 **clock.cpp** File
 
 * Here we pass a clock var to a function !
+* We can put functions that work with our Clock (struc) or that are a part if Clock in a separate implementation file
 
 ```cpp
 #include<string>
@@ -1527,3 +1528,28 @@ int main (){
 }
 
 ```
+
+#### Methods
+
+* We can also have methods, which are called using a . (dot operator) in the context of an object
+ * example: **object.do_something();**
+ * Here we called the method **do_something()** in the context of the *object* variable of type __.
+ 
+* Methods are specific to the struc/class/type they are associated with
+* Methods have some special properties:
+    * Called in context of an object
+    * Special Privileges
+* We declare methods inside of the struc block, it indicates that it is part of the struct
+
+
+#### How is Calling Objects passed?
+
+* Remember in Python, the first parameter to every method was the calling object, we always called it *self*
+
+* In C++ , there is no "first parameter" in every method, instead C++ creates a special variable name *this* which is used in a method call.
+
+
+
+
+## Classes Part 2
+
