@@ -1583,7 +1583,17 @@ int main (){
 
 * Shortcut to setting data members directly!
 
+
 **Format**
+
+    NBA(string first, string last, int num) : first_name(first), last_name(last), number(num) {};
+
+**Note**: the empyy {} is required at the end!
+
+* Order depends on declaration, the order of initialization of the data member from an initialization list goes in the **order of declaration** in the class, not the order of the parameter in the initializer constructor
+
+
+* Note: You can put the constructor in the .h or the .cpp (functions) file
 
 ```cpp
 #include<iostream>
@@ -1608,10 +1618,9 @@ public:
 };
 
 ```
-**Note**: the empyy {} is required at the end!
 
 
-We can test the code above
+We can **test** the code above
 
 ```cpp
 
@@ -1645,6 +1654,13 @@ Last_Name
 ```
 
 
+### Advertising vs Implementation
+
+* You try to keep the implementation out of the header when possible
+
+* The header is the **ad** for the class. This is **what** the class does
+* The implementation file is **how** the class does what is advertised
+
 
 ## Converting Constructor
 
@@ -1653,3 +1669,5 @@ Last_Name
     * **to**-casting: A cast known type to a new variable of your class type
     * **from**-casting: A cast to a variable of your class type that is a known type
 
+* If you write a constructor with a single parameter, then that constitutes a converting constructor
+    *When C++ sees a type that, when passed to a constructor, creates the required type, it will call that constructor and do the conversion
