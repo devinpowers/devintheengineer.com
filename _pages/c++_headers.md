@@ -139,9 +139,9 @@ Private
 
 **We have 3 files:**
 
-1. **functions.h**
+**functions.h** File
 
-* Includes the decleration of the function **f1**
+  * Includes the decleration of the function **f1**
 
 
 ```cpp
@@ -153,9 +153,9 @@ long f1(long p1, long p2=2);
 #endif
 ```
 
-2. **functions.cpp**
-
-* Includes the definition of the function **f1**
+**functions.cpp** File
+  
+  * Includes the definition of the function **f1**
 
 ```cpp
 #include "functions.h"
@@ -165,9 +165,9 @@ long f1(long p1, long p2){
 }
 ```
 
-3. **main.cpp**
+**main.cpp** File
 
-* Main file!
+  * Main file, that calls our function!
 
 ```cpp
 #include<iostream>
@@ -180,6 +180,7 @@ int main(){
   cout << f1(20) << endl;
 }
 ```
+
 
 **Lets compile and run**
 
