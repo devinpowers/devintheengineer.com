@@ -189,7 +189,6 @@ Terminal:
 ```cpp
 g++ main.cpp functions.cpp
 ./a.out
-
 ```
 
 
@@ -199,3 +198,140 @@ g++ main.cpp functions.cpp
 200
 40
 ```
+
+* That was so much fun!!
+
+### Multiple File Compilation
+
+
+
+HEres a bigger example:
+
+**support.h** File
+
+```cpp
+#ifndef ROOTS_SOLVER
+#define ROOTS_SOLVER
+
+bool get_coefficients( double &, double &, double & );
+int roots( double, double, double, double &, double & );
+
+#endif
+```
+
+**support.cpp** File
+
+```cpp
+#include <iostream>
+using std::cout; using std::endl; using std::cin;
+#include <cmath>
+using std::sqrt;
+
+#include "support.h"
+
+/*
+  Purpose:  Accept the three coefficients of 
+            an equation from the user.
+  params:   Coefficients (A, B and C) of the equation
+  return: True if "end-of-file"; 
+        : false otherwise (as the return expression)
+*/
+
+bool get_coefficients( double & A, double & B,
+		       double & C ){
+    int status;
+
+    cout << "\nEnter quadratic equation coefficients\n";
+    cout << "(space separated A, B and C, EOF to halt):";
+    cin >> A >> B >> C;
+
+    if (cin.eof())
+	    status = false;
+    else
+	    status = true;
+
+    return status;
+}
+
+/*
+  Purpose: Given the coefficients, compute roots
+           of a quadratic equation.
+  params: (A, B and C) of the equation
+          root_1, root_2 (as ref parameters)
+  return status:(3-not a quad, 2-complex,
+                1-one real root, 0-two real roots
+*/
+
+int roots(double A, double B, double C,
+	      double & root_1, double & root_2){
+    int status;
+    double discriminant;
+
+    if (A == 0.0) {
+	status = 3;    // Not a quadratic equation
+    } else {
+        discriminant = B*B - 4.0*A*C;
+        if (discriminant < 0.0) {
+            status = 2;    // two complex roots
+        } else if (discriminant == 0.0) {
+            status = 1;    // one real root
+            root_1 = (-B)/(2.0*A);
+        } else {
+            status = 0;    // two real roots
+            root_1 = (-B + sqrt(discriminant))/(2.0*A);
+            root_2 = (-B - sqrt(discriminant))/(2.0*A);
+        }
+    }
+    return status;
+}
+```
+
+
+**main.cpp** File
+
+```cpp
+#include <iostream>
+using std::cout; using std::endl; using std::fixed;
+#include <iomanip>
+using std::setprecision; 
+
+#include "support.h"
+
+int main(){
+    int input_status, root_status;
+    double A, B, C, root_1, root_2;
+
+    cout << fixed << setprecision( 1 );
+
+    input_status = get_coefficients( A, B, C );
+    while (input_status != 0) {
+		root_status = roots( A, B, C, root_1, root_2 );
+		cout << endl << "The equation:" << endl;
+		cout << "  " << A << " x^2 + " << B
+			<< " x + " << C << endl;
+		switch (root_status) {
+			case 0:
+				cout << "\n has the following roots"<<endl;
+				cout << "  root 1 = " << root_1 << endl;
+				cout << "  root 2 = " << root_2 << endl;
+				break;
+			
+			case 1:
+				cout <<"\n has the following root:" << endl;
+				cout << "  root = " << root_1 << endl;
+				break;
+			
+			case 2:
+				cout << endl << "has complex roots." << endl;
+				break;
+			
+			case 3:
+				cout << "\n is not quadratic." << endl;
+				break;
+		}
+		input_status = get_coefficients( A, B, C );
+    }
+}
+
+```
+
