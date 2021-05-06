@@ -124,8 +124,6 @@ What are the **components** in a Library?
 - Must be seperately complied and linked by the complier (.o files)
 
 
-** insert Picture here **
-
 
 ### Public / Private
 
@@ -136,27 +134,38 @@ Private
 - Items defined in the implementation that are not declared in the header file cannot be used by any program, even if they include the header file
 
 
-### Example of Header Files and Separate Compilation
+## Example of Header Files and Separate Compilation
 
-*** insert photos ***
 
-We have 3 files:
+**We have 3 files:**
 
-1. functions.cpp
+1. **functions.h**
+
+* Includes the decleration of the function **f1**
+```cpp
+#ifndef DEFAULT_TEST
+#define DEFAULT_TEST
+
+long f1(long p1, long p2=2);
+
+#endif
+
+```
+2. **functions.cpp**
+
+* Includes the definition of the function **f1**
 
 ```cpp
-
 #include "functions.h"
-
 
 long f1(long p1, long p2){
   return p1 * p2;
 }
-
 ```
 
-2. main.cpp
+3. **main.cpp**
 
+* Main file!
 ```cpp
 
 #include<iostream>
@@ -171,69 +180,19 @@ int main(){
 
 ```
 
-3. functions.h
+**Lets compile and run**
+
+Terminal:
 
 ```cpp
-#ifndef DEFAULT_TEST
-#define DEFAULT_TEST
-
-long f1(long p1, long p2=2);
-
-#endif
-
-```
-
-We see that the Header file contains Declerations
-
-
-As you can see both the main.cpp and support.cpp file have the #include "support.h" file,
-when we include header files from C++ standard libraries or other tools we use the angle brackets <>
-- #include <iosteam>
-
-But when we include from our own local directory we use " "
-
-- #include "header.h"
-
-
-How do we complile everything?
-
-- lets go to our terminal
-
-```cpp
-g++ -Wall -std=c++17 -c functions.cpp
-```
-Will return -> functions.o file
-
-```cpp
-g++ -Wall -std=c++17 -c main.cpp
-```
-Will return -> main.o file
-
-Now that we have object files we can link them
-
-```cpp
-g++ main.o functions.o
-```
-
-Will return -> a.out
-
-Now we can run the File (a.out or outfile.exe)
-
-```
+g++ main.cpp functions.cpp
 ./a.out
 ```
 
+**Output:**
 
-We can also just compile in one-step:
+'''cpp
+200
+40
+'''
 
-```cpp
-g++ -Wall -std=c++17 main.cpp functions.cpp
-```
-
-And it spits out the a.out file, that we can run to execute the program!!
-
-```
-./a.out
-```
-
-more to come......
