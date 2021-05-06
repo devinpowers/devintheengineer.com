@@ -370,3 +370,6 @@ int main(){
 
 ```
 
+![inserting an Image](/images/C++/headers/quad1.jpg)
+![inserting an Image](/images/C++/headers/quad2.jpg)
+
