@@ -1553,3 +1553,43 @@ int main (){
 
 ## Classes Part 2
 
+**What is a constructor?**
+
+*   Specials methods that are responsible for creating/initializing a user defined struc/class
+*   Seen in Python
+*   More like initializers, part of a **pipeline** that allow us to initialize elements of data struct
+
+[ " insert Pipeline photo "]
+
+*   If we don't provide a constructor, C++ will provide one, the synthesized constructor will initailize each data member to its default value
+
+* Unlike Python, constructor **can be overloaded** based on parameters
+
+
+
+**Calling the Constructor**
+
+
+
+### Synthetic Default Constructor and Initializer Lists
+
+* If we define **any** constructor, then C++ no longer provides any synthesized default constructor
+
+    * When we define a constructor, it's up to use to provide all the constructors necessary for the class
+    * If you want to use the default constructor, you just set the *name* of the **name_struc() = default**
+
+
+### Initializer List
+
+* Shortcut to setting data members directly!
+
+**Format**
+
+
+## Converting Constructor
+
+* Two sense of cast
+
+    * **to**-casting: A cast known type to a new variable of your class type
+    * **from**-casting: A cast to a variable of your class type that is a known type
+
