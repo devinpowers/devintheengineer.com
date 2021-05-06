@@ -39,7 +39,11 @@ Header files are those filled with **function declarations**
 
 With the functions signature, C++ can check that the types used by calling a program are correct
 
+* When you include (header files) from our own local directory, we use  " "
+  * **#include "my_header.h"**
 
+* When we include normal header files from the C++ libraries or other standard tools, we use <>
+  * **#include <iostream>**
 
 
 ### An Example of Complile Execute Cycle:
