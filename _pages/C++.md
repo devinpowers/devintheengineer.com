@@ -57,6 +57,8 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 ## Week 5: Functions and Multiple File Compilation (working with Headers)
 
+* Working with **Declerations** and **Definitions**
+
 [Working with Multiple Files (Headers) in C++](https://devintheengineer.com/C++/c++_headers)
 
 
