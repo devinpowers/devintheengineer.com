@@ -1585,6 +1585,66 @@ int main (){
 
 **Format**
 
+```cpp
+#include<iostream>
+using std::cout;
+using std::endl;
+
+#include<string>
+using std::string;
+
+
+struct NBA {
+
+public:
+    string first_name = "First_Name";         // Default
+    string last_name = "Last_Name";
+    int number = 0;
+
+    NBA() = default; // <-- Default Constructor
+
+    NBA(string first, string last, int num) : first_name(first), last_name(last), number(num) {};
+
+};
+
+```
+**Note**: the empyy {} is required at the end!
+
+
+We can test the code above
+
+```cpp
+
+int main() {
+
+    NBA player("Devin", "Powers", 3);
+
+    NBA player2; // Default;
+
+    cout << player.first_name << endl;
+    cout << player.last_name << endl;
+    cout << player.number << endl;
+
+
+    cout << player2.first_name << endl;
+    cout << player2.last_name << endl;
+    cout << player2.number << endl;
+
+}
+```
+
+**Output**:
+
+```cpp
+Devin
+Powers
+3
+First_Name
+Last_Name
+0
+```
+
+
 
 ## Converting Constructor
 
