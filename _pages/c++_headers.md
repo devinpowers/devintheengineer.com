@@ -137,7 +137,7 @@ Private
 ## Example of Header Files and Separate Compilation
 
 
-**We have 3 files:**
+**We have 3 files**
 
 **functions.h** File
 
