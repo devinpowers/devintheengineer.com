@@ -137,6 +137,8 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 - Constructors
 
+
+
 ## Extras:
 
 [Arrays](https://devintheengineer.com/C++/arrays)
@@ -216,7 +218,6 @@ Objectives: Working with importing text files, Maps, and Sets
 Goal: Connect and Disconnect from Servers 
 
 
-### coming soon...
 
 ### Project 8
 
@@ -226,6 +227,8 @@ Objectives: Create your own Data Structure using Struct
 
 Goal: Working with OOP
 
+
+### coming soon...
 
 ### Project 9
 
