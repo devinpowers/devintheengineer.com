@@ -142,6 +142,8 @@ Private
 1. **functions.h**
 
 * Includes the decleration of the function **f1**
+
+
 ```cpp
 #ifndef DEFAULT_TEST
 #define DEFAULT_TEST
@@ -149,8 +151,8 @@ Private
 long f1(long p1, long p2=2);
 
 #endif
-
 ```
+
 2. **functions.cpp**
 
 * Includes the definition of the function **f1**
