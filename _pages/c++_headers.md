@@ -21,7 +21,9 @@ C++ code files (with a .cpp extension) are not the only files commonly seen in C
 
 Header files allow us to put **declarations in one location** and then **import them wherever we need them**. This can save a lot of typing in multi-file programs.
 
-### Declaration
+### Declaration vs. Definitions
+
+#### Declaration
 
  A Declaration function has **no function body**, but it does have all **the types** the function uses.
 
@@ -31,6 +33,11 @@ Header files allow us to put **declarations in one location** and then **import 
     - **its name**
     - **its return type** 
     - **its parameter types**
+
+#### Definitions
+
+* A definition is the actual *body* of the functions 
+
 
 
 ### Header Files (.h)
