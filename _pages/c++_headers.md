@@ -42,15 +42,18 @@ Header files allow us to put **declarations in one location** and then **import 
 
 ### Header Files (.h)
 
-Header files are those filled with **function declarations**
+Header files are those filled with **Function Declarations**
 
-With the functions signature, C++ can check that the types used by calling a program are correct
+With the functions signature, C++ can *check that the types* used by calling a program are correct
 
 * When you include (header files) from our own local directory, we use  " "
+  * The "" means; *find this file thats in my current directory*
   * **#include "my_header.h"**
 
 * When we include normal header files from the C++ libraries or other standard tools, we use <>
-  * **#include <iostream>**
+  * #include <iostream>
+
+
 
 
 ### An Example of Complile Execute Cycle:
@@ -214,9 +217,30 @@ g++ main.cpp functions.cpp
 
 ### Multiple File Compilation
 
+**Question**
+
+What files need to be compiled?
+
+**All .cpp files!**
 
 
-HEres a bigger example:
+##### Preprocessor
+
+* The Preprocessor allows us to modify our code before it compiles!
+
+Here are three important preprocessor commands (**header guards**)
+
+#ifndef some_variable_we_make_up
+#define some_variable_we_make_up
+
+... stuff we want to include..
+
+#endif
+
+
+
+
+**Heres a bigger example:**
 
 **support.h** File
 
