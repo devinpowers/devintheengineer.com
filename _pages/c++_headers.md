@@ -168,8 +168,8 @@ long f1(long p1, long p2){
 3. **main.cpp**
 
 * Main file!
-```cpp
 
+```cpp
 #include<iostream>
 using std::cout; using std::endl;
 
@@ -179,7 +179,6 @@ int main(){
   cout << f1(10,20) << endl;
   cout << f1(20) << endl;
 }
-
 ```
 
 **Lets compile and run**
@@ -189,12 +188,13 @@ Terminal:
 ```cpp
 g++ main.cpp functions.cpp
 ./a.out
+
 ```
+
 
 **Output:**
 
-'''cpp
+```cpp
 200
 40
-'''
-
+```
