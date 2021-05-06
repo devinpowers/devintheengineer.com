@@ -1671,3 +1671,7 @@ Last_Name
 
 * If you write a constructor with a single parameter, then that constitutes a converting constructor
     *When C++ sees a type that, when passed to a constructor, creates the required type, it will call that constructor and do the conversion
+
+
+Lets convert our **NBA** Class example above.
+
