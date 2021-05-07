@@ -135,8 +135,10 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 ## Week 10: More on Classes
 
-- Constructors
+[Constructors in C++](https://devintheengineer.com/C++/c++_constructors)
 
+- Constructors
+- Different Examples
 
 
 ## Extras:
