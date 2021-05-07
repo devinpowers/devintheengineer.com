@@ -16,6 +16,8 @@ header:
 
 **Example One**
 
+![inserting an Image](/images/C++/constructors/Page1.jpg)
+
 **nba.h** File:
 
 ```cpp
@@ -126,6 +128,11 @@ int main(){
 
 
 **Example 2**
+
+
+![inserting an Image](/images/C++/constructors/Page2.jpg)
+![inserting an Image](/images/C++/constructors/Page3.jpg)
+
 
 **nba.h** File
 
@@ -254,3 +261,5 @@ int main(){
     First Name:Chris, Last Name:Paul, Number:10
     First Name:Devin, Last Name:Powers, Number:3
     First Name:Tony, Last Name:Parker, Number:9
+
+
