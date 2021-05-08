@@ -19,6 +19,11 @@ Inserting, Deleting and other Methods in Map Data Structures
 
 * The Library to Include for **Pair Type** is #include<utility>
 
+    * Which Includes:
+
+        * **pair**
+        * **make_pair**
+
 * The **Pair Type** holds **exactly** two values, it's templated on the two values
 
 * **pair<string, int > word_count;**
