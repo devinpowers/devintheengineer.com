@@ -10,10 +10,22 @@ header:
 ---
 
 ![inserting an Image](/images/C++/streams/Page1.jpg)
+
+
 ![inserting an Image](/images/C++/streams/Page2.jpg)
+
+## How to Get Input?
+
+
 ![inserting an Image](/images/C++/streams/Page3.jpg)
 ![inserting an Image](/images/C++/streams/Page4.jpg)
+
+## Writing to ofstream 
+
 ![inserting an Image](/images/C++/streams/Page5.jpg)
+
+
+
 ![inserting an Image](/images/C++/streams/Page6.jpg)
 ![inserting an Image](/images/C++/streams/Page7.jpg)
 ![inserting an Image](/images/C++/streams/Page8.jpg)
@@ -23,7 +35,83 @@ header:
 
 ## Examples
 
-### Reading txt file using fstream
+
+
+### Reading txt file using ifstream
+
+Example:
+
+```cpp
+#include<iostream>
+using std::endl;
+#include<fstream>
+using std::ifstream;
+#include<vector>
+using std::vector;
+#include<string>
+using std::string;
+
+
+
+using std::cout;
+
+int main(){
+
+    ifstream file; // Create a File Object
+
+    file.open("file.txt");
+
+    vector<string> names; // vector to store the names
+    string input; // where the names will be tempoary stored
+
+    while( file >> input) // will evaluate as True if the read is sucessful
+    {
+        names.push_back(input);
+    }
+
+    for (string name : names ){
+
+        cout << name << endl;
+    }
+
+}
+```
+
+**File.txt**
+
+```cpp
+Devin Joseph Powers
+Austin
+John
+Adams
+Aaron
+Michael
+
+```
+
+**Output:**
+
+```cpp
+Devin
+Joseph
+Powers
+Austin
+John
+Adams
+Aaron
+Michael
+```
+
+### Another Way to do Input
+
+* use **.get()**
+
+
+
+
+
+
+
 
 ```cpp
 
