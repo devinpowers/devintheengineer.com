@@ -13,6 +13,7 @@ toc_label: "Table of Contents"
 
 Inserting, Deleting and other Methods in Map Data Structures
 
+
 ## Pairs
 
 * Working with Pairs in C++, Different examples below
@@ -26,10 +27,18 @@ Inserting, Deleting and other Methods in Map Data Structures
 
 * The **Pair Type** holds **exactly** two values, it's templated on the two values
 
+
+
 * **pair<string, int > word_count;**
 
 
+**How does one Access the values?**
 
+To access the values (which arecalled data memebers, not functions) you** use **.first** and **.second**
+
+![inserting an Image](/images/C++/maps/pair1.jpg)
+
+Here an example of Pairs below:
 
 ```cpp
 #include<iostream>
@@ -67,6 +76,12 @@ Output
 a: 3 , Chris Paul
 b: 23 , Michael Jordan
 ```
+
+**Note:** We can't print a pair, instead you have to print the elements!
+
+We use **ostringstrem** !
+
+![inserting an Image](/images/C++/maps/pair2.jpg)
 
 Another Example
 
@@ -121,6 +136,78 @@ Output
 
 ```cpp
 Griffin:23, Griffin:23, Griffin:23, Pippin:33, Billups:1, Wallace:3, 
+```
+
+
+Another Example of **making pairs**
+![inserting an Image](/images/C++/maps/pair3.jpg)
+
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include<string>
+using std::string;
+#include<vector>
+using std::vector;
+#include<utility>
+using std::pair; using std::make_pair;
+#include<sstream>
+using std::ostringstream;
+#include<iterator>
+using std::ostream_iterator;
+#include<algorithm>
+using std::transform;
+
+
+using NBA = pair<string,int>;  // Custom Data Type (pair as a Type!)
+
+string pair_to_string(NBA p){
+    ostringstream oss;
+    oss << p.first <<":"<<p.second;
+    return oss.str();
+}
+
+
+int main(){
+
+    // Different ways to "Create Pairs"
+    
+    NBA pair_1("Jordan", 23);
+    NBA pair_2("Paul", 3);
+
+    pair<string, int> pair_3, pair_4, pair_5;
+
+    pair_3 = make_pair("Kobe", 24);
+    pair_4 = make_pair("Curry", 30);
+
+    pair_5 = {"Lebron", 23};
+
+    // Lets change pair 1
+    cout << "Lets change pair 1: " << endl;
+    pair_1.first = "Duncan";
+    pair_2.second = 12;
+
+    // Lets print 
+
+    cout << "Pair 1: " << pair_to_string(pair_1) << endl;
+    cout << "Pair 2: " << pair_to_string(pair_2) << endl;
+    cout << "Pair 3: " << pair_to_string(pair_3) << endl;
+    cout << "Pair 4: " << pair_to_string(pair_4) << endl;
+    cout << "Pair 5: " << pair_to_string(pair_5) << endl;
+}
+```
+
+**Output**
+
+```cpp
+Lets change pair 1: 
+Pair 1: Duncan:23
+Pair 2: Paul:12
+Pair 3: Kobe:24
+Pair 4: Curry:30
+Pair 5: Lebron:23
+
 ```
 
 
@@ -308,7 +395,7 @@ KEY     ELEMENT
 
 
 
-![inserting an Image](/images/C++/maps/Page1.jpg)
+
 ![inserting an Image](/images/C++/maps/Page2.jpg)
 ![inserting an Image](/images/C++/maps/Page3.jpg)
 ![inserting an Image](/images/C++/maps/Page4.jpg)
