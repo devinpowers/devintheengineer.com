@@ -636,5 +636,4 @@ KEY     ELEMENT
 
 ### Sort Vector
 
-
 ![inserting an Image](/images/C++/maps/sort_vector.jpg)
