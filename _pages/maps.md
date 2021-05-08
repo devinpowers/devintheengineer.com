@@ -213,7 +213,102 @@ Pair 5: Lebron:23
 
 ## Maps
 
-Insert into Map 3 Different ways!
+* Maps are ordered associative containers that include:
+
+    * Map
+    * Multimap
+    * Set
+    * Multiset 
+
+I will just cover **Maps** on this page!
+
+
+It's important to remember that a map is **not** a sequence. maps have an ordering, but it not the order that the elements were inserted into the map.
+
+
+### Bidirectional Iterators
+
+* Maps yield biderectional iterators ( can advance both forward and backwards)
+* No random access via []
+* No pointer arithmetic
+* No itr < v.end(), although it allows itr != v.end()
+
+* Maps automatically insert new elements such that they're ordered:
+
+    * Each map element is a **pair**
+    * (key, value) in that order
+    * Order of map element is based on the key!
+    * You can search for elements fast!
+
+
+#### Initialization, Key 
+
+* Add later!
+
+
+
+### Insert into Map 3 Different ways!
+
+* Use **insert**
+
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include<string>
+using std::string;
+#include<vector>
+using std::vector;
+#include<utility>
+using std::pair; using std::make_pair;
+#include<sstream>
+using std::ostringstream;
+#include<iterator>
+using std::ostream_iterator;
+#include<map>
+using std::map;
+
+
+int main(){
+
+    map<string, int> m;
+
+    string word_1 = "hello1";
+    string word_2 = "hello2";
+    string word_3 = "hello3";
+
+
+
+    m.insert({word_1, 1});
+    m.insert(make_pair(word_2,2));
+    m.insert(pair<string, int>(word_3,3));
+
+
+    cout << "KEY\tELEMENT\n";
+
+    for (auto itr = m.begin(); itr != m.end(); ++itr) {
+        cout << (*itr).first << '\t' << (*itr).second << '\n';
+    }
+
+}
+
+```
+
+**Output:**
+
+```cpp
+KEY     ELEMENT
+hello1  1
+hello2  2
+hello3  3
+```
+
+**NBA Example**
+
+![inserting an Image](/images/C++/maps/map1.jpg)
+
+
+
 
 ```cpp
 #include<iostream>
@@ -251,13 +346,29 @@ int main()
 
 ```
 
+**Output:**
+
+```cpp
+KEY     ELEMENT
+1       Lebron James
+3       Steph Curry
+8       Kobe Bryant
+```
 
 
 
 
+### Erase in Maps (3 ways)
+
+* Erase at Key
+* Erase
 
 
-Erase in Maps
+
+#### Erase at Key
+
+![inserting an Image](/images/C++/maps/erase_key.jpg)
+
 
 ```cpp
 #include<iostream>
@@ -327,7 +438,10 @@ KEY     ELEMENT
 
 ```
 
-Erase Given a position, using a find algorithm
+### Erase Given a position, using a find algorithm
+
+![inserting an Image](/images/C++/maps/erase_position.jpg)
+
 
 ```cpp
 #include<iostream>
@@ -375,7 +489,7 @@ int main()
 }
 ```
 
-Output
+**Output**
 
 ```cpp
 The map before using erase() is : 
@@ -394,19 +508,90 @@ KEY     ELEMENT
 ```
 
 
+### Erase by Range
+
+![inserting an Image](/images/C++/maps/erase_range.jpg)
 
 
-![inserting an Image](/images/C++/maps/Page2.jpg)
-![inserting an Image](/images/C++/maps/Page3.jpg)
-![inserting an Image](/images/C++/maps/Page4.jpg)
-![inserting an Image](/images/C++/maps/Page5.jpg)
+### Map Size, Empty and Clear in STL
 ![inserting an Image](/images/C++/maps/Page6.jpg)
-![inserting an Image](/images/C++/maps/Page7.jpg)
-![inserting an Image](/images/C++/maps/Page8.jpg)
-![inserting an Image](/images/C++/maps/Page9.jpg)
-![inserting an Image](/images/C++/maps/Page10.jpg)
-![inserting an Image](/images/C++/maps/Page11.jpg)
-![inserting an Image](/images/C++/maps/Page12.jpg)
+
+
+
+
+#### Game of Thrones Example
+![inserting an Image](/images/C++/maps/got.jpg)
+
+
+## More Map Methods
+
+* Lets work with iterating through a map that are **pairs**
+
+* A map iteraotr points to a **pair**
+
+* If you want to print the key of the pair via an iterator you can type either:
+
+    * (*itr).first;
+    * itr->first;
+
+* The -> operator means a member of what the iterator points to
+
+When we iterate throgh, we cannot change a key (its a const value)
+
+### Working with Pairs and Map Examples:
+
+![inserting an Image](/images/C++/maps/map_pairs1.jpg)
+
+
+### Find Key in Map Example
+
+![inserting an Image](/images/C++/maps/find_key.jpg)
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include <map> 
+using std::map;
+#include<string>
+using std::string;
+ 
+int main()
+{
+ 
+    // Initialize container
+    map<int, int> mp;
+ 
+    // Insert elements in random order
+    mp.insert({ 2, 30 });
+    mp.insert({ 1, 40 });
+    mp.insert({ 3, 20 });
+    mp.insert({ 4, 50 });
+    mp.insert({ 9, 90 });
+ 
+    cout << "Elements from position of 3 in the map are : \n";
+    cout << "KEY\tELEMENT\n";
+ 
+    // find() function finds the position
+    // at which 3 is present
+    for (auto itr = mp.find(3); itr != mp.end(); itr++) {  // function from where it finds 3
+       
+        cout << itr->first << '\t' << itr->second << '\n';
+    }
+ 
+    return 0;
+}
+```
+
+**Output**
+
+```cpp
+Elements from position of 3 in the map are : 
+KEY     ELEMENT
+3       20
+4       50
+9       90
+```
+
 ![inserting an Image](/images/C++/maps/Page13.jpg)
 ![inserting an Image](/images/C++/maps/Page14.jpg)
 
