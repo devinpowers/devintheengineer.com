@@ -602,3 +602,38 @@ KEY     ELEMENT
 
 
 
+## Extra Map Stuff
+
+
+### Working with Maps that Have a Set as a Value
+
+![inserting an Image](/images/C++/maps/map_set.jpg)
+
+### How to Print map< Data Type, set<Data Type>>
+
+![inserting an Image](/images/C++/maps/print_map_set.jpg)
+
+
+
+###  Printing Regualr and Printing use Iterators
+![inserting an Image](/images/C++/maps/print_regular.jpg)
+
+### Iteration with vector of Pairs
+![inserting an Image](/images/C++/maps/iteration_print.jpg)
+
+
+
+### Iteration with Maps
+![inserting an Image](/images/C++/maps/iteration_maps.jpg)
+
+![inserting an Image](/images/C++/maps/iterate2.jpg)
+![inserting an Image](/images/C++/maps/iterate3.jpg)
+![inserting an Image](/images/C++/maps/iterate4.jpg)
+![inserting an Image](/images/C++/maps/iterate5.jpg)
+![inserting an Image](/images/C++/maps/iterate6.jpg)
+
+
+
+### Sort Vector
+
+
