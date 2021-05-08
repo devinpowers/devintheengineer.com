@@ -543,7 +543,7 @@ When we iterate throgh, we cannot change a key (its a const value)
 ![inserting an Image](/images/C++/maps/map_pairs1.jpg)
 
 
-### Find Key in Map Example
+### Find Key in Map Example (+ count Example)
 
 ![inserting an Image](/images/C++/maps/find_key.jpg)
 
@@ -592,8 +592,12 @@ KEY     ELEMENT
 9       90
 ```
 
-![inserting an Image](/images/C++/maps/Page13.jpg)
-![inserting an Image](/images/C++/maps/Page14.jpg)
+### Search Map by Value
+
+![inserting an Image](/images/C++/maps/search_value.jpg)
+
+### Other
+![inserting an Image](/images/C++/maps/other.jpg)
 
 
 
