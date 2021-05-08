@@ -1436,6 +1436,8 @@ struct Clock {
 ```
 
 
+
+
 ### Constructors in C++
 
 **Initializer List**
@@ -1547,6 +1549,15 @@ int main (){
 * Remember in Python, the first parameter to every method was the calling object, we always called it *self*
 
 * In C++ , there is no "first parameter" in every method, instead C++ creates a special variable name *this* which is used in a method call.
+
+
+### Scope
+
+* C++ program to show that scope resolution operator **::** is used to define a function outside a class
+
+* It's called the Scope Resolution Operator
+
+
 
 
 
