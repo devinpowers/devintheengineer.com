@@ -1,17 +1,29 @@
 ---
-layout: archive
 permalink: /C++/maps
 title: " Maps in C++ "
 author_profile: true
 
 header:
   image: "/images/tower3.jpeg"
+
+toc: true
+toc_label: "Table of Contents" 
   
 ---
 
 Inserting, Deleting and other Methods in Map Data Structures
 
-Working with Pairs in C++, Different examples below
+## Pairs
+
+* Working with Pairs in C++, Different examples below
+
+* The Library to Include for **Pair Type** is #include<utility>
+
+* The **Pair Type** holds **exactly** two values, it's templated on the two values
+
+* **pair<string, int > word_count;**
+
+
 
 
 ```cpp
