@@ -350,7 +350,7 @@ It's important to remember that a map is **not** a sequence. maps have an orderi
 * No pointer arithmetic
 * No itr < v.end(), although it allows itr != v.end()
 
-* Maps automatically insert new elements such that they're ordered:
+* Maps *automatically insert* new elements such that they're ordered:
 
     * Each map element is a **pair**
     * (key, value) in that order
@@ -478,7 +478,7 @@ KEY     ELEMENT
 ### Erase in Maps (3 ways)
 
 * Erase at Key
-* Erase
+
 
 
 
