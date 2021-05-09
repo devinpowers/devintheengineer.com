@@ -249,8 +249,6 @@ int main() {
     // iter points to the pair
     cout << "Iter Points to the pair:" << endl;
     for (iter = phone_book.begin(); iter != phone_book.end(); ++iter){
-
-    
       cout << pair_to_string( *iter ) << ", ";
     cout << "\n" << endl;
     }
@@ -639,12 +637,155 @@ KEY     ELEMENT
 #### Game of Thrones Example
 ![inserting an Image](/images/C++/maps/got.jpg)
 
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include<iterator>
+using std::ostream_iterator;
+#include<utility>
+using std::pair; using std::make_pair;
+#include<map>
+using std::map;
+#include<string>
+using std::string;
+#include<sstream>
+using std::ostringstream;
+using std::transform;
+#include<iterator>
+
+
+template<typename K, typename V> // Template so it can take any "datatypes"
+string pair_to_string(pair<K,V> p){
+  ostringstream oss;
+  oss << p.first <<":"<< p.second;
+  return oss.str();
+}
+
+
+int main() {
+
+    map<int, string>  Employees;
+
+    // Inserting values in map
+
+    Employees.insert (pair<int, string> (101, "Jon"));
+    Employees.insert (pair<int, string> (102, "Dani"));
+    Employees.insert (pair<int, string> (103, "Arya"));
+
+    // Inserting Values using Array index notation
+
+    Employees[104] = "Sansa";
+    Employees[105] = "Tyrison";
+
+    cout << "Size of map is: " << Employees.size() << endl;
+    // Iterator
+    map<int, string>::iterator iter;
+
+    cout << "Iter Points to the pair:" << endl;
+    // iter points to the pair
+    for (iter = Employees.begin(); iter != Employees.end(); ++iter){
+      cout << pair_to_string( *iter ) << ", ";
+    cout << "\n" << endl;
+    }
+
+    // Finding the Value of the Corresponding to the key "102"
+
+    map<int, string>::iterator it = Employees.find (102);
+
+    if (it != Employees.end()){
+
+        cout << "Value of key = 102 is: " << Employees.find(102)->second << endl;
+    }
+    
+
+}
+```
+
+**Output**
+
+```cpp
+Size of map is: 5
+Iter Points to the pair:
+101:Jon, 
+
+102:Dani, 
+
+103:Arya, 
+
+104:Sansa, 
+
+105:Tyrison, 
+
+Value of key = 102 is: Dani
+```
+
+
+#### Another Example:
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include<iterator>
+using std::ostream_iterator;
+#include<utility>
+using std::pair; using std::make_pair;
+#include<map>
+using std::map;
+#include<string>
+using std::string;
+#include<sstream>
+using std::ostringstream;
+
+
+template<typename K, typename V> // Template so it can take any "datatypes"
+string pair_to_string(pair<K,V> p){
+  ostringstream oss;
+  oss << p.first <<":"<< p.second;
+  return oss.str();
+}
+
+
+int main() {
+
+    
+    // Another Map just to "test" our wonderful tempalate print functions
+
+    map<string, string>  Test;
+
+    Test.insert(pair<string, string> ("Devin", "Powers"));
+    Test.insert(pair<string, string> ("Kobe", "Bryant"));
+    Test.insert(pair<string, string> ("Chris", "Paul"));
+
+    map<string, string> ::iterator test_iter;
+
+    cout << "Iterator Points to the Pair: " << endl;
+
+    for (test_iter = Test.begin(); test_iter != Test.end(); ++test_iter){
+        // send to pair_to_string function to print
+        cout << pair_to_string(*test_iter) << ", ";
+    cout << endl;
+    }
+
+
+
+}
+```
+
+**Output**
+
+```cpp
+Iterator Points to the Pair: 
+Chris:Paul, 
+Devin:Powers, 
+Kobe:Bryant, 
+```
+
 
 ## More Map Methods
 
 * Lets work with iterating through a map that are **pairs**
 
-* A map iteraotr points to a **pair**
+* A map iterator points to a **pair**
 
 * If you want to print the key of the pair via an iterator you can type either:
 
