@@ -882,12 +882,192 @@ KEY     ELEMENT
 
 
 ### Iteration with Maps
+
 ![inserting an Image](/images/C++/maps/iteration_maps.jpg)
 
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include<iterator>
+using std::ostream_iterator;
+#include<utility>
+using std::pair; using std::make_pair;
+#include<map>
+using std::map;
+#include<set>
+using std::set;
+#include<string>
+using std::string;
+#include<sstream>
+using std::ostringstream;
+
+template< typename K, typename V>
+void print_map(map<K,V> & map){
+    for (auto const& pair : map){
+        cout << pair.first << " : " << pair.second << endl;
+    }
+}
+
+int main() {
+
+    map<string, string> map_0 = { {"Devin", "Powers"}, {"Luke", "Hirt"}};
+
+    map<int, string> map_1 = { {3, "Devin"}, {1, "Luke"}, {4, "Abe"}};
+
+    cout << "Map 0: " << endl;
+    print_map(map_0);
+    cout << "Map 1: " << endl;
+    print_map(map_1);
+}
+```
+
+**Output:**
+
+```cpp
+Map 0: 
+Devin : Powers
+Luke : Hirt
+Map 1: 
+1 : Luke
+3 : Devin
+4 : Abe
+```
+###  Printing maps of Sets!
+
+* map <string, set<string>>;
+
+**How do we Print that?**
+
 ![inserting an Image](/images/C++/maps/iterate2.jpg)
+
+### Printing Maps above without using iterators Example:
+
 ![inserting an Image](/images/C++/maps/iterate3.jpg)
+
+### Iterate over C++ STL Map Data Structure:
+
 ![inserting an Image](/images/C++/maps/iterate4.jpg)
+
+### More iterator Examples:
+
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include<iterator>
+using std::ostream_iterator;
+#include<utility>
+using std::pair; using std::make_pair;
+#include<map>
+using std::map;
+#include<set>
+using std::set;
+#include<string>
+using std::string;
+#include<sstream>
+using std::ostringstream;
+
+template< typename K, typename V>
+void print_map(map<K,V> & map){
+   
+   for ( auto x : map){
+       cout << x.first << " : " << x.second << endl;
+   }
+}
+
+
+int main() {
+
+    map<string, string> map_1 = {
+        {"Server One", "Devin"},
+         {"Server Two", "Noah"},
+         {"Server Three", "Jimmy"}
+         
+         
+    };
+
+    map<int, string> map_2 = {
+         {1, "Devin"},
+          {2, "Noah"},
+           {3, "Jimmy"}
+    
+    };
+
+    cout << "Print Map 1: " << endl;
+    print_map(map_1);
+    
+    cout << "Print Map 2: " << endl;
+
+    print_map(map_2);
+}
+```
+
+**Output**
+
+```cpp
+Print Map 1: 
+Server One : Devin
+Server Three : Jimmy
+Server Two : Noah
+Print Map 2: 
+1 : Devin
+2 : Noah
+3 : Jimmy
+```
+
 ![inserting an Image](/images/C++/maps/iterate5.jpg)
+
+**Another One**
+
+* Instead of using *auto* I will declare the datatype
+
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include<iterator>
+using std::ostream_iterator;
+#include<utility>
+using std::pair; using std::make_pair;
+#include<map>
+using std::map;
+#include<set>
+using std::set;
+#include<string>
+using std::string;
+#include<sstream>
+using std::ostringstream;
+
+void print_map(map<string, string> & map){
+   
+   for ( pair<string, string> x : map){
+       cout << x.first << " : " << x.second << endl;
+   }
+}
+
+
+int main() {
+
+    map<string, string> map_1 = {
+        {"Server One", "Devin"},
+         {"Server Two", "Noah"},
+         {"Server Three", "Jimmy"}
+    };
+    
+    cout << "Print Map 1: " << endl;
+    print_map(map_1);
+
+}
+```
+
+**Output**:
+
+```cppp
+Print Map 1: 
+Server One : Devin
+Server Three : Jimmy
+Server Two : Noah
+```
 ![inserting an Image](/images/C++/maps/iterate6.jpg)
 
 
