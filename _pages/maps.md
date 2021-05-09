@@ -210,6 +210,123 @@ Pair 5: Lebron:23
 
 ```
 
+#### More examples
+
+##### Iterator Points to the Pair Example
+
+* Using *iterators* to iterate through a map and print each *pair* out
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+
+#include<iterator>
+using std::ostream_iterator;
+#include<utility>
+using std::pair; using std::make_pair;
+#include<map>
+using std::map;
+#include<string>
+using std::string;
+#include<sstream>
+using std::ostringstream;
+
+
+
+template<typename K, typename V>
+string pair_to_string(pair<K,V> p){
+  ostringstream oss;
+  oss << p.first <<":"<< p.second;
+  return oss.str();
+}
+
+
+int main() {
+
+    map<string, string> phone_book{ {"Devin", "555-2323"}, {"Bill", "555-1212"}, {"John", "555-1412"} }; // create map named phone_book
+    map<string, string>::iterator iter;   // iterator
+
+    // iter points to the pair
+    cout << "Iter Points to the pair:" << endl;
+    for (iter = phone_book.begin(); iter != phone_book.end(); ++iter){
+
+    
+      cout << pair_to_string( *iter ) << ", ";
+    cout << "\n" << endl;
+    }
+    return 0;
+}
+```
+
+**Output**
+
+```cpp
+Iter Points to the pair:
+Bill:555-1212, 
+
+Devin:555-2323, 
+
+John:555-1412, 
+
+```
+
+#####  The element *is* the Pair Example
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+
+#include<iterator>
+using std::ostream_iterator;
+#include<utility>
+using std::pair; using std::make_pair;
+#include<map>
+using std::map;
+#include<string>
+using std::string;
+#include<sstream>
+using std::ostringstream;
+
+
+
+template<typename K, typename V>
+string pair_to_string(pair<K,V> p){
+  ostringstream oss;
+  oss << p.first <<":"<< p.second;
+  return oss.str();
+}
+
+
+int main() {
+
+    map<string, string> phone_book{ {"Devin", "555-2323"}, {"Bill", "555-1212"}, {"John", "555-1412"} }; // create map named phone_book
+    map<string, string>::iterator iter;   // iterator
+
+    
+   // element *is* the pair   (we  said the type was pair)
+   cout << "Element is the pair: " << endl;
+   for(pair<string,string> element : phone_book)     
+   {
+       cout << pair_to_string( element ) << ", ";
+
+       cout << "\n" << endl;
+
+   }
+
+}
+```
+
+**Output**
+
+```cpp
+Element is the pair: 
+Bill:555-1212, 
+
+Devin:555-2323, 
+
+John:555-1412, 
+```
+
 
 ## Maps
 
