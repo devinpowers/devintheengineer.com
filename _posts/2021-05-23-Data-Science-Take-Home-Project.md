@@ -8,14 +8,13 @@ date: 2021-5-09
 ---
 
 
-Here's a take home assignment I did for a company
+Here's a take home assignment I did for a company, I used Jupyter Notebook (Python) to read the given CSV file, performed Chi-Squared Test of Independence and different machine learning algorithms (sklearn library).
 
 
 [Assignment Given](/Files/take_home/take_home_project.pdf)
 
 
 [Final Project Turned in](/Files/take_home/Final.pdf)
-
 
 
 [Jupyter Notebook Code Part 1](/Files/take_home/Part2.ipynb)
