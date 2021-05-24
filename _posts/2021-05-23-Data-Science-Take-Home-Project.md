@@ -2,7 +2,7 @@
 title: 'Data Science Take home Project'
 
 header:
-  image: "/images/Austin/skyline.jpg"
+  image: "/images/austin/skyline.jpg"
 
 date: 2021-5-09
 ---
