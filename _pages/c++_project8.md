@@ -23,59 +23,51 @@ Project creating a **Ad-Hoc Network**!
 
 #include<vector>
 using std::vector;
-
 #include<utility>
 using std::pair;
-
 #include<string>
 using std::string;
-
 #include<fstream>
 using std::ifstream;
 
 
 struct Node{
+  int x;
+  int y;
+  string label;
 
-    int x;
-    int y;
-    string label;
-
-    Node() = default;
-
-    Node(int i, int j, string l) : x(i), j(i), label(l) {}; // constructor
-
-    string_to_string() const;   // method
-
-    bool equal_nodes( const Node&);   // method
-
-    double distance (const Node &);    // method
-
+  Node()=default;  // Default constructor
+  Node(int i, int j, string l) :  x(i), y(j), label(l) {} ;  // Constructor with 3 Argumennts passsed in!
+  
+  string to_string () const;        // Method that converts the Node to a string displaying the x,y and label
+  bool equal_nodes(const Node&);        // Method that checks if the 2 nodes passed in are equal
+  double distance(const Node &)const;   // Method that checks the distance between two nodes passed in
 };
 
 
 struct Network{
+  string label;                // Attributes
+  map<string, Node> nodes;      // Map of our Network of Labels and Nodes
+  vector<string> route;         // Route of our Nodes
 
-    string label;
-    map<string, Node> nodes; // map of Nodes and their labels
-    vector<string> route; // shortest route (greedys)
+  Network()=default; // Default constructor
+  Network(ifstream &);   // Constructor that is defined outside in the function.cpp file
 
-    Network() = default // constructor
+  // Methods on Networks
+  string to_string () const; // Uses Nodes Struct to print !
 
-    Network(ifstream &);       // ifstream: Stream class to read from files
+  Node get_node(string); 
 
-    string to_string() const;
-    Node get_node(string);
-
-    void put_node(string);
-    bool in_route(const Node&);
-    Node closest(Node &);
-
-    string calculate_route(const Node&, const Node&)
-
+  void node_to_network(Node);      // Adds Node to Network
+  
+  bool in_route(const Node&);
+  Node closest(Node &);
+  string calculate_route(const Node& start, const Node& finish);
 };
 
-
 #endif
+
+
 ```
 
 
@@ -178,10 +170,10 @@ int main(){
 
   case 7:{
     Network net;
-    net.put_node( Node(10,10,"tens") );
-    net.put_node( Node(20, 20, "twentys") );
+    net.node_to_network( Node(10,10,"tens") );
+    net.node_to_network( Node(20, 20, "twentys") );
     cout << net.to_string() << endl;
-    net.put_node( Node(100, 100, "tens") );
+    net.node_to_network( Node(100, 100, "tens") );
     cout << net.to_string() << endl;    
     break;
   }
@@ -254,8 +246,6 @@ int main(){
 (functions.cpp)
 
 ```cpp
-//import libraies needed:
-
 #include<vector>
 using std::vector;
 #include<utility>
@@ -272,36 +262,175 @@ using std::istringstream; using std::ostringstream;
 #include<algorithm>
 using std::find; using std::copy;
 #include <iterator>
-#include "functions.h"
 #include<iostream>
 using std::cout;
 
-// Node Functions
+// Include "header file"
+#include "functions.h"
 
+
+//NODE FUNCTIONS
 string Node::to_string () const {
-        // converts the node into a string to print
-    ostringstream oss; // ostringstream converts into one big string
+    // returns one big string that has the " label: (x:y) " of the node
+    ostringstream oss;
+    // Puts everything into the oss keyword below 
+    //Label:(X,Y)
 
     oss << label << ":(" << x << "," << y << ")";
+    // Returns oss string
     return oss.str();
 }
 
-bool Node::equal_nodes(const Node & other_node)   {
-    // other is another node that is passed in with the og node
-    // Returns True or False
+bool Node::equal_nodes(const Node & other){
+    //Can assume that the nodes are equal if the labels are the same
+    // With other being the other node that you're comparing it too!
     return label == other.label;
 }
 
-double Node::distance (const Node & other_node){
+double Node::distance(const Node & other) const{
+    //Distance is the square root of the coordinates subtracted and squared
+    // the other is the other node passed in
+    return sqrt(pow(x-other.x, 2) + pow(y - other.y, 2));
+}
 
-    // Returns the Euclidean distance between two Node
-    // use . operator to access attribute of the other node
-    return sqrt(pow(x-other_node.x, 2) + pow(y - other_node.y, 2));
+
+// Network Functions
+
+Network::Network(ifstream &file){
+
+    // Constructor
+    // Takes in input/reads from file (.txt) into our varaibles
+    
+    long first, second;
+    string label;
+
+    // Lets get the values from each line
+    while(file >> first >> second >> second >> label){
+        // reads file and now we need to create a node and put the node into our Network
+        // The constructor of the Node will work
+        // The node_to_network will first create a node for each line in the file, and then add it to the Network
+        node_to_network(Node(first, second, label));
+
+    }
+
+}
+
+string Network::to_string() const {
+
+    // Reads the Entire Network and prints it out via one big string using ostringstream
+    // Uses the to_string method for the individual nodes 
+    ostringstream oss;
+    string s;
+
+
+    for (pair<string, Node> p : nodes){
+        // iterates  our "nodes" map in the Network 
+        // calls for the to_string() method, which returns --> label:(x,y)
+
+        oss << p.second.to_string() << ",";
+    }
+    // oss is now one long string of label:(x,y), label:(x,y), label:(x,y), etc
+    s = oss.str();
+    // Remove last comma and space
+    s = s.substr(0, s.size()- 2);
+
+    // Returns one Long string that is of our Network!!!!
+    return s;
+}
+
+
+void Network::node_to_network(Node new_node){
+    // pass in new node that we created from the file and add it the list of nodes
+
+    nodes[new_node.label] = new_node;
+}
+
+Node Network::get_node(string s){
+
+    // Searches for Node and adds it if need 
+    auto iter = nodes.find(s);
+    // If the string is not in the nodes, throw the error
+    if (iter == nodes.end()){
+        // Throw a error
+        string error_string = "Node was not found: " + s;
+        throw std::out_of_range(error_string);
+    }
+    // Else the node was found and we can return it
+    pair<string, Node> p = *iter;
+    // Return the Node
+    return p.second;
+
 }
 
 
 
-// Network Functions
+
+
+
+bool Network::in_route( const Node& node){
+
+    // Checks to seee if the node is not in the route
+
+    if (find(route.begin(), route.end(), node.label) == route.end()){
+        return false;
+    }
+    // Else return true if it's in the route
+
+    return true;
+
+}
+
+Node Network::closest(Node & node){
+
+    double shortest_distance = 100000000.0;
+    Node closest;
+    // Loop thru each pair
+
+    for (pair<string, Node> p : nodes){
+        // find the node in the route
+        auto it = find(route.begin(),route.end(), p.second.label);
+        // if the nodes are not the same, and the node is not in the route
+        if (! p.second.equal_nodes(node) && (it == route.end())){
+            // check to see if it is the closet
+            if (node.distance(p.second) < shortest_distance){
+                shortest_distance = node.distance(p.second);
+                closest = p.second;
+            }
+        }
+    }
+    return closest;
+
+
+}
+
+string Network::calculate_route(const Node& start, const Node& end){
+    ostringstream oss;
+    string s;
+    double total_distance = 0.0;
+    Node last_node;
+
+    // Set the first node
+    route.push_back(start.label);
+    Node next_closet = start;
+
+    while(! next_closet.equal_nodes(end)){
+        // Store last node
+        last_node = next_closet;
+        //find the next closet
+        next_closet = closest(last_node);
+        total_distance += last_node.distance(next_closet);
+        // add to the route
+        route.push_back(next_closet.label);
+    }
+    // Lets crerate a output string
+
+    oss << total_distance << ": ";
+    copy(route.begin(), route.end(),std::ostream_iterator<string>(oss,","));
+    s = oss.str();
+    s = s.substr(0, s.size() - 1);
+    return s;
+
+}  
 
 ```
 
