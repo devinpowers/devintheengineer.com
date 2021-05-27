@@ -141,6 +141,20 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 - Different Examples
 -  explicit 
 
+## Week 11: Encapsulation
+
+[Encapsulation in C++](https://devintheengineer.com/C++/encapsulation_c++)
+
+
+
+## Week 12: Arrays
+
+
+## Week 13: Even more on Classes
+
+
+## Week 14: Finshing up
+
 
 ## Extras:
 
