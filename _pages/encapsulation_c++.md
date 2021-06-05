@@ -177,3 +177,18 @@ int number() const { return number_;}
   * A friend function is a regular funciton that still has access to *private* member stuff
 
 * You must declare the function as a friend in the class header
+
+
+
+## "this" keyword
+
+* Is only accessible to use through a member function and the function that belongs to a class which means it belongs to a class, so a method. Inside a method we can reference this and what this is a pointer to the current object instance that the method belongs to.
+
+* pointer to a method 
+
+Example
+
+
+
+
+
