@@ -20,9 +20,3 @@ toc_label: "Table of Contents"
 
 * Multivariate Testing is just an expansion of A/B testing in which *more than* two versions are compared and more variation is included, in which you can test multiple items at once and see how they interact together.
 
-```python
-
-for i in range(100):
-    print(i)
-
-```
