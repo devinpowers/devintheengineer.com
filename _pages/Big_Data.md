@@ -88,15 +88,20 @@ toc_label: "Table of Contents"
 [Day 12 Link](https://devintheengineer.com/Big_Data/big_data/day_12)
 
 
-## Day Thirteen: Intro to MapReduce and Hadoop
+## Day Thirteen: Intro to A/B Testing
+
+[Day 13 Link](https://devintheengineer.com/Big_Data/big_data/day_13)
+
+
+## Day Fourteen: Intro to MapReduce and Hadoop
 
 - Using Amazon Webservices
 
-## Day Fourteen: Intro to Pig
+## Day : Intro to Pig
 
 * Main use of Pig is to help users transform data or compute summary statistics from the data
 
-## Day Fifteen: Intro to Hive
+## Day : Intro to Hive
 
 * 
 
