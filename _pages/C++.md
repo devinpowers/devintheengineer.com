@@ -154,13 +154,26 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 ## Week 12: Arrays
 
 * Data Structures
-
+* Arrays and Pointers
+* Arrays and Functions
+* Dynamic Memory
+* Leaking Memory
+* 
 
 ## Week 13: Even more on Classes
+
+* More on **Rule of Three** Review 
+* Composite Class
+* Bad Dynamic Memory Class
+* Fixing Bad Memory
+* Templates and Classes
+* Templated Friends
 
 
 ## Week 14: Finshing up
 
+* Wrapping up C++
+* What I haven't cover yet
 
 ## Extras:
 
