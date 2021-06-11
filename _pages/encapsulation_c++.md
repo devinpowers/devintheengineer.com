@@ -26,6 +26,8 @@ Abstraction is *hiding* the details of how a struc/class is implemented
 
 * C++ will mark/remembers the calling object in a method call.
 
+
+
 Example:
 
 ```cpp
@@ -34,17 +36,17 @@ my_player.add_number(23);
 ```
 In the example above the member function **add_number**, the variable *this* points to **my_player**
 
-* Note: on a method call, C++ will automatically bind a variable named *this* to the calling object
+* Note: on a method call, C++ will automatically bind a variable named *this* to the calling object (refer to the **add_minutes** method)
 * *this* is a **POINTER!**
 
 
 #### Protection
 
-* We can save users from making mistakes, aka changing a value thats wrong by providing protection
+* We can save users from making mistakes, aka changing a value thats wrong by providing protection!
 
 **How??**
 
-We can divide into two parts:
+We can divide into **two parts**:
     * *Class designer*: Full access to everything
     * *Class user*: Only gets to use the interface the design provides
 
@@ -92,13 +94,13 @@ Above, in the code (header) the user has access to the *public* and the designer
 We have problems with our old code, since our attributes (minutes and hours) in our clock class is **private** now, we won't (as the user) be able to change them. The second problem is that our method calls (to print our clock to a string) won't work either, because it also cannot access private data members!
 
 
-Lets address the 1st problem, in which the user can no longer access the private members of a class (including hours, minutes, and period)
+Lets address the 1st problem, in which the user *can no longer access the private members of a class* (including hours, minutes, and period) (Changing the Attributes!)
 
 How do we fix this issue?? 
 
-**Accessor** - Member function used to retrieve the data of protected members.
+**Accessor** - Member function used to retrieve the data of protected members.      (Getters)
 
-**Mutators** - Member function used to edit the data of protected members.
+**Mutators** - Member function used to edit the data of protected members.          (Setters)
 
 
 **Note:** Accessor and Mutators are also known as **getters** and **setters**
@@ -106,53 +108,54 @@ How do we fix this issue??
 * Which are used to *protect* your data, particulary when creating classes
 
 
-**Note:** In C++ you cannot have a accessor method (getter) to have the same name as a data members, most people change the data members to have an "_" underscore at the back. (see example below)
+**Note:** In C++ you cannot have a accessor method (getter) to have the *same name* as a data members, most people change the data members to have an "**_**" underscore at the back. (see example below)
 Example:
 
 nba.h (header file)
 
 ```cpp
-#ifndef NBA_H
-#define NBA_H
+#ifndef CLOCK_H
+#define CLOCK_H
 
 #include<string>
 using std::string;
 #include<vector>
 using std::vector;
 
-class NBA{
+class Clock{
+ private: 
 
-    private:
-        string first_name_;  
-        string last_name_;
-        int number_ = 0;
-        void adjust_nba(string, string, int);
+  int minutes_ = 0;
+  int hours_ = 0;
+  string period_;
+  // function member adjusts the clock for us
+  void adjust_clock(int, int, string);
 
-    
-    public:
-    // constructors
+ public:
+  // constructors
+  Clock()=default;
+  Clock(int, int, string);
+  explicit Clock(string s);
 
-        NBA() = default;
-        NBA(string, string, int);
-        explicit NBA(string s);
 
-        // Getters
-        string first_name() const { return first_name_;}
-        string last_name() const {return last_name_;}
-        int number() const { return number_;}
+  // getters (grab our attributes)
+  int hours() const {return hours_;}
+  int minutes() const {return minutes_;}
+  string period() const {return period_;}      // Notice the underscores( _ )
+  
+  // setters
+  void hours(int);
+  void minutes(int);
+  void period(string);
+  
+  // members
+  void add_minutes(int);
 
-        // Setters
-        void first_name(string);
-        void last_name(string);
-        void number(int);
-
-        // Members
-        void add_minutes(int);
-        friend string nba_to_string(const NBA &);
-        
+  // friend function
+  friend string clk_to_string(const Clock &);
 };
 
-string nba_to_string(const NBA &);
+string clk_to_string(const Clock &);
 void split(const string &, vector<string> &, char);
 
 #endif
@@ -176,7 +179,7 @@ int number() const { return number_;}
 * What is a friend function?
   * A friend function is a regular funciton that still has access to *private* member stuff
 
-* You must declare the function as a friend in the class header
+* You must declare the function as a friend in the class header, the class gives friendship to the function
 
 
 
@@ -189,6 +192,44 @@ int number() const { return number_;}
 Example
 
 
+### Extra on Setters
+
+* Setters allow you the opportunity to do more *sanity* checking:
+  * Hour < 12 or minutes < 60 or "AM" or "PM"
+
+For example below:
+
+```cpp
+Void Clock::adjust_clock(int mins, int hrs, string prd){
+
+  minutes_ = minutes_+ mins;
+  int hrs_remainder = minutes_ / 60;
+  minutes_ %= 80;
+
+  hours_ = hours_ + hrs + hrs_remainder;
+  hours_ %= 12;
+
+  if (prd != "AM" && prd != "PM")
+    period_ = "AM";
+  
+  else
+    period_ = prd;
+}
+
+```
 
 
+After  we *set* we need to call the adjust_clock member function
 
+How do we do this?
+
+```cpp
+this->adjust_clock()
+(*this).adjust_clock()
+adjust_clock() // easiest way!
+```
+
+
+### Overloaded Operators
+
+ * When you define a class, you can also define **overloaded operators**
