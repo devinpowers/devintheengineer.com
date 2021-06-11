@@ -179,7 +179,7 @@ int number() const { return number_;}
 * What is a friend function?
   * A friend function is a regular funciton that still has access to *private* member stuff
 
-* You must declare the function as a friend in the class header, the class gives friendship to the function
+* You must declare the function as a friend in the class header, the class gives friendship to the function 
 
 Example of the *friend* function defined:
 
