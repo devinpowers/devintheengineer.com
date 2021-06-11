@@ -145,9 +145,15 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 [Encapsulation in C++](https://devintheengineer.com/C++/encapsulation_c++)
 
-
+  * Getters and Setters
+  * Abstraction
+  * Friend functions
+  * Operator Overload in C++
+  * Intro the *Rule of Three*
 
 ## Week 12: Arrays
+
+* Data Structures
 
 
 ## Week 13: Even more on Classes
