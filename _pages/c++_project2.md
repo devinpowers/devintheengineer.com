@@ -16,7 +16,9 @@ I should insert my notes to solve this problem here
 ```cpp
 #include <iostream>
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
 
 
 int main()
@@ -76,7 +78,9 @@ Another way to write this Code using Hyper Perfect Number Function
 ```cpp
 #include <iostream>
 
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
 
 // Function of hyper_perfect_number
 

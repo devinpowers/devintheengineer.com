@@ -170,6 +170,7 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 * Templated Friends
 
 
+
 ## Week 14: Finshing up
 
 * Wrapping up C++
