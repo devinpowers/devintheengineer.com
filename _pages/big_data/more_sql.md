@@ -25,3 +25,5 @@ FROM Customers
 WHERE Country = "Brazil" AND City = "Sao Paulo"
 
 ```
+
+Output

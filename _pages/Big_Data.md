@@ -39,6 +39,7 @@ toc_label: "Table of Contents"
 ## Day Three: Data Collection
 
 * Including scrapping from Twitter API
+
 [Day 3 Link](https://devintheengineer.com/Big_Data/big_data/day_3)
 
 
