@@ -48,6 +48,8 @@ toc_label: "Table of Contents"
 
 * Working with CitiBikes example using SQL
 
+[More on SQL Link](https://devintheengineer.com/Big_Data/big_data/more_sql)
+
 
 ## Day Five: Data Quality and Working with Pandas Library
 
