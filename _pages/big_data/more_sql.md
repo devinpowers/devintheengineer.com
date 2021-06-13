@@ -173,9 +173,9 @@ Here are some common Wildcard Characters (theres different ones for MS Access, S
 
 * **%** - Represents zero or more characters	-> re% finds red, reddit, and rebel
 
-  * %ber at the beginning will select items in column that start with ber
-  * %ber% at the beginning and end will select items in column that contain the pattern "ber"
-  * 'E%O' will find any values that start with E and end with O
+  * **%ber** at the beginning will select items in column that start with ber
+  * **%ber%** at the beginning and end will select items in column that contain the pattern "ber"
+  * **'E%O'** will find any values that start with E and end with O
 
 
 
@@ -272,3 +272,7 @@ ORDER BY first_name
 ```
 
 * This statement above returns the rows that meet the criteria and orders them in Ascending order!!
+
+**BETWEEN Dates Example**
+
+
