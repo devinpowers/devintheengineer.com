@@ -276,3 +276,31 @@ ORDER BY first_name
 **BETWEEN Dates Example**
 
 
+## SQL Aliases
+
+What are Aliases in SQL?
+
+Aliases are used to give a table, or a column in a table, a temporary name!
+
+An Alias is created using the **AS** keyword
+
+Example of an Alias
+
+```sql
+SELECT Column_Name AS Alias_Name
+FROM Table_Name
+```
+
+## Joins
+
+- Interview Questions!!
+
+- A **JOIN** clause is used to *combine rows* from two or more tables, based on a related column between them.
+
+
+
+
+
+## UNION
+
+## GROUP BY
