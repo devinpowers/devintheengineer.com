@@ -127,7 +127,8 @@ LIMIT 5
 
 ## COUNT, AVG, and SUM
 
-* The cou
+* We can use basic functions
+* Count() will return the number of rows that match a specifed criterion
 
 ## MIN and MAX
 
@@ -142,13 +143,46 @@ Basic Syntax for MIN()
 
 SELECT MIN(column_name)
 FROM table_name
-WHERE condition
 ```
 Basic Syntax for MAX()
 
 ```sql
 SELECT MAX(column_name)
 FROM table_name
-WHERE condition;
 ```
+
+### AS 
+
+* Keyword used to change the name in the result-set table
+
+Example using **AS** keyword
+
+```sql
+SELECT MIN(Price) AS SmallestPrice
+FROM Products
+```
+
+* This query will return the smallest value from the *Price* column in the *Products* table and return the result-set table column name as **SmallestPrice**
+
+### LIKE Operator and Wildcards
+
+* Wildcards are *characters* used to substitue one or more characters in a string, they're used with the **LIKE** operator
+
+Here are some common Wildcard Characters (theres different ones for MS Access, SQL Server, MySQL, Oracle, etc)
+
+* ** * **
+
+* **?**
+
+* **[]**
+
+* **-**
+
+* **!**
+
+* **#**
+
+
+
+* The LIKE keyword is used in a *WHERE* clause to search for specified pattern (Wildcard) in a column
 
