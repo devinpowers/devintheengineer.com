@@ -233,5 +233,42 @@ Example Syntax of Between
 SELECT column_name(s)
 FROM table_name
 WHERE column_name BETWEEN value1 AND value2;
-``
+```
 
+Example using The Office Database
+
+```sql
+SELECT *
+
+FROM employee
+
+WHERE salary BETWEEN 70000 AND 110000
+```
+
+The example above selects the employees that have a salary between $70k and $110k
+
+**BETWEEN with IN Example**
+
+```sql
+SELECT *
+
+FROM employee
+
+WHERE salary NOT BETWEEN 70000 AND 110000
+and emp_id NOT in (100, 103, 107)
+```
+
+Which will return table-set that meets the given criteria
+
+**Using Text and BETWEEN**
+
+```sql
+SELECT *
+
+FROM employee
+
+WHERE first_name  BETWEEN "Kelly Kapoor" AND "Stanley Hudson"
+ORDER BY first_name
+```
+
+* This statement above returns the rows that meet the criteria and orders them in Ascending order!!
