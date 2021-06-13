@@ -47,9 +47,14 @@ toc_label: "Table of Contents"
 
 [Day 4: SQL Link](https://devintheengineer.com/Big_Data/big_data/day_4)
 
-* Working with CitiBikes example using SQL
+* Working with CitiBikes example using SQL and Python
 
 [More on SQL Link](https://devintheengineer.com/Big_Data/big_data/more_sql)
+
+* Basic SQL stuff using *MySQL Work Bench*
+
+
+*Need to add noSQL Notes**
 
 
 ## Day Five: Data Quality and Working with Pandas Library
