@@ -54,4 +54,101 @@ FROM Customers
 * This query will only return *Countrys* will no repeats
 
 
+## WHERE
+
+
+### AND, OR, and NOT Operators
+
+* Different clauses that can be combined with the WHERE clause to filter data
+
+* If you combine any of the operators make sure you use *parenthesis*
+
+
+## ORDER BY
+
+* Keyword is used to *sort* the result-set in either ascending or descending order (ascending order by default)
+
+* To sort by descending order, use **DESC** keyword
+
+Basic Syntax (One Column)
+
+```sql
+SELECT *
+FROM Table_Name
+
+ORDER BY  Column1 DESC 
+```
+
+* This will return a result-set table that is in *descending order* based on Column1
+
+
+Basic Syntax: (For Several Columns)
+
+```sql
+SELECT Column1, Column2, Column3, ...
+FROM Table_Name
+
+ORDER BY Column1, Column3, Column2, ... ASC|DESC
+```
+
+* This syntax orders by Column1 first, then by Column3, then Column2...
+
+## NULL VALUES
+
+# WAYS TO UPDATE TABLES/DATABASE
+
+## INSERT INTO
+
+## UPDATE
+
+## DELETE
+* Delete is used to *delete* existing records in a table
+
+# FUNCTIONS IN SQL
+
+## SQL LIMIT
+
+Want to return just the first 5 records from a table?
+
+* If yes, use the keyword **LIMIT** in (MySQL) after picking the table to return the first 5
+
+**Note:** For Oracle, SQL Server, MS Access and others there are different SQL statements
+
+Basic Syntax:
+
+```sql
+SELECT *
+
+FROM Customers
+
+LIMIT 5
+
+```
+
+## COUNT, AVG, and SUM
+
+* The cou
+
+## MIN and MAX
+
+* The MIN() function will return the smallest value from the selected column
+* The MAX() function will return the largest value from the slected column
+
+Very straight forward
+
+Basic Syntax for MIN()
+
+```sql
+
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition
+```
+Basic Syntax for MAX()
+
+```sql
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+```
 
