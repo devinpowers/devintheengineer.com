@@ -166,24 +166,72 @@ FROM Products
 
 ### LIKE Operator and Wildcards
 
-* Wildcards are *characters* used to substitue one or more characters in a string, they're used with the **LIKE** operator
+* Wildcards are *characters* used to substitue one or more characters in a string, they're used with the **LIKE** operator. They're used to *search* for something in a Column. Like find all the columns that start with "A", "C" or end with the string "ello" for example. 
+
 
 Here are some common Wildcard Characters (theres different ones for MS Access, SQL Server, MySQL, Oracle, etc)
 
-* ** * **
+* **%** - Represents zero or more characters	-> re% finds red, reddit, and rebel
 
-* **?**
-
-* **[]**
-
-* **-**
-
-* **!**
-
-* **#**
+  * %ber at the beginning will select items in column that start with ber
+  * %ber% at the beginning and end will select items in column that contain the pattern "ber"
+  * 'E%O' will find any values that start with E and end with O
 
 
 
 * The LIKE keyword is used in a *WHERE* clause to search for specified pattern (Wildcard) in a column
 
-HELLO WORLD!!✊🏼
+
+## IN Operator
+
+* The **IN** operator is shorthand for multiple **OR** conditions
+* It allows you to specify mutiple values in a **WHERE** clause
+
+Example Syntax (IN):
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (value1, value2, ...)
+```
+
+Example of **IN** Operator:
+
+```sql
+SELECT * 
+FROM Customers
+-- Selecting Multiple Citys in our Country column
+WHERE Country IN ('Germany', 'France', 'UK')
+```
+* Can use like keywords -> **NOT IN** , which will select all the customers not located in whatever cities you list
+
+Example Syntax (OR)
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (SELECT STATEMENT)
+```
+Example of **OR** Operator
+
+```sql
+SELECT * 
+FROM Customers
+-- Selects all customers that are from the same countries as the suppliers
+WHERE Country IN (SELECT Country FROM Suppliers);
+```
+
+
+
+## BETWEEN Operator
+
+* The Between Operator selects values with a given range (which values can be numbers, texts, or dates)
+
+Example Syntax of Between
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;
+``
+
