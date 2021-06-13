@@ -186,3 +186,4 @@ Here are some common Wildcard Characters (theres different ones for MS Access, S
 
 * The LIKE keyword is used in a *WHERE* clause to search for specified pattern (Wildcard) in a column
 
+HELLO WORLD!!✊🏼
