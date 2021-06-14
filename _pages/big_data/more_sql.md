@@ -307,3 +307,37 @@ The INNER JOIN keyword selects records that have matching values in both tables.
 ## UNION
 
 ## GROUP BY
+
+* **GROUP BY** statement groups rows that have the same values into summary rows
+
+* Often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), and AVG()) to group the result-set by one or more columns
+
+
+Example of the Syntax
+
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s);
+```
+
+
+
+## HAVING
+
+* The **HAVING** clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.
+
+Example of the Syntax
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+HAVING condition
+ORDER BY column_name(s);
+```
+
