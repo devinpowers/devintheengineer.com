@@ -66,7 +66,7 @@ FROM Customers
 
 ## ORDER BY
 
-* Keyword is used to *sort* the result-set in either ascending or descending order (ascending order by default)
+* Keyword is used to **sort** the result-set in either ascending or descending order (ascending order by default)
 
 * To sort by descending order, use **DESC** keyword
 
@@ -91,7 +91,8 @@ FROM Table_Name
 ORDER BY Column1, Column3, Column2, ... ASC|DESC
 ```
 
-* This syntax orders by Column1 first, then by Column3, then Column2...
+* You can order by multiple columns like above ^
+
 
 ## NULL VALUES
 
@@ -290,41 +291,6 @@ Example of an Alias
 SELECT Column_Name AS Alias_Name
 FROM Table_Name
 ```
-
-# Joins
-
-- Interview Questions!!
-
-* INNER JOIN, LEFT JOIN, AND RIGHT JOIN
-
-- A **JOIN** clause is used to *combine rows* from two or more tables, based on a related column between them.
-
-
-### INNER JOIN
-
-The INNER JOIN keyword selects records that have matching values in *both tables*.
-
-**INNER JOIN Syntax**
-
-
-```sql
-SELECT Column_Name(s)
-FROM Table_1
-INNER JOIN Table_2
-ON Table_1.Column_Name = Table_2.Column_Name
-```
-
-
-Example of an INNER JOIN:
-
-
-### LEFT JOIN
-
-### RIGHT JOIN
-
-
-**NOTE:** A Full join isnt supported in MySQL or SQLite which I've used the most
-
 
 
 ## UNION

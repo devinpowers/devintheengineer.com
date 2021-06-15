@@ -73,9 +73,9 @@ RIGHT JOIN branch
 ON employee.emp_id = branch.mgr_id
 ```
 
+### FULL JOIN
 
-
-**What about a FULL JOIN?**
+* **FULL or (OUTER) JOIN** returns unmatched rows from both tables.
 
 **NOTE:** A Full join *isnt* supported in MySQL or SQLite which I've used the most
 
