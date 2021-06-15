@@ -301,9 +301,11 @@ FROM Table_Name
 
 
 ### INNER JOIN
+
 The INNER JOIN keyword selects records that have matching values in *both tables*.
 
 **INNER JOIN Syntax**
+
 
 ```sql
 SELECT Column_Name(s)
@@ -315,6 +317,13 @@ ON Table_1.Column_Name = Table_2.Column_Name
 
 Example of an INNER JOIN:
 
+
+### LEFT JOIN
+
+### RIGHT JOIN
+
+
+**NOTE:** A Full join isnt supported in MySQL or SQLite which I've used the most
 
 
 

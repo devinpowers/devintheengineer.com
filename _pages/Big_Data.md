@@ -51,6 +51,11 @@ toc_label: "Table of Contents"
 
 [More on SQL Link](https://devintheengineer.com/Big_Data/big_data/more_sql)
 
+[JOINS in SQL](https://devintheengineer.com/Big_Data/big_data/sql_joins)
+
+  * INNER, LEFT, and RIGHT JOINS in SQL
+
+
 * Basic SQL stuff using *MySQL Work Bench*
 
 
