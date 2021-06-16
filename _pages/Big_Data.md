@@ -89,6 +89,7 @@ toc_label: "Table of Contents"
 ## Day Ten: Cluster Analysis
 
 * k-means
+
 [Day 10 Link](https://devintheengineer.com/Big_Data/big_data/day_10)
 
 
