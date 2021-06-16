@@ -80,3 +80,4 @@ ON employee.emp_id = branch.mgr_id
 **NOTE:** A Full join *isnt* supported in MySQL or SQLite which I've used the most
 
 
+![inserting an Image](/images/big_data/SQL/sql_joins.jpg)
