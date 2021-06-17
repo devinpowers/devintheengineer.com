@@ -30,7 +30,7 @@ toc_label: "Table of Contents"
 
 * Here is a PGA Data Science Project that I am currently working on!
 
-[March Madness Project Link](https://devintheengineer.com/Big_Data/big_data/pga_golf)
+[Golf Project Link](https://devintheengineer.com/Big_Data/big_data/pga_golf)
 
 
 
