@@ -1,6 +1,6 @@
 ---
 permalink: /Big_Data/big_data/pga_golf
-title: "ETL Pipeline"
+title: "Golf Project"
 author_profile: true
 
 header:
