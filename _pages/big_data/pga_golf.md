@@ -43,5 +43,8 @@ OK, now what?
 
 Lets **Clean** the data
 
+* First we can look at the data and see what needs to be *cleaned*
+
+
 
 
