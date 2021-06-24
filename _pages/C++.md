@@ -151,6 +151,11 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
   * Operator Overload in C++
   * Intro the *Rule of Three*
 
+[Extra Stuff for Week 11](https://devintheengineer.com/C++/c++_week11)
+
+* const member functions
+
+
 ## Week 12: Arrays
 
 * Data Structures
