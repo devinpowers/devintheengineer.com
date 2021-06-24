@@ -96,8 +96,11 @@ toc_label: "Table of Contents"
 ## Day Ten: Cluster Analysis
 
 * k-means
+* Cluster Analysis Hierarchical
+* Cluster Analysis Density Based
+* Cluster Analysis Evaluation
 
-[Day 10 Link](https://devintheengineer.com/Big_Data/big_data/day_10)
+[Day 10 Link (Cluster Analysis)](https://devintheengineer.com/Big_Data/big_data/day_10)
 
 
 ## Day Eleven: Anomaly Detection
@@ -114,6 +117,23 @@ toc_label: "Table of Contents"
 [Day 13 Link](https://devintheengineer.com/Big_Data/big_data/day_13)
 
 
+## Time Series
+
+[Time Series Link](https://devintheengineer.com/Big_Data/big_data/time_series)
+
+
+
+### ETL Pipeline
+
+[Day 20 Link-> ETL Pipeline](https://devintheengineer.com/Big_Data/big_data/day_20)
+
+* ETL Pipeline example using MySQL, Twitter API, and Python
+
+
+
+
+# Coming Soon (uploading Notes later....)
+
 ## Day Fourteen: Intro to MapReduce and Hadoop
 
 - Using Amazon Webservices
@@ -125,12 +145,4 @@ toc_label: "Table of Contents"
 ## Day : Intro to Hive
 
 * 
-
-
-### ETL Pipeline
-
-[Day 20 Link-> ETL Pipeline](https://devintheengineer.com/Big_Data/big_data/day_20)
-
-* ETL Pipeline example using MySQL, Twitter API, and Python
-
 
