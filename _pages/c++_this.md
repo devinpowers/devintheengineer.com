@@ -24,4 +24,11 @@ Which means that each object gets its own copy of data members and all objects *
 Then now question is that if only one copy of each member function exists and is used by multiple objects, how are the proper data members are accessed and updated?
 
 The compiler supplies an implicit pointer along with the names of the functions as ‘this’.
-The ‘this’ pointer is passed as a hidden argument to all nonstatic member function calls and is available as a local variable within the body of all nonstatic functions.
+The ‘this’ pointer is *passed as a hidden argument* to all nonstatic member function calls and is available as a local variable within the body of all nonstatic functions.
+
+
+## Static
+
+https://www.youtube.com/watch?v=V-BFlMrBtqQ
+
+
