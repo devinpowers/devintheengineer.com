@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /C++/c++_this_
+permalink: /C++/c++_this
 title: "C++ this Pointer"
 author_profile: true
 
