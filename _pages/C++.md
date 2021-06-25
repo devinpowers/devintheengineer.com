@@ -156,6 +156,8 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 * working with **this** pointer in C++
   * For classes/objects 
 
+* Pointer to C++ Classes
+
 
 [Extra Stuff for Week 11](https://devintheengineer.com/C++/c++_week11)
 
