@@ -151,6 +151,12 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
   * Operator Overload in C++
   * Intro the *Rule of Three*
 
+[C++ this pointer](https://devintheengineer.com/C++/c++_this)
+
+* working with **this** pointer in C++
+  * For classes/objects 
+
+
 [Extra Stuff for Week 11](https://devintheengineer.com/C++/c++_week11)
 
 * const member functions

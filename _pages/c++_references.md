@@ -14,6 +14,8 @@ header:
 ![inserting an Image](/images/C++/references/Page3.jpg)
 
 
+* When a variable is declared as a reference, it becomes an alternative name for an existing variable. A variable can be declared as a reference by putting ‘&’ in the declaration. 
+
 ```cpp
 #include<iostream>
 using std::cout; using std::endl;
