@@ -158,6 +158,7 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 ## Week 12: Arrays
 
+* Define, Declare and Accessing Arrays
 * Data Structures
 * Arrays and Pointers
 * Arrays and Functions
