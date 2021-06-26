@@ -1,5 +1,5 @@
 ---
-title: 'Welcome to Miami'
+title: 'Welcome to Austin Texas'
 
 header:
   image: "/images/austin/skyline.jpg"
