@@ -137,7 +137,6 @@ const data_type* const variable_name;
 
 
 
-
 ### Const with Class and Methods
 
 
