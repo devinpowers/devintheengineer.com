@@ -305,3 +305,40 @@ int main()
 ```cpp
 20
 ```
+
+
+When you declare an object *const*, the **only** functions that can be called on the object are functions are *const*. 
+
+```cpp
+#include <iostream>
+using std::cout;
+using std::endl;
+
+class Test {
+    int value;
+ 
+public:
+    Test(int v = 1) {
+       value = v;
+     }
+ 
+    int getValue() const  {
+      
+      return value;
+      }
+
+};
+ 
+int main()
+{
+    const Test t;
+
+    cout << t.getValue() << endl;
+}
+```
+
+**Output**
+
+```cpp
+1
+```
