@@ -209,7 +209,10 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 [Pointers](https://devintheengineer.com/C++/pointers)
 
- - gotta work on!!
+* What are Pointers?
+* What is the Difference Between Pass By Pointer and Pass By Pointer Reference (int * and int * &) C++
+* What is the Difference Between Pass By Value, Pass By Reference, and Pass By Pointer, C++
+* What is the Difference Between a Pointer and a Reference C++
 
 
 
