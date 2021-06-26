@@ -159,9 +159,16 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 * Pointer to C++ Classes
 
 
-[Extra Stuff for Week 11](https://devintheengineer.com/C++/c++_week11)
+[Const member functions](https://devintheengineer.com/C++/c++_week11)
 
 * const member functions
+
+[Overloaded Operators in C++](https://devintheengineer.com/C++/c++_overloaded)
+
+* Examples of Overloaded operators in C++ 
+
+
+[Intro to Rule of Three](https://devintheengineer.com/C++/c++_rule3)
 
 
 ## Week 12: Arrays
