@@ -84,3 +84,121 @@ Constructor called.
 Constructor called.
 Box2 is equal to or larger than Box1
 ```
+
+
+## Different ways to use this pointer
+
+### 1) When local variable’s name is same as member’s name
+
+* Refer to the local varibale **x** in this case below 
+
+```cpp
+#include<iostream>
+using std::cout;
+using std::endl;
+
+
+/* local variable is same as a member's name */
+class Test
+{
+private:
+   int x;
+   int y;
+public:
+   void setX (int x)
+   {
+       // The 'this' pointer is used to retrieve the object's x
+       // hidden by the local variable 'x'
+       this->x = x;
+   }
+   void setY (int y_)
+   {
+       y = y_;
+   }
+        
+
+   void print()
+    { 
+        cout << "x = " << x << endl;
+        cout << "y = " << y << endl;
+    }
+};
+  
+int main()
+{
+   Test obj;
+   int x = 20;
+   obj.setX(x);
+   obj.setY(25);
+   obj.print();
+}
+```
+
+**Output:**
+
+```cpp
+x = 20
+y = 25
+```
+
+### 2) To return reference to the calling object
+
+* Chained function calls.  All calls modify the **same** object
+
+```cpp
+
+#include<iostream>
+
+using std::cout;
+using std::endl;
+  
+class Test
+{
+private:
+  int x;
+  int y;
+public:
+  Test(int x = 0, int y = 0)   // constructor/default values
+     { 
+        this->x = x;           // Use this pointers to assign like in the example above
+        this->y = y; 
+     }
+
+  Test &setX(int a) 
+    { 
+       x = a; 
+       
+       cout << "Set x" << endl;
+       return *this; 
+    }
+  Test &setY(int b) 
+    {   
+        cout << "Set y" << endl;
+        y = b;
+        return *this;
+     }
+
+  void print() 
+    { 
+        cout << "x = " << x << " y = " << y << endl;
+     }
+};
+  
+int main()
+{
+  Test obj1(5, 5);
+  
+  // Chained function calls.  All calls modify the same object
+  // as the same object is returned by reference
+  obj1.setX(10).setY(20);
+  
+  obj1.print();
+
+}
+```
+
+**Output:**
+
+```cpp
+x = 10 y = 20
+```
