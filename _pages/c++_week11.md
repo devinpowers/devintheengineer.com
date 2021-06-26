@@ -246,3 +246,62 @@ int main(){
 ```cpp
 23
 ```
+
+
+## Const member functions in C++ Extra Stuff
+
+https://www.geeksforgeeks.org/const-member-functions-c/
+
+* The objects of a class can be declared as **const**, and object declared as const *cannot* be modified and hence can invoke only const memeber functions ensure not to modify the object.
+
+* A const object can be created by prefixing the const keyword to the object declaration
+
+* Any attempt to change the data member of const objects results in a compile-time error. 
+
+
+**Basic Syntax:**
+
+```cpp
+const Class_Name Object_name; 
+```
+
+* The idea of const functions is not to allow them to modify the object on which they are called
+
+**Example:**
+
+```cpp
+
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+
+class Test {
+    int value;
+ 
+public:
+    Test(int v = 0) {
+       value = v;
+     }
+ 
+    int getValue() const {
+    
+    // Can't change -> value
+     return value;
+      }
+};
+ 
+int main()
+{
+    Test t(20);
+    cout << t.getValue() << endl;
+
+}
+```
+
+**Output**
+
+```cpp
+20
+```
