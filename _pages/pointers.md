@@ -6,11 +6,10 @@ author_profile: true
 
 header:
   image: "/images/tower3.jpeg"
-  
+
+toc: true
+toc_label: "Table of Contents" 
 ---
-
-Pointers in C++ Practice.....s
-
 
 
 ## Pointers vs References in C++
@@ -53,7 +52,7 @@ int main() {
 ```
 
 
-### Pointers
+## Pointers
 
 * A pointer is just a **variable** that holds the memory address
 
@@ -214,3 +213,6 @@ Pointer has freedom to move around  and point to different variables, while the 
 
 ![inserting an Image](/images/C++/pointers/point1.jpg)
 ![inserting an Image](/images/C++/pointers/point2.jpg)
+
+
+## Difference Between Pass by Value, Pass By Reference, and Pass By Pointer in C++
