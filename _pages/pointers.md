@@ -216,3 +216,79 @@ Pointer has freedom to move around  and point to different variables, while the 
 
 
 ## Difference Between Pass by Value, Pass By Reference, and Pass By Pointer in C++
+
+
+
+```cpp
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+// What is the Difference Between Pass By Value, Pass By Reference, and Pass By Pointer, C++
+
+// Functions
+void passByVal(int val);   // passing in a copy of an integer
+void passByRef(int & ref); // Pass in the actual variable
+void passByPtr(int *ptr);  //
+
+
+int main() {
+
+    int x = 5;
+    // Pass by variable
+   // cout << "x = " << x << endl;
+   // passByVal(x);
+
+    // Pass by Reference
+
+   // passByRef(x);
+   // cout << "x = " << x << endl;
+
+    // Pass by Pointer
+    
+    int* xptr = &x;
+    cout << "x = " << x << endl;
+    cout << "*xptr = " << *xptr << endl;
+    passByPtr(xptr);
+
+    cout << "x = " << x << endl;
+    cout << "*xptr = " << *xptr << endl;
+
+    return 0;
+    
+}
+
+void passByVal(int val)
+{
+    // pass a copy of the integer we provided
+    val = 10;
+    cout << "val = " << val << endl;
+
+}
+
+void passByRef(int & ref)
+{
+    ref = 20;
+    cout << "ref = " << ref << endl;
+}
+
+void passByPtr(int * ptr)
+{   
+    // reference the pointer we passed in d
+    *ptr = 30;
+
+    cout << "ptr = " << *ptr << endl;
+
+}
+```
+
+**Output:**
+
+```cpp
+x = 5
+*xptr = 5
+ptr = 30
+x = 30
+*xptr = 30
+```
