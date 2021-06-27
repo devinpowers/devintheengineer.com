@@ -1,5 +1,5 @@
 ---
-layout: archive
+
 permalink: /C++/pointers
 title: " Pointers in C++ "
 author_profile: true
@@ -56,7 +56,7 @@ int main() {
 
 * A pointer is just a **variable** that holds the memory address
 
-``cpp
+```cpp
 #include <iostream>
 
 using std::cout;
