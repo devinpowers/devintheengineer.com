@@ -14,97 +14,98 @@ header:
 
 Code:
 
-    class Node(object):
+```python
+class Node(object):
 
-        def __init__(self, data = None):
+    def __init__(self, data = None):
 
-            self.data = data
-            self.left = None
-            self.right = None
+        self.data = data
+        self.left = None
+        self.right = None
 
 
-    class BST:
+class BST:
 
-        def __init__(self):
+    def __init__(self):
 
-            self.root = None
+        self.root = None
 
-        def insert(self, data):
+    def insert(self, data):
 
-            if self.root is None:
+        if self.root is None:
 
-                self.root = Node(data)
+            self.root = Node(data)
 
-            else:
-                self._insert(data,self.root)
+        else:
+            self._insert(data,self.root)
 
-        def _insert(self, data, current_node):
+    def _insert(self, data, current_node):
 
-            if data < current_node.data:
+        if data < current_node.data:
 
-                if current_node.left is None:
+            if current_node.left is None:
 
-                    current_node.left = Node(data)
-
-                else:
-                    self._insert(data, current_node.left)
-
-            elif data > current_node.data:
-
-                if current_node.right is None:
-
-                    current_node.right = Node(data)
-
-                else:
-                    self._insert(data, current_node.right)
+                current_node.left = Node(data)
 
             else:
-                print("Value is Already present in Tree.")
+                self._insert(data, current_node.left)
 
+        elif data > current_node.data:
 
-        def find(self, data):
+            if current_node.right is None:
 
-            if self.root:
-
-                is_found = self._find(data, self.root)
-
-                if is_found:
-
-                    return True
-
-                return False
+                current_node.right = Node(data)
 
             else:
+                self._insert(data, current_node.right)
 
-                return None
+        else:
+            print("Value is Already present in Tree.")
 
 
-        def _find(self, data, current_node):
+    def find(self, data):
 
-            if data > current_node.data and current_node.right:
+        if self.root:
 
-                return self._find(data, current_node.right)
+            is_found = self._find(data, self.root)
 
-            elif data < current_node.data and current_node.left:
-
-                return self._find(data, current_node.left)
-
-            if data == current_node.data:
+            if is_found:
 
                 return True
 
+            return False
+
+        else:
+
+            return None
 
 
-    bst = BST()
+    def _find(self, data, current_node):
 
-    bst.insert(4)
-    bst.insert(2)
-    bst.insert(8)
-    bst.insert(5)
-    bst.insert(10)
+        if data > current_node.data and current_node.right:
+
+            return self._find(data, current_node.right)
+
+        elif data < current_node.data and current_node.left:
+
+            return self._find(data, current_node.left)
+
+        if data == current_node.data:
+
+            return True
 
 
 
-    print(bst.find(10))
+bst = BST()
+
+bst.insert(4)
+bst.insert(2)
+bst.insert(8)
+bst.insert(5)
+bst.insert(10)
 
 
+
+print(bst.find(10))
+
+```
