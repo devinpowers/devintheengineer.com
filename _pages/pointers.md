@@ -217,7 +217,7 @@ Pointer has freedom to move around  and point to different variables, while the 
 
 ## Difference Between Pass by Value, Pass By Reference, and Pass By Pointer in C++
 
-
+**Code:**
 
 ```cpp
 #include <iostream>
@@ -235,27 +235,28 @@ void passByPtr(int *ptr);  //
 
 int main() {
 
+    // Pass by variable    
     int x = 5;
-    // Pass by variable
-   // cout << "x = " << x << endl;
-   // passByVal(x);
+    cout << "x = " << x << endl;
+    passByVal(x);
 
     // Pass by Reference
 
-   // passByRef(x);
-   // cout << "x = " << x << endl;
+    int y = 10;
+    passByRef(y);
+    cout << "y = " << x << endl;
 
     // Pass by Pointer
     
-    int* xptr = &x;
-    cout << "x = " << x << endl;
-    cout << "*xptr = " << *xptr << endl;
-    passByPtr(xptr);
+    int c = 10;
 
-    cout << "x = " << x << endl;
-    cout << "*xptr = " << *xptr << endl;
+    int* cptr = &c;
+    cout << "c = " << c << endl;
+    cout << "*cptr = " << *cptr << endl;
+    passByPtr(cptr);
 
-    return 0;
+    cout << "c = " << c << endl;
+    cout << "*cptr = " << *cptr << endl;
     
 }
 
@@ -264,7 +265,6 @@ void passByVal(int val)
     // pass a copy of the integer we provided
     val = 10;
     cout << "val = " << val << endl;
-
 }
 
 void passByRef(int & ref)
@@ -279,7 +279,6 @@ void passByPtr(int * ptr)
     *ptr = 30;
 
     cout << "ptr = " << *ptr << endl;
-
 }
 ```
 
@@ -287,8 +286,13 @@ void passByPtr(int * ptr)
 
 ```cpp
 x = 5
-*xptr = 5
+val = 10
+ref = 20
+y = 5
+c = 10
+*cptr = 10
 ptr = 30
-x = 30
-*xptr = 30
+c = 30
+*cptr = 30
 ```
+
