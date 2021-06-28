@@ -220,6 +220,7 @@ Pointer has freedom to move around  and point to different variables, while the 
 **Code:**
 
 ```cpp
+
 #include <iostream>
 
 using std::cout;
@@ -230,7 +231,7 @@ using std::endl;
 // Functions
 void passByVal(int val);   // passing in a copy of an integer
 void passByRef(int & ref); // Pass in the actual variable
-void passByPtr(int *ptr);  //
+void passByPtr(int *ptr);  // pass by pointer
 
 
 int main() {
@@ -239,24 +240,29 @@ int main() {
     int x = 5;
     cout << "x = " << x << endl;
     passByVal(x);
+    cout << "x = " << x << endl;
 
     // Pass by Reference
 
     int y = 10;
     passByRef(y);
-    cout << "y = " << x << endl;
+    cout << "y = " << y << endl;
 
     // Pass by Pointer
     
     int c = 10;
 
-    int* cptr = &c;
+    int* cptr = &c; // pointer, reference to c
     cout << "c = " << c << endl;
     cout << "*cptr = " << *cptr << endl;
+    cout << "cptr (address) = " << cptr << endl;
+
     passByPtr(cptr);
 
     cout << "c = " << c << endl;
     cout << "*cptr = " << *cptr << endl;
+    cout << "cptr (address) = " << cptr << endl;
+
     
 }
 
@@ -275,10 +281,11 @@ void passByRef(int & ref)
 
 void passByPtr(int * ptr)
 {   
-    // reference the pointer we passed in d
+    // reference the pointer we passed in
     *ptr = 30;
 
-    cout << "ptr = " << *ptr << endl;
+    cout << "*ptr = " << *ptr << endl;
+    cout << "ptr (address) = " << ptr << endl;
 }
 ```
 
@@ -287,12 +294,103 @@ void passByPtr(int * ptr)
 ```cpp
 x = 5
 val = 10
+x = 5
 ref = 20
-y = 5
+y = 20
 c = 10
 *cptr = 10
-ptr = 30
+cptr (address) = 0x7ffee828a8d4
+*ptr = 30
+ptr (address) = 0x7ffee828a8d4
 c = 30
 *cptr = 30
+cptr (address) = 0x7ffee828a8d4
+```
+
+
+
+- insert notes here
+
+
+### What is the Difference Between Pass By Pointer and Pass By Pointer Reference (int * and int * &)?
+
+
+**Code:**
+
+```cpp
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+int box1 = 1;
+int box2 = 2;
+
+int * gptr;
+
+void passByPtr(int * ptr);
+void passByPtrRef(int * & ptrRef); // integar pointer reference 
+
+
+
+int main() {
+
+    int * p = &box1;
+
+    gptr = &box2;
+
+    cout << "\n_________ Current Conditions _______\n ";
+
+    // passByPtr(p);
+    // passByPtrRef(p);
+
+
+    if (p == &box1)
+    {
+        cout << "p is pointing to box1 " << endl;
+    }
+    else if (p == &box2 )
+    {
+        cout << "p is pointing to box2" << endl;
+    }
+    else
+    {
+        // won't see this though
+        cout << "p is pointing to another box " << endl;
+    }
+
+    if (gptr == &box1)
+    {
+        cout << "gptr is pointing to box1 " << endl;
+    }
+    else if (gptr == &box2)
+    {
+        cout << "gptr is pointing to box2 " << endl;
+    }
+    else {
+        cout << "gptr is pointing to another box" << endl;
+    }
+
+    cout << "box1 contains the value: " << box1 << endl;
+    cout << "box2 contains the value: " << box2 << endl;
+
+}
+
+void passByPtr( int *ptr )
+{
+    *ptr = 3;
+    ptr = gptr;
+
+    *ptr = 4;
+    cout << "____passByPtr has been called______" << endl;
+}
+
+void passByPtrRef( int* & ptrRef)
+{
+    *ptrRef = 5;
+    ptrRef = gptr;
+    *ptrRef = 6;
+    cout << "_______passByPtrRef has been called____";
+}
 ```
 
