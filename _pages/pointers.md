@@ -314,6 +314,7 @@ cptr (address) = 0x7ffee828a8d4
 
 ### What is the Difference Between Pass By Pointer and Pass By Pointer Reference (int * and int * &)?
 
+![inserting an Image](/images/C++/pointers/ref_point.jpg)
 
 **Code:**
 
@@ -323,27 +324,28 @@ cptr (address) = 0x7ffee828a8d4
 using std::cout;
 using std::endl;
 
-int box1 = 1;
-int box2 = 2;
-
-int * gptr;
 
 void passByPtr(int * ptr);
 void passByPtrRef(int * & ptrRef); // integar pointer reference 
 
+int * gptr;
 
 
 int main() {
 
-    int * p = &box1;
+    int box1 = 1;
+    int box2 = 2;
+
+    int * p = &box1; // integer pointer
 
     gptr = &box2;
 
-    cout << "\n_________ Current Conditions _______\n ";
+    cout << "_________ Current Conditions _______" << endl;
 
     // passByPtr(p);
-    // passByPtrRef(p);
 
+
+    // passByPtrRef(p);
 
     if (p == &box1)
     {
@@ -367,7 +369,9 @@ int main() {
     {
         cout << "gptr is pointing to box2 " << endl;
     }
-    else {
+    else 
+    {
+        // won't see this though
         cout << "gptr is pointing to another box" << endl;
     }
 
@@ -390,7 +394,209 @@ void passByPtrRef( int* & ptrRef)
     *ptrRef = 5;
     ptrRef = gptr;
     *ptrRef = 6;
-    cout << "_______passByPtrRef has been called____";
+    cout << "_______passByPtrRef has been called____" << endl;
 }
 ```
 
+**Output:**
+
+```cpp
+_________ Current Conditions _______
+p is pointing to box1 
+gptr is pointing to box2 
+box1 contains the value: 1
+box2 contains the value: 2
+```
+
+
+#### Pass by Pointer Example:
+
+![inserting an Image](/images/C++/pointers/pass_point.jpg)
+
+```cpp
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+
+void passByPtr(int * ptr);
+void passByPtrRef(int * & ptrRef); // integar pointer reference 
+
+int * gptr;
+
+
+int main() {
+
+    int box1 = 1;
+    int box2 = 2;
+
+    int * p = &box1; // integer pointer
+
+    gptr = &box2;
+
+    cout << "_________ Current Conditions _______" << endl;
+
+    passByPtr(p);
+
+
+    // passByPtrRef(p);
+
+    if (p == &box1)
+    {
+        cout << "p is pointing to box1 " << endl;
+    }
+    else if (p == &box2 )
+    {
+        cout << "p is pointing to box2" << endl;
+    }
+    else
+    {
+        // won't see this though
+        cout << "p is pointing to another box " << endl;
+    }
+
+    if (gptr == &box1)
+    {
+        cout << "gptr is pointing to box1 " << endl;
+    }
+    else if (gptr == &box2)
+    {
+        cout << "gptr is pointing to box2 " << endl;
+    }
+    else 
+    {
+        // won't see this though
+        cout << "gptr is pointing to another box" << endl;
+    }
+
+    cout << "box1 contains the value: " << box1 << endl;
+    cout << "box2 contains the value: " << box2 << endl;
+
+}
+
+void passByPtr( int *ptr )
+{
+    *ptr = 3;
+    ptr = gptr;
+
+    *ptr = 4;
+    cout << "____passByPtr has been called______" << endl;
+}
+
+void passByPtrRef( int* & ptrRef)
+{
+    *ptrRef = 5;
+    ptrRef = gptr;
+    *ptrRef = 6;
+    cout << "_______passByPtrRef has been called____" << endl;
+}
+```
+
+**Output:**
+
+```cpp
+_________ Current Conditions _______
+____passByPtr has been called______
+p is pointing to box1 
+gptr is pointing to box2 
+box1 contains the value: 3
+box2 contains the value: 4
+```
+
+
+#### Pass by Pointer Reference Example:
+
+![inserting an Image](/images/C++/pointers/pass_ref.jpg)
+
+
+```cpp
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+
+void passByPtr(int * ptr);
+void passByPtrRef(int * & ptrRef); // integar pointer reference 
+
+int * gptr;
+
+
+int main() {
+
+    int box1 = 1;
+    int box2 = 2;
+
+    int * p = &box1; // integer pointer
+
+    gptr = &box2;
+
+    cout << "_________ Current Conditions _______" << endl;
+
+    // passByPtr(p);
+
+
+    passByPtrRef(p);
+
+    if (p == &box1)
+    {
+        cout << "p is pointing to box1 " << endl;
+    }
+    else if (p == &box2 )
+    {
+        cout << "p is pointing to box2" << endl;
+    }
+    else
+    {
+        // won't see this though
+        cout << "p is pointing to another box " << endl;
+    }
+
+    if (gptr == &box1)
+    {
+        cout << "gptr is pointing to box1 " << endl;
+    }
+    else if (gptr == &box2)
+    {
+        cout << "gptr is pointing to box2 " << endl;
+    }
+    else 
+    {
+        // won't see this though
+        cout << "gptr is pointing to another box" << endl;
+    }
+
+    cout << "box1 contains the value: " << box1 << endl;
+    cout << "box2 contains the value: " << box2 << endl;
+
+}
+
+void passByPtr( int *ptr )
+{
+    *ptr = 3;
+    ptr = gptr;
+
+    *ptr = 4;
+    cout << "____passByPtr has been called______" << endl;
+}
+
+void passByPtrRef( int* & ptrRef)
+{
+    *ptrRef = 5;
+    ptrRef = gptr;
+    *ptrRef = 6;
+    cout << "_______passByPtrRef has been called____" << endl;
+}
+```
+
+**Output:**
+
+```cpp
+_________ Current Conditions _______
+_______passByPtrRef has been called____
+p is pointing to box2
+gptr is pointing to box2 
+box1 contains the value: 5
+box2 contains the value: 6
+```
