@@ -238,7 +238,16 @@ When you declare a member function as **const**, like:
 int GetValue() const;
 ```
 
-Then you're telling the compiler that it will not modify anything in the object, this also means you can call the member function on a constant objects.
+Then you're telling the compiler that it will not modify anything in the object, this also means you can call the member function on a constant objects like this object
+
+```cpp
+const Object obj1;
+```
+* this is a const object, meaning that you cannot change anything on this object, and this object can only call *const* member functions like the one above.
+
+
+
+
 
 
 
