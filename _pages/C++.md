@@ -180,7 +180,7 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 * Dynamic Memory
 * Leaking Memory
 
-[Extra Stuff for Week 11](https://devintheengineer.com/C++/c++_arrays)
+[Arrays in C++](https://devintheengineer.com/C++/c++_arrays)
 
 
 ## Week 13: Even more on Classes
