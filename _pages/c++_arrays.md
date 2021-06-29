@@ -13,6 +13,9 @@ An **array** is a contiguous, fixed-size piece of memory
   * it cannot grow , cannot change size
   * It's a sequence of elements
 
+* One BIG CHUNK of MEMORY
+
+* Note that arryas are **not** C++ Objects
 
 ### C-Style Array
 
@@ -103,7 +106,7 @@ int main(){
 50
 ```
 
-**Note:** Iterators *cannot* be used on primitive type arrays, only on collections!
+**Note:** Iterators *cannot* be used on primitive type arrays, *only* on collections!
 
 
 **Method accessing the index**
@@ -117,6 +120,9 @@ int main(){
    int arr[] = {20, 30, 40, 50};
 
    cout << arr[0] << endl;
+   // change index
+   arr[0] = 1000;
+   cout << arr[0] << endl;
    cout << arr[1] << endl;
    cout << arr[2] << endl;
    cout << arr[3] << endl; 
@@ -127,10 +133,14 @@ int main(){
 
 ```cpp
 20
+1000
 30
 40
 50
 ```
+
+* Cool we just changed the element at index 0 by accessing it!
+
 
 ### Different Operations on Arrays
 
@@ -171,6 +181,8 @@ int main(){
   char ary2[]{'a', 'b', 'c', 'd'};  // fixed size, 4 chars
   long ary3[size]{}; // 0 initialized, each element initialized!
   long ary4[size];  // uninitialized, no work done.
+
+  cout << "Indexes of Various Arrays: " << endl;
   cout << "Index 0 of ary1:"<<ary1[0]<<endl;
   cout << "Index 0 of ary2:"<<ary2[0]<<endl;  
   cout << "Index 4 of ary3:"<<ary3[4]<<endl;
@@ -221,7 +233,74 @@ Index4, value:19744
 ```
 
 
+### Advantages of Arrays in C++
+
+1. Random Access of elemtns using the array index []
+2. East access to all the elements
+3. Traversal through the array is easy using a loop
+4. Can easily Sort
+
+
+### Disadvantages of Arrays in C++
+
+1. Allows for a *fixed* number of elements, which has to be decided at the time of declaring and array
+
+2. Insertion and deletion of elements can be costly
+
+
 ### Arrays and Pointers
+
+* Arrays and Pointers are two different things
+
+* Arrays have no methods, C++ does provide functions *begin()* and *end()* (if the compiler knows the array size) (they're functions NOT methods)
+
+*  no begin or end method, but an **array pointer** IS an iterator
+
+
+**Example using begin() and end() functions and sort(), copy(), and transform algorithms on the Array:**
+
+```cpp
+#include <iostream>
+using std::endl;
+using std::cout;
+#include<algorithm>
+using std::copy; using std::sort; using std::transform;
+#include<iterator>
+using std::ostream_iterator; using std::begin; using std::end;
+#include<string>
+
+int main(){
+   int arr[] = {20, 30, 40, 50};
+   int size = 4;
+
+  int *ptr_arr_front = arr;
+  int *ptr_arr_back = arr+size;			
+
+  cout << "The Front ptr: "<< ptr_arr_front << endl;
+  cout << "1 past End ptr: "<< ptr_arr_back << endl; 
+
+
+  // no begin or end method, but an array pointer IS an iterator
+  sort(ptr_arr_front, ptr_arr_back);
+  copy(ptr_arr_front, ptr_arr_back, ostream_iterator<int>(cout, ", ") );
+  cout << endl;
+
+    // begin() and end() functions  (not methods) do work IF compiler knows size
+  transform(begin(arr), end(arr), ostream_iterator<int>(cout, ", "),
+       [](int x) {return x*2;}
+       );
+  cout << endl;
+}
+```
+
+**Output:**
+
+```cpp
+The Front ptr: 0x7ffeeb6825d0
+1 past End ptr: 0x7ffeeb6825e0
+20, 30, 40, 50, 
+40, 60, 80, 100, 
+```
 
 
 ### Arrays and Functions
