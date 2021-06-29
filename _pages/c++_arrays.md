@@ -305,11 +305,33 @@ The Front ptr: 0x7ffeeb6825d0
 
 ### Arrays and Functions
 
-* There are 3 ways to pass an array to a function
+* There are **3 ways** to pass an array to a function, note that is's always a pointer or a reference and **NEVER** a copy
+
+**First Way:**
+
+- Pass array
+
+```cpp
+int sum(int ary[])
+```
+* [] indicates the parameter is an array
+* It's a pointer!
+* No size info on the array, size is required to be passed 
+
+
+**Second Way (directly as a pointer)**
+
+
+
+**Third Way**
+
+
 
 
 ### Dynamic Memory
 
+* Videos on
 
 ### Leaking Memory
 
+* Videos on
