@@ -683,8 +683,39 @@ int main()
 
 ## Dynamic Memory
 
-* Videos on
+**Run Time vs Compile Time**
+
+- Where compile time is known at the time of running the compiler to make an executable, while run time is known when the user *actually* runs the exectuable
+
+- STL Objects are the best, they know how to get more memory during *runtime*( think vectors, maps, etc.), while things like arrays, fixed-size non-object -> they're fixed size at compile time
+
+
+- We can manually to perform memory allocation 
+
+#### new and delete Keywords
+
+**new**
+
+```cpp
+new type(init)
+```
+- Allocate new memory of indicated type (can optionally provide an init, not required)
+- Return a *pointer* to the new memory
+
+**delete**
+
+```cpp
+delete ptr
+```
+- Deletion of an object pointed to by ptr
+
+```cpp
+delete [] ptr;
+```
+
+- Deletion of an array of *all* elements, the ptr points to the beginning of the memory array to be deleted
 
 ## Leaking Memory
 
-* Videos on
+* Memory leakage occurs in C++ when programmers allocates memory by using new keyword and forgets to deallocate the memory by using delete() function or delete[] operator. One of the most memory leakage occurs in C++ by using wrong delete operator. 
+
