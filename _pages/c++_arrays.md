@@ -17,6 +17,8 @@ An **array** is a contiguous, fixed-size piece of memory
 
 * Note that arryas are **not** C++ Objects
 
+![inserting an Image](/images/C++/arrays/array_c++.jpg)
+
 ### C-Style Array
 
 * Heres the Syntax
@@ -81,8 +83,6 @@ int main() {
 ```cpp
 Size of array: 5
 ```
-
-
 
 
 ### Declaring and Initializing an Array in C++
@@ -349,6 +349,9 @@ Index4, value:19744
 
 *  no begin or end method, but an **array pointer** IS an iterator
 
+![inserting an Image](/images/C++/arrays/array_point1.jpg)
+
+
 **Example using Pointer to iterate/print Array:**
 
 ```cpp
@@ -380,7 +383,7 @@ Element: 8, Element: 5, Element: 6, Element: 7, Element: 4,
 
 **Example using  sort() and copy() algorithms on the Array:**
 
-😂
+![inserting an Image](/images/C++/arrays/array_point2.jpg)
 
 ```cpp
 
@@ -425,7 +428,40 @@ Front Value: 8
 
 
 
-**Example using begin() and end() functions and sort(), copy(), and transform algorithms on the Array:**
+**Example using begin() and end() functions with the  transform algorithm on the Array:**
+
+* **Note:** begin() and end() functions (NOT METHODS) do work if the complier knows the size of the array
+
+
+```cpp
+#include <iostream>
+using std::cout;
+using std::endl;
+#include<algorithm>
+using std::copy; using std::sort; using std::transform;
+#include<iterator>
+using std::ostream_iterator; using std::begin; using std::end;
+
+int main()
+{
+    const size_t size = 5;
+
+    int arr[size]{8,5,6,7,4};
+
+    int *pointer_array_front = arr;          
+    int *pointer_array_back = arr+size;
+
+    transform(begin(arr), end(arr), ostream_iterator<int>(cout, ", "), [] (int x) {return x*2;});
+
+    cout << endl;
+}
+```
+
+**Output:**
+
+```cpp
+16, 10, 12, 14, 8, 
+```
 
 
 ## Arrays and Functions
