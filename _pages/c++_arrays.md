@@ -9,11 +9,6 @@ header:
   
 ---
 
-**Brown Noise Video**
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RqzGzwTY-6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
 An **array** is a contiguous, fixed-size piece of memory
   * it cannot grow , cannot change size
   * It's a sequence of elements
@@ -202,6 +197,37 @@ int main(){
 * Cool we just changed the element at index 0 by accessing it!
 
 
+
+**What if we changed the size of our array to 10?**
+
+```cpp
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int main() {
+
+   int guesses[10] = {12, 43, 23, 56, 69};
+
+   int size = sizeof(guesses)/ sizeof(int);
+
+   for ( int i = 0; i < size; i++ )
+   {
+      cout << guesses[i] << "\t";
+   }
+
+}
+```
+
+**Output:**
+
+```cpp
+12      43      23      56      69      0       0       0       0       0 
+```
+
+* Notice how, even though we didn't configure 10 numbers (int) in our array with a size 10 array, we have extra 0's at the end 
+
+
 ### Different Operations on Arrays
 
 - Subscript
@@ -308,64 +334,106 @@ Index4, value:19744
 2. Insertion and deletion of elements can be costly
 
 
-### Arrays and Pointers
+## Arrays and Pointers
 
-* Arrays and Pointers are two different things
+* **NOTE** Arrays DO NOT remember their length when passed!
+
+  * C++ is too sensitive to know the size of the arrya
+  * If the compiler knows the size then it allows you to do things like for-each loops
+  * If the compiler cannot know the size, it treats it like a pointer
+
+* Arrays and Pointers are two *different things*
 
 * Arrays have no methods, C++ does provide functions *begin()* and *end()* (if the compiler knows the array size) (they're functions NOT methods)
+  * You can treat a pointer as an iterator if you want to run generic algorithms on an arry
 
 *  no begin or end method, but an **array pointer** IS an iterator
 
-
-**Example using begin() and end() functions and sort(), copy(), and transform algorithms on the Array:**
+**Example using Pointer to iterate/print Array:**
 
 ```cpp
 #include <iostream>
-using std::endl;
 using std::cout;
-#include<algorithm>
-using std::copy; using std::sort; using std::transform;
-#include<iterator>
-using std::ostream_iterator; using std::begin; using std::end;
-#include<string>
+using std::endl;
 
-int main(){
-   int arr[] = {20, 30, 40, 50};
-   int size = 4;
+int main()
+{
+    const size_t size = 5;
 
-  int *ptr_arr_front = arr;
-  int *ptr_arr_back = arr+size;			
-
-  cout << "The Front ptr: "<< ptr_arr_front << endl;
-  cout << "1 past End ptr: "<< ptr_arr_back << endl; 
-
-
-  // no begin or end method, but an array pointer IS an iterator
-  sort(ptr_arr_front, ptr_arr_back);
-  copy(ptr_arr_front, ptr_arr_back, ostream_iterator<int>(cout, ", ") );
-  cout << endl;
-
-    // begin() and end() functions  (not methods) do work IF compiler knows size
-  transform(begin(arr), end(arr), ostream_iterator<int>(cout, ", "),
-       [](int x) {return x*2;}
-       );
-  cout << endl;
+    int arr[size]{8,5,6,7,4};
+   
+    for (int *i = arr; i < (arr+size); i++)
+    {
+        cout << "Element: " << *i << ", ";
+    }
+    cout << endl; // end line
 }
 ```
 
 **Output:**
 
 ```cpp
-The Front ptr: 0x7ffeeb6825d0
-1 past End ptr: 0x7ffeeb6825e0
-20, 30, 40, 50, 
-40, 60, 80, 100, 
+Element: 8, Element: 5, Element: 6, Element: 7, Element: 4, 
 ```
 
 
-### Arrays and Functions
+
+**Example using  sort() and copy() algorithms on the Array:**
+
+😂
+
+```cpp
+
+#include <iostream>
+using std::cout;
+using std::endl;
+#include<algorithm>
+using std::copy; using std::sort; using std::transform;
+#include<iterator>
+using std::ostream_iterator; using std::begin; using std::end;
+
+int main()
+{
+    const size_t size = 5;
+
+    int arr[size]{8,5,6,7,4};
+
+    int *pointer_array_front = arr;          
+    int *pointer_array_back = arr+size;
+
+    cout << "Front Pointer: " << pointer_array_front << endl;
+    cout << "Front Value: " << *pointer_array_front << endl;
+    cout << "1 Past End Pointer: " << pointer_array_back << endl;
+
+    // Array Pointer is an iterator
+
+    sort(pointer_array_front, pointer_array_back);
+
+    copy(pointer_array_front, pointer_array_back, ostream_iterator<int>(cout, ", "));
+
+    cout << endl; 
+}
+```
+
+**Output:**
+```cpp
+Front Pointer: 0x7ffee8ad85d0
+Front Value: 8
+1 Past End Pointer: 0x7ffee8ad85e4
+4, 5, 6, 7, 8, 
+```
+
+
+
+**Example using begin() and end() functions and sort(), copy(), and transform algorithms on the Array:**
+
+
+## Arrays and Functions
+
 
 * There are **3 ways** to pass an array to a function, note that is's always a pointer or a reference and **NEVER** a copy
+
+
 
 **First Way:**
 
@@ -376,7 +444,7 @@ int sum(int ary[])
 ```
 * [] indicates the parameter is an array
 * It's a pointer!
-* No size info on the array, size is required to be passed 
+* No size info on the array, size is **required** to be passed 
 
 
 **Second Way (directly as a pointer)**
@@ -386,12 +454,15 @@ int sum(int ary[])
 **Third Way**
 
 
+### Multidimensional Arrays
 
 
-### Dynamic Memory
+
+
+## Dynamic Memory
 
 * Videos on
 
-### Leaking Memory
+## Leaking Memory
 
 * Videos on
