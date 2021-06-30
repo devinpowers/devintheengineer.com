@@ -287,15 +287,16 @@ Objectives: Create your own Data Structure using Struct
 Goal: Working with OOP
 
 
-### coming soon...
-
 ### Project 9
 
 [Project Nine ](https://devintheengineer.com/C++/c++_project9)
 
-Objectives: 
+Objectives: Working more with classes (building a Finite State Automation/Finite State Machine)
 
 Goal: Working with OOP
+
+
+### coming soon...
 
 
 ### Project 10
