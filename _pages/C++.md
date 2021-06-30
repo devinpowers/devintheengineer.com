@@ -201,10 +201,6 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 ## Extras:
 
-[Arrays](https://devintheengineer.com/C++/arrays)
-
-[STL Arrays](https://devintheengineer.com/C++/stl_arrays)
-
 [Makefiles](https://devintheengineer.com/C++/makefiles)
 
 [Pointers](https://devintheengineer.com/C++/pointers)
