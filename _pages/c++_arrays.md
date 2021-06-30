@@ -35,6 +35,61 @@ type array_name[capacity];
   - The size in memory of the array is the (type's size * capacity)
 
 
+**Size of Array**
+
+```cpp
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int main() {
+
+   int guesses[] = {12, 43, 23, 56, 69};
+
+   int size = sizeof(guesses);
+
+   cout << "Size of array (Number of Bits): " << size << endl;
+
+}
+```
+
+**Output:**
+
+```cpp
+Size of array (Number of Bits): 20
+```
+
+* 20 bits ( 5#'s taking up 4 bits each)
+
+
+**Now how do we find the size of the array?**
+
+```cpp
+
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int main() {
+
+   int guesses[] = {12, 43, 23, 56, 69};
+
+   int size = sizeof(guesses)/ sizeof(int);
+
+   cout << "Size of array: " << size << endl;
+
+}
+```
+
+**Output:**
+
+```cpp
+Size of array: 5
+```
+
+
+
+
 ### Declaring and Initializing an Array in C++
 
 
