@@ -291,9 +291,9 @@ Goal: Working with OOP
 
 [Project Nine ](https://devintheengineer.com/C++/c++_project9)
 
-Objectives: Working more with classes (building a Finite State Automation/Finite State Machine)
+**Objectives:** Working more with classes (building a Finite State Automation/Finite State Machine)
 
-Goal: Working with OOP
+Goal: Working with building our own data structures and OOP concepts
 
 
 ### coming soon...
