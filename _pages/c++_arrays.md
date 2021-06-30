@@ -470,29 +470,215 @@ int main()
 * There are **3 ways** to pass an array to a function, note that is's always a pointer or a reference and **NEVER** a copy
 
 
-
 **First Way:**
 
-- Pass array
+- Pass array, it's implicity a pointer 
+
+Syntax:
+```cpp
+int sum(int arr[], int size)
+```
+
+* [] indicates the parameter is an array
+* int size is the *size* of the array
+* It's a pointer!
 
 ```cpp
-int sum(int ary[])
-```
-* [] indicates the parameter is an array
-* It's a pointer!
-* No size info on the array, size is **required** to be passed 
+#include<iostream>
+using std::cout; using std::endl;
+#include<sstream>
+using std::ostringstream;
+#include<string>
+using std::string;
 
+
+
+int sum (int arr[], int size){
+  int sum = 0;
+
+  for(int  i=0; i<size; i++){
+    sum += arr[i]; 
+  }
+  return sum;
+}
+
+
+int main() 
+{
+  
+  int arr[]{8,5,6,7,4};
+  int size = sizeof(arr) / sizeof(int);
+
+  cout << sum(arr, size) << endl;
+}
+```
+
+**Output:**
+
+```cpp
+30
+```
 
 **Second Way (directly as a pointer)**
 
+Syntax:
+```cpp
+int sum(int *arr, int size)
+```
+
+- Passed in as a pointer
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include<sstream>
+using std::ostringstream;
+#include<string>
+using std::string;
+
+int sum (int *arr, int size){
+  int sum = 0;
+
+  for(int  i=0; i<size; i++){
+    sum += arr[i];  // Same thing
+    // sum += *(arr+1);
+  }
+  return sum;
+}
+
+
+int main() 
+{
+  
+  int arr[]{8,5,6,7,4};
+  int size = sizeof(arr) / sizeof(int);
+
+  cout << sum(arr, size) << endl;
+
+}
+```
+
+**Output:**
+
+```cpp
+30
+```
 
 
 **Third Way**
 
+* If you set the size (somehow) in the function call itself, then the compiler can figure out how to do things like for-each loop
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include<string>
+using std::string;
+
+int sum (const int (&arr)[5]){
+  int sum = 0;
+
+  for (auto &element : arr )
+  {
+      sum += element;
+  }
+  return sum;
+}
+
+
+int main() 
+{
+  
+  int arr[]{8,5,6,7,4};
+  cout << sum(arr) << endl;
+
+}
+```
+
+**Output:**
+
+```cpp
+30
+```
+
+**Lets Templayte Size, so we don't have to indicate it!:**
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl;
+#include<string>
+using std::string;
+
+// let template deduce size, we don't have to say!!
+
+template<typename Type, size_t Size>
+int sum (const Type (&arr)[Size]){
+  Type sum = 0;
+
+  cout << "Sizeof array (template size) : " << sizeof(arr) << endl;
+  for (auto element : arr )
+  {
+      sum += element;
+  }
+  return sum;
+}
+
+
+int main() 
+{
+  
+  int arr[]{8,5,6,7,4,20,3,69,15};
+  cout << sum(arr) << endl;
+
+}
+```
+
+**Output:**
+
+```cpp
+Sizeof array (template size) : 36
+137
+```
+
 
 ### Multidimensional Arrays
 
+**Example of an Multidimensional Array**
 
+* Need a *nested for loop* to iterate through
+
+```cpp
+#include <iostream>
+using std::cout;
+using std::endl;
+
+int main()
+{
+    int grades[][3] = 
+    {
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
+
+    for (int r = 0; r < 3; r++)
+    {
+        for ( int c = 0; c < 3; c++ )
+        {
+            cout << grades[r][c] << "\t";
+        }
+        cout << "\n";
+    };    
+}
+```
+
+**Output:**
+
+```cpp
+1       2       3
+4       5       6
+7       8       9
+```
 
 
 ## Dynamic Memory
