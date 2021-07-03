@@ -10,7 +10,7 @@ header:
 ---
 
 
-Header File
+**Header File (functions.h)**
 
 ```cpp
 #ifndef FSA_H
@@ -43,15 +43,14 @@ public:
   string transitions_to_string(string);
   string next(string,string);
   bool run(string);
-  friend ostream& operator<<(ostream&, FSA&);
-  // string unreachable();  // something to try, not required
+  friend ostream& operator<<(ostream&, FSA&);     // WHEN YOU call to print (cout) FSA, it calls this method
 };
 
 #endif
 ```
 
 
-**Functions File:**
+**Functions File (functions.cpp)**
 
 ```cpp
 #include<iostream>
@@ -222,6 +221,7 @@ bool FSA::run(string s)
 }
 
 // Friend Function heres
+// When you run cout << FSA, this friend function will print out 
 
 ostream& operator<<(ostream& out, FSA& fsa)
 {
