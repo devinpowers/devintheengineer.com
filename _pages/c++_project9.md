@@ -11,6 +11,8 @@ header:
 
 * Representing a FSA -> Finite State Automation
 
+![inserting an Image](/images/C++/Projects/project9/fsa.jpg)
+
 
 **Header File (functions.h)**
 
