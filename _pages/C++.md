@@ -185,12 +185,16 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 
 ## Week 13: Even more on Classes
 
+[More on Classes](https://devintheengineer.com/C++/c++_week13)
+
 * More on **Rule of Three** Review 
 * Composite Class
 * Bad Dynamic Memory Class
 * Fixing Bad Memory
 * Templates and Classes
 * Templated Friends
+
+
 
 
 
