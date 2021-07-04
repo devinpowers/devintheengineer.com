@@ -428,3 +428,9 @@ int main () {
 } // of main;
 ```
 
+### Notes on Project 9
+
+![inserting an Image](/images/C++/Projects/project9/functions1.jpg)
+![inserting an Image](/images/C++/Projects/project9/functions2.jpg)
+![inserting an Image](/images/C++/Projects/project9/functions3.jpg)
+![inserting an Image](/images/C++/Projects/project9/functions4.jpg)
