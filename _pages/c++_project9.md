@@ -9,6 +9,8 @@ header:
   
 ---
 
+* Representing a FSA -> Finite State Automation
+
 
 **Header File (functions.h)**
 
