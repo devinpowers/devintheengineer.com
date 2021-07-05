@@ -12,17 +12,26 @@ toc_label: "Table of Contents"
 ---
 
 
-### INtro
+# Rule of Three
 
-devin powers
+* the **Rule of Three** is sued for any object that dynamically allocates memory. Will need
 
-#### Devin Powers
+  * Copy Constructor
+  * Assignment Operator
+  * Destructor
+
+* **Rule:** If you need one, then you need all three
+
+## Composite Class
 
 
-### Test
+## Bad Dynamic Memory Class
 
+## Fixing the Dynamic Memory
 
-#### OK OK OK OK 
+## Copy and Swap Idiom
 
-Yes Devin Powers!
+## Templates and Classes
+
+## Templated Friends
 
