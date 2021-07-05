@@ -59,7 +59,7 @@ Size of array (Number of Bits): 20
 * 20 bits ( 5#'s taking up 4 bits each)
 
 
-**Now how do we find the size of the array?**
+**Now how do we find the size of the array? (number of element)**
 
 ```cpp
 
@@ -87,6 +87,7 @@ Size of array: 5
 
 ### Declaring and Initializing an Array in C++
 
+* different ways to declare and initialize 
 
 **Method 1:**
 
@@ -334,18 +335,18 @@ Index4, value:19744
 2. Insertion and deletion of elements can be costly
 
 
-## Arrays and Pointers
+# Arrays and Pointers
 
-* **NOTE** Arrays DO NOT remember their length when passed!
+* **NOTE** Arrays *DO NOT remember* their length when passed!
 
-  * C++ is too sensitive to know the size of the arrya
+  * C++ is too sensitive to know the size of the array
   * If the compiler knows the size then it allows you to do things like for-each loops
   * If the compiler cannot know the size, it treats it like a pointer
 
 * Arrays and Pointers are two *different things*
 
-* Arrays have no methods, C++ does provide functions *begin()* and *end()* (if the compiler knows the array size) (they're functions NOT methods)
-  * You can treat a pointer as an iterator if you want to run generic algorithms on an arry
+* Arrays have no methods, C++ does provide functions *begin()* and *end()* (if the compiler knows the array size) (they're **functions** NOT methods)
+  * You can treat a pointer as an iterator if you want to run generic algorithms on an array
 
 *  no begin or end method, but an **array pointer** IS an iterator
 
@@ -383,10 +384,13 @@ Element: 8, Element: 5, Element: 6, Element: 7, Element: 4,
 
 **Example using  sort() and copy() algorithms on the Array:**
 
+* Note that the *Front Pointer* points to the first index in the array, while the *Back Pointer* points to one index past the last. Hence in the following example image below:
+
+* In this example we use the *sort()* and the *copy* algorithm on the array to 1. Sort the array in-order and 2. To *copy& and print the sorted array out.
+
 ![inserting an Image](/images/C++/arrays/array_point2.jpg)
 
 ```cpp
-
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -406,7 +410,8 @@ int main()
 
     cout << "Front Pointer: " << pointer_array_front << endl;
     cout << "Front Value: " << *pointer_array_front << endl;
-    cout << "1 Past End Pointer: " << pointer_array_back << endl;
+    cout << "One Past End Pointer: " << pointer_array_back << endl;
+    cout << "Back Value: " << *pointer_array_back << endl;
 
     // Array Pointer is an iterator
 
@@ -420,11 +425,15 @@ int main()
 
 **Output:**
 ```cpp
-Front Pointer: 0x7ffee8ad85d0
+Front Pointer: 0x7ffeedc695d0
 Front Value: 8
-1 Past End Pointer: 0x7ffee8ad85e4
+One Past End Pointer: 0x7ffeedc695e4
+Back Value: 32766
 4, 5, 6, 7, 8, 
 ```
+
+* We can see where the address and the value that the *Front Pointer* is pointing too
+* The last back pointer value is some random number -> 32766
 
 
 
@@ -464,7 +473,7 @@ int main()
 ```
 
 
-## Arrays and Functions
+# Arrays and Functions
 
 
 * There are **3 ways** to pass an array to a function, note that is's always a pointer or a reference and **NEVER** a copy
