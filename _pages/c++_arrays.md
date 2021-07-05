@@ -697,54 +697,165 @@ int main()
 
 - STL Objects are the best, they know how to get more memory during *runtime*( think vectors, maps, etc.), while things like arrays, fixed-size non-object -> they're fixed size at compile time
 
+- For normal variables, memory is automatically allocated and deallocated, but for things like pointers -> int *p = new int[10], it's up to us as programmers to deallocate memory when no longer needed, if we don't then it causes memory leak.
 
-- We can manually to perform memory allocation 
+- We can **manually perform** memory allocation 
 
-#### new and delete Keywords
+
+### new and delete Keywords
+
 
 **new**
 
 ```cpp
 new type(init)
 ```
-- Allocate new memory of indicated type (can optionally provide an init, not required)
+- the new operator denotes a request to allocate new memory of indicated type on Free Store (can optionally provide an init, not required)
 - Return a *pointer* to the new memory
+
+**Example of a pointer-variable**
+
+```cpp
+int *p = new int; // Request for memory with the new keyword
+```
+
+We can alocatre a block (an array) of memory
+
+```cpp
+int *p = new int[5] 
+```
+
+* This code above dynamically allocates memory for 5 integers continuously of type int and returns pointer to the first element in the sequence, which is assigned to p (a pointer).
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl; using std::cin;
+
+// Dynamic Arrays
+
+int main(){
+
+  // Main purpose is to allocate memory size of allocation in Bytes
+
+  int size;
+  cout << "Please enter a Size of an Array: ";
+  cin >> size;
+
+  int * myArray = new int [size]; // size that we enter
+
+  for (int i =0; i<size; i++)
+  {
+    cout << "Array[" << i << "]";
+    cin >> myArray[i];
+  }
+  for (int i =0; i<size; i++)
+  {
+    // write out elements of our array
+    cout << myArray[i] << "  ";
+   
+  }
+
+}
+
+```
+
+**Output**
+
+I wanted an Array or size 5, and then I input the following numbers: 6,9,7,3, and 12
+
+```cpp
+Please enter a Size of an Array: 5
+Array[0]6
+Array[1]9
+Array[2]7
+Array[3]3
+Array[4]12
+6  9  7  3  12 
+```
+
 
 **delete**
 
+* Since it's our responsibity as a programmer to *deallocate* dynamically allocated memory, this is where we use the *delete* keyword
+
 ```cpp
-delete ptr
+delete pointer-variable; // release memory pointed by the pointer-variable
 ```
-- Deletion of an object pointed to by ptr
+- Deletion of an object pointed to by the pointer, releases memory
+
+Here is an example of deleting an array of *all* elements, the ptr points to the beginning of the memory array to be deleted
 
 ```cpp
 delete [] ptr;
 ```
+Lets deallocate the memory that we have allocated from the array:
 
-- Deletion of an array of *all* elements, the ptr points to the beginning of the memory array to be deleted
+```cpp
+#include<iostream>
+using std::cout; using std::endl; using std::cin;
+
+// Dynamic Arrays
+
+int main(){
+
+  // Main purpose is to allocate memory size of allocation in Bytes
+
+  int size;
+  cout << "Please enter a Size of an Array: ";
+  cin >> size;
+
+  int * myArray = new int [size]; // size that we enter
+
+  for (int i =0; i<size; i++)
+  {
+    cout << "Array[" << i << "]";
+    cin >> myArray[i];
+  }
+  for (int i =0; i<size; i++)
+  {
+    // write out elements of our array
+    cout << myArray[i] << "  ";
+   
+  }
+  delete[] myArray; // delete the memory that we allocated for our array
+  myArray = NULL; // point to nothing, good practice
+
+}
+```
+
+**Note:** Each time you write new you must write delete 
 
 **Growing Array Example**
 
 ```cpp
 #include <iostream>
+using std::cout; using std::endl;
 #include <algorithm>
+using std::copy;
 #include <iterator>
-
-// Dynamic Memory
+using std::ostream_iterator;
 
 
 void print_array(int * array, size_t size) {
-    std::copy(array, array + size, std::ostream_iterator<int>(std::cout, " "));
-    std::cout << std::endl;
+    
+    for (int i =0; i<size; i++)
+    {
+    // write out elements of our array
+    cout << array[i] << "  ";
+    }
+    cout << endl;
+    // Or
+    // copy(array, array + size, ostream_iterator<int>(cout, " "));
 }
 
 void double_size(int * (&array), size_t & size) {
-    size_t new_size = size * 2;
-    int * array2 = new int[new_size]{};         // new Keyword
-    std::copy(array, array + size, array2);
-    size = new_size;
+    // double the size of the array
+    size_t new_size = size * 2; // Double Size
+    int * array2 = new int[new_size]{};         // new Keyword Create new array
+    copy(array, array + size, array2); // Copy elments of array1 to array2
+    size = new_size;        // Update Size
     delete [] array;  // delete Keyword
-    array = array2;
+    array = array2;         
 }
 
 int main() {
@@ -752,25 +863,30 @@ int main() {
     int * array = new int[size];
     array[0] = 9;
     array[1] = 7;
+    cout << "Original Array: " << endl;
     print_array(array, size);
 
     size_t new_size = size + 1;
     int * array2 = new int[new_size]{};
-    std::copy(array, array + size, array2);
+    copy(array, array + size, array2); // Copy elements of array1 to array2
 
-    // Never use array after this point
+    // Never use array after this point, so delete
     delete [] array;
 
+    cout << "Array after increasing the size by 1: " << endl;
     print_array(array2, new_size);
+    cout << "Array after adding new element: " << endl;
     array2[2] = 3;
     print_array(array2, new_size);
 
-    std::cout << "Double!" << std::endl;
-    double_size(array2, new_size);
+    // Using Double function
+    cout << "Double!" << endl;
+    double_size(array2, new_size); 
+    // Print out our doubled array:
     print_array(array2, new_size);
-
     delete [] array2;
 }
+
 ```
 
 **Output:**
