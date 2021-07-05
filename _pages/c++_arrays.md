@@ -501,7 +501,6 @@ using std::ostringstream;
 using std::string;
 
 
-
 int sum (int arr[], int size){
   int sum = 0;
 
@@ -610,7 +609,7 @@ int main()
 30
 ```
 
-**Lets Templayte Size, so we don't have to indicate it!:**
+**Lets Template the Size, so we don't have to indicate it!:**
 
 ```cpp
 #include<iostream>
@@ -724,7 +723,256 @@ delete [] ptr;
 
 - Deletion of an array of *all* elements, the ptr points to the beginning of the memory array to be deleted
 
+**Growing Array Example**
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <iterator>
+
+// Dynamic Memory
+
+
+void print_array(int * array, size_t size) {
+    std::copy(array, array + size, std::ostream_iterator<int>(std::cout, " "));
+    std::cout << std::endl;
+}
+
+void double_size(int * (&array), size_t & size) {
+    size_t new_size = size * 2;
+    int * array2 = new int[new_size]{};         // new Keyword
+    std::copy(array, array + size, array2);
+    size = new_size;
+    delete [] array;  // delete Keyword
+    array = array2;
+}
+
+int main() {
+    const size_t size = 2;
+    int * array = new int[size];
+    array[0] = 9;
+    array[1] = 7;
+    print_array(array, size);
+
+    size_t new_size = size + 1;
+    int * array2 = new int[new_size]{};
+    std::copy(array, array + size, array2);
+
+    // Never use array after this point
+    delete [] array;
+
+    print_array(array2, new_size);
+    array2[2] = 3;
+    print_array(array2, new_size);
+
+    std::cout << "Double!" << std::endl;
+    double_size(array2, new_size);
+    print_array(array2, new_size);
+
+    delete [] array2;
+}
+```
+
+**Output:**
+
+```cpp
+9 7 
+9 7 0 
+9 7 3 
+Double!
+9 7 3 0 0 0
+```
+
+**Dynamic Array Example**
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl; using std::cin; using std::ostream;
+#include<iomanip>
+using std::setw;
+#include<string>
+using std::string;
+
+class MyClass{
+private:
+  long long_;
+  int int_;
+  string str_;
+public:
+  MyClass(): long_(0), int_(0), str_("default ctor") {};
+  MyClass(long l, int i, string s): long_(l), int_(i), str_(s) {}; 
+  friend ostream& operator<<(ostream&, const MyClass&);
+};
+
+
+
+ostream& operator<<(ostream &out, const MyClass &c){
+  out << "l:"<< c.long_ << ", i:" << c.int_ << ", s:" << c.str_;
+  return out;
+}
+
+void fill(int *ary, size_t sz, int val){
+  for (size_t i=0; i<sz; ++i)
+    ary[i] = val+i;
+}
+
+// print array as a block
+ostream& dump (ostream& out, int ary[], size_t sz, size_t width=5){
+  for(size_t i=0; i < sz; ++i){
+    out << setw(width) << *(ary + i);
+    if (i%10 != 9 && i != sz-1)
+      out << ", ";
+    else
+      out << endl;
+  }
+  out << endl;
+  return out;
+}
+	
+int main (){
+  size_t sz=5;
+  int ary1[sz];
+  fill(ary1, sz, 10);
+  dump(cout, ary1, sz);  
+
+  // basic new
+  long *lptr1, *lptr2;
+  MyClass *mcptr, *mcptr2;
+
+  lptr1 = new long;   // uninitialized
+  lptr2 = new long{1234567}; // initialized
+  mcptr = new MyClass; // default constructor
+  mcptr2 = new MyClass(123456, 123, "3param ctor");
+
+  cout << "lptr1:"<< *lptr1 << endl;  
+  cout << "lptr2:"<< *lptr2 << endl;
+  cout << "MyClass default:"<< *mcptr << endl;
+  cout << "MyClass 3 param:"<< *mcptr2 << endl;
+
+  // delete them when done
+  delete lptr1;
+  delete lptr2;  
+  delete mcptr;
+  delete mcptr2;
+
+  // dynamic array
+  size_t size;
+  cout << "How big to make the array:";
+  cin >> size;
+  // not an array type, only a pointer
+  // long *ary = new long[size];   // not initialized
+  int *ary = new int[size]{}; // initialize all!
+  fill(ary, size, 10);
+  dump(cout, ary, size);
+
+  cout << "1:"<<ary[0]<<endl;
+  cout << "n-1:"<<ary[size-1]<<endl;
+  cout << "Size:"<<sizeof(ary)<<endl; //pointer,not array type!
+
+  // if you make it, you must delete it. Note []
+  delete [] ary;
+}
+```
+
+**Output**
+
+```cpp
+   10,    11,    12,    13,    14
+
+lptr1:0
+lptr2:1234567
+MyClass default:l:0, i:0, s:default ctor
+MyClass 3 param:l:123456, i:123, s:3param ctor
+How big to make the array:20
+   10,    11,    12,    13,    14,    15,    16,    17,    18,    19
+   20,    21,    22,    23,    24,    25,    26,    27,    28,    29
+
+1:10
+n-1:29
+Size:8
+```
+
+
 ## Leaking Memory
 
 * Memory leakage occurs in C++ when programmers allocates memory by using new keyword and forgets to deallocate the memory by using delete() function or delete[] operator. One of the most memory leakage occurs in C++ by using wrong delete operator. 
 
+**Leaking Memory Example**
+
+```cpp
+#include<cstddef>
+using std::size_t;
+#include<iostream>
+using std::cout; using std::endl; using std::cin;
+#include<string>
+using std::string;
+
+int main (){
+  int reps = 1024;
+  const size_t chunk = 1048576; // be careful!!!
+  long last;
+  string s;
+
+  for(int i=0;i<reps;i++){
+    long *ary = new long[chunk]; // leak memory here each iteration
+    ary[0] = 1;
+    for (size_t j=1; j < chunk; ++j)
+      ary[j] = ary[j-1] + 1;
+    last = ary[chunk-1];
+  }
+  cout << last << endl;
+  cout << "A string please:";
+  cin >> s;
+}
+```
+
+**Output:**
+
+```cpp
+
+```
+
+
+
+**Last Example**
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl; using std::ostream;
+
+long* fn1(size_t sz, long start, long inc ){
+  auto ptr =  new long[sz];
+  ptr[0]=start;
+  for(size_t i=1; i<sz; i++)
+    ptr[i]=ptr[i-1]+inc;
+  return ptr;
+}
+
+ostream& print(ostream& out, long ary[], size_t sz){
+  for(size_t i=0;i<sz;i++){
+    out << ary[i];
+    if (i < sz-1)
+      out << ", ";
+  }
+  out << endl;
+  return out;
+}
+
+int main (){
+  long *ptr_l;
+  // double *ptr_d;
+  size_t sz=10;
+  ptr_l = fn1(sz, 100, 10);
+  cout << ptr_l << endl;
+  print(cout, ptr_l, 10) << endl;  
+  // leak without this, even though allocated in fn1
+  delete [] ptr_l;
+}
+```
+
+**Output**
+
+```cpp
+0x7f9177c05980
+100, 110, 120, 130, 140, 150, 160, 170, 180, 190
+```
