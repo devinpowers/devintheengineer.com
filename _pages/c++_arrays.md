@@ -10,12 +10,12 @@ header:
 ---
 
 An **array** is a contiguous, fixed-size piece of memory
-  * it cannot grow , cannot change size
+  * it cannot grow , cannot change size (set it when you're declaring it !!)
   * It's a sequence of elements
 
 * One BIG CHUNK of MEMORY
 
-* Note that arryas are **not** C++ Objects
+* Note that arrays are **not** C++ Objects
 
 ![inserting an Image](/images/C++/arrays/array_c++.jpg)
 
