@@ -1189,6 +1189,9 @@ Size:8
 
 * Memory leakage occurs in C++ when programmers allocates memory by using new keyword and forgets to deallocate the memory by using delete() function or delete[] operator. One of the most memory leakage occurs in C++ by using wrong delete operator. 
 
+* It's on you to free/delete memory that you have acquired
+
+* Can you avoid this? Yes by using STL containers
 **Leaking Memory Example**
 
 ```cpp
