@@ -1192,6 +1192,7 @@ Size:8
 * It's on you to free/delete memory that you have acquired
 
 * Can you avoid this? Yes by using STL containers
+
 **Leaking Memory Example**
 
 ```cpp
