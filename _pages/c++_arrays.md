@@ -902,6 +902,9 @@ Double!
 
 **Dynamic Array Example**
 
+![inserting an Image](/images/C++/arrays/array_point1.jpg)
+![inserting an Image](/images/C++/arrays/array_point2.jpg)
+
 ```cpp
 #include<iostream>
 using std::cout; using std::endl; using std::cin; using std::ostream;
@@ -1105,6 +1108,79 @@ How big to make the array:1000
 
 1:10
 n-1:1009
+Size:8
+```
+
+### Another Example
+
+![inserting an Image](/images/C++/arrays/array_point3.jpg)
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl; using std::cin; using std::ostream;
+#include<iomanip>
+using std::setw;
+#include<string>
+using std::string;
+
+void fill(int ary[], int size, int value)
+{  // Fill Array with values
+  for (int i=0; i<size; ++i)
+  {
+    ary[i] = value+i;
+  }
+}
+
+ostream& dump (ostream& out, int ary[], int size, int width=5){
+  //print array as a block
+  for(int i=0; i < size; ++i){
+    out << setw(width) << *(ary + i);    
+    if (i%10 != 9 && i != size-1)
+      out << ", ";
+    else
+      out << endl;
+  }
+  out << endl;
+  return out;
+}
+
+int main (){
+   // dynamic array
+  int size;
+  cout << "How Big to make the array:";
+  cin >> size;
+  // not an array type, only a pointer
+  // long *ary = new long[size];   // not initialized
+  int *ary = new int[size]{}; // initialize all!
+  fill(ary, size, 10);
+  dump(cout, ary, size);
+
+  cout << "1:"<<ary[0]<<endl;
+  cout << "n-1:"<<ary[size-1]<<endl;
+  cout << "Size:"<<sizeof(ary)<<endl; //pointer,not array type!
+
+  // if you make it, you must delete it. Note []
+  delete [] ary;
+}
+```
+
+**Output:**
+
+```cpp
+How Big to make the array:100
+   10,    11,    12,    13,    14,    15,    16,    17,    18,    19
+   20,    21,    22,    23,    24,    25,    26,    27,    28,    29
+   30,    31,    32,    33,    34,    35,    36,    37,    38,    39
+   40,    41,    42,    43,    44,    45,    46,    47,    48,    49
+   50,    51,    52,    53,    54,    55,    56,    57,    58,    59
+   60,    61,    62,    63,    64,    65,    66,    67,    68,    69
+   70,    71,    72,    73,    74,    75,    76,    77,    78,    79
+   80,    81,    82,    83,    84,    85,    86,    87,    88,    89
+   90,    91,    92,    93,    94,    95,    96,    97,    98,    99
+  100,   101,   102,   103,   104,   105,   106,   107,   108,   109
+
+1:10
+n-1:109
 Size:8
 ```
 
