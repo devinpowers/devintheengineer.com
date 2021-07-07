@@ -14,13 +14,23 @@ toc_label: "Table of Contents"
 
 # Rule of Three
 
-* the **Rule of Three** is sued for any object that dynamically allocates memory. Will need
+* the **Rule of Three** is used for any object that **dynamically allocates memory**. Will need
 
   * Copy Constructor
-  * Assignment Operator
+  * Assignment Operator (overloaded)
   * Destructor
 
+
 * **Rule:** If you need one, then you need all three
+
+What happens when we? (in C++)
+
+* Assignment
+* Copy
+* Delete
+
+
+
 
 ## Composite Class
 
