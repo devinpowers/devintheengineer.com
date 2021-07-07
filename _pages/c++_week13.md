@@ -16,18 +16,52 @@ toc_label: "Table of Contents"
 
 * the **Rule of Three** is used for any object that **dynamically allocates memory**. Will need
 
-  * Copy Constructor
+  * Copy Constructor 
   * Assignment Operator (overloaded)
   * Destructor
 
 
-* **Rule:** If you need one, then you need all three
+* **Rule:** If you need one, then you need all three!!!!
 
 What happens when we? (in C++)
 
-* Assignment
 * Copy
+* Assignment
 * Delete
+
+### Destructors in C++
+
+* A Destructor is an instance member function which is invoked automatically whenever an object is going to destroy
+
+Basis Syntax:
+
+```cpp
+~constructor-name();
+```
+
+
+**Properties**
+
+Destructor function is automatically invoked when the objects are destroyed.
+
+
+
+**When do you destructor called?**
+
+A destructor function is called automatically when the object goes out of scope: 
+(1) the function ends 
+(2) the program ends 
+(3) a block containing local variables ends 
+(4) a delete operator is called  
+
+
+
+
+
+
+
+
+
 
 
 **Example of Rule of Three**
