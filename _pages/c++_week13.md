@@ -11,23 +11,40 @@ toc: true
 toc_label: "Table of Contents" 
 ---
 
+If we can use STL containers (Vectors, Maps, etc )/ algorithms to solve any problem do them. Containers *handle* their own memory
+
+But, let's go through some class design where we have to do the *memory management* on a container ourself
 
 # Rule of Three
 
 * the **Rule of Three** is used for any object that **dynamically allocates memory**. Will need
 
   * Copy Constructor 
-  * Assignment Operator (overloaded)
+  * Assignment Operator (Overloaded)
   * Destructor
 
 
 * **Rule:** If you need one, then you need all three!!!!
 
-What happens when we? (in C++)
+### Copy Constructor in C++
 
-* Copy
-* Assignment
-* Delete
+* Is a member function that *initializes* an object using another object of the same class.
+
+General Syntax for the Header File:
+    * Part of the construction of the Class
+
+```cpp
+ClassName(const ClassName &old_object);
+```
+
+General Syntax for the Function 
+
+```cpp
+ClassName::ClassName(const ClassName &old_object )
+{
+    // Body of the Constructor
+}
+```
 
 ### Destructors in C++
 
@@ -38,7 +55,6 @@ Basis Syntax:
 ```cpp
 ~constructor-name();
 ```
-
 
 **Properties**
 
@@ -308,6 +324,13 @@ Destructor called for John at this memory location 0x7ffeef08f5c8
 
 
 ## Composite Class
+
+* A composite class, is a class that is build by using the operations of other classes in the implementation (think of using a stack in a Graph)
+
+
+**Example with a custom Stack Data Structure**
+
+
 
 
 ## Bad Dynamic Memory Class
