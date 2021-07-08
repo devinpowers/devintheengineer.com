@@ -328,8 +328,196 @@ Destructor called for John at this memory location 0x7ffeef08f5c8
 * A composite class, is a class that is build by using the operations of other classes in the implementation (think of using a stack in a Graph)
 
 
-**Example with a custom Stack Data Structure**
+### Example with a Custom Stack Data Structure**
 
+**Header File (stack.h)**
+
+```cpp
+#ifndef STACK_H
+#define STACK_H
+
+using std::ostream;
+#include<iostream>
+using std::string;
+#include<string>
+#include<vector>
+using std::vector;
+#include<initializer_list>
+using std::initializer_list;
+
+class Stack{
+ private:
+  vector<char> vec_;
+  
+ public:
+  Stack()=default;
+  // Stack(size_t sz)
+  Stack(initializer_list<char> c) : vec_(c) {};
+  
+  char top();
+  void pop();
+  void push(char);
+  bool empty();
+  // bool full();  // not a problem with vectors
+  void clear();
+  
+  friend ostream& operator<<(ostream& out, const Stack &s);
+};
+
+ostream& operator<<(ostream& out, const Stack &s);
+
+#endif
+```
+
+**Stack Functions File (functions.cpp)**
+
+* Includes basic methods of stacks including top, pop, push, empty, and clear
+
+```cpp
+#include<algorithm>
+using std::copy;
+#include<iterator>
+using std::ostream_iterator;
+#include<stdexcept>
+using std::underflow_error;
+
+#include "stack.h"
+
+char Stack::top(){
+  if (vec_.size() == 0)
+    throw underflow_error("top, empty stack");
+  return vec_.back();
+}
+
+void Stack::pop(){
+  if (vec_.size() == 0)
+    throw underflow_error("pop, empty stack");
+  vec_.pop_back();
+}
+
+void Stack::push(char s){
+    vec_.push_back(s);
+}
+
+bool Stack::empty(){
+    return vec_.empty();
+}
+
+void Stack::clear(){
+  vec_.clear();
+}
+
+ostream& operator<<(ostream &out, const Stack &s){
+    // Print the stack
+    out << "(bottom) ";
+    copy(s.vec_.begin(), s.vec_.end(), ostream_iterator<char>(out, ","));
+    out << " (top)";
+    return out;
+}
+```
+
+**Main Function to Run (main.cpp)**
+
+```cpp
+#include<iostream>
+using std::cout; using std::endl; using std::cin;
+#include<string>
+using std::string;
+#include<stdexcept>
+using std::underflow_error;
+
+#include "stack.h"
+
+int main()
+
+{
+    // Practice with Basic Stack
+
+    Stack stk = {'a','b','c','d','e'};
+
+    cout << stk << endl;
+
+    // Basic Stack Methods/Functions
+
+    cout << "Top of the Stack: " << stk.top() << endl;
+
+    stk.pop(); // Removes top value from the Stack
+
+    stk.push('Z'); // Pushes another value onto the Stack
+
+    cout << stk << endl;
+
+    while (! stk.empty())
+    {
+        stk.pop();
+
+    }
+
+    cout << "After popping everything off the stack " << endl;
+    cout << stk << endl;
+
+    stk.push('D');
+    stk.push('E');
+    stk.push('V');
+    stk.push('I');
+    stk.push('N');
+    
+    cout << "After pushing items onto the stack: " << endl;
+
+    cout << stk << endl;
+
+    // Clear the stack
+
+    stk.clear();
+
+    cout << stk << endl;
+
+
+    // Reverse a String
+
+    string user_string = "", reverse_string = "";
+
+    cout << "Input a string to reverse: ";
+    getline(cin, user_string); // get line and put it into user_string
+
+    Stack stk2;
+
+    for (auto ch : user_string)
+    {
+        stk2.push(ch);
+    } 
+
+    cout << stk2 << endl;
+
+    while (!stk2.empty())
+    {
+        stk2.pop();
+    }
+
+
+    cout << "Original String was: " << user_string << endl;
+    cout << "Reversed String was: " << reverse_string << endl;
+
+
+}
+```
+
+**Output:**
+
+```cpp
+(bottom) a,b,c,d,e, (top)
+Top of the Stack: e
+(bottom) a,b,c,d,Z, (top)
+After popping everything off the stack 
+(bottom)  (top)
+After pushing items onto the stack: 
+(bottom) D,E,V,I,N, (top)
+(bottom)  (top)
+Input a string to reverse: Devin Powers
+(bottom) D,e,v,i,n, ,P,o,w,e,r,s, (top)
+Original String was: Devin Powers
+Reversed String was: 
+```
 
 
 
