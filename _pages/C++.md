@@ -217,7 +217,7 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 ## Random Labs
 
 
-[Lab 9 ](https://devintheengineer.com/C++/C++_Labs/Lab09)
+[Vector Lab ](https://devintheengineer.com/C++/C++_Labs/Lab9)
 
 
 ## Projects:
