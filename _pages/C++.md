@@ -307,7 +307,7 @@ Goal: Working with building our own data structures and OOP concepts
 
 [Project Ten ](https://devintheengineer.com/C++/c++_project10)
 
-Objectives: 
+Objectives: Building a **BiStack** data structure
 
 Goal: Working with OOP
 
