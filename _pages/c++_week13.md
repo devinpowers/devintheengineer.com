@@ -527,6 +527,8 @@ Reversed String was:
 
 ## Fixing the Dynamic Memory
 
+![inserting an Image](/images/C++/copy/copy1.jpg)
+
 **Header File (stack.h)**
 ```cpp
 
@@ -573,6 +575,8 @@ ostream& operator<< (ostream&, const Stack&);
 ```
 
 **Functions File (stack.cpp)**
+
+![inserting an Image](/images/C++/copy/copy2.jpg)
 
 ```cpp
 #include<string>
@@ -692,6 +696,9 @@ ostream& operator<<(ostream &out, const Stack &s){
 
 **Main File (main.cpp)**
 
+![inserting an Image](/images/C++/copy/copy3.jpg)
+
+
 
 ```cpp
 #include<iostream>
@@ -805,6 +812,47 @@ int main()
 
 }
 ```
+
+**Output:**
+
+```cpp
+Using the initializer_list Constructor 
+(bottom) a,b,c,d, (top)
+Top: d
+(bottom) a,b,c,d, (top)
+(bottom)  (top)
+Input a String to reverse: Devin Powers Practice Test
+Using the size_t dataype constructor 
+User_String Size: 26
+(bottom) D,e,v,i,n, ,P,o,w,e,r,s, ,P,r,a,c,t,i,c,e, ,T,e,s,t, (top)
+Using the size_t dataype constructor 
+(bottom) A,B,C,D,E, (top)
+Using the Copy Constructor  
+Stack Two: (Using the Copy Constructor) 
+(bottom) D,e,v,i,n, ,P,o,w,e,r,s, ,P,r,a,c,t,i,c,e, ,T,e,s,t, (top)
+The '=' Operator Overload: 
+Using the Equal to (=) Operator 
+(bottom) D,e,v,i,n, ,P,o,w,e,r,s, ,P,r,a,c,t,i,c,e, ,T,e,s,t, (top)
+Testing the Top Function: (THIS WILL CALL THE COPY CONSTRUCTOR!!!!) 
+______________________________________________________________________
+Using the Copy Constructor  
+fn1 copied stack: (bottom) D,e,v,i,n, ,P,o,w,e,r,s, ,P,r,a,c,t,i,c,e, ,T,e,s,t, (top)
+Updated fn1 Stack: (bottom) z,y,x,w,v,u,t,s,r,q, (top)
+Deleting Memory 
+STK1 After: 
+(bottom) D,e,v,i,n, ,P,o,w,e,r,s, ,P,r,a,c,t,i,c,e, ,T,e,s,t, (top)
+Deleting Memory 
+Deleting Memory 
+Deleting Memory 
+Deleting Memory 
+```
+
+**Extra Stuff on the above example:**
+
+![inserting an Image](/images/C++/copy/copy4.jpg)
+
+
+
 
 
 ## Copy and Swap Idiom
