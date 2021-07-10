@@ -849,6 +849,9 @@ Deleting Memory
 
 **Extra Stuff on the above example:**
 
+* Why doesnt the stack object change after it is passed to the function fn1 above in the main.cpp file?
+
+
 ![inserting an Image](/images/C++/copy/copy4.jpg)
 
 
