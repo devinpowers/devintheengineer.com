@@ -857,7 +857,65 @@ Deleting Memory
 
 ## Copy and Swap Idiom
 
+* Last Example working with stack class above
+
 ## Templates and Classes
+
+Remember template functions that we did?
+
+* By writing a function as a template, we can write *generic* function (for all types!)
+
+It would be inconvenient to write a class/container that can only take on kind of data type
+
+**Template Stack Example**
+
+* For a stack class like we've done previously above!
+
+```cpp
+
+template<typename T >
+class Stack {
+  private:
+      vector<T> vec_;
+  
+  public:
+
+      T top();      // Return the data type, which is templatized!
+      void pop();
+      void push(T);
+      bool empty();
+      friend ostream& operator<<(ostream& out, const Stack<T>  &s);
+}
+```
+
+Now, how would we call this stack object with various datatypes??
+
+```cpp
+Stack<char> stk_c;
+Stack<long> stk_l;
+Stack<int> stk_i;
+```
+
+* Like we did with templatized functions we put the datatype we want to work with in <>, in which will make a new class with that data type
+
+
+*Note that a template is not a class and it's just a way to make a class where the type is *independent*, where we can create many versions of the class with each template type
+
+* Everything in a templated container goes in the **header file**
+
+* You do not need to provide the template variables in the class definition itself for the class
+
 
 ## Templated Friends
 
+* Theres a problem matching the template of a friend function with the templating of the class
+
+* There's a hard way and an easy way
+
+**Easy**
+
+* Do the friend inline in the class declaration
+
+**Hard**
+
+* Just don't do this way
