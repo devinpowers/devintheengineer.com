@@ -856,6 +856,15 @@ Deleting Memory
 
 
 
+**Other**
+
+![inserting an Image](/images/C++/copy/copy5.jpg)
+![inserting an Image](/images/C++/copy/copy6.jpg)
+![inserting an Image](/images/C++/copy/copy7.jpg)
+
+
+
+
 
 
 ## Copy and Swap Idiom
