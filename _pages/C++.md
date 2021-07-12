@@ -191,11 +191,8 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 * Composite Class
 * Bad Dynamic Memory Class
 * Fixing Bad Memory
-* Templates and Classes
-* Templated Friends
-
-
-
+* **Templates and Classes**
+* **Templated Friends**
 
 
 ## Week 14: Finshing up
@@ -304,17 +301,16 @@ Goal: Working with OOP
 Goal: Working with building our own data structures and OOP concepts
 
 
-### coming soon...
-
-
 ### Project 10
 
 [Project Ten ](https://devintheengineer.com/C++/c++_project10)
 
 Objectives: Building a **BiStack** data structure
 
-Goal: Working with OOP
+Goal: Working with OOP, Building Data Structures, Templated Classes, etc
 
+
+### coming soon...
 
 ### Project 11
 
