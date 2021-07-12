@@ -307,7 +307,7 @@ Goal: Working with building our own data structures and OOP concepts
 
 Objectives: Building a **BiStack** data structure
 
-Goal: Working with OOP, Building Data Structures, Templated Classes, etc
+Goal: Working with OOP, Building Data Structures, *Templated Classes*, etc
 
 
 ### coming soon...
