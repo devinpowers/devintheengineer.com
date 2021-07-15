@@ -176,8 +176,6 @@ int main()
 90 Popped from stack
 
 Elements present in stack : 50 30 20 10 
-HELP I NEED SOMEBODY  
-YOOO
 69 pushed into stack
 100 pushed into stack
 78 pushed into stack
