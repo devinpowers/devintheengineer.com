@@ -194,6 +194,8 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 * **Templates and Classes**
 * **Templated Friends**
 
+[Stack Data Structure in C++](https://devintheengineer.com/C++/c++_stack)
+
 
 ## Week 14: Finshing up
 
