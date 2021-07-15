@@ -181,3 +181,8 @@ Elements present in stack : 50 30 20 10
 78 pushed into stack
 Elements present in stack : 78 100 69 
 ```
+
+![inserting an Image](/images/C++/stack/stack1.jpg)
+![inserting an Image](/images/C++/stack/stack2.jpg)
+![inserting an Image](/images/C++/stack/stack3.jpg)
+![inserting an Image](/images/C++/stack/stack4.jpg)
