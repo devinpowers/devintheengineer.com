@@ -213,6 +213,11 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 * What is the Difference Between Pass By Value, Pass By Reference, and Pass By Pointer, C++
 * What is the Difference Between a Pointer and a Reference C++
 
+## Data Structures in C++ 
+
+[Queue Data Structure](https://devintheengineer.com/C++/c++_data_structures/queue)
+
+
 ## Random Labs
 
 
