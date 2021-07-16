@@ -194,8 +194,6 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 * **Templates and Classes**
 * **Templated Friends**
 
-[Stack Data Structure in C++](https://devintheengineer.com/C++/c++_stack)
-
 
 ## Week 14: Finshing up
 
@@ -216,12 +214,17 @@ After Learning Python the past year, C++ syntax looks so funky, but after a few 
 ## Data Structures in C++ 
 
 [Queue Data Structure](https://devintheengineer.com/C++/c++_data_structures/queue)
+  * Using an Array
+  
+[Stack Data Structure in C++](https://devintheengineer.com/C++/c++_stack)
+  * Using an Array
+
 
 
 ## Random Labs
 
 
-[Vector Lab ](https://devintheengineer.com/C++/C++_Labs/Lab9)
+[Vector Lab](https://devintheengineer.com/C++/C++_Labs/Lab9)
 
 
 ## Projects:
