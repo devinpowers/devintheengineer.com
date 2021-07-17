@@ -30,6 +30,10 @@ What is a Queue?
 **Header File**
 
 ```cpp
+
+#ifndef QUEUE_H
+#define QUEUE_H
+
 #include<iostream>
 using std::cout;
 using std::endl;
@@ -57,6 +61,9 @@ public:
     bool isEmpty();
     bool isFull();
 };
+
+#endif
+
 ```
 
 
