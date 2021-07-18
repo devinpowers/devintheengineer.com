@@ -12,6 +12,8 @@ header:
 
 **Header File (bistack.h)**
 
+
+
 * includes both the declaration and defintion of the BiStack Class
 
 
@@ -388,6 +390,16 @@ ostream& operator<<(ostream &out, const BiStack<ElementType> &stack)
 #endif
  
 ```
+
+![inserting an Image](/images/C++/Projects/project10/data1.jpg)
+![inserting an Image](/images/C++/Projects/project10/data2.jpg)
+![inserting an Image](/images/C++/Projects/project10/data3.jpg)
+![inserting an Image](/images/C++/Projects/project10/data4.jpg)
+![inserting an Image](/images/C++/Projects/project10/data5.jpg)
+![inserting an Image](/images/C++/Projects/project10/data6.jpg)
+![inserting an Image](/images/C++/Projects/project10/data7.jpg)
+![inserting an Image](/images/C++/Projects/project10/data8.jpg)
+![inserting an Image](/images/C++/Projects/project10/data9.jpg)
 
 
 
